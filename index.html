@@ -15,11 +15,14 @@
   <p>正在跳转到最新日报…</p>
   <p>如果没有自动跳转，请点击 <a href="reports/">日报归档</a></p>
   <script>
-    fetch('dates.json').then(r => r.json()).then(dates => {
-      if (dates.length > 0) {
-        window.location.href = 'reports/' + dates[0] + '.html';
-      }
-    });
+    fetch('dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        var arr = Array.isArray(dates) ? dates : [];
+        if (arr.length > 0 && /^\d{4}-\d{2}-\d{2}$/.test(arr[0])) {
+          window.location.href = 'reports/' + arr[0] + '.html';
+        }
+      });
   </script>
 </body>
 </html>

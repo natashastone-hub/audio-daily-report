@@ -13,7 +13,8 @@ if (Test-Path $reportsDir) {
     $dates = @()
 }
 
-$json = $dates | ConvertTo-Json -Compress
+# Force output as JSON array even for single element; ConvertTo-Json -AsArray needs PS 7+
+$json = "[" + (($dates | ForEach-Object { "`"$_`"" }) -join ",") + "]"
 Set-Content -Path $datesJson -Value $json -Encoding UTF8
 Write-Host "Updated dates.json with $($dates.Count) entries"
 Pop-Location
