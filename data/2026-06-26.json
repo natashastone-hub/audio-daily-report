@@ -1,0 +1,151 @@
+{
+  "papers": [
+    {
+      "title": "Elastic Time: Dynamic Frame Rate Bottlenecks for Neural Audio Coding",
+      "url": "https://arxiv.org/abs/2606.27320",
+      "date": "2026-06-25",
+      "authors": "Dimitrios Bralios, Paris Smaragdis, Minje Kim",
+      "abstract": "神经音频自动编码器已成为压缩、特征提取和生成的核心组件。然而现有系统大多在固定帧率下运行，对信息密度不同的区域分配相同的时间预算。本文提出 Elastic Time，一种动态帧率瓶颈，将固定帧率编码器转换为动态编码器，通过轻量级潜在预测器决定哪些帧可跳过并在后续重建，支持部署时速率控制，在效率-质量权衡上优于基线方法。",
+      "tags": ["Neural Audio Codec", "Audio Generation", "Dynamic Frame Rate"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.27320"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.27320"}]
+    },
+    {
+      "title": "DNSMOS-C: Improving End-to-end Speech Quality Models via Contrastive Learning",
+      "url": "https://arxiv.org/abs/2606.26903",
+      "date": "2026-06-25",
+      "authors": "Xinyu Liang, Fredrik Cumlin, Victor Ungureanu, Chandan K. A. Reddy, Christian Schuldt, Saikat Chatterjee",
+      "abstract": "提出 DNSMOS-C，一个紧凑的端到端语音质量评估模型，通过 MOS 引导的三元组对比损失扩展 DNSMOS Pro 框架，直接应用于中间嵌入，鼓励潜在空间按感知质量更好地组织。与依赖大型 SSL 编码器和多阶段训练的先前方法不同，DNSMOS-C 在单一统一框架内联合学习语音表示和 MOS 回归，多个数据集上的实验表明一致性改进和更好的泛化能力。",
+      "tags": ["Speech Quality Assessment", "Contrastive Learning", "Interspeech 2026"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.26903"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.26903"}]
+    },
+    {
+      "title": "wav2tok 2.0: Scalable Audio Tokenization Maintaining Explicit Pairwise Token Alignment for Efficient Audio Retrieval",
+      "url": "https://arxiv.org/abs/2606.26824",
+      "date": "2026-06-25",
+      "authors": "Adhiraj Banerjee, Vipul Arora",
+      "abstract": "提出 wav2tok 2.0，一种可扩展的对齐感知语音分词器，基于 BEST-STD 架构，采用分阶段训练：先通过对比学习和向量量化学习判别性说话人不变表示，然后用 CTC 对齐损失和创新的 DTW 对齐逐帧预测目标强制成对 token 一致性。在查询样例语音关键词检测（QbE-STD）上持续优于 BEST-STD 和通用分词器。",
+      "tags": ["Audio Tokenization", "Speech Retrieval", "INTERSPEECH 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.26824"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.26824"}]
+    },
+    {
+      "title": "WQ-Fusion: Dynamic Gated Attention for Cross-Domain Audio Representation",
+      "url": "https://arxiv.org/abs/2606.26556",
+      "date": "2026-06-25",
+      "authors": "Authors",
+      "abstract": "提出 WQ-Fusion，一个鲁棒的双编码器框架用于跨域音频表示学习。该框架集成 Whisper 和 Qwen 编码器，通过自适应特征调制和动态门控注意力机制克服静态拼接的局限性，实现更好的跨域泛化能力。",
+      "tags": ["Audio Representation", "Multi-Modal", "Cross-Domain"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.26556"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.26556"}]
+    },
+    {
+      "title": "voxmap-studio: An Open-source Speaker Diarization Annotation Tool with Built-in Cost Instrumentation",
+      "url": "https://arxiv.org/abs/2606.26842",
+      "date": "2026-06-25",
+      "authors": "Fumiaki Yamaguchi",
+      "abstract": "开源说话人日志标注工具 voxmap-studio，基于 React 和 pyannote 生态系统。画布由快速步幅加速日志引擎初始化，标注者校正假设而非手绘每段说话人切换，工具记录标注成本（编辑操作计数和时间）。导出经过逐段人工确认和隐蔽注意力检查验证，防止未经验证的自动输出被作为标注真值。",
+      "tags": ["Speaker Diarization", "Annotation Tool", "Open Source"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.26842"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.26842"}]
+    },
+    {
+      "title": "UniVoice: A Unified Model for Speech and Singing Voice Generation",
+      "url": "https://arxiv.org/abs/2606.05852",
+      "date": "2026-06-05",
+      "authors": "Authors",
+      "abstract": "提出 UniVoice，第一个统一的语音和歌声生成模型。TTS 和 SVS 都旨在从符号输入生成人声，但传统方法施加了不同的约束。UniVoice 通过统一架构同时处理两种任务，在语音合成和歌声合成上都取得了优异表现。",
+      "tags": ["Unified Model", "TTS", "Singing Voice", "Speech Generation"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.05852"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.05852"}]
+    },
+    {
+      "title": "VoXtream: Real-Time Streaming TTS with Ultra-Low Initial Latency via Multi-Stage Semantic-to-Acoustic Generation",
+      "url": "https://arxiv.org/abs/2606.21200",
+      "date": "2026-06-22",
+      "authors": "Authors",
+      "abstract": "提出 VoXtream，解决当前流式 TTS 系统的高初始延迟问题。通过多阶段语义到声学生成流水线，实现了极低初始延迟的实时流式 TTS，无需复杂的多阶段管道即可保证实时交互体验。",
+      "tags": ["Streaming TTS", "Low Latency", "Real-Time", "ICASSP 2026"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.21200"}]
+    },
+    {
+      "title": "RTFree-F5: Transcript-Free Flow-Matching Text-to-Speech via Speech Feature Conditioning",
+      "url": "https://arxiv.org/abs/2606.20266",
+      "date": "2026-06-19",
+      "authors": "Authors",
+      "abstract": "针对 F5-TTS 等流匹配 TTS 模型在推理时依赖外部转录的问题，提出 RTFree-F5，通过语音特征条件化实现无需参考转录的流匹配 TTS。该方法使流匹配 TTS 部署更加便捷，无需预先准备文本标注。",
+      "tags": ["TTS", "Flow Matching", "Transcript-Free", "Interspeech 2026"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.20266"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.20266"}]
+    },
+    {
+      "title": "IWSLT 2026 Cross-Lingual Voice Cloning System Report",
+      "url": "https://arxiv.org/abs/2606.07240",
+      "date": "2026-06-10",
+      "authors": "KIT Team",
+      "abstract": "KIT 团队在 IWSLT 2026 跨语言声音克隆赛道的系统报告。该报告详细描述了面向跨语言声音克隆任务的最新解决方案，包括模型架构、训练策略和跨语言迁移技术的系统评估。",
+      "tags": ["Voice Cloning", "Cross-Lingual", "IWSLT 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.07240"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.07240"}]
+    },
+    {
+      "title": "Sarashina2.2-TTS: Tackling Kanji Polyphony in Japanese Speech Generation via Data Scaling and Targeted Data Synthesis",
+      "url": "https://arxiv.org/abs/2606.27320",
+      "date": "2026-06-19",
+      "authors": "Lianbo Liu, Shiao Zhu, Kai Washizaki, Reo Yoneyama et al.",
+      "abstract": "针对日语语音生成中的汉字多音问题，通过数据规模扩展和针对性数据合成方法大幅提升日语 TTS 质量。Sarashina2.2-TTS 展示了在大规模数据驱动下有效处理复杂语言现象的可行路径。",
+      "tags": ["Japanese TTS", "Data Scaling", "Multi-Lingual"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.27320"}]
+    },
+    {
+      "title": "DMP-TTS: Diffusion Transformer with Style-Aware, Duration-Aware and Prosody-Aware Modules for Controllable TTS",
+      "url": "https://arxiv.org/abs/2606.21000",
+      "date": "2026-06-22",
+      "authors": "Authors",
+      "abstract": "提出 DMP-TTS，基于潜在扩散 Transformer (DiT) 框架，创新引入 Style-Aware、Duration-Aware 和 Prosody-Aware 三个核心模块，实现对风格、时长和韵律的精细可控，为可控 TTS 提供了一条新的技术路线。",
+      "tags": ["TTS", "Diffusion Transformer", "Controllable", "ICASSP 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.21000"}]
+    },
+    {
+      "title": "High-Fidelity Simultaneous Speech-To-Speech Translation with Hibiki",
+      "url": "https://arxiv.org/abs/2502.03382",
+      "date": "2025-02-05",
+      "authors": "Authors",
+      "abstract": "提出 Hibiki，一个解码器仅用模型用于同步语音翻译。利用多流语言模型同步处理源语音和目标语音，在法语-英语同步语音翻译任务上展示了最先进的翻译质量、说话人保真度和自然度。其架构简洁性和端到端设计使其成为实时同声传译的有力方案。",
+      "tags": ["Speech-to-Speech Translation", "Simultaneous", "Real-Time"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2502.03382"}, {"label": "HuggingFace", "url": "https://huggingface.co/papers/2502.03382"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "Azure Speech at Build 2026: 企业级语音 Agent 全面升级",
+      "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/azure-speech-at-build-2026-powering-voice-agents-with-real-time-and-life-like-ex/4524638",
+      "summary": "微软 Build 2026 宣布重大语音更新：Voice Live for Foundry Prompt Agents 正式 GA，支持企业规模构建语音 Agent；GigaSpeech 3 开源发布。标志着企业级语音 AI 进入实时交互新时代。"
+    },
+    {
+      "title": "2026 年上半年语音 AI 大事记：从 GPT-Realtime-2 到 MAI-Voice",
+      "url": "https://www.shengwang.cn/blog/blogdetail/2026h1-voice-ai/",
+      "summary": "2026 年上半年语音 AI 经历变化最密集的六个月。OpenAI、Google、微软、苹果在同一时间窗口相继发布对行业格局有实质影响的产品，Thinking Machines Lab 等新玩家加入战场。全面梳理上半年的重要事件和产品发布。"
+    },
+    {
+      "title": "2026 年开源语音 AI 爆发：VoxCPM2、Fish Audio S2 等八大模型评测",
+      "url": "https://tenten.co/learning/2026-top-open-source-voice-ai-tts/",
+      "summary": "2026 年八大开源语音模型完整评测出炉。VoxCPM2 支持 30 语言零样本跨语言克隆，Fish Audio S2 在自然度上接近闭源商业方案，开源模型正在追赶甚至超越 ElevenLabs 等商业 API。"
+    },
+    {
+      "title": "2026 年 AI 语音合成趋势：开源模型 + 无 GPU 部署成主流",
+      "url": "https://cj.sina.com.cn/articles/view/7879848900/1d5acf3c401902o9ju",
+      "summary": "以 IndexTTS-2-LLM 为代表的新型语音合成架构正重塑行业标准，通过将 LLM 与语音生成深度融合实现更自然、更具表现力的语音输出。开源模型 + 无 GPU 部署成为 2026 年主旋律。"
+    },
+    {
+      "title": "全双工语音大模型 DuplexSLA：160ms 粒度听-说-规划三通道同步",
+      "url": "https://blog.csdn.net/yuyue1116/article/details/161336646",
+      "summary": "本周语音 AI 突破：全双工语音大模型 DuplexSLA 实现 160ms 粒度的听、说、规划三通道同步，开创实时语音交互新范式。同时 ASR 仿真规模化突破野外场景，开源 TTS 生态持续壮大。"
+    }
+  ]
+}
