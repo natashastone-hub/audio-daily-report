@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="0; url=reports/latest.html">
+  <title>Audio Daily Report</title>
+  <style>
+    body { font-family: -apple-system, sans-serif; max-width: 800px; margin: 50px auto; padding: 0 20px; background: #0d1117; color: #c9d1d9; text-align: center; }
+    a { color: #58a6ff; }
+  </style>
+</head>
+<body>
+  <h1>🎙️ Audio Daily Report</h1>
+  <p>正在跳转到最新日报…</p>
+  <p>如果没有自动跳转，请点击 <a href="reports/">日报归档</a></p>
+  <script>
+    fetch('dates.json').then(r => r.json()).then(dates => {
+      if (dates.length > 0) {
+        window.location.href = 'reports/' + dates[0] + '.html';
+      }
+    });
+  </script>
+</body>
+</html>
