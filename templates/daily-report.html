@@ -92,7 +92,7 @@
   </footer>
   <script>
     // Load available dates list
-    fetch('dates.json')
+    fetch('/audio-daily-report/dates.json')
       .then(r => r.json())
       .then(dates => {
         const sel = document.getElementById('dateSelect');
