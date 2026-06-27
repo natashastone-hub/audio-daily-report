@@ -1,0 +1,102 @@
+{
+  "date": "2026-06-27",
+  "papers": [
+    {
+      "title": "VoiceTTA: Enhancing Zero-Shot Text-to-Speech via Reinforcement Learning-Based Test-Time Adaptation",
+      "url": "https://arxiv.org/abs/2606.26534",
+      "date": "2026-06-25",
+      "authors": "Tianxin Xie, Chenxing Li, Dong Yu, Li Liu",
+      "abstract": "零样本TTS在高质量、富有表现力语音合成上取得突破，但在不常见场景（如相声、方言）的说话风格模仿中仍常失败。VoiceTTA通过基于强化学习的测试时适应（TTA）方法增强预训练零样本TTS模型的语音模仿能力：引入基于F0和能量变异系数差异的两个风格奖励，结合说话人相似度和可懂度奖励，通过GRPO在推理时优化可学习前缀。在不常见语音提示上表现大幅度超越SOTA基线。",
+      "tags": ["TTS", "Zero-Shot", "Reinforcement Learning", "Test-Time Adaptation", "Interspeech 2026"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.26534"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.26534"}, {"label": "Demo", "url": "https://voicetta.pages.dev/"}]
+    },
+    {
+      "title": "Sarashina2.2-TTS: Tackling Kanji Polyphony in Japanese Speech Generation via Data Scaling and Targeted Data Synthesis",
+      "url": "https://arxiv.org/abs/2606.25369",
+      "date": "2026-06-24",
+      "authors": "Lianbo Liu, Shiao Zhu, Kai Washizaki, Reo Yoneyama et al.",
+      "abstract": "现有LLM-based TTS主要关注英语和中文，日语TTS面临独特的汉字多音问题。Sarashina2.2-TTS通过双管齐下的数据策略解决此挑战：扩大到361k小时训练数据（日语+英语混合），设计覆盖全部2136个常用汉字的针对性数据增强流水线。引入Joyo Kanji Yomi Benchmark和Kana-CER评估指标。在零样本日语语音合成上达到SOTA汉字级读音准确率，且跨语言鲁棒性最优。代码和数据已开源。",
+      "tags": ["Japanese TTS", "LLM-TTS", "Data Scaling", "Open Source"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.25369"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.25369"}, {"label": "GitHub", "url": "https://github.com/sbintuitions/sarashina2.2-tts"}]
+    },
+    {
+      "title": "STEB: A Speech-to-Speech Translation Expressiveness Benchmark",
+      "url": "https://arxiv.org/abs/2606.25529",
+      "date": "2026-06-24",
+      "authors": "Sitong Cheng, Weizhen Bian, Songjun Cao, Jin Li et al.",
+      "abstract": "语音到语音翻译(S2ST)不仅应保留语义，还应保留表达性属性：情感、场景风格和副语言发声。引入STEB基准（32.6小时中英数据），通过新颖的caption-then-summarize框架评估表达性传递。评估6个S2ST系统后发现：虽然级联系统在翻译保真度上表现强劲，但情感保留最佳仅3.82/5，副语言发声保留最佳仅2.31/5——揭示语义传递与表达性传递之间的巨大鸿沟。",
+      "tags": ["Speech-to-Speech Translation", "Expressiveness", "Benchmark", "Multi-Modal"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.25529"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.25529"}, {"label": "Audio Samples", "url": "https://cmots.github.io/steb.github.io/"}]
+    },
+    {
+      "title": "AnySimLite: A Lightweight Few-Shot Similarity Encoder for On-Device Speech-Adjacent Classification",
+      "url": "https://arxiv.org/abs/2606.26452",
+      "date": "2026-06-24",
+      "authors": "Sourav Ghosh, Yash Bhatia, Keshav Goyal, Sahil Singh Bagri et al.",
+      "abstract": "针对边缘设备上的语音相邻分类任务，提出AnySimLite轻量级相似度编码器，结合词级和字符级通道。通过数据集转换策略，在少样本设置下持续达到SOTA或SOTA-competitive性能。最差情况下性能下降低于7%，而模型大小不到SOTA qLLaMA_LoRA-7B的1/250，解决了边缘设备上多模型部署的内存占用挑战。",
+      "tags": ["On-Device", "Speech Classification", "Lightweight", "Few-Shot", "Interspeech 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.26452"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.26452"}]
+    },
+    {
+      "title": "MusicJudge: A Music-Aware Framework for Automatic Singing Performance Evaluation",
+      "url": "https://arxiv.org/abs/2606.26451",
+      "date": "2026-06-24",
+      "authors": "Neelam Saini, Sourav Ghosh",
+      "abstract": "自动唱歌质量评估(SQA)需要同时评估歌词正确性和音乐保真度。提出MusicJudge，一个模态引导框架，通过多信号匹配执行块对齐多模态分析，耦合歌词正确性与音高-节奏保真度。引入Modality-Guided LoRA改进唱歌音频转录。多个数据集实验显示与人类专家判断的强一致性。",
+      "tags": ["Singing Voice", "Quality Assessment", "Multi-Modal", "Interspeech 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.26451"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.26451"}]
+    },
+    {
+      "title": "Fully Differentiable Neural Forced Alignment via Soft Dynamic Programming",
+      "url": "https://arxiv.org/abs/2606.25460",
+      "date": "2026-06-24",
+      "authors": "Authors",
+      "abstract": "ASR系统已接近人类水平，但强制对齐（Forced Alignment）进展相对缓慢，传统HMM-GMM框架仍被广泛采用。提出端到端全可微分神经架构，通过软动态规划实现音素对齐，弥合强制对齐的技术差距。",
+      "tags": ["Forced Alignment", "ASR", "End-to-End", "eess.AS"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.25460"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.25460"}]
+    },
+    {
+      "title": "PupuJEPA: Frequency-Aware Self-Supervised Music Representation Learning",
+      "url": "https://arxiv.org/abs/2606.25713",
+      "date": "2026-06-24",
+      "authors": "Yicheng Gu, Junan Zhang, Jerry Li, Zhizheng Wu, Lauri Juvela",
+      "abstract": "首次将视觉JEPA（联合嵌入预测架构）应用于音乐表示学习，直接在2D频谱图上训练而非传统的1D序列建模。PupuJEPA通过从无掩码上下文预测掩码2D频谱图块的潜在嵌入来学习鲁棒表示。在MARBLE基准上超越所有1D序列SSL模型，注意力图也证实了其对音乐意义模式的捕捉。代码和检查点已开源。",
+      "tags": ["Music", "SSL", "JEPA", "Representation Learning", "Open Source"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.25713"}, {"label": "Code", "url": "https://www.yichenggu.com/PupuJEPA/"}]
+    },
+    {
+      "title": "FoleySet: A Multi-Level Human-Annotated Foley Sound Dataset",
+      "url": "https://arxiv.org/abs/2606.25980",
+      "date": "2026-06-24",
+      "authors": "Sunshiyu Wang, Alexander Lerch",
+      "abstract": "Foley音效（如脚步声、衣物摩擦声、道具处理声）是影视后期的重要环节，但高质量标注数据集稀缺。发布FoleySet：10,000条音频剪辑的公开数据集，采用两级Foley分类法的层级标注，CC许可，为数据驱动的Foley分类、检索和生成提供标准化资源。",
+      "tags": ["Foley Sound", "Dataset", "Audio Generation", "DAFx 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.25980"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.25980"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "ICASSP 2026 语音合成/语音识别论文列表更新",
+      "url": "https://nanless.github.io/audio-paper-digest-blog/posts/icassp2026-task-061/",
+      "summary": "ICASSP 2026 语音合成和语音识别领域论文列表持续更新，涵盖流式TTS、目标说话人ASR、VoiceTTA等前沿方向。Interspeech 2026 论文也在本周密集放出，反映语音领域研究热度持续升温。"
+    },
+    {
+      "title": "AI Builders Digest 2026-06-26：语音AI开发者周报",
+      "url": "https://iwiki.woa.com/p/4019323197",
+      "summary": "最新一期 AI Builders Digest 覆盖了语音AI开发者的本周动态，Twitter/X上涌现大量关于开源TTS模型对比、全双工语音Agent架构讨论。开发者社区对语音合成模型的情感控制和实时交互能力讨论热度持续走高。"
+    },
+    {
+      "title": "腾讯天籁inside：音频AI技术在企业级场景的落地实践",
+      "url": "https://km.woa.com/articles/show/654129",
+      "summary": "腾讯天籁音频AI技术（Ethereal Audio AI Inside）在企业级语音交互场景中的最新进展。覆盖语音增强、3D空间音频、实时语音翻译等方向，展示了音频AI从实验室走向规模化商业应用的最新实践。"
+    }
+  ]
+}
