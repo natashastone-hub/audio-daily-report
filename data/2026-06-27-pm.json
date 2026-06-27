@@ -1,0 +1,32 @@
+{
+  "date": "2026-06-27",
+  "papers": [
+    {
+      "title": "Neural Speaker Diarization via Multilingual Training: Evaluation on Low-Resource Nepali-Hindi Speech",
+      "url": "https://arxiv.org/abs/2606.26144",
+      "date": "2026-06-23",
+      "authors": "Samip Neupane et al.",
+      "abstract": "研究低资源尼泊尔语-印地语语音的说话人日志问题，通过多语言训练方法对比EEND-EDA和DiaPer两种端到端架构。DiaPer在多说话人场景下取得更强性能，DER分别为3.28%、2.02%、4.05%和4.76%。验证了基于Perceiver的端到端神经说话人日志在低资源多语言语音处理中的可行性。",
+      "tags": ["Speaker Diarization", "Low-Resource", "Multilingual", "EEND"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.26144"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.26144"}]
+    },
+    {
+      "title": "A Large-Scale Database and Predictive Model of Listener-Rated Ease of Speech Understanding in Commercial Hearing Aids",
+      "url": "https://arxiv.org/abs/2606.26342",
+      "date": "2026-06-24",
+      "authors": "Andrew Sabin et al.",
+      "abstract": "HearAdvisor引入大规模感知数据集和学习度量，用于预测消费者评级的商业助听器语音理解易度。数据集包含151,608个评分（筛选后104,298个），涵盖83种商业产品的10,394条双耳录音。基于Whisper编码器差分的MLP模型在场景级别大幅超越HASPIv2（r=0.92 vs 0.83）。",
+      "tags": ["Speech Quality", "Hearing Aid", "Perceptual Metric", "Whisper"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.26342"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.26342"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "AI Builders Digest 2026-06-27：周末技术动态",
+      "url": "https://iwiki.woa.com/p/4019323197",
+      "summary": "周六语音AI领域暂无重大新闻发布。本周Interspeech 2026论文密集流出已基本结束，社区进入周末消化期。本周亮点回顾：VoiceTTA用RL提升零样本TTS、Sarashina2.2-TTS攻克日语多音字、ICASSP 2026论文列表持续更新。"
+    }
+  ]
+}
