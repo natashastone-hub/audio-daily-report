@@ -1,0 +1,40 @@
+{
+  "date": "2026-06-28",
+  "coverage_start": "2026-06-27T09:30:00+08:00",
+  "coverage_end": "2026-06-28T09:34:00+08:00",
+  "summary": "今天是周日，arxiv 周末不发布新论文，行业新闻也相对平静。本期收录近期音频 AI 行业综合资讯。",
+  "papers": [],
+  "news": [
+    {
+      "title": "2026年上半年语音AI大事记：从GPT-Realtime-2到MAI-Voice",
+      "url": "https://k.sina.cn/article_7857141524_1d45277140190377k8.html",
+      "summary": "2026年上半年语音AI经历变化最密集的六个月。OpenAI、Google、微软、苹果在同一时间窗口相继发布对行业格局有实质影响的产品（GPT-Realtime-2、Gemini TTS、MAI-Voice-2等），Thinking Machines Lab等新玩家加入战场。全面梳理上半年重要事件和产品发布。"
+    },
+    {
+      "title": "2026年AI语音合成趋势：从「像人说话」到「分不清真假」",
+      "url": "https://www.flowpixai.com/ai-news/ai-tts-technology-trends-2026.html",
+      "summary": "2026年AI语音合成已不满足于「像人说话」——情感控制、实时克隆、多语言切换成为新战场。梳理TTS领域最新突破、头部玩家和行业应用，附声音克隆安全挑战分析。开源模型+无GPU部署成主流趋势。"
+    },
+    {
+      "title": "2026年AI语音合成与克隆工具全面实测：ElevenLabs、Fish Audio等",
+      "url": "https://aibotgo.net/blog/ai-voice-cloning-synthesis-2026/",
+      "summary": "从声音自然度、情感表现力、克隆准确度、延迟与定价四个维度，实测ElevenLabs Turbo v3、Fish Audio、CosmicChat和OpenAI TTS的真实表现，覆盖直播、播客、游戏配音等实际场景。2026年AI语音合成已跨越「恐怖谷」"
+    },
+    {
+      "title": "微软MAI-Voice-2发布：15+语言情感语音合成升级",
+      "url": "https://chatforest.com/builders-log/microsoft-mai-multimodal-build-2026-image-voice-transcribe-builder-guide/",
+      "summary": "微软在Build 2026发布MAI-Voice-2，支持15+语言和扩展情感表达，MAI-Transcribe-1.5同步更新。标志着微软在语音AI多模态方向的持续推进，与Azure Speech产品线深度融合。"
+    },
+    {
+      "title": "Xiaomi MiMo Home：集成TTS模型的端侧AI助手发布",
+      "url": "https://mimo.mi.com/",
+      "summary": "小米发布MiMo-V2.5旗舰模型和端侧TTS模型，一次购买解锁全系功能。端侧语音合成成为消费级AI产品标配趋势的又一例证，推动语音AI从云端走向终端设备。"
+    },
+    {
+      "title": "语音转文字技术全景：2026年开源与闭源项目深度解析",
+      "url": "http://www.jsqmd.com/news/951165/",
+      "summary": "2026年语音转文字（ASR）技术全景解读，深度对比Whisper系列、Parakeet-RNNT、Gemma 4等开源方案与商业API的优劣。覆盖多语言、长音频、实时流式等细分场景的选型指南。"
+    }
+  ],
+  "notes": "📌 周日报告说明：2026-06-27（周六）至 2026-06-28（周日），arxiv 暂停新论文发布（仅周一至周五处理提交）。本期主要收录近期行业动态和综合资讯，下一个工作日（周一 6/29）将恢复完整论文收录。"
+}

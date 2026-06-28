@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-06-28</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-06-28</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年6月28日 (周日) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">0</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">6</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>2026年上半年语音AI大事记：从GPT-Realtime-2到MAI-Voice</h4>
+      <p>2026年上半年语音AI经历变化最密集的六个月。OpenAI、Google、微软、苹果在同一时间窗口相继发布对行业格局有实质影响的产品（GPT-Realtime-2、Gemini TTS、MAI-Voice-2等），Thinking Machines Lab等新玩家加入战场。全面梳理上半年重要事件和产品发布。 <a href="https://k.sina.cn/article_7857141524_1d45277140190377k8.html" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>2026年AI语音合成趋势：从「像人说话」到「分不清真假」</h4>
+      <p>2026年AI语音合成已不满足于「像人说话」——情感控制、实时克隆、多语言切换成为新战场。梳理TTS领域最新突破、头部玩家和行业应用，附声音克隆安全挑战分析。开源模型+无GPU部署成主流趋势。 <a href="https://www.flowpixai.com/ai-news/ai-tts-technology-trends-2026.html" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>2026年AI语音合成与克隆工具全面实测：ElevenLabs、Fish Audio等</h4>
+      <p>从声音自然度、情感表现力、克隆准确度、延迟与定价四个维度，实测ElevenLabs Turbo v3、Fish Audio、CosmicChat和OpenAI TTS的真实表现，覆盖直播、播客、游戏配音等实际场景。2026年AI语音合成已跨越「恐怖谷」 <a href="https://aibotgo.net/blog/ai-voice-cloning-synthesis-2026/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>微软MAI-Voice-2发布：15+语言情感语音合成升级</h4>
+      <p>微软在Build 2026发布MAI-Voice-2，支持15+语言和扩展情感表达，MAI-Transcribe-1.5同步更新。标志着微软在语音AI多模态方向的持续推进，与Azure Speech产品线深度融合。 <a href="https://chatforest.com/builders-log/microsoft-mai-multimodal-build-2026-image-voice-transcribe-builder-guide/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Xiaomi MiMo Home：集成TTS模型的端侧AI助手发布</h4>
+      <p>小米发布MiMo-V2.5旗舰模型和端侧TTS模型，一次购买解锁全系功能。端侧语音合成成为消费级AI产品标配趋势的又一例证，推动语音AI从云端走向终端设备。 <a href="https://mimo.mi.com/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>语音转文字技术全景：2026年开源与闭源项目深度解析</h4>
+      <p>2026年语音转文字（ASR）技术全景解读，深度对比Whisper系列、Parakeet-RNNT、Gemma 4等开源方案与商业API的优劣。覆盖多语言、长音频、实时流式等细分场景的选型指南。 <a href="http://www.jsqmd.com/news/951165/" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-06-28') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = 'reports/' + date + '.html';
+    }
+  </script>
+</body>
+</html>
