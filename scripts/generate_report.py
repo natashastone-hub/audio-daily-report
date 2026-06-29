@@ -79,9 +79,14 @@ def generate_report(date_str, data):
     highlights = [p for p in papers if p.get('highlight')]
     
     # Format display date
-    dt = datetime.strptime(date_str, '%Y-%m-%d')
+    # Support -pm suffix for afternoon edition
+    clean_date = date_str.replace('-pm', '').replace('-am', '')
+    suffix = '-pm' if date_str.endswith('-pm') else ('-am' if date_str.endswith('-am') else '')
+    dt = datetime.strptime(clean_date, '%Y-%m-%d')
     weekdays = ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
     date_display = f"{dt.year}年{dt.month}月{dt.day}日 ({weekdays[dt.weekday()]})"
+    if suffix == '-pm':
+        date_display += ' 午间版'
     
     # Build content
     content_parts = []
