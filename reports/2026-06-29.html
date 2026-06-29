@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-06-29</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-06-29</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年6月29日 (周一) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">10</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">5</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.28249" target="_blank">Hierarchical Progressive Reward Optimization via Preference Extraction for Emotional Text-to-Speech</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-06-26</span><span>👥 Sihang Nie, et al.</span></div>
+      <div class="abstract">针对LLM-based TTS模型中情感表达不足的问题，提出HPRO（分层渐进式奖励优化框架）。引入HD-Emo codec作为可微奖励模型，将语音提取为分离的内容和风格偏好token，在结构上隔离情感优化和语义内容。通过逐层对齐帧级、词级和句级目标，HPRO显著增强了情感表现力，同时有效保持了语言可懂度。代码和音频样本已公开。</div>
+      <div class="tags"><span class="tag">Emotional TTS</span><span class="tag">Preference Optimization</span><span class="tag">Reward Model</span><span class="tag">LLM-TTS</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.28249" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.28249" target="_blank">🔗 PDF</a> <a href="https://xxh333.github.io/hpro-demo/" target="_blank">🔗 Demo</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.27320" target="_blank">Dynamic Frame Rate Bottlenecks for Neural Audio Coding</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-06-25</span><span>👥 Dimitrios Bralios, et al.</span></div>
+      <div class="abstract">提出 Elastic Time，一种动态帧率瓶颈，将固定帧率神经音频编码器转换为动态编码器。通过轻量级潜在预测器决定哪些帧可跳过并在后续重建，实现部署时速率控制，在效率-质量权衡上优于固定帧率基线。</div>
+      <div class="tags"><span class="tag">Neural Audio Codec</span><span class="tag">Audio Generation</span><span class="tag">Dynamic Frame Rate</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.27320" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.27320" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.27701" target="_blank">Large-Scale Simulation of Over-the-Air Acoustic Attacks</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-06-26</span><span>👥 Andrew Cullen, et al.</span></div>
+      <div class="abstract">通过800万+对抗性评估的大规模仿真，揭示语音控制系统面临的声学攻击风险。提出Dual-Form信噪比，解耦源隐蔽性与攻击有效性。在Whisper和wav2vec下实现高达94.5%的相对词错率增加，为可复现的声学安全研究奠定基础。</div>
+      <div class="tags"><span class="tag">Audio Security</span><span class="tag">Adversarial Attack</span><span class="tag">Speech Recognition</span><span class="tag">Acoustic Simulation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.27701" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.27701" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.27965" target="_blank">Grammar-Guided Hierarchical Parsing for Long-form Audio Activity Recognition</a></h4>
+      <div class="meta"><span>📅 2026-06-26</span><span>👥 Peng Zhang, et al.</span></div>
+      <div class="abstract">提出分层活动文法（Hierarchical Activity Grammar），编码层次组成和时间顺序约束，进行文法引导解码。从检测到的事件片段推断顺序一致的 Act-Sub-Event 解析树，在长音频 MultiAct 数据集上展示改进的时间顺序一致性和可解释层次结构。</div>
+      <div class="tags"><span class="tag">Audio Activity Recognition</span><span class="tag">Hierarchical Parsing</span><span class="tag">Long-form Audio</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.27965" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.27965" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.27751" target="_blank">From General-Purpose Audio Tagging to Spatially Grounded Sound Event Localization and Detection</a></h4>
+      <div class="meta"><span>📅 2026-06-26</span><span>👥 Stefano Giacomelli, et al.</span></div>
+      <div class="abstract">提出 AT2SELD 框架，将预训练通用音频标记（GP-AT）模型扩展到空间声事件定位与检测（SELD）。通过多阶段神经架构搜索（NAS）识别关键设计选择：谱FOA描述符提供最佳的语义到空间迁移接口，后期交叉缝合耦合改善语义-空间交互。</div>
+      <div class="tags"><span class="tag">Sound Event Detection</span><span class="tag">Audio Tagging</span><span class="tag">Spatial Audio</span><span class="tag">NAS</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.27751" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.27751" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.27536" target="_blank">Entropy-Aware Curriculum for Speech Emotion Recognition</a></h4>
+      <div class="meta"><span>📅 2026-06-25</span><span>👥 Zahra Omidi, et al.</span></div>
+      <div class="abstract">研究基于分布监督的9分类语音情感识别（SER），使用WavLM-Base多任务模型。分布目标相比硬标签训练改善与人类投票分布的对齐，熵分层评估显示高模糊性话语仍有挑战，但分布监督更好地捕获感知不确定性。接受于Interspeech 2026。</div>
+      <div class="tags"><span class="tag">Speech Emotion Recognition</span><span class="tag">Distribution Supervision</span><span class="tag">SER</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.27536" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.27536" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.27543" target="_blank">Advancing Speaker-Based Vocal Effort Classification with WavLM and Data Augmentation</a></h4>
+      <div class="meta"><span>📅 2026-06-25</span><span>👥 Zahra Omidi, et al.</span></div>
+      <div class="abstract">首次将WavLM引入发声努力程度分类，系统研究7种数据增强策略（RIR、噪声、时间掩蔽、速度扰动等），提出高斯邻居软标签减少边界混淆。最佳系统WavLM-BASE在AVID数据集上达到78.2%准确率的新SOTA。</div>
+      <div class="tags"><span class="tag">Vocal Effort Classification</span><span class="tag">WavLM</span><span class="tag">Data Augmentation</span><span class="tag">ICASSP 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.27543" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.27543" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.27717" target="_blank">Do Speech Emphasis Models Generalize across Languages and Emotions?</a></h4>
+      <div class="meta"><span>📅 2026-06-26</span><span>👥 Megan Wei, et al.</span></div>
+      <div class="abstract">引入MMEE（多语言多情感重音）语料库，包含7种语言、34种情感/风格类别、14.13小时专业录制的表现力语音。基准测试发现单语模型零样本迁移有限，多语言训练显著提升鲁棒性；模型在高低唤醒情感间稳健迁移；合成与感知基准间的双向迁移表明共享韵律结构。</div>
+      <div class="tags"><span class="tag">Speech Emphasis</span><span class="tag">Cross-Lingual</span><span class="tag">Multi-Emotion</span><span class="tag">Prosody</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.27717" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.27717" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.28048" target="_blank">Speaker Clustering for Fraud Investigation under Real Call-Centre Conditions</a></h4>
+      <div class="meta"><span>📅 2026-06-26</span><span>👥 Muhammad Shakeel Akram, et al.</span></div>
+      <div class="abstract">提出DG^VoiC语音聚类框架，用于保险欺诈调查中客户验证和跨档案说话人关联。结合敏感信息对齐匿名化、语音预处理、滑动窗口说话人嵌入提取和余弦相似度聚类。在121条真实呼叫中心录音上达到96% AMI、95% ARI、98%完整度和99% V-measure。</div>
+      <div class="tags"><span class="tag">Speaker Clustering</span><span class="tag">Fraud Detection</span><span class="tag">Call-Centre</span><span class="tag">Voice Verification</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.28048" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.28048" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.28114" target="_blank">Screening Matters: A Comparative Study of Conventional and Crowdsourced Listening Tests</a></h4>
+      <div class="meta"><span>📅 2026-06-26</span><span>👥 Anika Treffehn, et al.</span></div>
+      <div class="abstract">比较传统实验室和众包听力测试的语音/音频编解码评估质量。统计分析表明众包评估可通过后筛选方法（锚定排序、评分跨度）和连续筛选方法（陷阱问题、金标准问题）显著改善，提出了一套经济高效、偏倚减少的筛选方案。</div>
+      <div class="tags"><span class="tag">Speech Quality</span><span class="tag">Listening Test</span><span class="tag">Crowdsourcing</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.28114" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.28114" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>美团 LongCat-AudioDiT：摒弃梅尔谱的零样本 TTS 音色克隆突破</h4>
+      <p>美团 LongCat 技术团队正式公开 LongCat-AudioDiT，通过重新设计 TTS 合成管道，彻底抛弃传统梅尔谱中间表示，直接在波形潜空间中操作。利用扩散Transformer（DiT）架构直接学习声音内在规律，消除多阶段数据转换带来的级联误差，突破零样本声音克隆的技术瓶颈。论文 arxiv: 2603.29339，代码已开源。 <a href="https://aitoolly.com/ai-news/article/2026-06-29-meituan-longcat-audiodit-revolutionizes-zero-shot-tts-voice-cloning-by-eliminating-intermediate-mel" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Google Gemini 推出智能音箱，语音助手市场竞争加剧</h4>
+      <p>Google 发布 Gemini 驱动的 Home Speaker，定位为与 Amazon Alexa 和 Apple Siri 竞争的生成式 AI 智能音箱。2026 年语音助手市场正全面转向生成式 AI，Google 此举标志着硬件+AI 语音交互的新阶段。 <a href="https://www.nextmsc.com/news/google-launches-gemini-powered-home-speaker-in-voice-push" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>6月初 Open-Weight AI 发布周：4个 TTS 实验室集中发布</h4>
+      <p>6月第一周成为史上最密集的开源发布窗口之一。音频/TTS 领域：Boson AI 发布 Higgs Audio v3 TTS 4B（100+语言、内联情感标签）、小红点实验室 dots.tts（2B全连续AR TTS、Apache 2.0）、Google Magenta RealTime 2（<200ms延迟音乐生成）、NVIDIA Nemotron-3.5 ASR（流式ASR，17倍并发流）。 <a href="https://mer.vin/2026/06/open-weight-ai-release-week-25-models-across-llms-image-audio-video-and-3d-june-2026/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>2026年上半年语音AI大事记：密集发布重塑行业格局</h4>
+      <p>2026年上半年语音AI经历变化最密集的六个月。OpenAI、Google、微软、苹果相继发布对行业格局有实质影响的产品。从GPT-Realtime-2到MAI-Voice、从Apple Siri AI到Google Gemini 3.5 Live Translate，语音AI正在重塑人机交互范式。 <a href="https://k.sina.cn/article_7857141524_1d45277140190377k8.html" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Google Gemini 3.5 Live Translate：70+语言同声传译上线</h4>
+      <p>Google 推出 Gemini 3.5 Live Translate，支持 70+语言的语音到语音实时翻译。扩展了已有的 AI 实时语音翻译能力，标志着同声传译技术进入实用化阶段，对翻译行业产生深远影响。 <a href="https://slator.com/google-ai-live-speech-translation-gemini-3-5-live-translate/" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-06-29') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = 'reports/' + date + '.html';
+    }
+  </script>
+</body>
+</html>

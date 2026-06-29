@@ -1,0 +1,163 @@
+{
+  "date": "2026-06-29",
+  "papers": [
+    {
+      "title": "Hierarchical Progressive Reward Optimization via Preference Extraction for Emotional Text-to-Speech",
+      "url": "https://arxiv.org/abs/2606.28249",
+      "date": "2026-06-26",
+      "authors": "Sihang Nie, et al.",
+      "abstract": "针对LLM-based TTS模型中情感表达不足的问题，提出HPRO（分层渐进式奖励优化框架）。引入HD-Emo codec作为可微奖励模型，将语音提取为分离的内容和风格偏好token，在结构上隔离情感优化和语义内容。通过逐层对齐帧级、词级和句级目标，HPRO显著增强了情感表现力，同时有效保持了语言可懂度。代码和音频样本已公开。",
+      "tags": ["Emotional TTS", "Preference Optimization", "Reward Model", "LLM-TTS"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.28249"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.28249"},
+        {"label": "Demo", "url": "https://xxh333.github.io/hpro-demo/"}
+      ]
+    },
+    {
+      "title": "Dynamic Frame Rate Bottlenecks for Neural Audio Coding",
+      "url": "https://arxiv.org/abs/2606.27320",
+      "date": "2026-06-25",
+      "authors": "Dimitrios Bralios, et al.",
+      "abstract": "提出 Elastic Time，一种动态帧率瓶颈，将固定帧率神经音频编码器转换为动态编码器。通过轻量级潜在预测器决定哪些帧可跳过并在后续重建，实现部署时速率控制，在效率-质量权衡上优于固定帧率基线。",
+      "tags": ["Neural Audio Codec", "Audio Generation", "Dynamic Frame Rate", "Interspeech 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.27320"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.27320"}
+      ]
+    },
+    {
+      "title": "Large-Scale Simulation of Over-the-Air Acoustic Attacks",
+      "url": "https://arxiv.org/abs/2606.27701",
+      "date": "2026-06-26",
+      "authors": "Andrew Cullen, et al.",
+      "abstract": "通过800万+对抗性评估的大规模仿真，揭示语音控制系统面临的声学攻击风险。提出Dual-Form信噪比，解耦源隐蔽性与攻击有效性。在Whisper和wav2vec下实现高达94.5%的相对词错率增加，为可复现的声学安全研究奠定基础。",
+      "tags": ["Audio Security", "Adversarial Attack", "Speech Recognition", "Acoustic Simulation"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.27701"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.27701"}
+      ]
+    },
+    {
+      "title": "Grammar-Guided Hierarchical Parsing for Long-form Audio Activity Recognition",
+      "url": "https://arxiv.org/abs/2606.27965",
+      "date": "2026-06-26",
+      "authors": "Peng Zhang, et al.",
+      "abstract": "提出分层活动文法（Hierarchical Activity Grammar），编码层次组成和时间顺序约束，进行文法引导解码。从检测到的事件片段推断顺序一致的 Act-Sub-Event 解析树，在长音频 MultiAct 数据集上展示改进的时间顺序一致性和可解释层次结构。",
+      "tags": ["Audio Activity Recognition", "Hierarchical Parsing", "Long-form Audio", "Interspeech 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.27965"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.27965"}
+      ]
+    },
+    {
+      "title": "From General-Purpose Audio Tagging to Spatially Grounded Sound Event Localization and Detection",
+      "url": "https://arxiv.org/abs/2606.27751",
+      "date": "2026-06-26",
+      "authors": "Stefano Giacomelli, et al.",
+      "abstract": "提出 AT2SELD 框架，将预训练通用音频标记（GP-AT）模型扩展到空间声事件定位与检测（SELD）。通过多阶段神经架构搜索（NAS）识别关键设计选择：谱FOA描述符提供最佳的语义到空间迁移接口，后期交叉缝合耦合改善语义-空间交互。",
+      "tags": ["Sound Event Detection", "Audio Tagging", "Spatial Audio", "NAS"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.27751"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.27751"}
+      ]
+    },
+    {
+      "title": "Entropy-Aware Curriculum for Speech Emotion Recognition",
+      "url": "https://arxiv.org/abs/2606.27536",
+      "date": "2026-06-25",
+      "authors": "Zahra Omidi, et al.",
+      "abstract": "研究基于分布监督的9分类语音情感识别（SER），使用WavLM-Base多任务模型。分布目标相比硬标签训练改善与人类投票分布的对齐，熵分层评估显示高模糊性话语仍有挑战，但分布监督更好地捕获感知不确定性。接受于Interspeech 2026。",
+      "tags": ["Speech Emotion Recognition", "Distribution Supervision", "SER", "Interspeech 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.27536"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.27536"}
+      ]
+    },
+    {
+      "title": "Advancing Speaker-Based Vocal Effort Classification with WavLM and Data Augmentation",
+      "url": "https://arxiv.org/abs/2606.27543",
+      "date": "2026-06-25",
+      "authors": "Zahra Omidi, et al.",
+      "abstract": "首次将WavLM引入发声努力程度分类，系统研究7种数据增强策略（RIR、噪声、时间掩蔽、速度扰动等），提出高斯邻居软标签减少边界混淆。最佳系统WavLM-BASE在AVID数据集上达到78.2%准确率的新SOTA。",
+      "tags": ["Vocal Effort Classification", "WavLM", "Data Augmentation", "ICASSP 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.27543"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.27543"}
+      ]
+    },
+    {
+      "title": "Do Speech Emphasis Models Generalize across Languages and Emotions?",
+      "url": "https://arxiv.org/abs/2606.27717",
+      "date": "2026-06-26",
+      "authors": "Megan Wei, et al.",
+      "abstract": "引入MMEE（多语言多情感重音）语料库，包含7种语言、34种情感/风格类别、14.13小时专业录制的表现力语音。基准测试发现单语模型零样本迁移有限，多语言训练显著提升鲁棒性；模型在高低唤醒情感间稳健迁移；合成与感知基准间的双向迁移表明共享韵律结构。",
+      "tags": ["Speech Emphasis", "Cross-Lingual", "Multi-Emotion", "Prosody", "Interspeech 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.27717"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.27717"}
+      ]
+    },
+    {
+      "title": "Speaker Clustering for Fraud Investigation under Real Call-Centre Conditions",
+      "url": "https://arxiv.org/abs/2606.28048",
+      "date": "2026-06-26",
+      "authors": "Muhammad Shakeel Akram, et al.",
+      "abstract": "提出DG^VoiC语音聚类框架，用于保险欺诈调查中客户验证和跨档案说话人关联。结合敏感信息对齐匿名化、语音预处理、滑动窗口说话人嵌入提取和余弦相似度聚类。在121条真实呼叫中心录音上达到96% AMI、95% ARI、98%完整度和99% V-measure。",
+      "tags": ["Speaker Clustering", "Fraud Detection", "Call-Centre", "Voice Verification"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.28048"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.28048"}
+      ]
+    },
+    {
+      "title": "Screening Matters: A Comparative Study of Conventional and Crowdsourced Listening Tests",
+      "url": "https://arxiv.org/abs/2606.28114",
+      "date": "2026-06-26",
+      "authors": "Anika Treffehn, et al.",
+      "abstract": "比较传统实验室和众包听力测试的语音/音频编解码评估质量。统计分析表明众包评估可通过后筛选方法（锚定排序、评分跨度）和连续筛选方法（陷阱问题、金标准问题）显著改善，提出了一套经济高效、偏倚减少的筛选方案。",
+      "tags": ["Speech Quality", "Listening Test", "Crowdsourcing", "Interspeech 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.28114"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.28114"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "美团 LongCat-AudioDiT：摒弃梅尔谱的零样本 TTS 音色克隆突破",
+      "url": "https://aitoolly.com/ai-news/article/2026-06-29-meituan-longcat-audiodit-revolutionizes-zero-shot-tts-voice-cloning-by-eliminating-intermediate-mel",
+      "summary": "美团 LongCat 技术团队正式公开 LongCat-AudioDiT，通过重新设计 TTS 合成管道，彻底抛弃传统梅尔谱中间表示，直接在波形潜空间中操作。利用扩散Transformer（DiT）架构直接学习声音内在规律，消除多阶段数据转换带来的级联误差，突破零样本声音克隆的技术瓶颈。论文 arxiv: 2603.29339，代码已开源。"
+    },
+    {
+      "title": "Google Gemini 推出智能音箱，语音助手市场竞争加剧",
+      "url": "https://www.nextmsc.com/news/google-launches-gemini-powered-home-speaker-in-voice-push",
+      "summary": "Google 发布 Gemini 驱动的 Home Speaker，定位为与 Amazon Alexa 和 Apple Siri 竞争的生成式 AI 智能音箱。2026 年语音助手市场正全面转向生成式 AI，Google 此举标志着硬件+AI 语音交互的新阶段。"
+    },
+    {
+      "title": "6月初 Open-Weight AI 发布周：4个 TTS 实验室集中发布",
+      "url": "https://mer.vin/2026/06/open-weight-ai-release-week-25-models-across-llms-image-audio-video-and-3d-june-2026/",
+      "summary": "6月第一周成为史上最密集的开源发布窗口之一。音频/TTS 领域：Boson AI 发布 Higgs Audio v3 TTS 4B（100+语言、内联情感标签）、小红点实验室 dots.tts（2B全连续AR TTS、Apache 2.0）、Google Magenta RealTime 2（<200ms延迟音乐生成）、NVIDIA Nemotron-3.5 ASR（流式ASR，17倍并发流）。"
+    },
+    {
+      "title": "2026年上半年语音AI大事记：密集发布重塑行业格局",
+      "url": "https://k.sina.cn/article_7857141524_1d45277140190377k8.html",
+      "summary": "2026年上半年语音AI经历变化最密集的六个月。OpenAI、Google、微软、苹果相继发布对行业格局有实质影响的产品。从GPT-Realtime-2到MAI-Voice、从Apple Siri AI到Google Gemini 3.5 Live Translate，语音AI正在重塑人机交互范式。"
+    },
+    {
+      "title": "Google Gemini 3.5 Live Translate：70+语言同声传译上线",
+      "url": "https://slator.com/google-ai-live-speech-translation-gemini-3-5-live-translate/",
+      "summary": "Google 推出 Gemini 3.5 Live Translate，支持 70+语言的语音到语音实时翻译。扩展了已有的 AI 实时语音翻译能力，标志着同声传译技术进入实用化阶段，对翻译行业产生深远影响。"
+    }
+  ]
+}
