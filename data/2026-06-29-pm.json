@@ -1,0 +1,8 @@
+{
+  "date": "2026-06-29-pm",
+  "type": "afternoon_update",
+  "time_window": "09:30–14:00 CST (afternoon supplement)",
+  "papers": [],
+  "news": [],
+  "note": "周一 (Monday) 下午时段 — arXiv 周末不更新，HuggingFace Daily Papers 今日列表无音频/speech 相关新论文。AlphaSignal Daily Brief 今日无更新。今天所有的 eess.AS + cs.SD 新论文（共13篇去重后收录10篇）已在早上版本中完整覆盖，包括 HPRO Emotional TTS、Elastic Time 动态帧率编码、声学攻击大规模仿真等。下午时段无增量内容。"
+}
