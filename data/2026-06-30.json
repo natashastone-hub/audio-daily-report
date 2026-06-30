@@ -1,0 +1,152 @@
+{
+  "papers": [
+    {
+      "title": "Hierarchical Progressive Reward Optimization via Preference Extraction for Emotional Text-to-Speech",
+      "url": "https://arxiv.org/abs/2606.28249",
+      "date": "2026-06-29",
+      "authors": "Sihang Nie et al.",
+      "abstract": "提出 HPRO 框架，通过引入 HD-Emo codec 将语音分解为独立的内容和风格偏好 token，解决 LLM-based TTS 模型中情感表达与语义保真度的冲突。采用分级渐进式奖励优化（帧-词-句三级对齐），显著提升情感表现力同时保持语言可理解性。代码和音频样本已开源。",
+      "tags": ["TTS", "Emotional Speech", "LLM-based TTS", "Open Source"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.28249"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.28249"},
+        {"label": "Demo", "url": "https://xxh333.github.io/hpro-demo/"}
+      ]
+    },
+    {
+      "title": "Do Speech Emphasis Models Generalize across Languages and Emotions?",
+      "url": "https://arxiv.org/abs/2606.27717",
+      "date": "2026-06-29",
+      "authors": "Megan Wei et al.",
+      "abstract": "引入 MMEE 数据集（7种语言、34种情感/风格类别、14.13小时、三次标注），系统研究跨语言跨情感的重音检测泛化能力。发现单语模型跨语言零样本迁移有限（类型学距离越大退化越严重），多语言训练显著提升鲁棒性；高低唤醒度情感之间迁移良好。已被 Interspeech 2026 接收。",
+      "tags": ["Speech Prosody", "Multilingual", "Emotion", "Interspeech 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.27717"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.27717"}
+      ]
+    },
+    {
+      "title": "Grammar-Guided Hierarchical Parsing for Long-form Audio Activity Recognition",
+      "url": "https://arxiv.org/abs/2606.27965",
+      "date": "2026-06-29",
+      "authors": "Peng Zhang et al.",
+      "abstract": "将长音频活动识别建模为层级解析问题：从检测到的事件证据推断 Act-Sub-Event 解析树。提出层级活动文法（Hierarchical Activity Grammar）编码层级组合和时序约束，无需子活动或活动标签训练即可产生可解释的层级结构。在 MultiAct 数据集上验证了时序一致性提升。已被 Interspeech 2026 接收。",
+      "tags": ["Audio Understanding", "Hierarchical Parsing", "Activity Recognition", "Interspeech 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.27965"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.27965"}
+      ]
+    },
+    {
+      "title": "Entropy-Aware Curriculum for Speech Emotion Recognition",
+      "url": "https://arxiv.org/abs/2606.27536",
+      "date": "2026-06-29",
+      "authors": "Zahra Omidi et al.",
+      "abstract": "针对语音情感识别中标注不一致问题，提出基于分布监督的方法（替代硬标签），使用 WavLM-Base 多任务模型同时训练分类情感和维度 VAD。分布目标相比硬标签训练更好地捕捉感知不确定性，高歧义度样本分布监督优于硬标签。已被 Interspeech 2026 接收。",
+      "tags": ["Speech Emotion Recognition", "Distribution Supervision", "WavLM", "Interspeech 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.27536"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.27536"}
+      ]
+    },
+    {
+      "title": "Advancing Speaker-Based Vocal Effort Classification with WavLM and Data Augmentation",
+      "url": "https://arxiv.org/abs/2606.27543",
+      "date": "2026-06-29",
+      "authors": "Zahra Omidi et al.",
+      "abstract": "首次将 WavLM 应用于发声力度分类（whisper/soft/normal/loud/shout），系统研究多种数据增强策略（RIR卷积、加噪、时间遮罩、变速、频带限制、MixUp、CutMix），并提出高斯邻接软标签建模力度连续体。最佳配置（WavLM-BASE + 逐步解冻 + 增强 + 软标签）在 AVID 数据集上达到 78.2% SOTA。已被 ICASSP 2026 接收。",
+      "tags": ["Speech Classification", "Vocal Effort", "WavLM", "ICASSP 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.27543"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.27543"}
+      ]
+    },
+    {
+      "title": "Certified Robustness for Automatic Speech Recognition via Dual-Gate Diagnostic Pipeline",
+      "url": "https://arxiv.org/abs/2606.27698",
+      "date": "2026-06-29",
+      "authors": "Andrew Cullen et al.",
+      "abstract": "提出认证启发的 ASR 鲁棒性诊断机制：双面原子审计（Two-Sided Atomic Audit）累积统计证据认证 token 存在与对抗排除，结合排名锦标赛（Rank-Based Tournament）选择最优序列。在四种架构上实现高达 55% 相对 WER 降低，并提供词级和句级认证以增强声学安全性。",
+      "tags": ["ASR Robustness", "Adversarial Defense", "Certification"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.27698"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.27698"}
+      ]
+    },
+    {
+      "title": "From General-Purpose Audio Tagging to Spatially Grounded Sound Event Localization and Detection",
+      "url": "https://arxiv.org/abs/2606.27751",
+      "date": "2026-06-29",
+      "authors": "Stefano Giacomelli et al.",
+      "abstract": "提出 AT2SELD 框架，将预训练的通用音频标记（GP-AT）模型扩展到空间化声音事件定位与检测（SELD）。通过多阶段神经架构搜索，发现频谱 FOA 描述符是语义到空间迁移的最可靠接口，早期残差空间编码是主要容量敏感组件。在 STARSS23、TAU2019 等多个数据集上评估。",
+      "tags": ["Sound Event Detection", "Audio Localization", "NAS", "Spatial Audio"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.27751"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.27751"}
+      ]
+    },
+    {
+      "title": "Room for Error: Large-Scale Simulation of Over-the-Air Acoustic Attacks on ASR",
+      "url": "https://arxiv.org/abs/2606.27701",
+      "date": "2026-06-29",
+      "authors": "Andrew Cullen et al.",
+      "abstract": "提出高通量真实声学环境模拟框架，对超过 800 万次对抗评估进行测试，证明声学感知可使 Whisper 和 wav2vec 的相对 WER 增加高达 94.5%。形式化并操作化双形式信噪比（Dual-Form SNR）解耦源隐密性与受害者攻击效能，为可重复验证的声学安全研究奠定基础。",
+      "tags": ["ASR Security", "Adversarial Attack", "Acoustic Simulation"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.27701"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.27701"}
+      ]
+    },
+    {
+      "title": "Screening Matters: Comparing Conventional and Crowdsourced Listening Tests for Speech Codecs",
+      "url": "https://arxiv.org/abs/2606.28114",
+      "date": "2026-06-29",
+      "authors": "Anika Treffehn et al.",
+      "abstract": "对比 P.808 众包与 P.800 DCR 实验室主观评测，评估经典和神经语音编解码器。发现通过锚点排序、评分跨度的后筛选以及陷阱题、黄金标准题的连续筛选，可显著提升众包评测质量。提出了一套成本效益高的筛选方案。已被 Interspeech 2026 接收。",
+      "tags": ["Speech Quality", "Subjective Evaluation", "Crowdsourcing", "Interspeech 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.28114"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.28114"}
+      ]
+    },
+    {
+      "title": "Speaker Clustering for Fraud Investigation under Real Call-Centre Conditions",
+      "url": "https://arxiv.org/abs/2606.28048",
+      "date": "2026-06-29",
+      "authors": "Muhammad Shakeel Akram et al.",
+      "abstract": "提出 DG^VoiC 语音聚类框架，用于呼叫中心环境中客户身份验证和跨档案说话人链接。结合敏感信息对齐匿名化、语音预处理、滑动窗口说话人嵌入和余弦相似度聚类。在 121 条录音/22 个聚类上达到 96% AMI、95% ARI，展示了说话人聚类在欺诈调查中的强大辅助信号价值。",
+      "tags": ["Speaker Clustering", "Fraud Detection", "Call Centre", "Speaker Verification"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.28048"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.28048"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "美团发布 LongCat-AudioDiT：零样本 TTS 声音克隆重大突破，直接波形潜在空间建模消除 Mel 频谱中间步骤",
+      "url": "https://aitoolly.com/ai-news/article/2026-06-29-meituan-longcat-audiodit-revolutionizes-zero-shot-tts-voice-cloning-by-eliminating-intermediate-mel",
+      "summary": "美团 LongCat 技术团队正式发布 LongCat-AudioDiT，一种革命性的零样本 TTS 声音克隆模型。该模型完全抛弃传统 Mel 频谱图中间表示，直接在波形潜在空间中利用 Diffusion Transformer 架构学习声音的本质规律，消除了多阶段数据转换中的级联误差。这一突破代表音频合成管线从'文本→频谱→波形'向'文本→波形'的直接范式转变。"
+    },
+    {
+      "title": "美团开源 LongCat-Next：原生多模态模型，视听觉作为'母语'感知物理世界",
+      "url": "https://aitoolly.com/ai-news/article/2026-06-29-meituan-open-sources-longcat-next-a-native-multimodal-model-for-physical-world-ai-perception",
+      "summary": "美团开源 LongCat-Next，将视觉和语音视为'母语'的原生多模态模型，旨在赋予 AI 感知、理解和与现实环境交互的能力。发布包括核心模型和专用离散分词器，体现了美团在具身 AI 和多模态研究方面的战略布局。"
+    },
+    {
+      "title": "美团在 ACL 2026 发表 6 篇论文，覆盖 LLM 评估与推理优化",
+      "url": "https://aitoolly.com/ai-news/article/2026-06-29-meituan-showcases-ai-innovation-at-acl-2026-with-six-papers-on-llm-evaluation-and-reasoning-optimiza",
+      "summary": "美团技术团队在 ACL 2026 大会上 6 篇论文被接收，涵盖大语言模型评估、复杂过程推理、竞赛级数学思维优化、强化学习优化和生成式推荐系统等方向。"
+    }
+  ]
+}

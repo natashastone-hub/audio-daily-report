@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-06-30</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-06-30</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年6月30日 (周二) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">10</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.28249" target="_blank">Hierarchical Progressive Reward Optimization via Preference Extraction for Emotional Text-to-Speech</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-06-29</span><span>👥 Sihang Nie et al.</span></div>
+      <div class="abstract">提出 HPRO 框架，通过引入 HD-Emo codec 将语音分解为独立的内容和风格偏好 token，解决 LLM-based TTS 模型中情感表达与语义保真度的冲突。采用分级渐进式奖励优化（帧-词-句三级对齐），显著提升情感表现力同时保持语言可理解性。代码和音频样本已开源。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Emotional Speech</span><span class="tag">LLM-based TTS</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.28249" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.28249" target="_blank">🔗 PDF</a> <a href="https://xxh333.github.io/hpro-demo/" target="_blank">🔗 Demo</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.27717" target="_blank">Do Speech Emphasis Models Generalize across Languages and Emotions?</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-06-29</span><span>👥 Megan Wei et al.</span></div>
+      <div class="abstract">引入 MMEE 数据集（7种语言、34种情感/风格类别、14.13小时、三次标注），系统研究跨语言跨情感的重音检测泛化能力。发现单语模型跨语言零样本迁移有限（类型学距离越大退化越严重），多语言训练显著提升鲁棒性；高低唤醒度情感之间迁移良好。已被 Interspeech 2026 接收。</div>
+      <div class="tags"><span class="tag">Speech Prosody</span><span class="tag">Multilingual</span><span class="tag">Emotion</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.27717" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.27717" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.27965" target="_blank">Grammar-Guided Hierarchical Parsing for Long-form Audio Activity Recognition</a></h4>
+      <div class="meta"><span>📅 2026-06-29</span><span>👥 Peng Zhang et al.</span></div>
+      <div class="abstract">将长音频活动识别建模为层级解析问题：从检测到的事件证据推断 Act-Sub-Event 解析树。提出层级活动文法（Hierarchical Activity Grammar）编码层级组合和时序约束，无需子活动或活动标签训练即可产生可解释的层级结构。在 MultiAct 数据集上验证了时序一致性提升。已被 Interspeech 2026 接收。</div>
+      <div class="tags"><span class="tag">Audio Understanding</span><span class="tag">Hierarchical Parsing</span><span class="tag">Activity Recognition</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.27965" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.27965" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.27536" target="_blank">Entropy-Aware Curriculum for Speech Emotion Recognition</a></h4>
+      <div class="meta"><span>📅 2026-06-29</span><span>👥 Zahra Omidi et al.</span></div>
+      <div class="abstract">针对语音情感识别中标注不一致问题，提出基于分布监督的方法（替代硬标签），使用 WavLM-Base 多任务模型同时训练分类情感和维度 VAD。分布目标相比硬标签训练更好地捕捉感知不确定性，高歧义度样本分布监督优于硬标签。已被 Interspeech 2026 接收。</div>
+      <div class="tags"><span class="tag">Speech Emotion Recognition</span><span class="tag">Distribution Supervision</span><span class="tag">WavLM</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.27536" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.27536" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.27543" target="_blank">Advancing Speaker-Based Vocal Effort Classification with WavLM and Data Augmentation</a></h4>
+      <div class="meta"><span>📅 2026-06-29</span><span>👥 Zahra Omidi et al.</span></div>
+      <div class="abstract">首次将 WavLM 应用于发声力度分类（whisper/soft/normal/loud/shout），系统研究多种数据增强策略（RIR卷积、加噪、时间遮罩、变速、频带限制、MixUp、CutMix），并提出高斯邻接软标签建模力度连续体。最佳配置（WavLM-BASE + 逐步解冻 + 增强 + 软标签）在 AVID 数据集上达到 78.2% SOTA。已被 ICASSP 2026 接收。</div>
+      <div class="tags"><span class="tag">Speech Classification</span><span class="tag">Vocal Effort</span><span class="tag">WavLM</span><span class="tag">ICASSP 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.27543" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.27543" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.27698" target="_blank">Certified Robustness for Automatic Speech Recognition via Dual-Gate Diagnostic Pipeline</a></h4>
+      <div class="meta"><span>📅 2026-06-29</span><span>👥 Andrew Cullen et al.</span></div>
+      <div class="abstract">提出认证启发的 ASR 鲁棒性诊断机制：双面原子审计（Two-Sided Atomic Audit）累积统计证据认证 token 存在与对抗排除，结合排名锦标赛（Rank-Based Tournament）选择最优序列。在四种架构上实现高达 55% 相对 WER 降低，并提供词级和句级认证以增强声学安全性。</div>
+      <div class="tags"><span class="tag">ASR Robustness</span><span class="tag">Adversarial Defense</span><span class="tag">Certification</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.27698" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.27698" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.27751" target="_blank">From General-Purpose Audio Tagging to Spatially Grounded Sound Event Localization and Detection</a></h4>
+      <div class="meta"><span>📅 2026-06-29</span><span>👥 Stefano Giacomelli et al.</span></div>
+      <div class="abstract">提出 AT2SELD 框架，将预训练的通用音频标记（GP-AT）模型扩展到空间化声音事件定位与检测（SELD）。通过多阶段神经架构搜索，发现频谱 FOA 描述符是语义到空间迁移的最可靠接口，早期残差空间编码是主要容量敏感组件。在 STARSS23、TAU2019 等多个数据集上评估。</div>
+      <div class="tags"><span class="tag">Sound Event Detection</span><span class="tag">Audio Localization</span><span class="tag">NAS</span><span class="tag">Spatial Audio</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.27751" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.27751" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.27701" target="_blank">Room for Error: Large-Scale Simulation of Over-the-Air Acoustic Attacks on ASR</a></h4>
+      <div class="meta"><span>📅 2026-06-29</span><span>👥 Andrew Cullen et al.</span></div>
+      <div class="abstract">提出高通量真实声学环境模拟框架，对超过 800 万次对抗评估进行测试，证明声学感知可使 Whisper 和 wav2vec 的相对 WER 增加高达 94.5%。形式化并操作化双形式信噪比（Dual-Form SNR）解耦源隐密性与受害者攻击效能，为可重复验证的声学安全研究奠定基础。</div>
+      <div class="tags"><span class="tag">ASR Security</span><span class="tag">Adversarial Attack</span><span class="tag">Acoustic Simulation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.27701" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.27701" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.28114" target="_blank">Screening Matters: Comparing Conventional and Crowdsourced Listening Tests for Speech Codecs</a></h4>
+      <div class="meta"><span>📅 2026-06-29</span><span>👥 Anika Treffehn et al.</span></div>
+      <div class="abstract">对比 P.808 众包与 P.800 DCR 实验室主观评测，评估经典和神经语音编解码器。发现通过锚点排序、评分跨度的后筛选以及陷阱题、黄金标准题的连续筛选，可显著提升众包评测质量。提出了一套成本效益高的筛选方案。已被 Interspeech 2026 接收。</div>
+      <div class="tags"><span class="tag">Speech Quality</span><span class="tag">Subjective Evaluation</span><span class="tag">Crowdsourcing</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.28114" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.28114" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.28048" target="_blank">Speaker Clustering for Fraud Investigation under Real Call-Centre Conditions</a></h4>
+      <div class="meta"><span>📅 2026-06-29</span><span>👥 Muhammad Shakeel Akram et al.</span></div>
+      <div class="abstract">提出 DG^VoiC 语音聚类框架，用于呼叫中心环境中客户身份验证和跨档案说话人链接。结合敏感信息对齐匿名化、语音预处理、滑动窗口说话人嵌入和余弦相似度聚类。在 121 条录音/22 个聚类上达到 96% AMI、95% ARI，展示了说话人聚类在欺诈调查中的强大辅助信号价值。</div>
+      <div class="tags"><span class="tag">Speaker Clustering</span><span class="tag">Fraud Detection</span><span class="tag">Call Centre</span><span class="tag">Speaker Verification</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.28048" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.28048" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>美团发布 LongCat-AudioDiT：零样本 TTS 声音克隆重大突破，直接波形潜在空间建模消除 Mel 频谱中间步骤</h4>
+      <p>美团 LongCat 技术团队正式发布 LongCat-AudioDiT，一种革命性的零样本 TTS 声音克隆模型。该模型完全抛弃传统 Mel 频谱图中间表示，直接在波形潜在空间中利用 Diffusion Transformer 架构学习声音的本质规律，消除了多阶段数据转换中的级联误差。这一突破代表音频合成管线从'文本→频谱→波形'向'文本→波形'的直接范式转变。 <a href="https://aitoolly.com/ai-news/article/2026-06-29-meituan-longcat-audiodit-revolutionizes-zero-shot-tts-voice-cloning-by-eliminating-intermediate-mel" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>美团开源 LongCat-Next：原生多模态模型，视听觉作为'母语'感知物理世界</h4>
+      <p>美团开源 LongCat-Next，将视觉和语音视为'母语'的原生多模态模型，旨在赋予 AI 感知、理解和与现实环境交互的能力。发布包括核心模型和专用离散分词器，体现了美团在具身 AI 和多模态研究方面的战略布局。 <a href="https://aitoolly.com/ai-news/article/2026-06-29-meituan-open-sources-longcat-next-a-native-multimodal-model-for-physical-world-ai-perception" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>美团在 ACL 2026 发表 6 篇论文，覆盖 LLM 评估与推理优化</h4>
+      <p>美团技术团队在 ACL 2026 大会上 6 篇论文被接收，涵盖大语言模型评估、复杂过程推理、竞赛级数学思维优化、强化学习优化和生成式推荐系统等方向。 <a href="https://aitoolly.com/ai-news/article/2026-06-29-meituan-showcases-ai-innovation-at-acl-2026-with-six-papers-on-llm-evaluation-and-reasoning-optimiza" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-06-30') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
