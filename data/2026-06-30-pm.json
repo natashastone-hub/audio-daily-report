@@ -1,0 +1,233 @@
+{
+  "papers": [
+    {
+      "title": "LeVo 2: Stable and Melodious Song Generation via Hierarchical Representation Modeling and Progressive Post-Training",
+      "url": "https://arxiv.org/abs/2606.30642",
+      "date": "2026-06-30",
+      "authors": "Shun Lei, Huaicheng Zhang, Dapeng Wu et al. (Tencent AI Lab)",
+      "abstract": "提出 LeVo 2，混合 LLM-Diffusion 框架实现可控全长歌曲生成。核心创新：LeLM 先预测混合 token 进行语义规划，再并行预测人声和伴奏 token 进行轨道级细化，扩散 Music Codec 重建全长波形。引入美学引导训练调度（预训练美学分层 + SFT + DPO + 半在线 DPO），分离音乐性学习、可控性对齐与声学细化。主观评测在六个维度超越开源基线，接近头部商业系统。",
+      "tags": ["Song Generation", "LLM+Diffusion", "Music AI", "Audio Generation"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.30642"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.30642"}
+      ]
+    },
+    {
+      "title": "OLIVE: View-Augmented Latent Prediction with Waveform Reconstruction for Speech SSL",
+      "url": "https://arxiv.org/abs/2606.30356",
+      "date": "2026-06-30",
+      "authors": "Multiple authors",
+      "abstract": "提出 OLIVE 自监督语音表征学习框架，联合优化分析和合成目标。结合视图增强掩码潜在预测与波形重建的统一目标。重建约束保留信号的声学信息，掩码潜在预测塑造上下文不变表征。在生成任务和说话人任务上显著提升，同时保持识别和语义任务竞争力。",
+      "tags": ["Speech SSL", "Self-Supervised Learning", "Representation Learning"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.30356"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.30356"}
+      ]
+    },
+    {
+      "title": "GigaSpeechBench: A Real-World Multilingual Speech-to-Text Benchmark",
+      "url": "https://arxiv.org/abs/2606.28884",
+      "date": "2026-06-30",
+      "authors": "Yujie Tu, Yifan Yang, Tianrui Wang et al.",
+      "abstract": "推出 GigaSpeechBench，面向真实场景的多语言语音转文本基准。覆盖数字、不流利表达、实体名称和大小写等多种输出格式，评估 ASR 系统遵循用户偏好指令的能力。在四个模型中观察到偏好类型导致排名变化，揭示了传统评测掩盖的质量差异。",
+      "tags": ["ASR Benchmark", "Multilingual", "Preference-Aware"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.28884"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.28884"}
+      ]
+    },
+    {
+      "title": "PreferenceASR: A Preference-Aware Test Set for Benchmarking ASR in the Era of Speech LLMs",
+      "url": "https://arxiv.org/abs/2606.29534",
+      "date": "2026-06-30",
+      "authors": "Multiple authors",
+      "abstract": "提出 PreferenceASR 测试集，评估 ASR 系统遵循用户风格偏好指令的能力，覆盖标准化、实体、不流利和大小写四个类别。基于七个开源语料通过两阶段 LLM 辅助流水线构建，配备偏好感知归一化器。四个模型评测显示不同偏好类型下排名显著变化。已被 Interspeech 2026 接收。",
+      "tags": ["ASR Evaluation", "Preference Learning", "Interspeech 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.29534"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.29534"}
+      ]
+    },
+    {
+      "title": "VeRe-Flow: Guiding Flow Matching toward Clean Speech via Velocity Contrastive Regularization for Noise-Robust Bandwidth Expansion",
+      "url": "https://arxiv.org/abs/2606.29450",
+      "date": "2026-06-30",
+      "authors": "Multiple authors",
+      "abstract": "提出 VeRe-Flow 框架解决噪声鲁棒带宽扩展。速度级引入速度对比正则化——吸引预测速度朝向干净轨迹同时排斥噪声轨迹；表征级对齐中间特征与干净自监督表征。在 LSD 和 DNSMOS 指标上达到最优，生成模型中 MOS 最高。已被 Interspeech 2026 接收。",
+      "tags": ["Speech Enhancement", "Flow Matching", "Bandwidth Expansion", "Interspeech 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.29450"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.29450"}
+      ]
+    },
+    {
+      "title": "VIB-AVSR: Variational Information Bottleneck for Noise-Robust LLM-Based Audio-Visual Speech Recognition",
+      "url": "https://arxiv.org/abs/2606.29632",
+      "date": "2026-06-30",
+      "authors": "Piyush Arora et al.",
+      "abstract": "提出 VIB-AVSR，在 LLM 骨干中集成变分信息瓶颈层进行表征正则化，解决 LLM 基音视融合识别在噪声下的性能退化问题。无需架构修改或额外训练数据，在多种 SNR 水平和噪声类型下有效降低退化。代码已开源。已被 Interspeech 2026 接收。",
+      "tags": ["AVSR", "LLM", "Noise Robustness", "Interspeech 2026", "Open Source"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.29632"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.29632"},
+        {"label": "Code", "url": "https://github.com/PiyushArora1010/VIB-AVSR"}
+      ]
+    },
+    {
+      "title": "MeloDISinger: Melody-Aware & Duration-Preserving Singing Voice Editing with Audio Infilling",
+      "url": "https://arxiv.org/abs/2606.30580",
+      "date": "2026-06-30",
+      "authors": "Multiple authors",
+      "abstract": "提出 MeloDISinger，基于流匹配的歌声编辑模型。核心模块 MeloDRP 预测固定预算下时长比实现显式跨度时长控制，通过交叉注意力融合音素提示与伪 MIDI 旋律上下文。流匹配梅尔解码器进行音频填充合成编辑区域。已被 Interspeech 2026 接收。",
+      "tags": ["Singing Voice Editing", "Flow Matching", "Audio Infilling", "Interspeech 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.30580"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.30580"}
+      ]
+    },
+    {
+      "title": "DTM-Codec: Dynamic Token Masking for VFR Speech Coding with Efficient Boundary Selection",
+      "url": "https://arxiv.org/abs/2606.29480",
+      "date": "2026-06-30",
+      "authors": "Multiple authors",
+      "abstract": "提出 DTM-Codec 神经语音编解码器，以动态 token 掩码和路径长度均衡边界选择器实现可变帧率编码。在严格匹配总比特率协议下，相比固定帧率基线全面提升重建质量和可懂度。已被 Interspeech 2026 接收。",
+      "tags": ["Speech Coding", "Neural Codec", "Variable Frame Rate", "Interspeech 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.29480"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.29480"}
+      ]
+    },
+    {
+      "title": "CTC-Seeded Token Edit Refinement for Non-Autoregressive Speech Recognition",
+      "url": "https://arxiv.org/abs/2606.28732",
+      "date": "2026-06-30",
+      "authors": "Multiple authors",
+      "abstract": "将 ASR 解码重新建模为对贪心 CTC 假设的可变长度编辑细化。声学条件化 Edit Flow 解码器直接操作折叠后的 CTC 假设，并行预测插入、删除、替换操作。仅需两步编辑即可大幅降低 WER，分类器自由引导进一步提升识别质量。",
+      "tags": ["ASR", "Non-Autoregressive", "Edit Refinement"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.28732"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.28732"}
+      ]
+    },
+    {
+      "title": "PATSE: Position-Aware Target Speaker Extraction for Long-Form Multi-Party Conversations",
+      "url": "https://arxiv.org/abs/2606.29497",
+      "date": "2026-06-30",
+      "authors": "Multiple authors",
+      "abstract": "提出 PATSE 多通道位置感知目标说话人提取前端，利用到达方向 (DOA) 作为空间先验直接提取各目标说话人语音，无需显式说话人日志即可通过简单 VAD 推断说话人活动。在多轮对话中实现 ASR 一致提升，超越传统 CSS 和日志管线。已被 Interspeech 2026 接收。",
+      "tags": ["Speaker Extraction", "Multi-Party", "ASR", "Interspeech 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.29497"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.29497"}
+      ]
+    },
+    {
+      "title": "TF-MoE: Time-Frequency Mixture-of-Experts for Efficient Speech Separation",
+      "url": "https://arxiv.org/abs/2606.29575",
+      "date": "2026-06-30",
+      "authors": "Multiple authors",
+      "abstract": "提出 TF-MoE，稀疏混合专家框架实现高效语音分离。通过交替时域和频域 MoE 模块动态选择专家，在几乎不增加推理成本下显著提升模型容量。在 Libri2Mix 上以 4.1 GMACs/s 推理成本超越 BSRNN +3.8 dB SDR，适合边缘设备部署。已被 Interspeech 2026 接收。",
+      "tags": ["Speech Separation", "MoE", "Edge Deployment", "Interspeech 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.29575"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.29575"}
+      ]
+    },
+    {
+      "title": "Proteus: Automated Adversarial Robustness Testing for Audio Deepfake Detectors",
+      "url": "https://arxiv.org/abs/2606.29544",
+      "date": "2026-06-30",
+      "authors": "Resemble AI",
+      "abstract": "提出 Proteus 框架，系统搜索音频变换序列（编解码转码、加噪、混响、动态压缩、VoIP 模拟）找出绕过检测器同时保持语音质量的组合。采用 BFS 和 Q-learning 两种搜索策略，发现特定增强链可可靠翻转检测判决。来自 Resemble AI 生产环境持续部署的实践。",
+      "tags": ["Audio Deepfake Detection", "Adversarial Robustness", "Security"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.29544"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.29544"}
+      ]
+    },
+    {
+      "title": "Child-Centric Voice Anonymization via Domain-Adapted SSL Models",
+      "url": "https://arxiv.org/abs/2606.29897",
+      "date": "2026-06-30",
+      "authors": "Multiple authors",
+      "abstract": "首次针对儿童语音进行匿名化研究。基于 MyST 儿童语料库适配自监督匿名化管线，儿童域适配可提升可懂度和感知质量同时保持强隐私保护。扩展到多说话人场景，结合目标说话人提取与儿童适配匿名化在保护隐私的同时保留对话结构。已被 Interspeech 2026 接收。",
+      "tags": ["Voice Anonymization", "Child Speech", "Privacy", "Interspeech 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.29897"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.29897"}
+      ]
+    },
+    {
+      "title": "LoRA-Tuned LLMs for Dementia Detection via Multi-View Speech-Derived Features",
+      "url": "https://arxiv.org/abs/2606.28445",
+      "date": "2026-06-30",
+      "authors": "Multiple authors",
+      "abstract": "提出 LoRA 微调 LLM 进行多视角结构化推理：整合 ASR 转录+停顿标记、语篇主题线索、时序流利度统计和音位序列四种互补信号。在统一 prompt 中编码，无需模态特定编码器。在 ADReSSo 上达到 90.14% F1，消融实验确认各视角互补贡献。已被 Interspeech 2026 接收。",
+      "tags": ["Health", "Dementia Detection", "LLM", "Speech Analysis", "Interspeech 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.28445"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.28445"}
+      ]
+    },
+    {
+      "title": "SIGMA: Saliency-Guided Sparse Mask Attacks for Speech Emotion Recognition",
+      "url": "https://arxiv.org/abs/2606.30550",
+      "date": "2026-06-30",
+      "authors": "Multiple authors",
+      "abstract": "提出 SIGMA 攻击框架，使用后验可解释 AI 技术生成显著性图识别掩码范围，限制扰动更新在该范围内。掩码计算一次即可跨模型和攻击类型复用。在 IEMOCAP 和 TESS 上保持竞争性攻击成功率。",
+      "tags": ["Speech Emotion Recognition", "Adversarial Attack", "XAI"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.30550"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.30550"}
+      ]
+    },
+    {
+      "title": "Adaptive Modality Routing for Multimodal Polyglot Speaker Identification",
+      "url": "https://arxiv.org/abs/2606.29335",
+      "date": "2026-06-30",
+      "authors": "Multiple authors",
+      "abstract": "提出自适应模态路由 (AMR) 的说话人识别系统，针对 POLY-SIM 2026 挑战赛。动态评估输入质量并整合音频 (W2V-BERT 2.0) 和人脸 (IResNet-18) 模态信息。可训练路由器估计动态模态权重，解决现实场景中的模态缺失和跨语言泛化问题。",
+      "tags": ["Speaker Identification", "Multimodal", "Polyglot"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.29335"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.29335"}
+      ]
+    },
+    {
+      "title": "Improving Large-Scale Weakly Supervised ASR by Filtering and Selection",
+      "url": "https://arxiv.org/abs/2606.28728",
+      "date": "2026-06-30",
+      "authors": "Multiple authors",
+      "abstract": "提出三阶段训练方法：全量预训练→基于 CER 的过滤子集续训练→声学相似样本微调。在 90,000 小时日语弱监督数据集上，过滤和选择协同降低 CER 分别达 6.4% 和 4.0%。",
+      "tags": ["ASR", "Weakly Supervised", "Data Filtering", "Japanese"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.28728"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.28728"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "Interspeech 2026 接收论文集中亮相：今日新增 12 篇 audio/speech 论文被接收",
+      "url": "https://arxiv.org/list/cs.SD/new",
+      "summary": "6月30日 arxiv 新发布的 audio/speech 论文中，LeVo 2 歌曲生成、PreferenceASR 偏好感知评测、VeRe-Flow 带宽扩展、VIB-AVSR 音视融合、MeloDISinger 歌声编辑、DTM-Codec 语音编解码、TF-MoE 语音分离、PATSE 说话人提取、儿童语音匿名化、痴呆检测等多篇论文均标注已被 Interspeech 2026 接收，展现语音领域研究活跃度。"
+    }
+  ]
+}
