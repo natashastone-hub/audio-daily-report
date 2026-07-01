@@ -1,0 +1,146 @@
+{
+  "papers": [
+    {
+      "title": "FlexiSLM: A Dynamic and Controllable Frame Rate Spoken Language Model",
+      "url": "https://arxiv.org/abs/2606.31247",
+      "date": "2026-06-30",
+      "authors": "Authors",
+      "abstract": "首个支持动态可控帧率的语音语言模型。现有 SLM 以固定帧率（如25或12.5Hz）表示语音，忽略了语音信息密度的时间变化性。FlexiSLM 利用动态帧率语音编码，在输入和输出两端均支持可控帧率，在固定帧率 7B 模型上实现更优性能，同时允许在质量与速度间灵活权衡。",
+      "tags": ["Spoken Language Model", "Dynamic Frame Rate", "Speech Tokenizer", "SLM"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.31247"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.31247"}]
+    },
+    {
+      "title": "SwiftAudio: Data-Efficient Caption-Only Distillation for One-Step Text-to-Audio Diffusion-based Generation",
+      "url": "https://arxiv.org/abs/2606.31259",
+      "date": "2026-06-30",
+      "authors": "Binh Mai, Tran Quoc Bao Le, Hung Dinh, Cong Tran",
+      "abstract": "一步式文本到音频生成框架，仅用约45K文本描述即可从预训练扩散教师模型蒸馏，无需配对音频数据。采用变分得分蒸馏（VSD）并引入时间平滑正则化，在 AudioCaps 和 Clotho 上达到严格单步方法中的 SOTA，大幅缩小与多步扩散系统的差距。项目页: swiftaudio.org",
+      "tags": ["Text-to-Audio", "One-Step Generation", "Diffusion Distillation", "Audio Generation"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.31259"}, {"label": "Project Page", "url": "https://swiftaudio.org/"}]
+    },
+    {
+      "title": "LeVo 2: Stable and Melodious Song Generation via Hierarchical Representation Modeling and Progressive Post-Training",
+      "url": "https://arxiv.org/abs/2606.30642",
+      "date": "2026-06-29",
+      "authors": "Shun Lei, Huaicheng Zhang, Dapeng Wu, Yaoxun Xu, Lishi Zuo, Wei Tan, Hangting Chen, Guangzheng Li, Jianwei Yu, Zhiyong Wu, Dong Yu",
+      "abstract": "LeVo 2 提出混合 LLM-Diffusion 框架用于可控全长歌曲生成。通过分层建模（语义规划→人声+伴奏并行细化）和审美引导的训练调度（含大规模离线 DPO 和闭环半在线 DPO），在6个主观维度上超越开源基线，接近领先商业系统。",
+      "tags": ["Song Generation", "LLM-Diffusion", "Music AI", "Hierarchical Modeling"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.30642"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.30642"}]
+    },
+    {
+      "title": "Preference-ASR: A Preference-Aware Test Set for Benchmarking ASR in the Era of Speech LLMs",
+      "url": "https://arxiv.org/abs/2606.29534",
+      "date": "2026-06-28",
+      "authors": "Nithin Rao Koluguri, Sasha Meister, Nikolay Karpov, Piotr Zelasko, Desh Raj, Jagadeesh Balam, Boris Ginsburg (NVIDIA)",
+      "abstract": "提出 PreferenceASR 测试集，评估 ASR 系统遵循用户偏好指令的能力，涵盖数字归一化、实体、不流畅和大小写四类偏好。基于7个开源语料库通过两阶段 LLM 辅助流程构建，人类验证。基准测试显示模型排名因偏好类型而异，揭示了传统评估掩盖的质量差异。Interspeech 2026。",
+      "tags": ["ASR", "Benchmark", "Speech LLM", "Preference", "Interspeech 2026"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.29534"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.29534"}]
+    },
+    {
+      "title": "ZEBRA: Zero-Shot Entropy-Regularized Prompt Learning for Base-to-Novel Generalization in Audio-Language Models",
+      "url": "https://arxiv.org/abs/2606.31587",
+      "date": "2026-06-30",
+      "authors": "Asif Hanif, Mohammad Yaqub",
+      "abstract": "提出 ZEBRA 框架，解决音频语言模型中 prompt 学习的 base-to-novel 泛化差距。通过零样本 logit 融合和自熵正则化减少对基类过拟合，在多个音频分类数据集上持续提升新类性能，同时保持基类准确率。代码已开源。Interspeech 2026。",
+      "tags": ["Audio-Language Model", "Prompt Learning", "Zero-Shot", "Interspeech 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.31587"}, {"label": "Code", "url": "https://github.com/asif-hanif/zebra"}]
+    },
+    {
+      "title": "Position-Aware Target Speaker Extraction for Long-Form Multi-Party Conversations (PATSE)",
+      "url": "https://arxiv.org/abs/2606.29497",
+      "date": "2026-06-28",
+      "authors": "Yichi Wang, Junzhe Chen, Wangjin Zhou, Tatsuya Kawahara",
+      "abstract": "面向长时多说话人对话的目标说话人提取框架 PATSE。利用说话人到达方向（DOA）作为空间先验，直接提取每个目标说话人的语音，无需显式说话人日志。在回放和真实对话上均超过 CSS 和基于日志的管线。Interspeech 2026。",
+      "tags": ["Speaker Extraction", "Multi-Party", "DOA", "Interspeech 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.29497"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.29497"}]
+    },
+    {
+      "title": "TF-MoE: Time-Frequency Mixture-of-Experts for Efficient Speech Separation",
+      "url": "https://arxiv.org/abs/2606.29575",
+      "date": "2026-06-28",
+      "authors": "Qinzhe Hu, Chenda Li, Wangyou Zhang, Shujie Liu, Yan Lu, Yanmin Qian",
+      "abstract": "提出 TF-MoE 稀疏混合专家框架用于高效语音分离。在时间和频率维度交替使用 MoE 模块实现动态专家专业化，在低计算设置下达到强分离性能。在 Libri2Mix 上以 4.1 GMACs/s 计算成本超 BSRNN +3.8 dB SDR，适合边缘设备部署。Interspeech 2026。",
+      "tags": ["Speech Separation", "MoE", "Edge Deployment", "Interspeech 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.29575"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.29575"}]
+    },
+    {
+      "title": "Proteus: Automated Adversarial Robustness Testing for Audio Deepfake Detectors",
+      "url": "https://arxiv.org/abs/2606.29544",
+      "date": "2026-06-28",
+      "authors": "Nicolas M. Müller, Aditya Tirumala Bukkapatnam, Zohaib Ahmed (Resemble AI)",
+      "abstract": "Resemble AI 提出 Proteus 框架，通过广度优先搜索和 Q-learning 智能体自动发现可绕过音频深度伪造检测器的对抗性音频变换组合（编解码转码、加噪、混响、动态范围压缩、VoIP模拟）。持续部署发现特定变换链可在保持语音可懂度和说话人身份的同时翻转检测判定。",
+      "tags": ["Audio Deepfake Detection", "Adversarial Robustness", "Security"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.29544"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.29544"}]
+    },
+    {
+      "title": "Building an ASR Solution for Training and Assessing Children's Reading",
+      "url": "https://arxiv.org/abs/2606.31508",
+      "date": "2026-06-30",
+      "authors": "Yacouba Diarra, Nouhoum Souleymane Coulibaly, Mamadou Dembele, Aymane Dembele, Michael Leventhal",
+      "abstract": "为非洲语言班巴拉语（Bambara）构建儿童阅读评估 ASR 系统。收集 60 名儿童 55 小时朗读数据，构建公开基准。最佳 Soloni Fast-Conformer 模型将 WER 从 0.42 降至 0.22、CER 从 0.15 降至 0.08，10 次课堂试验支持应用持续使用。",
+      "tags": ["ASR", "Children Speech", "Low-Resource", "African Languages"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.31508"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.31508"}]
+    },
+    {
+      "title": "Beyond Cross-Reconstruction: Probing-Based Disentanglement Evaluation for Acoustic Teleportation Codecs",
+      "url": "https://arxiv.org/abs/2606.31365",
+      "date": "2026-06-30",
+      "authors": "Philipp Grundhuber, Emanuël A. P. Habets",
+      "abstract": "基于探针的解耦评估框架用于声学传送编解码器。通过回归房间声学参数和分类说话人身份评估解耦质量。发现说话人身份基本局限在其分区内，而声学信息泄漏到语音嵌入中。声学嵌入能盲估计房间参数，偏差仅 0.02s。Interspeech 2026。",
+      "tags": ["Neural Codec", "Disentanglement", "Acoustic Teleportation", "Interspeech 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.31365"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.31365"}]
+    },
+    {
+      "title": "How Bilingual Are SSL Speech Models? Cross-Lingual Probing of Articulatory Encoding with Finnish and Russian EMA",
+      "url": "https://arxiv.org/abs/2606.31527",
+      "date": "2026-06-30",
+      "authors": "Ailín Pollio San Pedro, Tomi Kinnunen, Alexandre Nikolaev, Ruchi Pandey",
+      "abstract": "使用双语芬兰-俄语 EMA 数据评估 SSL 语音模型的跨语言发音编码能力。多语言模型优于单语言模型，中间层编码发音特征最有效，舌头运动比唇部运动更可预测。仅需约5分钟训练数据即可达到 Pearson r=0.68。Interspeech 2026。",
+      "tags": ["SSL Speech Models", "Cross-Lingual", "Articulatory", "Interspeech 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.31527"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.31527"}]
+    },
+    {
+      "title": "Improving Multichannel Speech Enhancement Through Accurate Room-Acoustic Simulations",
+      "url": "https://arxiv.org/abs/2606.31552",
+      "date": "2026-06-30",
+      "authors": "Georg Götz, Alessia Milo, Steinar Guðjónsson, Daniel Gert Nielsen, Jesper Pedersen, Finnur Pind",
+      "abstract": "研究房间声学仿真精度对多通道语音增强的影响。高保真波基仿真训练相比低精度几何声学方法，中位 WER 相对降低 38%。证明增强数据的物理精度直接转化为语音增强性能提升。Interspeech 2026。",
+      "tags": ["Speech Enhancement", "Room Acoustics", "Multichannel", "Interspeech 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2606.31552"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2606.31552"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "Google 发布 Gemini Omni Flash 公开预览版",
+      "url": "https://ai.google.dev/gemini-api/docs/changelog",
+      "summary": "2026年6月30日，Google 发布 Gemini Omni Flash 公开预览版（gemini-omni-flash-preview），一款高性能多模态模型，专为实时语音对话和语音优先 AI 应用设计。这是 Google 继 Gemini 3.1 Flash Live 后语音 AI 的又一重大更新。"
+    },
+    {
+      "title": "Google 发布 Gemini 2.5 Flash Native Audio Dialog 模型",
+      "url": "https://ai.google.dev/gemini-api/docs/changelog",
+      "summary": "Google 发布 gemini-2.5-flash-preview-native-audio-dialog 及其 thinking 变体，为 Gemini Live API 带来原生音频输出能力，进一步降低语音交互延迟，支持更自然的端到端语音对话。"
+    },
+    {
+      "title": "ICASSP 2026 语音合成论文列表出炉：HD-PPT 等新方法引领流式 TTS 创新",
+      "url": "https://nanless.github.io/audio-paper-digest-blog/posts/icassp2026-task-061/",
+      "summary": "ICASSP 2026 语音合成方向论文列表发布，涵盖 102+ 篇论文。亮点包括 HD-PPT 框架（设计新语音编解码器通过 ASR 语义约束实现高效流式 TTS）、多种基于 LLM 的语音合成架构等前沿方向。"
+    },
+    {
+      "title": "NVIDIA PreferenceASR：首个偏好感知的 ASR 评估基准",
+      "url": "https://arxiv.org/abs/2606.29534",
+      "summary": "NVIDIA 团队发布 PreferenceASR，首个评估 ASR 系统用户偏好遵循能力的测试集。在 Speech LLM 时代，传统的单一 WER 指标已不足以反映真实需求，该基准按数字归一化、实体、不流畅和大小写四类偏好评估模型。"
+    }
+  ]
+}
