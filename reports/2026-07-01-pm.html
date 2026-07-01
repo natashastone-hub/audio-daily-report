@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-01-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-01-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月1日 (周三) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">15</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.30944" target="_blank">PRIME-Speech: Preserving Speech-to-Text LLM Capabilities in Speech-to-Speech Generation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-01</span><span>👥 Yuxuan Hu et al.</span></div>
+      <div class="abstract">提出 PRIME-Speech，一种冻结骨干的 S2S 转换框架，仅训练语音生成 token 和插入适配器，即可在保留 S2T LLM 原有能力的基础上增加语音输出。无需串联 TTS 即可实现端到端语音对话，避免文本瓶颈带来的级联延迟。</div>
+      <div class="tags"><span class="tag">Speech-to-Speech</span><span class="tag">LLM</span><span class="tag">End-to-End</span><span class="tag">TTS</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.30944" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.30944" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.31729" target="_blank">Is Natural Always Appropriate? Investigating Naturalness and Appropriateness Across Different Domains for TTS Evaluation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-01</span><span>👥 Dominika Woszczyk et al.</span></div>
+      <div class="abstract">评估5个SOTA TTS系统在5个领域（AI助手、朗读者、演员、动画角色、对话式说话者）中的适切性与自然度。发现适切性独立于自然度变化，高表现力领域仍有挑战，优化一个领域可能损害另一个。已被 Interspeech 2026 接收。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Evaluation</span><span class="tag">Naturalness</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.31729" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.31729" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.31247" target="_blank">FlexiSLM: A Dynamic and Controllable Frame Rate Spoken Language Model</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-01</span><span>👥 Jiaqi Li et al.</span></div>
+      <div class="abstract">提出 FlexiSLM，支持动态可控帧率的语音语言模型。利用时变信息密度，通过动态帧率编码实现推理时质量-速度灵活折中，突破现有固定帧率（25或12.5Hz）的限制。</div>
+      <div class="tags"><span class="tag">Spoken LM</span><span class="tag">Dynamic Frame Rate</span><span class="tag">Speech Generation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.31247" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.31247" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.30811" target="_blank">AVTok: 1D Unified Tokenization for Holistic Audio-Video Generation</a></h4>
+      <div class="meta"><span>📅 2026-07-01</span><span>👥 Kien T. Pham et al.</span></div>
+      <div class="abstract">提出 AVTok，一种一维统一 tokenization 框架，将音频和视频信号压缩为统一表征空间，消除双分支设计中的模态差距。实现音视频生成中精细同步和语义对齐。</div>
+      <div class="tags"><span class="tag">Audio-Video Generation</span><span class="tag">Tokenization</span><span class="tag">Multimodal</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.30811" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.30811" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.31259" target="_blank">SwiftAudio: Data-Efficient Caption-Only Distillation for One-Step Text-to-Audio Generation</a></h4>
+      <div class="meta"><span>📅 2026-07-01</span><span>👥 Binh Mai et al.</span></div>
+      <div class="abstract">提出 SwiftAudio，一步式文本到音频生成框架，仅用文本描述即可蒸馏预训练扩散模型，无需配对文本-音频数据。大幅降低推理延迟同时保持高合成质量。</div>
+      <div class="tags"><span class="tag">Text-to-Audio</span><span class="tag">Audio Generation</span><span class="tag">Diffusion</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.31259" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.31259" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.31128" target="_blank">UniSAE: Unified Speech Attribute Editing on Speaker, Emotion and Low-Level Content via Discrete Phonetic Posteriorgram Modelling</a></h4>
+      <div class="meta"><span>📅 2026-07-01</span><span>👥 Chuanbo Zhu et al.</span></div>
+      <div class="abstract">提出 UniSAE，统一语音属性编辑框架，支持可组合的说话人、情感和低级内容编辑。基于离散音素后验图建模，实现多粒度语音编辑，突破传统仅支持词级内容修改的限制。</div>
+      <div class="tags"><span class="tag">Speech Editing</span><span class="tag">Voice Conversion</span><span class="tag">Emotion</span><span class="tag">Speaker</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.31128" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.31128" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.30671" target="_blank">Enhancing BEST-RQ Pseudo-Label Quality through Online Refinement for ASR</a></h4>
+      <div class="meta"><span>📅 2026-07-01</span><span>👥 Jingjing Xu et al.</span></div>
+      <div class="abstract">改进 BEST-RQ 自监督训练中的伪标签质量，通过在线精炼机制解决固定量化器监督弱的问题。在 ASR 任务上提升性能，缩小与 HuBERT 类迭代精炼方案的差距。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Self-Supervised Learning</span><span class="tag">BEST-RQ</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.30671" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.30671" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.30700" target="_blank">BEST-RQ-2: Contextualize-Then-Predict, a Two-Step Approach for Self-Supervised Audio Representations</a></h4>
+      <div class="meta"><span>📅 2026-07-01</span><span>👥 Ludovic K. Tuncay et al.</span></div>
+      <div class="abstract">BEST-RQ 进化版，引入两步「先上下文后预测」预训练方案。ViT 上下文编码器仅处理未遮罩频谱区域，轻量预测器推断遮罩 token，保留冻结随机投影的简洁优势。</div>
+      <div class="tags"><span class="tag">Self-Supervised Learning</span><span class="tag">Audio Representation</span><span class="tag">BEST-RQ</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.30700" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.30700" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.30682" target="_blank">ALM2Vec: Learning Audio Embeddings for Universal Audio Retrieval with Large Audio-Language Models</a></h4>
+      <div class="meta"><span>📅 2026-07-01</span><span>👥 Fengjie Lu et al.</span></div>
+      <div class="abstract">提出 ALM2Vec，基于大型音频-语言模型的通用音频检索嵌入，支持多样化检索目标与可控检索行为，突破传统嵌入仅优化音频-字幕匹配的局限。</div>
+      <div class="tags"><span class="tag">Audio Retrieval</span><span class="tag">Audio-Language Model</span><span class="tag">Embedding</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.30682" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.30682" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.31365" target="_blank">Beyond Cross-Reconstruction: Probing-Based Disentanglement Evaluation for Acoustic Teleportation Codecs</a></h4>
+      <div class="meta"><span>📅 2026-07-01</span><span>👥 Philipp Grundhuber et al.</span></div>
+      <div class="abstract">通过探针回归房间声学参数评估神经音频编解码器中的解缠质量，检测内容/说话人/声学信息泄漏。发现现有交叉重构评估不可靠，提出更严格的解缠评估框架。</div>
+      <div class="tags"><span class="tag">Audio Codec</span><span class="tag">Disentanglement</span><span class="tag">Voice Conversion</span><span class="tag">Acoustic Teleportation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.31365" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.31365" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.30849" target="_blank">SyncCache: Exploiting Asymmetric Dynamics for Fast Audio-Driven Portrait Animation</a></h4>
+      <div class="meta"><span>📅 2026-07-01</span><span>👥 Juncheng Ma et al.</span></div>
+      <div class="abstract">利用音视频模态间不对称动态（音频帧速率远低于视频），提出训练无关的扩散缓存方案，大幅加速音频驱动人像动画推理，同时保持生成质量。</div>
+      <div class="tags"><span class="tag">Audio-Driven Animation</span><span class="tag">Diffusion</span><span class="tag">Inference Acceleration</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.30849" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.30849" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.31055" target="_blank">Reference-Based Prosody and Rhythm Evaluation for Spoken Dialogue Systems</a></h4>
+      <div class="meta"><span>📅 2026-07-01</span><span>👥 Ashish Hallur et al.</span></div>
+      <div class="abstract">基于 4000+ 小时英语对话数据，提出参考基准式韵律和节奏评估方案用于口语对话系统。提供可解释的语音原生度量，避免聚合统计因说话人特征和交互状态变化带来的校准偏差。</div>
+      <div class="tags"><span class="tag">Spoken Dialogue</span><span class="tag">Prosody</span><span class="tag">Evaluation</span><span class="tag">S2S</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.31055" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.31055" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.31105" target="_blank">Attacking UTMOS: Probing the Robustness of a Speech Quality Assessment Model</a></h4>
+      <div class="meta"><span>📅 2026-07-01</span><span>👥 Wen-Chin Huang et al.</span></div>
+      <div class="abstract">对广泛使用的 UTMOS 语音质量评估模型进行对抗攻击分析。发现打分保持攻击（噪声降低感知质量但维持评分）和质量保持攻击（感知质量不变但评分变化），揭示基于 DNN 的语音质量评估鲁棒性缺陷。</div>
+      <div class="tags"><span class="tag">Speech Quality</span><span class="tag">Robustness</span><span class="tag">UTMOS</span><span class="tag">Adversarial</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.31105" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.31105" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.30780" target="_blank">Detecting Audio Deepfakes on the Edge: Lightweight SSL-Based Detection in a Browser Plugin</a></h4>
+      <div class="meta"><span>📅 2026-07-01</span><span>👥 Octavian Pascu et al.</span></div>
+      <div class="abstract">提出基于轻量级 SSL 的浏览器插件音频深度伪造检测方案，在设备端运行，保护用户隐私。解决现有方案依赖云端处理带来的隐私问题。</div>
+      <div class="tags"><span class="tag">Audio Deepfake</span><span class="tag">Detection</span><span class="tag">SSL</span><span class="tag">Edge Computing</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.30780" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.30780" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.30791" target="_blank">Probing-Guided Layer Selection from Self-Supervised Speech Models for Generalizable Audio Deepfake Detection</a></h4>
+      <div class="meta"><span>📅 2026-07-01</span><span>👥 Marjan Beheshti et al.</span></div>
+      <div class="abstract">提出模型无关的两阶段探针引导层选择方法，从 SSL 语音模型多层表示中选择跨域泛化的表示层用于音频深度伪造检测，解决跨攻击类型和录音条件的泛化难题。</div>
+      <div class="tags"><span class="tag">Audio Deepfake</span><span class="tag">Detection</span><span class="tag">SSL</span><span class="tag">Generalization</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.30791" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.30791" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>万字深度解析 Microsoft VibeVoice：开源全栈语音AI（6小时前发布）</h4>
+      <p>VibeVoice 是微软开源的前沿语音AI模型家族，包含ASR语音识别（支持60分钟长音频、50+语言）和Realtime实时语音合成，已被接纳为ICLR 2026 Oral论文。这篇6小时前发布的深度解析全面介绍了从TTS到ASR的全栈语音合成与识别技术革命。 <a href="http://chenxutan.com/d/4184.html" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-01-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

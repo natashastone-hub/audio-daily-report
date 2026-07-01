@@ -1,0 +1,206 @@
+{
+  "papers": [
+    {
+      "title": "PRIME-Speech: Preserving Speech-to-Text LLM Capabilities in Speech-to-Speech Generation",
+      "url": "https://arxiv.org/abs/2606.30944",
+      "date": "2026-07-01",
+      "authors": "Yuxuan Hu et al.",
+      "abstract": "提出 PRIME-Speech，一种冻结骨干的 S2S 转换框架，仅训练语音生成 token 和插入适配器，即可在保留 S2T LLM 原有能力的基础上增加语音输出。无需串联 TTS 即可实现端到端语音对话，避免文本瓶颈带来的级联延迟。",
+      "tags": ["Speech-to-Speech", "LLM", "End-to-End", "TTS"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.30944"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.30944"}
+      ]
+    },
+    {
+      "title": "Is Natural Always Appropriate? Investigating Naturalness and Appropriateness Across Different Domains for TTS Evaluation",
+      "url": "https://arxiv.org/abs/2606.31729",
+      "date": "2026-07-01",
+      "authors": "Dominika Woszczyk et al.",
+      "abstract": "评估5个SOTA TTS系统在5个领域（AI助手、朗读者、演员、动画角色、对话式说话者）中的适切性与自然度。发现适切性独立于自然度变化，高表现力领域仍有挑战，优化一个领域可能损害另一个。已被 Interspeech 2026 接收。",
+      "tags": ["TTS", "Evaluation", "Naturalness", "Interspeech 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.31729"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.31729"}
+      ]
+    },
+    {
+      "title": "FlexiSLM: A Dynamic and Controllable Frame Rate Spoken Language Model",
+      "url": "https://arxiv.org/abs/2606.31247",
+      "date": "2026-07-01",
+      "authors": "Jiaqi Li et al.",
+      "abstract": "提出 FlexiSLM，支持动态可控帧率的语音语言模型。利用时变信息密度，通过动态帧率编码实现推理时质量-速度灵活折中，突破现有固定帧率（25或12.5Hz）的限制。",
+      "tags": ["Spoken LM", "Dynamic Frame Rate", "Speech Generation"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.31247"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.31247"}
+      ]
+    },
+    {
+      "title": "AVTok: 1D Unified Tokenization for Holistic Audio-Video Generation",
+      "url": "https://arxiv.org/abs/2606.30811",
+      "date": "2026-07-01",
+      "authors": "Kien T. Pham et al.",
+      "abstract": "提出 AVTok，一种一维统一 tokenization 框架，将音频和视频信号压缩为统一表征空间，消除双分支设计中的模态差距。实现音视频生成中精细同步和语义对齐。",
+      "tags": ["Audio-Video Generation", "Tokenization", "Multimodal"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.30811"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.30811"}
+      ]
+    },
+    {
+      "title": "SwiftAudio: Data-Efficient Caption-Only Distillation for One-Step Text-to-Audio Generation",
+      "url": "https://arxiv.org/abs/2606.31259",
+      "date": "2026-07-01",
+      "authors": "Binh Mai et al.",
+      "abstract": "提出 SwiftAudio，一步式文本到音频生成框架，仅用文本描述即可蒸馏预训练扩散模型，无需配对文本-音频数据。大幅降低推理延迟同时保持高合成质量。",
+      "tags": ["Text-to-Audio", "Audio Generation", "Diffusion"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.31259"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.31259"}
+      ]
+    },
+    {
+      "title": "UniSAE: Unified Speech Attribute Editing on Speaker, Emotion and Low-Level Content via Discrete Phonetic Posteriorgram Modelling",
+      "url": "https://arxiv.org/abs/2606.31128",
+      "date": "2026-07-01",
+      "authors": "Chuanbo Zhu et al.",
+      "abstract": "提出 UniSAE，统一语音属性编辑框架，支持可组合的说话人、情感和低级内容编辑。基于离散音素后验图建模，实现多粒度语音编辑，突破传统仅支持词级内容修改的限制。",
+      "tags": ["Speech Editing", "Voice Conversion", "Emotion", "Speaker"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.31128"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.31128"}
+      ]
+    },
+    {
+      "title": "Enhancing BEST-RQ Pseudo-Label Quality through Online Refinement for ASR",
+      "url": "https://arxiv.org/abs/2606.30671",
+      "date": "2026-07-01",
+      "authors": "Jingjing Xu et al.",
+      "abstract": "改进 BEST-RQ 自监督训练中的伪标签质量，通过在线精炼机制解决固定量化器监督弱的问题。在 ASR 任务上提升性能，缩小与 HuBERT 类迭代精炼方案的差距。",
+      "tags": ["ASR", "Self-Supervised Learning", "BEST-RQ"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.30671"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.30671"}
+      ]
+    },
+    {
+      "title": "BEST-RQ-2: Contextualize-Then-Predict, a Two-Step Approach for Self-Supervised Audio Representations",
+      "url": "https://arxiv.org/abs/2606.30700",
+      "date": "2026-07-01",
+      "authors": "Ludovic K. Tuncay et al.",
+      "abstract": "BEST-RQ 进化版，引入两步「先上下文后预测」预训练方案。ViT 上下文编码器仅处理未遮罩频谱区域，轻量预测器推断遮罩 token，保留冻结随机投影的简洁优势。",
+      "tags": ["Self-Supervised Learning", "Audio Representation", "BEST-RQ"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.30700"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.30700"}
+      ]
+    },
+    {
+      "title": "ALM2Vec: Learning Audio Embeddings for Universal Audio Retrieval with Large Audio-Language Models",
+      "url": "https://arxiv.org/abs/2606.30682",
+      "date": "2026-07-01",
+      "authors": "Fengjie Lu et al.",
+      "abstract": "提出 ALM2Vec，基于大型音频-语言模型的通用音频检索嵌入，支持多样化检索目标与可控检索行为，突破传统嵌入仅优化音频-字幕匹配的局限。",
+      "tags": ["Audio Retrieval", "Audio-Language Model", "Embedding"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.30682"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.30682"}
+      ]
+    },
+    {
+      "title": "Beyond Cross-Reconstruction: Probing-Based Disentanglement Evaluation for Acoustic Teleportation Codecs",
+      "url": "https://arxiv.org/abs/2606.31365",
+      "date": "2026-07-01",
+      "authors": "Philipp Grundhuber et al.",
+      "abstract": "通过探针回归房间声学参数评估神经音频编解码器中的解缠质量，检测内容/说话人/声学信息泄漏。发现现有交叉重构评估不可靠，提出更严格的解缠评估框架。",
+      "tags": ["Audio Codec", "Disentanglement", "Voice Conversion", "Acoustic Teleportation"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.31365"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.31365"}
+      ]
+    },
+    {
+      "title": "SyncCache: Exploiting Asymmetric Dynamics for Fast Audio-Driven Portrait Animation",
+      "url": "https://arxiv.org/abs/2606.30849",
+      "date": "2026-07-01",
+      "authors": "Juncheng Ma et al.",
+      "abstract": "利用音视频模态间不对称动态（音频帧速率远低于视频），提出训练无关的扩散缓存方案，大幅加速音频驱动人像动画推理，同时保持生成质量。",
+      "tags": ["Audio-Driven Animation", "Diffusion", "Inference Acceleration"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.30849"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.30849"}
+      ]
+    },
+    {
+      "title": "Reference-Based Prosody and Rhythm Evaluation for Spoken Dialogue Systems",
+      "url": "https://arxiv.org/abs/2606.31055",
+      "date": "2026-07-01",
+      "authors": "Ashish Hallur et al.",
+      "abstract": "基于 4000+ 小时英语对话数据，提出参考基准式韵律和节奏评估方案用于口语对话系统。提供可解释的语音原生度量，避免聚合统计因说话人特征和交互状态变化带来的校准偏差。",
+      "tags": ["Spoken Dialogue", "Prosody", "Evaluation", "S2S"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.31055"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.31055"}
+      ]
+    },
+    {
+      "title": "Attacking UTMOS: Probing the Robustness of a Speech Quality Assessment Model",
+      "url": "https://arxiv.org/abs/2606.31105",
+      "date": "2026-07-01",
+      "authors": "Wen-Chin Huang et al.",
+      "abstract": "对广泛使用的 UTMOS 语音质量评估模型进行对抗攻击分析。发现打分保持攻击（噪声降低感知质量但维持评分）和质量保持攻击（感知质量不变但评分变化），揭示基于 DNN 的语音质量评估鲁棒性缺陷。",
+      "tags": ["Speech Quality", "Robustness", "UTMOS", "Adversarial"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.31105"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.31105"}
+      ]
+    },
+    {
+      "title": "Detecting Audio Deepfakes on the Edge: Lightweight SSL-Based Detection in a Browser Plugin",
+      "url": "https://arxiv.org/abs/2606.30780",
+      "date": "2026-07-01",
+      "authors": "Octavian Pascu et al.",
+      "abstract": "提出基于轻量级 SSL 的浏览器插件音频深度伪造检测方案，在设备端运行，保护用户隐私。解决现有方案依赖云端处理带来的隐私问题。",
+      "tags": ["Audio Deepfake", "Detection", "SSL", "Edge Computing"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.30780"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.30780"}
+      ]
+    },
+    {
+      "title": "Probing-Guided Layer Selection from Self-Supervised Speech Models for Generalizable Audio Deepfake Detection",
+      "url": "https://arxiv.org/abs/2606.30791",
+      "date": "2026-07-01",
+      "authors": "Marjan Beheshti et al.",
+      "abstract": "提出模型无关的两阶段探针引导层选择方法，从 SSL 语音模型多层表示中选择跨域泛化的表示层用于音频深度伪造检测，解决跨攻击类型和录音条件的泛化难题。",
+      "tags": ["Audio Deepfake", "Detection", "SSL", "Generalization"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.30791"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.30791"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "万字深度解析 Microsoft VibeVoice：开源全栈语音AI（6小时前发布）",
+      "url": "http://chenxutan.com/d/4184.html",
+      "summary": "VibeVoice 是微软开源的前沿语音AI模型家族，包含ASR语音识别（支持60分钟长音频、50+语言）和Realtime实时语音合成，已被接纳为ICLR 2026 Oral论文。这篇6小时前发布的深度解析全面介绍了从TTS到ASR的全栈语音合成与识别技术革命。"
+    }
+  ]
+}
