@@ -1,0 +1,101 @@
+{
+  "papers": [
+    {
+      "title": "SpeechCombine: Unlocking Speech-Text Compositional Powers — Instruction-Following Speech Language Models without Instruction Tuning",
+      "url": "https://arxiv.org/abs/2607.02214",
+      "date": "2026-07-02",
+      "authors": "Congrui Du, Yang Zhang, Kaizhi Qian, Shiyu Chang",
+      "abstract": "提出 SpeechCombine，一种无需指令微调的指令跟随语音语言模型(SLM)。从文本 LLM 基座出发，仅用 30k 小时语音数据做一轮连续预训练得到语音适配模型，然后直接将其权重与文本 LLM 的指令微调权重差组合。结果表明这种简单策略不仅保留了原始文本 LLM 的知识和能力，还将其有效迁移到语音域，为 SLM 训练提供了无需依赖海量语音数据的新方向。",
+      "tags": ["Speech LM", "Instruction-Following", "Zero Instruction Tuning", "Speech Understanding"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02214"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.02214"}]
+    },
+    {
+      "title": "An Efficient vLLM-Based Inference Pipeline for Unified Audio Understanding and Generation",
+      "url": "https://arxiv.org/abs/2607.02119",
+      "date": "2026-07-02",
+      "authors": "Haoran Wang, Jinchuan Tian, Siddhant Arora, Shinji Watanabe",
+      "abstract": "提出基于 vLLM 的统一语音理解与生成推理管线。扩展自回归解码原生执行 delay-pattern 解交织和协调多流采样，集成片上 GPU 声学解码器实现端到端波形合成。创新性地通过连续批内协同调度配对的条件和无条件请求，将 CFG 吞吐量维持在非 CFG 的 80%。已开源框架。",
+      "tags": ["Speech LM", "vLLM", "Unified Audio", "GPU Inference", "Open Source"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02119"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.02119"}]
+    },
+    {
+      "title": "Spatial Speech Perception Systems: A Survey of Sound Source Localization, Directional Enhancement, and Speech Recognition",
+      "url": "https://arxiv.org/abs/2607.02296",
+      "date": "2026-07-02",
+      "authors": "Pengyuan Shao, Dimitrios Kanoulas",
+      "abstract": "综述空间语音感知系统，重点覆盖声源定位(SSL)、方向性语音增强(DSE)和自动语音识别(ASR)在集成处理管道中的角色。回顾经典信号处理方法和最新基于学习的方法，涉及麦克风阵列定位、波束赋形、神经增强、语音分离和现代识别架构，讨论在机器人听觉、助听器、智能音箱和电话会议中的应用及开放挑战。",
+      "tags": ["Survey", "Sound Source Localization", "Speech Enhancement", "ASR", "Microphone Array"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02296"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.02296"}]
+    },
+    {
+      "title": "Neural Audio Codec with Adjustable Token Temporal Resolution Using Sampling-Frequency-Independent Convolutional Layers",
+      "url": "https://arxiv.org/abs/2607.01865",
+      "date": "2026-07-02",
+      "authors": "Tomohiko Nakamura, Wataru Nakata, Kanami Imamura, Yuki Saito",
+      "abstract": "提出一种机制使单个神经音频编解码器(NAC)能在多种 token 时间分辨率(TTR)下运行。使用采样频率无关卷积层，根据 TTR 生成卷积核并调整核大小和步长。将该机制集成到 Descript Audio Codec 中，环境声重建实验显示优于为每种 TTR 切换特定层的单模型基线。",
+      "tags": ["Neural Audio Codec", "Token Resolution", "DAC", "IWAENC 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.01865"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.01865"}]
+    },
+    {
+      "title": "Cross Domain Few-Shot Class-Incremental Audio Classification Via Adversarial Contrastive Learning",
+      "url": "https://arxiv.org/abs/2607.02254",
+      "date": "2026-07-02",
+      "authors": "Yongjie Si, Yanxiong Li, Sen Huang, Beibei Liu",
+      "abstract": "探索跨域少样本类增量音频分类(Cross Domain FCAC)问题，提出对抗对比训练策略。编码器在基础会话训练、增量会话冻结，分类器在所有会话训练。在六对跨域数据集上的实验表明该方法在平均准确率上超越 SOTA 方法。代码已开源。",
+      "tags": ["Audio Classification", "Few-Shot", "Cross-Domain", "Interspeech 2026", "Open Source"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02254"}, {"label": "Code", "url": "https://github.com/YongjieSi/ACL"}]
+    },
+    {
+      "title": "Speaker Head Orientation Estimation with a Single Microphone Array Using Phase Spectrogram Features",
+      "url": "https://arxiv.org/abs/2607.02129",
+      "date": "2026-07-02",
+      "authors": "Balint Turi, Archontis Politis, Parthasaarathy Sudarsanam, Tuomas Virtanen",
+      "abstract": "提出利用单麦克风阵列的短时傅里叶变换相位分量作为深度神经网络输入，结合卷积、循环和自注意力层估计说话人头部朝向。大规模仿真数据集训练加真实数据微调，在清洁和噪声条件下均超越基线，个性化实验达到 11.3° 平均角度误差。",
+      "tags": ["Speaker Diarization", "Head Orientation", "Microphone Array", "EUSIPCO 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02129"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.02129"}]
+    },
+    {
+      "title": "LMPAN: A Lightweight Multi-Path Alignment Network for Joint Full-Duplex Acoustic Echo Cancellation and Noise Suppression",
+      "url": "https://arxiv.org/abs/2607.02062",
+      "date": "2026-07-02",
+      "authors": "Chengwei Liu, Shaofei Xue, Haoyin Yan, Xiaotao Liang, Zheng Xue",
+      "abstract": "提出 LMPAN，一种 480K 参数、126 MACs 的轻量级多路径对齐网络，用于全双工口语对话系统的设备端联合声学回声消除(AEC)和噪声抑制(NS)。多路径对齐阶段纠正时序和能量不匹配，注意力机制动态融合特征，两阶段训练框架利用自监督学习表示提升感知质量。",
+      "tags": ["AEC", "Noise Suppression", "On-Device", "Interspeech 2026", "Lightweight"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02062"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.02062"}]
+    },
+    {
+      "title": "A Multi-Branch Hierarchy-Aware Framework for Heterogeneous Audio Classification",
+      "url": "https://arxiv.org/abs/2607.01974",
+      "date": "2026-07-02",
+      "authors": "Beile Ning, Jiayi Yu, Zitong Wang, Yufei Hu, Wenjun Xu, Yuanhang Qian, Zhongxin Bai, Gongping Huang",
+      "abstract": "DCASE 2026 Challenge Task 1 技术报告，基于 CLAP 音频-文本表示的异构音频分类系统。通过扩展训练集、多分支声学特征建模和层次感知分类器改进，Log-STFT 分支提供最强单模型性能。结合 KNN 后处理，最佳单系统 Hier. F1 达到 80.84%，集成系统达 81.25%。",
+      "tags": ["Audio Classification", "DCASE 2026", "CLAP", "Multi-Branch"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.01974"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.01974"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "ViiTorVoice-NAR 开源：首个支持录音中单词级精确编辑的 TTS 模型",
+      "url": "https://www.techtimes.com/articles/319524/20260702/text-speech-ai-edits-single-words-mid-recording-viitorvoice-goes-open-source.htm",
+      "summary": "中国初创公司云上曲率(Yunshang Qulv)于 2026 年 7 月 1 日开源 ViiTorVoice-NAR，这是首个支持在已完成录音中替换单个单词而无需重新生成周围内容的 TTS 模型。基于非自回归掩码离散音频 token 架构，灵感类似 BERT，双向上下文重建只变更的内容。同时支持无参考文本的声音克隆，首帧延迟约 60ms。Apache 2.0 协议开源，距欧盟 AI 法案强制音频标注生效(8月2日)仅31天。"
+    },
+    {
+      "title": "ICASSP 2026 语音合成与识别论文列表更新",
+      "url": "https://nanless.github.io/audio-paper-digest-blog/posts/icassp2026-task-061/",
+      "summary": "语音/音乐/音频论文速递博客更新了 ICASSP 2026 语音合成（Task 061）和语音识别（Task 078）论文列表。其中 VoXtream（流式 TTS 极低初始延迟）和 HD-PPT（语音 token 解耦为内容偏好与提示 token）等新方法展示了 TTS 领域的最新进展。微软 VibeVoice 深度解析文章也于近日发布。"
+    },
+    {
+      "title": "GLM TTS 和 ASR API 快速入门指南发布",
+      "url": "https://blogs.novita.ai/zh-CN/glm-tts-asr-voice-clone-api-quick-start/",
+      "summary": "智谱 GLM 系列的 TTS、ASR 和语音克隆 API 快速入门指南发布。包含可运行的 curl 和 Python 示例、完整参数说明和定价信息。GLM 正在将语音能力整合到其大模型生态中，提供从 ASR 到 TTS 再到声音克隆的全栈语音 API。"
+    }
+  ]
+}
