@@ -1,0 +1,198 @@
+{
+  "papers": [
+    {
+      "title": "SemanticAudio: Audio Generation and Editing in Semantic Space",
+      "url": "https://arxiv.org/abs/2607.xxxxx",
+      "date": "2026-07-03",
+      "authors": "Authors",
+      "abstract": "提出 SemanticAudio，一种在语义空间中实现音频生成和编辑的新框架。不同于传统方法在声学特征空间操作，SemanticAudio 在高级语义表示空间中完成音频内容的合成与修改，实现了更可控、更灵活的音频生成。该方法支持文本引导的音频创作和基于语义操作的精细编辑，在音频生成质量和可控性方面取得了显著提升。",
+      "tags": ["Audio Generation", "Semantic Space", "Audio Editing", "Cross-Domain"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.xxxxx"},
+        {"label": "NPU-ASLP解读", "url": "https://arxiv.npu-aslp.org/raw/2026-07-03.html"}
+      ]
+    },
+    {
+      "title": "Phonikud: Overcoming Phonetic Underspecification for Hebrew Text-To-Speech",
+      "url": "https://arxiv.org/abs/2607.xxxxx",
+      "date": "2026-07-03",
+      "authors": "Authors",
+      "abstract": "针对希伯来语 TTS 中的音素不确定性问题提出 Phonikud 方法。希伯来语作为一种辅音音素文字，书写系统中元音标注不完整导致 TTS 系统面临严重的语音欠指定问题。该工作通过创新性的音素消歧和上下文建模策略，显著提升了希伯来语语音合成的准确性和自然度。",
+      "tags": ["TTS", "Hebrew", "Multi-Lingual", "Phonetic Underspecification"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.xxxxx"},
+        {"label": "NPU-ASLP解读", "url": "https://arxiv.npu-aslp.org/raw/2026-07-03.html"}
+      ]
+    },
+    {
+      "title": "SPARCLE: Speaker-aware Aligned Representations via Contrastive Language Embeddings",
+      "url": "https://arxiv.org/abs/2607.xxxxx",
+      "date": "2026-07-03",
+      "authors": "Authors",
+      "abstract": "提出 SPARCLE，一种说话人感知的对齐表示学习方法。通过对比语言嵌入实现说话人感知的对齐表示学习，在零样本声音克隆和说话人验证等任务中展现了卓越性能。该框架将说话人身份信息与语言内容在统一表示空间中对齐，为语音生成和理解的统一建模提供了新思路。",
+      "tags": ["Speaker Representation", "Voice Cloning", "Contrastive Learning", "Cross-Domain"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.xxxxx"},
+        {"label": "NPU-ASLP解读", "url": "https://arxiv.npu-aslp.org/raw/2026-07-03.html"}
+      ]
+    },
+    {
+      "title": "DDPO-VC: Speaker De-Identification via Diffusion Denoising Policy Optimization",
+      "url": "https://arxiv.org/abs/2607.xxxxx",
+      "date": "2026-07-03",
+      "authors": "Authors",
+      "abstract": "提出 DDPO-VC，一种基于扩散去噪策略优化的说话人去识别方法。在不损害语音内容可懂度和自然度的前提下，通过扩散模型的策略优化实现说话人身份信息的有效隐藏，同时保持语音的情感表达和韵律特征。该工作在语音隐私保护方面具有重要的应用价值。",
+      "tags": ["Voice Conversion", "Privacy", "Diffusion Model", "Cross-Domain"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.xxxxx"},
+        {"label": "NPU-ASLP解读", "url": "https://arxiv.npu-aslp.org/raw/2026-07-03.html"}
+      ]
+    },
+    {
+      "title": "UniSE: A Unified Framework for Decoder-Only Autoregressive LM-Based Speech Enhancement",
+      "url": "https://arxiv.org/abs/2607.xxxxx",
+      "date": "2026-07-03",
+      "authors": "Authors",
+      "abstract": "提出 UniSE，一个基于纯解码器自回归语言模型的统一语音增强框架。将去噪、去混响、超分辨率等多种语音增强任务统一到单一的自回归语言模型中，展示了语言模型范式在语音增强领域的强大泛化能力。该框架简洁高效，无需为不同任务设计独立的架构。",
+      "tags": ["Speech Enhancement", "Autoregressive LM", "Unified Framework", "Cross-Domain"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.xxxxx"},
+        {"label": "NPU-ASLP解读", "url": "https://arxiv.npu-aslp.org/raw/2026-07-03.html"}
+      ]
+    },
+    {
+      "title": "An Efficient vLLM-Based Inference Pipeline for Unified Audio Understanding and Generation",
+      "url": "https://arxiv.org/abs/2607.xxxxx",
+      "date": "2026-07-03",
+      "authors": "Authors",
+      "abstract": "提出基于 vLLM 的高效推理流水线，用于统一的音频理解和生成。该工作聚焦于工程实践，展示了如何利用 vLLM 框架构建高效、低延迟的端到端音频理解与生成服务，为音频大模型的工业部署提供了实用的参考方案。",
+      "tags": ["Audio Understanding", "Audio Generation", "Inference Pipeline", "vLLM", "Engineering"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.xxxxx"},
+        {"label": "NPU-ASLP解读", "url": "https://arxiv.npu-aslp.org/raw/2026-07-03.html"}
+      ]
+    },
+    {
+      "title": "Unlocking Speech-Text Compositional Powers: Instruction-Following Speech Language Models",
+      "url": "https://arxiv.org/abs/2607.xxxxx",
+      "date": "2026-07-03",
+      "authors": "Authors",
+      "abstract": "探索指令遵循型语音语言模型，解锁语音-文本的组合能力。该工作研究如何让语音语言模型理解和执行复杂的语音-文本组合指令，实现更灵活的跨模态任务，如语音编辑、风格迁移、内容重组等，将语音模型的交互能力提升到新的高度。",
+      "tags": ["Speech LLM", "Instruction Following", "Multi-Modal", "Cross-Domain"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.xxxxx"},
+        {"label": "NPU-ASLP解读", "url": "https://arxiv.npu-aslp.org/raw/2026-07-03.html"}
+      ]
+    },
+    {
+      "title": "LLM can Read Spectrogram: Encoder-free Speech-Language Modeling",
+      "url": "https://arxiv.org/abs/2607.xxxxx",
+      "date": "2026-07-03",
+      "authors": "Authors",
+      "abstract": "提出无需编码器的语音-语言建模方法，直接让 LLM 读取语谱图。该工作证明了大语言模型可以直接从语谱图视觉表示中理解语音内容，跳过了传统语音编码器步骤，简化了语音-文本多模态模型的设计流程，为端到端的统一建模开辟了新路径。",
+      "tags": ["Speech LLM", "Encoder-free", "Spectrogram", "Cross-Domain"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.xxxxx"},
+        {"label": "NPU-ASLP解读", "url": "https://arxiv.npu-aslp.org/raw/2026-07-03.html"}
+      ]
+    },
+    {
+      "title": "Rethinking Speech-LLM Integration for ASR: Effective Joint Speech-Text Training by Interleaving",
+      "url": "https://arxiv.org/abs/2607.xxxxx",
+      "date": "2026-07-03",
+      "authors": "Authors",
+      "abstract": "重新思考语音-大语言模型集成用于 ASR。提出通过交替式联合语音-文本训练策略，有效解决语音与文本模态之间的对齐问题，在多个 ASR 基准上实现了性能提升。该工作为 Speech-LLM 的高效集成提供了理论基础和实用方法。",
+      "tags": ["ASR", "Speech LLM", "Joint Training", "Cross-Domain"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.xxxxx"},
+        {"label": "NPU-ASLP解读", "url": "https://arxiv.npu-aslp.org/raw/2026-07-03.html"}
+      ]
+    },
+    {
+      "title": "Hybrid Diffusion Transformer for Instruction-Guided Audio Editing via Rectified Flow",
+      "url": "https://arxiv.org/abs/2607.xxxxx",
+      "date": "2026-07-03",
+      "authors": "Authors",
+      "abstract": "提出基于混合扩散 Transformer 和纠正流的指令引导音频编辑方法。结合扩散模型和 Transformer 架构的优势，通过纠正流（Rectified Flow）实现高效的指令引导音频编辑，在编辑精度、生成质量和推理速度三者之间取得了优秀的平衡。",
+      "tags": ["Audio Editing", "Diffusion Transformer", "Rectified Flow", "Cross-Domain"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.xxxxx"},
+        {"label": "NPU-ASLP解读", "url": "https://arxiv.npu-aslp.org/raw/2026-07-03.html"}
+      ]
+    },
+    {
+      "title": "LatentFlowSR: High-Fidelity Audio Super-Resolution via Noise-Robust Latent Flow Matching",
+      "url": "https://arxiv.org/abs/2607.xxxxx",
+      "date": "2026-07-03",
+      "authors": "Authors",
+      "abstract": "提出 LatentFlowSR，一种基于噪声鲁棒隐空间流匹配的高保真音频超分辨率方法。通过在隐空间中进行流匹配，实现了从低分辨率音频到高分辨率音频的高质量重建，在音频超分辨率任务上取得了最先进的结果，对音频编解码和质量增强具有重要价值。",
+      "tags": ["Audio Super-Resolution", "Flow Matching", "Audio Codec", "Cross-Domain"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.xxxxx"},
+        {"label": "NPU-ASLP解读", "url": "https://arxiv.npu-aslp.org/raw/2026-07-03.html"}
+      ]
+    },
+    {
+      "title": "Neural Audio Codec with Adjustable Token Temporal Resolution Using Sampling-Frequency Conditioning",
+      "url": "https://arxiv.org/abs/2607.xxxxx",
+      "date": "2026-07-03",
+      "authors": "Authors",
+      "abstract": "提出通过采样频率条件化实现可调节 token 时间分辨率的神经音频编解码器。该方法允许在单个模型中灵活调整音频 token 的时间分辨率，在压缩效率和重建质量之间提供动态权衡，为音频生成模型提供了更灵活的音频表示基础。",
+      "tags": ["Neural Audio Codec", "Token Resolution", "Audio Generation", "Cross-Domain"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.xxxxx"},
+        {"label": "NPU-ASLP解读", "url": "https://arxiv.npu-aslp.org/raw/2026-07-03.html"}
+      ]
+    },
+    {
+      "title": "Self-Supervised Test-Time Tuning for Packet Loss Concealment",
+      "url": "https://arxiv.org/abs/2607.xxxxx",
+      "date": "2026-07-03",
+      "authors": "Authors",
+      "abstract": "提出 TTT-PLC，一种自监督测试时调优框架用于丢包隐藏。摒弃了传统 PLC 模型在部署时参数固定的做法，利用已接收的数据包进行测试时自适应调优，使模型能根据具体通话/录音的信号特性动态优化重构效果，在实时语音通信质量保障方面具有显著实用价值。",
+      "tags": ["Packet Loss Concealment", "Test-Time Tuning", "Speech Communication"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.xxxxx"},
+        {"label": "NPU-ASLP解读", "url": "https://arxiv.npu-aslp.org/raw/2026-07-03.html"}
+      ]
+    },
+    {
+      "title": "Beyond Words: Towards Effective Modeling of Non-Verbal Vocalizations in ASR",
+      "url": "https://arxiv.org/abs/2607.xxxxx",
+      "date": "2026-07-03",
+      "authors": "Authors",
+      "abstract": "研究 ASR 中非语言发声（笑声、呼吸、咳嗽、哭声等）的有效建模方法。提出两阶段课程学习、跨类别声学知识迁移和类别平衡语音转换增强三种数据驱动策略，在保持词汇识别精度的同时，显著提升了稀有非语言事件的检测能力。笑声、呼吸等高频事件可迁移知识到哭声、咳嗽等稀有事件。",
+      "tags": ["ASR", "Non-Verbal", "Data-Centric", "Speech Understanding"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.xxxxx"},
+        {"label": "NPU-ASLP解读", "url": "https://arxiv.npu-aslp.org/raw/2026-07-03.html"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "Higgsfield Seed Audio 1.0: 将声音克隆和配音能力带入 Claude",
+      "url": "https://alphasignal.ai/news/higgsfield-s-seed-audio-1-0-brings-voice-cloning-and-dubbing-into-claude",
+      "summary": "Higgsfield 发布 Seed Audio 1.0，将声音克隆和配音能力集成到 Anthropic 的 Claude 平台中，标志着 AI 语音能力进一步融入主流大模型产品生态。"
+    },
+    {
+      "title": "Best Voice AI July 2026: 11 款语音识别与实时语音 Agent 横评",
+      "url": "https://www.buildmvpfast.com/articles/best-llms-2026-guide/voice-speech-ai",
+      "summary": "BuildMVPfast 发布 2026 年 7 月语音 AI 综合评测，对 11 款主流语音识别与实时语音 Agent 模型进行实测对比，涵盖语音转文本准确率、实时交互延迟、多语言支持等维度，为开发者选型提供参考。"
+    }
+  ]
+}
