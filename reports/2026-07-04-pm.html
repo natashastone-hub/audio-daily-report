@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-04-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-04-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月4日 (周六) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">5</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.01733" target="_blank">Rethinking Speech-LLM Integration for ASR: Effective Joint Speech-Text Training by Interleaving (JSTIP)</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Ruchao Fan, Yiming Wang, Rui Zhao, Liliang Ren, Keqi Deng, Xiaoyang Chen, Ali Zare, Bo Ren, Yuxuan Hu, Junkun Chen, Yan Huang, Yelong Shen, Jinyu Li</span></div>
+      <div class="abstract">提出 JSTIP，一种面向 ASR 的语音-文本交织预训练策略。在 38k 小时 ASR 数据上，通过词级和段级交织语音-文本序列，实现了实体识别准确率的持续提升。使用领域文本即可达到与合成语音-文本对相当的实体识别性能，在医疗实体识别上与前沿开源 ASR 和 Speech-LLM 系统媲美。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Speech-LLM</span><span class="tag">Joint Training</span><span class="tag">Entity Recognition</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.01733" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.01733" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.02214" target="_blank">SpeechCombine: Instruction-Following Speech Language Models without Instruction Tuning</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Kaizhi Qian et al.</span></div>
+      <div class="abstract">提出 SpeechCombine，首个无需指令微调即可实现指令跟随的语音语言模型。仅用 30k 小时数据进行一轮语音预训练，通过将语音适配模型权重与文本 LLM 的指令微调权重差异直接结合，将文本 LLM 的能力迁移到语音领域。为 Speech-LLM 训练开辟了无需海量语音数据的新方向。</div>
+      <div class="tags"><span class="tag">Speech LLM</span><span class="tag">Instruction Following</span><span class="tag">Weight Combination</span><span class="tag">Data-Efficient</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.02214" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.02214" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.02296" target="_blank">Spatial Speech Perception Systems: A Survey of Sound Source Localization, Directional Enhancement, and Speech Recognition</a></h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Authors</span></div>
+      <div class="abstract">空间语音感知系统综述，全面梳理声源定位（SSL）、定向语音增强（DSE）和自动语音识别（ASR）在集成处理流水线中的作用。回顾经典信号处理方法和最新基于学习的方法，涵盖麦克风阵列定位、波束成形、神经增强、语音分离和现代识别架构。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Sound Source Localization</span><span class="tag">Speech Enhancement</span><span class="tag">Survey</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.02296" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.02296" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.01594" target="_blank">Enhancing Acoustic-to-Articulatory Inversion with Multi-Target Pretraining for Low-Resource Settings</a></h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Authors</span></div>
+      <div class="abstract">提出多目标预训练方法用于声学到发音逆映射（AAI），通过音素标签、发音特征标签和关键发音器标签三种目标表示进行预训练，消除了推理时对 SSL 特征提取器的依赖。在低资源场景下持续提升 AAI 性能，同时显著降低推理成本。</div>
+      <div class="tags"><span class="tag">Acoustic-to-Articulatory</span><span class="tag">ASR</span><span class="tag">TTS</span><span class="tag">Low-Resource</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.01594" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.01594" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.01238" target="_blank">SPARCLE: Speaker-Aware Grapheme Representation for Low-Resource TTS via Contrastive Language Embeddings</a></h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Authors</span></div>
+      <div class="abstract">提出 SPARCLE，一种说话人感知的字素表示模型，通过对比学习将字素与 Wav2Vec2 声学表示对齐，替代传统 G2P 系统用于下游 TTS 任务。在极端低资源设置下将词错误率减半，Interspeech 2026 接收。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Grapheme-to-Phoneme</span><span class="tag">Contrastive Learning</span><span class="tag">Low-Resource</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.01238" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.01238" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>xAI Grok Voice Agent Builder 开放 Beta：零代码构建生产级语音 Agent</h4>
+      <p>7月1日，xAI 发布 Grok Voice Agent Builder Beta 版，声称可在 1 分钟内零代码搭建并部署生产级语音 Agent。平台集成 Grok 对话模型和语音合成能力，面向企业和开发者提供端到端语音交互解决方案，标志着语音 Agent 构建进入「分钟级部署」时代。 <a href="https://theaidude.net/blog/xai-launches-grok-voice-agent-builder-beta" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>GradiumAI 在第三方 TTS 基准测试中全面领先 OpenAI 和 ElevenLabs</h4>
+      <p>成立仅 9 个月的语音 AI 初创公司 GradiumAI 在 Coval 独立 TTS 基准测试中超越 OpenAI、ElevenLabs、Cartesia 和 Deepgram，在生产延迟和性价比维度上全面领先。其 TTFA（首音频时间）指标刷新行业记录，引发语音 AI 社区广泛关注。 <a href="https://gradium.ai/content/top-3-text-to-speech-solutions-2026" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-04-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

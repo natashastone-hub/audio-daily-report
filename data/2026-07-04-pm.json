@@ -1,0 +1,67 @@
+{
+  "papers": [
+    {
+      "title": "Rethinking Speech-LLM Integration for ASR: Effective Joint Speech-Text Training by Interleaving (JSTIP)",
+      "url": "https://arxiv.org/abs/2607.01733",
+      "date": "2026-07-02",
+      "authors": "Ruchao Fan, Yiming Wang, Rui Zhao, Liliang Ren, Keqi Deng, Xiaoyang Chen, Ali Zare, Bo Ren, Yuxuan Hu, Junkun Chen, Yan Huang, Yelong Shen, Jinyu Li",
+      "abstract": "提出 JSTIP，一种面向 ASR 的语音-文本交织预训练策略。在 38k 小时 ASR 数据上，通过词级和段级交织语音-文本序列，实现了实体识别准确率的持续提升。使用领域文本即可达到与合成语音-文本对相当的实体识别性能，在医疗实体识别上与前沿开源 ASR 和 Speech-LLM 系统媲美。",
+      "tags": ["ASR", "Speech-LLM", "Joint Training", "Entity Recognition"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.01733"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.01733"}]
+    },
+    {
+      "title": "SpeechCombine: Instruction-Following Speech Language Models without Instruction Tuning",
+      "url": "https://arxiv.org/abs/2607.02214",
+      "date": "2026-07-02",
+      "authors": "Kaizhi Qian et al.",
+      "abstract": "提出 SpeechCombine，首个无需指令微调即可实现指令跟随的语音语言模型。仅用 30k 小时数据进行一轮语音预训练，通过将语音适配模型权重与文本 LLM 的指令微调权重差异直接结合，将文本 LLM 的能力迁移到语音领域。为 Speech-LLM 训练开辟了无需海量语音数据的新方向。",
+      "tags": ["Speech LLM", "Instruction Following", "Weight Combination", "Data-Efficient"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02214"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.02214"}]
+    },
+    {
+      "title": "Spatial Speech Perception Systems: A Survey of Sound Source Localization, Directional Enhancement, and Speech Recognition",
+      "url": "https://arxiv.org/abs/2607.02296",
+      "date": "2026-07-02",
+      "authors": "Authors",
+      "abstract": "空间语音感知系统综述，全面梳理声源定位（SSL）、定向语音增强（DSE）和自动语音识别（ASR）在集成处理流水线中的作用。回顾经典信号处理方法和最新基于学习的方法，涵盖麦克风阵列定位、波束成形、神经增强、语音分离和现代识别架构。",
+      "tags": ["ASR", "Sound Source Localization", "Speech Enhancement", "Survey"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02296"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.02296"}]
+    },
+    {
+      "title": "Enhancing Acoustic-to-Articulatory Inversion with Multi-Target Pretraining for Low-Resource Settings",
+      "url": "https://arxiv.org/abs/2607.01594",
+      "date": "2026-07-02",
+      "authors": "Authors",
+      "abstract": "提出多目标预训练方法用于声学到发音逆映射（AAI），通过音素标签、发音特征标签和关键发音器标签三种目标表示进行预训练，消除了推理时对 SSL 特征提取器的依赖。在低资源场景下持续提升 AAI 性能，同时显著降低推理成本。",
+      "tags": ["Acoustic-to-Articulatory", "ASR", "TTS", "Low-Resource"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.01594"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.01594"}]
+    },
+    {
+      "title": "SPARCLE: Speaker-Aware Grapheme Representation for Low-Resource TTS via Contrastive Language Embeddings",
+      "url": "https://arxiv.org/abs/2607.01238",
+      "date": "2026-07-02",
+      "authors": "Authors",
+      "abstract": "提出 SPARCLE，一种说话人感知的字素表示模型，通过对比学习将字素与 Wav2Vec2 声学表示对齐，替代传统 G2P 系统用于下游 TTS 任务。在极端低资源设置下将词错误率减半，Interspeech 2026 接收。",
+      "tags": ["TTS", "Grapheme-to-Phoneme", "Contrastive Learning", "Low-Resource", "Interspeech 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.01238"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.01238"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "xAI Grok Voice Agent Builder 开放 Beta：零代码构建生产级语音 Agent",
+      "url": "https://theaidude.net/blog/xai-launches-grok-voice-agent-builder-beta",
+      "summary": "7月1日，xAI 发布 Grok Voice Agent Builder Beta 版，声称可在 1 分钟内零代码搭建并部署生产级语音 Agent。平台集成 Grok 对话模型和语音合成能力，面向企业和开发者提供端到端语音交互解决方案，标志着语音 Agent 构建进入「分钟级部署」时代。"
+    },
+    {
+      "title": "GradiumAI 在第三方 TTS 基准测试中全面领先 OpenAI 和 ElevenLabs",
+      "url": "https://gradium.ai/content/top-3-text-to-speech-solutions-2026",
+      "summary": "成立仅 9 个月的语音 AI 初创公司 GradiumAI 在 Coval 独立 TTS 基准测试中超越 OpenAI、ElevenLabs、Cartesia 和 Deepgram，在生产延迟和性价比维度上全面领先。其 TTFA（首音频时间）指标刷新行业记录，引发语音 AI 社区广泛关注。"
+    }
+  ],
+  "note": "下午时段（9:30-14:00）arxiv 暂无 7月4日新批次论文。以上4篇论文来自上午同一批次但早上版未收录的补充内容；2条新闻来自近3天语音AI领域动态。"
+}
