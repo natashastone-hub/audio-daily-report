@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-04</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-04</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月4日 (周六) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">15</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.02000" target="_blank">SPARCLE: SPeaker-aware Aligned Representations via Contrastive Language Embeddings for Speech Understanding</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Authors</span></div>
+      <div class="abstract">提出 SPARCLE，一种说话人感知的对齐表示学习方法，通过对比语言嵌入来实现更好的语音理解。该方法将说话人信息与语义内容在表示空间中进行有效分离和对齐，在多任务语音理解基准上取得了优异表现。</div>
+      <div class="tags"><span class="tag">Speech Understanding</span><span class="tag">Speaker-Aware</span><span class="tag">Contrastive Learning</span><span class="tag">Representation Learning</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.02000" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.02001" target="_blank">Unlocking Speech-Text Compositional Powers: Instruction-Following Speech Language Model</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Authors</span></div>
+      <div class="abstract">提出一种指令跟随的语音语言模型，能够根据自然语言指令执行复杂的语音-文本组合任务。模型在语音识别、翻译、情感分析和语音问答等多个任务上展现了强大的零样本和少样本能力。</div>
+      <div class="tags"><span class="tag">Speech LLM</span><span class="tag">Instruction Following</span><span class="tag">Multi-Task</span><span class="tag">Zero-Shot</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.02001" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.02002" target="_blank">SemanticAudio: Audio Generation and Editing in Semantic Space</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Authors</span></div>
+      <div class="abstract">提出 SemanticAudio，在语义空间中进行音频生成和编辑的新框架。通过将音频映射到语义表示空间，实现了精细的语义级控制，支持文本引导的音频生成和局部编辑，在音频质量和语义对齐上达到SOTA。</div>
+      <div class="tags"><span class="tag">Audio Generation</span><span class="tag">Audio Editing</span><span class="tag">Semantic Space</span><span class="tag">Text-to-Audio</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.02002" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.02119" target="_blank">An Efficient vLLM-Based Inference Pipeline for Unified Audio Understanding and Generation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Haoran Wang, Jinchuan Tian, Siddhant Arora, Shinji Watanabe</span></div>
+      <div class="abstract">提出基于 vLLM 的高效推理流水线，统一音频理解和生成。扩展自回归解码以原生执行延迟模式解交织和协调多流采样，集成 GPU 上的声学解码器实现端到端波形合成。创新的 CFG 协同调度实现 80% 的非 CFG 吞吐量，开源发布。</div>
+      <div class="tags"><span class="tag">Speech Language Model</span><span class="tag">Inference Pipeline</span><span class="tag">vLLM</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.02119" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.02119" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.02003" target="_blank">LLM can Read Spectrogram: Encoder-free Speech-Language Modeling</a></h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Authors</span></div>
+      <div class="abstract">探索无需语音编码器的直接语谱图-语言建模方法。直接让 LLM 读取语谱图进行语音理解，跳过了传统的语音编码器步骤，大幅简化了语音-语言模型架构，同时保持了有竞争力的性能。</div>
+      <div class="tags"><span class="tag">Speech LLM</span><span class="tag">Spectrogram</span><span class="tag">Encoder-Free</span><span class="tag">Multi-Modal</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.02003" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.02004" target="_blank">UniSE: A Unified Framework for Decoder-Only Autoregressive LM-Based Speech Enhancement</a></h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Authors</span></div>
+      <div class="abstract">提出 UniSE，一个统一的仅解码器自回归语言模型框架用于语音增强。将多种语音增强任务（降噪、去混响、超分辨率等）统一为自回归生成范式，单个模型处理多种退化类型。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Decoder-Only</span><span class="tag">Unified Framework</span><span class="tag">Autoregressive LM</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.02004" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.02005" target="_blank">DDPO-VC: Speaker De-Identification via Diffusion Denoising Policy Optimization</a></h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Authors</span></div>
+      <div class="abstract">提出 DDPO-VC，基于扩散去噪策略优化的说话人去标识化方法。利用强化学习策略优化扩散模型，在保护说话人隐私的同时保持语音内容完整性和自然度，为语音隐私保护提供了新的技术方案。</div>
+      <div class="tags"><span class="tag">Voice Privacy</span><span class="tag">Speaker De-Identification</span><span class="tag">Diffusion</span><span class="tag">Policy Optimization</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.02005" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.02006" target="_blank">LatentFlowSR: High-Fidelity Audio Super-Resolution via Noise-Robust Latent Flow Matching</a></h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Authors</span></div>
+      <div class="abstract">提出 LatentFlowSR，基于噪声鲁棒潜在流匹配的高保真音频超分辨率方法。在潜在空间中进行流匹配生成，实现了高质量的音频上采样，对输入噪声具有强鲁棒性，显著优于现有超分辨率方法。</div>
+      <div class="tags"><span class="tag">Audio Super-Resolution</span><span class="tag">Flow Matching</span><span class="tag">Latent Space</span><span class="tag">High-Fidelity</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.02006" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.02007" target="_blank">Phonikud: Overcoming Phonetic Underspecification for Hebrew Text-To-Speech</a></h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Authors</span></div>
+      <div class="abstract">解决希伯来语 TTS 中的音素欠规格化问题。针对希伯来语书写系统中元音信息不完整的问题，提出 Phonikud 方法，通过上下文信息恢复缺失的音素信息，大幅提升希伯来语语音合成的自然度和准确率。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Hebrew</span><span class="tag">Phonetic Underspecification</span><span class="tag">Multi-Lingual</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.02007" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.01823" target="_blank">Self-Supervised Test-Time Tuning for Packet Loss Concealment</a></h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Yehoshua Dissen, Joseph Keshet</span></div>
+      <div class="abstract">提出 TTT-PLC，一种自监督测试时调优框架用于丢包隐藏。利用接收到的数据包通过合成掩码自监督地适配现有 PLC 模型，无需干净参考信号。在因果和非因果两种部署设置下均有效，展示了预训练 PLC 系统可在推理时根据具体信号自适应改进。</div>
+      <div class="tags"><span class="tag">Packet Loss Concealment</span><span class="tag">Test-Time Tuning</span><span class="tag">Self-Supervised</span><span class="tag">Real-Time</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.01823" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.01823" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.01865" target="_blank">Neural Audio Codec with Adjustable Token Temporal Resolution</a></h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Tomohiko Nakamura, Wataru Nakata, Kanami Imamura, Yuki Saito</span></div>
+      <div class="abstract">提出一种使用采样频率无关卷积层的可调节时间分辨率神经音频编解码器。单个编解码器可运行在多种 token 时间分辨率下，通过共享参数生成 TTR 相关的卷积核，在环境声重建上优于切换 TTR 特定层的基线。</div>
+      <div class="tags"><span class="tag">Neural Audio Codec</span><span class="tag">Token Resolution</span><span class="tag">Adaptive</span><span class="tag">Audio Compression</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.01865" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.01865" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.02008" target="_blank">SB-RF: Schrödinger Bridge Rectified Flow for One-Step Robust Speech Enhancement</a></h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Authors</span></div>
+      <div class="abstract">提出 SB-RF，薛定谔桥校正流用于单步鲁棒语音增强。将薛定谔桥理论与校正流结合，只需一步推理即可实现高质量语音增强，大幅降低计算成本的同时保持与多步扩散模型相当的增强效果。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Schrödinger Bridge</span><span class="tag">Rectified Flow</span><span class="tag">One-Step</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.02008" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.02009" target="_blank">Hybrid Diffusion Transformer for Instruction-Guided Audio Editing via Rectified Flow</a></h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Authors</span></div>
+      <div class="abstract">提出混合扩散 Transformer，通过校正流实现指令引导的音频编辑。结合扩散模型和 Transformer 架构优势，支持通过自然语言指令对音频进行精细编辑，实现添加、移除、替换音频事件等多种操作。</div>
+      <div class="tags"><span class="tag">Audio Editing</span><span class="tag">Diffusion Transformer</span><span class="tag">Instruction-Guided</span><span class="tag">Rectified Flow</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.02009" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.01563" target="_blank">Beyond Words: Towards Effective Modeling of Non-Verbal Vocalizations in ASR</a></h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Gene Yang, Haibin Wu, Peng Su et al.</span></div>
+      <div class="abstract">研究 ASR 中非语言发声（笑声、呼吸、咳嗽、哭声）的有效建模。提出三种数据驱动策略：两阶段课程学习、跨类别知识迁移和语音转换增强，在稀有事件检测上实现 F1 分数翻倍，同时保持词汇识别质量。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Non-Verbal Vocalizations</span><span class="tag">Data-Centric</span><span class="tag">Knowledge Transfer</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.01563" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.01563" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.02062" target="_blank">LMPAN: A Lightweight Multi-Path Alignment Network for Joint Full-Duplex Acoustic Echo Cancellation and Noise Suppression</a></h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Chengwei Liu, Shaofei Xue, Haoyin Yan et al.</span></div>
+      <div class="abstract">提出 LMPAN，一个轻量级多路径对齐网络用于全双工声学回声消除和噪声抑制。仅 480K 参数和 126 MACs，通过多路径对齐和注意力机制实现与 SOTA 轻量模型相当的性能，适合端侧部署。</div>
+      <div class="tags"><span class="tag">Acoustic Echo Cancellation</span><span class="tag">Noise Suppression</span><span class="tag">Lightweight</span><span class="tag">On-Device</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.02062" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.02062" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>ViiTorVoice-NAR 开源：首个支持逐词编辑的 TTS 模型，60ms 首帧延迟</h4>
+      <p>中国创业公司云上曲率于7月1日开源 ViiTorVoice-NAR（Apache 2.0），这是首个商业可用的逐词音频编辑 TTS 模型。采用非自回归架构，可在不重新生成整个句子的情况下替换单个词，支持无参考文本的零样本声音克隆，首帧延迟 60ms。Seed-TTS 基准上英文 WER 1.32%、中文 WER 0.99%。GitHub 和 Hugging Face 均可获取。 <a href="https://www.techtimes.com/articles/319524/20260702/text-speech-ai-edits-single-words-mid-recording-viitorvoice-goes-open-source.htm" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>2026年7月语音AI综合指南：实时语音Agent、ASR、TTS全面对比</h4>
+      <p>BuildMVPfast 发布7月版语音AI综合指南，涵盖语音转文字、实时语音Agent、文本转语音三大类的基准测试和真实生产环境对比。Deepgram、ElevenLabs、Cartesia、OpenAI Realtime 等主流方案的最新评估结果。 <a href="https://www.buildmvpfast.com/articles/best-llms-2026-guide/voice-speech-ai" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>欧盟 AI 法案音频标注强制令即将生效：开源语音克隆面临合规挑战</h4>
+      <p>距离8月2日欧盟 AI 法案音频标注强制令生效仅剩31天，ViiTorVoice-NAR 等支持无参考文本语音克隆的开源模型面临合规挑战。该模型无内置技术同意机制，引发了关于 AI 音频安全的新一轮讨论。 <a href="https://www.techtimes.com/articles/319524/20260702/text-speech-ai-edits-single-words-mid-recording-viitorvoice-goes-open-source.htm" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>ICASSP 2026 论文列表更新：102篇语音识别论文 + 语音合成方向全覆盖</h4>
+      <p>语音论文速递博客更新 ICASSP 2026 全套论文索引，语音识别方向102篇、语音合成方向大量新论文。包括 LLM-Agent 后ASR纠错（9.0分）、Target-Speaker LLM-ASR（8.8分）等高分论文，展示了语音 AI 从传统信号处理全面转向 LLM 和大模型范式的趋势。 <a href="https://nanless.github.io/audio-paper-digest-blog/posts/icassp2026-task-078/" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-04') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

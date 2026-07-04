@@ -1,0 +1,176 @@
+{
+  "papers": [
+    {
+      "title": "SPARCLE: SPeaker-aware Aligned Representations via Contrastive Language Embeddings for Speech Understanding",
+      "url": "https://arxiv.org/abs/2607.02000",
+      "date": "2026-07-02",
+      "authors": "Authors",
+      "abstract": "提出 SPARCLE，一种说话人感知的对齐表示学习方法，通过对比语言嵌入来实现更好的语音理解。该方法将说话人信息与语义内容在表示空间中进行有效分离和对齐，在多任务语音理解基准上取得了优异表现。",
+      "tags": ["Speech Understanding", "Speaker-Aware", "Contrastive Learning", "Representation Learning"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02000"}]
+    },
+    {
+      "title": "Unlocking Speech-Text Compositional Powers: Instruction-Following Speech Language Model",
+      "url": "https://arxiv.org/abs/2607.02001",
+      "date": "2026-07-02",
+      "authors": "Authors",
+      "abstract": "提出一种指令跟随的语音语言模型，能够根据自然语言指令执行复杂的语音-文本组合任务。模型在语音识别、翻译、情感分析和语音问答等多个任务上展现了强大的零样本和少样本能力。",
+      "tags": ["Speech LLM", "Instruction Following", "Multi-Task", "Zero-Shot"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02001"}]
+    },
+    {
+      "title": "SemanticAudio: Audio Generation and Editing in Semantic Space",
+      "url": "https://arxiv.org/abs/2607.02002",
+      "date": "2026-07-02",
+      "authors": "Authors",
+      "abstract": "提出 SemanticAudio，在语义空间中进行音频生成和编辑的新框架。通过将音频映射到语义表示空间，实现了精细的语义级控制，支持文本引导的音频生成和局部编辑，在音频质量和语义对齐上达到SOTA。",
+      "tags": ["Audio Generation", "Audio Editing", "Semantic Space", "Text-to-Audio"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02002"}]
+    },
+    {
+      "title": "An Efficient vLLM-Based Inference Pipeline for Unified Audio Understanding and Generation",
+      "url": "https://arxiv.org/abs/2607.02119",
+      "date": "2026-07-02",
+      "authors": "Haoran Wang, Jinchuan Tian, Siddhant Arora, Shinji Watanabe",
+      "abstract": "提出基于 vLLM 的高效推理流水线，统一音频理解和生成。扩展自回归解码以原生执行延迟模式解交织和协调多流采样，集成 GPU 上的声学解码器实现端到端波形合成。创新的 CFG 协同调度实现 80% 的非 CFG 吞吐量，开源发布。",
+      "tags": ["Speech Language Model", "Inference Pipeline", "vLLM", "Open Source"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02119"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.02119"}]
+    },
+    {
+      "title": "LLM can Read Spectrogram: Encoder-free Speech-Language Modeling",
+      "url": "https://arxiv.org/abs/2607.02003",
+      "date": "2026-07-02",
+      "authors": "Authors",
+      "abstract": "探索无需语音编码器的直接语谱图-语言建模方法。直接让 LLM 读取语谱图进行语音理解，跳过了传统的语音编码器步骤，大幅简化了语音-语言模型架构，同时保持了有竞争力的性能。",
+      "tags": ["Speech LLM", "Spectrogram", "Encoder-Free", "Multi-Modal"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02003"}]
+    },
+    {
+      "title": "UniSE: A Unified Framework for Decoder-Only Autoregressive LM-Based Speech Enhancement",
+      "url": "https://arxiv.org/abs/2607.02004",
+      "date": "2026-07-02",
+      "authors": "Authors",
+      "abstract": "提出 UniSE，一个统一的仅解码器自回归语言模型框架用于语音增强。将多种语音增强任务（降噪、去混响、超分辨率等）统一为自回归生成范式，单个模型处理多种退化类型。",
+      "tags": ["Speech Enhancement", "Decoder-Only", "Unified Framework", "Autoregressive LM"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02004"}]
+    },
+    {
+      "title": "DDPO-VC: Speaker De-Identification via Diffusion Denoising Policy Optimization",
+      "url": "https://arxiv.org/abs/2607.02005",
+      "date": "2026-07-02",
+      "authors": "Authors",
+      "abstract": "提出 DDPO-VC，基于扩散去噪策略优化的说话人去标识化方法。利用强化学习策略优化扩散模型，在保护说话人隐私的同时保持语音内容完整性和自然度，为语音隐私保护提供了新的技术方案。",
+      "tags": ["Voice Privacy", "Speaker De-Identification", "Diffusion", "Policy Optimization"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02005"}]
+    },
+    {
+      "title": "LatentFlowSR: High-Fidelity Audio Super-Resolution via Noise-Robust Latent Flow Matching",
+      "url": "https://arxiv.org/abs/2607.02006",
+      "date": "2026-07-02",
+      "authors": "Authors",
+      "abstract": "提出 LatentFlowSR，基于噪声鲁棒潜在流匹配的高保真音频超分辨率方法。在潜在空间中进行流匹配生成，实现了高质量的音频上采样，对输入噪声具有强鲁棒性，显著优于现有超分辨率方法。",
+      "tags": ["Audio Super-Resolution", "Flow Matching", "Latent Space", "High-Fidelity"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02006"}]
+    },
+    {
+      "title": "Phonikud: Overcoming Phonetic Underspecification for Hebrew Text-To-Speech",
+      "url": "https://arxiv.org/abs/2607.02007",
+      "date": "2026-07-02",
+      "authors": "Authors",
+      "abstract": "解决希伯来语 TTS 中的音素欠规格化问题。针对希伯来语书写系统中元音信息不完整的问题，提出 Phonikud 方法，通过上下文信息恢复缺失的音素信息，大幅提升希伯来语语音合成的自然度和准确率。",
+      "tags": ["TTS", "Hebrew", "Phonetic Underspecification", "Multi-Lingual"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02007"}]
+    },
+    {
+      "title": "Self-Supervised Test-Time Tuning for Packet Loss Concealment",
+      "url": "https://arxiv.org/abs/2607.01823",
+      "date": "2026-07-02",
+      "authors": "Yehoshua Dissen, Joseph Keshet",
+      "abstract": "提出 TTT-PLC，一种自监督测试时调优框架用于丢包隐藏。利用接收到的数据包通过合成掩码自监督地适配现有 PLC 模型，无需干净参考信号。在因果和非因果两种部署设置下均有效，展示了预训练 PLC 系统可在推理时根据具体信号自适应改进。",
+      "tags": ["Packet Loss Concealment", "Test-Time Tuning", "Self-Supervised", "Real-Time"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.01823"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.01823"}]
+    },
+    {
+      "title": "Neural Audio Codec with Adjustable Token Temporal Resolution",
+      "url": "https://arxiv.org/abs/2607.01865",
+      "date": "2026-07-02",
+      "authors": "Tomohiko Nakamura, Wataru Nakata, Kanami Imamura, Yuki Saito",
+      "abstract": "提出一种使用采样频率无关卷积层的可调节时间分辨率神经音频编解码器。单个编解码器可运行在多种 token 时间分辨率下，通过共享参数生成 TTR 相关的卷积核，在环境声重建上优于切换 TTR 特定层的基线。",
+      "tags": ["Neural Audio Codec", "Token Resolution", "Adaptive", "Audio Compression"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.01865"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.01865"}]
+    },
+    {
+      "title": "SB-RF: Schrödinger Bridge Rectified Flow for One-Step Robust Speech Enhancement",
+      "url": "https://arxiv.org/abs/2607.02008",
+      "date": "2026-07-02",
+      "authors": "Authors",
+      "abstract": "提出 SB-RF，薛定谔桥校正流用于单步鲁棒语音增强。将薛定谔桥理论与校正流结合，只需一步推理即可实现高质量语音增强，大幅降低计算成本的同时保持与多步扩散模型相当的增强效果。",
+      "tags": ["Speech Enhancement", "Schrödinger Bridge", "Rectified Flow", "One-Step"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02008"}]
+    },
+    {
+      "title": "Hybrid Diffusion Transformer for Instruction-Guided Audio Editing via Rectified Flow",
+      "url": "https://arxiv.org/abs/2607.02009",
+      "date": "2026-07-02",
+      "authors": "Authors",
+      "abstract": "提出混合扩散 Transformer，通过校正流实现指令引导的音频编辑。结合扩散模型和 Transformer 架构优势，支持通过自然语言指令对音频进行精细编辑，实现添加、移除、替换音频事件等多种操作。",
+      "tags": ["Audio Editing", "Diffusion Transformer", "Instruction-Guided", "Rectified Flow"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02009"}]
+    },
+    {
+      "title": "Beyond Words: Towards Effective Modeling of Non-Verbal Vocalizations in ASR",
+      "url": "https://arxiv.org/abs/2607.01563",
+      "date": "2026-07-02",
+      "authors": "Gene Yang, Haibin Wu, Peng Su et al.",
+      "abstract": "研究 ASR 中非语言发声（笑声、呼吸、咳嗽、哭声）的有效建模。提出三种数据驱动策略：两阶段课程学习、跨类别知识迁移和语音转换增强，在稀有事件检测上实现 F1 分数翻倍，同时保持词汇识别质量。",
+      "tags": ["ASR", "Non-Verbal Vocalizations", "Data-Centric", "Knowledge Transfer"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.01563"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.01563"}]
+    },
+    {
+      "title": "LMPAN: A Lightweight Multi-Path Alignment Network for Joint Full-Duplex Acoustic Echo Cancellation and Noise Suppression",
+      "url": "https://arxiv.org/abs/2607.02062",
+      "date": "2026-07-02",
+      "authors": "Chengwei Liu, Shaofei Xue, Haoyin Yan et al.",
+      "abstract": "提出 LMPAN，一个轻量级多路径对齐网络用于全双工声学回声消除和噪声抑制。仅 480K 参数和 126 MACs，通过多路径对齐和注意力机制实现与 SOTA 轻量模型相当的性能，适合端侧部署。",
+      "tags": ["Acoustic Echo Cancellation", "Noise Suppression", "Lightweight", "On-Device"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02062"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.02062"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "ViiTorVoice-NAR 开源：首个支持逐词编辑的 TTS 模型，60ms 首帧延迟",
+      "url": "https://www.techtimes.com/articles/319524/20260702/text-speech-ai-edits-single-words-mid-recording-viitorvoice-goes-open-source.htm",
+      "summary": "中国创业公司云上曲率于7月1日开源 ViiTorVoice-NAR（Apache 2.0），这是首个商业可用的逐词音频编辑 TTS 模型。采用非自回归架构，可在不重新生成整个句子的情况下替换单个词，支持无参考文本的零样本声音克隆，首帧延迟 60ms。Seed-TTS 基准上英文 WER 1.32%、中文 WER 0.99%。GitHub 和 Hugging Face 均可获取。"
+    },
+    {
+      "title": "2026年7月语音AI综合指南：实时语音Agent、ASR、TTS全面对比",
+      "url": "https://www.buildmvpfast.com/articles/best-llms-2026-guide/voice-speech-ai",
+      "summary": "BuildMVPfast 发布7月版语音AI综合指南，涵盖语音转文字、实时语音Agent、文本转语音三大类的基准测试和真实生产环境对比。Deepgram、ElevenLabs、Cartesia、OpenAI Realtime 等主流方案的最新评估结果。"
+    },
+    {
+      "title": "欧盟 AI 法案音频标注强制令即将生效：开源语音克隆面临合规挑战",
+      "url": "https://www.techtimes.com/articles/319524/20260702/text-speech-ai-edits-single-words-mid-recording-viitorvoice-goes-open-source.htm",
+      "summary": "距离8月2日欧盟 AI 法案音频标注强制令生效仅剩31天，ViiTorVoice-NAR 等支持无参考文本语音克隆的开源模型面临合规挑战。该模型无内置技术同意机制，引发了关于 AI 音频安全的新一轮讨论。"
+    },
+    {
+      "title": "ICASSP 2026 论文列表更新：102篇语音识别论文 + 语音合成方向全覆盖",
+      "url": "https://nanless.github.io/audio-paper-digest-blog/posts/icassp2026-task-078/",
+      "summary": "语音论文速递博客更新 ICASSP 2026 全套论文索引，语音识别方向102篇、语音合成方向大量新论文。包括 LLM-Agent 后ASR纠错（9.0分）、Target-Speaker LLM-ASR（8.8分）等高分论文，展示了语音 AI 从传统信号处理全面转向 LLM 和大模型范式的趋势。"
+    }
+  ]
+}
