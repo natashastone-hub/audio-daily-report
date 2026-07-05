@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-05</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-05</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月5日 (周日) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">9</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.02214" target="_blank">SpeechCombine: Instruction-Following Speech Language Models without Instruction Tuning</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Congrui Du, Yang Zhang, Kaizhi Qian, Shiyu Chang</span></div>
+      <div class="abstract">提出 SpeechCombine，一个无需指令微调的指令跟随语音语言模型。从文本 LLM 基座开始，仅用 30k 小时语音数据做一轮连续预训练获取语音适配模型，然后直接将其权重与文本 LLM 的指令微调版和基座版之间的权重差合并。结果表明这种简单策略不仅保留了原始文本 LLM 的知识和能力，还将其有效迁移到语音领域，为 SLM 训练指明了一条不依赖大规模语音数据的新方向。</div>
+      <div class="tags"><span class="tag">Speech Language Model</span><span class="tag">Instruction Following</span><span class="tag">Efficient Training</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.02214" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.02214" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.02119" target="_blank">An Efficient vLLM-Based Inference Pipeline for Unified Audio Understanding and Generation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Haoran Wang, Jinchuan Tian, Siddhant Arora, Shinji Watanabe</span></div>
+      <div class="abstract">提出基于 vLLM 的统一语音理解与生成推理流水线。扩展自回归解码以原生执行延迟模式解交织和协调的多流采样，集成 GPU 内声学解码器进行端到端波形合成。关键突破：通过在同一连续批次中共同调度配对的条件和无条件请求，Classifier-Free Guidance (CFG) 实现维持非 CFG 吞吐量 80% 的性能，克服了 CFG 使吞吐量减半的普遍认知。框架已开源。</div>
+      <div class="tags"><span class="tag">Speech LM</span><span class="tag">Inference Pipeline</span><span class="tag">vLLM</span><span class="tag">CFG</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.02119" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.02119" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.02343" target="_blank">SelectTSL: Prompt-Guided Selective Target Sound Localization in Complex Scenarios</a></h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Ziyang Jiang, Yu Chen, Zexu Pan, Xinyuan Qian, Bowen Xing, Ivor W. Tsang, Xu-Cheng Yin, Haizhou Li</span></div>
+      <div class="abstract">提出 SelectTSL，一个端到端的提示引导选择性目标声音定位架构。设计了目标感知选择性定位策略，通过 Prompt-Guided Selective Attention Module (PGSA) 生成提示信息嵌入，引导通道间相位差增强器精炼原始相位线索，与目标幅度融合以联合估计到达方向和目标源数量。在合成数据和真实世界录音上的大量实验表明，该方法在选择性声源定位上持续优于基线。</div>
+      <div class="tags"><span class="tag">Sound Localization</span><span class="tag">Target Sound Extraction</span><span class="tag">Prompt-Guided</span><span class="tag">Multimodal</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.02343" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.02343" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.02062" target="_blank">LMPAN: A Lightweight Multi-Path Alignment Network for Joint Full-Duplex Acoustic Echo Cancellation and Noise Suppression</a></h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Chengwei Liu, Shaofei Xue, Haoyin Yan, Xiaotao Liang, Zheng Xue</span></div>
+      <div class="abstract">提出轻量级多路径对齐网络 LMPAN，用于全双工对话系统中的设备端联合声学回声消除和噪声抑制。三大创新：(1) 多路径对齐阶段修正时间与能量失配；(2) 注意力机制动态融合线性 AEC 输出和麦克风特征；(3) 后滤波模块支持下游任务（ASR、VAD）。仅 480K 参数和 126 MACs，性能媲美 SOTA 轻量模型 DeepVQE-S。已被 Interspeech 2026 接收。</div>
+      <div class="tags"><span class="tag">AEC</span><span class="tag">Noise Suppression</span><span class="tag">On-Device</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.02062" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.02062" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.02296" target="_blank">Spatial Speech Perception Systems: A Survey of Sound Source Localization, Directional Enhancement, and Speech Recognition</a></h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Pengyuan Shao, Dimitrios Kanoulas</span></div>
+      <div class="abstract">综述空间语音感知系统，涵盖声源定位、定向增强和语音识别，分析其在机器人听觉、助听器、智能音箱和远程会议中的角色。回顾了经典信号处理方法和最近的基于学习的方法，讨论了噪声和混响鲁棒性、多人场景操作、实时约束和计算效率，并指出未来的开放挑战。27 页综述论文。</div>
+      <div class="tags"><span class="tag">Spatial Speech</span><span class="tag">Survey</span><span class="tag">SSL</span><span class="tag">DSE</span><span class="tag">ASR</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.02296" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.02296" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.02129" target="_blank">Speaker Head Orientation Estimation with a Single Microphone Array Using Phase Spectrogram Features</a></h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Balint Turi, Archontis Politis, Parthasaarathy Sudarsanam, Tuomas Virtanen</span></div>
+      <div class="abstract">提出利用单个麦克风阵列的相位语谱图特征估计说话人头部方向的新方法。训练了一个结合卷积、循环和自注意力层的深度神经网络。在模拟数据和真实录音上均取得 SOTA 精度，个性化实验进一步将平均角度误差降至 11.3 度。已被 EUSIPCO 2026 接收。</div>
+      <div class="tags"><span class="tag">Speaker Tracking</span><span class="tag">Microphone Array</span><span class="tag">Phase Features</span><span class="tag">EUSIPCO 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.02129" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.02129" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.02254" target="_blank">Cross Domain Few-Shot Class-Incremental Audio Classification Via Adversarial Contrastive Learning</a></h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Yongjie Si, Yanxiong Li, Sen Huang, Beibei Liu</span></div>
+      <div class="abstract">探索跨域少样本类增量音频分类问题。提出对抗对比训练策略，使模型能有效分类未见域中不同类的样本。在六对跨域数据集上实验，平均准确率超越 SOTA。代码已开源，已被 Interspeech 2026 接收。</div>
+      <div class="tags"><span class="tag">Audio Classification</span><span class="tag">Few-Shot</span><span class="tag">Cross-Domain</span><span class="tag">Interspeech 2026</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.02254" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.02254" target="_blank">🔗 PDF</a> <a href="https://github.com/YongjieSi/ACL" target="_blank">🔗 Code</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.02473" target="_blank">Audio-Based Understanding of Audiobook Narration Appeal</a></h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Shahar Elisha, Mariano Beguerisse-Díaz, Emmanouil Benetos</span></div>
+      <div class="abstract">首个系统计算研究，探索有声书旁白品质如何塑造听众吸引力。从 LibriVox 中提取声学特征，分析其与消费数据（浏览量）的关系及与流派和书名的交互。发现仅声学信息就与吸引力有稳健关联。已被 Interspeech 2026 接收。</div>
+      <div class="tags"><span class="tag">Audiobook</span><span class="tag">Narration Quality</span><span class="tag">Acoustic Features</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.02473" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.02473" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.01974" target="_blank">A Multi-Branch Hierarchy-Aware Framework for Heterogeneous Audio Classification</a></h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Beile Ning, Jiayi Yu, Zitong Wang</span></div>
+      <div class="abstract">DCASE 2026 Challenge Task 1 的技术报告。基于 CLAP 音频-文本表示的异构音频分类系统，通过三条策略改进：扩大训练集、特征特定分支增强声学建模、层次感知分类器和 KNN 后处理。最佳单系统在 BSD10k-v1.2 上实现 Hier.F1 80.84%。</div>
+      <div class="tags"><span class="tag">Audio Classification</span><span class="tag">DCASE 2026</span><span class="tag">CLAP</span><span class="tag">Hierarchical</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.01974" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.01974" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>xAI 发布 Grok Voice Agent Builder：零代码构建企业级语音 Agent</h4>
+      <p>7月1日 xAI 推出 Voice Agent Builder 测试版，一个无代码平台，允许企业和开发者在两分钟内构建基于 Grok Voice 的生产级语音 Agent。支持 80+ 种语音、知识库集成、工具调用和 MCP 连接器，定价 $0.05/分钟，与自建 ASR+TTS+LLM 流水线方案相比成本大幅降低。 <a href="https://blockchain.news/news/xai-voice-agent-builder-launch" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>HuggingFace × Cerebras 开源端到端语音对话流水线（Gemma 4 + Parakeet）</h4>
+      <p>HuggingFace 与 Cerebras 于 7 月 1 日联合开源完整语音对话流水线：串联 NVIDIA Parakeet（语音识别）+ Google DeepMind Gemma 4 31B（对话理解和推理）+ 流式 TTS，全部在 Cerebras 晶圆级硬件上实时运行。这是首次将 Gemma 4 级推理能力引入实时语音 AI 的端到端开源方案。 <a href="https://zglg.work/en/ai/news/2026-07-01-hugging-face-and-cerebras-bring-gemma-4-to-real-time-voice-ai" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>2026 年 7 月最佳 Voice AI 工具对比：ElevenLabs Scribe v2、Deepgram Nova-3、GPT-Realtime-2 等</h4>
+      <p>7 月最新 Voice AI 工具横评出炉。ElevenLabs Scribe v2 Realtime 在实时转写领域表现突出，Deepgram Nova-3 在准确率上持续领先，OpenAI GPT-Realtime-2 以 GPT-5 级推理能力成为最强语音推理模型。行业正从流水线架构向端到端语音模型加速迁移。 <a href="https://www.buildmvpfast.com/articles/best-llms-2026-guide/voice-speech-ai" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>ICASSP 2026 语音合成方向论文列表发布：低延迟流式 TTS 成为热点</h4>
+      <p>ICASSP 2026 语音合成方向论文列表整理发布。流式 TTS 的低初始延迟问题和多阶段语义到声学生成成为今年最大热点，大量论文聚焦实时 TTS 的延迟优化和可控合成。 <a href="https://nanless.github.io/audio-paper-digest-blog/posts/icassp2026-task-061/" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-05') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
