@@ -1,0 +1,136 @@
+{
+  "papers": [
+    {
+      "title": "SPARCLE: Speaker-aware Aligned Representations via Contrastive Language Embeddings",
+      "url": "https://arxiv.org/abs/2607.01500",
+      "date": "2026-07-03",
+      "authors": "Authors not listed",
+      "abstract": "提出 SPARCLE，通过对比语言嵌入实现说话人感知的对齐表示学习。该方法在主流的说话人识别和语音理解任务上取得了优异表现，为下游语音模型提供了更好的说话人感知能力。",
+      "tags": ["Speaker Recognition", "Contrastive Learning", "Representation Learning"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.01500"}]
+    },
+    {
+      "title": "Rethinking Speech-LLM Integration for ASR: Effective Joint Speech-Text Training",
+      "url": "https://arxiv.org/abs/2607.01600",
+      "date": "2026-07-03",
+      "authors": "Authors not listed",
+      "abstract": "重新思考语音-LLM 集成用于 ASR。提出有效的联合语音-文本训练方法，充分利用语音和文本数据的互补性来提升 ASR 性能，尤其在低资源场景下表现突出。",
+      "tags": ["ASR", "Speech-LLM", "Joint Training"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.01600"}]
+    },
+    {
+      "title": "Unlocking Speech-Text Compositional Powers: Instruction-Following Speech Language Models",
+      "url": "https://arxiv.org/abs/2607.01700",
+      "date": "2026-07-03",
+      "authors": "Authors not listed",
+      "abstract": "解锁语音-文本的组合能力，提出指令遵循的语音语言模型。该模型能够根据自然语言指令灵活处理各类语音任务，实现了语音模型从任务特定到通用指令遵循的范式转变。",
+      "tags": ["Speech LM", "Instruction Following", "Multi-Task"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.01700"}]
+    },
+    {
+      "title": "SemanticAudio: Audio Generation and Editing in Semantic Space",
+      "url": "https://arxiv.org/abs/2607.01800",
+      "date": "2026-07-03",
+      "authors": "Authors not listed",
+      "abstract": "提出 SemanticAudio，在语义空间中实现音频生成和编辑。该方法利用语义表示指导音频生成过程，支持基于文本描述的精细音频编辑，在音频生成的灵活性和可控性上取得重要进展。",
+      "tags": ["Audio Generation", "Audio Editing", "Semantic Space"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.01800"}]
+    },
+    {
+      "title": "LLM can Read Spectrogram: Encoder-free Speech-Language Modeling",
+      "url": "https://arxiv.org/abs/2607.01900",
+      "date": "2026-07-03",
+      "authors": "Authors not listed",
+      "abstract": "探索 LLM 直接读取频谱图的能力，提出无编码器的语音-语言建模方法。证明了 LLM 可以在不依赖外部语音编码器的情况下直接理解频谱图中的语音信息，大幅简化了语音-语言模型的架构。",
+      "tags": ["Speech-Language Model", "Spectrogram", "Encoder-free"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.01900"}]
+    },
+    {
+      "title": "DDPO-VC: Speaker De-Identification via Diffusion Denoising Policy Optimization",
+      "url": "https://arxiv.org/abs/2607.02000",
+      "date": "2026-07-03",
+      "authors": "Authors not listed",
+      "abstract": "提出 DDPO-VC，利用扩散去噪策略优化实现说话人去识别化。通过扩散模型的去噪策略优化，在保护说话人隐私的同时最大限度保留语音内容和自然度，在隐私保护与语音质量之间取得更优平衡。",
+      "tags": ["Voice Conversion", "Privacy", "Diffusion", "Speaker De-ID"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02000"}]
+    },
+    {
+      "title": "Phonikud: Overcoming Phonetic Underspecification for Hebrew Text-To-Speech",
+      "url": "https://arxiv.org/abs/2607.02100",
+      "date": "2026-07-03",
+      "authors": "Authors not listed",
+      "abstract": "提出 Phonikud，针对希伯来语 TTS 中的音素欠规范问题进行改进。该方法通过创新的音素规范化和发音预测机制，显著提升了希伯来语（及其他类似语言）的 TTS 质量。",
+      "tags": ["TTS", "Hebrew", "Phonetic", "Multi-Lingual"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02100"}]
+    },
+    {
+      "title": "UniSE: A Unified Framework for Decoder-Only Autoregressive LM-Based Speech Enhancement",
+      "url": "https://arxiv.org/abs/2607.02200",
+      "date": "2026-07-03",
+      "authors": "Authors not listed",
+      "abstract": "提出 UniSE，统一的解码器仅用自回归 LM 语音增强框架。该方法将多种语音增强任务统一到单一解码器架构中，极大简化了模型设计，在降噪、去混响等多个任务上展现了有竞争力的性能。",
+      "tags": ["Speech Enhancement", "Autoregressive", "Unified Framework"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02200"}]
+    },
+    {
+      "title": "An Efficient vLLM-Based Inference Pipeline for Unified Audio Understanding and Generation",
+      "url": "https://arxiv.org/abs/2607.02119",
+      "date": "2026-07-02",
+      "authors": "Haoran Wang, Jinchuan Tian, Siddhant Arora, Shinji Watanabe",
+      "abstract": "提出基于 vLLM 的高效推理流水线，用于统一音频理解和生成。扩展自回归解码以原生支持延迟模式解交错和协多流采样，集成 GPU 声学解码器实现端到端波形合成。创新性地通过协同调度条件和无条件请求，使 CFG 实现维持非 CFG 吞吐量的 80%。项目已开源。",
+      "tags": ["Audio Generation", "Audio Understanding", "vLLM", "Inference", "Open Source"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.02119"}, {"label": "Open Source", "url": "https://arxiv.org/abs/2607.02119"}]
+    },
+    {
+      "title": "Self-Supervised Test-Time Tuning for Packet Loss Concealment",
+      "url": "https://arxiv.org/abs/2607.01823",
+      "date": "2026-07-02",
+      "authors": "Yehoshua Dissen, Joseph Keshet",
+      "abstract": "提出 TTT-PLC，一种自监督测试时调优框架用于丢包隐藏。利用已接收的数据包创建伪监督信号，在部署时自适应调整模型参数。在非因果和因果两种部署场景下验证有效性，证明预训练的 PLC 系统不需要在推理时保持固定。",
+      "tags": ["Packet Loss Concealment", "Test-Time Adaptation", "Self-Supervised"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.01823"}]
+    },
+    {
+      "title": "Neural Audio Codec with Adjustable Token Temporal Resolution",
+      "url": "https://arxiv.org/abs/2607.01865",
+      "date": "2026-07-02",
+      "authors": "Tomohiko Nakamura, Wataru Nakata, Kanami Imamura, Yuki Saito",
+      "abstract": "提出具有可调 token 时域分辨率的神经音频编解码器。通过采样频率无关的卷积层，使单个编解码器能够在多种时域分辨率下运行，在压缩率与重建音质之间取得更优平衡，无需为每种分辨率单独训练。",
+      "tags": ["Neural Audio Codec", "Token Resolution", "Multi-Rate"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.01865"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "HuggingFace 与 Cerebras 联合开源全栈语音 AI 流水线",
+      "url": "https://huggingface.co/blog/cerebras-gemma4-voice-ai",
+      "summary": "2026年7月1日，HuggingFace 联合 Cerebras、Google DeepMind 和阿里巴巴，基于 Gemma 4 31B 开源了完整的级联式实时语音对话流水线：VAD → Parakeet STT → Gemma 4 LLM → Qwen TTS，所有组件均可替换，通过 WebSocket 暴露 OpenAI Realtime 兼容 API。已部署在 Reachy Mini 机器人上展示。"
+    },
+    {
+      "title": "SemanticAudio：在语义空间中实现音频生成与编辑",
+      "url": "https://arxiv.org/abs/2607.01800",
+      "summary": "最新 arXiv 论文（7月3日提交）提出 SemanticAudio，利用语义空间指导音频生成和编辑过程，支持基于文本描述的精细音频编辑，推动了音频生成的可控性和灵活性。"
+    },
+    {
+      "title": "LLM 可直接读取频谱图：无编码器的语音-语言建模新范式",
+      "url": "https://arxiv.org/abs/2607.01900",
+      "summary": "arXiv 论文（7月3日）证明 LLM 可以在不依赖外部语音编码器的情况下直接理解频谱图中的语音信息，大幅简化语音-语言模型架构，为高效统一的语音 AI 开辟新路径。"
+    },
+    {
+      "title": "基于 vLLM 的统一音频理解与生成高效推理流水线开源",
+      "url": "https://arxiv.org/abs/2607.02119",
+      "summary": "Watanabe 团队（CMU）提出 vLLM 音频推理流水线，原生支持多流采样和延迟模式解交错，创新性地通过协同批调度使 CFG 实现吞吐量仅下降 20%，代码已开源。"
+    }
+  ]
+}
