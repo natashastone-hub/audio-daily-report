@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-07</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-07</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月7日 (周二) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">10</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">5</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.00363" target="_blank">Enhancing Flow Matching with A Unified Guidance Framework for Efficient and Robust Speech Synthesis</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-01</span><span>👥 Zuda Yu, Qianhui Xu, Ting Chen, Junhui Zhang, Tao Fu, Hongjiang Yu, Qiangqing Wang, Yang Song</span></div>
+      <div class="abstract">流匹配(Flow Matching)已成为语音生成的强大范式，但仍受高推理延迟和音色泄漏的限制。本文提出统一引导框架，通过两个互补策略提升生成效率和鲁棒性：Data-guidance通过异构数据增强解耦语言内容与声学残差；Model-guidance融合轨迹修正与新颖的内在引导目标，将条件知识蒸馏到网络权重中，消除无分类器引导(CFG)开销。实验表明该框架推理加速近3倍，说话人相似度有效提升。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Flow Matching</span><span class="tag">Speech Synthesis</span><span class="tag">INTERSPEECH 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.00363" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.00363" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.00387" target="_blank">From Objectives to Applications: Aligning Architectural Biases in Audio Self-Supervised Learning</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-01</span><span>👥 Kele Xu, Yulu Fang, Boda Zhou, Yulin Sun, Qisheng Xu, Qiya Song, Jin Zhang, Cheng Yang, Huaimin Wang</span></div>
+      <div class="abstract">系统综述音频自监督学习(SSL)中预训练目标、架构归纳偏置与下游应用之间的对齐关系。围绕辅助任务、对比学习、生成重建、离散token预测和多模态对齐五种范式展开讨论，分析CNN、RNN/SSM、Transformer及混合架构的适应性。覆盖语音处理、环境声音分析、音乐信息检索、医疗/生物声学和多模态音频理解等下游任务，附开源仓库。</div>
+      <div class="tags"><span class="tag">Audio SSL</span><span class="tag">Survey</span><span class="tag">Speech Processing</span><span class="tag">Representation Learning</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.00387" target="_blank">🔗 arXiv</a> <a href="https://github.com/colaudiolab/Awesome-Self-Supervised-Audio-Learning" target="_blank">🔗 GitHub</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.03418" target="_blank">DETECT-3B-Omni is Agnostic of Content and Demographics</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-03</span><span>👥 Nicolas M. Müller, Aditya Tirumala Bukkapatnam, Dominik Schnieders, Zohaib Ahmed</span></div>
+      <div class="abstract">对Resemble AI的DETECT-3B-Omni深度伪造音频检测器进行大规模语义独立性研究。利用来自8种AI声音克隆系统、30个州的不同美国英语说话人的10,240个样本，等价性测试显示检测准确率在不同内容(良性/恶意)、性别、年龄和地区间的差异不超过2个百分点(99%置信度)。</div>
+      <div class="tags"><span class="tag">Deepfake Detection</span><span class="tag">Audio Security</span><span class="tag">Voice Cloning</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.03418" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.03418" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.00247" target="_blank">Adaptive Perturbation Selection for Contrastive Audio Decoding</a></h4>
+      <div class="meta"><span>📅 2026-06-30</span><span>👥 Authors</span></div>
+      <div class="abstract">大型音频-语言模型(LALM)经常因语言先验覆盖声学证据而产生幻觉。本文提出自适应扰动选择对比解码方法，通过智能选择扰动类型来抑制语言先验，增强模型对声学信号的真实感知，提升音频理解和描述任务的可靠性。</div>
+      <div class="tags"><span class="tag">Audio Understanding</span><span class="tag">Contrastive Decoding</span><span class="tag">Audio-Language Model</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.00247" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.00247" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.00418" target="_blank">Speech Playground: An Interactive Tool for Speech Analysis and Comparison</a></h4>
+      <div class="meta"><span>📅 2026-07-01</span><span>👥 Stephen McIntosh, Daisuke Saito, Nobuaki Minematsu</span></div>
+      <div class="abstract">Speech Playground 是一个交互式语音可视化和对比分析工具。结合Python后端与Web前端，支持连续、离散和可变长度表示等多种特征类型，支持TextGrid和强制对齐，用于语音研究、表示验证和计算机辅助发音训练(CAPT)实验。</div>
+      <div class="tags"><span class="tag">Speech Analysis</span><span class="tag">Visualization</span><span class="tag">INTERSPEECH 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.00418" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.00418" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.00899" target="_blank">Positive-Incentive Noise Predictor for Adversarial Purification in Speaker Verification</a></h4>
+      <div class="meta"><span>📅 2026-07-01</span><span>👥 Yibo Bai, Sizhou Chen, Michele Panariello, Hao Ma, Xiao-Lei Zhang, Xuelong Li, Massimiliano Todisco, Nicholas Evans</span></div>
+      <div class="abstract">提出Positive-Incentive Noise Predictor (PnP)，首个显式引入正向激励噪声(π-noise)到对抗净化任务中的框架。PnP学习输入自适应的π-noise并与输入混合以提升下游ASV鲁棒性。在白盒、黑盒和自适应攻击下实现防御效果与推理效率的竞争平衡，实时因子低至0.014。代码与音频示例已开源。</div>
+      <div class="tags"><span class="tag">Speaker Verification</span><span class="tag">Adversarial Defense</span><span class="tag">Audio Security</span><span class="tag">IEEE TASLP</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.00899" target="_blank">🔗 arXiv</a> <a href="https://eurecom-asp.github.io/pnp/" target="_blank">🔗 Code</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.01834" target="_blank">RT-Tango: Real-Time Distributed Binaural Speech Enhancement for Low-Power Hearing Aid Devices</a></h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Z. Benslimane, P. Chouteau, M. Poreba, F. Auzanneau, M. Szczepanski, F. Chersi, R. Serizel</span></div>
+      <div class="abstract">RT-Tango，面向低功耗助听器设备的实时分布式双耳语音增强框架。采用两级分布式架构，结合感知驱动ERB特征压缩、轻量级分组循环掩码估计和时间稀疏化。通过非对称STFT解耦频谱分辨率和算法延迟，在8ms超低延迟下实现竞争性语音增强效果，大幅降低MAC操作。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Hearing Aid</span><span class="tag">Real-Time</span><span class="tag">INTERSPEECH 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.01834" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.01834" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.02129" target="_blank">Speaker Head Orientation Estimation with a Single Microphone Array Using Phase Spectrogram Features</a></h4>
+      <div class="meta"><span>📅 2026-07-02</span><span>👥 Balint Turi, Archontis Politis, Parthasaarathy Sudarsanam, Tuomas Virtanen</span></div>
+      <div class="abstract">提出利用单麦克风阵列的STFT相位分量估计说话人头部方向的新方法，结合CNN、RNN和自注意力层。在语音方向性模式生成的大规模数据集上训练并微调，在干净和噪声条件下均优于基线。个性化实验达到11.3度平均角度误差。</div>
+      <div class="tags"><span class="tag">Speaker Diarization</span><span class="tag">Array Processing</span><span class="tag">EUSIPCO 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.02129" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.02129" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.03207" target="_blank">S-DiverSe: Spanish Diverse Speech Dataset for Neurological ASR</a></h4>
+      <div class="meta"><span>📅 2026-07-03</span><span>👥 Fernando López, Fernando Ibañez, Ana Martínez, Iván Alonso, Pablo Gómez, Santosh Kesiraju, Jordi Luque</span></div>
+      <div class="abstract">S-DiverSe，3.2小时野外西班牙语语音语料库，来自22位患有渐冻症、帕金森病和中风的说话者，444段人工转录音频片段。为神经疾病影响下的西班牙语语音ASR评估和开发提供基准支持。研究发现启发式文本后处理比微调更鲁棒。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Dysarthric Speech</span><span class="tag">Dataset</span><span class="tag">INTERSPEECH 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.03207" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.03207" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.03150" target="_blank">An Intervention-Based Framework for Shortcut Diagnosis in Spoofing Countermeasures</a></h4>
+      <div class="meta"><span>📅 2026-07-03</span><span>👥 Authors</span></div>
+      <div class="abstract">提出基于干预的深度伪造音频检测快捷诊断框架，通过受控声学扰动(非语音结构、频谱内容和信号能量)量化模型对特定干预类型的敏感性。对XLS-R-300M+RawGAT-ST在ASVspoof数据集上的评估表明，非语音区间是主导性捷径(shortcut)，为提升检测泛化性提供系统诊断工具。</div>
+      <div class="tags"><span class="tag">Audio Deepfake</span><span class="tag">Spoofing Detection</span><span class="tag">Audio Security</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.03150" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.03150" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>OpenAI 发布 GPT-Realtime-2.1-mini：语音 API 迎来推理与工具调用能力</h4>
+      <p>2026年7月7日，OpenAI 在 API 中推出 GPT-Realtime-2.1-mini，为 Realtime mini 系列语音模型带来推理(reasoning)和工具调用(tool use)能力，价格与 GPT-Realtime-mini 持平。这标志着实时语音模型从「转写+合成」向真正智能语音交互迈出关键一步。 <a href="https://www.explainx.ai/blog/openai-gpt-realtime-2-1-mini-reasoning-tool-use-api-2026" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>HuggingFace 与 Cerebras 联合开源全链路语音到语音 AI Pipeline</h4>
+      <p>2026年7月1日，HuggingFace 与 Cerebras 开源完整语音到语音 AI 流水线，串联 NVIDIA Parakeet 语音识别、Google DeepMind Gemma 4 31B 语言模型和语音合成，实现端到端开源语音对话系统。为开源语音AI社区提供了可直接使用的全栈方案。 <a href="https://letsdatascience.com/news/hugging-face-and-cerebras-launch-open-speech-to-speech-ai-pi-44b79eab" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Google Gemini Omni Flash 公开预览：原生多模态(文本/视觉/视频/音频)模型上线</h4>
+      <p>2026年6月30日，Google 发布 Gemini Omni Flash 公开预览版(gemini-omni-flash-preview)，原生支持文本、视觉、视频和音频多模态输入，主打高速视频生成和对话视频体验。标志着 Google 在统一多模态音频-视频理解方面的重要布局。 <a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Resemble AI 更新 Chatterbox Multilingual V3：0.5B 参数多语言 TTS 模型</h4>
+      <p>Resemble AI 发布 Chatterbox Multilingual V3，保持 0.5B 参数规模的同时提升说话人相似度、减少幻觉并增强多语言能力。Chatterbox 家族目前包含 Turbo(最高效)、Multilingual V3(通用多语言)和原始版本，MIT 许可可商用。 <a href="https://github.com/resemble-ai/chatterbox" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>2026年7月语音 AI 工具生态盘点：ElevenLabs Scribe v2、Deepgram Nova-3、OpenAI GPT-Realtime-2 领衔</h4>
+      <p>2026年7月语音AI工具生态全面对比：ElevenLabs Scribe v2 Realtime(实时语音转文字)、Deepgram Nova-3(低延迟ASR)、OpenAI GPT-Realtime-2(端到端语音)、AssemblyAI、Google Chirp 3、Azure AI Speech、Cartesia等。实时语音Agent已成为新常态。 <a href="https://www.buildmvpfast.com/articles/best-llms-2026-guide/voice-speech-ai" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-07') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

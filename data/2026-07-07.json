@@ -1,0 +1,161 @@
+{
+  "papers": [
+    {
+      "title": "Enhancing Flow Matching with A Unified Guidance Framework for Efficient and Robust Speech Synthesis",
+      "url": "https://arxiv.org/abs/2607.00363",
+      "date": "2026-07-01",
+      "authors": "Zuda Yu, Qianhui Xu, Ting Chen, Junhui Zhang, Tao Fu, Hongjiang Yu, Qiangqing Wang, Yang Song",
+      "abstract": "流匹配(Flow Matching)已成为语音生成的强大范式，但仍受高推理延迟和音色泄漏的限制。本文提出统一引导框架，通过两个互补策略提升生成效率和鲁棒性：Data-guidance通过异构数据增强解耦语言内容与声学残差；Model-guidance融合轨迹修正与新颖的内在引导目标，将条件知识蒸馏到网络权重中，消除无分类器引导(CFG)开销。实验表明该框架推理加速近3倍，说话人相似度有效提升。",
+      "tags": ["TTS", "Flow Matching", "Speech Synthesis", "INTERSPEECH 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.00363"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.00363"}
+      ]
+    },
+    {
+      "title": "Adaptive Perturbation Selection for Contrastive Audio Decoding",
+      "url": "https://arxiv.org/abs/2607.00247",
+      "date": "2026-06-30",
+      "authors": "Authors",
+      "abstract": "大型音频-语言模型(LALM)经常因语言先验覆盖声学证据而产生幻觉。本文提出自适应扰动选择对比解码方法，通过智能选择扰动类型来抑制语言先验，增强模型对声学信号的真实感知，提升音频理解和描述任务的可靠性。",
+      "tags": ["Audio Understanding", "Contrastive Decoding", "Audio-Language Model"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.00247"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.00247"}
+      ]
+    },
+    {
+      "title": "Speech Playground: An Interactive Tool for Speech Analysis and Comparison",
+      "url": "https://arxiv.org/abs/2607.00418",
+      "date": "2026-07-01",
+      "authors": "Stephen McIntosh, Daisuke Saito, Nobuaki Minematsu",
+      "abstract": "Speech Playground 是一个交互式语音可视化和对比分析工具。结合Python后端与Web前端，支持连续、离散和可变长度表示等多种特征类型，支持TextGrid和强制对齐，用于语音研究、表示验证和计算机辅助发音训练(CAPT)实验。",
+      "tags": ["Speech Analysis", "Visualization", "INTERSPEECH 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.00418"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.00418"}
+      ]
+    },
+    {
+      "title": "From Objectives to Applications: Aligning Architectural Biases in Audio Self-Supervised Learning",
+      "url": "https://arxiv.org/abs/2607.00387",
+      "date": "2026-07-01",
+      "authors": "Kele Xu, Yulu Fang, Boda Zhou, Yulin Sun, Qisheng Xu, Qiya Song, Jin Zhang, Cheng Yang, Huaimin Wang",
+      "abstract": "系统综述音频自监督学习(SSL)中预训练目标、架构归纳偏置与下游应用之间的对齐关系。围绕辅助任务、对比学习、生成重建、离散token预测和多模态对齐五种范式展开讨论，分析CNN、RNN/SSM、Transformer及混合架构的适应性。覆盖语音处理、环境声音分析、音乐信息检索、医疗/生物声学和多模态音频理解等下游任务，附开源仓库。",
+      "tags": ["Audio SSL", "Survey", "Speech Processing", "Representation Learning"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.00387"},
+        {"label": "GitHub", "url": "https://github.com/colaudiolab/Awesome-Self-Supervised-Audio-Learning"}
+      ]
+    },
+    {
+      "title": "Positive-Incentive Noise Predictor for Adversarial Purification in Speaker Verification",
+      "url": "https://arxiv.org/abs/2607.00899",
+      "date": "2026-07-01",
+      "authors": "Yibo Bai, Sizhou Chen, Michele Panariello, Hao Ma, Xiao-Lei Zhang, Xuelong Li, Massimiliano Todisco, Nicholas Evans",
+      "abstract": "提出Positive-Incentive Noise Predictor (PnP)，首个显式引入正向激励噪声(π-noise)到对抗净化任务中的框架。PnP学习输入自适应的π-noise并与输入混合以提升下游ASV鲁棒性。在白盒、黑盒和自适应攻击下实现防御效果与推理效率的竞争平衡，实时因子低至0.014。代码与音频示例已开源。",
+      "tags": ["Speaker Verification", "Adversarial Defense", "Audio Security", "IEEE TASLP"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.00899"},
+        {"label": "Code", "url": "https://eurecom-asp.github.io/pnp/"}
+      ]
+    },
+    {
+      "title": "RT-Tango: Real-Time Distributed Binaural Speech Enhancement for Low-Power Hearing Aid Devices",
+      "url": "https://arxiv.org/abs/2607.01834",
+      "date": "2026-07-02",
+      "authors": "Z. Benslimane, P. Chouteau, M. Poreba, F. Auzanneau, M. Szczepanski, F. Chersi, R. Serizel",
+      "abstract": "RT-Tango，面向低功耗助听器设备的实时分布式双耳语音增强框架。采用两级分布式架构，结合感知驱动ERB特征压缩、轻量级分组循环掩码估计和时间稀疏化。通过非对称STFT解耦频谱分辨率和算法延迟，在8ms超低延迟下实现竞争性语音增强效果，大幅降低MAC操作。",
+      "tags": ["Speech Enhancement", "Hearing Aid", "Real-Time", "INTERSPEECH 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.01834"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.01834"}
+      ]
+    },
+    {
+      "title": "Speaker Head Orientation Estimation with a Single Microphone Array Using Phase Spectrogram Features",
+      "url": "https://arxiv.org/abs/2607.02129",
+      "date": "2026-07-02",
+      "authors": "Balint Turi, Archontis Politis, Parthasaarathy Sudarsanam, Tuomas Virtanen",
+      "abstract": "提出利用单麦克风阵列的STFT相位分量估计说话人头部方向的新方法，结合CNN、RNN和自注意力层。在语音方向性模式生成的大规模数据集上训练并微调，在干净和噪声条件下均优于基线。个性化实验达到11.3度平均角度误差。",
+      "tags": ["Speaker Diarization", "Array Processing", "EUSIPCO 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.02129"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.02129"}
+      ]
+    },
+    {
+      "title": "DETECT-3B-Omni is Agnostic of Content and Demographics",
+      "url": "https://arxiv.org/abs/2607.03418",
+      "date": "2026-07-03",
+      "authors": "Nicolas M. Müller, Aditya Tirumala Bukkapatnam, Dominik Schnieders, Zohaib Ahmed",
+      "abstract": "对Resemble AI的DETECT-3B-Omni深度伪造音频检测器进行大规模语义独立性研究。利用来自8种AI声音克隆系统、30个州的不同美国英语说话人的10,240个样本，等价性测试显示检测准确率在不同内容(良性/恶意)、性别、年龄和地区间的差异不超过2个百分点(99%置信度)。",
+      "tags": ["Deepfake Detection", "Audio Security", "Voice Cloning"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.03418"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.03418"}
+      ]
+    },
+    {
+      "title": "S-DiverSe: Spanish Diverse Speech Dataset for Neurological ASR",
+      "url": "https://arxiv.org/abs/2607.03207",
+      "date": "2026-07-03",
+      "authors": "Fernando López, Fernando Ibañez, Ana Martínez, Iván Alonso, Pablo Gómez, Santosh Kesiraju, Jordi Luque",
+      "abstract": "S-DiverSe，3.2小时野外西班牙语语音语料库，来自22位患有渐冻症、帕金森病和中风的说话者，444段人工转录音频片段。为神经疾病影响下的西班牙语语音ASR评估和开发提供基准支持。研究发现启发式文本后处理比微调更鲁棒。",
+      "tags": ["ASR", "Dysarthric Speech", "Dataset", "INTERSPEECH 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.03207"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.03207"}
+      ]
+    },
+    {
+      "title": "An Intervention-Based Framework for Shortcut Diagnosis in Spoofing Countermeasures",
+      "url": "https://arxiv.org/abs/2607.03150",
+      "date": "2026-07-03",
+      "authors": "Authors",
+      "abstract": "提出基于干预的深度伪造音频检测快捷诊断框架，通过受控声学扰动(非语音结构、频谱内容和信号能量)量化模型对特定干预类型的敏感性。对XLS-R-300M+RawGAT-ST在ASVspoof数据集上的评估表明，非语音区间是主导性捷径(shortcut)，为提升检测泛化性提供系统诊断工具。",
+      "tags": ["Audio Deepfake", "Spoofing Detection", "Audio Security"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.03150"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.03150"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "OpenAI 发布 GPT-Realtime-2.1-mini：语音 API 迎来推理与工具调用能力",
+      "url": "https://www.explainx.ai/blog/openai-gpt-realtime-2-1-mini-reasoning-tool-use-api-2026",
+      "summary": "2026年7月7日，OpenAI 在 API 中推出 GPT-Realtime-2.1-mini，为 Realtime mini 系列语音模型带来推理(reasoning)和工具调用(tool use)能力，价格与 GPT-Realtime-mini 持平。这标志着实时语音模型从「转写+合成」向真正智能语音交互迈出关键一步。"
+    },
+    {
+      "title": "HuggingFace 与 Cerebras 联合开源全链路语音到语音 AI Pipeline",
+      "url": "https://letsdatascience.com/news/hugging-face-and-cerebras-launch-open-speech-to-speech-ai-pi-44b79eab",
+      "summary": "2026年7月1日，HuggingFace 与 Cerebras 开源完整语音到语音 AI 流水线，串联 NVIDIA Parakeet 语音识别、Google DeepMind Gemma 4 31B 语言模型和语音合成，实现端到端开源语音对话系统。为开源语音AI社区提供了可直接使用的全栈方案。"
+    },
+    {
+      "title": "Google Gemini Omni Flash 公开预览：原生多模态(文本/视觉/视频/音频)模型上线",
+      "url": "https://ai.google.dev/gemini-api/docs/changelog",
+      "summary": "2026年6月30日，Google 发布 Gemini Omni Flash 公开预览版(gemini-omni-flash-preview)，原生支持文本、视觉、视频和音频多模态输入，主打高速视频生成和对话视频体验。标志着 Google 在统一多模态音频-视频理解方面的重要布局。"
+    },
+    {
+      "title": "Resemble AI 更新 Chatterbox Multilingual V3：0.5B 参数多语言 TTS 模型",
+      "url": "https://github.com/resemble-ai/chatterbox",
+      "summary": "Resemble AI 发布 Chatterbox Multilingual V3，保持 0.5B 参数规模的同时提升说话人相似度、减少幻觉并增强多语言能力。Chatterbox 家族目前包含 Turbo(最高效)、Multilingual V3(通用多语言)和原始版本，MIT 许可可商用。"
+    },
+    {
+      "title": "2026年7月语音 AI 工具生态盘点：ElevenLabs Scribe v2、Deepgram Nova-3、OpenAI GPT-Realtime-2 领衔",
+      "url": "https://www.buildmvpfast.com/articles/best-llms-2026-guide/voice-speech-ai",
+      "summary": "2026年7月语音AI工具生态全面对比：ElevenLabs Scribe v2 Realtime(实时语音转文字)、Deepgram Nova-3(低延迟ASR)、OpenAI GPT-Realtime-2(端到端语音)、AssemblyAI、Google Chirp 3、Azure AI Speech、Cartesia等。实时语音Agent已成为新常态。"
+    }
+  ]
+}
