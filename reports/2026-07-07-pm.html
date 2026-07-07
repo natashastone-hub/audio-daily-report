@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-07-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-07-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月7日 (周二) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">8</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.04140" target="_blank">DELTA-TTS: Adapting Autoregressive Model into Diffusion Language Model for Text-to-Speech</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-07</span><span>👥 Junwon Moon, Seungbeom Kim, Yejin Lee, Hoseong Ahn, Sewoong Park, Heeseung Kim, Kyuhong Shim</span></div>
+      <div class="abstract">自回归TTS模型逐token顺序生成导致推理慢且容易产生幻觉。DELTA-TTS提出轻量级LoRA适配框架，将预训练AR TTS转换为离散扩散语言模型(dLLM)，以置信度排序解码替代逐位生成。结合卷积模块注入局部声学上下文、1/t加权训练目标和时移推理策略。仅用585小时LibriTTS训练，在Seed-TTS test-en上达到1.75% WER，推理速度提升3.3倍，同时缓解了AR生成的幻觉问题。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Diffusion LM</span><span class="tag">LoRA</span><span class="tag">NVIDIA</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.04140" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.04140" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.05276" target="_blank">ProPS: Prompted Profile Synthesis for Natural Language-Conditioned Speaker Embedding Distributions</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-07</span><span>👥 Junhyeok Lee, Laureano Moro-Velazquez, Jesus Villalba Lopez, Najim Dehak</span></div>
+      <div class="abstract">ProPS提出自然语言驱动的说话人嵌入分布生成框架。用户输入如「一个三十多岁带印度口音的男性说话者」的自然语言描述，系统通过句嵌入和混合密度网络在x-vector空间中预测高斯混合分布。实验表明生成的嵌入能保留年龄、性别、口音和韵律特征，可直接用于TTS或声音转换的可控说话人合成。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Voice Cloning</span><span class="tag">Speaker Embedding</span><span class="tag">JHU</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.05276" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.05276" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.05051" target="_blank">LatentASR: Continuous Latent Test-Time Scaling for ASR</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-07</span><span>👥 Ho Lam Chung, Yiming Chen, Dau-Cheng Lyu, Hsiao-Tsung Hung, Hung-yi Lee</span></div>
+      <div class="abstract">LatentASR提出连续潜在测试时缩放方法，在冻结ASR主干(Qwen3-ASR-0.6B)上增加约4M可训练参数。通过Latent Adapter迭代精炼少数潜在前缀位置，Value Head预测是否需额外计算并提前终止。仅用500条话语训练，在FLEURS(-2.54% WER)和口音/语码混合场景(ASCEND -16.0% CER)均取得提升。动态halt机制可跳过约一半不需额外计算的话语。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Test-Time Scaling</span><span class="tag">Efficient</span><span class="tag">NTU</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.05051" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.05051" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.05058" target="_blank">Context-Aware ASR for Mandarin Technical Lectures</a></h4>
+      <div class="meta"><span>📅 2026-07-07</span><span>👥 Authors</span></div>
+      <div class="abstract">针对中英混杂技术讲座场景的上下文感知ASR。技术术语承载核心语义但字符占比低，传统CER指标掩盖识别失败。提出术语中心评估指标和两遍无参考解码方法：首遍获取假设词表，二遍利用自建术语表提示识别器。在5个ASR主干上，术语召回率从52.50%提升至60.13%(Breeze-ASR-25)且CER不升反降，混合外部术语表可达62.05%召回率和82.73%精度。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Code-Switching</span><span class="tag">Mandarin</span><span class="tag">Technical Speech</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.05058" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.05058" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.03985" target="_blank">NouveauVoice: Generating Novel Pseudo Speakers for Voice Anonymization</a></h4>
+      <div class="meta"><span>📅 2026-07-07</span><span>👥 Meiying Melissa Chen, Anastasia Kuznetsova, Zhenyu Wang, Zhiyao Duan</span></div>
+      <div class="abstract">NouveauVoice提出基于层次化深度VAE(NVAE)的伪说话人生成框架，作为FACodec和CosyVoice2的即插即用模块。通过可跟踪采样和ELBO目标合成高表现力伪说话人嵌入，显著增强身份方差。在VoicePrivacy Challenge数据集上实现SOTA隐私-效用权衡，解决了现有语音匿名化方法说话人身份多样性不足的核心问题。</div>
+      <div class="tags"><span class="tag">Voice Anonymization</span><span class="tag">Speaker Privacy</span><span class="tag">Voice Cloning</span><span class="tag">Rochester</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.03985" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.03985" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.04619" target="_blank">CARD: Cross-component Audio Representation Distillation for Encoder-Free Audio Captioning</a></h4>
+      <div class="meta"><span>📅 2026-07-07</span><span>👥 Ganesh Pavan Kartikeya Bharadwaj Kolluri, Yuchen Zhang, Michael Kampouridis, Ravi Shekhar</span></div>
+      <div class="abstract">CARD提出无编码器音频描述模型，推理时完全移除音频编码器。通过13.2M projector将知识蒸馏到LLM，关键创新在于跨组件知识路由：感知阶段特征传入projector、语义阶段特征传入LLM。相比仅LLM蒸馏方案，CIDEr-D提升+12.18(AudioCaps)，达到55.4(encoder-kept上限66.4)，证明知识放置位置与知识存在同等重要。</div>
+      <div class="tags"><span class="tag">Audio Captioning</span><span class="tag">Knowledge Distillation</span><span class="tag">Encoder-Free</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.04619" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.04619" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.04195" target="_blank">FocalSE: Noisy Environment Adaptation of Neural Speech Codec via Focal Mask and Noise Feature Separation</a></h4>
+      <div class="meta"><span>📅 2026-07-07</span><span>👥 Shaokai Li, Weiping Tu, Yuhong Yang</span></div>
+      <div class="abstract">FocalSE面向神经语音编解码器的噪声环境适配。现实噪声严重降低低码率编解码器性能。通过focal modulation压缩/解压缩捕获全局上下文和局部互信息生成focal mask，同时分离噪声嵌入提升去噪效果，ResNet1D-18识别噪声类别辅助分离。在LibriTTS和ESC50上低码率低SNR条件下超越SOTA。</div>
+      <div class="tags"><span class="tag">Speech Codec</span><span class="tag">Denoising</span><span class="tag">Low-Bitrate</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.04195" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.04195" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.04314" target="_blank">MOSAIC: Interpretable Multi-Token Cross-Attention for Unified Voice Anti-Spoofing</a></h4>
+      <div class="meta"><span>📅 2026-07-07</span><span>👥 Yugwon Won</span></div>
+      <div class="abstract">MOSAIC提出可解释多token交叉注意力框架，将152维生物音素特征向量分为6组语义token(Praat、相位、LFCC等)与13层WavLM-Large进行交叉注意力。6×13注意力矩阵可视化特征-层级对齐，z-score分析揭示生物音素/相位token对真实语音更活跃而频谱/声道token对伪造语音更活跃。在ASVspoof 2019 LA/PA上达到1.93%/1.98% EER的统一定制模型。</div>
+      <div class="tags"><span class="tag">Voice Anti-Spoofing</span><span class="tag">Interpretability</span><span class="tag">Deepfake Detection</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.04314" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.04314" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>OpenAI GPT-Realtime-2.1-mini 正式上线：语音 API 首次支持推理与工具调用</h4>
+      <p>OpenAI 推出 GPT-Realtime-2.1-mini，为 Realtime mini 系列语音模型带来推理能力和工具调用支持。价格与 GPT-Realtime-mini 持平。这标志着实时语音模型从「转写+合成」管道向真正智能语音 Agent 迈出关键一步。 <a href="https://www.explainx.ai/blog/openai-gpt-realtime-2-1-mini-reasoning-tool-use-api-2026" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Resemble AI 开源 Chatterbox Multilingual V3：0.5B 多语言 TTS 持续进化</h4>
+      <p>Chatterbox Multilingual V3 发布，保持0.5B参数同时提升说话人相似度、减少幻觉并增强多语言能力。MIT许可可商用，包含Turbo（最高效）、Multilingual V3和原始版本，为开源TTS社区提供了灵活的多层次选择。 <a href="https://github.com/resemble-ai/chatterbox" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-07-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
