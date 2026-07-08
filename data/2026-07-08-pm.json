@@ -1,0 +1,79 @@
+{
+  "papers": [
+    {
+      "title": "WordVoice: Explicit and Decoupled Multi-Dimensional Word-Level Control for LLM-Based TTS",
+      "url": "https://arxiv.org/abs/2607.06461",
+      "date": "2026-07-08",
+      "authors": "Sihang Nie, et al.",
+      "abstract": "针对LLM-based TTS系统缺乏精细粒度控制的问题，提出WordVoice统一框架。构建WordVoice-5A数据集（4.7k小时，五维词级标注：时长/边界/能量/音高/语调），引入bound-token机制实现显式「声学规划」过程，并增加细粒度声学调制模块桥接离散token与连续波形。在保持零样本合成稳定性的同时，实现多声学维度的解耦控制。",
+      "tags": ["TTS", "LLM-based TTS", "Word-Level Control", "Speech Synthesis"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.06461"},
+        {"label": "Demo", "url": "https://xxh333.github.io/wordvoice-demo/"}
+      ]
+    },
+    {
+      "title": "BlueMagpie-TTS: A Token-Efficient Tokenizer, Language Model, and TTS for Taiwanese-Accent Code-Switching Speech",
+      "url": "https://arxiv.org/abs/2607.06054",
+      "date": "2026-07-08",
+      "authors": "Ho-Lam Chung, Bo-Xuan Zheng, Cheng-Chieh Huang, Hung-yi Lee, et al.",
+      "abstract": "针对台湾腔普通话TTS适配问题从文本侧全面优化。PangolinTokenizer实现最低token率（0.485 tokens/字），Barbet十亿参数繁体中文语言模型在14项评估中排名第一。BlueMagpie-TTS通过可学习桥接器将Barbet连接到VoxCPM2声学栈，CER从11.45%降至4.81%（相对降低58%），65.6%人工盲测偏好。",
+      "tags": ["TTS", "Code-Switching", "Taiwanese Mandarin", "LLM", "Tokenization"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.06054"}
+      ]
+    },
+    {
+      "title": "SR-FD: Fréchet Distance Loss on Speech Representations for Text-to-Speech Synthesis",
+      "url": "https://arxiv.org/abs/2607.06027",
+      "date": "2026-07-08",
+      "authors": "Ho-Lam Chung, et al.",
+      "abstract": "提出Speech Representation Fréchet Distance (SR-FD) loss，一种免判别器、免推理计算开销的分布正则化方法。在VoxCPM2 4步推理上微调，WER从2.23%降至1.41%（相对降低36.5%），超越10步baseline。通过匹配Whisper/CTC特征的均值和协方差到参考统计量，提升少步TTS的可懂度。",
+      "tags": ["TTS", "Flow Matching", "Distribution Matching", "Seed-TTS"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.06027"}
+      ]
+    },
+    {
+      "title": "ORCA: Groupwise Orthogonal Connectors for Audio-Language Models",
+      "url": "https://arxiv.org/abs/2607.06014",
+      "date": "2026-07-08",
+      "authors": "Ho-Lam Chung, et al.",
+      "abstract": "发现Audio-Language模型中Q-Former连接器的输出向量坍塌为单一方向、丢失副语言信息（说话人身份、性别、韵律）。提出ORCA方法：分组查询并将各组输出约束在不同方向。在SAKURA多跳推理上从48.8%提升至75.2%（+26.4分），同时query冗余降低12倍，跨说话人方差提升75倍。",
+      "tags": ["Audio-Language Models", "Q-Former", "Speech Understanding", "SAKURA"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.06014"}
+      ]
+    },
+    {
+      "title": "Revisiting the Relation Between Language Model Perplexity and ASR Word Error Rate for Modern End-to-End Speech Recognition",
+      "url": "https://arxiv.org/abs/2607.05612",
+      "date": "2026-07-08",
+      "authors": "Mohammad Zeineldeen, et al.",
+      "abstract": "重新审视现代端到端ASR系统中语言模型困惑度(PPL)与词错误率(WER)的关系。研究外部LM是否仍能提升当前端到端ASR、PPL-WER关系是否仍为log-log线性、编码器上下文长度影响及LLM困惑度如何适应趋势。揭示解码器内部语言建模对PPL-WER关系的影响。SLT 2026投稿。",
+      "tags": ["ASR", "Language Model", "Perplexity", "End-to-End", "SLT 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.05612"}
+      ]
+    },
+    {
+      "title": "Few-Shot Class-Incremental Audio Classification Using Pseudo-Incrementally Trained Embedding Learner and Continually Updated Stochastic Classifier",
+      "url": "https://arxiv.org/abs/2607.05953",
+      "date": "2026-07-08",
+      "authors": "Yanxiong Li, et al.",
+      "abstract": "针对少样本类增量音频分类(FCAC)问题，解耦为嵌入学习器（冻结以记忆基类）和随机分类器（持续更新以适配增量类）。提出伪增量训练策略，在基类训练阶段模拟增量场景提升嵌入表示能力。在FSC-89、NSynth-100和LS-100三数据集上超越对比方法。IEEE TASLP接收。",
+      "tags": ["Audio Classification", "Few-Shot", "Class-Incremental", "TASLP"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.05953"},
+        {"label": "GitHub", "url": "https://github.com/vinceasvp/PITEL-CUSC"}
+      ]
+    }
+  ],
+  "news": []
+}
