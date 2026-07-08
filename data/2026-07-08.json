@@ -1,0 +1,311 @@
+{
+  "papers": [
+    {
+      "title": "DELTA-TTS: Adapting Autoregressive Model into Diffusion Language Model for Text-to-Speech",
+      "url": "https://arxiv.org/abs/2607.04140",
+      "date": "2026-07-05",
+      "authors": "Junwon Moon, Seungbeom Kim, Yejin Lee, Hoseong Ahn, Sewoong Park, Heeseung Kim, Kyuhong Shim",
+      "abstract": "自回归(AR)TTS模型因逐token生成导致推理缓慢且容易产生幻觉。DELTA-TTS提出轻量LoRA适配框架，将预训练AR TTS模型转化为离散扩散语言模型(dLLM)，实现置信度排序的语音token解码。仅在585小时LibriTTS上训练，在Seed-TTS test-en上达到1.75% WER，生成速度提升3.3倍，同时缓解AR生成幻觉。",
+      "tags": [
+        "TTS",
+        "Diffusion Language Model",
+        "LoRA",
+        "Speech Synthesis"
+      ],
+      "highlight": true,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.04140"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.04140"
+        }
+      ]
+    },
+    {
+      "title": "ProPS: Prompted Profile Synthesis for Natural Language-Conditioned Speaker Embedding Distributions",
+      "url": "https://arxiv.org/abs/2607.05276",
+      "date": "2026-07-06",
+      "authors": "Junhyeok Lee, Laureano Moro-Velazquez, Jesus Villalba Lopez, Najim Dehak",
+      "abstract": "提出ProPS框架，通过自然语言提示（如「30多岁带印度口音的男性说话人」）生成说话人嵌入分布。将人类可读的说话人档案描述转换为句子嵌入，用混合密度网络预测x-vector空间中的高斯混合分布。支持TTS和VC系统的可控说话人档案合成。",
+      "tags": [
+        "Speaker Embedding",
+        "TTS",
+        "Voice Conversion",
+        "Natural Language Control"
+      ],
+      "highlight": true,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.05276"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.05276"
+        }
+      ]
+    },
+    {
+      "title": "Flowley: Precise Video-to-Audio Generation with Cross-Modal Alignment in Latent Space",
+      "url": "https://arxiv.org/abs/2607.06405",
+      "date": "2026-07-07",
+      "authors": "Thanh V. T. Tran, Ngoc-Son Nguyen, Luong Tran, Long-Khanh Pham, Paarth Neekhara, Shezheen Hussain, Van Nguyen",
+      "abstract": "提出Flowley，端到端单阶段视频到音频(V2A)生成架构。核心创新为Progressive Soft-masked Cross-Attention，在注意力机制中直接嵌入音视频同步，零额外计算成本。同时提出SoundCap自动标注管线生成声音感知描述。在VGGSound上实现SOTA，零样本设定下超越最强闭源方法。ECCV 2026收录。",
+      "tags": [
+        "Video-to-Audio",
+        "Audio Generation",
+        "ECCV 2026",
+        "Cross-Modal"
+      ],
+      "highlight": true,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.06405"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.06405"
+        }
+      ]
+    },
+    {
+      "title": "InsideSSL: Understanding Self-Supervised Speech Representations using a Model-Centric Perspective",
+      "url": "https://arxiv.org/abs/2607.06392",
+      "date": "2026-07-07",
+      "authors": "Samir Sadok, Xavier Alameda-Pineda",
+      "abstract": "从模型中心视角理解自监督语音表示(SSL)的层间动态。提出InsideSSL两阶段框架：从压缩(熵)、几何(曲率)和扰动鲁棒性三个角度进行任务无关分析；引入跨层生成兼容性矩阵(GCM)评估功能可迁移性。揭示稳定音素核心、身份波动性和深层语义剪枝。INTERSPEECH 2026长文。",
+      "tags": [
+        "SSL",
+        "Speech Representation",
+        "INTERSPEECH 2026",
+        "Interpretability"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.06392"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.06392"
+        }
+      ]
+    },
+    {
+      "title": "Flow Matching-Based Speech Source Separation with Best-of-N Biometric Sampling",
+      "url": "https://arxiv.org/abs/2607.06088",
+      "date": "2026-07-07",
+      "authors": "Anastasia Zorkina, Alexandr Anikin, Nikita Khmelev, Anastasiya Korenevskaya, Sergey Novoselov, Vladimir Volokhov, Maxim Korenevsky, Yuriy Matveev",
+      "abstract": "基于条件流匹配的单通道语音分离方法，通过冻结的说话人编码器定义源顺序，在推理时用生物特征最佳N候选选择实现块级通道对齐。在Libri2Mix上评估，Transformer U-Net变体在ASR(cpWER)和说话人验证(EER)下游任务均达到最低错误率。ICML 2026 Workshop收录。",
+      "tags": [
+        "Speech Separation",
+        "Flow Matching",
+        "ASR",
+        "ICML 2026"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.06088"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.06088"
+        }
+      ]
+    },
+    {
+      "title": "TriA Pipeline: A Large-Scale Automatic Audio Annotation Pipeline for Audio Classification",
+      "url": "https://arxiv.org/abs/2607.06179",
+      "date": "2026-07-07",
+      "authors": "Hong Lyu, Mingru Yang, Qianhua He, Yanxiong Li, Jinxin Huang, Zhengyu Pei",
+      "abstract": "提出TriA自动音频标注管线，将各类场景音频高效转化为带事件标注的高质量训练数据。构建TriA数据集(2130+小时，431个音频类别)，在三个家庭场景分类任务上平均精度提升3.97%。代码开源。INTERSPEECH 2026。",
+      "tags": [
+        "Audio Classification",
+        "Auto-Annotation",
+        "Dataset",
+        "INTERSPEECH 2026"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.06179"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/huanxian/TriA"
+        }
+      ]
+    },
+    {
+      "title": "Goodbye EER, Hello LID: Evaluating Voice Anonymisation against 1-to-N Linkage Threats",
+      "url": "https://arxiv.org/abs/2607.06259",
+      "date": "2026-07-07",
+      "authors": "Davis Sterns, Konstantinos Drossos, Natasha Fernandes, Tom Backstrom, Catuscia Palamidessi",
+      "abstract": "提案信息论评估框架：用Local Information Disclosure (LID)量化1-to-N数据库关联攻击下的精确隐私损失。评估VoicePrivacy 2024前三系统发现，EER近乎完美(48%)的系统仍存在局部漏洞，最坏情况每试听话语泄露1比特。推动从全局EER向局部隐私指标的范式转变。",
+      "tags": [
+        "Voice Privacy",
+        "Speaker Anonymization",
+        "Information Theory",
+        "Security"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.06259"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.06259"
+        }
+      ]
+    },
+    {
+      "title": "Sound Field Estimation with Source-Position-Dependent Directional Weighting",
+      "url": "https://arxiv.org/abs/2607.06274",
+      "date": "2026-07-07",
+      "authors": "Mattia Marella, Shoichi Koyama",
+      "abstract": "提出学习型物理约束神经核用于声场估计。通过源位置依赖的隐式神经表示(INR)建模方向加权函数，使核函数捕捉通用方向模式并泛化到未见源位置。IWAENC 2026收录。",
+      "tags": [
+        "Sound Field",
+        "Acoustic Processing",
+        "IWAENC 2026"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.06274"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.06274"
+        }
+      ]
+    },
+    {
+      "title": "Quantum-Inspired Approach to Automated Music Harmony Generation",
+      "url": "https://arxiv.org/abs/2607.06296",
+      "date": "2026-07-07",
+      "authors": "Josef Pavlicek",
+      "abstract": "量子启发的混合生成架构，结合候选探索与显式规则优化实现自动音乐和声生成。无需训练语料库即可产生保持调性结构和终止式行为的多样化合理和声。ISD2026，代码与数据集开源。",
+      "tags": [
+        "Music Generation",
+        "Hybrid Systems",
+        "Quantum-Inspired"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.06296"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com"
+        }
+      ]
+    },
+    {
+      "title": "ForestIR: Physics-Informed Forest Sound Simulation for Bioacoustic Remote Sensing",
+      "url": "https://arxiv.org/abs/2607.06299",
+      "date": "2026-07-07",
+      "authors": "Xin Shen, Jennifer N. Kampe, Changwoo J. Lee, et al.",
+      "abstract": "ForestIR是物理信息森林声学仿真框架，生成受控环境条件下的源-麦克风脉冲响应和合成阵列录音，用于生物声学远程感知优化。支持麦克风阵列设计、鲁棒性测试和合成数据生成。",
+      "tags": [
+        "Bioacoustic",
+        "Sound Simulation",
+        "Array Processing"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.06299"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.06299"
+        }
+      ]
+    },
+    {
+      "title": "CHILDES-Aligned: A Curated Children's Speech Dataset via Multi-Model Timestamp Ensembling",
+      "url": "https://arxiv.org/abs/2607.03670",
+      "date": "2026-07-04",
+      "authors": "Haolong Zheng, Yuanzhuo Hu, Xinyu Liang, Vishal Sunder, et al.",
+      "abstract": "BEACON框架通过多ASR模型时间戳共识投票，从CHILDES语料库中提取413小时高质量儿童语音数据集（含校正后话语级时间戳）和283小时音素级对齐数据。为儿童语音ASR和语言发展研究提供宝贵资源。",
+      "tags": [
+        "Children's Speech",
+        "ASR",
+        "Dataset",
+        "Alignment"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.03670"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.03670"
+        }
+      ]
+    },
+    {
+      "title": "NouveauVoice: Generating Novel Pseudo Speakers for Voice Anonymization",
+      "url": "https://arxiv.org/abs/2607.03985",
+      "date": "2026-07-04",
+      "authors": "Meiying Melissa Chen, Anastasia Kuznetsova, Zhenyu Wang, Zhiyao Duan",
+      "abstract": "基于层次化深度变分自编码器(NVAE)的伪说话人生成框架。作为FACodec和CosyVoice2的即插即用模块，通过可采样和ELBO目标合成高多样性伪说话人嵌入。EER超38%实现强身份隐藏，在匿名性与下游语音效用间取得合理平衡。",
+      "tags": [
+        "Voice Anonymization",
+        "Speaker Privacy",
+        "NVAE",
+        "Voice Conversion"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.03985"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.03985"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "OpenAI GPT-Realtime-2.1-mini 发布：语音 API 新增推理与工具调用",
+      "url": "https://www.explainx.ai/blog/openai-gpt-realtime-2-1-mini-reasoning-tool-use-api-2026",
+      "summary": "7月7日，OpenAI 在 API 中为 GPT-Realtime-2.1-mini 添加 reasoning 和 tool use 能力。实时语音模型首次获得内置推理能力，标志着语音AI从「转写+合成」管道向原生智能交互的关键进化。"
+    },
+    {
+      "title": "ECCV 2026 收录 Flowley：视频到音频生成的 SOTA 突破",
+      "url": "https://arxiv.org/abs/2607.06405",
+      "summary": "Flowley 被 ECCV 2026 接收，凭借 Progressive Soft-masked Cross-Attention 实现端到端 V2A 生成，在 VGGSound 上的零样本性能超越最强闭源方案。"
+    },
+    {
+      "title": "DELTA-TTS：自回归TTS成功切换扩散语言模型范式",
+      "url": "https://arxiv.org/abs/2607.04140",
+      "summary": "通过LoRA适配将预训练AR TTS转为离散扩散语言模型，仅585小时训练数据实现1.75% WER，生成速度提升3.3倍。为TTS模型架构演进提供新路径。"
+    },
+    {
+      "title": "语音隐私评估标准迎来范式变革：LID 取代 EER",
+      "url": "https://arxiv.org/abs/2607.06259",
+      "summary": "来自INRIA等团队的信息论评估框架揭示EER「近完美」系统可能仍存在严重局部漏洞，推动语音匿名化评估向更严格的1-to-N威胁模型转变。"
+    }
+  ]
+}
