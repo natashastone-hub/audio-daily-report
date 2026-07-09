@@ -1,0 +1,207 @@
+{
+  "papers": [
+    {
+      "title": "DuplexPO: Decoupling Conversational Dynamics in Full-Duplex Spoken Models through Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2607.07148",
+      "date": "2026-07-09",
+      "authors": "Yuxin Li et al.",
+      "abstract": "提出 DuplexPO 框架，通过强化学习将全双工对话中的「何时说话」与「说什么」解耦。框架保持指令微调助手的语义响应能力，同时通过分解式对话动态奖励(FCDR)在长对话的特定窗口上优化时序交互行为(轮次发起、反馈语、让步等)。实验表明 DuplexPO 显著改善了全双工行为，包括及时反馈、平滑轮换和打断处理，同时保持强推理能力。",
+      "tags": [
+        "Full-Duplex",
+        "Reinforcement Learning",
+        "Spoken Dialogue",
+        "Voice Agent"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.07148"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.07148"
+        }
+      ]
+    },
+    {
+      "title": "SpeechKV: Compress the Cache, Not the Speech Embedding — KV Compression for Efficient Speech LLMs",
+      "url": "https://arxiv.org/abs/2607.06827",
+      "date": "2026-07-09",
+      "authors": "Ke-Han Lu et al.",
+      "abstract": "提出 SpeechKV，在 LLM 内部对语音 token 的 KV 缓存应用学习池化，而非在适配器层压缩语音序列。71K 小时训练后，SpeechKV 将语音压缩至接近文本粒度，性能与未压缩基线持平甚至略优(OOD 实体识别 +6.6%, OpenASR +2.3%)，解码速度提升至少 1.49 倍。",
+      "tags": [
+        "Speech LLM",
+        "KV Cache Compression",
+        "Efficient Decoding",
+        "SLT 2026"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.06827"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.06827"
+        }
+      ]
+    },
+    {
+      "title": "UBG-Net: An Uncertainty-aware Bayesian Gating Network for Robust Audio-Visual Speech Recognition",
+      "url": "https://arxiv.org/abs/2607.06892",
+      "date": "2026-07-09",
+      "authors": "Jinjie Fu et al.",
+      "abstract": "提出不确定性感知贝叶斯门控网络(UBG-Net)，解决真实场景中视听语音识别因信号损坏和分布偏移导致的性能退化。MUBF 机制将信号级任意不确定性注入贝叶斯网络建模认知不确定性，DUHV 解码策略从蒙特卡洛采样中选择最优转录。在 AVCocktail 和 LRS2 上全面超越 SOTA。",
+      "tags": [
+        "Audio-Visual ASR",
+        "Bayesian Network",
+        "Uncertainty Modeling"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.06892"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.06892"
+        }
+      ]
+    },
+    {
+      "title": "Text-Independent Speaker Verification Using Discrete Audio Tokens",
+      "url": "https://arxiv.org/abs/2607.07579",
+      "date": "2026-07-09",
+      "authors": "Zheng Liang et al.",
+      "abstract": "神经音频编解码器(NAC)的离散表征在说话人验证(ASV)中持续落后于传统频谱特征。作者提出跨特征知识蒸馏框架(CFKD)，引导基于编解码器的学生模型模仿强 Fbank 教师模型的嵌入空间。VoxCeleb 实验表明 CFKD 大幅提升编解码器 ASV 性能，接近 Fbank 教师模型精度，揭示了离散音频 token 在多样化语音任务中的潜力。Interspeech 2026。",
+      "tags": [
+        "Speaker Verification",
+        "Audio Codec",
+        "Knowledge Distillation",
+        "Interspeech 2026"
+      ],
+      "highlight": true,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.07579"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.07579"
+        }
+      ]
+    },
+    {
+      "title": "MMGenre: Benchmarking Singing Voice Synthesis across Multiple Musical Genres",
+      "url": "https://arxiv.org/abs/2607.06986",
+      "date": "2026-07-09",
+      "authors": "Wenhao Feng et al.",
+      "abstract": "提出 MMGenre 多流派歌声合成评测基准，覆盖 10 大流派和 26 个子流派。对代表性 SVS 模型的全面评测揭示了流派辨识能力有限的问题——合成歌声在各个流派间呈现出高度相似的声学特征。轻量级流派特定持续训练能够带来显著提升。Interspeech 2026。",
+      "tags": [
+        "Singing Voice Synthesis",
+        "Multi-Genre",
+        "Benchmark",
+        "Interspeech 2026"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.06986"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.06986"
+        },
+        {
+          "label": "Project",
+          "url": "https://fengjin1117.github.io/mmgenre-demo/"
+        }
+      ]
+    },
+    {
+      "title": "Audio Sentiment Analysis via Distillation and Cross-Modal Integration of Generated Multilingual Transcripts",
+      "url": "https://arxiv.org/abs/2607.06611",
+      "date": "2026-07-09",
+      "authors": "Andrei Durdun, Radu Tudor Ionescu et al.",
+      "abstract": "提出多模态音频情感分析方案，通过 ASR 自动生成文本转录并结合多语言翻译，利用级联跨模态 Transformer 融合音频和多语言文本特征。将多模态教师模型的知识蒸馏到纯音频学生模型中，在不增加推理开销的情况下提升性能。KES 2026。",
+      "tags": [
+        "Audio Sentiment Analysis",
+        "ASR",
+        "Cross-Modal",
+        "Distillation"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.06611"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.06611"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/andreidurdun/cross-modal-audio-sentiment"
+        }
+      ]
+    },
+    {
+      "title": "MADB: A Large-Scale Music Aesthetics Dataset with Professional and Multi-Dimensional Annotations",
+      "url": "https://arxiv.org/abs/2607.06929",
+      "date": "2026-07-09",
+      "authors": "Sirui Zhang, Tianle Wang, Xinyi Tong et al.",
+      "abstract": "发布 MADB 大规模音乐美学数据集，包含 9,999 首曲目，由 30 名训练有素的标注者按 10 个感知维度和总分评分，附带文本评论支持多模态分析。在多个预训练模型上建立统一评测框架，揭示模型预测与人类判断之间存在显著差距。",
+      "tags": [
+        "Music Aesthetics",
+        "Dataset",
+        "Multi-Dimensional Annotation"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.06929"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.06929"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/knownree/madb"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "OpenAI 发布 GPT-Live: 全双工语音模型正式上线",
+      "source": "TechCrunch / OpenAI",
+      "date": "2026-07-09",
+      "summary": "OpenAI 发布 GPT-Live-1 和 GPT-Live-1 mini 新一代语音模型，采用全双工架构，可同时聆听和说话。用户可在 AI 回应时随时打断，支持实时翻译。ChatGPT 将默认替换为 GPT-Live-1 mini，付费用户可访问更大模型。新模型将查询转发给 GPT-5.5 进行搜索、推理和 Agent 操作。产品负责人透露可进行 30-40 分钟长对话，超过 1.5 亿人已使用 ChatGPT 语音功能。",
+      "tags": [
+        "GPT-Live",
+        "Full-Duplex",
+        "Voice Assistant",
+        "Real-time Translation",
+        "OpenAI"
+      ],
+      "links": [
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/"
+        },
+        {
+          "label": "OpenAI Blog",
+          "url": "https://openai.com/index/introducing-gpt-live/"
+        }
+      ]
+    }
+  ]
+}

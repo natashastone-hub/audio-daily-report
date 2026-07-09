@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-09-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-09-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月9日 (周四) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">7</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.07579" target="_blank">Text-Independent Speaker Verification Using Discrete Audio Tokens</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-09</span><span>👥 Zheng Liang et al.</span></div>
+      <div class="abstract">神经音频编解码器(NAC)的离散表征在说话人验证(ASV)中持续落后于传统频谱特征。作者提出跨特征知识蒸馏框架(CFKD)，引导基于编解码器的学生模型模仿强 Fbank 教师模型的嵌入空间。VoxCeleb 实验表明 CFKD 大幅提升编解码器 ASV 性能，接近 Fbank 教师模型精度，揭示了离散音频 token 在多样化语音任务中的潜力。Interspeech 2026。</div>
+      <div class="tags"><span class="tag">Speaker Verification</span><span class="tag">Audio Codec</span><span class="tag">Knowledge Distillation</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.07579" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.07579" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.07148" target="_blank">DuplexPO: Decoupling Conversational Dynamics in Full-Duplex Spoken Models through Reinforcement Learning</a></h4>
+      <div class="meta"><span>📅 2026-07-09</span><span>👥 Yuxin Li et al.</span></div>
+      <div class="abstract">提出 DuplexPO 框架，通过强化学习将全双工对话中的「何时说话」与「说什么」解耦。框架保持指令微调助手的语义响应能力，同时通过分解式对话动态奖励(FCDR)在长对话的特定窗口上优化时序交互行为(轮次发起、反馈语、让步等)。实验表明 DuplexPO 显著改善了全双工行为，包括及时反馈、平滑轮换和打断处理，同时保持强推理能力。</div>
+      <div class="tags"><span class="tag">Full-Duplex</span><span class="tag">Reinforcement Learning</span><span class="tag">Spoken Dialogue</span><span class="tag">Voice Agent</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.07148" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.07148" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.06827" target="_blank">SpeechKV: Compress the Cache, Not the Speech Embedding — KV Compression for Efficient Speech LLMs</a></h4>
+      <div class="meta"><span>📅 2026-07-09</span><span>👥 Ke-Han Lu et al.</span></div>
+      <div class="abstract">提出 SpeechKV，在 LLM 内部对语音 token 的 KV 缓存应用学习池化，而非在适配器层压缩语音序列。71K 小时训练后，SpeechKV 将语音压缩至接近文本粒度，性能与未压缩基线持平甚至略优(OOD 实体识别 +6.6%, OpenASR +2.3%)，解码速度提升至少 1.49 倍。</div>
+      <div class="tags"><span class="tag">Speech LLM</span><span class="tag">KV Cache Compression</span><span class="tag">Efficient Decoding</span><span class="tag">SLT 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.06827" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.06827" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.06892" target="_blank">UBG-Net: An Uncertainty-aware Bayesian Gating Network for Robust Audio-Visual Speech Recognition</a></h4>
+      <div class="meta"><span>📅 2026-07-09</span><span>👥 Jinjie Fu et al.</span></div>
+      <div class="abstract">提出不确定性感知贝叶斯门控网络(UBG-Net)，解决真实场景中视听语音识别因信号损坏和分布偏移导致的性能退化。MUBF 机制将信号级任意不确定性注入贝叶斯网络建模认知不确定性，DUHV 解码策略从蒙特卡洛采样中选择最优转录。在 AVCocktail 和 LRS2 上全面超越 SOTA。</div>
+      <div class="tags"><span class="tag">Audio-Visual ASR</span><span class="tag">Bayesian Network</span><span class="tag">Uncertainty Modeling</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.06892" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.06892" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.06986" target="_blank">MMGenre: Benchmarking Singing Voice Synthesis across Multiple Musical Genres</a></h4>
+      <div class="meta"><span>📅 2026-07-09</span><span>👥 Wenhao Feng et al.</span></div>
+      <div class="abstract">提出 MMGenre 多流派歌声合成评测基准，覆盖 10 大流派和 26 个子流派。对代表性 SVS 模型的全面评测揭示了流派辨识能力有限的问题——合成歌声在各个流派间呈现出高度相似的声学特征。轻量级流派特定持续训练能够带来显著提升。Interspeech 2026。</div>
+      <div class="tags"><span class="tag">Singing Voice Synthesis</span><span class="tag">Multi-Genre</span><span class="tag">Benchmark</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.06986" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.06986" target="_blank">🔗 PDF</a> <a href="https://fengjin1117.github.io/mmgenre-demo/" target="_blank">🔗 Project</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.06611" target="_blank">Audio Sentiment Analysis via Distillation and Cross-Modal Integration of Generated Multilingual Transcripts</a></h4>
+      <div class="meta"><span>📅 2026-07-09</span><span>👥 Andrei Durdun, Radu Tudor Ionescu et al.</span></div>
+      <div class="abstract">提出多模态音频情感分析方案，通过 ASR 自动生成文本转录并结合多语言翻译，利用级联跨模态 Transformer 融合音频和多语言文本特征。将多模态教师模型的知识蒸馏到纯音频学生模型中，在不增加推理开销的情况下提升性能。KES 2026。</div>
+      <div class="tags"><span class="tag">Audio Sentiment Analysis</span><span class="tag">ASR</span><span class="tag">Cross-Modal</span><span class="tag">Distillation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.06611" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.06611" target="_blank">🔗 PDF</a> <a href="https://github.com/andreidurdun/cross-modal-audio-sentiment" target="_blank">🔗 Code</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.06929" target="_blank">MADB: A Large-Scale Music Aesthetics Dataset with Professional and Multi-Dimensional Annotations</a></h4>
+      <div class="meta"><span>📅 2026-07-09</span><span>👥 Sirui Zhang, Tianle Wang, Xinyi Tong et al.</span></div>
+      <div class="abstract">发布 MADB 大规模音乐美学数据集，包含 9,999 首曲目，由 30 名训练有素的标注者按 10 个感知维度和总分评分，附带文本评论支持多模态分析。在多个预训练模型上建立统一评测框架，揭示模型预测与人类判断之间存在显著差距。</div>
+      <div class="tags"><span class="tag">Music Aesthetics</span><span class="tag">Dataset</span><span class="tag">Multi-Dimensional Annotation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.06929" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.06929" target="_blank">🔗 PDF</a> <a href="https://github.com/knownree/madb" target="_blank">🔗 GitHub</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>OpenAI 发布 GPT-Live: 全双工语音模型正式上线</h4>
+      <p>OpenAI 发布 GPT-Live-1 和 GPT-Live-1 mini 新一代语音模型，采用全双工架构，可同时聆听和说话。用户可在 AI 回应时随时打断，支持实时翻译。ChatGPT 将默认替换为 GPT-Live-1 mini，付费用户可访问更大模型。新模型将查询转发给 GPT-5.5 进行搜索、推理和 Agent 操作。产品负责人透露可进行 30-40 分钟长对话，超过 1.5 亿人已使用 ChatGPT 语音功能。</p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-09-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
