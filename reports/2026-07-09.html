@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-09</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-09</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月9日 (周四) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">11</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.06461" target="_blank">WordVoice: Explicit and Decoupled Multi-Dimensional Word-Level Control for LLM-Based TTS</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-07</span><span>👥 Sihang Nie, Jinxin Ji, Xiaofen Xing, Deyi Tuo, Chengbin Jin, Jialong Mai, Xiangmin Xu</span></div>
+      <div class="abstract">提出 WordVoice 框架，实现 LLM-TTS 系统中单词级别的显式精细可控。构建了 WordVoice-5A 数据集（4.7k 小时，五维词级标注：时长、边界、能量、音高和语调），引入 bound-token 机制实现显式声学规划，在保持零样本合成稳定性的同时实现多维度解耦控制，代码和音频样本已公开。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">LLM</span><span class="tag">词级控制</span><span class="tag">语音合成</span></div>
+      <div class="links"><a href="https://xxh333.github.io/wordvoice-demo/" target="_blank">🔗 Demo</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.00363" target="_blank">Enhancing Flow Matching with A Unified Guidance Framework for Efficient and Robust Speech Synthesis</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-01</span><span>👥 Zuda Yu et al.</span></div>
+      <div class="abstract">提出统一引导框架增强 Flow Matching 语音合成：数据端引入异质增强（Data-guidance），模型端结合轨迹校正与内在引导目标（Model-guidance），消除 CFG 开销。推理加速近 3 倍，说话人相似度优于 SOTA 基线。Accepted by INTERSPEECH 2026。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Flow Matching</span><span class="tag">推理加速</span><span class="tag">语音合成</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.00363" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.06054" target="_blank">A Token-Efficient Tokenizer, Language Model, and TTS for Taiwanese-Accent Code-Switching Speech</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-07</span><span>👥 Ho Lam Chung, Bo-Xuan Zheng, Cheng-Chieh Huang, Hung-yi Lee et al.</span></div>
+      <div class="abstract">针对台湾口音普通话 TTS 系统适配问题，提出 PangolinTokenizer（最低词元率 0.485 tokens/字符）、Barbet（十亿参数繁中 LLM）和 BlueMagpie-TTS（基于 VoxCPM2）。CER 从 11.45% 降至 4.81%，WER 从 14.83% 降至 5.36%，65.6% 的盲听测试者偏好 BlueMagpie。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">口音适配</span><span class="tag">代码切换</span><span class="tag">中文</span><span class="tag">低资源</span></div>
+      <div class="links"></div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.06986" target="_blank">MMGenre: Benchmarking Singing Voice Synthesis across Multiple Musical Genres</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-08</span><span>👥 Wenhao Feng et al.</span></div>
+      <div class="abstract">引入 MMGenre——首个跨 10 大流派和 26 个亚流派的多流派歌声合成基准。发现现有 SVS 模型跨流派的声学特征高度相似，区分度弱；零样本流派适应收益有限，但轻量级流派特定继续训练带来显著提升。Accepted by Interspeech 2026。</div>
+      <div class="tags"><span class="tag">歌声合成</span><span class="tag">SVS</span><span class="tag">多流派</span><span class="tag">基准测试</span></div>
+      <div class="links"><a href="https://fengjin1117.github.io/mmgenre-demo/" target="_blank">🔗 Demo</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.00946" target="_blank">A Geometric Perspective on Composable Emotion Steering in Text-to-Speech Models</a></h4>
+      <div class="meta"><span>📅 2026-07-01</span><span>👥 Siyi Wang et al.</span></div>
+      <div class="abstract">首次对混合 TTS 系统中的 Speech LM 和 Flow Matching 模块作为激活引导位置进行对比研究。发现 SLM 提供干净低维的情感子空间，说话人-情感解耦强；CFM 则存在纠缠。为可控语音生成的表示几何提供了实用指导。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">情感控制</span><span class="tag">表征学习</span><span class="tag">激活引导</span></div>
+      <div class="links"></div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.03928" target="_blank">TokAN: Accent Normalization Using Self-Supervised Speech Tokens</a></h4>
+      <div class="meta"><span>📅 2026-07-04</span><span>👥 Qibing Bai et al.</span></div>
+      <div class="abstract">提出基于离散语音 token 的口音归一化框架 TokAN，无需合成监督语音。使用自监督 VQ tokenizer + 自回归编解码器进行 token-to-token 转换，并用 GRPO 强化学习后训练。WER 从 12.40% 降至 9.23%（含 RL），适用于语音配音和直播等时长敏感场景。Submitted to IEEE TASLP。</div>
+      <div class="tags"><span class="tag">口音归一化</span><span class="tag">ASR</span><span class="tag">自监督</span><span class="tag">强化学习</span></div>
+      <div class="links"></div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.06088" target="_blank">Flow Matching-Based Speech Source Separation with Best-of-N Biometric Sampling</a></h4>
+      <div class="meta"><span>📅 2026-07-07</span><span>👥 Sergey Novoselov et al.</span></div>
+      <div class="abstract">提出条件流匹配语音分离方法，使用冻结说话人编码器定义源顺序并通过生物识别 best-of-N 采样进行候选选择和块级通道对齐。在下游 ASR（cpWER）和说话人验证（EER）任务中达到最低错误率。Accepted at ICML 2026 Workshop on ML for Audio。</div>
+      <div class="tags"><span class="tag">语音分离</span><span class="tag">Flow Matching</span><span class="tag">说话人识别</span><span class="tag">ASR</span></div>
+      <div class="links"></div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.04619" target="_blank">CARD: Cross-component Audio Representation Distillation for Encoder-Free Audio Captioning</a></h4>
+      <div class="meta"><span>📅 2026-07-06</span><span>👥 Ravi Shekhar et al.</span></div>
+      <div class="abstract">提出 CARD——无编码器音频字幕模型。通过跨组件蒸馏将预训练音频教师（CLAP-HTSAT）的知识分别注入投影器和 LLM。推理时无需编码器，仅 13.2M 参数的投影器即可驱动冻结 LLM，在 AudioCaps 上 CIDEr-D 达 55.4（编码器保留上限 66.4）。</div>
+      <div class="tags"><span class="tag">音频理解</span><span class="tag">音频字幕</span><span class="tag">知识蒸馏</span><span class="tag">效率优化</span></div>
+      <div class="links"></div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.04337" target="_blank">Doppelganger: Sound Effects and Their Synthetic Twins</a></h4>
+      <div class="meta"><span>📅 2026-07-05</span><span>👥 Elliott Ash</span></div>
+      <div class="abstract">引入 Doppelganger 基准——10,420 个真实声音效果与合成副本配对，跨 34 类日常声音。测试 8 种现成音频编码器的跨边界匹配能力。合成副本有 29% 被人类误判为真实，但基于生成器特定检测器可完美区分。代码、数据和模型已开源。</div>
+      <div class="tags"><span class="tag">音频生成</span><span class="tag">声音合成</span><span class="tag">基准测试</span><span class="tag">真假检测</span></div>
+      <div class="links"><a href="https://github.com/elliottash/doppelganger" target="_blank">🔗 GitHub</a> <a href="https://huggingface.co/datasets/elliottash/doppelganger" target="_blank">🔗 Dataset</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.05058" target="_blank">Context-Aware ASR for Mandarin Technical Lectures</a></h4>
+      <div class="meta"><span>📅 2026-07-06</span><span>👥 Ho-Lam Chung et al.</span></div>
+      <div class="abstract">研究中文技术讲座中专业术语的 ASR 识别问题。提出无需外部参考的两阶段解码方法：从第一阶段的假设中提取高频术语作为术语表，第二阶段以此引导识别。在 Breeze-ASR-25 上术语召回率从 52.50% 提升至 62.05%，同时 CER 下降。提出术语中心评估指标，暴露 CER 掩盖的错误。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">中文</span><span class="tag">术语识别</span><span class="tag">上下文感知</span></div>
+      <div class="links"></div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.03418" target="_blank">DETECT-3B-Omni is Agnostic of Content and Demographics</a></h4>
+      <div class="meta"><span>📅 2026-07-03</span><span>👥 Nicolas Michael Müller et al.</span></div>
+      <div class="abstract">大规模研究 Resemble AI 的 DETECT-3B-Omni 深度伪造音频检测器的语义无关性。使用 10,240 个多样化美国英语样本和 8 种 AI 语音克隆系统，等效性测试显示任何两个人口统计组之间的准确率差异最多 2 个百分点（99% 置信度），证明检测器不基于说话内容或说话人身份做判断。</div>
+      <div class="tags"><span class="tag">深度伪造检测</span><span class="tag">音频安全</span><span class="tag">公平性</span></div>
+      <div class="links"></div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>小米发布 MiMo-V2.5-ASR 全链路语音模型听觉基座</h4>
+      <p>7月7日，小米推出 MiMo-V2.5-ASR 全链路语音模型听觉基座，API 已开放。覆盖方言（粤语、吴语、闽南语、四川话等）、中英代码切换识别、歌曲识别、强噪声鲁棒识别、多说话人场景。原生标点输出，国内定价 0.5 元/小时，大幅降低长音频转录成本。 <a href="https://en.wedoany.com/shortnews/365884.html" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Hugging Face 与 Cerebras 联合发布开源端到端语音对话管线</h4>
+      <p>7月1日，Hugging Face 与 Cerebras 开源了完整的语音到语音 AI 管线，链式连接 Nvidia Parakeet（语音识别）、Google DeepMind Gemma 4 31B（语言理解与推理）和语音合成模块。全部开源可自部署，标志着开源语音 AI 全栈技术的里程碑进展。 <a href="https://letsdatascience.com/news/hugging-face-and-cerebras-launch-open-speech-to-speech-ai-pi-44b79eab" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-09') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

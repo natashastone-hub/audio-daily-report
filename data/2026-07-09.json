@@ -1,0 +1,143 @@
+{
+  "date": "2026-07-09",
+  "papers": [
+    {
+      "title": "WordVoice: Explicit and Decoupled Multi-Dimensional Word-Level Control for LLM-Based TTS",
+      "url": "https://arxiv.org/abs/2607.06461",
+      "date": "2026-07-07",
+      "authors": "Sihang Nie, Jinxin Ji, Xiaofen Xing, Deyi Tuo, Chengbin Jin, Jialong Mai, Xiangmin Xu",
+      "abstract": "提出 WordVoice 框架，实现 LLM-TTS 系统中单词级别的显式精细可控。构建了 WordVoice-5A 数据集（4.7k 小时，五维词级标注：时长、边界、能量、音高和语调），引入 bound-token 机制实现显式声学规划，在保持零样本合成稳定性的同时实现多维度解耦控制，代码和音频样本已公开。",
+      "tags": ["TTS", "LLM", "词级控制", "语音合成"],
+      "highlight": true,
+      "links": [
+        {"label": "Demo", "url": "https://xxh333.github.io/wordvoice-demo/"}
+      ]
+    },
+    {
+      "title": "A Geometric Perspective on Composable Emotion Steering in Text-to-Speech Models",
+      "url": "https://arxiv.org/abs/2607.00946",
+      "date": "2026-07-01",
+      "authors": "Siyi Wang et al.",
+      "abstract": "首次对混合 TTS 系统中的 Speech LM 和 Flow Matching 模块作为激活引导位置进行对比研究。发现 SLM 提供干净低维的情感子空间，说话人-情感解耦强；CFM 则存在纠缠。为可控语音生成的表示几何提供了实用指导。",
+      "tags": ["TTS", "情感控制", "表征学习", "激活引导"],
+      "highlight": false,
+      "links": []
+    },
+    {
+      "title": "Enhancing Flow Matching with A Unified Guidance Framework for Efficient and Robust Speech Synthesis",
+      "url": "https://arxiv.org/abs/2607.00363",
+      "date": "2026-07-01",
+      "authors": "Zuda Yu et al.",
+      "abstract": "提出统一引导框架增强 Flow Matching 语音合成：数据端引入异质增强（Data-guidance），模型端结合轨迹校正与内在引导目标（Model-guidance），消除 CFG 开销。推理加速近 3 倍，说话人相似度优于 SOTA 基线。Accepted by INTERSPEECH 2026。",
+      "tags": ["TTS", "Flow Matching", "推理加速", "语音合成"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.00363"}
+      ]
+    },
+    {
+      "title": "A Token-Efficient Tokenizer, Language Model, and TTS for Taiwanese-Accent Code-Switching Speech",
+      "url": "https://arxiv.org/abs/2607.06054",
+      "date": "2026-07-07",
+      "authors": "Ho Lam Chung, Bo-Xuan Zheng, Cheng-Chieh Huang, Hung-yi Lee et al.",
+      "abstract": "针对台湾口音普通话 TTS 系统适配问题，提出 PangolinTokenizer（最低词元率 0.485 tokens/字符）、Barbet（十亿参数繁中 LLM）和 BlueMagpie-TTS（基于 VoxCPM2）。CER 从 11.45% 降至 4.81%，WER 从 14.83% 降至 5.36%，65.6% 的盲听测试者偏好 BlueMagpie。",
+      "tags": ["TTS", "口音适配", "代码切换", "中文", "低资源"],
+      "highlight": true,
+      "links": []
+    },
+    {
+      "title": "TokAN: Accent Normalization Using Self-Supervised Speech Tokens",
+      "url": "https://arxiv.org/abs/2607.03928",
+      "date": "2026-07-04",
+      "authors": "Qibing Bai et al.",
+      "abstract": "提出基于离散语音 token 的口音归一化框架 TokAN，无需合成监督语音。使用自监督 VQ tokenizer + 自回归编解码器进行 token-to-token 转换，并用 GRPO 强化学习后训练。WER 从 12.40% 降至 9.23%（含 RL），适用于语音配音和直播等时长敏感场景。Submitted to IEEE TASLP。",
+      "tags": ["口音归一化", "ASR", "自监督", "强化学习"],
+      "highlight": false,
+      "links": []
+    },
+    {
+      "title": "Flow Matching-Based Speech Source Separation with Best-of-N Biometric Sampling",
+      "url": "https://arxiv.org/abs/2607.06088",
+      "date": "2026-07-07",
+      "authors": "Sergey Novoselov et al.",
+      "abstract": "提出条件流匹配语音分离方法，使用冻结说话人编码器定义源顺序并通过生物识别 best-of-N 采样进行候选选择和块级通道对齐。在下游 ASR（cpWER）和说话人验证（EER）任务中达到最低错误率。Accepted at ICML 2026 Workshop on ML for Audio。",
+      "tags": ["语音分离", "Flow Matching", "说话人识别", "ASR"],
+      "highlight": false,
+      "links": []
+    },
+    {
+      "title": "MMGenre: Benchmarking Singing Voice Synthesis across Multiple Musical Genres",
+      "url": "https://arxiv.org/abs/2607.06986",
+      "date": "2026-07-08",
+      "authors": "Wenhao Feng et al.",
+      "abstract": "引入 MMGenre——首个跨 10 大流派和 26 个亚流派的多流派歌声合成基准。发现现有 SVS 模型跨流派的声学特征高度相似，区分度弱；零样本流派适应收益有限，但轻量级流派特定继续训练带来显著提升。Accepted by Interspeech 2026。",
+      "tags": ["歌声合成", "SVS", "多流派", "基准测试"],
+      "highlight": true,
+      "links": [
+        {"label": "Demo", "url": "https://fengjin1117.github.io/mmgenre-demo/"}
+      ]
+    },
+    {
+      "title": "CARD: Cross-component Audio Representation Distillation for Encoder-Free Audio Captioning",
+      "url": "https://arxiv.org/abs/2607.04619",
+      "date": "2026-07-06",
+      "authors": "Ravi Shekhar et al.",
+      "abstract": "提出 CARD——无编码器音频字幕模型。通过跨组件蒸馏将预训练音频教师（CLAP-HTSAT）的知识分别注入投影器和 LLM。推理时无需编码器，仅 13.2M 参数的投影器即可驱动冻结 LLM，在 AudioCaps 上 CIDEr-D 达 55.4（编码器保留上限 66.4）。",
+      "tags": ["音频理解", "音频字幕", "知识蒸馏", "效率优化"],
+      "highlight": false,
+      "links": []
+    },
+    {
+      "title": "Doppelganger: Sound Effects and Their Synthetic Twins",
+      "url": "https://arxiv.org/abs/2607.04337",
+      "date": "2026-07-05",
+      "authors": "Elliott Ash",
+      "abstract": "引入 Doppelganger 基准——10,420 个真实声音效果与合成副本配对，跨 34 类日常声音。测试 8 种现成音频编码器的跨边界匹配能力。合成副本有 29% 被人类误判为真实，但基于生成器特定检测器可完美区分。代码、数据和模型已开源。",
+      "tags": ["音频生成", "声音合成", "基准测试", "真假检测"],
+      "highlight": false,
+      "links": [
+        {"label": "GitHub", "url": "https://github.com/elliottash/doppelganger"},
+        {"label": "Dataset", "url": "https://huggingface.co/datasets/elliottash/doppelganger"}
+      ]
+    },
+    {
+      "title": "Context-Aware ASR for Mandarin Technical Lectures",
+      "url": "https://arxiv.org/abs/2607.05058",
+      "date": "2026-07-06",
+      "authors": "Ho-Lam Chung et al.",
+      "abstract": "研究中文技术讲座中专业术语的 ASR 识别问题。提出无需外部参考的两阶段解码方法：从第一阶段的假设中提取高频术语作为术语表，第二阶段以此引导识别。在 Breeze-ASR-25 上术语召回率从 52.50% 提升至 62.05%，同时 CER 下降。提出术语中心评估指标，暴露 CER 掩盖的错误。",
+      "tags": ["ASR", "中文", "术语识别", "上下文感知"],
+      "highlight": false,
+      "links": []
+    },
+    {
+      "title": "DETECT-3B-Omni is Agnostic of Content and Demographics",
+      "url": "https://arxiv.org/abs/2607.03418",
+      "date": "2026-07-03",
+      "authors": "Nicolas Michael Müller et al.",
+      "abstract": "大规模研究 Resemble AI 的 DETECT-3B-Omni 深度伪造音频检测器的语义无关性。使用 10,240 个多样化美国英语样本和 8 种 AI 语音克隆系统，等效性测试显示任何两个人口统计组之间的准确率差异最多 2 个百分点（99% 置信度），证明检测器不基于说话内容或说话人身份做判断。",
+      "tags": ["深度伪造检测", "音频安全", "公平性"],
+      "highlight": false,
+      "links": []
+    }
+  ],
+  "news": [
+    {
+      "title": "小米发布 MiMo-V2.5-ASR 全链路语音模型听觉基座",
+      "url": "https://en.wedoany.com/shortnews/365884.html",
+      "summary": "7月7日，小米推出 MiMo-V2.5-ASR 全链路语音模型听觉基座，API 已开放。覆盖方言（粤语、吴语、闽南语、四川话等）、中英代码切换识别、歌曲识别、强噪声鲁棒识别、多说话人场景。原生标点输出，国内定价 0.5 元/小时，大幅降低长音频转录成本。"
+    },
+    {
+      "title": "Hugging Face 与 Cerebras 联合发布开源端到端语音对话管线",
+      "url": "https://letsdatascience.com/news/hugging-face-and-cerebras-launch-open-speech-to-speech-ai-pi-44b79eab",
+      "summary": "7月1日，Hugging Face 与 Cerebras 开源了完整的语音到语音 AI 管线，链式连接 Nvidia Parakeet（语音识别）、Google DeepMind Gemma 4 31B（语言理解与推理）和语音合成模块。全部开源可自部署，标志着开源语音 AI 全栈技术的里程碑进展。"
+    }
+  ],
+  "stats": {
+    "total_papers": 11,
+    "total_news": 2,
+    "highlights": 5,
+    "cover_date": "2026-07-01 ~ 2026-07-08",
+    "sources": ["arXiv eess.AS", "arXiv cs.SD", "Web Search"]
+  }
+}
