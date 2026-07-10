@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-10</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-10</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月10日 (周五) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">11</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.07148" target="_blank">DuplexPO: Decoupling Conversational Dynamics in Full-Duplex Spoken Models through Reinforcement Learning</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-08</span><span>👥 Yuxin Li et al.</span></div>
+      <div class="abstract">提出 DuplexPO，一个强化学习框架，将全双工对话中「何时说」与「说什么」解耦。通过因子化对话动态奖励（FCDR）实现细粒度时序信用分配，优化轮次发起、反向通道（backchannel）、让步和参与度。在大幅提升全双工行为（及时backchannel、平滑轮换、打断处理）的同时保持了强大的推理和指令遵循能力。</div>
+      <div class="tags"><span class="tag">Full-Duplex</span><span class="tag">Reinforcement Learning</span><span class="tag">Speech Dialogue</span><span class="tag">GRPO</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.07148" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.07148" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.06461" target="_blank">WordVoice: Explicit and Decoupled Multi-Dimensional Word-Level Control for LLM-Based TTS</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-07</span><span>👥 Sihang Nie et al.</span></div>
+      <div class="abstract">提出 WordVoice 框架，实现 LLM 基 TTS 的精确词级控制。构建 WordVoice-5A 数据集（4.7k小时双语，含五大维度词级标注：时长/边界/能量/音调/语调）。在 LLM 内引入 bound-token 机制显式声学规划，并通过精细声学调制模块桥接离散 token 与连续波形的分辨率鸿沟。代码和音频样本开源。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">LLM-based TTS</span><span class="tag">Controllable</span><span class="tag">Fine-grained Control</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.06461" target="_blank">🔗 arXiv</a> <a href="https://xxh333.github.io/wordvoice-demo/" target="_blank">🔗 Demo</a> <a href="https://arxiv.org/pdf/2607.06461" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.07985" target="_blank">A Reliability Assessment of LALM Audio Judges for Full-Duplex Voice Agents</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-08</span><span>👥 Armaan Sayyad et al. (Google)</span></div>
+      <div class="abstract">系统评估 Gemini 系列模型作为全双工语音 Agent 音频裁判的可靠性。在 152 个全双工对话的 8 个生产维度上，Gemini 2.5 Flash 与人类评分者在 5/8 维度上 Spearman 相关系数偏差不超过 0.07。Gemini 3.5 Flash 在 8/8 维度上进一步改善了简单一致性。研究提供了部署 LALM 替代或辅助人类评分的实证基础。</div>
+      <div class="tags"><span class="tag">Full-Duplex</span><span class="tag">Voice Agent</span><span class="tag">Evaluation</span><span class="tag">Gemini</span><span class="tag">LALM</span><span class="tag">Google</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.07985" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.07985" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.04941" target="_blank">DuplexChat: Constructing Speaker-Separated Full-Duplex Dialogue Speech at Scale</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-07</span><span>👥 Wataru Nakata, Yuki Saito, Hiroshi Saruwatari (University of Tokyo / AIST)</span></div>
+      <div class="abstract">东京大学和 AIST 开源大规模全双工对话语音语料库 DuplexChat（41.5 万小时）及生成管道 DuplexChat-Pipe。从公开播客 RSS feed 中提取说话人分离的全双工对话语音，为全双工口语对话语言模型的训练提供必要数据基础。是数据、方法、评测三位一体推进全双工对话的关键资源。</div>
+      <div class="tags"><span class="tag">Full-Duplex</span><span class="tag">Dialogue Dataset</span><span class="tag">Speech Corpus</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.04941" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.04941" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.07579" target="_blank">Text-Independent Speaker Verification Using Discrete Audio Tokens</a></h4>
+      <div class="meta"><span>📅 2026-07-08</span><span>👥 Zheng Liang et al.</span></div>
+      <div class="abstract">针对神经音频编解码器离散表示在说话人验证中持续弱于传统频谱特征的问题，提出 Cross-Feature Knowledge Distillation (CFKD) 框架。通过让编解码器学生模型模仿 Fbank 教师模型的嵌入空间，显著提升了基于离散 token 的 ASV 性能，接近 Fbank 教师准确率。已被 Interspeech 2026 接收。</div>
+      <div class="tags"><span class="tag">Speaker Verification</span><span class="tag">Discrete Tokens</span><span class="tag">Knowledge Distillation</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.07579" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.07579" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.06827" target="_blank">SpeechKV: Compress the Cache, Not the Speech Embedding — KV Compression for Efficient Speech LLMs</a></h4>
+      <div class="meta"><span>📅 2026-07-07</span><span>👥 Ke-Han Lu et al.</span></div>
+      <div class="abstract">针对语音 LLM 中语音序列远长于文本导致解码瓶颈的问题，提出 SpeechKV：对 LLM 内部语音 token 的 KV 缓存进行学习池化，而非在 adapter 层压缩。71K 小时语音训练后，在保持或略超非压缩基线性能的同时，实现至少 1.49 倍解码加速（随音频长度缩放），在域外实体识别和 OpenASR 上分别有 6.6% 和 2.3% 相对提升。</div>
+      <div class="tags"><span class="tag">Speech LLM</span><span class="tag">KV Cache Compression</span><span class="tag">Efficient Inference</span><span class="tag">SLT2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.06827" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.06827" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.08371" target="_blank">On the Role of Conversational Timing in Synthetic Training Data for ASR</a></h4>
+      <div class="meta"><span>📅 2026-07-09</span><span>👥 Máté Gedeon et al.</span></div>
+      <div class="abstract">首次将对话时间属性作为可控训练变量研究。使用指数偏斜族参数化停顿和重叠时间分布，通过 Latin hypercube sampling 和多目标贝叶斯优化探索四维参数空间。发现更高的重叠暴露与更低 cpWER 相关，而更长和更多变的间隙则与更高 cpWER 相关，揭示了合成对话训练数据中重叠-间隙的权衡。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Conversational Speech</span><span class="tag">Synthetic Data</span><span class="tag">Bayesian Optimization</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.08371" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.08371" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.08586" target="_blank">Why Do You Say It Like That? A Phoneme-Level Framework for Explainable Speech Deepfake Detection</a></h4>
+      <div class="meta"><span>📅 2026-07-09</span><span>👥 Anna Taylor et al.</span></div>
+      <div class="abstract">提出音素级分析框架用于可解释语音深伪检测。基于 Grad-CAM 和语音识别生成对齐音素和停顿的显著性图，揭示攻击和说话人依赖的语音线索。在 ASVspoof 5 上达到可比检测性能的同时提供跨说话人和欺骗条件的语言学解释。</div>
+      <div class="tags"><span class="tag">Deepfake Detection</span><span class="tag">Explainable AI</span><span class="tag">Phoneme-Level</span><span class="tag">ASVspoof 5</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.08586" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.08586" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.06892" target="_blank">UBG-Net: Uncertainty-aware Bayesian Gating Network for Robust Audio-Visual Speech Recognition</a></h4>
+      <div class="meta"><span>📅 2026-07-08</span><span>👥 Jinjie Fu et al.</span></div>
+      <div class="abstract">提出 UBG-Net，统一的贝叶斯门控不确定性建模框架用于鲁棒音视频语音识别。通过 MUBF 机制将信号级偶然不确定性注入贝叶斯网络建模认知不确定性，结合 DUHV 推理策略从 MC 采样中选择最优转录。在 AVCocktail 和 LRS2 上超越 SOTA。</div>
+      <div class="tags"><span class="tag">AV-ASR</span><span class="tag">Bayesian Network</span><span class="tag">Uncertainty Modeling</span><span class="tag">Robust Recognition</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.06892" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.06892" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.06179" target="_blank">TriA Pipeline: A Large-Scale Automatic Audio Annotation Pipeline for Audio Classification</a></h4>
+      <div class="meta"><span>📅 2026-07-07</span><span>👥 Hong Lyu et al.</span></div>
+      <div class="abstract">提出 TriA Pipeline，自动音频标注管道，将各场景音频高效转化为高质量训练数据。构建 TriA 数据集超 2130 小时，覆盖 431 个音频类别。在三个家居 AC 任务上，TriA_GK 子集带来平均 3.97% 准确率和 3.35% Macro-F1 的相对提升。代码开源，已被 Interspeech 2026 接收。</div>
+      <div class="tags"><span class="tag">Audio Classification</span><span class="tag">Annotation Pipeline</span><span class="tag">Interspeech 2026</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.06179" target="_blank">🔗 arXiv</a> <a href="https://github.com/huanxian/TriA" target="_blank">🔗 GitHub</a> <a href="https://arxiv.org/pdf/2607.06179" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.08714" target="_blank">Multimodal Digital Biomarker for Asthma: Complementary Roles of Vocal, Clinical and Demographic Factors</a></h4>
+      <div class="meta"><span>📅 2026-07-09</span><span>👥 Vladimir Despotovic et al.</span></div>
+      <div class="abstract">提出多模态 Mixture-of-Experts 框架用于哮喘检测，自适应融合声学嵌入（持续元音和朗读任务）与结构化临床数据。在 1218 例匹配队列上 AUROC 达 0.85，超越单模态方法。自适应门控分析揭示：症状较重的参与者更多依赖音频特征。支持使用智能手机采集录音进行可扩展哮喘筛查。</div>
+      <div class="tags"><span class="tag">Health Audio</span><span class="tag">Multimodal</span><span class="tag">Digital Biomarker</span><span class="tag">MoE</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.08714" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.08714" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>🚨 OpenAI 发布 GPT-Live 全双工语音模型 — ChatGPT 语音交互进入真人对话时代</h4>
+      <p>7月8日，OpenAI 正式发布新一代全双工语音模型 GPT-Live-1 和 GPT-Live-1 mini。核心突破：原生全双工架构，可同时听与说，支持自然打断、停顿理解、实时翻译，能无缝调用 GPT-5.5 后台完成复杂推理。每周已有 1.5 亿人通过 ChatGPT 语音对话。新模型在愉悦度评分（75.5 分）远超上一代 ChatGPT 语音，可直接替代现有语音体验，面向全球用户开放。这标志着语音 AI 进入 real-time full-duplex 新时代。 <a href="https://openai.com/index/introducing-gpt-live/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>🐦 Grok Voice 大更新：xAI 推出 21 个新声音 + 语音克隆 API</h4>
+      <p>7 月 6 日，xAI 向 Grok Voice 推送重大更新：21 个全新旗舰声音（覆盖客服、角色、评论、广告、教育五大场景），支持从 120 秒参考音频进行语音克隆，以及 4 种语音传递标签（pause/whisper/emphasis/laughter）实现精确语速和语调控制。所有功能同时在 TTS API、Realtime API 和 Voice Agent Builder 中可用，支持 25+ 语言。 <a href="https://chatforest.com/builders-log/grok-voice-21-new-voices-voice-cloning-speech-tags-july-2026/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>OpenAI 发布 GPT-Realtime-2.1 系列语音模型</h4>
+      <p>7 月 6 日，OpenAI 发布 gpt-realtime-2.1 和 gpt-realtime-2.1-mini，在 Realtime API 语音模型上降低至少 25% p95 延迟。同时 mini 系列新增推理和工具调用能力，保持原 mini 系列定价不变。该更新的 API 级改进为 GPT-Live 消费端产品的架构基础之一。 <a href="https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>DuplexChat：东京大学开源 41.5 万小时全双工对话语音语料库</h4>
+      <p>东京大学和 AIST 发布 DuplexChat-Pipe 开源管道和 DuplexChat 语料库，从公开播客 RSS feed 提取 41.5 万小时说话人分离的全双工对话语音。这是迄今为止最大规模的全双工口语对话数据集，补上了全双工对话模型训练最关键的数据缺口。 <a href="https://arxiv.org/abs/2607.04941" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-10') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+{
+  "papers": [
+    {
+      "title": "DuplexPO: Decoupling Conversational Dynamics in Full-Duplex Spoken Models through Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2607.07148",
+      "date": "2026-07-08",
+      "authors": "Yuxin Li et al.",
+      "abstract": "提出 DuplexPO，一个强化学习框架，将全双工对话中「何时说」与「说什么」解耦。通过因子化对话动态奖励（FCDR）实现细粒度时序信用分配，优化轮次发起、反向通道（backchannel）、让步和参与度。在大幅提升全双工行为（及时backchannel、平滑轮换、打断处理）的同时保持了强大的推理和指令遵循能力。",
+      "tags": ["Full-Duplex", "Reinforcement Learning", "Speech Dialogue", "GRPO"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.07148"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.07148"}]
+    },
+    {
+      "title": "WordVoice: Explicit and Decoupled Multi-Dimensional Word-Level Control for LLM-Based TTS",
+      "url": "https://arxiv.org/abs/2607.06461",
+      "date": "2026-07-07",
+      "authors": "Sihang Nie et al.",
+      "abstract": "提出 WordVoice 框架，实现 LLM 基 TTS 的精确词级控制。构建 WordVoice-5A 数据集（4.7k小时双语，含五大维度词级标注：时长/边界/能量/音调/语调）。在 LLM 内引入 bound-token 机制显式声学规划，并通过精细声学调制模块桥接离散 token 与连续波形的分辨率鸿沟。代码和音频样本开源。",
+      "tags": ["TTS", "LLM-based TTS", "Controllable", "Fine-grained Control", "Open Source"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.06461"}, {"label": "Demo", "url": "https://xxh333.github.io/wordvoice-demo/"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.06461"}]
+    },
+    {
+      "title": "A Reliability Assessment of LALM Audio Judges for Full-Duplex Voice Agents",
+      "url": "https://arxiv.org/abs/2607.07985",
+      "date": "2026-07-08",
+      "authors": "Armaan Sayyad et al. (Google)",
+      "abstract": "系统评估 Gemini 系列模型作为全双工语音 Agent 音频裁判的可靠性。在 152 个全双工对话的 8 个生产维度上，Gemini 2.5 Flash 与人类评分者在 5/8 维度上 Spearman 相关系数偏差不超过 0.07。Gemini 3.5 Flash 在 8/8 维度上进一步改善了简单一致性。研究提供了部署 LALM 替代或辅助人类评分的实证基础。",
+      "tags": ["Full-Duplex", "Voice Agent", "Evaluation", "Gemini", "LALM", "Google"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.07985"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.07985"}]
+    },
+    {
+      "title": "Text-Independent Speaker Verification Using Discrete Audio Tokens",
+      "url": "https://arxiv.org/abs/2607.07579",
+      "date": "2026-07-08",
+      "authors": "Zheng Liang et al.",
+      "abstract": "针对神经音频编解码器离散表示在说话人验证中持续弱于传统频谱特征的问题，提出 Cross-Feature Knowledge Distillation (CFKD) 框架。通过让编解码器学生模型模仿 Fbank 教师模型的嵌入空间，显著提升了基于离散 token 的 ASV 性能，接近 Fbank 教师准确率。已被 Interspeech 2026 接收。",
+      "tags": ["Speaker Verification", "Discrete Tokens", "Knowledge Distillation", "Interspeech 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.07579"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.07579"}]
+    },
+    {
+      "title": "SpeechKV: Compress the Cache, Not the Speech Embedding — KV Compression for Efficient Speech LLMs",
+      "url": "https://arxiv.org/abs/2607.06827",
+      "date": "2026-07-07",
+      "authors": "Ke-Han Lu et al.",
+      "abstract": "针对语音 LLM 中语音序列远长于文本导致解码瓶颈的问题，提出 SpeechKV：对 LLM 内部语音 token 的 KV 缓存进行学习池化，而非在 adapter 层压缩。71K 小时语音训练后，在保持或略超非压缩基线性能的同时，实现至少 1.49 倍解码加速（随音频长度缩放），在域外实体识别和 OpenASR 上分别有 6.6% 和 2.3% 相对提升。",
+      "tags": ["Speech LLM", "KV Cache Compression", "Efficient Inference", "SLT2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.06827"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.06827"}]
+    },
+    {
+      "title": "On the Role of Conversational Timing in Synthetic Training Data for ASR",
+      "url": "https://arxiv.org/abs/2607.08371",
+      "date": "2026-07-09",
+      "authors": "Máté Gedeon et al.",
+      "abstract": "首次将对话时间属性作为可控训练变量研究。使用指数偏斜族参数化停顿和重叠时间分布，通过 Latin hypercube sampling 和多目标贝叶斯优化探索四维参数空间。发现更高的重叠暴露与更低 cpWER 相关，而更长和更多变的间隙则与更高 cpWER 相关，揭示了合成对话训练数据中重叠-间隙的权衡。",
+      "tags": ["ASR", "Conversational Speech", "Synthetic Data", "Bayesian Optimization"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.08371"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.08371"}]
+    },
+    {
+      "title": "Why Do You Say It Like That? A Phoneme-Level Framework for Explainable Speech Deepfake Detection",
+      "url": "https://arxiv.org/abs/2607.08586",
+      "date": "2026-07-09",
+      "authors": "Anna Taylor et al.",
+      "abstract": "提出音素级分析框架用于可解释语音深伪检测。基于 Grad-CAM 和语音识别生成对齐音素和停顿的显著性图，揭示攻击和说话人依赖的语音线索。在 ASVspoof 5 上达到可比检测性能的同时提供跨说话人和欺骗条件的语言学解释。",
+      "tags": ["Deepfake Detection", "Explainable AI", "Phoneme-Level", "ASVspoof 5"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.08586"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.08586"}]
+    },
+    {
+      "title": "UBG-Net: Uncertainty-aware Bayesian Gating Network for Robust Audio-Visual Speech Recognition",
+      "url": "https://arxiv.org/abs/2607.06892",
+      "date": "2026-07-08",
+      "authors": "Jinjie Fu et al.",
+      "abstract": "提出 UBG-Net，统一的贝叶斯门控不确定性建模框架用于鲁棒音视频语音识别。通过 MUBF 机制将信号级偶然不确定性注入贝叶斯网络建模认知不确定性，结合 DUHV 推理策略从 MC 采样中选择最优转录。在 AVCocktail 和 LRS2 上超越 SOTA。",
+      "tags": ["AV-ASR", "Bayesian Network", "Uncertainty Modeling", "Robust Recognition"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.06892"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.06892"}]
+    },
+    {
+      "title": "DuplexChat: Constructing Speaker-Separated Full-Duplex Dialogue Speech at Scale",
+      "url": "https://arxiv.org/abs/2607.04941",
+      "date": "2026-07-07",
+      "authors": "Wataru Nakata, Yuki Saito, Hiroshi Saruwatari (University of Tokyo / AIST)",
+      "abstract": "东京大学和 AIST 开源大规模全双工对话语音语料库 DuplexChat（41.5 万小时）及生成管道 DuplexChat-Pipe。从公开播客 RSS feed 中提取说话人分离的全双工对话语音，为全双工口语对话语言模型的训练提供必要数据基础。是数据、方法、评测三位一体推进全双工对话的关键资源。",
+      "tags": ["Full-Duplex", "Dialogue Dataset", "Speech Corpus", "Open Source"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.04941"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.04941"}]
+    },
+    {
+      "title": "TriA Pipeline: A Large-Scale Automatic Audio Annotation Pipeline for Audio Classification",
+      "url": "https://arxiv.org/abs/2607.06179",
+      "date": "2026-07-07",
+      "authors": "Hong Lyu et al.",
+      "abstract": "提出 TriA Pipeline，自动音频标注管道，将各场景音频高效转化为高质量训练数据。构建 TriA 数据集超 2130 小时，覆盖 431 个音频类别。在三个家居 AC 任务上，TriA_GK 子集带来平均 3.97% 准确率和 3.35% Macro-F1 的相对提升。代码开源，已被 Interspeech 2026 接收。",
+      "tags": ["Audio Classification", "Annotation Pipeline", "Interspeech 2026", "Open Source"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.06179"}, {"label": "GitHub", "url": "https://github.com/huanxian/TriA"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.06179"}]
+    },
+    {
+      "title": "Multimodal Digital Biomarker for Asthma: Complementary Roles of Vocal, Clinical and Demographic Factors",
+      "url": "https://arxiv.org/abs/2607.08714",
+      "date": "2026-07-09",
+      "authors": "Vladimir Despotovic et al.",
+      "abstract": "提出多模态 Mixture-of-Experts 框架用于哮喘检测，自适应融合声学嵌入（持续元音和朗读任务）与结构化临床数据。在 1218 例匹配队列上 AUROC 达 0.85，超越单模态方法。自适应门控分析揭示：症状较重的参与者更多依赖音频特征。支持使用智能手机采集录音进行可扩展哮喘筛查。",
+      "tags": ["Health Audio", "Multimodal", "Digital Biomarker", "MoE"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.08714"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.08714"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "🚨 OpenAI 发布 GPT-Live 全双工语音模型 — ChatGPT 语音交互进入真人对话时代",
+      "url": "https://openai.com/index/introducing-gpt-live/",
+      "summary": "7月8日，OpenAI 正式发布新一代全双工语音模型 GPT-Live-1 和 GPT-Live-1 mini。核心突破：原生全双工架构，可同时听与说，支持自然打断、停顿理解、实时翻译，能无缝调用 GPT-5.5 后台完成复杂推理。每周已有 1.5 亿人通过 ChatGPT 语音对话。新模型在愉悦度评分（75.5 分）远超上一代 ChatGPT 语音，可直接替代现有语音体验，面向全球用户开放。这标志着语音 AI 进入 real-time full-duplex 新时代。"
+    },
+    {
+      "title": "🐦 Grok Voice 大更新：xAI 推出 21 个新声音 + 语音克隆 API",
+      "url": "https://chatforest.com/builders-log/grok-voice-21-new-voices-voice-cloning-speech-tags-july-2026/",
+      "summary": "7 月 6 日，xAI 向 Grok Voice 推送重大更新：21 个全新旗舰声音（覆盖客服、角色、评论、广告、教育五大场景），支持从 120 秒参考音频进行语音克隆，以及 4 种语音传递标签（pause/whisper/emphasis/laughter）实现精确语速和语调控制。所有功能同时在 TTS API、Realtime API 和 Voice Agent Builder 中可用，支持 25+ 语言。"
+    },
+    {
+      "title": "OpenAI 发布 GPT-Realtime-2.1 系列语音模型",
+      "url": "https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/",
+      "summary": "7 月 6 日，OpenAI 发布 gpt-realtime-2.1 和 gpt-realtime-2.1-mini，在 Realtime API 语音模型上降低至少 25% p95 延迟。同时 mini 系列新增推理和工具调用能力，保持原 mini 系列定价不变。该更新的 API 级改进为 GPT-Live 消费端产品的架构基础之一。"
+    },
+    {
+      "title": "DuplexChat：东京大学开源 41.5 万小时全双工对话语音语料库",
+      "url": "https://arxiv.org/abs/2607.04941",
+      "summary": "东京大学和 AIST 发布 DuplexChat-Pipe 开源管道和 DuplexChat 语料库，从公开播客 RSS feed 提取 41.5 万小时说话人分离的全双工对话语音。这是迄今为止最大规模的全双工口语对话数据集，补上了全双工对话模型训练最关键的数据缺口。"
+    }
+  ]
+}
