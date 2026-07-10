@@ -1,0 +1,61 @@
+{
+  "papers": [
+    {
+      "title": "On the Role of Conversational Timing in Synthetic Training Data for ASR",
+      "url": "https://arxiv.org/abs/2607.08371",
+      "date": "2026-07-09",
+      "authors": "Máté Gedeon et al.",
+      "abstract": "研究对话时序作为ASR合成训练数据中的可控训练变量。参数化停顿和重叠时序分布，利用拉丁超立方采样和多目标贝叶斯优化探索四维参数空间。结果表明下游ASR行为更直接地受诱导时序统计量解释而非原始模拟器坐标；更高重叠暴露与更低cpWER相关，揭示合成对话训练数据中的重叠-间隔权衡。",
+      "tags": ["ASR", "Conversational Speech", "Synthetic Data", "Timing"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.08371"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.08371"}]
+    },
+    {
+      "title": "Why Do You Say It Like That? A Phoneme-Level Framework for Explainable Speech Deepfake Detection",
+      "url": "https://arxiv.org/abs/2607.08586",
+      "date": "2026-07-09",
+      "authors": "Anna Taylor et al.",
+      "abstract": "提出音素级分析框架，将语音深度伪造检测模型预测与可测量语音单元关联。结合 Grad-CAM 与语音识别生成与音素和停顿对齐的显著性图，揭示与攻击和说话人相关的统计显著语音线索。ASVspoof 5 实验提供跨说话人和欺骗条件的语言学可解释性。",
+      "tags": ["Speech Deepfake Detection", "Explainable AI", "Phoneme Analysis", "ASVspoof"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.08586"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.08586"}]
+    },
+    {
+      "title": "Multimodal Digital Biomarker for Asthma: Complementary Roles of Vocal, Clinical and Demographic Factors",
+      "url": "https://arxiv.org/abs/2607.08714",
+      "date": "2026-07-09",
+      "authors": "Vladimir Despotovic et al.",
+      "abstract": "提出多模态混合专家框架用于哮喘检测，自适应结合持续元音和朗读段落的声学嵌入与结构化临床和人口统计数据的多模态信息。在 1,218 例匹配队列上达到 AUROC 0.85，超越单模态和双模态方法。通过智能手机录音实现可扩展的哮喘筛查。",
+      "tags": ["Vocal Biomarker", "Healthcare Audio", "Mixture-of-Experts"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.08714"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.08714"}]
+    },
+    {
+      "title": "A Reliability Assessment of LALM Audio Judges for Full-Duplex Voice Agents",
+      "url": "https://arxiv.org/abs/2607.07985",
+      "date": "2026-07-08",
+      "authors": "Armaan Sayyad et al.",
+      "abstract": "对 Gemini 模型作为音频评委评估全双工 Agent 对话的可靠性进行实证研究。测试 Gemini 2.5 Flash、3.5 Flash 和 3.1 Pro 三个模型，在 8 个生产维度上对 152 个全双工会话进行评估。Gemini 2.5 Flash 在 5/8 维度上与人类评估者达到可比 Spearman 相关性（差异 ≤0.07），用 LALM 替代人工评估可节省约两个数量级的成本。",
+      "tags": ["Full-Duplex", "Voice Agent", "Audio Evaluation", "Gemini", "LALM"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.07985"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.07985"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "OpenAI GPT-Live 发布后续：全双工语音模型引发行业热议",
+      "url": "https://www.shengwang.cn/blog/blogdetail/gpt-live-voice-model/",
+      "summary": "OpenAI 于 7 月 8 日发布的 GPT-Live 持续引发关注。声网、IT之家、36氪等多家媒体深度解读全双工架构的技术突破：同时听与说、支持自然插话、后台委托 GPT-5.5 推理。GPT-Live 已向全球 ChatGPT 用户推送，覆盖 iOS、Android 和 Web。"
+    },
+    {
+      "title": "OpenAI Realtime API 发布 GPT-Realtime-2.1：延迟再降 25%",
+      "url": "https://letsdatascience.com/news/openai-releases-gpt-realtime-21-voice-models-with-lower-late-0fd2f599",
+      "summary": "OpenAI 于 7 月 6 日发布 gpt-realtime-2.1 和 gpt-realtime-2.1-mini，通过改进缓存将语音模型 p95 延迟降低 25%，为开发者带来更低延迟的实时语音 API 体验。"
+    },
+    {
+      "title": "Gemini 音频评估能力验证：LALM 可替代人工评估全双工语音 Agent",
+      "url": "https://arxiv.org/abs/2607.07985",
+      "summary": "arXiv 新论文（2607.07985）对 Gemini 2.5/3.5/3.1 系列模型作为全双工语音 Agent 自动评估器的可靠性进行了大规模实证，发现 Gemini 2.5 Flash 在多数维度上可与人类评估者匹敌，成本仅为人工的约百分之一。"
+    }
+  ]
+}
