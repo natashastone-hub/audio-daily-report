@@ -1,0 +1,56 @@
+{
+  "papers": [
+    {
+      "title": "A Reliability Assessment of LALM Audio Judges for Full-Duplex Voice Agents",
+      "url": "https://arxiv.org/abs/2607.07985",
+      "date": "2026-07-09",
+      "authors": "Armaan Sayyad et al. (Google)",
+      "abstract": "系统评估了Gemini系列模型(2.5 Flash/3.5 Flash/3.1 Pro)作为全双工语音对话评判者的可靠性。在209个立体声会话上对照3位人工评分员，覆盖8个生产维度的152个全双工会话和57个对抗性缺陷注入片段。Gemini 2.5 Flash在8个维度中的5个维度上Spearman rho与人工一致性偏差不超过0.07。发现全双工语音代理评估可从人工转向LALM，成本降低约两个数量级。同时警告模型切换需重新校准。",
+      "tags": ["Full-Duplex", "Voice Agent Evaluation", "Gemini", "LALM", "Google"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.07985"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.07985"}
+      ]
+    },
+    {
+      "title": "WordVoice: Explicit and Decoupled Multi-Dimensional Word-Level Control for LLM-Based TTS",
+      "url": "https://arxiv.org/abs/2607.06461",
+      "date": "2026-07-08",
+      "authors": "Sihang Nie et al. (华南理工大学)",
+      "abstract": "提出WordVoice框架实现LLM-TTS精细化词级控制。构建4.7k小时双语WordVoice-5A数据集，标注持续时长、边界、能量、音高和语调五个维度。引入bound-token机制实现显式「声学规划」过程，并增加声学调制模块弥合离散token与连续波形间的分辨率差距。实现词级别的解耦多维控制，适用于有声书朗读和视频配音场景。",
+      "tags": ["TTS", "LLM-Based TTS", "Word-Level Control", "Fine-Grained", "Acoustic Planning"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.06461"},
+        {"label": "Demo", "url": "https://xxh333.github.io/wordvoice-demo/"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.06461"}
+      ]
+    },
+    {
+      "title": "Multimodal Digital Biomarker for Asthma: Complementary Roles of Vocal, Clinical and Demographic Factors",
+      "url": "https://arxiv.org/abs/2607.08714",
+      "date": "2026-07-10",
+      "authors": "Vladimir Despotovic et al.",
+      "abstract": "提出多模态混合专家框架用于哮喘检测，结合持续元音发声和朗读段落的声学嵌入与结构化临床数据。在1218例哮喘病例和健康对照组上AUROC达0.85。自适应门控分析显示症状较重者更依赖音频特征，为基于智能手机录音的可扩展哮喘筛查提供了基础。",
+      "tags": ["Voice Biomarker", "Health", "Asthma Detection", "Multimodal"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.08714"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.08714"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "📊 行业深度：TTS可控性、效率与评估三大方向最新突破（12篇论文综述）",
+      "url": "https://scipapermill.com/2026/07/11/text-to-speech-unpacking-the-latest-breakthroughs-in-controllability-efficiency-and-evaluation/",
+      "summary": "7月11日SciPaperMill发表TTS领域深度综述，梳理12篇最新论文的三大方向：(1) 精细化控制 — WordVoice实现词级5维解耦控制；(2) 效率提升 — SR-FD损失让少步扩散TTS达到SOTA，DELTA-TTS通过LoRA将AR模型转为扩散LM实现3.3倍加速；(3) 评估方法论 — 揭示Best-of-N评估中的ASR家族偏差问题。涵盖低资源语言(Efik)、多模态统一(Audex)和语音到语音(PRIME-Speech)等前沿课题。"
+    },
+    {
+      "title": "🔊 Google 发布 LALM 全双工语音评判研究 — 用 Gemini 替代人工评估语音对话",
+      "url": "https://arxiv.org/abs/2607.07985",
+      "summary": "Google团队系统验证了用Gemini模型作为全双工语音代理对话的自动评判者。在8个生产维度上，Gemini 2.5 Flash与3位人工评分员的Spearman相关性在5/8维度上偏差不超过0.07。方法可将评估成本降低约两个数量级，为全双工语音产品的快速迭代提供了可扩展的评估方案。同时警告模型切换前必须重新校准。"
+    }
+  ]
+}
