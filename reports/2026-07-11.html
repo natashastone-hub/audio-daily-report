@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-11</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-11</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月11日 (周六) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">10</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">5</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.08256" target="_blank">Best-of-N TTS Evaluation is Confounded by ASR Family Alignment</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-09</span><span>👥 Taehyung Yu, Seongjae Kang</span></div>
+      <div class="abstract">揭示了Best-of-N TTS推理中的一个关键评估偏差：ASR验证器的表现严重依赖于评判时使用的ASR家族。同一家族的验证器-评判器组合能从oracle headroom中恢复2-3倍于跨家族组合的性能，尽管表征高度相似(CKA 0.978)。提出跨家族排名集成方法，在N=10时达到1.61% WER（相对F5-TTS降低12%），通过SIM-o/UTMOS验证无质量损失。已被ICML 2026 Workshop on ML for Audio接收。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Evaluation</span><span class="tag">Best-of-N</span><span class="tag">ASR Verifier</span><span class="tag">ICML 2026 Workshop</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.08256" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.08256" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.08526" target="_blank">A Quantized Native Runtime for On-Device Semantic Audio Generation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-09</span><span>👥 Matteo Spanio, Antonio Rodà</span></div>
+      <div class="abstract">提出aria——无依赖的原生运行时，可在普通GPU、纯CPU和Raspberry Pi 5上运行Stable Audio 3完整text-to-music管线。8-bit精度无质量损失，4-bit精度让12亿参数模型跑在8GB Pi上。开源并支持activation steering实现低成本内容控制。</div>
+      <div class="tags"><span class="tag">Audio Generation</span><span class="tag">Quantization</span><span class="tag">On-Device</span><span class="tag">Text-to-Music</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.08526" target="_blank">🔗 arXiv</a> <a href="https://github.com/matteospanio/aria" target="_blank">🔗 GitHub</a> <a href="https://arxiv.org/pdf/2607.08526" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.06054" target="_blank">BlueMagpie-TTS: A Token-Efficient Tokenizer, Language Model, and TTS for Taiwanese-Accent Code-Switching Speech</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-07</span><span>👥 Ho Lam Chung, Bo-Xuan Zheng, Cheng-Chieh Huang et al. (台大 李宏毅团队)</span></div>
+      <div class="abstract">从文本端自底向上解决台湾口音普通话TTS：PangolinTokenizer达到最低token率(0.485 tokens/char)，Barbet 10亿参数语言模型在14任务评测中排名第一。BlueMagpie-TTS将Barbet连接到VoxCPM2声学栈，CER从11.45%降至4.81%（降低58%），WER从14.83%降至5.36%（降低63.9%）。盲听测试65.6%偏好该模型。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Code-Switching</span><span class="tag">Taiwanese Mandarin</span><span class="tag">Token Efficiency</span><span class="tag">李宏毅</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.06054" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.06054" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.08371" target="_blank">On the Role of Conversational Timing in Synthetic Training Data for ASR</a></h4>
+      <div class="meta"><span>📅 2026-07-09</span><span>👥 Máté Gedeon, Péter Mihajlik</span></div>
+      <div class="abstract">首次将对话时间属性作为可控训练变量研究。使用指数偏斜族参数化停顿和重叠时间分布，通过Latin hypercube sampling和多目标贝叶斯优化探索四维参数空间。发现更高的重叠暴露降低cpWER，更长更变动的间隙增加cpWER，揭示了合成对话训练数据中重叠-间隙的权衡。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Conversational Speech</span><span class="tag">Synthetic Data</span><span class="tag">Bayesian Optimization</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.08371" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.08371" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.08645" target="_blank">It Takes Few to TANGO: A Quantized Distributed Model for Binaural Speech Enhancement</a></h4>
+      <div class="meta"><span>📅 2026-07-09</span><span>👥 Zahra Benslimane, Pierre Chouteau, Martyna Poreba, Fabrice Auzanneau, Michal Szczepanski, Fabian Chersi, Romain Serizel</span></div>
+      <div class="abstract">研究了TANGO分布式双耳语音增强系统的低精度推理。分析发现空间滤波阶段能补偿量化误差。基于此提出MN-TANGO简化模型，结合INT8量化、ERB压缩和分组循环层，最紧凑版本仅需4.65 MMAC/s和0.177 MB，适合资源受限设备。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Quantization</span><span class="tag">Binaural</span><span class="tag">On-Device</span><span class="tag">INT8</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.08645" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.08645" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.08586" target="_blank">Why Do You Say It Like That? A Phoneme-Level Framework for Explainable Speech Deepfake Detection</a></h4>
+      <div class="meta"><span>📅 2026-07-09</span><span>👥 Anna Taylor, Michele Panariello, Massimiliano Todisco, Chiara Galdi, Nicholas Evans, Driss Matrouf</span></div>
+      <div class="abstract">提出音素级分析框架用于可解释语音深伪检测。基于Grad-CAM和语音识别生成对齐音素和停顿的显著性图，揭示攻击和说话人依赖的语音线索。在ASVspoof 5上达到可比检测性能，同时提供跨说话人和欺骗条件的语言学解释。</div>
+      <div class="tags"><span class="tag">Deepfake Detection</span><span class="tag">Explainable AI</span><span class="tag">Phoneme-Level</span><span class="tag">ASVspoof 5</span><span class="tag">Audio Security</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.08586" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.08586" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.08545" target="_blank">Structural Bottlenecks on Frequency Representation in End-to-End Audio Models</a></h4>
+      <div class="meta"><span>📅 2026-07-09</span><span>👥 Nicole Cosme-Clifford</span></div>
+      <div class="abstract">通过理论分析和受控实验揭示SOTA步进卷积编码器的两个结构瓶颈：(1)将原语坍缩为别名等价类，限制表征能力；(2)限制学习滤波器的频率分辨率。发现31-35%坍缩率和10-35倍超限带宽。提出GLRF轻量后处理干预，将带宽从10-35倍降至1.5-3倍理论极限，保留重建质量并改善pitch控制。</div>
+      <div class="tags"><span class="tag">Audio Encoding</span><span class="tag">Frequency Analysis</span><span class="tag">Interpretability</span><span class="tag">Model Analysis</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.08545" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.08545" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.06088" target="_blank">Flow Matching-Based Speech Source Separation with Best-of-N Biometric Sampling</a></h4>
+      <div class="meta"><span>📅 2026-07-07</span><span>👥 Anastasia Zorkina, Alexandr Anikin, Nikita Khmelev, Anastasiya Korenevskaya, Sergey Novoselov, Vladimir Volokhov, Maxim Korenevsky, Yuriy Matveev</span></div>
+      <div class="abstract">提出基于条件流匹配的单通道语音分离方法，用冻结的说话人编码器定义源顺序并用于生物特征Best-of-N候选选择。Transformer U-Net变体在Libri2Mix上达到竞争性的SI-SDR，同时在ASR（cpWER）和说话人验证（EER）下游任务中取得最低错误率。ICML 2026 Workshop on ML for Audio接收。</div>
+      <div class="tags"><span class="tag">Speech Separation</span><span class="tag">Flow Matching</span><span class="tag">Biometric Sampling</span><span class="tag">ICML 2026 Workshop</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.06088" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.06088" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.06027" target="_blank">Fréchet Distance Loss on Speech Representations for Text-to-Speech Synthesis</a></h4>
+      <div class="meta"><span>📅 2026-07-07</span><span>👥 Ho-Lam Chung, Kuan-Po Huang, Bo-Ru Lu, Hung-yi Lee</span></div>
+      <div class="abstract">提出SR-FD（Speech Representation Fréchet Distance）损失，一种训练时分布正则化器用于少步扩散/流匹配TTS。在Seed-TTS英文任务上，4步SR-FD微调将基准WER从2.2279%降至1.4147%（降低36.5%），甚至超越原始10步基准。无需判别器，无推理时额外计算。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Flow Matching</span><span class="tag">Distributional Regularization</span><span class="tag">Fréchet Distance</span><span class="tag">李宏毅</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.06027" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.06027" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.06014" target="_blank">Escaping the Procrustean Bed: Groupwise Orthogonal Connectors for Audio-Language Models</a></h4>
+      <div class="meta"><span>📅 2026-07-07</span><span>👥 Ho-Lam Chung, Ke-Han Lu, Yi-Cheng Lin, Guan-Ting Lin, Yiming Chen, Hung-yi Lee</span></div>
+      <div class="abstract">发现音频-语言模型中Q-Former连接器的两个失败模式：输出向量坍缩到单一方向，不同说话人输出几乎无法区分导致副语言线索丢失。提出ORCA方法，将查询分组并约束输出指向不同方向，在SAKURA多跳推理上相对4B基准提升26.4分达75.2%，查询冗余降低12倍，跨说话人方差提升75倍。</div>
+      <div class="tags"><span class="tag">Audio-Language Model</span><span class="tag">Q-Former</span><span class="tag">Multi-hop Reasoning</span><span class="tag">Connector</span><span class="tag">李宏毅</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.06014" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.06014" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>🚨 OpenAI 发布 GPT-Live 全双工语音模型 — ChatGPT 语音交互进入真人对话时代</h4>
+      <p>7月8日OpenAI正式发布新一代全双工语音模型GPT-Live-1和GPT-Live-1 mini。核心突破：原生全双工架构同时听与说，支持自然打断、回馈短语（如「嗯哼」）、实时翻译、听写，能后台无缝调用GPT-5.5完成复杂推理和联网搜索。每周已有1.5亿人通过ChatGPT语音对话。GPT-Live-1面向付费用户，mini面向免费用户，覆盖Web/iOS/Android全平台。这标志着语音AI从半双工进入全双工时代。 <a href="https://openai.com/index/introducing-gpt-live/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Speechify Simba 3.2 登顶独立 TTS 排行榜 — 超越 ElevenLabs/OpenAI/Google</h4>
+      <p>7月8日，Speechify开发者平台的旗舰流式TTS模型Simba 3.2在独立评测平台Artificial Analysis TTS排行榜上排名第一，超越ElevenLabs、OpenAI、Google DeepMind等厂商的旗舰模型。定位为世界最佳实时语音模型，标志着第三方语音AI服务商的竞争力持续攀升。 <a href="https://www.prweb.com/releases/speechifys-simba-3-2-ranks-1-on-independent-artificial-analysis-tts-leaderboard-worlds-best-real-time-voice-model-above-elevenlabs-openai-google-deepmind--others-302819731.html" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>OpenAI GPT-5.6 系列正式 GA — 模型能力全面升级</h4>
+      <p>7月9日，OpenAI GPT-5.6系列模型正式面向所有用户开放（此前为限量预览）。各模型层次定位清晰，覆盖从轻量级到高性能的全场景需求，对GPT-Live等语音产品提供底层推理支持。 <a href="https://openai.com/index/gpt-5-6/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Hugging Face × Cerebras 开源全链条 Speech-to-Speech AI Pipeline</h4>
+      <p>7月1日，Hugging Face和Cerebras开源完整语音到语音AI管线，串联NVIDIA Parakeet ASR、Google DeepMind Gemma 4 31B推理和Hugging Face TTS，在Cerebras超快推理硬件上运行。虽然超出24小时窗口，但作为重要开源生态事件值得关注。 <a href="https://letsdatascience.com/news/hugging-face-and-cerebras-launch-open-speech-to-speech-ai-pi-44b79eab" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>aria：Stable Audio 3 量化原生运行时开源 — 1.2B模型跑在树莓派上</h4>
+      <p>同天论文对应的项目开源：aria是一个无Python/深度学习框架依赖的原生运行时，可在Raspberry Pi 5（8GB）上运行完整的Stable Audio 3 text-to-music管线。8-bit无质量损失，4-bit质量小幅下降但大幅压缩体积。还支持activation steering进行内容控制，是IoT音频生成场景的重要基础设施。 <a href="https://github.com/matteospanio/aria" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-11') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
