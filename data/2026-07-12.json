@@ -1,0 +1,143 @@
+{
+  "papers": [
+    {
+      "title": "A Reliability Assessment of LALM Audio Judges for Full-Duplex Voice Agents",
+      "url": "https://arxiv.org/abs/2607.07985",
+      "date": "2026-07-08",
+      "authors": "A. Sayyad, J. Emmons, S. Jones, T. Lin, H. Krishnan",
+      "abstract": "评估 Gemini 系列模型（2.5 Flash、3.5 Flash、3.1 Pro）作为全双工语音 Agent 對話的音頻評委的可靠性。直接從原始立體聲波形評分 152 段全雙工對話，覆蓋 13 種口音和條件，在 8 個生產維度上與 3 位校準人類評分員對標，發現在 5/8 維度上 LALM-人類 Spearman 相關性與人類間相關性偏差不超過 0.07。該研究為全雙工語音模型自動評估提供了實證基礎。",
+      "tags": ["Full-Duplex", "Voice Agent", "LALM", "Evaluation"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.07985"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.07985"}
+      ]
+    },
+    {
+      "title": "Why Do You Say It Like That? A Phoneme-Level Framework for Explainable Speech Deepfake Detection",
+      "url": "https://arxiv.org/abs/2607.08586",
+      "date": "2026-07-09",
+      "authors": "Anna Taylor, Michele Panariello, Massimiliano Todisco, Chiara Galdi, Nicholas Evans, Driss Matrouf",
+      "abstract": "提出音素級別的可解釋語音深度偽造檢測框架，利用 Grad-CAM 與語音識別結合生成與音素和停頓對齊的顯著性圖，揭示統計顯著的攻擊和說話人相關的語音偽造線索。在 ASVspoof 5 上展示了與同類架構相當的檢測性能，同時提供可被人類理解的語言學解釋。",
+      "tags": ["Speech Deepfake", "Explainable AI", "ASVspoof", "Phoneme-Level"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.08586"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.08586"}
+      ]
+    },
+    {
+      "title": "On the Role of Conversational Timing in Synthetic Training Data for ASR",
+      "url": "https://arxiv.org/abs/2607.08371",
+      "date": "2026-07-09",
+      "authors": "Máté Gedeon, Péter Mihajlik",
+      "abstract": "研究對話時間屬性（停頓、重疊分布）對合成多說話人對話訓練數據在 ASR 中的作用。通過指數傾斜族參數化時間分布，使用拉丁超立方採樣和多目標貝葉斯優化探索四維參數空間。發現更高的重疊暴露關聯更低的 cpWER，而更長且更可變的間隙關聯更高的 cpWER，揭示合成對話數據中的重疊-間隙權衡。",
+      "tags": ["ASR", "Conversational Timing", "Synthetic Data", "Bayesian Optimization"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.08371"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.08371"}
+      ]
+    },
+    {
+      "title": "Multimodal Digital Biomarker for Asthma: Complementary Roles of Vocal, Clinical and Demographic Factors",
+      "url": "https://arxiv.org/abs/2607.08714",
+      "date": "2026-07-09",
+      "authors": "Milena Despotovic, Abir Elbeji, Petr V. Nazarov, Guy Fagherazzi",
+      "abstract": "提出多模態混合專家框架用於哮喘檢測，自適應結合持續元音發聲和閱讀段落任務的聲學嵌入與結構化臨床人口統計數據。在 Colive Voice 研究的 1,218 例匹配隊列上，多模態模型達到 AUROC 0.85 和 Brier 分數 0.17，優於單模態和雙模態方法，展示智能手機收集語音錄音的可擴展篩查潛力。",
+      "tags": ["Audio Biomarker", "Healthcare", "Multimodal", "Mixture-of-Experts"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.08714"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.08714"}
+      ]
+    },
+    {
+      "title": "UBG-Net: An Uncertainty-aware Bayesian Gating Network for Robust Audio-Visual Speech Recognition",
+      "url": "https://arxiv.org/abs/2607.06892",
+      "date": "2026-07-08",
+      "authors": "Jinjie Fu et al.",
+      "abstract": "提出基於不確定性感知的貝葉斯門控網絡 UBG-Net，用於魯棒視聽語音識別。通過貝葉斯推理對視覺和音頻模態的不確定性進行建模，動態調整融合權重，在噪聲環境下顯著提升識別魯棒性。",
+      "tags": ["AV-ASR", "Bayesian", "Robust Recognition", "Multimodal"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.06892"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.06892"}
+      ]
+    },
+    {
+      "title": "COALA: Robust Contextualized Speech-Augmented Language Modeling for ASR via Contrastive Regularizer and Biasing Score Estimation",
+      "url": "https://arxiv.org/abs/2607.08117",
+      "date": "2026-07-09",
+      "authors": "Jhih-Rong Guo et al.",
+      "abstract": "提出 COALA 框架，通過對比正則化和偏置分數估計實現魯棒的上下文化語音增強語言建模，用於 ASR 的上下文偏置。在保持通用 ASR 精度的同時顯著提升對稀有詞和領域特定術語的識別能力。",
+      "tags": ["ASR", "Contextual Biasing", "Language Modeling", "Contrastive Learning"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.08117"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.08117"}
+      ]
+    },
+    {
+      "title": "TVTA: Trajectory-Aware Viseme-Guided Temporal Aggregation for Event-Based Lip Reading",
+      "url": "https://arxiv.org/abs/2607.08236",
+      "date": "2026-07-09",
+      "authors": "Jingrong Zheng et al.",
+      "abstract": "提出軌跡感知的音素引導時間聚合框架 TVTA，用於基於事件相機的唇讀。利用動態視覺傳感器的時間分辨率優勢，結合音素級視覺語言對齊，在低光照和快速運動場景下優於傳統幀基方法。",
+      "tags": ["Lip Reading", "Event Camera", "Visual Speech", "Temporal Aggregation"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.08236"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.08236"}
+      ]
+    },
+    {
+      "title": "Gradient-Based Speech-to-Text Alignment for Any ASR Model: From CTC to Speech LLMs",
+      "url": "https://arxiv.org/abs/2607.06831",
+      "date": "2026-07-07",
+      "authors": "Albert Zeyer et al.",
+      "abstract": "提出通用的基於梯度的語音到文本對齊方法，適用於從 CTC 到 Speech LLM 的任何 ASR 模型架構。無需模型修改即可獲得精確幀級對齊，為強制對齊和關鍵詞定位提供統一解決方案。",
+      "tags": ["ASR", "Alignment", "Speech LLM", "CTC"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.06831"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.06831"}
+      ]
+    },
+    {
+      "title": "Flow Matching-Based Speech Source Separation with Best-of-N Biometric Sampling",
+      "url": "https://arxiv.org/abs/2607.06088",
+      "date": "2026-07-07",
+      "authors": "Anastasia Zorkina et al.",
+      "abstract": "提出基於流匹配的語音源分離方法，結合 Best-of-N 生物特徵採樣技術，在多人重疊語音場景中實現高質量目標說話人提取。流匹配框架提供了比擴散模型更高效的採樣過程。",
+      "tags": ["Source Separation", "Flow Matching", "Speaker Extraction"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.06088"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.06088"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "GPT-Live 持续发酵：全双工语音模型的产业影响分析",
+      "url": "https://venturebeat.com/technology/openai-launches-gpt-live-a-full-duplex-voice-upgrade-that-lets-chatgpt-talk-more-like-a-person",
+      "summary": "OpenAI 本周发布 GPT-Live 全双工语音模型后引发行业震动，多家分析机构发布深度解读。GPT-Live 采用原生实时架构，支持打断、停顿理解、实时翻译、听写，后台无缝调用 GPT-5.5 完成复杂推理。标志着语音从\"功能\"到\"AI 入口\"的范式升级。"
+    },
+    {
+      "title": "千问发布实时语音识别模型 Fun-ASR-Realtime：支持30种语言与16种方言",
+      "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_5856a4ba08390665",
+      "summary": "7月6日千问大模型正式发布实时语音识别模型 Fun-ASR-Realtime，首字延迟控制在百毫秒级，中文平均字符准确率 88.42%，英文 91.58%。在影视飓风 100 小时直播中累计识别超 6 万条字幕，约 132 万字。对东南亚语言专项优化，识别准确率提升 20%。"
+    },
+    {
+      "title": "OpenAI 发布 gpt-realtime-2.1 系列语音模型：延迟降低 25%",
+      "url": "https://datanorth.ai/news/openai-releases-gpt-realtime-2-1-voice-models",
+      "summary": "7月6日 OpenAI 发布 gpt-realtime-2.1 和 gpt-realtime-2.1-mini，将实时语音 Agent 的 p95 延迟降低至少 25%。一周后的 GPT-Live 在此基础上进一步实现了全双工架构的重大升级。"
+    },
+    {
+      "title": "Gemini LALM 作为全双工语音 Agent 自动评委：评估可靠性获实证据支撑",
+      "url": "https://arxiv.org/abs/2607.07985",
+      "summary": "Google 研究团队发表论文验证 Gemini 系列模型作为全双工语音对话自动评分员的可靠性，在 152 段对话和 8 个维度上与人类评分员对标，发现成本仅为人类评分的百分之一，为语音 Agent 自动化评估树立新范式。"
+    }
+  ]
+}

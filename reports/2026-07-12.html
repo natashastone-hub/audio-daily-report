@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-12</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-12</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月12日 (周日) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">9</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.07985" target="_blank">A Reliability Assessment of LALM Audio Judges for Full-Duplex Voice Agents</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-08</span><span>👥 A. Sayyad, J. Emmons, S. Jones, T. Lin, H. Krishnan</span></div>
+      <div class="abstract">评估 Gemini 系列模型（2.5 Flash、3.5 Flash、3.1 Pro）作为全双工语音 Agent 對話的音頻評委的可靠性。直接從原始立體聲波形評分 152 段全雙工對話，覆蓋 13 種口音和條件，在 8 個生產維度上與 3 位校準人類評分員對標，發現在 5/8 維度上 LALM-人類 Spearman 相關性與人類間相關性偏差不超過 0.07。該研究為全雙工語音模型自動評估提供了實證基礎。</div>
+      <div class="tags"><span class="tag">Full-Duplex</span><span class="tag">Voice Agent</span><span class="tag">LALM</span><span class="tag">Evaluation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.07985" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.07985" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.08586" target="_blank">Why Do You Say It Like That? A Phoneme-Level Framework for Explainable Speech Deepfake Detection</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-09</span><span>👥 Anna Taylor, Michele Panariello, Massimiliano Todisco, Chiara Galdi, Nicholas Evans, Driss Matrouf</span></div>
+      <div class="abstract">提出音素級別的可解釋語音深度偽造檢測框架，利用 Grad-CAM 與語音識別結合生成與音素和停頓對齊的顯著性圖，揭示統計顯著的攻擊和說話人相關的語音偽造線索。在 ASVspoof 5 上展示了與同類架構相當的檢測性能，同時提供可被人類理解的語言學解釋。</div>
+      <div class="tags"><span class="tag">Speech Deepfake</span><span class="tag">Explainable AI</span><span class="tag">ASVspoof</span><span class="tag">Phoneme-Level</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.08586" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.08586" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.08371" target="_blank">On the Role of Conversational Timing in Synthetic Training Data for ASR</a></h4>
+      <div class="meta"><span>📅 2026-07-09</span><span>👥 Máté Gedeon, Péter Mihajlik</span></div>
+      <div class="abstract">研究對話時間屬性（停頓、重疊分布）對合成多說話人對話訓練數據在 ASR 中的作用。通過指數傾斜族參數化時間分布，使用拉丁超立方採樣和多目標貝葉斯優化探索四維參數空間。發現更高的重疊暴露關聯更低的 cpWER，而更長且更可變的間隙關聯更高的 cpWER，揭示合成對話數據中的重疊-間隙權衡。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Conversational Timing</span><span class="tag">Synthetic Data</span><span class="tag">Bayesian Optimization</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.08371" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.08371" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.08714" target="_blank">Multimodal Digital Biomarker for Asthma: Complementary Roles of Vocal, Clinical and Demographic Factors</a></h4>
+      <div class="meta"><span>📅 2026-07-09</span><span>👥 Milena Despotovic, Abir Elbeji, Petr V. Nazarov, Guy Fagherazzi</span></div>
+      <div class="abstract">提出多模態混合專家框架用於哮喘檢測，自適應結合持續元音發聲和閱讀段落任務的聲學嵌入與結構化臨床人口統計數據。在 Colive Voice 研究的 1,218 例匹配隊列上，多模態模型達到 AUROC 0.85 和 Brier 分數 0.17，優於單模態和雙模態方法，展示智能手機收集語音錄音的可擴展篩查潛力。</div>
+      <div class="tags"><span class="tag">Audio Biomarker</span><span class="tag">Healthcare</span><span class="tag">Multimodal</span><span class="tag">Mixture-of-Experts</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.08714" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.08714" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.06892" target="_blank">UBG-Net: An Uncertainty-aware Bayesian Gating Network for Robust Audio-Visual Speech Recognition</a></h4>
+      <div class="meta"><span>📅 2026-07-08</span><span>👥 Jinjie Fu et al.</span></div>
+      <div class="abstract">提出基於不確定性感知的貝葉斯門控網絡 UBG-Net，用於魯棒視聽語音識別。通過貝葉斯推理對視覺和音頻模態的不確定性進行建模，動態調整融合權重，在噪聲環境下顯著提升識別魯棒性。</div>
+      <div class="tags"><span class="tag">AV-ASR</span><span class="tag">Bayesian</span><span class="tag">Robust Recognition</span><span class="tag">Multimodal</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.06892" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.06892" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.08117" target="_blank">COALA: Robust Contextualized Speech-Augmented Language Modeling for ASR via Contrastive Regularizer and Biasing Score Estimation</a></h4>
+      <div class="meta"><span>📅 2026-07-09</span><span>👥 Jhih-Rong Guo et al.</span></div>
+      <div class="abstract">提出 COALA 框架，通過對比正則化和偏置分數估計實現魯棒的上下文化語音增強語言建模，用於 ASR 的上下文偏置。在保持通用 ASR 精度的同時顯著提升對稀有詞和領域特定術語的識別能力。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Contextual Biasing</span><span class="tag">Language Modeling</span><span class="tag">Contrastive Learning</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.08117" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.08117" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.08236" target="_blank">TVTA: Trajectory-Aware Viseme-Guided Temporal Aggregation for Event-Based Lip Reading</a></h4>
+      <div class="meta"><span>📅 2026-07-09</span><span>👥 Jingrong Zheng et al.</span></div>
+      <div class="abstract">提出軌跡感知的音素引導時間聚合框架 TVTA，用於基於事件相機的唇讀。利用動態視覺傳感器的時間分辨率優勢，結合音素級視覺語言對齊，在低光照和快速運動場景下優於傳統幀基方法。</div>
+      <div class="tags"><span class="tag">Lip Reading</span><span class="tag">Event Camera</span><span class="tag">Visual Speech</span><span class="tag">Temporal Aggregation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.08236" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.08236" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.06831" target="_blank">Gradient-Based Speech-to-Text Alignment for Any ASR Model: From CTC to Speech LLMs</a></h4>
+      <div class="meta"><span>📅 2026-07-07</span><span>👥 Albert Zeyer et al.</span></div>
+      <div class="abstract">提出通用的基於梯度的語音到文本對齊方法，適用於從 CTC 到 Speech LLM 的任何 ASR 模型架構。無需模型修改即可獲得精確幀級對齊，為強制對齊和關鍵詞定位提供統一解決方案。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Alignment</span><span class="tag">Speech LLM</span><span class="tag">CTC</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.06831" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.06831" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.06088" target="_blank">Flow Matching-Based Speech Source Separation with Best-of-N Biometric Sampling</a></h4>
+      <div class="meta"><span>📅 2026-07-07</span><span>👥 Anastasia Zorkina et al.</span></div>
+      <div class="abstract">提出基於流匹配的語音源分離方法，結合 Best-of-N 生物特徵採樣技術，在多人重疊語音場景中實現高質量目標說話人提取。流匹配框架提供了比擴散模型更高效的採樣過程。</div>
+      <div class="tags"><span class="tag">Source Separation</span><span class="tag">Flow Matching</span><span class="tag">Speaker Extraction</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.06088" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.06088" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>GPT-Live 持续发酵：全双工语音模型的产业影响分析</h4>
+      <p>OpenAI 本周发布 GPT-Live 全双工语音模型后引发行业震动，多家分析机构发布深度解读。GPT-Live 采用原生实时架构，支持打断、停顿理解、实时翻译、听写，后台无缝调用 GPT-5.5 完成复杂推理。标志着语音从"功能"到"AI 入口"的范式升级。 <a href="https://venturebeat.com/technology/openai-launches-gpt-live-a-full-duplex-voice-upgrade-that-lets-chatgpt-talk-more-like-a-person" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>千问发布实时语音识别模型 Fun-ASR-Realtime：支持30种语言与16种方言</h4>
+      <p>7月6日千问大模型正式发布实时语音识别模型 Fun-ASR-Realtime，首字延迟控制在百毫秒级，中文平均字符准确率 88.42%，英文 91.58%。在影视飓风 100 小时直播中累计识别超 6 万条字幕，约 132 万字。对东南亚语言专项优化，识别准确率提升 20%。 <a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_5856a4ba08390665" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>OpenAI 发布 gpt-realtime-2.1 系列语音模型：延迟降低 25%</h4>
+      <p>7月6日 OpenAI 发布 gpt-realtime-2.1 和 gpt-realtime-2.1-mini，将实时语音 Agent 的 p95 延迟降低至少 25%。一周后的 GPT-Live 在此基础上进一步实现了全双工架构的重大升级。 <a href="https://datanorth.ai/news/openai-releases-gpt-realtime-2-1-voice-models" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Gemini LALM 作为全双工语音 Agent 自动评委：评估可靠性获实证据支撑</h4>
+      <p>Google 研究团队发表论文验证 Gemini 系列模型作为全双工语音对话自动评分员的可靠性，在 152 段对话和 8 个维度上与人类评分员对标，发现成本仅为人类评分的百分之一，为语音 Agent 自动化评估树立新范式。 <a href="https://arxiv.org/abs/2607.07985" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-12') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
