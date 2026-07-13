@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-13</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-13</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月13日 (周一) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">4</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.09134" target="_blank">ReGenVoice: Hierarchical Multi-Prompt Representation Generation for Efficient Waveform Diffusion Models</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-10</span><span>👥 Ha-Yeong Choi et al.</span></div>
+      <div class="abstract">提出 ReGen 框架 —— 一种层次化多提示表示生成框架，在单个扩散模型内联合估计表示和数据的多个向量场。引入广义流匹配（GFM）改善条件流匹配的泛化能力。基于此构建 ReGenVoice，一个 LDM 基 TTS 模型，仅需 4 GPU 训练 1 天即可实现强语音清晰度和说话人相似度，推理 RTF 仅 0.08。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Diffusion</span><span class="tag">Flow Matching</span><span class="tag">Efficient Training</span><span class="tag">ICML 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.09134" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.09134" target="_blank">🔗 PDF</a> <a href="https://regenvoice.github.io/demo/" target="_blank">🔗 Demo</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.09001" target="_blank">Optimal Transport-based Semantic Alignment for LLM-based Audio-Visual Speech Recognition</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-10</span><span>👥 Xugang Lu et al.</span></div>
+      <div class="abstract">提出基于最优传输（OT）的语义对齐框架，用于 LLM 基视听语音识别（LLM-AVSR）。通过 OT 计算概率耦合矩阵桥接声学、视觉与文本模态的表示差异，在 LRS3-TED 基准上全 SNR 范围实现 SOTA 性能。使用 Whisper + AV-HuBERT + LLaMA3.2-3B 架构。</div>
+      <div class="tags"><span class="tag">AV-ASR</span><span class="tag">LLM</span><span class="tag">Optimal Transport</span><span class="tag">Multimodal</span><span class="tag">SOTA</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.09001" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.09001" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.09020" target="_blank">Phone Segmentation and Recognition through Phonological Activation Mapping (SPAM)</a></h4>
+      <div class="meta"><span>📅 2026-07-10</span><span>👥 Shikhar Bharadwaj, Kwanghee Choi, Shinji Watanabe, David Harwath et al.</span></div>
+      <div class="abstract">发现自监督语音模型（S3M）已隐式编码了音系结构。提出 SPAM 将 S3M 表示帧映射为音系特征激活向量（如浊音、鼻音），并设计两个轻量级、无梯度下降的预测头分别用于音素分割和识别。仅需不到 1 分钟音标数据即可泛化到未见过的音素。</div>
+      <div class="tags"><span class="tag">Phone Recognition</span><span class="tag">S3M</span><span class="tag">Phonological Features</span><span class="tag">Low-resource</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.09020" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.09020" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.09043" target="_blank">MERL's Real-TSE Challenge Submission: Data-Centric Target Speech Extraction</a></h4>
+      <div class="meta"><span>📅 2026-07-10</span><span>👥 Dominik Klement et al. (Mitsubishi Electric Research Laboratories)</span></div>
+      <div class="abstract">MERL 在 Real-TSE Challenge 第二赛道夺冠的技术报告。未提出新架构，而是聚焦四阶段数据准备和清洗策略：从全重叠合成混合到多说话人对话仿真，再到利用近讲麦克风伪标签适配真实场景。同时揭示了 DNSMOS 和说话人相似度指标存在过优化风险。</div>
+      <div class="tags"><span class="tag">TSE</span><span class="tag">Data-Centric</span><span class="tag">Challenge Winner</span><span class="tag">Evaluation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.09043" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.09043" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>WWDC 2026: 苹果 Siri 确认由 Google Gemini 重构内核，开放 ChatGPT/Gemini/Claude 作为默认 AI</h4>
+      <p>WWDC 2026 苹果宣布三项重磅 AI 决定：Siri 语音助手内核由 Google Gemini 完全重构；iOS 27 全面性能翻新；用户可自由选择 ChatGPT/Gemini/Claude 作为默认 AI 引擎。标志语音助手生态从封闭走向开放，对语音 AI 产业格局影响深远。 <a href="https://www.aitoollab.cn/articles/wwdc-2026-apple-siri-gemini-ios-27-ai-open-ecosystem/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>OpenAI GPT-5.6 系列正式发布：Sol/Terra/Luna 三款模型覆盖旗舰到轻量场景</h4>
+      <p>OpenAI 正式发布 GPT-5.6 系列（Sol/Terra/Luna），被指定为 Microsoft Copilot 365 首选模型。GPT-5.6 Sol Ultra 一小时攻克悬置 50 年的循环双覆盖猜想。虽然非纯音频模型，但其推理能力对全双工语音对话的委托推理（如 GPT-Live）提供强大支撑。 <a href="https://vpsmac.com/zh/blog/gpt-5-6-sol-terra-luna-fabu-jiexi-2026.html" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>GPT-Live 全双工语音模型持续引发行业讨论：声网发布深度架构解读</h4>
+      <p>声网（Agora）发布 GPT-Live 技术深度解读，分析从级联、轮次制到全双工的架构演进。指出 GPT-Live 将语音从「交互功能」升级为 AI 统一入口，对实时音视频基础设施行业格局产生深远影响。 <a href="https://www.shengwang.cn/blog/blogdetail/gpt-live-voice-model/" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-13') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
