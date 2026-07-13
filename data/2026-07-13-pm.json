@@ -1,0 +1,13 @@
+{
+  "papers": [],
+  "news": [],
+  "notes": {
+    "date": "2026-07-13",
+    "edition": "下午版 (午间更新)",
+    "window": "2026-07-13 09:30 ~ 2026-07-13 14:00 CST",
+    "arxiv_status": "arXiv 每日更新在北京时间早上8点左右完成，下午时段无新的提交。本日 eess.AS current listing 共49篇（周五积累），已在早上版中覆盖。",
+    "huggingface_status": "HuggingFace Daily Papers 今日以视觉/3D生成和LLM量化等方向为主，无明显audio/speech标签论文。",
+    "news_status": "下午时段无新的audio/speech领域重大新闻。本周值得关注的语音领域热点为7月8日 OpenAI GPT-Live 全双工语音模型发布——这是目前全双工语音交互领域的最重要产品动态，早上版已有详细报道。",
+    "summary": "下午时段（9:30-14:00）音频领域暂无新论文和新产品发布。周一 arXiv listing 已在上午集中更新完毕，建议关注下午后续时段或第二天的 arXiv 新提交。"
+  }
+}
