@@ -1,0 +1,208 @@
+{
+  "date": "2026-07-14-pm",
+  "papers": [
+    {
+      "title": "Qwen-Audio-VAE Technical Report",
+      "url": "https://arxiv.org/abs/2607.11738",
+      "date": "2026-07-14",
+      "authors": "Ziyue Jiang, Dake Guo, Zekai Zhang, Hangrui Hu, Ting He, Xinfa Zhu, Xiong Wang et al. (Qwen Team, Alibaba)",
+      "abstract": "通义千问团队发布 Qwen-Audio-VAE，一套低比特率、快速编码的连续音频自编码器用于大规模通用音频生成。模型基于因果编码器-解码器、窗口 Transformer 块和多判别器训练，在 500 万小时多领域音频上训练，覆盖语音、音乐和音效。采用非对称编码器-解码器和延迟感知的编码器剪枝来最大化编码吞吐量。",
+      "tags": ["Audio VAE", "Qwen", "Audio Generation", "Speech Codec", "Alibaba"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.11738"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.11738"}
+      ]
+    },
+    {
+      "title": "Time-aware Large Audio Language Model (GigaChat3.1-Audio-10B)",
+      "url": "https://arxiv.org/abs/2607.10387",
+      "date": "2026-07-14",
+      "authors": "Georgii Gospodinov et al. (Sber AI / ai-sage)",
+      "abstract": "提出时间感知的大音频语言模型 GigaChat3.1-Audio-10B，支持长达 120 分钟输入的时间锚定问答。通过周期性时间标记与连续音频 token 交错注入，并利用级联流水线生成大规模合成监督信号。模型在长短时基准上均取得强时间定位准确率，支持时间锚定的片段描述与摘要。已开源模型和数据集。Interspeech 2026 接收。",
+      "tags": ["Audio LLM", "Temporal Grounding", "Open Source", "Interspeech 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.10387"},
+        {"label": "HuggingFace", "url": "https://huggingface.co/ai-sage/GigaChat3.1-Audio-10B-A1.8B"}
+      ]
+    },
+    {
+      "title": "Unified Gradient Projection: Language-Balanced Continual Learning for Multilingual Low-Resource ASR",
+      "url": "https://arxiv.org/abs/2607.11163",
+      "date": "2026-07-14",
+      "authors": "Guodong Lin et al.",
+      "abstract": "提出统一梯度投影 (UGP) 方法，通过参考语言平衡回放中的梯度约束参数更新。在多语言低资源 ASR 场景中，均衡每种语言在投影中的贡献，减少主导语言偏差，提升跨语言稳定性。在 Whisper-large-v3 上实现接近零的灾难性遗忘。Interspeech 2026 接收。",
+      "tags": ["ASR", "Continual Learning", "Multilingual", "Whisper", "Interspeech 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.11163"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.11163"}
+      ]
+    },
+    {
+      "title": "GigaAM Multilingual: Foundation Model for Underrepresented Languages",
+      "url": "https://arxiv.org/abs/2607.10371",
+      "date": "2026-07-14",
+      "authors": "Georgii Gospodinov et al. (Sber AI)",
+      "abstract": "面向中亚代表性不足语言（哈萨克语、吉尔吉斯语、乌兹别克语）的多语言 ASR 基础模型。基于 Conformer 编码器，用 HuBERT 目标在 200 万小时音频上预训练，引入聚类级数据均衡策略和领域感知采样方法。在目标语言上的自发语音识别显著优于 Whisper Large v3 和 Omnilingual-1B。Interspeech 2026 接收。",
+      "tags": ["ASR", "Underrepresented Languages", "Conformer", "Foundation Model", "Interspeech 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.10371"},
+        {"label": "GitHub", "url": "https://github.com/salute-developers/GigaAM"}
+      ]
+    },
+    {
+      "title": "Data Augmentation for L2 English Speaking Assessment using TTS",
+      "url": "https://arxiv.org/abs/2607.10790",
+      "date": "2026-07-14",
+      "authors": "Stefano Bannò et al.",
+      "abstract": "利用 TTS 和声音克隆将 L2 学习者的书面产出转化为合成语音用于口语评估数据增强。提出 speechification 流程：用 LLM 将书面语转为口语风格转写，再用 TTS/声音克隆合成语音。研究表明按熟练度匹配说话人和文本效果最佳，且 speechification 显著缩小书面-口语模态鸿沟。",
+      "tags": ["TTS", "L2 Assessment", "Voice Cloning", "Data Augmentation", "Speech Education"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.10790"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.10790"}
+      ]
+    },
+    {
+      "title": "FdAudio: MeanFlow-Anchored Fréchet-Distance Post-Training for One-Step Text-to-Audio Generation",
+      "url": "https://arxiv.org/abs/2607.10421",
+      "date": "2026-07-14",
+      "authors": "Kuan-Po Huang et al.",
+      "abstract": "提出 FdAudio 一步式文本到音频生成方法。通过多表示 Fréchet 距离损失直接在预训练嵌入空间上优化最终一步分布。引入 MeanFlow 一致性目标防止多步退化问题。在 MeanAudio 基础上 FD 分数降低 11.4%，FAD 分数提升 28.8%，实现 SOTA 一步式 T2A 生成质量。",
+      "tags": ["Text-to-Audio", "Audio Generation", "Diffusion", "Fréchet Distance"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.10421"},
+        {"label": "Project", "url": "https://fdoneaudio.github.io/"}
+      ]
+    },
+    {
+      "title": "Breaking the Quality–Intelligibility Trade-off in Streaming Target Speaker Extraction via WavLM-Anchored DPO",
+      "url": "https://arxiv.org/abs/2607.10191",
+      "date": "2026-07-14",
+      "authors": "Shuhai Peng et al.",
+      "abstract": "揭示流式目标说话人提取 (TSE) 中质量-可懂度权衡的根源：直接优化音频质量指标导致灾难性奖励黑客行为。提出 WavLM 锚定的直接偏好优化 (DPO) 策略，用 WavLM 余弦相似度作为优化锚点。在 560ms 流式块大小下实现 10.9% 可懂度相对提升。",
+      "tags": ["Target Speech Extraction", "DPO", "Streaming", "WavLM", "Speech Enhancement"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.10191"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.10191"}
+      ]
+    },
+    {
+      "title": "CoFi-Lite: Pushing the Limits of Ultra-Lightweight Speech Enhancement",
+      "url": "https://arxiv.org/abs/2607.10142",
+      "date": "2026-07-14",
+      "authors": "Leyan Yang et al.",
+      "abstract": "提出 CoFi-Lite 超轻量语音增强模型，将频谱建模解耦为粗粒度和细粒度流，通过并行对称编码器-解码器路径同时提取全频带包络和低频细节。仅需 12.87M MACs/s 和 83.12k 参数，性能超越 GTCRN 且计算量仅为其 40.26%。IEEE Signal Processing Letters 接收。",
+      "tags": ["Speech Enhancement", "Edge Deployment", "Lightweight", "Real-time"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.10142"},
+        {"label": "Demo", "url": "https://acceleration123.github.io/CoFiLite-demo/"}
+      ]
+    },
+    {
+      "title": "Which Languages Transfer Best to Warlpiri? A Similarity-Based Study for Low-Resource ASR",
+      "url": "https://arxiv.org/abs/2607.10256",
+      "date": "2026-07-14",
+      "authors": "Pravina Mylvaganam et al.",
+      "abstract": "研究语言相似度如何改善极度低资源语言 Warlpiri（澳洲原住民语言）的跨语言 ASR 迁移。结合声学相似度（预训练语音模型）和语言学相似度（类型学、音素库、语法特征）排序源语言，发现声学相似度是微调性能最强预测因子。Interspeech 2026 接收。",
+      "tags": ["ASR", "Low-Resource", "Cross-Lingual Transfer", "Whisper", "Interspeech 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.10256"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.10256"}
+      ]
+    },
+    {
+      "title": "Where Speech Enhancement Hurts Recognition: An Inference Time Polar Projection Diagnosis",
+      "url": "https://arxiv.org/abs/2607.11157",
+      "date": "2026-07-14",
+      "authors": "Mingyue Huo et al.",
+      "abstract": "提出推理时极坐标投影方法诊断语音增强对 ASR 的损害机制。通过在冻结的 SE 和 ASR 模型上扫描幅度强度 α 和相位校正 γ 两个参数，发现幅度强度是关键轴，而相位校正对识别无帮助。提供了一种无需重新训练增强器或识别器的简单缓解方案。",
+      "tags": ["ASR", "Speech Enhancement", "Diagnosis", "wav2vec2", "Whisper"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.11157"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.11157"}
+      ]
+    },
+    {
+      "title": "Hearing Like Humans? Sound Symbolism and Perceptual Alignment in Speech Language Models",
+      "url": "https://arxiv.org/abs/2607.10162",
+      "date": "2026-07-14",
+      "authors": "Yun-Shao Tsai et al.",
+      "abstract": "研究语音语言模型 (SLM) 是否具有类似于人类的声音象征感知。使用真实人类语音录音比较模型判断与人类数据，发现 SLM 的听觉判断与人类感知对齐很差，缺失关键声学线索（如频谱倾斜）。开放权重模型无法可靠地将听到的声音映射到对应形状。SLT 2026 投稿。",
+      "tags": ["Speech LM", "Sound Symbolism", "Perception", "Human-AI Alignment"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.10162"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.10162"}
+      ]
+    },
+    {
+      "title": "Synchronized 3D Vocal-Tract Motion for Speech Synchronization via JEPA Alignment",
+      "url": "https://arxiv.org/abs/2607.11772",
+      "date": "2026-07-14",
+      "authors": "Sheng Li et al.",
+      "abstract": "将现代神经语音系统与三维生物力学声道模型结合，通过 JEPA 表示和 RL/CEM 轨迹选择实现同步的 3D 声道运动。在 24 个最小对立词对上进行评估，WER 8.33%，CER 4.17%，UTMOS 3.174，展示了物理可解释的语音生成管道。IEEE SLT 2026 投稿。",
+      "tags": ["Articulatory Synthesis", "3D Vocal Tract", "JEPA", "Speech Production"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.11772"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.11772"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "OpenAI GPT-Live 持续引发行业讨论：全双工语音模型重塑 ChatGPT 语音体验",
+      "date": "2026-07-14",
+      "summary": "OpenAI 于 7 月 8 日发布的 GPT-Live 全双工语音模型持续在业界发酵。GPT-Live 采用原生全双工架构，支持打断、停顿理解、实时翻译、听写等能力，可后台调用 GPT-5.5 模型完成复杂推理。GPT-Live-1 面向付费用户，GPT-Live-1 mini 面向免费用户。Google DeepMind 同期发表的全双工语音 Agent 裁判可靠性研究（arXiv:2607.07985）为 GPT-Live 评估提供了方法论参考。",
+      "tags": ["GPT-Live", "OpenAI", "Full-Duplex", "Voice AI"],
+      "links": [
+        {"label": "TechCrunch", "url": "https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/"},
+        {"label": "IT之家", "url": "https://www.ithome.com/0/974/277.htm"}
+      ]
+    },
+    {
+      "title": "通义千问 Qwen-Audio-VAE 发布：500 万小时训练的统一音频编码器",
+      "date": "2026-07-14",
+      "summary": "阿里巴巴通义千问团队发布 Qwen-Audio-VAE，一套低比特率音频自编码器，基于 500 万小时多领域音频训练，支持语音、音乐、音效的高质量重建与压缩。模型采用因果编码器-解码器架构，通过延迟感知剪枝实现高效推理。这是继 Qwen-Audio 和 Qwen3-TTS 之后通义千问在音频领域的又一重大基础模型发布。",
+      "tags": ["Qwen", "Audio VAE", "Alibaba", "Audio Generation", "Speech Codec"],
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.11738"}
+      ]
+    },
+    {
+      "title": "GigaChat3.1-Audio-10B：支持 120 分钟长时音频理解的大音频语言模型",
+      "date": "2026-07-14",
+      "summary": "Sber AI 发布 GigaChat3.1-Audio-10B (ai-sage)，支持最长 120 分钟音频输入的时间锚定理解。模型通过周期性时间标记注入实现时间感知问答，能够对长时长音频进行带时间戳的片段描述和摘要。已开源模型权重和数据集，获 Interspeech 2026 接收。",
+      "tags": ["Audio LLM", "GigaChat", "Open Source", "Temporal Grounding"],
+      "links": [
+        {"label": "HuggingFace", "url": "https://huggingface.co/ai-sage/GigaChat3.1-Audio-10B-A1.8B"},
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.10387"}
+      ]
+    },
+    {
+      "title": "复旦大学孵化团队「模思智能」发布多说话人 ASR 模型，性能超 GPT-4o 和 Gemini",
+      "date": "2026-07-14",
+      "summary": "复旦邱锡鹏担任首席科学家的模思智能发布 MOSS-Transcribe-Diarize，多说话人自动语音识别模型，不仅能语音转文字，还能将音频片段与不同说话者关联。该模型在多人说话场景（如抢话、重叠对话）中表现超越 GPT-4o、Gemini 和豆包。",
+      "tags": ["ASR", "Speaker Diarization", "Chinese AI", "MOSS"],
+      "links": [
+        {"label": "腾讯云", "url": "https://cloud.tencent.com/developer/article/2622272"}
+      ]
+    }
+  ],
+  "summary": "下午时段新增 12 篇论文 + 4 条新闻。重磅发布：Qwen-Audio-VAE (500万小时训练的统一音频编解码器)、GigaChat3.1-Audio-10B (120分钟长时音频理解)、以及 GPT-Live 全双工语音模型的持续行业反响。",
+  "stats": {
+    "new_papers": 12,
+    "new_news": 4,
+    "top_tags": ["TTS", "ASR", "Audio LLM", "Speech Enhancement", "Audio Generation"],
+    "time_window": "2026-07-14 08:01 - 14:01 CST"
+  }
+}

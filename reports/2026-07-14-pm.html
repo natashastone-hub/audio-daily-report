@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-14-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-14-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月14日 (周二) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">12</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.11738" target="_blank">Qwen-Audio-VAE Technical Report</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-14</span><span>👥 Ziyue Jiang, Dake Guo, Zekai Zhang, Hangrui Hu, Ting He, Xinfa Zhu, Xiong Wang et al. (Qwen Team, Alibaba)</span></div>
+      <div class="abstract">通义千问团队发布 Qwen-Audio-VAE，一套低比特率、快速编码的连续音频自编码器用于大规模通用音频生成。模型基于因果编码器-解码器、窗口 Transformer 块和多判别器训练，在 500 万小时多领域音频上训练，覆盖语音、音乐和音效。采用非对称编码器-解码器和延迟感知的编码器剪枝来最大化编码吞吐量。</div>
+      <div class="tags"><span class="tag">Audio VAE</span><span class="tag">Qwen</span><span class="tag">Audio Generation</span><span class="tag">Speech Codec</span><span class="tag">Alibaba</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.11738" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.11738" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.10387" target="_blank">Time-aware Large Audio Language Model (GigaChat3.1-Audio-10B)</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-14</span><span>👥 Georgii Gospodinov et al. (Sber AI / ai-sage)</span></div>
+      <div class="abstract">提出时间感知的大音频语言模型 GigaChat3.1-Audio-10B，支持长达 120 分钟输入的时间锚定问答。通过周期性时间标记与连续音频 token 交错注入，并利用级联流水线生成大规模合成监督信号。模型在长短时基准上均取得强时间定位准确率，支持时间锚定的片段描述与摘要。已开源模型和数据集。Interspeech 2026 接收。</div>
+      <div class="tags"><span class="tag">Audio LLM</span><span class="tag">Temporal Grounding</span><span class="tag">Open Source</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.10387" target="_blank">🔗 arXiv</a> <a href="https://huggingface.co/ai-sage/GigaChat3.1-Audio-10B-A1.8B" target="_blank">🔗 HuggingFace</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.10790" target="_blank">Data Augmentation for L2 English Speaking Assessment using TTS</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-14</span><span>👥 Stefano Bannò et al.</span></div>
+      <div class="abstract">利用 TTS 和声音克隆将 L2 学习者的书面产出转化为合成语音用于口语评估数据增强。提出 speechification 流程：用 LLM 将书面语转为口语风格转写，再用 TTS/声音克隆合成语音。研究表明按熟练度匹配说话人和文本效果最佳，且 speechification 显著缩小书面-口语模态鸿沟。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">L2 Assessment</span><span class="tag">Voice Cloning</span><span class="tag">Data Augmentation</span><span class="tag">Speech Education</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.10790" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.10790" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.11163" target="_blank">Unified Gradient Projection: Language-Balanced Continual Learning for Multilingual Low-Resource ASR</a></h4>
+      <div class="meta"><span>📅 2026-07-14</span><span>👥 Guodong Lin et al.</span></div>
+      <div class="abstract">提出统一梯度投影 (UGP) 方法，通过参考语言平衡回放中的梯度约束参数更新。在多语言低资源 ASR 场景中，均衡每种语言在投影中的贡献，减少主导语言偏差，提升跨语言稳定性。在 Whisper-large-v3 上实现接近零的灾难性遗忘。Interspeech 2026 接收。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Continual Learning</span><span class="tag">Multilingual</span><span class="tag">Whisper</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.11163" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.11163" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.10371" target="_blank">GigaAM Multilingual: Foundation Model for Underrepresented Languages</a></h4>
+      <div class="meta"><span>📅 2026-07-14</span><span>👥 Georgii Gospodinov et al. (Sber AI)</span></div>
+      <div class="abstract">面向中亚代表性不足语言（哈萨克语、吉尔吉斯语、乌兹别克语）的多语言 ASR 基础模型。基于 Conformer 编码器，用 HuBERT 目标在 200 万小时音频上预训练，引入聚类级数据均衡策略和领域感知采样方法。在目标语言上的自发语音识别显著优于 Whisper Large v3 和 Omnilingual-1B。Interspeech 2026 接收。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Underrepresented Languages</span><span class="tag">Conformer</span><span class="tag">Foundation Model</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.10371" target="_blank">🔗 arXiv</a> <a href="https://github.com/salute-developers/GigaAM" target="_blank">🔗 GitHub</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.10421" target="_blank">FdAudio: MeanFlow-Anchored Fréchet-Distance Post-Training for One-Step Text-to-Audio Generation</a></h4>
+      <div class="meta"><span>📅 2026-07-14</span><span>👥 Kuan-Po Huang et al.</span></div>
+      <div class="abstract">提出 FdAudio 一步式文本到音频生成方法。通过多表示 Fréchet 距离损失直接在预训练嵌入空间上优化最终一步分布。引入 MeanFlow 一致性目标防止多步退化问题。在 MeanAudio 基础上 FD 分数降低 11.4%，FAD 分数提升 28.8%，实现 SOTA 一步式 T2A 生成质量。</div>
+      <div class="tags"><span class="tag">Text-to-Audio</span><span class="tag">Audio Generation</span><span class="tag">Diffusion</span><span class="tag">Fréchet Distance</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.10421" target="_blank">🔗 arXiv</a> <a href="https://fdoneaudio.github.io/" target="_blank">🔗 Project</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.10191" target="_blank">Breaking the Quality–Intelligibility Trade-off in Streaming Target Speaker Extraction via WavLM-Anchored DPO</a></h4>
+      <div class="meta"><span>📅 2026-07-14</span><span>👥 Shuhai Peng et al.</span></div>
+      <div class="abstract">揭示流式目标说话人提取 (TSE) 中质量-可懂度权衡的根源：直接优化音频质量指标导致灾难性奖励黑客行为。提出 WavLM 锚定的直接偏好优化 (DPO) 策略，用 WavLM 余弦相似度作为优化锚点。在 560ms 流式块大小下实现 10.9% 可懂度相对提升。</div>
+      <div class="tags"><span class="tag">Target Speech Extraction</span><span class="tag">DPO</span><span class="tag">Streaming</span><span class="tag">WavLM</span><span class="tag">Speech Enhancement</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.10191" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.10191" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.10142" target="_blank">CoFi-Lite: Pushing the Limits of Ultra-Lightweight Speech Enhancement</a></h4>
+      <div class="meta"><span>📅 2026-07-14</span><span>👥 Leyan Yang et al.</span></div>
+      <div class="abstract">提出 CoFi-Lite 超轻量语音增强模型，将频谱建模解耦为粗粒度和细粒度流，通过并行对称编码器-解码器路径同时提取全频带包络和低频细节。仅需 12.87M MACs/s 和 83.12k 参数，性能超越 GTCRN 且计算量仅为其 40.26%。IEEE Signal Processing Letters 接收。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Edge Deployment</span><span class="tag">Lightweight</span><span class="tag">Real-time</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.10142" target="_blank">🔗 arXiv</a> <a href="https://acceleration123.github.io/CoFiLite-demo/" target="_blank">🔗 Demo</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.10256" target="_blank">Which Languages Transfer Best to Warlpiri? A Similarity-Based Study for Low-Resource ASR</a></h4>
+      <div class="meta"><span>📅 2026-07-14</span><span>👥 Pravina Mylvaganam et al.</span></div>
+      <div class="abstract">研究语言相似度如何改善极度低资源语言 Warlpiri（澳洲原住民语言）的跨语言 ASR 迁移。结合声学相似度（预训练语音模型）和语言学相似度（类型学、音素库、语法特征）排序源语言，发现声学相似度是微调性能最强预测因子。Interspeech 2026 接收。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Low-Resource</span><span class="tag">Cross-Lingual Transfer</span><span class="tag">Whisper</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.10256" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.10256" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.11157" target="_blank">Where Speech Enhancement Hurts Recognition: An Inference Time Polar Projection Diagnosis</a></h4>
+      <div class="meta"><span>📅 2026-07-14</span><span>👥 Mingyue Huo et al.</span></div>
+      <div class="abstract">提出推理时极坐标投影方法诊断语音增强对 ASR 的损害机制。通过在冻结的 SE 和 ASR 模型上扫描幅度强度 α 和相位校正 γ 两个参数，发现幅度强度是关键轴，而相位校正对识别无帮助。提供了一种无需重新训练增强器或识别器的简单缓解方案。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Speech Enhancement</span><span class="tag">Diagnosis</span><span class="tag">wav2vec2</span><span class="tag">Whisper</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.11157" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.11157" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.10162" target="_blank">Hearing Like Humans? Sound Symbolism and Perceptual Alignment in Speech Language Models</a></h4>
+      <div class="meta"><span>📅 2026-07-14</span><span>👥 Yun-Shao Tsai et al.</span></div>
+      <div class="abstract">研究语音语言模型 (SLM) 是否具有类似于人类的声音象征感知。使用真实人类语音录音比较模型判断与人类数据，发现 SLM 的听觉判断与人类感知对齐很差，缺失关键声学线索（如频谱倾斜）。开放权重模型无法可靠地将听到的声音映射到对应形状。SLT 2026 投稿。</div>
+      <div class="tags"><span class="tag">Speech LM</span><span class="tag">Sound Symbolism</span><span class="tag">Perception</span><span class="tag">Human-AI Alignment</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.10162" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.10162" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.11772" target="_blank">Synchronized 3D Vocal-Tract Motion for Speech Synchronization via JEPA Alignment</a></h4>
+      <div class="meta"><span>📅 2026-07-14</span><span>👥 Sheng Li et al.</span></div>
+      <div class="abstract">将现代神经语音系统与三维生物力学声道模型结合，通过 JEPA 表示和 RL/CEM 轨迹选择实现同步的 3D 声道运动。在 24 个最小对立词对上进行评估，WER 8.33%，CER 4.17%，UTMOS 3.174，展示了物理可解释的语音生成管道。IEEE SLT 2026 投稿。</div>
+      <div class="tags"><span class="tag">Articulatory Synthesis</span><span class="tag">3D Vocal Tract</span><span class="tag">JEPA</span><span class="tag">Speech Production</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.11772" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.11772" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>OpenAI GPT-Live 持续引发行业讨论：全双工语音模型重塑 ChatGPT 语音体验</h4>
+      <p>OpenAI 于 7 月 8 日发布的 GPT-Live 全双工语音模型持续在业界发酵。GPT-Live 采用原生全双工架构，支持打断、停顿理解、实时翻译、听写等能力，可后台调用 GPT-5.5 模型完成复杂推理。GPT-Live-1 面向付费用户，GPT-Live-1 mini 面向免费用户。Google DeepMind 同期发表的全双工语音 Agent 裁判可靠性研究（arXiv:2607.07985）为 GPT-Live 评估提供了方法论参考。</p>
+    </div>
+
+    <div class="news-item">
+      <h4>通义千问 Qwen-Audio-VAE 发布：500 万小时训练的统一音频编码器</h4>
+      <p>阿里巴巴通义千问团队发布 Qwen-Audio-VAE，一套低比特率音频自编码器，基于 500 万小时多领域音频训练，支持语音、音乐、音效的高质量重建与压缩。模型采用因果编码器-解码器架构，通过延迟感知剪枝实现高效推理。这是继 Qwen-Audio 和 Qwen3-TTS 之后通义千问在音频领域的又一重大基础模型发布。</p>
+    </div>
+
+    <div class="news-item">
+      <h4>GigaChat3.1-Audio-10B：支持 120 分钟长时音频理解的大音频语言模型</h4>
+      <p>Sber AI 发布 GigaChat3.1-Audio-10B (ai-sage)，支持最长 120 分钟音频输入的时间锚定理解。模型通过周期性时间标记注入实现时间感知问答，能够对长时长音频进行带时间戳的片段描述和摘要。已开源模型权重和数据集，获 Interspeech 2026 接收。</p>
+    </div>
+
+    <div class="news-item">
+      <h4>复旦大学孵化团队「模思智能」发布多说话人 ASR 模型，性能超 GPT-4o 和 Gemini</h4>
+      <p>复旦邱锡鹏担任首席科学家的模思智能发布 MOSS-Transcribe-Diarize，多说话人自动语音识别模型，不仅能语音转文字，还能将音频片段与不同说话者关联。该模型在多人说话场景（如抢话、重叠对话）中表现超越 GPT-4o、Gemini 和豆包。</p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-14-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
