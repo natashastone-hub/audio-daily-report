@@ -1,0 +1,161 @@
+{
+  "date": "2026-07-14",
+  "papers": [
+    {
+      "title": "ReGen: Hierarchical Multi-Prompt Representation Generation for Efficient Waveform Diffusion Models",
+      "url": "https://arxiv.org/abs/2607.09134",
+      "date": "2026-07-10",
+      "authors": "Sang-Hoon Lee, Ha-Yeong Choi",
+      "abstract": "提出 ReGen，一种分层多提示表示生成框架，在单个扩散模型中同时估计表示和数据的多个向量场。引入广义流匹配 (GFM) 改进条件流匹配的泛化性。在单阶段波形扩散模型（神经音频编解码器和 Wave-VAE）上验证，显著提升 12.5Hz 高压缩潜在表示的波形生成质量。还提出 ReGenVoice，基于 LDM 的 TTS 模型，仅需 4 GPU 1 天训练，RTF 0.08。ICML 2026 接收。",
+      "tags": ["TTS", "Diffusion Model", "Neural Audio Codec", "ICML 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.09134"},
+        {"label": "Demo", "url": "https://regenvoice.github.io/demo/"}
+      ]
+    },
+    {
+      "title": "A Reliability Assessment of LALM Audio Judges for Full-Duplex Voice Agents",
+      "url": "https://arxiv.org/abs/2607.07985",
+      "date": "2026-07-08",
+      "authors": "Google DeepMind / Gemini Team",
+      "abstract": "评估 Gemini 系列模型（2.5 Flash, 3.5 Flash, 3.1 Pro）作为全双工语音 Agent 对话的音频裁判可靠性。在 152 个全双工会话、8 个生产维度上，Gemini 2.5 Flash 在 5/8 维度上达到接近人类评估的 Spearman 排名相关性，成本仅为人工评估的约 1%。研究为 LALM 替代人工评估提供实证基础，在 OpenAI GPT-Live 全双工模型发布后尤为及时。",
+      "tags": ["Full-Duplex", "Voice Agent", "LALM", "Evaluation", "Google DeepMind"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.07985"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.07985"}
+      ]
+    },
+    {
+      "title": "Optimal Transport-based Semantic Alignment for LLM-based Audio-Visual Speech Recognition",
+      "url": "https://arxiv.org/abs/2607.09001",
+      "date": "2026-07-10",
+      "authors": "Xugang Lu, Peng Shen, Yu Tsao, Hisashi Kawai",
+      "abstract": "提出基于最优传输（OT）的语义对齐框架用于 LLM-AVSR（大语言模型视听语音识别）。使用 Whisper 声学编码器 + AV-HuBERT 视觉编码器 + LLaMA3.2-3B 解码器，通过 OT 耦合作为软伪标签监督对比学习，在 LRS3-TED 基准上取得 SOTA，涵盖多种 SNR 下的干净和噪声条件。",
+      "tags": ["AVSR", "LLM", "Optimal Transport", "SOTA", "Speech Recognition"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.09001"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.09001"}
+      ]
+    },
+    {
+      "title": "Phone Segmentation and Recognition through Phonological Activation Mapping (SPAM)",
+      "url": "https://arxiv.org/abs/2607.09020",
+      "date": "2026-07-10",
+      "authors": "Shikhar Bharadwaj, Kwanghee Choi, Stephen McIntosh, Shinji Watanabe et al.",
+      "abstract": "利用自监督语音模型 (S3M) 的 Phonological Activation Mapping (SPAM) 同时解决音素分割和识别任务。在 S3M 之上添加两个轻量级无梯度下降预测头：识别头和分割头，仅需少于 1 分钟的音素转录即可工作，且泛化到训练时未见过的音素。跨多个数据集取得强分割和识别性能。",
+      "tags": ["Phone Segmentation", "Phoneme Recognition", "S3M", "Speech Processing"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.09020"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.09020"}
+      ]
+    },
+    {
+      "title": "Technical Report for MERL's Real-TSE Challenge Submission (1st Place)",
+      "url": "https://arxiv.org/abs/2607.09043",
+      "date": "2026-07-10",
+      "authors": "Yoshiki Masuyama, Christoph Boeddeker, Kohei Saijo, Julius Richter, Gordon Wichern, Jonathan Le Roux (Mitsubishi Electric Research Labs)",
+      "abstract": "MERL 在 Real-TSE（真实目标语音提取）挑战赛 Track 2 中获得第一名。系统四阶段训练：全混叠预训练→模拟多说话人对话→真实远场录音自适应（伪目标）。研究表明 DNSMOS 和说话人相似度易过优化，论文通过对抗攻击验证了两种指标可被推向极端值而不影响实际性能。",
+      "tags": ["Target Speech Extraction", "Real-World Audio", "MERL", "Challenge Winner"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.09043"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.09043"}
+      ]
+    },
+    {
+      "title": "DELTA-TTS: Adapting Autoregressive Model into Diffusion Language Model for Text-to-Speech",
+      "url": "https://arxiv.org/abs/2607.04140",
+      "date": "2026-07-05",
+      "authors": "Junwon Moon, Seungbeom Kim, Yejin Lee, Hoseong Ahn, Sewoong Park, Heeseung Kim et al.",
+      "abstract": "提出 DELTA-TTS，轻量级 LoRA 适配框架，将预训练自回归 TTS 模型转换为离散扩散语言模型 (dLLM)，实现非自回归语音生成。通过双向注意力和块级 LoRA 适配，在 Seed-TTS test-en 上推理速度提升 3.3 倍，同时保持合成质量与 AR 模型相当。",
+      "tags": ["TTS", "Diffusion Language Model", "LoRA", "Efficient Inference"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.04140"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.04140"}
+      ]
+    },
+    {
+      "title": "Fréchet Distance Loss on Speech Representations for Text-to-Speech Synthesis (SR-FD)",
+      "url": "https://arxiv.org/abs/2607.06027",
+      "date": "2026-07-08",
+      "authors": "Ho-Lam Chung, Kuan-Po Huang, Bo-Ru Lu, Hung-yi Lee (National Taiwan University)",
+      "abstract": "提出 Speech Representation Fréchet Distance 损失 (SR-FD)，一种训练时分布正则化器，用于无量纲化的流匹配自回归 TTS。借鉴 FID/FAD 思想，将评估指标转化为训练损失，在自回归流匹配 TTS 中显著提升语音自然度和可懂度。",
+      "tags": ["TTS", "Flow Matching", "Fréchet Distance", "NTU"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.06027"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.06027"}
+      ]
+    },
+    {
+      "title": "ProPS: Prompting Prosodic Speaker Embeddings via Natural Language Descriptions",
+      "url": "https://arxiv.org/abs/2607.05276",
+      "date": "2026-07-07",
+      "authors": "Johns Hopkins University",
+      "abstract": "提出 ProPS，用自然语言描述（如\"中年男性，深沉温暖的声音\"）生成韵律化说话人嵌入。通过混合密度网络从文本描述生成说话人嵌入的分布，实现基于自然语言提示的零样本说话人风格控制，为 TTS 提供更灵活的说话人属性控制方式。",
+      "tags": ["TTS", "Speaker Embedding", "Natural Language Prompt", "Zero-Shot"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.05276"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.05276"}
+      ]
+    },
+    {
+      "title": "NouveauVoice: 4.7k Hours Bilingual Singing/Speech Dataset and DiT-based Synthesis Framework",
+      "url": "https://arxiv.org/abs/2607.03985",
+      "date": "2026-07-04",
+      "authors": "South China University of Technology et al.",
+      "abstract": "发布 NouveauVoice，4,700 小时中英双语歌唱/语音标注数据集，以及基于 DiT 的合成框架。覆盖语音和歌唱双模态，是目前最大的双语歌唱语音数据集之一，为 SVS 和 TTS 研究提供高质量训练资源。",
+      "tags": ["Dataset", "SVS", "TTS", "Bilingual", "SCUT"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.03985"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.03985"}
+      ]
+    },
+    {
+      "title": "Diarization-Guided Qwen-ASR Adaptation for Multilingual Two-Speaker Conversational Speech (MLC-SLM 2026)",
+      "url": "https://arxiv.org/abs/2607.04526",
+      "date": "2026-07-06",
+      "authors": "Wu et al.",
+      "abstract": "提出说话人日志引导的 Qwen-ASR 适配方案，用于 MLC-SLM 2026 挑战赛的多语种双说话人对话语音识别。通过模块化说话人日志 + Qwen-ASR 组合，在多语言对话场景取得优异识别性能。",
+      "tags": ["ASR", "Diarization", "Multilingual", "Qwen", "Challenge"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.04526"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.04526"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "🔥 OpenAI 发布 GPT-Live 全双工语音模型，ChatGPT 迈入实时双向对话时代",
+      "url": "https://openai.com/index/gpt-live/",
+      "date": "2026-07-08",
+      "summary": "OpenAI 于 7 月 8 日发布 GPT-Live 系列全双工语音模型（GPT-Live-1 和 GPT-Live-1 mini），全面升级 ChatGPT Voice。新模型采用原生全双工架构，可同时聆听和说话，支持打断、停顿理解、实时翻译、听写等能力，后端无缝调用 GPT-5.5 完成复杂推理和联网搜索。这是 ChatGPT 语音功能两年来的首次代际更新，标志着语音 AI 从\"半双工\"迈向\"全双工\"的关键转折。"
+    },
+    {
+      "title": "OpenAI GPT-5.6 系列正式 GA：Sol / Terra / Luna 三款模型全面开放",
+      "url": "https://openai.com/index/gpt-5-6/",
+      "date": "2026-07-09",
+      "summary": "OpenAI 7 月 9 日正式发布 GPT-5.6 系列，包含旗舰模型 Sol、均衡型 Terra 和最快 Luna 三个版本。新增 max/min/reasoning 三档推理强度，Codex 并入 ChatGPT 成为统一产品。GPT-Live 的语音交互背后由 GPT-5.5/5.6 推理能力驱动，大幅提升语音 AI 的\"思考\"深度。"
+    },
+    {
+      "title": "Google Research 发表论文：用 Gemini 模型评估全双工语音 Agent 对话质量",
+      "url": "https://arxiv.org/abs/2607.07985",
+      "date": "2026-07-08",
+      "summary": "Google DeepMind 发表研究论文，系统评估 Gemini 系列模型（2.5 Flash / 3.5 Flash / 3.1 Pro）作为全双工语音 Agent 对话的自动化评委。Gemini 2.5 Flash 在 8 个生产维度中的 5 个达到接近人类评估者的排名相关性，成本仅为人工评估的 1%。该研究为全双工语音系统的自动化评估开辟新范式。"
+    },
+    {
+      "title": "Gemini 3.5 Pro 基准泄露：多项内部测试超越 Claude Fable 5 和 GPT-5.6",
+      "url": "https://af.net/realtime/gemini-3-5-pro-leak-july-2026-benchmarks/",
+      "date": "2026-07-13",
+      "summary": "7 月 13 日泄露的 Entelligence AI 基准测试显示，Google 即将发布的 Gemini 3.5 Pro 在多项内部测试中超越 Claude Fable 5 和 GPT-5.6。此前 Gemini 3.5 Pro 从 6 月推迟至 7 月发布，市场高度关注其音频/多模态能力。"
+    }
+  ]
+}

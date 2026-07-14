@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-14</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-14</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月14日 (周二) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">10</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">5</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.09134" target="_blank">ReGen: Hierarchical Multi-Prompt Representation Generation for Efficient Waveform Diffusion Models</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-10</span><span>👥 Sang-Hoon Lee, Ha-Yeong Choi</span></div>
+      <div class="abstract">提出 ReGen，一种分层多提示表示生成框架，在单个扩散模型中同时估计表示和数据的多个向量场。引入广义流匹配 (GFM) 改进条件流匹配的泛化性。在单阶段波形扩散模型（神经音频编解码器和 Wave-VAE）上验证，显著提升 12.5Hz 高压缩潜在表示的波形生成质量。还提出 ReGenVoice，基于 LDM 的 TTS 模型，仅需 4 GPU 1 天训练，RTF 0.08。ICML 2026 接收。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Diffusion Model</span><span class="tag">Neural Audio Codec</span><span class="tag">ICML 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.09134" target="_blank">🔗 arXiv</a> <a href="https://regenvoice.github.io/demo/" target="_blank">🔗 Demo</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.07985" target="_blank">A Reliability Assessment of LALM Audio Judges for Full-Duplex Voice Agents</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-08</span><span>👥 Google DeepMind / Gemini Team</span></div>
+      <div class="abstract">评估 Gemini 系列模型（2.5 Flash, 3.5 Flash, 3.1 Pro）作为全双工语音 Agent 对话的音频裁判可靠性。在 152 个全双工会话、8 个生产维度上，Gemini 2.5 Flash 在 5/8 维度上达到接近人类评估的 Spearman 排名相关性，成本仅为人工评估的约 1%。研究为 LALM 替代人工评估提供实证基础，在 OpenAI GPT-Live 全双工模型发布后尤为及时。</div>
+      <div class="tags"><span class="tag">Full-Duplex</span><span class="tag">Voice Agent</span><span class="tag">LALM</span><span class="tag">Evaluation</span><span class="tag">Google DeepMind</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.07985" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.07985" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.09001" target="_blank">Optimal Transport-based Semantic Alignment for LLM-based Audio-Visual Speech Recognition</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-10</span><span>👥 Xugang Lu, Peng Shen, Yu Tsao, Hisashi Kawai</span></div>
+      <div class="abstract">提出基于最优传输（OT）的语义对齐框架用于 LLM-AVSR（大语言模型视听语音识别）。使用 Whisper 声学编码器 + AV-HuBERT 视觉编码器 + LLaMA3.2-3B 解码器，通过 OT 耦合作为软伪标签监督对比学习，在 LRS3-TED 基准上取得 SOTA，涵盖多种 SNR 下的干净和噪声条件。</div>
+      <div class="tags"><span class="tag">AVSR</span><span class="tag">LLM</span><span class="tag">Optimal Transport</span><span class="tag">SOTA</span><span class="tag">Speech Recognition</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.09001" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.09001" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.04140" target="_blank">DELTA-TTS: Adapting Autoregressive Model into Diffusion Language Model for Text-to-Speech</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-05</span><span>👥 Junwon Moon, Seungbeom Kim, Yejin Lee, Hoseong Ahn, Sewoong Park, Heeseung Kim et al.</span></div>
+      <div class="abstract">提出 DELTA-TTS，轻量级 LoRA 适配框架，将预训练自回归 TTS 模型转换为离散扩散语言模型 (dLLM)，实现非自回归语音生成。通过双向注意力和块级 LoRA 适配，在 Seed-TTS test-en 上推理速度提升 3.3 倍，同时保持合成质量与 AR 模型相当。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Diffusion Language Model</span><span class="tag">LoRA</span><span class="tag">Efficient Inference</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.04140" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.04140" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.03985" target="_blank">NouveauVoice: 4.7k Hours Bilingual Singing/Speech Dataset and DiT-based Synthesis Framework</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-04</span><span>👥 South China University of Technology et al.</span></div>
+      <div class="abstract">发布 NouveauVoice，4,700 小时中英双语歌唱/语音标注数据集，以及基于 DiT 的合成框架。覆盖语音和歌唱双模态，是目前最大的双语歌唱语音数据集之一，为 SVS 和 TTS 研究提供高质量训练资源。</div>
+      <div class="tags"><span class="tag">Dataset</span><span class="tag">SVS</span><span class="tag">TTS</span><span class="tag">Bilingual</span><span class="tag">SCUT</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.03985" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.03985" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.09020" target="_blank">Phone Segmentation and Recognition through Phonological Activation Mapping (SPAM)</a></h4>
+      <div class="meta"><span>📅 2026-07-10</span><span>👥 Shikhar Bharadwaj, Kwanghee Choi, Stephen McIntosh, Shinji Watanabe et al.</span></div>
+      <div class="abstract">利用自监督语音模型 (S3M) 的 Phonological Activation Mapping (SPAM) 同时解决音素分割和识别任务。在 S3M 之上添加两个轻量级无梯度下降预测头：识别头和分割头，仅需少于 1 分钟的音素转录即可工作，且泛化到训练时未见过的音素。跨多个数据集取得强分割和识别性能。</div>
+      <div class="tags"><span class="tag">Phone Segmentation</span><span class="tag">Phoneme Recognition</span><span class="tag">S3M</span><span class="tag">Speech Processing</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.09020" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.09020" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.09043" target="_blank">Technical Report for MERL's Real-TSE Challenge Submission (1st Place)</a></h4>
+      <div class="meta"><span>📅 2026-07-10</span><span>👥 Yoshiki Masuyama, Christoph Boeddeker, Kohei Saijo, Julius Richter, Gordon Wichern, Jonathan Le Roux (Mitsubishi Electric Research Labs)</span></div>
+      <div class="abstract">MERL 在 Real-TSE（真实目标语音提取）挑战赛 Track 2 中获得第一名。系统四阶段训练：全混叠预训练→模拟多说话人对话→真实远场录音自适应（伪目标）。研究表明 DNSMOS 和说话人相似度易过优化，论文通过对抗攻击验证了两种指标可被推向极端值而不影响实际性能。</div>
+      <div class="tags"><span class="tag">Target Speech Extraction</span><span class="tag">Real-World Audio</span><span class="tag">MERL</span><span class="tag">Challenge Winner</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.09043" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.09043" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.06027" target="_blank">Fréchet Distance Loss on Speech Representations for Text-to-Speech Synthesis (SR-FD)</a></h4>
+      <div class="meta"><span>📅 2026-07-08</span><span>👥 Ho-Lam Chung, Kuan-Po Huang, Bo-Ru Lu, Hung-yi Lee (National Taiwan University)</span></div>
+      <div class="abstract">提出 Speech Representation Fréchet Distance 损失 (SR-FD)，一种训练时分布正则化器，用于无量纲化的流匹配自回归 TTS。借鉴 FID/FAD 思想，将评估指标转化为训练损失，在自回归流匹配 TTS 中显著提升语音自然度和可懂度。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Flow Matching</span><span class="tag">Fréchet Distance</span><span class="tag">NTU</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.06027" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.06027" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.05276" target="_blank">ProPS: Prompting Prosodic Speaker Embeddings via Natural Language Descriptions</a></h4>
+      <div class="meta"><span>📅 2026-07-07</span><span>👥 Johns Hopkins University</span></div>
+      <div class="abstract">提出 ProPS，用自然语言描述（如"中年男性，深沉温暖的声音"）生成韵律化说话人嵌入。通过混合密度网络从文本描述生成说话人嵌入的分布，实现基于自然语言提示的零样本说话人风格控制，为 TTS 提供更灵活的说话人属性控制方式。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Speaker Embedding</span><span class="tag">Natural Language Prompt</span><span class="tag">Zero-Shot</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.05276" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.05276" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.04526" target="_blank">Diarization-Guided Qwen-ASR Adaptation for Multilingual Two-Speaker Conversational Speech (MLC-SLM 2026)</a></h4>
+      <div class="meta"><span>📅 2026-07-06</span><span>👥 Wu et al.</span></div>
+      <div class="abstract">提出说话人日志引导的 Qwen-ASR 适配方案，用于 MLC-SLM 2026 挑战赛的多语种双说话人对话语音识别。通过模块化说话人日志 + Qwen-ASR 组合，在多语言对话场景取得优异识别性能。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Diarization</span><span class="tag">Multilingual</span><span class="tag">Qwen</span><span class="tag">Challenge</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.04526" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.04526" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>🔥 OpenAI 发布 GPT-Live 全双工语音模型，ChatGPT 迈入实时双向对话时代</h4>
+      <p>OpenAI 于 7 月 8 日发布 GPT-Live 系列全双工语音模型（GPT-Live-1 和 GPT-Live-1 mini），全面升级 ChatGPT Voice。新模型采用原生全双工架构，可同时聆听和说话，支持打断、停顿理解、实时翻译、听写等能力，后端无缝调用 GPT-5.5 完成复杂推理和联网搜索。这是 ChatGPT 语音功能两年来的首次代际更新，标志着语音 AI 从"半双工"迈向"全双工"的关键转折。 <a href="https://openai.com/index/gpt-live/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>OpenAI GPT-5.6 系列正式 GA：Sol / Terra / Luna 三款模型全面开放</h4>
+      <p>OpenAI 7 月 9 日正式发布 GPT-5.6 系列，包含旗舰模型 Sol、均衡型 Terra 和最快 Luna 三个版本。新增 max/min/reasoning 三档推理强度，Codex 并入 ChatGPT 成为统一产品。GPT-Live 的语音交互背后由 GPT-5.5/5.6 推理能力驱动，大幅提升语音 AI 的"思考"深度。 <a href="https://openai.com/index/gpt-5-6/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Google Research 发表论文：用 Gemini 模型评估全双工语音 Agent 对话质量</h4>
+      <p>Google DeepMind 发表研究论文，系统评估 Gemini 系列模型（2.5 Flash / 3.5 Flash / 3.1 Pro）作为全双工语音 Agent 对话的自动化评委。Gemini 2.5 Flash 在 8 个生产维度中的 5 个达到接近人类评估者的排名相关性，成本仅为人工评估的 1%。该研究为全双工语音系统的自动化评估开辟新范式。 <a href="https://arxiv.org/abs/2607.07985" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Gemini 3.5 Pro 基准泄露：多项内部测试超越 Claude Fable 5 和 GPT-5.6</h4>
+      <p>7 月 13 日泄露的 Entelligence AI 基准测试显示，Google 即将发布的 Gemini 3.5 Pro 在多项内部测试中超越 Claude Fable 5 和 GPT-5.6。此前 Gemini 3.5 Pro 从 6 月推迟至 7 月发布，市场高度关注其音频/多模态能力。 <a href="https://af.net/realtime/gemini-3-5-pro-leak-july-2026-benchmarks/" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-14') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
