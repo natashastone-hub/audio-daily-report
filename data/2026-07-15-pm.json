@@ -1,0 +1,90 @@
+{
+  "papers": [
+    {
+      "title": "AutoSIFT: Automatic Style Sifting for Controllable Speech Generation with Arbitrary Style Infilling",
+      "url": "https://arxiv.org/abs/2607.12706",
+      "date": "2026-07-14",
+      "authors": "Haowei Lou et al.",
+      "abstract": "提出 AutoSIFT，一个可控语音生成框架用于类别级风格编辑。AutoSIFT 将说话风格分解为已知文本可描述类别和未知残差风格，由通用 Style Disentangler 从参考语音中提取类别感知风格原型，Arbitrary Style Infiller 选择性填充未指定的风格类别。通过只替换文本指定的风格类别同时保留语音衍生的残差风格，实现自然、富有表现力且高度可定制的语音生成。",
+      "tags": ["TTS", "Controllable Speech", "Style Editing", "Voice Generation"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.12706"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.12706"}]
+    },
+    {
+      "title": "ZipL-Dialog: Memory-Efficient Long-Form Spoken Dialog Synthesis via Latent Flow Matching",
+      "url": "https://arxiv.org/abs/2607.12496",
+      "date": "2026-07-14",
+      "authors": "Jihwan Kim et al.",
+      "abstract": "零样本对话 TTS 受益于流匹配，但分钟级生成在密集梅尔频谱图上造成严重的内存瓶颈。提出 ZipL-Dialog，将条件流匹配转移到 4x 时间压缩（25Hz）的潜在空间中，采用确定性梅尔自编码器配合辅助梅尔域监督，优化 ZipFormer 的分层降采样调度。相比基线，峰值 GPU 内存降低 11.22 倍，推理加速 2.23 倍，同时保持感知自然度。",
+      "tags": ["TTS", "Dialog Synthesis", "Flow Matching", "Interspeech 2026"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.12496"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.12496"}]
+    },
+    {
+      "title": "An Omnilingual-ASR-Based Speech-LLM System for the 2nd MLC-SLM Challenge",
+      "url": "https://arxiv.org/abs/2607.12468",
+      "date": "2026-07-14",
+      "authors": "Fang Shuming et al.",
+      "abstract": "MLC-SLM 2026 挑战赛 Task 1 提交系统：级联的说话人日志-识别系统，结合 DiariZen-Large-s80 分割、CAM++ 嵌入双说话人聚类和 LoRA 适应的 omniASR LLM 7B v2 识别器。在 21 种语言/口音的 150 个对话开发集上达到 29.27% tcpMER（基线为 79.15%），评估集上为 50.23%。",
+      "tags": ["ASR", "Speech-LLM", "Speaker Diarization", "Multilingual", "Interspeech 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.12468"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.12468"}]
+    },
+    {
+      "title": "Explainable-by-Design Audio Deepfake Detection via Wiener-Hopf Linear Prediction",
+      "url": "https://arxiv.org/abs/2607.12584",
+      "date": "2026-07-14",
+      "authors": "Mattia Tamiazzo et al.",
+      "abstract": "提出基于 Wiener-Hopf 线性预测的可解释音频深度伪造检测框架，由轻量级 2D CNN 处理。在保持显著更低计算复杂度的同时实现有竞争力的检测性能。Grad-CAM 可解释性分析揭示分类器聚焦于低阶预测器系数和静音/过渡区域，捕捉合成语音中的混响特征和细微统计不一致性。",
+      "tags": ["Audio Deepfake", "Voice Security", "Explainable AI", "ACM IH&MMSec 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.12584"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.12584"}]
+    },
+    {
+      "title": "The Sound of Absence: Audio-Language Embedding Models Struggle with Negation",
+      "url": "https://arxiv.org/abs/2607.12290",
+      "date": "2026-07-14",
+      "authors": "Chun-Yi Kuan et al.",
+      "abstract": "揭示 CLAP 等音频-语言嵌入模型的关键盲点：无法编码否定声音概念，将肯定和否定描述映射到几乎相同的表示。引入 NegEval-Audio 框架将现有数据集转换为两个否定感知任务，发现否定型 MCQ 准确率远低于随机水平，即使最新多模态 LLM 嵌入模型也存在同样问题。表明肯定偏差是表示几何中的根本缺陷。",
+      "tags": ["Audio-Language", "Embedding", "Negation", "Evaluation"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.12290"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.12290"}]
+    },
+    {
+      "title": "Audio Diarization: A New Paradigm for Exploring Audio Recordings with Unknown Event Classes",
+      "url": "https://arxiv.org/abs/2607.12703",
+      "date": "2026-07-14",
+      "authors": "Alexander Werning et al.",
+      "abstract": "提出新任务「音频日志（Audio Diarization）」：在未知环境中检测开放集声音事件的起止时间，无需用户提示。将说话人日志系统调整用于音频日志，并提出评估设置。与闭集声音事件检测系统相比，在保持相似性能的同时增加了检测新声音的能力。",
+      "tags": ["Audio Diarization", "Sound Event Detection", "Open-Set", "IWAENC 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.12703"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.12703"}]
+    },
+    {
+      "title": "Hybrid Continual Learning for Low-Resource Australian Aboriginal Language Identification",
+      "url": "https://arxiv.org/abs/2607.11946",
+      "date": "2026-07-11",
+      "authors": "Pravina Mylvaganam et al.",
+      "abstract": "针对极度稀缺的澳洲原住民语言识别提出两种混合持续学习方法：Replay Augmented Elastic Weight Consolidation 和 Constraint Guided Knowledge Distillation。在 Warlpiri、Dalabon 和 Dharawal 上的实验表明，提出的方法在适应多种原住民语言的同时保持了对已学习高资源语言的性能，优于微调和现有持续学习基线。",
+      "tags": ["Language Identification", "Low-Resource", "Continual Learning", "Interspeech 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.11946"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.11946"}]
+    },
+    {
+      "title": "Neural Morphing: Sequence-Optimized Token-Level Morphing in Neural Audio Codecs",
+      "url": "https://arxiv.org/abs/2607.12725",
+      "date": "2026-07-14",
+      "authors": "Emmanouil Karystinaios et al.",
+      "abstract": "提出 Neural Morphing，一种免训练的 token 域音频效果，从用户调色板选择 RVQ token 片段并通过预训练编解码器解码。结合 RVQ 组传输策略（分离粗/中/细码本组）和连续性约束序列匹配器。实现了可部署的 VST3/AU 系统，支持分块渲染和实时行为。",
+      "tags": ["Neural Audio Codec", "Token-Level", "Audio Effects", "RVQ", "DAFx 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.12725"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.12725"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "下午时段暂无重大语音/Audio领域新闻发布",
+      "summary": "过去 6 小时内（7月15日 9:30-14:00 CST）未监测到新的语音/Audio相关产品发布或重大行业动态。本周焦点仍集中在 7月8日 OpenAI GPT-Live 全双工语音模型发布及其后续评测分析上。"
+    }
+  ]
+}
