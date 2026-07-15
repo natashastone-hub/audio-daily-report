@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-15</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-15</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月15日 (周三) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">6</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">6</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.12706" target="_blank">AutoSIFT: Automatic Style Sifting for Controllable Speech Generation with Arbitrary Style Infilling</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-14</span><span>👥 Haowei Lou, Junda Wu, Chengkai Huang, Tong Yu, Hye-young Paik, Wen Hu, Lina Yao</span></div>
+      <div class="abstract">当前最先进的TTS模型在自然度和表现力方面取得令人印象深刻的成果，但精细、解耦的说话风格控制仍然具有挑战性。在电影配音、游戏配音和视频内容生成等专业场景中，用户通常需要修改特定风格类别（如情感、年龄或性别），同时保留其他所有风格。AutoSIFT提出了一种可控语音生成框架，将说话风格分解为已知的可文本描述的类别和未知的残差风格，由Style Disentangler和Arbitrary Style Infiller组成，实现自然、富有表现力且高度可定制的语音生成。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Style Control</span><span class="tag">Controllable Speech</span><span class="tag">Voice Generation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.12706" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.12706" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.12703" target="_blank">Audio Diarization: A New Paradigm for Exploring Audio Recordings with Unknown Event Classes</a></h4>
+      <div class="meta"><span>📅 2026-07-14</span><span>👥 Alexander Werning, Reinhold Haeb-Umbach</span></div>
+      <div class="abstract">提出新任务「音频日志化」(audio diarization)。在未知环境音频监控等场景中，初始时声音事件类别未知。该方法先检测声音事件的时间边界和重叠，将其分类留到后续步骤。类似说话人日志化先于语音识别的理念，此范式首次正式定义了开放集、无需用户提示的音频事件检测与边界定位，并在新声检测上表现出色。</div>
+      <div class="tags"><span class="tag">Audio Diarization</span><span class="tag">Sound Event Detection</span><span class="tag">Open-Set</span><span class="tag">IWAENC 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.12703" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.12703" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.12647" target="_blank">Investigating the Integration of Spatial Information in Foundation-Model-Based Speaker Diarization</a></h4>
+      <div class="meta"><span>📅 2026-07-14</span><span>👥 Marc Deegen, Adrian Meise, Reinhold Haeb-Umbach</span></div>
+      <div class="abstract">比较三种将空间特征整合到基于基础模型（WavLM等）的说话人日志系统中的方法：波束成形前端+单通道基础模型、多通道基础模型、以及在下游网络中显式条件化空间特征。结果表明显式空间特征条件化是最优方法，甚至优于波束成形前端，且在重叠语音区域消除了大量之前仅在频谱或空间特征下的错误。</div>
+      <div class="tags"><span class="tag">Speaker Diarization</span><span class="tag">Spatial Audio</span><span class="tag">Foundation Model</span><span class="tag">IWAENC 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.12647" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.12647" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.12725" target="_blank">Neural Morphing: Sequence-Optimized Token-Level Morphing in Neural Audio Codecs</a></h4>
+      <div class="meta"><span>📅 2026-07-14</span><span>👥 Emmanouil Karystinaios</span></div>
+      <div class="abstract">将神经音频编解码器的潜在token表示和表达性解码器重新利用为可控音频转换基板。提出Neural Morphing，一种免训练的token域音频效果，从用户调色板中选择RVQ token粒度并通过预训练编解码器解码编辑后的流。结合RVQ组迁移策略和序列连续性约束匹配器，输出可控混合效果：源保留节奏组织，调色板贡献音色和残差细节。已实现为可部署的VST3/AU系统。</div>
+      <div class="tags"><span class="tag">Neural Audio Codec</span><span class="tag">Audio Morphing</span><span class="tag">DAFx 2026</span><span class="tag">VST3</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.12725" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.12725" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.12872" target="_blank">Low-Latency Neural Models for Real-Time Music Enhancement</a></h4>
+      <div class="meta"><span>📅 2026-07-14</span><span>👥 Emmanouil Karystinaios, Jonathan Greif, David Nadrchal, Paul Primus, Gerhard Widmer</span></div>
+      <div class="abstract">研究在严格因果和低延迟约束下的实时音乐增强。将任务定义为从声学和制作性退化中恢复预期混音，适配紧凑因果网络音乐处理，比较语音派生的实时基线、外部音乐去噪模型和MusicFilterNet-MS。核心贡献为基准和分析，揭示片面增强可能恶化输入，鲁棒改进需要退化感知建模、立体声感知处理和保留身份校正。</div>
+      <div class="tags"><span class="tag">Music Enhancement</span><span class="tag">Real-Time</span><span class="tag">Low-Latency</span><span class="tag">Audio Processing</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.12872" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.12872" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.12807" target="_blank">Spatial-Frequency Cued Generative Fixed-Filter Active Noise Control Based on Deep Learning in Reverberant Environments</a></h4>
+      <div class="meta"><span>📅 2026-07-14</span><span>👥 Boxiang Wang, Haowen Li, Dongyuan Shi, Junwei Ji, Ziyi Yang, Zhengding Luo, Woon-Seng Gan</span></div>
+      <div class="abstract">提出空间-频率引导的生成式固定滤波器有源噪声控制(SF-GFANC)，利用噪声源的3D空间和频率信息。设计多任务卷积循环神经网络(CRNN)估计源距离、仰角和方位角作为空间线索，同时预测子控制滤波器的组合权重。理论分析强调混响环境中3D空间条件化控制滤波器设计的重要性，实验结果优于代表性ANC算法。</div>
+      <div class="tags"><span class="tag">Active Noise Control</span><span class="tag">Spatial Audio</span><span class="tag">Deep Learning</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.12807" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.12807" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>OpenAI 发布 GPT-Live 全双工语音模型，ChatGPT 语音正式换代</h4>
+      <p>7月8日，OpenAI 正式发布新一代全双工语音模型 GPT-Live-1 和 GPT-Live-1 mini，即日起驱动 ChatGPT Voice。核心创新为原生全双工架构（full-duplex），可同时收听和说话，支持自然插话、停顿理解、实时翻译，并能在后台无缝调用 GPT-5.5 完成复杂推理。这是 ChatGPT Voice 两年来的首次代际更新，将语音打造为 ChatGPT 新的统一交互入口。TechCrunch、Reuters、IT之家等全球媒体报道。 <a href="https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>OpenAI API 上线 GPT-Realtime-2.1：语音 Agent 延迟直降 25%</h4>
+      <p>7月6日，OpenAI 在 Realtime API 中上线 gpt-realtime-2.1 和 gpt-realtime-2.1-mini，通过改进的提示缓存将 p95 延迟压低至少 25%。2.1-mini 版本首次加入可配置推理能力，价格不变，专为低延迟语音 Agent 和多模态交互场景优化。支持语音、文本和图像输入，可调用工具。 <a href="https://www.marktechpost.com/2026/07/06/openai-gpt-realtime-2-1-mini-reasoning-realtime-api/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>OpenAI 发布 GPT-5.6 系列旗舰模型（Sol/Terra/Luna）</h4>
+      <p>7月9日，OpenAI 正式推出 GPT-5.6 系列模型，包括旗舰 Sol、均衡型 Terra 和最快版 Luna。新增 max 和 lite 推理模式，在 ChatGPT、Codex 和 API 中逐步开放。虽是非语音专属模型，但将作为 GPT-Live 的后台推理引擎，对语音 AI 产生间接但深远的影响。 <a href="https://www.xinhuanet.com/20260710/74a4edded29942f8b0f02ac483a7a76f/c.html" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Bloomberg: OpenAI 首款 AI 硬件为便携智能音箱（7月14日报道）</h4>
+      <p>7月14日，Bloomberg 报道 OpenAI 首款 AI 硬件产品为无屏便携智能音箱。该设备定位语音优先的 AI 交互终端，与 GPT-Live 语音模型形成深度协同。报道同时披露苹果指控 OpenAI 挖角关键硬件工程师，引发法律纠纷。这标志着 OpenAI 正式进军语音硬件市场。 <a href="https://www.macrumors.com/2026/07/14/openai-ai-hardware-device-speaker/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>OpenAI GPT-Live 深度技术解析：全双工架构与委托推理机制</h4>
+      <p>GPT-Live 架构深度分析：采用持续音频流处理设计，通过 backchannel 机制在倾听时同步回应，突破传统「你说完我说」的回合制限制。核心创新在于委托推理（Delegated Reasoning）——语音模型本身轻量低延迟，遇到复杂问题自动在后台调用 GPT-5.5 推理，实现低延迟与高智能的统一。 <a href="https://mer.vin/2026/07/gpt-live-explained-full-duplex-chatgpt-voice-with-gpt-5-5-delegation/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>2026年7月语音 AI 产品格局：GPT-Live 加入全双工大战</h4>
+      <p>GPT-Live 的发布使 2026 年语音 AI 竞争进入白热化。市场已从 STT->LLM->TTS 管道模式转向全双工实时语音 Agent 新标准。ElevenLabs、Cartesia Sonic、Play.ht、Deepgram Aura、Hume、Sesame 等多家语音 AI 公司激烈竞争，OpenAI 的入局将重塑整个行业格局。 <a href="https://www.youngju.dev/blog/culture/2026-05-16-voice-ai-tts-2026-elevenlabs-cartesia-openai-voice-play-ht-hume-sesame-fish-deepgram-aura-deep-dive.en" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-15') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
