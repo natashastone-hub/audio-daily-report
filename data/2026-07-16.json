@@ -1,0 +1,151 @@
+{
+  "papers": [
+    {
+      "title": "AutoSIFT: Automatic Style Sifting for Controllable Speech Generation with Arbitrary Style Infilling",
+      "url": "https://arxiv.org/abs/2607.12706",
+      "date": "2026-07-14",
+      "authors": "Haowei Lou et al.",
+      "abstract": "提出 AutoSIFT，一个可控语音生成框架，首次实现对说话风格进行类别级别的精细编辑。通过将风格分解为文本可描述类别和未知残余风格，支持在保留非语言韵律和说话人特质的同时，精确替换指定风格类别（如情感、年龄、性别），适用于影视配音、游戏配音等专业场景。",
+      "tags": ["TTS", "Controllable Speech Generation", "Style Disentanglement", "cs.SD"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.12706"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.12706"}]
+    },
+    {
+      "title": "ZipL-Dialog: Memory-Efficient Long-Form Spoken Dialog Synthesis via Latent Flow Matching",
+      "url": "https://arxiv.org/abs/2607.12496",
+      "date": "2026-07-14",
+      "authors": "Jihwan Kim, Nam Soo Kim",
+      "abstract": "针对零样本对话 TTS 中流匹配在密集梅尔谱上生成时严重的内存瓶颈问题，提出 ZipL-Dialog，将条件流匹配转移到 4 倍时间压缩的潜在空间。GPU 峰值内存降低 11.22 倍，推理加速 2.23 倍，同时保持自然度感知，支持单次推理生成多分钟长对话。",
+      "tags": ["TTS", "Dialog Synthesis", "Flow Matching", "Memory-Efficient", "eess.AS"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.12496"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.12496"}]
+    },
+    {
+      "title": "Omnilingual-ASR-Based Speech-LLM System for the 2nd MLC-SLM Challenge",
+      "url": "https://arxiv.org/abs/2607.12468",
+      "date": "2026-07-14",
+      "authors": "Fang Shuming et al.",
+      "abstract": "INTERSPEECH 2026 论文。提出级联式说话人日志+识别系统，结合 DiariZen-Large 分割、CAM++ 嵌入聚类和 LoRA 微调的 omniASR LLM 7B 识别器，在 21 种语言/方言的 150 段对话测试中取得 29.27% tcpMER（基线 79.15%），验证集 50.23%。",
+      "tags": ["ASR", "Speech-LLM", "Speaker Diarization", "Multi-lingual", "INTERSPEECH 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.12468"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.12468"}]
+    },
+    {
+      "title": "IAAN: Encoder-Side Neuron Identification and Amplification for Acoustic Perception in Large Audio-Language Models",
+      "url": "https://arxiv.org/abs/2607.11801",
+      "date": "2026-07-13",
+      "authors": "Authors",
+      "abstract": "发现大型音频语言模型（LALM）在非语义属性（如说话人情感）上表现欠佳，尽管内容理解能力强。提出 IAAN——一种无需训练、无需标签的方法，通过对比真实波形和噪声参考的神经元激活来识别和放大音频编码器中的'声学神经元'，在 Audio-Flamingo-3、Qwen2.5-Omni、Kimi-Audio 上分别提升 25.7/21.4/9.7 个百分点的非语义属性准确率。",
+      "tags": ["Audio-Language Model", "Acoustic Perception", "Neuron Intervention", "cs.SD"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.11801"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.11801"}]
+    },
+    {
+      "title": "VoxENES 2026: Benchmarking Generalization of Speech Spoofing Detectors Against LLM-Era TTS and Voice Conversion",
+      "url": "https://arxiv.org/abs/2607.11706",
+      "date": "2026-07-13",
+      "authors": "Guangjing Wang et al.",
+      "abstract": "INTERSPEECH 2026。提出 VoxENES 2026 基准——53,628 个样本的双语（英/西）合成语音检测数据集，覆盖 10 种现代语音合成方法和 10 种后处理条件。测试 8 个预训练检测器发现：最好模型仅有 28.98% EER，多数接近随机水平，揭示了现有伪造检测器对 LLM 时代 TTS/VC 技术的严重泛化不足。",
+      "tags": ["Audio Deepfake Detection", "TTS", "Voice Conversion", "Benchmark", "INTERSPEECH 2026"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.11706"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.11706"}]
+    },
+    {
+      "title": "Explainable-by-Design Audio Deepfake Detection via Wiener-Hopf Linear Prediction",
+      "url": "https://arxiv.org/abs/2607.12584",
+      "date": "2026-07-14",
+      "authors": "Mattia Tamiazzo et al.",
+      "abstract": "ACM IH&MMSec 2026。提出可解释音频深度伪造检测框架，基于 Wiener-Hopf 线性预测处理后的 2D CNN，建立分类结果与声学特性之间的透明连接。Grad-CAM 分析揭示检测器关注低阶预测器系数和静默/过渡区域，表明 Wiener-Hopf 预测器能捕获合成语音中的混响特征和细微统计不一致。",
+      "tags": ["Audio Deepfake Detection", "Explainable AI", "Speech Forensics", "cs.SD"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.12584"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.12584"}]
+    },
+    {
+      "title": "Phone Segmentation and Recognition through Phonological Activation Mapping (SPAM)",
+      "url": "https://arxiv.org/abs/2607.09020",
+      "date": "2026-07-11",
+      "authors": "Shikhar Bharadwaj, Shinji Watanabe, David Harwath et al.",
+      "abstract": "提出基于自监督语音模型（S3M）的音系激活映射方法，从 S3M 表示中提取浊音、鼻音等音系特征，叠加两个轻量无梯度下降预测头实现音素分割和识别。只需不到一分钟的音素标注即可泛化到训练未见过的音素，在多个数据集上取得强性能。由 CMU、Waseda、JHU 等联合团队完成。",
+      "tags": ["Phoneme Recognition", "Speech Processing", "Self-Supervised Learning", "eess.AS"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.09020"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.09020"}]
+    },
+    {
+      "title": "Audio Diarization: A New Paradigm for Exploring Audio Recordings with Unknown Event Classes",
+      "url": "https://arxiv.org/abs/2607.12703",
+      "date": "2026-07-14",
+      "authors": "Alexander Werning, Reinhold Haeb-Umbach",
+      "abstract": "IWAENC 2026。提出新任务'音频日志'(Audio Diarization)——在未知事件类别环境下检测声音事件的起止时间（含重叠），无需用户提示。将说话人日志系统改造用于通用音频日志，在开放集合上实现与闭集声事件检测相当的性能，同时具备检测新声音的能力。",
+      "tags": ["Audio Diarization", "Sound Event Detection", "Open-Set", "IWAENC 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.12703"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.12703"}]
+    },
+    {
+      "title": "FdAudio: MeanFlow-Anchored Fréchet-Distance Post-Training for One-Step Text-to-Audio Generation",
+      "url": "https://arxiv.org/abs/2607.10421",
+      "date": "2026-07-11",
+      "authors": "Kuan-Po Huang et al.",
+      "abstract": "提出 FdAudio 解决文本到音频生成中单步采样质量落后于多步方法的问题。通过多表示 Fréchet 距离损失直接优化最终分布，创新引入 MeanFlow 一致性目标防止多步退化。FD 分数降低 11.4%，FAD 改善 28.8%，25 步采样可匹配或超越强多步模型。",
+      "tags": ["Text-to-Audio", "Diffusion", "One-Step Generation", "eess.AS"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.10421"}, {"label": "Project Page", "url": "https://fdoneaudio.github.io/"}]
+    },
+    {
+      "title": "MuScriptor: An Open Model for Multi-Instrument Music Transcription",
+      "url": "https://arxiv.org/abs/2607.08168",
+      "date": "2026-07-09",
+      "authors": "Michael Krause et al. (Kyutai)",
+      "abstract": "Kyutai 发布 MuScriptor——开源多乐器音乐转录模型，通过合成数据预训练+真实音乐微调+强化学习后训练，引入乐器存在性条件控制，在真实世界多种音乐风格的录音上实现可用的多乐器转录。HuggingFace 576 星收藏。",
+      "tags": ["Music Transcription", "Open Source", "Multi-Instrument", "Kyutai"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.08168"}, {"label": "HuggingFace", "url": "https://huggingface.co/papers/2607.08168"}]
+    },
+    {
+      "title": "CHARM: Charge Calibration and Acoustic Rescue for LLM-based Multimodal Sarcasm Detection",
+      "url": "https://arxiv.org/abs/2607.11102",
+      "date": "2026-07-13",
+      "authors": "Qiyang Sun et al.",
+      "abstract": "提出 CHARM——无训练多模态讽刺检测框架，通过双向电荷校准消除 LLM 对讽刺类的系统性过预测，再融合声学韵律特征进行后期校正。零样本文本 Macro-F1 达 0.787 (MUStARD)，对弱骨干提升高达 0.382 Macro-F1 (CMMA)。发现跨文化韵律解耦现象：低层声学特征跨语言迁移失败，高层感知抽象保持稳健。",
+      "tags": ["Speech Understanding", "Multimodal", "Sarcasm Detection", "Affective Computing"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.11102"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.11102"}]
+    },
+    {
+      "title": "The Sound of Absence: Audio-Language Embedding Models Struggle with Negation",
+      "url": "https://arxiv.org/abs/2607.12290",
+      "date": "2026-07-14",
+      "authors": "Chun-Yi Kuan, Hung-yi Lee",
+      "abstract": "发现音频-语言嵌入模型（如 CLAP）无法编码否定声学概念——肯定和否定描述被映射到几乎相同的表示空间。引入 NegEval-Audio 基准揭示这一盲点，否定类型 MCQ 准确率远低于随机水平，即使多模态 LLM 嵌入模型也存在同样的肯定偏置问题。",
+      "tags": ["Audio-Language Model", "CLAP", "Negation", "Representation Learning"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.12290"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.12290"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "阿里发布 Qwen-Audio-3.0-Realtime：实时全双工语音交互模型，又快又聪明",
+      "url": "https://news.qq.com/rain/a/20260715A04GT300",
+      "summary": "7月15日，阿里巴巴正式发布实时语音交互对话模型 Qwen-Audio-3.0-Realtime，在智商、Agent 工具调用、共情对话和双工交互流畅度四条主线上同步升级。模型包括推理更强的 Plus 版本和速度更快的 Flash 版本，直接对标 GPT-Live，标志着国产语音大模型进入全双工时代。"
+    },
+    {
+      "title": "OpenAI 发布 GPT-Realtime-2.1 系列：API 端实时语音推理升级",
+      "url": "https://www.marktechpost.com/2026/07/06/openai-gpt-realtime-2-1-mini-reasoning-realtime-api/",
+      "summary": "OpenAI 在 7月6日发布了 gpt-realtime-2.1 和 gpt-realtime-2.1-mini 两个新实时模型，专为低延迟语音和多模态体验优化。mini 版本在保持推理能力的同时大幅降低延迟和成本，进一步巩固 OpenAI 在实时语音 API 领域的领先地位。"
+    },
+    {
+      "title": "WAIC 2026 世界人工智能大会 7月17日启幕，超300款产品全球首发",
+      "url": "https://news.china.com.cn/2026-07/13/content_118597206.shtml",
+      "summary": "2026世界人工智能大会将于7月17日在上海启幕，超过300款产品将全球首发。大会涵盖大模型、具身智能、语音AI等多个前沿领域，是观察国内AI产业最新进展的重要窗口。多个语音AI厂商预计将在大会上发布新品。"
+    },
+    {
+      "title": "GPT-Live 发布一周后：用户反馈两极分化，全双工语音体验仍需打磨",
+      "url": "https://www.aitoollab.cn/articles/gpt-live-ai-voice-assistant-comparison-202607/",
+      "summary": "OpenAI 7月8日发布的 GPT-Live 全双工语音模型一周来引发广泛讨论。实测对比显示，GPT-Live 在打断流畅度和后台推理调度上领先竞品，但部分用户反馈在嘈杂环境下打断误触发率较高，且中文语音自然度仍有提升空间。豆包、讯飞星火等国产方案在中文场景表现更好。"
+    },
+    {
+      "title": "xAI Grok Voice Agent Builder 公测：无代码构建语音 Agent，$0.05/分钟",
+      "url": "https://www.explainx.ai/blog/xai-grok-voice-agent-builder-no-code-2026",
+      "summary": "xAI 于7月1日宣布 Grok Voice Agent Builder 进入公测，支持通过无代码平台配置生产级语音 Agent，包括电话接入、知识库、工具调用、MCP 连接器和安全护栏，定价 $0.05/分钟，大幅降低了企业部署语音 AI 的门槛。"
+    }
+  ]
+}
