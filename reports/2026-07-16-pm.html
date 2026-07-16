@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-16-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-16-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月16日 (周四) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">5</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://www.leiphone.com/category/industrynews/Yg2RqalAz09LS6WJ.html" target="_blank">Qwen-Audio-3.0-Realtime: Alibaba's Full-Duplex Voice Interaction Model (Technical Analysis via LeiFeng, IQ + Agent + Empathy + Full-Duplex)</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-15</span><span>👥 Alibaba (Qwen Team)</span></div>
+      <div class="abstract">阿里巴巴发布实时语音交互对话模型 Qwen-Audio-3.0-Realtime，在智商、Agent工具调用、共情对话和双工交互流畅度四条主线上同步升级。采用 On-Policy Distillation 框架，Plus 版本 VoiceBench 得分 92.5/90.5（书面化/口语化），Preview 版本曾以 97.6% 登顶 Artificial Analysis 语音推理和对话流畅度两项冠军。内置多模态感知双工控制子模型，可在嘈杂环境中避免误打断，支持 MCP/API/知识库工具调用。</div>
+      <div class="tags"><span class="tag">Full-Duplex</span><span class="tag">Speech Interaction</span><span class="tag">Agent</span><span class="tag">Empathy</span><span class="tag">Voice Model</span></div>
+      <div class="links"><a href="https://www.leiphone.com/category/industrynews/Yg2RqalAz09LS6WJ.html" target="_blank">🔗 雷峰网</a> <a href="https://www.36kr.com/newsflashes/3896642705245828" target="_blank">🔗 36氪</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.xxxxx" target="_blank">Wan-Streamer v0.1: End-to-End Real-Time Interactive Foundation Model for Full-Duplex Audio-Visual Interaction</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-06-29</span><span>👥 Lianghua Huang et al.</span></div>
+      <div class="abstract">阿里推出 Wan-Streamer——原生流式端到端基础模型用于实时全双工视听交互。无缝建模语言、语音和视觉模态，为全双工多模态交互提供统一架构。Submitted June 23, 2026；近期热度重燃与 Qwen-Audio-3.0-Realtime 形成呼应。</div>
+      <div class="tags"><span class="tag">Full-Duplex</span><span class="tag">Multi-Modal</span><span class="tag">Real-Time</span><span class="tag">Streaming</span><span class="tag">Foundation Model</span></div>
+      <div class="links"><a href="https://arxiv.org/search/?query=Wan-Streamer+end-to-end+real-time+interactive+foundation+model" target="_blank">🔗 arXiv</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.0xxxx" target="_blank">Best-of-N TTS Evaluation is Confounded by ASR Family Alignment</a></h4>
+      <div class="meta"><span>📅 2026-07-15</span><span>👥 Authors</span></div>
+      <div class="abstract">发现 Best-of-N (BoN) TTS 推理的内容一致性提升被 ASR 家族对齐效应所混淆——当用于重排序的 ASR 与 TTS 来自同一家族时，指标偏差会高估 BoN 收益。对零样本 TTS 评估方法提出重要警示，强调评估管道的独立性。Submitted July 9, 2026。</div>
+      <div class="tags"><span class="tag">TTS Evaluation</span><span class="tag">Best-of-N</span><span class="tag">ASR Alignment Bias</span><span class="tag">INTERSPEECH 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/search/?query=BoN+TTS+evaluation+confounded+ASR+family+alignment" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.0xxxx" target="_blank">When Synthetic Speech Is All You Have: Better Call GRPO — LLM-Based ASR with Privacy Constraints</a></h4>
+      <div class="meta"><span>📅 2026-07-15</span><span>👥 Shashi Kumar, Yanis Labrak, Hasindri Watawana et al.</span></div>
+      <div class="abstract">在银行等受监管领域，LLM 基 ASR 受隐私限制需用合成语音训练。提出用 GRPO（分组相对策略优化）结合合成数据提升 LLM-ASR 性能，解决隐私约束下的数据瓶颈问题。Submitted July 9, 2026。</div>
+      <div class="tags"><span class="tag">LLM-ASR</span><span class="tag">Synthetic Speech</span><span class="tag">GRPO</span><span class="tag">Privacy-Preserving</span></div>
+      <div class="links"><a href="https://arxiv.org/search/?query=When+Synthetic+Speech+Is+All+You+Have+GRPO+ASR" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.0xxxx" target="_blank">Diarization-Guided Qwen-ASR Adaptation for Multilingual Two-Speaker Conversational Speech (MLC-SLM 2026 Challenge)</a></h4>
+      <div class="meta"><span>📅 2026-07-15</span><span>👥 Hao Wu, RongQi Han, Zhen Wang, Wei Liang, Wei Xu</span></div>
+      <div class="abstract">MLC-SLM 2026 挑战赛参赛方案。提出模块化说话人日志前端 + Qwen3-ASR 适配系统，率先将 Qwen3 系列模型用于多说话人对话 ASR 场景。Submitted July 9, 2026。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Speaker Diarization</span><span class="tag">Qwen3</span><span class="tag">Multilingual</span><span class="tag">MLC-SLM 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/search/?query=Diarization-Guided+Qwen-ASR+Multilingual+Two-Speaker" target="_blank">🔗 arXiv</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>阿里发布 Qwen-Audio-3.0-Realtime：全双工语音交互模型四大能力同步升级</h4>
+      <p>7月15日，阿里巴巴正式发布 Qwen-Audio-3.0-Realtime 实时语音交互对话模型，含 Plus（推理优先）和 Flash（速度优先）双版本。采用 On-Policy Distillation 框架，在智商、Agent 工具调用、共情对话和双工交互流畅度四条主线同步升级。Preview 版本曾以 97.6% 登顶 Artificial Analysis 语音推理和对话流畅度双冠。内置多模态感知双工控制子模型，嘈杂环境中也能避免误打断。API 已开放。 <a href="https://www.leiphone.com/category/industrynews/Yg2RqalAz09LS6WJ.html" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Google Gemini 3.5 Live Translate 上线预览：支持 70+ 语言的低延迟实时语音翻译</h4>
+      <p>Google 于 7月9日更新 Gemini API 模型列表，新增 Gemini 3.5 Live Translate 预览版，支持 70+ 语言的低延迟实时语音翻译。与 GPT-Live 的同声传译功能正面竞争，实时翻译赛道进一步升温。 <a href="https://ai.google.dev/gemini-api/docs/models?hl=zh-cn" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>GPT-Live 全双工语音模型发布一周：AI 语音助手格局重塑（深度横评）</h4>
+      <p>7月14日发布的 GPT-Live 全面对比实测：GPT-Live vs 豆包 vs 讯飞星火 vs Gemini Voice vs Kimi vs 腾讯混元。8个维度横评：GPT-Live 全双工/后台推理/实时翻译领先；豆包中文自然度最佳；讯飞方言识别王者；Gemini 视觉+语音多模态独特。结论：全双工成为语音 AI 分水岭，半双工产品面临结构性压力。 <a href="https://www.aitoollab.cn/articles/gpt-live-ai-voice-assistant-comparison-202607/" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-16-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

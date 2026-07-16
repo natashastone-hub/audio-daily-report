@@ -1,0 +1,71 @@
+{
+  "papers": [
+    {
+      "title": "Qwen-Audio-3.0-Realtime: Alibaba's Full-Duplex Voice Interaction Model (Technical Analysis via LeiFeng, IQ + Agent + Empathy + Full-Duplex)",
+      "url": "https://www.leiphone.com/category/industrynews/Yg2RqalAz09LS6WJ.html",
+      "date": "2026-07-15",
+      "authors": "Alibaba (Qwen Team)",
+      "abstract": "阿里巴巴发布实时语音交互对话模型 Qwen-Audio-3.0-Realtime，在智商、Agent工具调用、共情对话和双工交互流畅度四条主线上同步升级。采用 On-Policy Distillation 框架，Plus 版本 VoiceBench 得分 92.5/90.5（书面化/口语化），Preview 版本曾以 97.6% 登顶 Artificial Analysis 语音推理和对话流畅度两项冠军。内置多模态感知双工控制子模型，可在嘈杂环境中避免误打断，支持 MCP/API/知识库工具调用。",
+      "tags": ["Full-Duplex", "Speech Interaction", "Agent", "Empathy", "Voice Model"],
+      "highlight": true,
+      "links": [{"label": "雷峰网", "url": "https://www.leiphone.com/category/industrynews/Yg2RqalAz09LS6WJ.html"}, {"label": "36氪", "url": "https://www.36kr.com/newsflashes/3896642705245828"}]
+    },
+    {
+      "title": "Best-of-N TTS Evaluation is Confounded by ASR Family Alignment",
+      "url": "https://arxiv.org/abs/2607.0xxxx",
+      "date": "2026-07-15",
+      "authors": "Authors",
+      "abstract": "发现 Best-of-N (BoN) TTS 推理的内容一致性提升被 ASR 家族对齐效应所混淆——当用于重排序的 ASR 与 TTS 来自同一家族时，指标偏差会高估 BoN 收益。对零样本 TTS 评估方法提出重要警示，强调评估管道的独立性。Submitted July 9, 2026。",
+      "tags": ["TTS Evaluation", "Best-of-N", "ASR Alignment Bias", "INTERSPEECH 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/search/?query=BoN+TTS+evaluation+confounded+ASR+family+alignment"}]
+    },
+    {
+      "title": "When Synthetic Speech Is All You Have: Better Call GRPO — LLM-Based ASR with Privacy Constraints",
+      "url": "https://arxiv.org/abs/2607.0xxxx",
+      "date": "2026-07-15",
+      "authors": "Shashi Kumar, Yanis Labrak, Hasindri Watawana et al.",
+      "abstract": "在银行等受监管领域，LLM 基 ASR 受隐私限制需用合成语音训练。提出用 GRPO（分组相对策略优化）结合合成数据提升 LLM-ASR 性能，解决隐私约束下的数据瓶颈问题。Submitted July 9, 2026。",
+      "tags": ["LLM-ASR", "Synthetic Speech", "GRPO", "Privacy-Preserving"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/search/?query=When+Synthetic+Speech+Is+All+You+Have+GRPO+ASR"}]
+    },
+    {
+      "title": "Diarization-Guided Qwen-ASR Adaptation for Multilingual Two-Speaker Conversational Speech (MLC-SLM 2026 Challenge)",
+      "url": "https://arxiv.org/abs/2607.0xxxx",
+      "date": "2026-07-15",
+      "authors": "Hao Wu, RongQi Han, Zhen Wang, Wei Liang, Wei Xu",
+      "abstract": "MLC-SLM 2026 挑战赛参赛方案。提出模块化说话人日志前端 + Qwen3-ASR 适配系统，率先将 Qwen3 系列模型用于多说话人对话 ASR 场景。Submitted July 9, 2026。",
+      "tags": ["ASR", "Speaker Diarization", "Qwen3", "Multilingual", "MLC-SLM 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/search/?query=Diarization-Guided+Qwen-ASR+Multilingual+Two-Speaker"}]
+    },
+    {
+      "title": "Wan-Streamer v0.1: End-to-End Real-Time Interactive Foundation Model for Full-Duplex Audio-Visual Interaction",
+      "url": "https://arxiv.org/abs/2606.xxxxx",
+      "date": "2026-06-29",
+      "authors": "Lianghua Huang et al.",
+      "abstract": "阿里推出 Wan-Streamer——原生流式端到端基础模型用于实时全双工视听交互。无缝建模语言、语音和视觉模态，为全双工多模态交互提供统一架构。Submitted June 23, 2026；近期热度重燃与 Qwen-Audio-3.0-Realtime 形成呼应。",
+      "tags": ["Full-Duplex", "Multi-Modal", "Real-Time", "Streaming", "Foundation Model"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/search/?query=Wan-Streamer+end-to-end+real-time+interactive+foundation+model"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "阿里发布 Qwen-Audio-3.0-Realtime：全双工语音交互模型四大能力同步升级",
+      "url": "https://www.leiphone.com/category/industrynews/Yg2RqalAz09LS6WJ.html",
+      "summary": "7月15日，阿里巴巴正式发布 Qwen-Audio-3.0-Realtime 实时语音交互对话模型，含 Plus（推理优先）和 Flash（速度优先）双版本。采用 On-Policy Distillation 框架，在智商、Agent 工具调用、共情对话和双工交互流畅度四条主线同步升级。Preview 版本曾以 97.6% 登顶 Artificial Analysis 语音推理和对话流畅度双冠。内置多模态感知双工控制子模型，嘈杂环境中也能避免误打断。API 已开放。"
+    },
+    {
+      "title": "Google Gemini 3.5 Live Translate 上线预览：支持 70+ 语言的低延迟实时语音翻译",
+      "url": "https://ai.google.dev/gemini-api/docs/models?hl=zh-cn",
+      "summary": "Google 于 7月9日更新 Gemini API 模型列表，新增 Gemini 3.5 Live Translate 预览版，支持 70+ 语言的低延迟实时语音翻译。与 GPT-Live 的同声传译功能正面竞争，实时翻译赛道进一步升温。"
+    },
+    {
+      "title": "GPT-Live 全双工语音模型发布一周：AI 语音助手格局重塑（深度横评）",
+      "url": "https://www.aitoollab.cn/articles/gpt-live-ai-voice-assistant-comparison-202607/",
+      "summary": "7月14日发布的 GPT-Live 全面对比实测：GPT-Live vs 豆包 vs 讯飞星火 vs Gemini Voice vs Kimi vs 腾讯混元。8个维度横评：GPT-Live 全双工/后台推理/实时翻译领先；豆包中文自然度最佳；讯飞方言识别王者；Gemini 视觉+语音多模态独特。结论：全双工成为语音 AI 分水岭，半双工产品面临结构性压力。"
+    }
+  ]
+}
