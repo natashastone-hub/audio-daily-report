@@ -1,0 +1,119 @@
+{
+  "date": "2026-07-17",
+  "generated_at": "2026-07-17T09:34:00+08:00",
+  "papers": [
+    {
+      "title": "RW-Voice-EQ Bench: A Real World Benchmark for Evaluating Voice AI Systems",
+      "url": "https://arxiv.org/abs/2607.14846",
+      "date": "2026-07-16",
+      "authors": "David Ayllon, Alice Baird, Jeffrey Brooks, Franc Camps-Febrer, et al. (Hume AI)",
+      "abstract": "Hume AI 发布多维语音 AI 评测基准 RW-Voice-EQ Bench，覆盖 TTS、语音到语音(STS)、语音理解(SU)和 ASR 四个维度。评测表明：TTS 的自然度、表现力、身份稳定性和可靠性是独立维度；STS 中模型普遍无法充分利用音频中的声音情绪信息；SU 在副语言任务上表现不均；ASR 在真实口音/情感/噪音场景下暴露了标准基准无法捕捉的缺陷。基准和排行榜已开源。",
+      "tags": ["Voice AI", "Benchmark", "TTS", "STS", "ASR", "Speech Understanding", "cs.SD"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.14846"},
+        {"label": "Leaderboard", "url": "https://huggingface.co/spaces/HumeAI/rw-voice-eq"}
+      ]
+    },
+    {
+      "title": "SLT 2026 REAL-TSE Challenge: Real-world Target Speaker Extraction from Conversational Recordings",
+      "url": "https://arxiv.org/abs/2607.15198",
+      "date": "2026-07-16",
+      "authors": "Shuai Wang, Zihan Qian, Ke Zhang, Jiangyu Han, Zikai Liu, Xiaoyang Yu, Haoyu Li, Marc Delcroix, Kai Yu, Lei Xie, Ming Li, Haizhou Li",
+      "abstract": "IEEE SLT 2026 REAL-TSE 挑战赛综述论文。从真实多人对话录音中提取目标说话人语音，涵盖中英文，包含自然重叠、混响、噪声、信道不匹配和对话动态。分在线流式提取和离线全上下文处理两个赛道，用 Token Error Rate、说话人相似度、DNSMOS 和 F1 进行评估。",
+      "tags": ["Target Speaker Extraction", "Speech Separation", "Challenge", "SLT 2026", "eess.AS"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.15198"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.15198"}
+      ]
+    },
+    {
+      "title": "Large Audio Language Models for Spoofing-Aware Speaker Verification",
+      "url": "https://arxiv.org/abs/2607.14753",
+      "date": "2026-07-16",
+      "authors": "Sofya Savelyeva, Mariia Perunova, Evgeny Kushnir, Artem Dvirniak, Dmitrii Korzh, Oleg Y. Rogov",
+      "abstract": "首次系统评估大型音频语言模型(LALM)在反欺骗说话人验证(SASV)上的表现。零样本下 LALM 接近随机水平，但任务特定适配后可达到竞争力性能。发现可通过多种路径实现 SASV：有监督适配、推理导向训练和强化学习优化。定位 LALM 为可审计的统一 SASV 基础模型。",
+      "tags": ["Speaker Verification", "Anti-Spoofing", "Audio Language Model", "DeepFake Detection", "cs.SD"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.14753"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.14753"}
+      ]
+    },
+    {
+      "title": "WanSong v1.0: A Pure Diffusion-based Long-Form Song Generation Model",
+      "url": "https://arxiv.org/abs/2607.14749",
+      "date": "2026-07-16",
+      "authors": "Binghui Chen, Pandeng Li, Yu Liu, Jingren Zhou (Wan Team)",
+      "abstract": "阿里巴巴 Wan Team 推出 WanSong v1.0，纯扩散音乐生成模型。与自回归或级联多阶段方案不同，WanSong 直接一步生成高达 5 分钟的高保真多语言歌曲，同时输出人声和背景音乐两条 stems。支持步骤蒸馏加速推理和下游编辑任务的微调定制。",
+      "tags": ["Music Generation", "Diffusion Model", "Song Generation", "eess.AS", "WanSong"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.14749"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.14749"}
+      ]
+    },
+    {
+      "title": "MIDI-RAE-JEPA: Hierarchical Representation Learning and Generation for Symbolic Music",
+      "url": "https://arxiv.org/abs/2607.14537",
+      "date": "2026-07-16",
+      "authors": "Scott H. Hawley",
+      "abstract": "将 JEPA 架构与音高和时间移位等变性目标结合，用于学习符号音乐的分层表示。编码器基于 Swin Transformer V2 训练自监督目标，解码器实现 0.995 的钢琴卷帘重建 F1，流匹配生成模型可产生风格匹配的音乐片段。在情感分类下游任务上超越 Haar 散射变换基线。",
+      "tags": ["Music Generation", "Symbolic Music", "JEPA", "Representation Learning", "cs.SD"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.14537"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.14537"}
+      ]
+    },
+    {
+      "title": "Can Tokens Compete? Token Representations against Supervised CNN Backbones for BirdCLEF+ 2026",
+      "url": "https://arxiv.org/abs/2607.14474",
+      "date": "2026-07-16",
+      "authors": "Anthony Miyaguchi, Murilo Gustineli, et al.",
+      "abstract": "BirdCLEF+ 2026 参赛方案。构建有监督基线（Perch v2 + HGNetV2-B0 + 原型头）达到 0.936 私有排行榜得分。探究 token 表示（神经音频编解码器 vs 语义基础嵌入）能否与监督 CNN 竞争，对比 2 个生物声学专家模型与 4 个 AudioSet 训练的 token 编码器。",
+      "tags": ["Bioacoustics", "Token Representation", "Audio Coding", "BirdCLEF", "cs.SD"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.14474"},
+        {"label": "GitHub", "url": "https://github.com/dsgt-arc/birdclef-2026"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "阿里巴巴发布 Qwen-Audio-3.0-Realtime：实时语音大模型四大能力全面升级",
+      "url": "https://www.qbitai.com/2026/07/450250.html",
+      "date": "2026-07-15",
+      "source": "量子位",
+      "summary": "7月15日，阿里巴巴正式发布实时语音交互对话模型 Qwen-Audio-3.0-Realtime，在智商、Agent 工具调用、共情对话和双工交互流畅度四条主线上同步升级。模型包括推理更强的 Plus 版本和速度更快的 Flash 版本，支持打断、情绪识别和工具调用，对标近期 OpenAI GPT-Live。"
+    },
+    {
+      "title": "OpenAI 发布 GPT-Realtime-2.1 系列语音模型 (Realtime API)",
+      "url": "https://datanorth.ai/news/openai-releases-gpt-realtime-2-1-voice-models",
+      "date": "2026-07-07",
+      "source": "datanorth.ai",
+      "summary": "7月6日，OpenAI 发布 gpt-realtime-2.1 和 gpt-realtime-2.1-mini 两款新语音模型，进一步改进 Realtime API 中语音到语音的交互质量和延迟表现。这一更新紧随一个月前发布的 GPT-Realtime-2 系列。"
+    },
+    {
+      "title": "Hume AI 发布 RW-Voice-EQ 评测基准，揭示语音 AI 四大维度能力差异",
+      "url": "https://huggingface.co/spaces/HumeAI/rw-voice-eq",
+      "date": "2026-07-16",
+      "source": "Hume AI / HuggingFace",
+      "summary": "RW-Voice-EQ Bench 首次系统性评估 TTS、语音到语音(STS)、语音理解和 ASR 四个维度的真实表现，发现当前语音 AI 系统在不同维度上表现高度不均匀，部分模型虽有音频输入能力却不能充分利用声学信息。"
+    },
+    {
+      "title": "本周回顾：OpenAI GPT-Live 全双工语音模型引发行业震动",
+      "url": "https://news.qq.com/rain/a/20260709A015K100",
+      "date": "2026-07-09",
+      "source": "腾讯新闻",
+      "summary": "7月8日 OpenAI 发布 GPT-Live 全双工语音模型，支持同时聆听和说话，允许随时打断，无缝调用 GPT-5.5 完成复杂推理。这标志着语音交互从半双工迈入全双工时代，语音成为 ChatGPT 新的统一交互入口。截至今日仍为此领域过去一周内最大的产业新闻。"
+    }
+  ],
+  "stats": {
+    "total_papers": 6,
+    "highlight_papers": 2,
+    "total_news": 4
+  }
+}
