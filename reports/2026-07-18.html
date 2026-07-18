@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-18</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-18</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月18日 (周六) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">4</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.15265" target="_blank">SceneBind: Binding What and Where Across Vision, Audio and Language</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-16</span><span>👥 Mingfei Chen, Zijun Cui, Ruoke Zhang, Hyeonggon Ryu, Eli Shlizerman</span></div>
+      <div class="abstract">提出 SceneBind，一种全模态场景表示方法，联合语义和 3D 空间理解视觉、音频和语言。通过全局语义嵌入和对象级语义-空间槽位显式捕捉「是什么」和「在哪里」。提出 SceneBind Matching 语义-空间匹配方案，支持跨模态场景检索和对象定位。在真实双耳音频-视觉数据集上训练，在场景和空间检索上达 SOTA，支持零样本迁移到音频-视觉定位任务。</div>
+      <div class="tags"><span class="tag">Multi-Modal</span><span class="tag">Audio-Visual</span><span class="tag">Spatial Understanding</span><span class="tag">Scene Understanding</span><span class="tag">cs.SD</span><span class="tag">cs.CV</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.15265" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.15265" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.14310" target="_blank">Dialogs: a Studio-Quality Expressive Russian Conversational Speech Corpus</a></h4>
+      <div class="meta"><span>📅 2026-07-15</span><span>👥 Ilya Shigabeev, Ilya Latyshev</span></div>
+      <div class="abstract">发布 Dialogs，俄语对话语音语料库：20.6 小时专业录音棚录制的双人对话，11,796 个话语，3 位说话人，12 类风格/情感标签。与朗读语料不同，Dialogs 捕捉轮流发言节奏和表现力韵律。MOS 测试验证音频质量和可懂度，表现力评分显著高于现有俄语语音库。用 VITS2 训练概念验证 TTS 模型。</div>
+      <div class="tags"><span class="tag">Speech Corpus</span><span class="tag">Russian</span><span class="tag">Conversational Speech</span><span class="tag">TTS</span><span class="tag">eess.AS</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.14310" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.14310" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.14189" target="_blank">MultiRef-Compass: Comprehensive Evaluation of Multi-Reference-to-Audio-Video Generation</a></h4>
+      <div class="meta"><span>📅 2026-07-15</span><span>👥 Xiaohan Zhang, Yuqing Wen, Junlin Chen, Yuqi Tang, et al.</span></div>
+      <div class="abstract">提出 MultiRef-Compass，统一的多参考到音频-视频生成评测基准。包含 350 个精心构建样本，覆盖多视角主题保留、多实体绑定、人-物-场景组合。定义四维评估协议：基础质量、参考一致性、音-视一致性、指令遵循，使用 14 个子指标。评测 8 个代表性系统，揭示各维度上的大幅改进空间。</div>
+      <div class="tags"><span class="tag">Audio-Visual Generation</span><span class="tag">Benchmark</span><span class="tag">Multi-Modal</span><span class="tag">cs.CV</span><span class="tag">cs.SD</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.14189" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.14189" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.15243" target="_blank">What does the model actually see? Evaluation Protocols in Room Acoustic Prediction</a></h4>
+      <div class="meta"><span>📅 2026-07-16</span><span>👥 Akın Oktav</span></div>
+      <div class="abstract">揭示数据驱动房间声学预测中的评估协议偏差。在 264 座会议厅和 180 座音乐厅的多条件测量活动上，用阶乘协议消融表明：行级分割 + 含实测输入可复现高 R²（均值 0.81），但切换到部署一致性协议后降至 0.09-0.57。证明混合 CNN 将脉冲响应本身作为位置指纹而非可迁移声学信息利用。发现不同模型间的差距远小于不同协议间的差距。</div>
+      <div class="tags"><span class="tag">Room Acoustics</span><span class="tag">Audio</span><span class="tag">Evaluation</span><span class="tag">eess.AS</span><span class="tag">cs.SD</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.15243" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.15243" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>本周回顾：OpenAI GPT-Live 全双工语音模型持续引发行业热议</h4>
+      <p>GPT-Live 发布一周后产业反响持续升温。全双工架构成为语音 AI 行业最热话题，多家竞品（Cartesia、Deepgram）公开放出对标 Demo。GPT-Live 支持同时听说、打断、停顿理解、实时翻译等功能，后台委托 GPT-5.5 处理复杂推理。GPT-Realtime-2.1 系列（7月6日发布）也已集成至 Realtime API。 <a href="https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>阿里巴巴 Qwen-Audio-3.0-Realtime 获百度百科收录，实时语音四线并进</h4>
+      <p>7月15日发布的 Qwen-Audio-3.0-Realtime 迅速获百度百科收录。该模型在智商推理、Agent 工具调用、共情对话和双工交互流畅度四个维度全面提升，推出 Plus（推理更强）和 Flash（速度更快）两个版本，官方称多项指标超越 GPT-Live。 <a href="https://baike.baidu.com/item/Qwen-Audio-3.0-Realtime/68260889" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>GPT-Live 全面实测：AI 语音交互进入全双工时代</h4>
+      <p>多家媒体对 GPT-Live 进行了一周全面实测。评测维度涵盖同声传译质量、多轮对话连贯性、打断自然度和情绪感知能力。结论：GPT-Live 在自然度和打断处理上大幅领先前任，但中文场景下 Qwen-Audio-3.0-Realtime 表现更优；实时翻译延迟约 1-2 秒，更适合对话翻译场景而非同传级要求。 <a href="https://www.aitoollab.cn/articles/gpt-live-ai-voice-assistant-comparison-202607/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>语音 AI 赛道竞争白热化：OpenAI vs 阿里 vs Google 三强争霸</h4>
+      <p>本周语音 AI 领域形成三强争霸格局：OpenAI (GPT-Live+GPT-Realtime-2.1)、阿里巴巴 (Qwen-Audio-3.0-Realtime) 和 Google (Gemini 3.5 Flash 语音能力)。此外 ElevenLabs Scribe v2、Cartesia Sonic、Deepgram Nova-3 等专用语音 API 纷纷发版迎战。Hume AI 则另辟蹊径推动评测标准化（RW-Voice-EQ Bench）。 <a href="https://www.youngju.dev/blog/culture/2026-05-16-voice-ai-tts-2026-elevenlabs-cartesia-openai-voice-play-ht-hume-sesame-fish-deepgram-aura-deep-dive.en" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-18') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

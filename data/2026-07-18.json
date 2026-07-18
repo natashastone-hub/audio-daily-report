@@ -1,0 +1,94 @@
+{
+  "date": "2026-07-18",
+  "generated_at": "2026-07-18T09:34:00+08:00",
+  "papers": [
+    {
+      "title": "SceneBind: Binding What and Where Across Vision, Audio and Language",
+      "url": "https://arxiv.org/abs/2607.15265",
+      "date": "2026-07-16",
+      "authors": "Mingfei Chen, Zijun Cui, Ruoke Zhang, Hyeonggon Ryu, Eli Shlizerman",
+      "abstract": "提出 SceneBind，一种全模态场景表示方法，联合语义和 3D 空间理解视觉、音频和语言。通过全局语义嵌入和对象级语义-空间槽位显式捕捉「是什么」和「在哪里」。提出 SceneBind Matching 语义-空间匹配方案，支持跨模态场景检索和对象定位。在真实双耳音频-视觉数据集上训练，在场景和空间检索上达 SOTA，支持零样本迁移到音频-视觉定位任务。",
+      "tags": ["Multi-Modal", "Audio-Visual", "Spatial Understanding", "Scene Understanding", "cs.SD", "cs.CV"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.15265"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.15265"}
+      ]
+    },
+    {
+      "title": "Dialogs: a Studio-Quality Expressive Russian Conversational Speech Corpus",
+      "url": "https://arxiv.org/abs/2607.14310",
+      "date": "2026-07-15",
+      "authors": "Ilya Shigabeev, Ilya Latyshev",
+      "abstract": "发布 Dialogs，俄语对话语音语料库：20.6 小时专业录音棚录制的双人对话，11,796 个话语，3 位说话人，12 类风格/情感标签。与朗读语料不同，Dialogs 捕捉轮流发言节奏和表现力韵律。MOS 测试验证音频质量和可懂度，表现力评分显著高于现有俄语语音库。用 VITS2 训练概念验证 TTS 模型。",
+      "tags": ["Speech Corpus", "Russian", "Conversational Speech", "TTS", "eess.AS"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.14310"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.14310"}
+      ]
+    },
+    {
+      "title": "MultiRef-Compass: Comprehensive Evaluation of Multi-Reference-to-Audio-Video Generation",
+      "url": "https://arxiv.org/abs/2607.14189",
+      "date": "2026-07-15",
+      "authors": "Xiaohan Zhang, Yuqing Wen, Junlin Chen, Yuqi Tang, et al.",
+      "abstract": "提出 MultiRef-Compass，统一的多参考到音频-视频生成评测基准。包含 350 个精心构建样本，覆盖多视角主题保留、多实体绑定、人-物-场景组合。定义四维评估协议：基础质量、参考一致性、音-视一致性、指令遵循，使用 14 个子指标。评测 8 个代表性系统，揭示各维度上的大幅改进空间。",
+      "tags": ["Audio-Visual Generation", "Benchmark", "Multi-Modal", "cs.CV", "cs.SD"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.14189"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.14189"}
+      ]
+    },
+    {
+      "title": "What does the model actually see? Evaluation Protocols in Room Acoustic Prediction",
+      "url": "https://arxiv.org/abs/2607.15243",
+      "date": "2026-07-16",
+      "authors": "Akın Oktav",
+      "abstract": "揭示数据驱动房间声学预测中的评估协议偏差。在 264 座会议厅和 180 座音乐厅的多条件测量活动上，用阶乘协议消融表明：行级分割 + 含实测输入可复现高 R²（均值 0.81），但切换到部署一致性协议后降至 0.09-0.57。证明混合 CNN 将脉冲响应本身作为位置指纹而非可迁移声学信息利用。发现不同模型间的差距远小于不同协议间的差距。",
+      "tags": ["Room Acoustics", "Audio", "Evaluation", "eess.AS", "cs.SD"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.15243"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.15243"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "本周回顾：OpenAI GPT-Live 全双工语音模型持续引发行业热议",
+      "url": "https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/",
+      "date": "2026-07-17",
+      "source": "TechCrunch / IT之家",
+      "summary": "GPT-Live 发布一周后产业反响持续升温。全双工架构成为语音 AI 行业最热话题，多家竞品（Cartesia、Deepgram）公开放出对标 Demo。GPT-Live 支持同时听说、打断、停顿理解、实时翻译等功能，后台委托 GPT-5.5 处理复杂推理。GPT-Realtime-2.1 系列（7月6日发布）也已集成至 Realtime API。"
+    },
+    {
+      "title": "阿里巴巴 Qwen-Audio-3.0-Realtime 获百度百科收录，实时语音四线并进",
+      "url": "https://baike.baidu.com/item/Qwen-Audio-3.0-Realtime/68260889",
+      "date": "2026-07-17",
+      "source": "百度百科",
+      "summary": "7月15日发布的 Qwen-Audio-3.0-Realtime 迅速获百度百科收录。该模型在智商推理、Agent 工具调用、共情对话和双工交互流畅度四个维度全面提升，推出 Plus（推理更强）和 Flash（速度更快）两个版本，官方称多项指标超越 GPT-Live。"
+    },
+    {
+      "title": "GPT-Live 全面实测：AI 语音交互进入全双工时代",
+      "url": "https://www.aitoollab.cn/articles/gpt-live-ai-voice-assistant-comparison-202607/",
+      "date": "2026-07-17",
+      "source": "AI Tool Lab",
+      "summary": "多家媒体对 GPT-Live 进行了一周全面实测。评测维度涵盖同声传译质量、多轮对话连贯性、打断自然度和情绪感知能力。结论：GPT-Live 在自然度和打断处理上大幅领先前任，但中文场景下 Qwen-Audio-3.0-Realtime 表现更优；实时翻译延迟约 1-2 秒，更适合对话翻译场景而非同传级要求。"
+    },
+    {
+      "title": "语音 AI 赛道竞争白热化：OpenAI vs 阿里 vs Google 三强争霸",
+      "url": "https://www.youngju.dev/blog/culture/2026-05-16-voice-ai-tts-2026-elevenlabs-cartesia-openai-voice-play-ht-hume-sesame-fish-deepgram-aura-deep-dive.en",
+      "date": "2026-07-17",
+      "source": "综合报道",
+      "summary": "本周语音 AI 领域形成三强争霸格局：OpenAI (GPT-Live+GPT-Realtime-2.1)、阿里巴巴 (Qwen-Audio-3.0-Realtime) 和 Google (Gemini 3.5 Flash 语音能力)。此外 ElevenLabs Scribe v2、Cartesia Sonic、Deepgram Nova-3 等专用语音 API 纷纷发版迎战。Hume AI 则另辟蹊径推动评测标准化（RW-Voice-EQ Bench）。"
+    }
+  ],
+  "stats": {
+    "total_papers": 4,
+    "highlight_papers": 1,
+    "total_news": 4
+  },
+  "note": "今天是周六（7月18日），arxiv 周末无新论文提交。论文来自本周最后一批（7月15-16日提交），其中部分为昨天日报未收录的交叉领域论文。本周音频领域最大事件为 OpenAI GPT-Live（7月8日）和阿里巴巴 Qwen-Audio-3.0-Realtime（7月15日）相继发布全双工实时语音模型。"
+}
