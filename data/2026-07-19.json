@@ -1,0 +1,87 @@
+{
+  "date": "2026-07-19",
+  "generated_at": "2026-07-19T09:34:00+08:00",
+  "time_window": "2026-07-18 09:30 ~ 2026-07-19 09:30 (Asia/Shanghai)",
+  "summary": "📌 周末效应：7月18-19日为周末，arxiv无新论文提交，主要AI厂商未有新产品发布。以下收录本周（7月13-19日）内的重要动态作为本周回顾。",
+  "papers": [
+    {
+      "title": "RW-Voice-EQ Bench: A Real World Benchmark for Evaluating Voice AI Systems",
+      "url": "https://arxiv.org/abs/2607.14846",
+      "date": "2026-07-16",
+      "authors": "David Ayllon, Alice Baird, Jeffrey Brooks et al. (Hume AI)",
+      "abstract": "Hume AI 发布 RW-Voice-EQ Bench，一个面向真实场景的多维语音 AI 评测基准。覆盖 TTS、Speech-to-Speech、语音理解 (SU) 和 ASR 四大方向。评测发现各维度高度独立：TTS 的自然度、表现力、身份稳定性和可靠性是独立的评估维度；STS 中部分模型虽接入音频却未能利用声音情感信息；ASR 在真实口音、情绪、噪声等场景下暴露了现有 clean-speech 基准无法捕获的失败。",
+      "tags": ["Voice AI Benchmark", "TTS", "ASR", "Speech-to-Speech", "Evaluation"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.14846"},
+        {"label": "HuggingFace", "url": "https://huggingface.co/spaces/HumeAI/rw-voice-eq"}
+      ]
+    },
+    {
+      "title": "WanSong v1.0: Pure Diffusion-Based Long-Form Multilingual Song Generation",
+      "url": "https://arxiv.org/abs/2607.14749",
+      "date": "2026-07-16",
+      "authors": "Binghui Chen, Pandeng Li, Yu Liu, Jingren Zhou (Wan Team)",
+      "abstract": "万相团队推出 WanSong v1.0，纯扩散模型驱动的商用级歌曲生成系统。不同于自回归+扩散的级联方案，WanSong 单次运行即可生成最长 5 分钟的高保真多语言歌曲，同时输出人声和伴奏双轨。扩散框架天然支持步骤蒸馏加速推理，并为下游微调和编辑任务提供高效路径。",
+      "tags": ["Music Generation", "Diffusion Model", "Multilingual", "Stem Separation"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.14749"}
+      ]
+    },
+    {
+      "title": "Large Audio Language Models for Spoofing-Aware Speaker Verification",
+      "url": "https://arxiv.org/abs/2607.14753",
+      "date": "2026-07-16",
+      "authors": "Sofya Savelyeva, Mariia Perunova, Evgeny Kushnir et al.",
+      "abstract": "首次系统评估大音频语言模型 (LALMs) 在防欺骗说话人验证 (SASV) 上的表现。零样本提示下 LALMs 接近随机水平，但任务特定微调后可达到有竞争力的效果。研究发现 LALMs 有潜力成为可审计的统一 SASV 基础，同时明确了级联系统当前仍在某些方面领先。",
+      "tags": ["Speaker Verification", "Anti-Spoofing", "LALM", "Security"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.14753"}
+      ]
+    },
+    {
+      "title": "SLT 2026 REAL-TSE Challenge: Real-world Target Speaker Extraction",
+      "url": "https://arxiv.org/abs/2607.15198",
+      "date": "2026-07-16",
+      "authors": "Shuai Wang, Zihan Qian, Ke Zhang et al. (多家联合)",
+      "abstract": "IEEE SLT 2026 卫星挑战赛 REAL-TSE 概览论文。任务：给定多说话人混合音频和注册语音，仅提取目标说话人的语音。与之前模拟朗读基准不同，本次挑战使用真实对话录音，包含自然重叠、混响、噪声和信道不匹配。设置在线流式和离线全上下文两个赛道。",
+      "tags": ["Target Speaker Extraction", "Challenge", "SLT 2026", "Real-world"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.15198"}
+      ]
+    },
+    {
+      "title": "SceneBind: Binding What and Where Across Vision, Audio and Language",
+      "url": "https://arxiv.org/abs/2607.15265",
+      "date": "2026-07-16",
+      "authors": "Mingfei Chen, Zijun Cui, Ruoke Zhang et al.",
+      "abstract": "提出 SceneBind，全模态场景表征框架，在视觉、音频和语言之间联合建模语义和 3D 空间理解。现有全模态编码器擅长实例级语义（是什么），但缺乏显式空间结构（在哪里）。SceneBind 引入语义-空间匹配机制，支持跨模态场景检索和物体定位，在零样本迁移到视听定位等下游任务上表现强劲。",
+      "tags": ["Audio-Visual", "Spatial Understanding", "Cross-Modal", "Zero-Shot"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.15265"},
+        {"label": "Project", "url": "https://scenebind.github.io/"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "阿里云发布 Qwen-Audio-3.0-Realtime：毫秒级实时语音大模型",
+      "url": "https://www.ithome.com/0/976/865.htm",
+      "date": "2026-07-15",
+      "summary": "阿里通义千问正式发布 Qwen-Audio-3.0-Realtime 实时语音交互模型，含 Plus 和 Flash 双版本。在智商、Agent 工具调用、共情对话和双工交互流畅度四条主线同步升级，支持毫秒级响应和自主工具调用。Preview 版在 Artificial Analysis Speech-to-Speech 评测中综合排名第一，超越 GPT-Realtime-2。7月15日发布，7月16日全面报道。",
+      "tags": ["Product Launch", "Real-Time", "Full-Duplex", "Alibaba"]
+    },
+    {
+      "title": "Speech Recognition's Next Wave: From Robustness to Real-World Intelligence (综述)",
+      "url": "https://scipapermill.com/2026/07/18/speech-recognitions-next-wave-from-robustness-to-real-world-intelligence/",
+      "date": "2026-07-18",
+      "summary": "7月18日发布的语音识别前沿综述：语音识别的未来不仅是转写文字，而是构建能够理解真实世界语境的智能对话伙伴。文章梳理了从鲁棒性到真实世界智能的下一代 ASR 技术路线图。",
+      "tags": ["Survey", "ASR", "Robustness"]
+    }
+  ],
+  "weekly_highlights_note": "因7月18-19日为周末，24h内无新arxiv论文提交。以上论文选自本周最新提交（7月16日），新闻Qwen-Audio-3.0-Realtime为7月15-16日重大发布。"
+}

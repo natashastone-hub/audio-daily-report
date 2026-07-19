@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-19</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-19</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月19日 (周日) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">5</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.14846" target="_blank">RW-Voice-EQ Bench: A Real World Benchmark for Evaluating Voice AI Systems</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-16</span><span>👥 David Ayllon, Alice Baird, Jeffrey Brooks et al. (Hume AI)</span></div>
+      <div class="abstract">Hume AI 发布 RW-Voice-EQ Bench，一个面向真实场景的多维语音 AI 评测基准。覆盖 TTS、Speech-to-Speech、语音理解 (SU) 和 ASR 四大方向。评测发现各维度高度独立：TTS 的自然度、表现力、身份稳定性和可靠性是独立的评估维度；STS 中部分模型虽接入音频却未能利用声音情感信息；ASR 在真实口音、情绪、噪声等场景下暴露了现有 clean-speech 基准无法捕获的失败。</div>
+      <div class="tags"><span class="tag">Voice AI Benchmark</span><span class="tag">TTS</span><span class="tag">ASR</span><span class="tag">Speech-to-Speech</span><span class="tag">Evaluation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.14846" target="_blank">🔗 arXiv</a> <a href="https://huggingface.co/spaces/HumeAI/rw-voice-eq" target="_blank">🔗 HuggingFace</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.14749" target="_blank">WanSong v1.0: Pure Diffusion-Based Long-Form Multilingual Song Generation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-16</span><span>👥 Binghui Chen, Pandeng Li, Yu Liu, Jingren Zhou (Wan Team)</span></div>
+      <div class="abstract">万相团队推出 WanSong v1.0，纯扩散模型驱动的商用级歌曲生成系统。不同于自回归+扩散的级联方案，WanSong 单次运行即可生成最长 5 分钟的高保真多语言歌曲，同时输出人声和伴奏双轨。扩散框架天然支持步骤蒸馏加速推理，并为下游微调和编辑任务提供高效路径。</div>
+      <div class="tags"><span class="tag">Music Generation</span><span class="tag">Diffusion Model</span><span class="tag">Multilingual</span><span class="tag">Stem Separation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.14749" target="_blank">🔗 arXiv</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.14753" target="_blank">Large Audio Language Models for Spoofing-Aware Speaker Verification</a></h4>
+      <div class="meta"><span>📅 2026-07-16</span><span>👥 Sofya Savelyeva, Mariia Perunova, Evgeny Kushnir et al.</span></div>
+      <div class="abstract">首次系统评估大音频语言模型 (LALMs) 在防欺骗说话人验证 (SASV) 上的表现。零样本提示下 LALMs 接近随机水平，但任务特定微调后可达到有竞争力的效果。研究发现 LALMs 有潜力成为可审计的统一 SASV 基础，同时明确了级联系统当前仍在某些方面领先。</div>
+      <div class="tags"><span class="tag">Speaker Verification</span><span class="tag">Anti-Spoofing</span><span class="tag">LALM</span><span class="tag">Security</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.14753" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.15198" target="_blank">SLT 2026 REAL-TSE Challenge: Real-world Target Speaker Extraction</a></h4>
+      <div class="meta"><span>📅 2026-07-16</span><span>👥 Shuai Wang, Zihan Qian, Ke Zhang et al. (多家联合)</span></div>
+      <div class="abstract">IEEE SLT 2026 卫星挑战赛 REAL-TSE 概览论文。任务：给定多说话人混合音频和注册语音，仅提取目标说话人的语音。与之前模拟朗读基准不同，本次挑战使用真实对话录音，包含自然重叠、混响、噪声和信道不匹配。设置在线流式和离线全上下文两个赛道。</div>
+      <div class="tags"><span class="tag">Target Speaker Extraction</span><span class="tag">Challenge</span><span class="tag">SLT 2026</span><span class="tag">Real-world</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.15198" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.15265" target="_blank">SceneBind: Binding What and Where Across Vision, Audio and Language</a></h4>
+      <div class="meta"><span>📅 2026-07-16</span><span>👥 Mingfei Chen, Zijun Cui, Ruoke Zhang et al.</span></div>
+      <div class="abstract">提出 SceneBind，全模态场景表征框架，在视觉、音频和语言之间联合建模语义和 3D 空间理解。现有全模态编码器擅长实例级语义（是什么），但缺乏显式空间结构（在哪里）。SceneBind 引入语义-空间匹配机制，支持跨模态场景检索和物体定位，在零样本迁移到视听定位等下游任务上表现强劲。</div>
+      <div class="tags"><span class="tag">Audio-Visual</span><span class="tag">Spatial Understanding</span><span class="tag">Cross-Modal</span><span class="tag">Zero-Shot</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.15265" target="_blank">🔗 arXiv</a> <a href="https://scenebind.github.io/" target="_blank">🔗 Project</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>阿里云发布 Qwen-Audio-3.0-Realtime：毫秒级实时语音大模型</h4>
+      <p>阿里通义千问正式发布 Qwen-Audio-3.0-Realtime 实时语音交互模型，含 Plus 和 Flash 双版本。在智商、Agent 工具调用、共情对话和双工交互流畅度四条主线同步升级，支持毫秒级响应和自主工具调用。Preview 版在 Artificial Analysis Speech-to-Speech 评测中综合排名第一，超越 GPT-Realtime-2。7月15日发布，7月16日全面报道。 <a href="https://www.ithome.com/0/976/865.htm" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Speech Recognition's Next Wave: From Robustness to Real-World Intelligence (综述)</h4>
+      <p>7月18日发布的语音识别前沿综述：语音识别的未来不仅是转写文字，而是构建能够理解真实世界语境的智能对话伙伴。文章梳理了从鲁棒性到真实世界智能的下一代 ASR 技术路线图。 <a href="https://scipapermill.com/2026/07/18/speech-recognitions-next-wave-from-robustness-to-real-world-intelligence/" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-19') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
