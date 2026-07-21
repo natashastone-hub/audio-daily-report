@@ -1,0 +1,124 @@
+{
+  "date": "2026-07-21",
+  "papers": [
+    {
+      "title": "Audio-Visual Flamingo: Open Audio-Visual Intelligence for Long and Complex Videos",
+      "url": "https://arxiv.org/abs/2607.16107",
+      "date": "2026-07-17",
+      "authors": "Sreyan Ghosh, Arushi Goel, Kaousheik Jayakumar, Lasha Koroshinadze, Nishit Anand, Siddharth Gururani, Hanrong Ye, Pritam Biswas, Yuanhang Su, Ehsan Hosseini-Asl, Sang-gil Lee, Zhifeng Kong, Jaehyeon Kim, Sungwon Kim, S Sakshi, Ramani Duraiswami, Dinesh Manocha, Andrew Tao, Mohammad Shoeybi, Bryan Catanzaro, Ming-Yu Liu, Wei Ping",
+      "abstract": "提出 Audio-Visual Flamingo (AV-Flamingo)，一个完全开源的最先进音视频大语言模型 (AV-LLM)，用于对音频、图像和长视频进行联合理解和推理。与之前主要关注短片段的 AV-LLM 不同，AV-Flamingo 专为理解和推理长且复杂的真实世界音视频而设计。三大贡献：(i) Audio-Visual-Skills 大规模训练数据集，约 700 万标题和问答训练实例；(ii) 新颖的三阶段课程训练策略，从短程感知逐步过渡到长时多事件推理；(iii) 时间音视频交错思维链推理框架。在 15+ 个基准上表现出色，超越同规模开放模型，与更大的开源和闭源模型竞争。",
+      "tags": ["AV-LLM", "Audio-Visual Understanding", "NVIDIA", "Open Source"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.16107"},
+        {"label": "Project Page", "url": "https://avflamingo.pages.dev/"}
+      ]
+    },
+    {
+      "title": "AuEmoChat: Authentic Emotion Understanding and Rendering for Conversational Speech Synthesis",
+      "url": "https://arxiv.org/abs/2607.15755",
+      "date": "2026-07-17",
+      "authors": "Zhenqi Jia et al.",
+      "abstract": "针对对话语音合成 (CSS) 在用户-Agent 交互中难以渲染真实人类情感的问题，提出 AuEmoChat 框架。包含三大创新：AuEmoCodec 通过有限标量量化学习离散真实情感 token 空间；AuEmoToMe 基于情感引导的多模态 token 合并算法；以及 Authentic Emotion Flow Matching 实现条件化语音渲染。在 NCSSD-EmCap 数据集上超越 SOTA CSS 基线，生成更具表现力和真实感的情绪语音。",
+      "tags": ["Conversational TTS", "Emotion Synthesis", "ACM MM 2026", "Flow Matching"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.15755"}
+      ]
+    },
+    {
+      "title": "A Geometry-Limited Identification Floor and Its Consequences for Voice-Clone Attribution in Professional Voice Actors",
+      "url": "https://arxiv.org/abs/2607.15694",
+      "date": "2026-07-17",
+      "authors": "Shuhei Kato et al.",
+      "abstract": "研究声优声音克隆归因的几何限制。在 1,168 名日本声优（56,568 片段，约 63 小时）上实验发现：训练有素的声音会拥挤嵌入空间，每个演员的多种风格导致固定阈值的克隆归因不可靠。最佳集成模型仍有约 2.6% 的闭集错误识别率。建议鲁棒归因应扩展防欺骗说话人验证到开放集 1:N，并结合领域匹配编码器和逐说话人校准。",
+      "tags": ["Voice Clone Attribution", "Speaker Verification", "Security"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.15694"}
+      ]
+    },
+    {
+      "title": "StemFX: Learning Mixing Style Representations via Autoregressive FX Chain Prediction on Source-Separated Stems",
+      "url": "https://arxiv.org/abs/2607.15634",
+      "date": "2026-07-17",
+      "authors": "Yuan-Chiao Cheng et al.",
+      "abstract": "提出 StemFX 框架，通过自回归预测源分离音轨上的可变长度效果链来学习混音风格表示。Transformer 解码器预测 token 化的效果链，band-split 多频段 CNN 编码器捕获每轨频谱结构。利用约 10.5 万首歌曲的伪音轨和 85 种音频效果进行大规模训练。在混音风格检索和配对风格迁移上优于所有基线，速度比迭代优化快 4000 倍以上。",
+      "tags": ["Audio Mixing", "Style Transfer", "ISMIR 2026", "FX Chain"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.15634"}
+      ]
+    },
+    {
+      "title": "SpeechGuard: Online Defense against Backdoor Attacks on Speech Recognition Models",
+      "url": "https://arxiv.org/abs/2607.15697",
+      "date": "2026-07-17",
+      "authors": "Jinwen Xin et al.",
+      "abstract": "提出 SpeechGuard，首个在线语音识别模型后门防御流水线。改进 STRIP 方法实现自适应扰动注入检测（S-STRIP）；利用时频掩蔽抑制触发信号表达，基于自编码器自主生成掩码。两阶段处理使输入语音即使携带触发器也能被准确预测，显著减轻后门威胁同时保持预测精度。",
+      "tags": ["ASR Security", "Backdoor Defense", "Speech Recognition"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.15697"}
+      ]
+    },
+    {
+      "title": "Estimating the Reliability of Dynamic Time Warping Alignments Using Circumstantial Evidence",
+      "url": "https://arxiv.org/abs/2607.15443",
+      "date": "2026-07-16",
+      "authors": "T.J. Tsai et al.",
+      "abstract": "提出一种基于间接证据估计 DTW 对齐路径局部片段可靠性的无监督方法。直觉：如果 DTW 找到的是强路径，放松边界条件重跑仍会选同一路径；弱路径则不会。通过 FlexDTW 重估计对齐并与原 DTW 路径比较，在音频-音频对齐任务上达到 0.97 的 AUROC。",
+      "tags": ["DTW", "Audio Alignment", "ISMIR 2026", "Uncertainty"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.15443"}
+      ]
+    },
+    {
+      "title": "Segmental DTW: A Parallelizable Alternative to Dynamic Time Warping",
+      "url": "https://arxiv.org/abs/2607.15475",
+      "date": "2026-07-16",
+      "authors": "T.J. Tsai et al.",
+      "abstract": "提出可并行化替代 DTW 的 Segmental DTW 算法。将全局代价矩阵分解为子矩阵，在子矩阵上执行子序列 DTW，再用段级动态规划求解全局最优对齐路径。在 Chopin Mazurka 数据集上接近标准 DTW 性能，但几乎所有计算都可并行化。",
+      "tags": ["DTW", "Parallel Algorithm", "Audio Alignment", "ICASSP 2021"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.15475"}
+      ]
+    },
+    {
+      "title": "Controlling Implicit Shortcut Reliance in L2 Spoken English Auto-markers",
+      "url": "https://arxiv.org/abs/2607.16085",
+      "date": "2026-07-17",
+      "authors": "Shilin Gao et al.",
+      "abstract": "针对语音和语言处理任务中分类器过度依赖输入特定方面（shortcut）的问题，提出一种新颖的训练准则来减少这种依赖。在基于音频和语音识别文本的两种英语口语评估系统上验证，引入改进训练准则后，与可用于作弊的特征相关性显著降低至接近人工参考水平。",
+      "tags": ["Speech Assessment", "Spoken English", "Fairness", "Shortcut Learning"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.16085"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "阿里发布 Qwen-Audio-3.0-TTS：首包延时 300ms，Plus 版登顶全球榜单",
+      "url": "https://developer.aliyun.com/article/1749598",
+      "summary": "7月20日，阿里通义千问团队发布语音合成大模型 Qwen-Audio-3.0-TTS，在细粒度标签控制（如 [gasp][angry] 等情感标注）、freestyle 指令遵循、16 种语言及 20 种方言覆盖等方面系统性提升。包含 Flash（首包延时 300ms）和 Plus（Artificial Analysis 全球榜单冠军）双版本，已在百炼平台开放调用，迈出从「能说话」到「会表达」的关键一步。"
+    },
+    {
+      "title": "阿里发布 Qwen-Audio-3.0-Realtime：实时语音交互全面升级",
+      "url": "https://www.leiphone.com/category/industrynews/Yg2RqalAz09LS6WJ.html",
+      "summary": "7月15日，阿里巴巴发布实时语音交互对话模型 Qwen-Audio-3.0-Realtime，在智商、Agent 工具调用、共情对话和双工交互流畅度四条主线上同步升级，力求「又快又聪明」。包含推理更强的 Plus 版本和速度更快的 Flash 版本，标志着国产全双工语音模型进入产品化阶段。"
+    },
+    {
+      "title": "NVIDIA 开源 AV-Flamingo：面向长视频的音视频大语言模型",
+      "url": "https://avflamingo.pages.dev/",
+      "summary": "NVIDIA 研究团队发布完全开源的 Audio-Visual Flamingo (AV-Flamingo)，专为理解和推理长且复杂的真实世界音视频设计。包含约 700 万训练实例的大规模数据集、三阶段课程训练策略以及创新的时间音视频推理框架，在 15+ 基准上表现出色，代表音视频理解领域的重要开源里程碑。"
+    },
+    {
+      "title": "ACM MM 2026 接收 AuEmoChat：对话语音合成进入真实情感渲染时代",
+      "url": "https://arxiv.org/abs/2607.15755",
+      "summary": "ACM MM 2026 接收论文 AuEmoChat 突破传统 7 类有限情感标签限制，通过有限标量量化学习离散真实情感 token 空间，实现更真实的情感理解和渲染。结合情感引导 token 合并算法和 Authentic Emotion Flow Matching，使对话语音合成的情感表达更加丰富自然。"
+    }
+  ]
+}
