@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-21-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-21-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月21日 (周二) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">5</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.17544" target="_blank">X-Translator: Real-Time Multilingual Speaker-Aware Speech-to-Speech Translation System</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-20</span><span>👥 Yuxiang Zhao, Yichi Zhang, Yanjie An, Yanqiao Zhu, Zhanxun Liu, Yushen Chen, Qixi Zheng, Haina Zhu, Yunchong Xiao, Keqi Deng, Shuai Fan, Kai Yu, Xie Chen</span></div>
+      <div class="abstract">提出 X-Translator，一种低成本模块化级联 S2ST 系统，结合流式 ASR、机器翻译和提示条件 TTS，通过会话级运行时控制器实现实时语音到语音翻译。系统使用增量片段提交将不稳定 ASR 流转换为翻译就绪单元，并通过在线说话人提示管理器绑定源语音跨度与说话人特定语音提示进行合成。支持长时多说话人对话，在 OpenSTBench 上全面评估翻译质量、语音质量和延迟。</div>
+      <div class="tags"><span class="tag">Speech-to-Speech Translation</span><span class="tag">Real-time</span><span class="tag">Multilingual</span><span class="tag">S2ST</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.17544" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.17761" target="_blank">Time-Frequency Consistency Learning for Robust Speech Deepfake Detection</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-20</span><span>👥 Jun Xue et al.</span></div>
+      <div class="abstract">提出时频一致性学习 (TFCL) 框架解决真实部署中声学前处理 (AFE) 管线（回声消除、降噪、AGC、VAD）对语音深度伪造检测的退化问题。AFE 引入非线性和时频耦合失真，TFCL 通过注意力驱动的软对齐机制捕获跨时间依赖，结合频域结构一致性约束强制特征不变性，在 ACM MM 2026 接收。</div>
+      <div class="tags"><span class="tag">Deepfake Detection</span><span class="tag">Speech Security</span><span class="tag">ACM MM 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.17761" target="_blank">🔗 arXiv</a> <a href="https://github.com/JunXue-tech/TFCL" target="_blank">🔗 Code</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.16736" target="_blank">RealDESED: A Real-World Domestic Sound Event Detection Benchmark</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-18</span><span>👥 Florian Schmid, Paul Primus, Alexander Fichtinger, Tara Jadidi, Tobias Morocutti, Gerhard Widmer</span></div>
+      <div class="abstract">发布 RealDESED，一个真实家庭声音事件检测基准，包含 652 位参与者在家中采集的 5,710 条录音和 15 类家庭声音的精确时间标注。相比现有基于仿真或网络爬取的数据集，RealDESED 完全由自然环境录音组成，反映了真实的录音设备、声学条件和背景声多样性。采用多标注者标注方案，建立 Transformer 基线 (PSDS1 0.731)。提交至 DCASE 2026 Workshop，数据集和代码开源。</div>
+      <div class="tags"><span class="tag">Sound Event Detection</span><span class="tag">Dataset</span><span class="tag">DCASE 2026</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.16736" target="_blank">🔗 arXiv</a> <a href="https://zenodo.org/records/20056072" target="_blank">🔗 Dataset (Zenodo)</a> <a href="https://github.com/fschmid56/RealDESED" target="_blank">🔗 Code (GitHub)</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.17867" target="_blank">The tttAI System for the TSA-ASR Task of the SmartGlasses Challenge 2026</a></h4>
+      <div class="meta"><span>📅 2026-07-20</span><span>👥 Gaoyang Dong et al.</span></div>
+      <div class="abstract">提交至 SmartGlasses Challenge 2026 TSA-ASR 任务的系统。针对智能眼镜录音中的时间戳标注的说话人归因语音识别，提出级联架构：WavLM-Large 特征提取 + Conformer 编码器说话人分类 + WeSep 目标说话人提取 + FireRedASR2-AED 识别，总参数量约 1.53B。Track 1 tcpCER 7.10%，Track 2 tcpCER 34.04%，排行榜第二。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">SmartGlasses</span><span class="tag">Speaker Diarization</span><span class="tag">Challenge</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.17867" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.16688" target="_blank">NABEATs: Noise-Aware Audio Representation Learning</a></h4>
+      <div class="meta"><span>📅 2026-07-18</span><span>👥 Takuya Fujimura et al.</span></div>
+      <div class="abstract">提出噪声感知音频自监督学习概念，并基于 BEATs 实现 NABEATs。模型通过辅助参考噪声输入从带噪音频信号中估计干净的 BEATs 表示，使模型能在推理时针对特定噪声特性进行适配。在多种下游任务中显著提升噪声条件下的性能，且能泛化到未见过的噪声类型，获 IWAENC 2026 接收。</div>
+      <div class="tags"><span class="tag">Audio SSL</span><span class="tag">Noise-Robust</span><span class="tag">IWAENC 2026</span><span class="tag">BEATs</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.16688" target="_blank">🔗 arXiv</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>阿里 Qwen-Audio-3.0-TTS 全球热议：AI 语音进入「表演时代」</h4>
+      <p>7月20日阿里发布 Qwen-Audio-3.0-TTS 后，7月21日全网持续热议。新模型在 Artificial Analysis 全球榜单夺冠，核心突破：(1) 细粒度标签控制——支持 [gasp][giggles][angry] 等结构化标签精确到词级情绪表达；(2) Flash 版首包延时 300ms，Plus 版支持 48kHz 录音棚级音质；(3) 覆盖 16 种语言和 20 种方言，Plus 版包揽全部 16 种语言说话人相似度第一；(4) 高噪声/高混响环境下具备语音增强和鲁棒克隆能力。已上线阿里云百炼平台，48K 高清输出功能 7月24日开放。 <a href="https://digital.it168.com/a2026/0721/6942/000006942150.shtml" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>AlphaSignal Daily 头条：Qwen-Audio-3.0-TTS Tops Speech Arena With 16-Language Voice Cloning</h4>
+      <p>AlphaSignal 7月21日简报头条报道阿里 Qwen-Audio-3.0-TTS 登顶 Speech Arena，16 种语言声音克隆获得最高评价，标志着中文 TTS 技术在全球第三方权威评测中首次系统性超越欧美竞品。 <a href="https://alphasignal.ai/news/alibaba-s-qwen-audio-3-0-tts-tops-speech-arena-with-16-language-voice-cloning" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Cursor's AI Swarm 从零重建 SQLite，成本降低 15 倍</h4>
+      <p>AlphaSignal 7月21日报道 Cursor AI Swarm 从零重写了 SQLite，成本仅为传统方案的 1/15，展示了 AI swarm 协作编程的强大潜力。虽然不直接涉及 Audio，但多 Agent 协作模式对语音 AI 流水线的自动化构建具有借鉴意义。 <a href="https://alphasignal.ai/news/cursor-s-ai-swarm-rebuilt-sqlite-from-scratch-at-15x-lower-cost" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-21-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

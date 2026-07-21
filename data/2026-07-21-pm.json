@@ -1,0 +1,85 @@
+{
+  "date": "2026-07-21-pm",
+  "papers": [
+    {
+      "title": "X-Translator: Real-Time Multilingual Speaker-Aware Speech-to-Speech Translation System",
+      "url": "https://arxiv.org/abs/2607.17544",
+      "date": "2026-07-20",
+      "authors": "Yuxiang Zhao, Yichi Zhang, Yanjie An, Yanqiao Zhu, Zhanxun Liu, Yushen Chen, Qixi Zheng, Haina Zhu, Yunchong Xiao, Keqi Deng, Shuai Fan, Kai Yu, Xie Chen",
+      "abstract": "提出 X-Translator，一种低成本模块化级联 S2ST 系统，结合流式 ASR、机器翻译和提示条件 TTS，通过会话级运行时控制器实现实时语音到语音翻译。系统使用增量片段提交将不稳定 ASR 流转换为翻译就绪单元，并通过在线说话人提示管理器绑定源语音跨度与说话人特定语音提示进行合成。支持长时多说话人对话，在 OpenSTBench 上全面评估翻译质量、语音质量和延迟。",
+      "tags": ["Speech-to-Speech Translation", "Real-time", "Multilingual", "S2ST"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.17544"}
+      ]
+    },
+    {
+      "title": "Time-Frequency Consistency Learning for Robust Speech Deepfake Detection",
+      "url": "https://arxiv.org/abs/2607.17761",
+      "date": "2026-07-20",
+      "authors": "Jun Xue et al.",
+      "abstract": "提出时频一致性学习 (TFCL) 框架解决真实部署中声学前处理 (AFE) 管线（回声消除、降噪、AGC、VAD）对语音深度伪造检测的退化问题。AFE 引入非线性和时频耦合失真，TFCL 通过注意力驱动的软对齐机制捕获跨时间依赖，结合频域结构一致性约束强制特征不变性，在 ACM MM 2026 接收。",
+      "tags": ["Deepfake Detection", "Speech Security", "ACM MM 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.17761"},
+        {"label": "Code", "url": "https://github.com/JunXue-tech/TFCL"}
+      ]
+    },
+    {
+      "title": "The tttAI System for the TSA-ASR Task of the SmartGlasses Challenge 2026",
+      "url": "https://arxiv.org/abs/2607.17867",
+      "date": "2026-07-20",
+      "authors": "Gaoyang Dong et al.",
+      "abstract": "提交至 SmartGlasses Challenge 2026 TSA-ASR 任务的系统。针对智能眼镜录音中的时间戳标注的说话人归因语音识别，提出级联架构：WavLM-Large 特征提取 + Conformer 编码器说话人分类 + WeSep 目标说话人提取 + FireRedASR2-AED 识别，总参数量约 1.53B。Track 1 tcpCER 7.10%，Track 2 tcpCER 34.04%，排行榜第二。",
+      "tags": ["ASR", "SmartGlasses", "Speaker Diarization", "Challenge"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.17867"}
+      ]
+    },
+    {
+      "title": "NABEATs: Noise-Aware Audio Representation Learning",
+      "url": "https://arxiv.org/abs/2607.16688",
+      "date": "2026-07-18",
+      "authors": "Takuya Fujimura et al.",
+      "abstract": "提出噪声感知音频自监督学习概念，并基于 BEATs 实现 NABEATs。模型通过辅助参考噪声输入从带噪音频信号中估计干净的 BEATs 表示，使模型能在推理时针对特定噪声特性进行适配。在多种下游任务中显著提升噪声条件下的性能，且能泛化到未见过的噪声类型，获 IWAENC 2026 接收。",
+      "tags": ["Audio SSL", "Noise-Robust", "IWAENC 2026", "BEATs"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.16688"}
+      ]
+    },
+    {
+      "title": "RealDESED: A Real-World Domestic Sound Event Detection Benchmark",
+      "url": "https://arxiv.org/abs/2607.16736",
+      "date": "2026-07-18",
+      "authors": "Florian Schmid, Paul Primus, Alexander Fichtinger, Tara Jadidi, Tobias Morocutti, Gerhard Widmer",
+      "abstract": "发布 RealDESED，一个真实家庭声音事件检测基准，包含 652 位参与者在家中采集的 5,710 条录音和 15 类家庭声音的精确时间标注。相比现有基于仿真或网络爬取的数据集，RealDESED 完全由自然环境录音组成，反映了真实的录音设备、声学条件和背景声多样性。采用多标注者标注方案，建立 Transformer 基线 (PSDS1 0.731)。提交至 DCASE 2026 Workshop，数据集和代码开源。",
+      "tags": ["Sound Event Detection", "Dataset", "DCASE 2026", "Open Source"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.16736"},
+        {"label": "Dataset (Zenodo)", "url": "https://zenodo.org/records/20056072"},
+        {"label": "Code (GitHub)", "url": "https://github.com/fschmid56/RealDESED"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "阿里 Qwen-Audio-3.0-TTS 全球热议：AI 语音进入「表演时代」",
+      "url": "https://digital.it168.com/a2026/0721/6942/000006942150.shtml",
+      "summary": "7月20日阿里发布 Qwen-Audio-3.0-TTS 后，7月21日全网持续热议。新模型在 Artificial Analysis 全球榜单夺冠，核心突破：(1) 细粒度标签控制——支持 [gasp][giggles][angry] 等结构化标签精确到词级情绪表达；(2) Flash 版首包延时 300ms，Plus 版支持 48kHz 录音棚级音质；(3) 覆盖 16 种语言和 20 种方言，Plus 版包揽全部 16 种语言说话人相似度第一；(4) 高噪声/高混响环境下具备语音增强和鲁棒克隆能力。已上线阿里云百炼平台，48K 高清输出功能 7月24日开放。"
+    },
+    {
+      "title": "AlphaSignal Daily 头条：Qwen-Audio-3.0-TTS Tops Speech Arena With 16-Language Voice Cloning",
+      "url": "https://alphasignal.ai/news/alibaba-s-qwen-audio-3-0-tts-tops-speech-arena-with-16-language-voice-cloning",
+      "summary": "AlphaSignal 7月21日简报头条报道阿里 Qwen-Audio-3.0-TTS 登顶 Speech Arena，16 种语言声音克隆获得最高评价，标志着中文 TTS 技术在全球第三方权威评测中首次系统性超越欧美竞品。"
+    },
+    {
+      "title": "Cursor's AI Swarm 从零重建 SQLite，成本降低 15 倍",
+      "url": "https://alphasignal.ai/news/cursor-s-ai-swarm-rebuilt-sqlite-from-scratch-at-15x-lower-cost",
+      "summary": "AlphaSignal 7月21日报道 Cursor AI Swarm 从零重写了 SQLite，成本仅为传统方案的 1/15，展示了 AI swarm 协作编程的强大潜力。虽然不直接涉及 Audio，但多 Agent 协作模式对语音 AI 流水线的自动化构建具有借鉴意义。"
+    }
+  ]
+}
