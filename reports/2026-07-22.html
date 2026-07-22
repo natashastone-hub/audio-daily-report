@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-22</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-22</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月22日 (周三) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">9</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">5</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.17544" target="_blank">X-Translator: A Real-Time Multilingual Speaker-Aware Speech-to-Speech Translation System</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-20</span><span>👥 Yuxiang Zhao, Yichi Zhang, Yanjie An, Yanqiao Zhu, Zhanxun Liu, Yushen Chen, Qixi Zheng, Haina Zhu, Yunchong Xiao, Keqi Deng, Shuai Fan, Kai Yu, Xie Chen</span></div>
+      <div class="abstract">提出 X-Translator，一个低成本模块化级联式实时语音翻译 (S2ST) 系统。通过增量片段提交将不稳定的 ASR 流转化为翻译就绪单元，在线说话人提示管理器将源语音段绑定到说话人特定语音提示用于合成。在 OpenSTBench 上评估翻译质量、语音质量和延迟，与商业 API 对标，并评估多说话人场景下的说话人保留。代码和演示已开源。</div>
+      <div class="tags"><span class="tag">Speech-to-Speech Translation</span><span class="tag">Real-Time</span><span class="tag">Multilingual</span><span class="tag">Open Source</span><span class="tag">Speaker-Aware</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.17544" target="_blank">🔗 arXiv</a> <a href="https://github.com/zhaoyx239/X-Translator" target="_blank">🔗 GitHub</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.17079" target="_blank">SALMONN-2: Advancing General-Purpose Hearing Abilities with Self-Supervised Representations</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-19</span><span>👥 Xiaoyu Yang, Xuenan Xu, Wenyi Yu, Siyin Wang, Changli Tang, Terumi Chiba, Siyuan Hou, Ziyang Zhang, Wen Wu, Baoxiang Li, Guangzhi Sun, Chao Zhang, Philip Woodland</span></div>
+      <div class="abstract">提出 SALMONN-2，基于统一自监督编码器的音频大语言模型 (ALLM)。提出多层特征融合适配器聚合所有编码层的层次表示。研究 ALLM 中的多模态上下文学习 (MICL) 能力。在 MMAU-Pro、MMAR 和 MMSU 上取得同规模开源模型 SOTA。证明 MICL 需要通过定向上下文偏置训练才能有效获得。</div>
+      <div class="tags"><span class="tag">Audio LLM</span><span class="tag">Self-Supervised Learning</span><span class="tag">ALLM</span><span class="tag">SOTA</span><span class="tag">Context Learning</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.17079" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.17230" target="_blank">Robust Summarization of Doctor-Patient Conversations: TalTech Systems for the BeTraC Challenge</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-19</span><span>👥 Tanel Alumäe et al.</span></div>
+      <div class="abstract">提交到 Beyond Transcription Challenge (BeTraC) 的系统，直接从长医生-患者对话录音生成 SOAP 笔记，无需中间转录。使用 Voxtral Mini/Small + LoRA 微调 + DAPO 强化学习，以 Open Medical Concept F1 作为奖励。在两个赛道均排名第一，且独立评估显示幻觉率最低。发现文本转录微调可良好迁移到语音输入。</div>
+      <div class="tags"><span class="tag">Speech LLM</span><span class="tag">Medical ASR</span><span class="tag">BeTraC</span><span class="tag">RL</span><span class="tag">Voxtral</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.17230" target="_blank">🔗 arXiv</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.17867" target="_blank">The tttAI System for the TSA-ASR Task of the SmartGlasses Challenge 2026</a></h4>
+      <div class="meta"><span>📅 2026-07-20</span><span>👥 Gaoyang Dong et al.</span></div>
+      <div class="abstract">提交到 SmartGlasses Challenge 2026 的 TSA-ASR 任务系统。提出级联架构：说话人日志→重叠检测→目标说话人提取→后处理→ASR。使用 WavLM-Large 提取特征，Conformer 编码器进行帧级分类。在双人对话（Track 1）上达到 tcpCER 7.10%，多人会议（Track 2）上达到 34.04%，排名第二。总参数量约 15.3 亿。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Speaker Diarization</span><span class="tag">SmartGlasses</span><span class="tag">Challenge</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.17867" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.16688" target="_blank">NABEATs: Noise-Aware Audio Representation Learning</a></h4>
+      <div class="meta"><span>📅 2026-07-18</span><span>👥 Takuya Fujimura et al.</span></div>
+      <div class="abstract">提出噪声感知音频自监督学习概念，目标是编码音频混合时抑制不需要的噪声。基于 BEATs 实现 NABEATs，通过辅助参考噪声输入估计干净 BEATs 表示。在推理时可针对特定噪声特性进行适应，显著提升噪声条件下的下游任务性能，并能泛化到未见噪声类型。已被 IWAENC 2026 接收。</div>
+      <div class="tags"><span class="tag">Self-Supervised Learning</span><span class="tag">Noise Robustness</span><span class="tag">BEATs</span><span class="tag">IWAENC 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.16688" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.16736" target="_blank">A Real-World Domestic Sound Event Detection Benchmark</a></h4>
+      <div class="meta"><span>📅 2026-07-18</span><span>👥 Florian Schmid et al.</span></div>
+      <div class="abstract">提出 RealDESED 基准，包含 5,710 条由 652 名参与者在家庭环境中录制的真实音频。每条 15-35 秒，标注 15 类常见家庭声音事件。关键特点是多标注者独立标注 + 验证/测试集额外审核。提供丰富元数据（设备、位置、环境标签、场景描述）。建立强 Transformer 基线，macro-PSDS1 达 0.731。已提交 DCASE 2026 Workshop。</div>
+      <div class="tags"><span class="tag">Sound Event Detection</span><span class="tag">Benchmark</span><span class="tag">DCASE 2026</span><span class="tag">Real-World</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.16736" target="_blank">🔗 arXiv</a> <a href="https://zenodo.org/records/20056072" target="_blank">🔗 Dataset</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.16599" target="_blank">SongSQA: Is One Score Enough? Assessing Singing Quality of Songs with Temporal Score Curves</a></h4>
+      <div class="meta"><span>📅 2026-07-18</span><span>👥 Yishan Lv et al.</span></div>
+      <div class="abstract">提出 SongSQA 两阶段框架用于全长歌曲演唱质量评估 (SQA)。第一阶段用伪标签训练片段评分预测器，第二阶段用 Song Quality Aggregator 融合片段特征预测整体质量并生成时序质量曲线。在 KTAU 指标上相比最强基线提升 13.95%，在所有数据集上一致改进。</div>
+      <div class="tags"><span class="tag">Singing Quality Assessment</span><span class="tag">SQA</span><span class="tag">Music AI</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.16599" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.17526" target="_blank">FlowSonic: Stable Zero-Shot Music Editing via High-Order Trajectory Integration</a></h4>
+      <div class="meta"><span>📅 2026-07-20</span><span>👥 Ali Boudaghi et al.</span></div>
+      <div class="abstract">提出 FlowSonic，零样本文本引导的真实世界音乐录音编辑框架。基于预训练 rectified flow 扩散 Transformer，引入高阶 ODE 求解器提高逆变换数值可靠性。在音色迁移和风格修改任务上全面超越现有音乐编辑方法，在语义对齐、和声保留、结构一致性和感知音频质量上均表现更优。</div>
+      <div class="tags"><span class="tag">Music Editing</span><span class="tag">Diffusion Transformer</span><span class="tag">Zero-Shot</span><span class="tag">Flow Matching</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.17526" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.15694" target="_blank">A Geometry-Limited Identification Floor and Its Consequences for Voice-Clone Attribution in Professional Voice Actors</a></h4>
+      <div class="meta"><span>📅 2026-07-17</span><span>👥 Shuhei Kato et al.</span></div>
+      <div class="abstract">在 1,168 名日本声优（63小时音频）上研究声音克隆归因的几何限制。发现训练有素的声音会拥挤嵌入空间，多种风格导致固定阈值克隆归因不可靠。最佳集成模型仍有约 2.6% 闭集错误识别率。建议结合领域匹配编码器、逐说话人校准和防欺骗门的开放集 1:N 归因方案。</div>
+      <div class="tags"><span class="tag">Voice Clone Attribution</span><span class="tag">Speaker Verification</span><span class="tag">Security</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.15694" target="_blank">🔗 arXiv</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>🔥 OpenAI 发布 GPT-Live 全双工语音模型，ChatGPT Voice 全面升级</h4>
+      <p>2026年7月8日，OpenAI 发布 GPT-Live 系列全双工语音模型（GPT-Live-1 和 GPT-Live-1 mini），正式替代 ChatGPT Advanced Voice Mode。采用原生实时架构，支持同时聆听和说话、随时打断、实时翻译、同声传译等。后台委托 GPT-5.5 处理复杂推理和联网搜索。一周内 ChatGPT Voice 用户突破 1.5 亿。两层架构：前台语音交互 + 后台深度推理，标志语音 AI 从「轮替对话」进入「连续交互」时代。 <a href="https://openai.com/index/introducing-gpt-live/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>阿里发布 Qwen-Audio-3.0-TTS 实时语音合成大模型</h4>
+      <p>2026年7月20日，阿里通义千问团队发布 Qwen-Audio-3.0-TTS，定位「从能说话到会表达」的新一代实时语音合成大模型。首包延迟极低，支持流式合成，在自然度、情感表现力和多语言能力上显著提升。与一周前发布的 Qwen-Audio-3.0-Realtime 构成完整的实时语音交互产品线。 <a href="https://www.aihub.cn/news/qwen-audio-3-0-tts-release/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>阿里发布 Qwen-Audio-3.0-Realtime 实时语音交互对话模型</h4>
+      <p>2026年7月15日，阿里巴巴发布 Qwen-Audio-3.0-Realtime 实时语音交互对话模型。在智商、Agent 工具调用、共情对话和双向打断能力上全面升级，支持多轮连续对话。采用端到端语音理解+生成架构，标志着国产实时语音交互模型的重要进展。 <a href="https://www.qbitai.com/2026/07/450250.html" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>OpenAI 发布 GPT-Realtime-2.1 语音模型 API</h4>
+      <p>2026年7月6日，OpenAI 在 Realtime API 中发布 gpt-realtime-2.1 和 gpt-realtime-2.1-mini，为低延迟语音到语音 Agent 增加可配置推理和工具调用能力。此后一周内又发布 GPT-Live 消费级全双工层，两条线并行推进语音 AI 生态。 <a href="https://datanorth.ai/news/openai-releases-gpt-realtime-2-1-voice-models" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Google Gemini 3.5 Live Translate：70 语言流式语音翻译发布</h4>
+      <p>Google 发布 Gemini 3.5 Live Translate，覆盖 70 种语言的流式语音到语音翻译模型。已在 Google Meet、Translate 和 Live API 中上线，支持实时语音翻译，是同声传译领域的重要产品进展。同时 Gemini 3.1 Flash Live 的 API changelog 显示持续优化中（1天前有更新）。 <a href="https://www.marktechpost.com/2026/06/09/google-releases-gemini-3-5-live-translate-a-streaming-speech-to-speech-audio-model-covering-70-languages-across-meet-translate-and-the-live-api/" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-22') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

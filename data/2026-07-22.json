@@ -1,0 +1,147 @@
+{
+  "date": "2026-07-22",
+  "papers": [
+    {
+      "title": "X-Translator: A Real-Time Multilingual Speaker-Aware Speech-to-Speech Translation System",
+      "url": "https://arxiv.org/abs/2607.17544",
+      "date": "2026-07-20",
+      "authors": "Yuxiang Zhao, Yichi Zhang, Yanjie An, Yanqiao Zhu, Zhanxun Liu, Yushen Chen, Qixi Zheng, Haina Zhu, Yunchong Xiao, Keqi Deng, Shuai Fan, Kai Yu, Xie Chen",
+      "abstract": "提出 X-Translator，一个低成本模块化级联式实时语音翻译 (S2ST) 系统。通过增量片段提交将不稳定的 ASR 流转化为翻译就绪单元，在线说话人提示管理器将源语音段绑定到说话人特定语音提示用于合成。在 OpenSTBench 上评估翻译质量、语音质量和延迟，与商业 API 对标，并评估多说话人场景下的说话人保留。代码和演示已开源。",
+      "tags": ["Speech-to-Speech Translation", "Real-Time", "Multilingual", "Open Source", "Speaker-Aware"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.17544"},
+        {"label": "GitHub", "url": "https://github.com/zhaoyx239/X-Translator"}
+      ]
+    },
+    {
+      "title": "SALMONN-2: Advancing General-Purpose Hearing Abilities with Self-Supervised Representations",
+      "url": "https://arxiv.org/abs/2607.17079",
+      "date": "2026-07-19",
+      "authors": "Xiaoyu Yang, Xuenan Xu, Wenyi Yu, Siyin Wang, Changli Tang, Terumi Chiba, Siyuan Hou, Ziyang Zhang, Wen Wu, Baoxiang Li, Guangzhi Sun, Chao Zhang, Philip Woodland",
+      "abstract": "提出 SALMONN-2，基于统一自监督编码器的音频大语言模型 (ALLM)。提出多层特征融合适配器聚合所有编码层的层次表示。研究 ALLM 中的多模态上下文学习 (MICL) 能力。在 MMAU-Pro、MMAR 和 MMSU 上取得同规模开源模型 SOTA。证明 MICL 需要通过定向上下文偏置训练才能有效获得。",
+      "tags": ["Audio LLM", "Self-Supervised Learning", "ALLM", "SOTA", "Context Learning"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.17079"}
+      ]
+    },
+    {
+      "title": "The tttAI System for the TSA-ASR Task of the SmartGlasses Challenge 2026",
+      "url": "https://arxiv.org/abs/2607.17867",
+      "date": "2026-07-20",
+      "authors": "Gaoyang Dong et al.",
+      "abstract": "提交到 SmartGlasses Challenge 2026 的 TSA-ASR 任务系统。提出级联架构：说话人日志→重叠检测→目标说话人提取→后处理→ASR。使用 WavLM-Large 提取特征，Conformer 编码器进行帧级分类。在双人对话（Track 1）上达到 tcpCER 7.10%，多人会议（Track 2）上达到 34.04%，排名第二。总参数量约 15.3 亿。",
+      "tags": ["ASR", "Speaker Diarization", "SmartGlasses", "Challenge"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.17867"}
+      ]
+    },
+    {
+      "title": "Robust Summarization of Doctor-Patient Conversations: TalTech Systems for the BeTraC Challenge",
+      "url": "https://arxiv.org/abs/2607.17230",
+      "date": "2026-07-19",
+      "authors": "Tanel Alumäe et al.",
+      "abstract": "提交到 Beyond Transcription Challenge (BeTraC) 的系统，直接从长医生-患者对话录音生成 SOAP 笔记，无需中间转录。使用 Voxtral Mini/Small + LoRA 微调 + DAPO 强化学习，以 Open Medical Concept F1 作为奖励。在两个赛道均排名第一，且独立评估显示幻觉率最低。发现文本转录微调可良好迁移到语音输入。",
+      "tags": ["Speech LLM", "Medical ASR", "BeTraC", "RL", "Voxtral"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.17230"}
+      ]
+    },
+    {
+      "title": "NABEATs: Noise-Aware Audio Representation Learning",
+      "url": "https://arxiv.org/abs/2607.16688",
+      "date": "2026-07-18",
+      "authors": "Takuya Fujimura et al.",
+      "abstract": "提出噪声感知音频自监督学习概念，目标是编码音频混合时抑制不需要的噪声。基于 BEATs 实现 NABEATs，通过辅助参考噪声输入估计干净 BEATs 表示。在推理时可针对特定噪声特性进行适应，显著提升噪声条件下的下游任务性能，并能泛化到未见噪声类型。已被 IWAENC 2026 接收。",
+      "tags": ["Self-Supervised Learning", "Noise Robustness", "BEATs", "IWAENC 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.16688"}
+      ]
+    },
+    {
+      "title": "A Real-World Domestic Sound Event Detection Benchmark",
+      "url": "https://arxiv.org/abs/2607.16736",
+      "date": "2026-07-18",
+      "authors": "Florian Schmid et al.",
+      "abstract": "提出 RealDESED 基准，包含 5,710 条由 652 名参与者在家庭环境中录制的真实音频。每条 15-35 秒，标注 15 类常见家庭声音事件。关键特点是多标注者独立标注 + 验证/测试集额外审核。提供丰富元数据（设备、位置、环境标签、场景描述）。建立强 Transformer 基线，macro-PSDS1 达 0.731。已提交 DCASE 2026 Workshop。",
+      "tags": ["Sound Event Detection", "Benchmark", "DCASE 2026", "Real-World"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.16736"},
+        {"label": "Dataset", "url": "https://zenodo.org/records/20056072"}
+      ]
+    },
+    {
+      "title": "SongSQA: Is One Score Enough? Assessing Singing Quality of Songs with Temporal Score Curves",
+      "url": "https://arxiv.org/abs/2607.16599",
+      "date": "2026-07-18",
+      "authors": "Yishan Lv et al.",
+      "abstract": "提出 SongSQA 两阶段框架用于全长歌曲演唱质量评估 (SQA)。第一阶段用伪标签训练片段评分预测器，第二阶段用 Song Quality Aggregator 融合片段特征预测整体质量并生成时序质量曲线。在 KTAU 指标上相比最强基线提升 13.95%，在所有数据集上一致改进。",
+      "tags": ["Singing Quality Assessment", "SQA", "Music AI"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.16599"}
+      ]
+    },
+    {
+      "title": "FlowSonic: Stable Zero-Shot Music Editing via High-Order Trajectory Integration",
+      "url": "https://arxiv.org/abs/2607.17526",
+      "date": "2026-07-20",
+      "authors": "Ali Boudaghi et al.",
+      "abstract": "提出 FlowSonic，零样本文本引导的真实世界音乐录音编辑框架。基于预训练 rectified flow 扩散 Transformer，引入高阶 ODE 求解器提高逆变换数值可靠性。在音色迁移和风格修改任务上全面超越现有音乐编辑方法，在语义对齐、和声保留、结构一致性和感知音频质量上均表现更优。",
+      "tags": ["Music Editing", "Diffusion Transformer", "Zero-Shot", "Flow Matching"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.17526"}
+      ]
+    },
+    {
+      "title": "A Geometry-Limited Identification Floor and Its Consequences for Voice-Clone Attribution in Professional Voice Actors",
+      "url": "https://arxiv.org/abs/2607.15694",
+      "date": "2026-07-17",
+      "authors": "Shuhei Kato et al.",
+      "abstract": "在 1,168 名日本声优（63小时音频）上研究声音克隆归因的几何限制。发现训练有素的声音会拥挤嵌入空间，多种风格导致固定阈值克隆归因不可靠。最佳集成模型仍有约 2.6% 闭集错误识别率。建议结合领域匹配编码器、逐说话人校准和防欺骗门的开放集 1:N 归因方案。",
+      "tags": ["Voice Clone Attribution", "Speaker Verification", "Security"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.15694"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "🔥 OpenAI 发布 GPT-Live 全双工语音模型，ChatGPT Voice 全面升级",
+      "url": "https://openai.com/index/introducing-gpt-live/",
+      "summary": "2026年7月8日，OpenAI 发布 GPT-Live 系列全双工语音模型（GPT-Live-1 和 GPT-Live-1 mini），正式替代 ChatGPT Advanced Voice Mode。采用原生实时架构，支持同时聆听和说话、随时打断、实时翻译、同声传译等。后台委托 GPT-5.5 处理复杂推理和联网搜索。一周内 ChatGPT Voice 用户突破 1.5 亿。两层架构：前台语音交互 + 后台深度推理，标志语音 AI 从「轮替对话」进入「连续交互」时代。",
+      "tags": ["OpenAI", "GPT-Live", "Full-Duplex", "Voice AI", "Product Launch"]
+    },
+    {
+      "title": "阿里发布 Qwen-Audio-3.0-TTS 实时语音合成大模型",
+      "url": "https://www.aihub.cn/news/qwen-audio-3-0-tts-release/",
+      "summary": "2026年7月20日，阿里通义千问团队发布 Qwen-Audio-3.0-TTS，定位「从能说话到会表达」的新一代实时语音合成大模型。首包延迟极低，支持流式合成，在自然度、情感表现力和多语言能力上显著提升。与一周前发布的 Qwen-Audio-3.0-Realtime 构成完整的实时语音交互产品线。",
+      "tags": ["Alibaba", "Qwen", "TTS", "Real-Time", "Voice Synthesis"]
+    },
+    {
+      "title": "阿里发布 Qwen-Audio-3.0-Realtime 实时语音交互对话模型",
+      "url": "https://www.qbitai.com/2026/07/450250.html",
+      "summary": "2026年7月15日，阿里巴巴发布 Qwen-Audio-3.0-Realtime 实时语音交互对话模型。在智商、Agent 工具调用、共情对话和双向打断能力上全面升级，支持多轮连续对话。采用端到端语音理解+生成架构，标志着国产实时语音交互模型的重要进展。",
+      "tags": ["Alibaba", "Qwen", "Real-Time Voice", "Agent", "Dialogue"]
+    },
+    {
+      "title": "OpenAI 发布 GPT-Realtime-2.1 语音模型 API",
+      "url": "https://datanorth.ai/news/openai-releases-gpt-realtime-2-1-voice-models",
+      "summary": "2026年7月6日，OpenAI 在 Realtime API 中发布 gpt-realtime-2.1 和 gpt-realtime-2.1-mini，为低延迟语音到语音 Agent 增加可配置推理和工具调用能力。此后一周内又发布 GPT-Live 消费级全双工层，两条线并行推进语音 AI 生态。",
+      "tags": ["OpenAI", "Realtime API", "Voice Agent", "API"]
+    },
+    {
+      "title": "Google Gemini 3.5 Live Translate：70 语言流式语音翻译发布",
+      "url": "https://www.marktechpost.com/2026/06/09/google-releases-gemini-3-5-live-translate-a-streaming-speech-to-speech-audio-model-covering-70-languages-across-meet-translate-and-the-live-api/",
+      "summary": "Google 发布 Gemini 3.5 Live Translate，覆盖 70 种语言的流式语音到语音翻译模型。已在 Google Meet、Translate 和 Live API 中上线，支持实时语音翻译，是同声传译领域的重要产品进展。同时 Gemini 3.1 Flash Live 的 API changelog 显示持续优化中（1天前有更新）。",
+      "tags": ["Google", "Gemini", "Speech Translation", "70 Languages", "Streaming"]
+    }
+  ]
+}
