@@ -1,0 +1,79 @@
+{
+  "date": "2026-07-22-pm",
+  "timeWindow": "9:30 AM - 2:00 PM CST",
+  "papers": [
+    {
+      "title": "Staged Depth-Pruning Distillation of a Flow-Matching Text-to-Speech Teacher: A Compact Hindi Speech Synthesizer",
+      "url": "https://arxiv.org/abs/2607.18662",
+      "date": "2026-07-21",
+      "authors": "Sivateja Alukur Trikutam et al.",
+      "abstract": "A practical recipe for building a compact Hindi TTS model by distilling a 337M-parameter flow-matching teacher (IndicF5) under a ~17.6-hour data budget. Using staged depth pruning from 22→16→12→8→6 transformer blocks with WER-gated fine-tuning, the students reach WER 0.00 at 249M and 190M params. The 131M model remains robust; at 102M a capacity cliff is observed. The method yields a high-quality Hindi voice running in real-time on a 6GB laptop GPU.",
+      "tags": ["TTS", "Hindi", "Model Distillation", "Flow Matching", "Low-Resource"],
+      "highlight": "🎯 仅用17.6小时数据将337M TTS教师模型蒸馏至131M学生模型，WER=0.00，6GB笔记本GPU实时运行"
+    },
+    {
+      "title": "Caption Studio: Transparent-first Speech and Audio Intelligence Platform",
+      "url": "https://arxiv.org/abs/2607.18704",
+      "date": "2026-07-21",
+      "authors": "Cheng Siong Chin et al.",
+      "abstract": "A transparency-first speech and audio intelligence platform that transforms spoken audio/video into structured, searchable content via ASR (Whisper-class), speaker diarization (pyannote), waveform analysis, pitch, speaking rate, silence, filler-word frequency, and sentiment extraction. Key contribution: every metric is explicitly labeled as measured/derived/unavailable for traceability.",
+      "tags": ["ASR", "Speaker Diarization", "Speech Analytics", "Transparency", "Platform"],
+      "highlight": "🔍 透明优先的语音智能平台，每个指标明确标注来源（实测/推导/不可用），提升可解释性"
+    },
+    {
+      "title": "A Unified Embedding Space for Text, Image, Video, and Audio",
+      "url": "https://arxiv.org/abs/2607.18666",
+      "date": "2026-07-21",
+      "authors": "Abdul Basit Tonmoy et al. (EximiusLabs)",
+      "abstract": "Fusion Embedding family adds audio to a frozen vision-language embedding base. Gen 1 trains only a 16.4M connector between frozen audio tower and frozen base; Gen 2 adds modality-gated deep adapters (44.2M). Aligning audio to text alone makes audio-image retrieval emerge with zero paired audio-visual data. Trains in hours on a single GPU. Weights and code open-sourced.",
+      "tags": ["Multi-Modal", "Audio Embedding", "Open Source", "Cross-Modal Retrieval"],
+      "highlight": "🌐 首次将音频加入四模态统一嵌入空间，零音频-图像配对数据即实现跨模态检索，单GPU训练"
+    },
+    {
+      "title": "Towards Array-Invariant Speech Enhancement via Geometry-Aware Dynamic Convolution",
+      "url": "https://arxiv.org/abs/2607.18658",
+      "date": "2026-07-21",
+      "authors": "Zhenglong Liu et al.",
+      "abstract": "A Geometry-Aware Dynamic Convolution (Geo-DConv) framework that leverages microphone coordinates to transform standard fixed-array SE models into robust array-invariant systems. Evaluated on RealMAN multi-channel speech dataset. Accepted at Interspeech 2026.",
+      "tags": ["Speech Enhancement", "Multi-Channel", "Array Geometry", "Interspeech 2026"],
+      "highlight": "🏆 Interspeech 2026 录用：利用麦克风几何坐标实现阵列不变语音增强"
+    },
+    {
+      "title": "Summary of DCASE 2026 Task 5: Audio-Dependent Question Answering (ADQA)",
+      "url": "https://arxiv.org/abs/2607.18718",
+      "date": "2026-07-21",
+      "authors": "Haolin He, Qiuqiang Kong et al.",
+      "abstract": "DCASE 2026 Task 5 introduces ADQA, testing whether audio-language models answer from audio rather than textual priors. 3000 items across music, speech, and environmental audio. 14 teams, 36 submissions. Top accuracy 58.33% (MOSS-Audio-8B-Thinking + Qwen3-Omni-30B ensemble). Most common backbone: MOSS-Audio-8B-Thinking (13/36). Evaluation accuracy drops 11.9pp on avg vs dev set.",
+      "tags": ["Audio-Language Models", "Benchmark", "DCASE 2026", "Audio QA"],
+      "highlight": "📊 DCASE 2026 音频QA挑战赛结果公布：最佳准确率58.33%，揭示音频语言模型仍严重依赖文本先验"
+    },
+    {
+      "title": "End-to-End Markov State Sequence Learning for Auditory Attention Decoding",
+      "url": "https://arxiv.org/abs/2607.18614",
+      "date": "2026-07-21",
+      "authors": "Yushan Yashengjiang et al.",
+      "abstract": "An end-to-end Markov AAD framework based on CRF that jointly optimizes window-level neural emissions with a two-state attention prior. Introduces ESCNet backbone. Achieves 86.5% causal and 92.4% non-causal accuracy with 1s windows on AVGC dataset. Improves causal decoding by 5.6% and 2.0% on KUL and USTC datasets over post-hoc HMM.",
+      "tags": ["Auditory Attention", "EEG", "Hearing Aids", "CRF"],
+      "highlight": "🧠 端到端马尔可夫听觉注意力解码：1秒窗口达92.4%准确率，助听器应用新突破"
+    },
+    {
+      "title": "Chaos-Inspired Samba-Based EMG-To-Speech Synthesis with Nonlinear Chaotic Losses",
+      "url": "https://arxiv.org/abs/2607.18629",
+      "date": "2026-07-21",
+      "authors": "Tarikul Islam Tamiti et al.",
+      "abstract": "CS-ETS: A chaos-inspired EMG-to-speech synthesis architecture combining Samba encoder with Lyapunov Exponent Regularization and Multi-Scale Detrended Fluctuation Analysis losses. 40.79% fewer parameters (32M vs 54.1M), 2.1x LSD improvement, 4.7x STOI and 1.25x SI-SDR gains through Post-Vocoder Alignment.",
+      "tags": ["EMG-to-Speech", "Speech Synthesis", "Chaos Theory", "Assistive Technology"],
+      "highlight": "⚡ 混沌物理启发的肌电-语音合成：参数量减少41%，质量提升2-5倍"
+    },
+    {
+      "title": "Addressing Limited Data in Auditory Attention Decoding with Diffusion Generative Models",
+      "url": "https://arxiv.org/abs/2607.18345",
+      "date": "2026-07-20",
+      "authors": "Emina Alickovic et al.",
+      "abstract": "Investigates diffusion probabilistic models for generating synthetic speech-evoked EEG data to address data scarcity in AAD. Synthetic data significantly improves AAD performance over models trained solely on measured EEG (p<0.05), showing potential for improving short-window AAD models in hearing aid applications.",
+      "tags": ["Auditory Attention", "EEG", "Diffusion Models", "Data Augmentation", "Hearing Aids"],
+      "highlight": "🎲 扩散模型生成合成EEG数据，显著提升听觉注意力解码（p<0.05），助听器数据增强新方向"
+    }
+  ],
+  "news": []
+}
