@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-23</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-23</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月23日 (周四) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">6</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">6</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.18662" target="_blank">Staged Depth-Pruning Distillation of a Flow-Matching Text-to-Speech Teacher: A Compact Hindi Speech Synthesizer</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-21</span><span>👥 Sivateja Trikutam</span></div>
+      <div class="abstract">提出了一种实用方案，通过深度剪枝蒸馏构建紧凑的印地语 TTS 模型——从 337M 参数的 IndicF5 流匹配教师模型蒸馏，仅用 ~17.6 小时数据。通过逐步减少 Transformer 块（22→16→12→8→6），在 190M 参数下实现 WER 0.00，131M 仍保持鲁棒。6GB 笔记本 GPU 上可实时运行。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Flow Matching</span><span class="tag">Knowledge Distillation</span><span class="tag">Hindi</span><span class="tag">Low-Resource</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.18662" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.18662" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.18666" target="_blank">Fusion Embedding: A Unified Embedding Space for Text, Image, Video, and Audio</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-21</span><span>👥 Abdul Basit Tonmoy, Kazi Fardinul Hoque, Md. Shahrier Islam Arham, Arman Luthra</span></div>
+      <div class="abstract">提出 Fusion Embedding 系列模型，在冻结的视觉-语言嵌入基础上添加音频模态，仅训练 16.4M-44.2M 参数的连接器/适配器。音频与文本对齐即可自然实现音频-图像检索，无需配对的音频-视觉训练数据。权重、代码和评估工具均开源。</div>
+      <div class="tags"><span class="tag">Multi-Modal</span><span class="tag">Audio Embedding</span><span class="tag">Cross-Modal Retrieval</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.18666" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.18666" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.18718" target="_blank">Summary of DCASE 2026 Task 5: Audio-Dependent Question Answering</a></h4>
+      <div class="meta"><span>📅 2026-07-21</span><span>👥 Haolin He, Renhe Sun, Zheqi Dai, Xingjian Du, Chunyat Wu et al.</span></div>
+      <div class="abstract">DCASE 2026 Task 5 引入音频依赖问答（ADQA），测试大音频语言模型是否真正从音频中回答而非依赖文本先验。14 支队伍 36 个提交参赛，中安大学 MOSS-Audio-8B-Thinking + Qwen3-Omni-30B 集成模型以 58.33% 准确率夺冠。</div>
+      <div class="tags"><span class="tag">Audio Understanding</span><span class="tag">Audio-Language Models</span><span class="tag">Benchmark</span><span class="tag">DCASE 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.18718" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.18718" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.18658" target="_blank">Towards Array-Invariant Speech Enhancement via Geometry-Aware Dynamic Convolution</a></h4>
+      <div class="meta"><span>📅 2026-07-21</span><span>👥 Zhenglong Liu, Wangyou Zhang, Chenda Li, Yanmin Qian</span></div>
+      <div class="abstract">提出几何感知动态卷积（Geo-DConv）框架，利用麦克风坐标将固定阵列语音增强模型转换为阵列不变系统。在 RealMAN 多通道语音数据集上实验，验证了两种广泛使用的固定阵列模型可适配到阵列不变设置，在多样化阵列拓扑上持续提升性能。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Array-Invariant</span><span class="tag">Multi-Channel</span><span class="tag">Dynamic Convolution</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.18658" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.18658" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.18704" target="_blank">What the Waveform Knows: Transparent-first Speech and Audio Intelligence with Caption Studio</a></h4>
+      <div class="meta"><span>📅 2026-07-21</span><span>👥 Jianhua Zhang, Mohan Venkateshkumar</span></div>
+      <div class="abstract">Caption Studio 是一个透明度优先的语音音频智能平台，基于 Whisper 级 ASR 和 pyannote 说话人分类，将语音音频和视频转化为结构化可搜索内容。核心贡献是"透明度优先"框架——每个报告指标明确标识为"已测量""已推导"或"不可用"，提升可解释性和可靠性。</div>
+      <div class="tags"><span class="tag">Speech Analytics</span><span class="tag">ASR</span><span class="tag">Diarization</span><span class="tag">Transparency</span><span class="tag">Audio Intelligence</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.18704" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.18704" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.18614" target="_blank">End-to-End Markov State Sequence Learning for Auditory Attention Decoding</a></h4>
+      <div class="meta"><span>📅 2026-07-21</span><span>👥 Yushan Yashengjiang, Jie Zhang, Miao Sun, Huadong Liang, Xin Li, Zhen-hua Ling</span></div>
+      <div class="abstract">提出端到端马尔可夫听觉注意力解码框架，基于条件随机场（CRF）将窗口级神经发射与双状态注意力先验结合训练。配合提出的 ESCNet EEG-语音相关骨干网络，在动态 AVGC 数据集上达到 86.5% 因果和 92.4% 非因果解码准确率。</div>
+      <div class="tags"><span class="tag">Auditory Attention</span><span class="tag">EEG</span><span class="tag">Hearing Aids</span><span class="tag">CRF</span><span class="tag">Neural Decoding</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.18614" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.18614" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>OpenAI 发布 GPT-Live 全双工语音模型，ChatGPT 语音交互迈向「真人式」对话</h4>
+      <p>2026年7月8日，OpenAI 发布新一代语音模型 GPT-Live 和 GPT-Live-1 mini，采用全双工（full-duplex）架构实现同时聆听和说话，支持实时打断和同声传译。后台由 GPT-5.5 驱动深层推理，前台模型专注语音交互体验。GPT-Live 已开始驱动 ChatGPT Voice，标志着 AI 语音交互从半双工轮流向全双工真人式对话的范式转变。 <a href="https://www.marktechpost.com/2026/07/08/openai-releases-gpt-live-and-gpt-live-1-mini-full-duplex-voice-models-that-delegate-deeper-reasoning-to-gpt-5-5/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>GPT-Live 全双工语音 Agent 深度拆解：连续交互 + 后台委托推理</h4>
+      <p>GPT-Live 核心架构创新：语音 Runtime 负责实时交互（同时听说、打断、backchannel 如「嗯哼」），深层推理任务（搜索、复杂计算）委托给后台 GPT-5.5。难点已从模型延迟转向 Voice Runtime 工程。支持的场景包括：实时翻译、多任务并行、自然打断和语调情绪控制。 <a href="https://juejin.cn/post/7660896500881866804" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Google Gemini 发布原生音频对话模型：gemini-2.5-flash-native-audio-dialog</h4>
+      <p>Google 在 7 月发布了两款新 Gemini 模型：gemini-2.5-flash-preview-native-audio-dialog 和 gemini-2.5-flash-exp-native-audio-thinking-dialog，原生支持音频对话能力。这意味着 Gemini 可以直接处理语音输入输出，无需 ASR→LLM→TTS 的级联流水线。Interactions API 已正式 GA。 <a href="https://releasebot.io/updates/google/gemini-api" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>NVIDIA PersonaPlex 7B：实时全双工语音对话模型完全指南</h4>
+      <p>NVIDIA PersonaPlex 7B 于 2026 年 1 月发布，是以往 ASR-LLM-TTS 流水线式语音 AI 的端到端替代方案。通过文本角色提示词和音频声音条件控制角色，开创性地实现实时全双工语音对话。为开源语音 AI 社区提供了有力参考。 <a href="https://www.oflight.co.jp/en/columns/nvidia-personaplex-7b-full-duplex-voice-ai-guide-2026" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>字节跳动 Seeduplex：原生全双工语音大模型</h4>
+      <p>字节跳动 Seed 团队发布 Seeduplex，一个原生全双工语音 LLM。实时流式处理音频输入，持续提取语音特征，甚至在生成输出语音的同时也能处理输入。团队开发了开创性的实时全双工语音交互框架。 <a href="https://seed.bytedance.com/seeduplex" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>DCASE 2026 Task 5 结果公布：音频依赖问答挑战赛</h4>
+      <p>DCASE 2026 新增音频依赖问答（ADQA）任务，14 支队伍 36 个方案参赛。中安大学以 MOSS-Audio-8B-Thinking + Qwen3-Omni-30B 集成模型夺冠，展示了音频-语言模型在复杂音频理解任务上的最新进展。 <a href="https://arxiv.org/abs/2607.18718" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-23') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

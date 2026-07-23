@@ -1,0 +1,116 @@
+{
+  "date": "2026-07-23",
+  "generated_at": "2026-07-23T09:34:00+08:00",
+  "papers": [
+    {
+      "title": "Staged Depth-Pruning Distillation of a Flow-Matching Text-to-Speech Teacher: A Compact Hindi Speech Synthesizer",
+      "url": "https://arxiv.org/abs/2607.18662",
+      "date": "2026-07-21",
+      "authors": "Sivateja Trikutam",
+      "abstract": "提出了一种实用方案，通过深度剪枝蒸馏构建紧凑的印地语 TTS 模型——从 337M 参数的 IndicF5 流匹配教师模型蒸馏，仅用 ~17.6 小时数据。通过逐步减少 Transformer 块（22→16→12→8→6），在 190M 参数下实现 WER 0.00，131M 仍保持鲁棒。6GB 笔记本 GPU 上可实时运行。",
+      "tags": ["TTS", "Flow Matching", "Knowledge Distillation", "Hindi", "Low-Resource"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.18662"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.18662"}
+      ]
+    },
+    {
+      "title": "Summary of DCASE 2026 Task 5: Audio-Dependent Question Answering",
+      "url": "https://arxiv.org/abs/2607.18718",
+      "date": "2026-07-21",
+      "authors": "Haolin He, Renhe Sun, Zheqi Dai, Xingjian Du, Chunyat Wu et al.",
+      "abstract": "DCASE 2026 Task 5 引入音频依赖问答（ADQA），测试大音频语言模型是否真正从音频中回答而非依赖文本先验。14 支队伍 36 个提交参赛，中安大学 MOSS-Audio-8B-Thinking + Qwen3-Omni-30B 集成模型以 58.33% 准确率夺冠。",
+      "tags": ["Audio Understanding", "Audio-Language Models", "Benchmark", "DCASE 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.18718"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.18718"}
+      ]
+    },
+    {
+      "title": "Fusion Embedding: A Unified Embedding Space for Text, Image, Video, and Audio",
+      "url": "https://arxiv.org/abs/2607.18666",
+      "date": "2026-07-21",
+      "authors": "Abdul Basit Tonmoy, Kazi Fardinul Hoque, Md. Shahrier Islam Arham, Arman Luthra",
+      "abstract": "提出 Fusion Embedding 系列模型，在冻结的视觉-语言嵌入基础上添加音频模态，仅训练 16.4M-44.2M 参数的连接器/适配器。音频与文本对齐即可自然实现音频-图像检索，无需配对的音频-视觉训练数据。权重、代码和评估工具均开源。",
+      "tags": ["Multi-Modal", "Audio Embedding", "Cross-Modal Retrieval", "Open Source"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.18666"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.18666"}
+      ]
+    },
+    {
+      "title": "Towards Array-Invariant Speech Enhancement via Geometry-Aware Dynamic Convolution",
+      "url": "https://arxiv.org/abs/2607.18658",
+      "date": "2026-07-21",
+      "authors": "Zhenglong Liu, Wangyou Zhang, Chenda Li, Yanmin Qian",
+      "abstract": "提出几何感知动态卷积（Geo-DConv）框架，利用麦克风坐标将固定阵列语音增强模型转换为阵列不变系统。在 RealMAN 多通道语音数据集上实验，验证了两种广泛使用的固定阵列模型可适配到阵列不变设置，在多样化阵列拓扑上持续提升性能。",
+      "tags": ["Speech Enhancement", "Array-Invariant", "Multi-Channel", "Dynamic Convolution"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.18658"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.18658"}
+      ]
+    },
+    {
+      "title": "What the Waveform Knows: Transparent-first Speech and Audio Intelligence with Caption Studio",
+      "url": "https://arxiv.org/abs/2607.18704",
+      "date": "2026-07-21",
+      "authors": "Jianhua Zhang, Mohan Venkateshkumar",
+      "abstract": "Caption Studio 是一个透明度优先的语音音频智能平台，基于 Whisper 级 ASR 和 pyannote 说话人分类，将语音音频和视频转化为结构化可搜索内容。核心贡献是\"透明度优先\"框架——每个报告指标明确标识为\"已测量\"\"已推导\"或\"不可用\"，提升可解释性和可靠性。",
+      "tags": ["Speech Analytics", "ASR", "Diarization", "Transparency", "Audio Intelligence"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.18704"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.18704"}
+      ]
+    },
+    {
+      "title": "End-to-End Markov State Sequence Learning for Auditory Attention Decoding",
+      "url": "https://arxiv.org/abs/2607.18614",
+      "date": "2026-07-21",
+      "authors": "Yushan Yashengjiang, Jie Zhang, Miao Sun, Huadong Liang, Xin Li, Zhen-hua Ling",
+      "abstract": "提出端到端马尔可夫听觉注意力解码框架，基于条件随机场（CRF）将窗口级神经发射与双状态注意力先验结合训练。配合提出的 ESCNet EEG-语音相关骨干网络，在动态 AVGC 数据集上达到 86.5% 因果和 92.4% 非因果解码准确率。",
+      "tags": ["Auditory Attention", "EEG", "Hearing Aids", "CRF", "Neural Decoding"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.18614"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.18614"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "OpenAI 发布 GPT-Live 全双工语音模型，ChatGPT 语音交互迈向「真人式」对话",
+      "url": "https://www.marktechpost.com/2026/07/08/openai-releases-gpt-live-and-gpt-live-1-mini-full-duplex-voice-models-that-delegate-deeper-reasoning-to-gpt-5-5/",
+      "summary": "2026年7月8日，OpenAI 发布新一代语音模型 GPT-Live 和 GPT-Live-1 mini，采用全双工（full-duplex）架构实现同时聆听和说话，支持实时打断和同声传译。后台由 GPT-5.5 驱动深层推理，前台模型专注语音交互体验。GPT-Live 已开始驱动 ChatGPT Voice，标志着 AI 语音交互从半双工轮流向全双工真人式对话的范式转变。"
+    },
+    {
+      "title": "GPT-Live 全双工语音 Agent 深度拆解：连续交互 + 后台委托推理",
+      "url": "https://juejin.cn/post/7660896500881866804",
+      "summary": "GPT-Live 核心架构创新：语音 Runtime 负责实时交互（同时听说、打断、backchannel 如「嗯哼」），深层推理任务（搜索、复杂计算）委托给后台 GPT-5.5。难点已从模型延迟转向 Voice Runtime 工程。支持的场景包括：实时翻译、多任务并行、自然打断和语调情绪控制。"
+    },
+    {
+      "title": "Google Gemini 发布原生音频对话模型：gemini-2.5-flash-native-audio-dialog",
+      "url": "https://releasebot.io/updates/google/gemini-api",
+      "summary": "Google 在 7 月发布了两款新 Gemini 模型：gemini-2.5-flash-preview-native-audio-dialog 和 gemini-2.5-flash-exp-native-audio-thinking-dialog，原生支持音频对话能力。这意味着 Gemini 可以直接处理语音输入输出，无需 ASR→LLM→TTS 的级联流水线。Interactions API 已正式 GA。"
+    },
+    {
+      "title": "NVIDIA PersonaPlex 7B：实时全双工语音对话模型完全指南",
+      "url": "https://www.oflight.co.jp/en/columns/nvidia-personaplex-7b-full-duplex-voice-ai-guide-2026",
+      "summary": "NVIDIA PersonaPlex 7B 于 2026 年 1 月发布，是以往 ASR-LLM-TTS 流水线式语音 AI 的端到端替代方案。通过文本角色提示词和音频声音条件控制角色，开创性地实现实时全双工语音对话。为开源语音 AI 社区提供了有力参考。"
+    },
+    {
+      "title": "字节跳动 Seeduplex：原生全双工语音大模型",
+      "url": "https://seed.bytedance.com/seeduplex",
+      "summary": "字节跳动 Seed 团队发布 Seeduplex，一个原生全双工语音 LLM。实时流式处理音频输入，持续提取语音特征，甚至在生成输出语音的同时也能处理输入。团队开发了开创性的实时全双工语音交互框架。"
+    },
+    {
+      "title": "DCASE 2026 Task 5 结果公布：音频依赖问答挑战赛",
+      "url": "https://arxiv.org/abs/2607.18718",
+      "summary": "DCASE 2026 新增音频依赖问答（ADQA）任务，14 支队伍 36 个方案参赛。中安大学以 MOSS-Audio-8B-Thinking + Qwen3-Omni-30B 集成模型夺冠，展示了音频-语言模型在复杂音频理解任务上的最新进展。"
+    }
+  ]
+}
