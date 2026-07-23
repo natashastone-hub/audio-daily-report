@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-23-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-23-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月23日 (周四) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">7</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">7</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.19932" target="_blank">Efficient Chain-of-Modality Reasoning via Progressive Compression for Spoken Language Models</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Pengchao Feng et al.</span></div>
+      <div class="abstract">The first framework to introduce compressed reasoning into spoken language models (SLMs). By compressing textual reasoning traces to jointly serve as speech guidance and reasoning representation, ECoM Reasoning improves spoken math QA accuracy by 21% over standard CoM without explicit reasoning, and 3% over CoM with full traces while using only 40% of text tokens.</div>
+      <div class="tags"><span class="tag">Spoken Language Models</span><span class="tag">Reasoning</span><span class="tag">Speech Understanding</span><span class="tag">Modality Compression</span></div>
+      <div class="links"></div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.19859" target="_blank">StellarTTS: Sparse Temporal Embedding for Low-Latency and Robust Speech Synthesis</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Huiyan Li et al.</span></div>
+      <div class="abstract">A mobile-optimized non-autoregressive TTS framework using sparse temporal embedding for granular control of phoneme duration, pronunciation, and prosody. Features a semantic-aware codec for single-stage decoding. The 83M-parameter lightweight masked generative transformer achieves RTF 0.08 with superior robustness and competitive audio quality. Accepted at ASRU 2025.</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Speech Synthesis</span><span class="tag">Non-Autoregressive</span><span class="tag">Mobile</span><span class="tag">Low-Latency</span></div>
+      <div class="links"></div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.19810" target="_blank">Data-Efficient Streaming Speech-to-Speech Translation via Explicit Trajectory Supervision</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Rongshen He et al.</span></div>
+      <div class="abstract">Streaming S2ST using only ~2k hours of paired cross-lingual data with auxiliary multitask training. Core contribution: joint text-code trajectory supervision that unifies target text and acoustic semantic codes as a single commitment path. A two-stream Thinker-Talker factorization decouples linguistic reasoning from acoustic prediction, matching closed-source systems like LiveInterpret 2.0 on ASR-BLEU.</div>
+      <div class="tags"><span class="tag">Speech-to-Speech Translation</span><span class="tag">Streaming</span><span class="tag">S2ST</span><span class="tag">Multilingual</span></div>
+      <div class="links"></div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.20166" target="_blank">Audio-Zero: Label-Free Self-Evolution for Fine-Grained Audio Reasoning</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Siqian Tong et al.</span></div>
+      <div class="abstract">The first label-free self-evolution framework for Large Audio Language Models (LALMs) that improves fine-grained auditory perception. Constructs an auditory self-play game from unlabeled audio contrast pairs where models generate clues and identify odd listeners. Verified on Qwen2-Audio-7B-Instruct and Qwen2.5-Omni-7B on TREA, MMAU, and MMAR benchmarks.</div>
+      <div class="tags"><span class="tag">Audio Language Models</span><span class="tag">Self-Supervised</span><span class="tag">Audio Reasoning</span><span class="tag">LALM</span></div>
+      <div class="links"></div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.20023" target="_blank">Layer-Wise Decision Fusion for Fake Audio Detection Using XLS-R</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Yixuan Xiao et al.</span></div>
+      <div class="abstract">A layer-wise decision fusion method for fake audio detection that fuses after per-layer decision making rather than fusing features first. Achieves best cross-dataset EER 6.90% on In-the-Wild dataset compared to strong baselines. The transparent design enables detailed analysis of decision mechanisms. Accepted at Interspeech 2025.</div>
+      <div class="tags"><span class="tag">Deepfake Detection</span><span class="tag">Audio Security</span><span class="tag">XLS-R</span><span class="tag">Interspeech</span></div>
+      <div class="links"></div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.20253" target="_blank">Pushing the Frontier of Full-Song Generation: Hierarchical Autoregressive Planning Meets Flow-Matching Rendering</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Junyu Dai, Xinyue Fan, Weiqin Li et al.</span></div>
+      <div class="abstract">A unified song generation framework for lyrics-to-song, instrumental music, and cover song generation. Four-component architecture: semantic-aware tokenizer, hybird-LM, FullDiT, and melody module. Uses hierarchical autoregressive modeling combined with flow-matching rendering. Investigates DPO, GRPO, and OPD as reward-based post-training strategies.</div>
+      <div class="tags"><span class="tag">Music Generation</span><span class="tag">Song Generation</span><span class="tag">Flow Matching</span><span class="tag">Music AI</span></div>
+      <div class="links"></div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.19918" target="_blank">Scalable Keyword Spotting via Modular Network Expansion</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Dzmitry Saladukha et al.</span></div>
+      <div class="abstract">Parameter-capped modular expansion for keyword spotting on embedded devices. Freezes the base network and trains only a lightweight expansion branch for new keywords. Reduces average new-keyword FRR from 6.46 to 4.37 vs parameter-matched baseline, using fewer MACs (16.34M vs 18.45M). Accepted at Interspeech 2026.</div>
+      <div class="tags"><span class="tag">Keyword Spotting</span><span class="tag">Embedded</span><span class="tag">Incremental Learning</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"></div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-23-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
