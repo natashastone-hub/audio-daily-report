@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-24</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-24</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月24日 (周五) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">12</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.20253" target="_blank">Pushing the Frontier of Full-Song Generation: Hierarchical Autoregressive Planning Meets Flow-Matching Rendering</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Junyu Dai, Xinyue Fan, Weiqin Li, Xiangang Li, Yunjia Li, Bin Ma, Yukun Ma, Chongjia Ni, Yufei Shi, Biao Tian, Haoxu Wang, Menglin Wu, Jianwei Yu, Huaicheng Zhang, Han Zhao, Shengkui Zhao, Haina Zhu</span></div>
+      <div class="abstract">提出统一歌曲生成框架，支持歌词转歌曲、纯器乐生成和翻唱歌曲三大任务。架构包含语义感知分词器、hybird-LM 层次化自回归建模、FullDiT 连续VAE流匹配渲染和两级旋律模块。探索了DPO/GRPO/OPD等奖励后训练策略，在 Artificial Analysis Music with Vocals 榜单上达到竞品水平。</div>
+      <div class="tags"><span class="tag">Music Generation</span><span class="tag">Song Generation</span><span class="tag">Flow Matching</span><span class="tag">Autoregressive</span><span class="tag">Full-Song</span><span class="tag">RLHF</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.20253" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.20253" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.19810" target="_blank">Data-Efficient Streaming Speech-to-Speech Translation via Explicit Trajectory Supervision</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Rongshen He et al.</span></div>
+      <div class="abstract">提出数据高效的流式语音到语音翻译(S2ST)训练方案，仅用约2k小时配对S2ST数据即可实现句子级和长语音流式翻译。核心创新：联合文本-声学码轨迹监督消除对不稳定语音端发射控制器的需求；Thinker-Talker双流分解显著优于统一解码器基线。在RealSI和ACL60/60-dev上与闭源LiveInterpret 2.0持平。</div>
+      <div class="tags"><span class="tag">Speech-to-Speech Translation</span><span class="tag">Streaming</span><span class="tag">Data-Efficient</span><span class="tag">Thinker-Talker</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.19810" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.19810" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.20166" target="_blank">Label-Free Self-Evolution for Fine-Grained Audio Reasoning</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Siqian Tong et al.</span></div>
+      <div class="abstract">提出 Audio-Zero，首个无标签自进化框架，用于提升大音频语言模型(LALM)的细粒度音频推理能力。通过构建听觉自博弈游戏——多数参与者听参考音频，一个异类听细微变体——模型生成线索描述并通过推理找出异类。无需任何标注答案。在Qwen2-Audio和Qwen2.5-Omni上实验，细粒度音频推理提升显著。</div>
+      <div class="tags"><span class="tag">Audio Reasoning</span><span class="tag">Audio-Language Models</span><span class="tag">Self-Evolution</span><span class="tag">LALM</span><span class="tag">Fine-Grained</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.20166" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.20166" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.19605" target="_blank">Enabling Large-Scale Agentic Music Post-Production</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-21</span><span>👥 Noah Schaffer et al.</span></div>
+      <div class="abstract">提出RIME框架和POEMS工具包，将音乐后期制作形式化为智能体任务。RIME从任意音乐数据集生成逼真的编辑-指令配对数据，基于真实制作工作流约束。用RIME+POEMS生成3000对数据评估现有多模态LLM的音乐后期制作能力，并证明监督微调可提升智能体表现。被定位为音乐领域的coding agent式交互系统。</div>
+      <div class="tags"><span class="tag">Music Post-Production</span><span class="tag">Agentic AI</span><span class="tag">Multimodal LLM</span><span class="tag">Music Editing</span><span class="tag">RIME</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.19605" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.19605" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.19859" target="_blank">StellarTTS: Sparse Temporal Embedding for Low-Latency and Robust Speech Synthesis</a></h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Huiyan Li et al.</span></div>
+      <div class="abstract">提出 StellarTTS，一种移动端优化的非自回归TTS框架。基于稀疏时序嵌入策略实现音素时长、发音和韵律的细粒度控制。83M参数的轻量掩码生成Transformer实现RTF 0.08的实时推理。在延迟、鲁棒性上显著优于SOTA TTS系统，同时保持竞争性音质和韵律自然度。已被ASRU 2025接收。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Non-Autoregressive</span><span class="tag">Mobile-Optimized</span><span class="tag">Low-Latency</span><span class="tag">Sparse Embedding</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.19859" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.19859" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.19932" target="_blank">Efficient Chain-of-Modality Reasoning via Progressive Compression for Spoken Language Models</a></h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Pengchao Feng et al.</span></div>
+      <div class="abstract">提出ECoM Reasoning框架，首次将压缩推理引入口语语言模型(SLM)。通过在语音-文本链式推理中压缩文本组件，仅用40%的文本token实现比完整CoM推理高3%的准确率，比无推理CoM高21%。配套渐进压缩课程学习策略逐步训练模型从完整推理到压缩推理。</div>
+      <div class="tags"><span class="tag">Spoken Language Models</span><span class="tag">Chain-of-Modality</span><span class="tag">Reasoning</span><span class="tag">Progressive Compression</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.19932" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.19932" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.19636" target="_blank">Multimodal Speaker Verification as a Threat to Speaker Anonymization</a></h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Ashi Garg et al.</span></div>
+      <div class="abstract">研究多话语、多模态说话人验证对匿名化的威胁。实验表明：聚合多个匿名话语后性能持续提升；引入韵律和语言信息的多模态系统显著优于单模态；帧级聚合实现最低EER。即使仅5个匿名话语，音频+文本比纯音频聚合降低超15% EER，表明匿名化后仍有大量说话人辨识信息残留。</div>
+      <div class="tags"><span class="tag">Speaker Verification</span><span class="tag">Speaker Anonymization</span><span class="tag">Multimodal</span><span class="tag">Privacy</span><span class="tag">Aggregation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.19636" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.19636" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.20023" target="_blank">Layer-Wise Decision Fusion for Fake Audio Detection Using XLS-R</a></h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Yixuan Xiao et al.</span></div>
+      <div class="abstract">提出逐层决策融合方法用于假音频检测。不同于传统单层或特征融合方案，该方法在每层独立决策后再融合，充分利用深层多层表征。在In-the-Wild数据集上以6.90% EER取得最佳跨数据集性能，同时提升了模型透明度。已被Interspeech 2025接收。</div>
+      <div class="tags"><span class="tag">Fake Audio Detection</span><span class="tag">Anti-Spoofing</span><span class="tag">XLS-R</span><span class="tag">Layer Fusion</span><span class="tag">Audio Security</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.20023" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.20023" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.19918" target="_blank">Scalable Keyword Spotting via Modular Network Expansion</a></h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Dzmitry Saladukha et al.</span></div>
+      <div class="abstract">提出参数上限可控的模块化扩展方法用于关键词检测(KWS)部署后增量添加新关键词。基础网络（含BN统计和核心分类器）冻结不变，仅训练轻量扩展分支和新词头。在固定操作点下，新词FRR从6.46降至4.37（vs参数匹配baseline），且MACs更低。已被Interspeech 2026接收。</div>
+      <div class="tags"><span class="tag">Keyword Spotting</span><span class="tag">Embedded AI</span><span class="tag">Modular Expansion</span><span class="tag">Parameter-Efficient</span><span class="tag">On-Device</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.19918" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.19918" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.20086" target="_blank">Cumsum-Composable Phase Transport for Low-Cost Streaming Keyword Spotting</a></h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Mahesh Godavarti et al.</span></div>
+      <div class="abstract">提出累计和可组合相位传输(cumsum-composable phase transport)作为流式关键词检测的轻量时序层。通过酉旋转+前缀差实现流式处理，训练时可精确批量计算（用累积和），推理时每帧仅一次前缀更新。51.6K参数模型在GSCv2上达97.3%准确率，训练比scan式快1.07x，单样本延迟降至5.01ms。</div>
+      <div class="tags"><span class="tag">Keyword Spotting</span><span class="tag">Streaming</span><span class="tag">Phase Transport</span><span class="tag">Edge Computing</span><span class="tag">Low-Latency</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.20086" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.20086" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.19688" target="_blank">A Diagnostic Evaluation Framework for AI-Generated Cover Songs</a></h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Yingxin Liang et al.</span></div>
+      <div class="abstract">提出AI翻唱歌曲五维诊断评估框架：旋律音高、和声进行、调性一致性、风格一致性和编曲/制作质量。测试30首由6个系统生成的翻唱，发现和声进行和编曲严重错误率最高（53%和47%），调性保持相对较好。开源代码和评估工具。</div>
+      <div class="tags"><span class="tag">Music Generation</span><span class="tag">AI Cover</span><span class="tag">Evaluation</span><span class="tag">Diagnostic</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.19688" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.19688" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.19776" target="_blank">Perceptually-Grouped Rhythm-Pitch Primitives for Long-Term Structure Melody Generation</a></h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Yuke Liu et al.</span></div>
+      <div class="abstract">提出RPPNet，两阶段深度学习架构用于旋律生成。首先生成可变长度节奏-音高原语(RPP)序列（基于音乐心理学的声学线索+听觉惯性+相似性感知自动分组），再解码为具体音符。主观评测中RPPNet在长期结构和音乐性上显著优于基线，消融实验证实增益来自心理表征的结构正确性而非模型容量。</div>
+      <div class="tags"><span class="tag">Music Generation</span><span class="tag">Melody</span><span class="tag">Music Psychology</span><span class="tag">Structural Modeling</span><span class="tag">Symbolic Music</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.19776" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.19776" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>阿里通义千问发布 Qwen-Audio-3.0-TTS 语音合成大模型</h4>
+      <p>2026年7月20日，阿里通义千问团队正式发布新一代实时语音合成大模型 Qwen-Audio-3.0-TTS，包含Flash（首包延迟约300ms）和Plus两个版本。模型在细粒度标签控制、freestyle指令遵循、多语种与方言覆盖及复杂声学鲁棒性方面全面升级，支持高噪声环境下的语音克隆，在Artificial Analysis榜单上排名前列。 <a href="https://developer.aliyun.com/article/1749598" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>阿里云发布 Qwen-Audio-3.0-Realtime 实时语音推理模型</h4>
+      <p>2026年7月15日，阿里通义实验室发布 Qwen-Audio-3.0-Realtime，在第三方权威评测平台 Artificial Analysis 的 Speech Reasoning 子项中综合排名全球第一。模型包括推理更强的Plus版本和速度更快的Flash版本，适用于智能客服、教育培训、娱乐互动与情感陪伴等场景。 <a href="https://news.qq.com/rain/a/20260715A04GT300" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>OpenAI GPT-Live 全双工语音模型持续热议：两周内相关评测和深度分析涌现</h4>
+      <p>OpenAI 于7月8日发布的 GPT-Live 全双工语音模型持续引发行业关注。近两周内，大量深度评测和技术分析涌现，重点关注：全双工架构对语音交互范式的革命性影响、后台GPT-5.5委托推理机制、与豆包/讯飞星火等竞品的横向对比。ChatGPT Voice 用户数已突破1.5亿。该模型未来将引入API供开发者构建语音驱动应用。 <a href="https://www.buildfastwithai.com/blogs/gpt-live-review-openai-voice-model-july-2026" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-24') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+{
+  "date": "2026-07-24",
+  "generated_at": "2026-07-24T09:34:00+08:00",
+  "papers": [
+    {
+      "title": "Pushing the Frontier of Full-Song Generation: Hierarchical Autoregressive Planning Meets Flow-Matching Rendering",
+      "url": "https://arxiv.org/abs/2607.20253",
+      "date": "2026-07-22",
+      "authors": "Junyu Dai, Xinyue Fan, Weiqin Li, Xiangang Li, Yunjia Li, Bin Ma, Yukun Ma, Chongjia Ni, Yufei Shi, Biao Tian, Haoxu Wang, Menglin Wu, Jianwei Yu, Huaicheng Zhang, Han Zhao, Shengkui Zhao, Haina Zhu",
+      "abstract": "提出统一歌曲生成框架，支持歌词转歌曲、纯器乐生成和翻唱歌曲三大任务。架构包含语义感知分词器、hybird-LM 层次化自回归建模、FullDiT 连续VAE流匹配渲染和两级旋律模块。探索了DPO/GRPO/OPD等奖励后训练策略，在 Artificial Analysis Music with Vocals 榜单上达到竞品水平。",
+      "tags": [
+        "Music Generation",
+        "Song Generation",
+        "Flow Matching",
+        "Autoregressive",
+        "Full-Song",
+        "RLHF"
+      ],
+      "highlight": true,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.20253"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.20253"
+        }
+      ]
+    },
+    {
+      "title": "Data-Efficient Streaming Speech-to-Speech Translation via Explicit Trajectory Supervision",
+      "url": "https://arxiv.org/abs/2607.19810",
+      "date": "2026-07-22",
+      "authors": "Rongshen He et al.",
+      "abstract": "提出数据高效的流式语音到语音翻译(S2ST)训练方案，仅用约2k小时配对S2ST数据即可实现句子级和长语音流式翻译。核心创新：联合文本-声学码轨迹监督消除对不稳定语音端发射控制器的需求；Thinker-Talker双流分解显著优于统一解码器基线。在RealSI和ACL60/60-dev上与闭源LiveInterpret 2.0持平。",
+      "tags": [
+        "Speech-to-Speech Translation",
+        "Streaming",
+        "Data-Efficient",
+        "Thinker-Talker"
+      ],
+      "highlight": true,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.19810"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.19810"
+        }
+      ]
+    },
+    {
+      "title": "Label-Free Self-Evolution for Fine-Grained Audio Reasoning",
+      "url": "https://arxiv.org/abs/2607.20166",
+      "date": "2026-07-22",
+      "authors": "Siqian Tong et al.",
+      "abstract": "提出 Audio-Zero，首个无标签自进化框架，用于提升大音频语言模型(LALM)的细粒度音频推理能力。通过构建听觉自博弈游戏——多数参与者听参考音频，一个异类听细微变体——模型生成线索描述并通过推理找出异类。无需任何标注答案。在Qwen2-Audio和Qwen2.5-Omni上实验，细粒度音频推理提升显著。",
+      "tags": [
+        "Audio Reasoning",
+        "Audio-Language Models",
+        "Self-Evolution",
+        "LALM",
+        "Fine-Grained"
+      ],
+      "highlight": true,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.20166"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.20166"
+        }
+      ]
+    },
+    {
+      "title": "Enabling Large-Scale Agentic Music Post-Production",
+      "url": "https://arxiv.org/abs/2607.19605",
+      "date": "2026-07-21",
+      "authors": "Noah Schaffer et al.",
+      "abstract": "提出RIME框架和POEMS工具包，将音乐后期制作形式化为智能体任务。RIME从任意音乐数据集生成逼真的编辑-指令配对数据，基于真实制作工作流约束。用RIME+POEMS生成3000对数据评估现有多模态LLM的音乐后期制作能力，并证明监督微调可提升智能体表现。被定位为音乐领域的coding agent式交互系统。",
+      "tags": [
+        "Music Post-Production",
+        "Agentic AI",
+        "Multimodal LLM",
+        "Music Editing",
+        "RIME"
+      ],
+      "highlight": true,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.19605"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.19605"
+        }
+      ]
+    },
+    {
+      "title": "StellarTTS: Sparse Temporal Embedding for Low-Latency and Robust Speech Synthesis",
+      "url": "https://arxiv.org/abs/2607.19859",
+      "date": "2026-07-22",
+      "authors": "Huiyan Li et al.",
+      "abstract": "提出 StellarTTS，一种移动端优化的非自回归TTS框架。基于稀疏时序嵌入策略实现音素时长、发音和韵律的细粒度控制。83M参数的轻量掩码生成Transformer实现RTF 0.08的实时推理。在延迟、鲁棒性上显著优于SOTA TTS系统，同时保持竞争性音质和韵律自然度。已被ASRU 2025接收。",
+      "tags": [
+        "TTS",
+        "Non-Autoregressive",
+        "Mobile-Optimized",
+        "Low-Latency",
+        "Sparse Embedding"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.19859"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.19859"
+        }
+      ]
+    },
+    {
+      "title": "Efficient Chain-of-Modality Reasoning via Progressive Compression for Spoken Language Models",
+      "url": "https://arxiv.org/abs/2607.19932",
+      "date": "2026-07-22",
+      "authors": "Pengchao Feng et al.",
+      "abstract": "提出ECoM Reasoning框架，首次将压缩推理引入口语语言模型(SLM)。通过在语音-文本链式推理中压缩文本组件，仅用40%的文本token实现比完整CoM推理高3%的准确率，比无推理CoM高21%。配套渐进压缩课程学习策略逐步训练模型从完整推理到压缩推理。",
+      "tags": [
+        "Spoken Language Models",
+        "Chain-of-Modality",
+        "Reasoning",
+        "Progressive Compression"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.19932"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.19932"
+        }
+      ]
+    },
+    {
+      "title": "Multimodal Speaker Verification as a Threat to Speaker Anonymization",
+      "url": "https://arxiv.org/abs/2607.19636",
+      "date": "2026-07-22",
+      "authors": "Ashi Garg et al.",
+      "abstract": "研究多话语、多模态说话人验证对匿名化的威胁。实验表明：聚合多个匿名话语后性能持续提升；引入韵律和语言信息的多模态系统显著优于单模态；帧级聚合实现最低EER。即使仅5个匿名话语，音频+文本比纯音频聚合降低超15% EER，表明匿名化后仍有大量说话人辨识信息残留。",
+      "tags": [
+        "Speaker Verification",
+        "Speaker Anonymization",
+        "Multimodal",
+        "Privacy",
+        "Aggregation"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.19636"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.19636"
+        }
+      ]
+    },
+    {
+      "title": "Layer-Wise Decision Fusion for Fake Audio Detection Using XLS-R",
+      "url": "https://arxiv.org/abs/2607.20023",
+      "date": "2026-07-22",
+      "authors": "Yixuan Xiao et al.",
+      "abstract": "提出逐层决策融合方法用于假音频检测。不同于传统单层或特征融合方案，该方法在每层独立决策后再融合，充分利用深层多层表征。在In-the-Wild数据集上以6.90% EER取得最佳跨数据集性能，同时提升了模型透明度。已被Interspeech 2025接收。",
+      "tags": [
+        "Fake Audio Detection",
+        "Anti-Spoofing",
+        "XLS-R",
+        "Layer Fusion",
+        "Audio Security"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.20023"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.20023"
+        }
+      ]
+    },
+    {
+      "title": "Scalable Keyword Spotting via Modular Network Expansion",
+      "url": "https://arxiv.org/abs/2607.19918",
+      "date": "2026-07-22",
+      "authors": "Dzmitry Saladukha et al.",
+      "abstract": "提出参数上限可控的模块化扩展方法用于关键词检测(KWS)部署后增量添加新关键词。基础网络（含BN统计和核心分类器）冻结不变，仅训练轻量扩展分支和新词头。在固定操作点下，新词FRR从6.46降至4.37（vs参数匹配baseline），且MACs更低。已被Interspeech 2026接收。",
+      "tags": [
+        "Keyword Spotting",
+        "Embedded AI",
+        "Modular Expansion",
+        "Parameter-Efficient",
+        "On-Device"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.19918"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.19918"
+        }
+      ]
+    },
+    {
+      "title": "Cumsum-Composable Phase Transport for Low-Cost Streaming Keyword Spotting",
+      "url": "https://arxiv.org/abs/2607.20086",
+      "date": "2026-07-22",
+      "authors": "Mahesh Godavarti et al.",
+      "abstract": "提出累计和可组合相位传输(cumsum-composable phase transport)作为流式关键词检测的轻量时序层。通过酉旋转+前缀差实现流式处理，训练时可精确批量计算（用累积和），推理时每帧仅一次前缀更新。51.6K参数模型在GSCv2上达97.3%准确率，训练比scan式快1.07x，单样本延迟降至5.01ms。",
+      "tags": [
+        "Keyword Spotting",
+        "Streaming",
+        "Phase Transport",
+        "Edge Computing",
+        "Low-Latency"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.20086"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.20086"
+        }
+      ]
+    },
+    {
+      "title": "A Diagnostic Evaluation Framework for AI-Generated Cover Songs",
+      "url": "https://arxiv.org/abs/2607.19688",
+      "date": "2026-07-22",
+      "authors": "Yingxin Liang et al.",
+      "abstract": "提出AI翻唱歌曲五维诊断评估框架：旋律音高、和声进行、调性一致性、风格一致性和编曲/制作质量。测试30首由6个系统生成的翻唱，发现和声进行和编曲严重错误率最高（53%和47%），调性保持相对较好。开源代码和评估工具。",
+      "tags": [
+        "Music Generation",
+        "AI Cover",
+        "Evaluation",
+        "Diagnostic",
+        "Open Source"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.19688"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.19688"
+        }
+      ]
+    },
+    {
+      "title": "Perceptually-Grouped Rhythm-Pitch Primitives for Long-Term Structure Melody Generation",
+      "url": "https://arxiv.org/abs/2607.19776",
+      "date": "2026-07-22",
+      "authors": "Yuke Liu et al.",
+      "abstract": "提出RPPNet，两阶段深度学习架构用于旋律生成。首先生成可变长度节奏-音高原语(RPP)序列（基于音乐心理学的声学线索+听觉惯性+相似性感知自动分组），再解码为具体音符。主观评测中RPPNet在长期结构和音乐性上显著优于基线，消融实验证实增益来自心理表征的结构正确性而非模型容量。",
+      "tags": [
+        "Music Generation",
+        "Melody",
+        "Music Psychology",
+        "Structural Modeling",
+        "Symbolic Music"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.19776"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.19776"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "阿里通义千问发布 Qwen-Audio-3.0-TTS 语音合成大模型",
+      "url": "https://developer.aliyun.com/article/1749598",
+      "summary": "2026年7月20日，阿里通义千问团队正式发布新一代实时语音合成大模型 Qwen-Audio-3.0-TTS，包含Flash（首包延迟约300ms）和Plus两个版本。模型在细粒度标签控制、freestyle指令遵循、多语种与方言覆盖及复杂声学鲁棒性方面全面升级，支持高噪声环境下的语音克隆，在Artificial Analysis榜单上排名前列。"
+    },
+    {
+      "title": "阿里云发布 Qwen-Audio-3.0-Realtime 实时语音推理模型",
+      "url": "https://news.qq.com/rain/a/20260715A04GT300",
+      "summary": "2026年7月15日，阿里通义实验室发布 Qwen-Audio-3.0-Realtime，在第三方权威评测平台 Artificial Analysis 的 Speech Reasoning 子项中综合排名全球第一。模型包括推理更强的Plus版本和速度更快的Flash版本，适用于智能客服、教育培训、娱乐互动与情感陪伴等场景。"
+    },
+    {
+      "title": "OpenAI GPT-Live 全双工语音模型持续热议：两周内相关评测和深度分析涌现",
+      "url": "https://www.buildfastwithai.com/blogs/gpt-live-review-openai-voice-model-july-2026",
+      "summary": "OpenAI 于7月8日发布的 GPT-Live 全双工语音模型持续引发行业关注。近两周内，大量深度评测和技术分析涌现，重点关注：全双工架构对语音交互范式的革命性影响、后台GPT-5.5委托推理机制、与豆包/讯飞星火等竞品的横向对比。ChatGPT Voice 用户数已突破1.5亿。该模型未来将引入API供开发者构建语音驱动应用。"
+    }
+  ]
+}
