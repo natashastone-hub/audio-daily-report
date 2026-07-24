@@ -1,0 +1,118 @@
+{
+  "date": "2026-07-24",
+  "generated_at": "2026-07-24T14:00:00+08:00",
+  "edition": "pm",
+  "papers": [
+    {
+      "title": "VibeVoice-ASR-BitNet Technical Report",
+      "url": "https://arxiv.org/abs/2607.21075",
+      "date": "2026-07-24",
+      "authors": "Songchen Xu et al.",
+      "abstract": "提出 VibeVoice-ASR-BitNet，一种专为边缘 CPU 实时推理优化的压缩版 ASR 模型。采用异构量化策略：VAE 声学分词器使用全流程 INT8 量化配合内核融合与 SIMD 优化，自回归语言模型采用 BitNet 风格的三值权重（I2_S）。在 ggml 框架内实现自定义 SIMD 内核和融合算子，仅需 3 个 CPU 线程即可实现 RTF < 1 的实时识别。在约 1.6GB 模型体积下，比 Whisper.cpp 快 1.6-2.3 倍，相比 FP16 基线准确率仅小幅下降。",
+      "tags": ["ASR", "Edge Computing", "Quantization", "BitNet", "Real-Time", "ggml"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.21075"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.21075"}
+      ]
+    },
+    {
+      "title": "Integrating Convolution Gated Local-Global Attentions for Enhanced Time-Frequency Domain Monaural Speech Separation",
+      "url": "https://arxiv.org/abs/2607.21128",
+      "date": "2026-07-24",
+      "authors": "Shengkui Zhao et al.",
+      "abstract": "提出 TF-MossFormer，一种时频域 Transformer 结合局部和全局注意力机制用于单声道语音分离。核心是内容感知滑动窗口注意力机制，动态调整感受野以增强局部交互。在 WSJ0-2Mix 上，5.9M/16.9M/25.4M 参数版本分别达到 SI-SDRi 22.6/24.0/24.4 dB，超越此前方法。已被 Interspeech 2026 接收。",
+      "tags": ["Speech Separation", "Transformer", "Time-Frequency", "Attention", "Interspeech 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.21128"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.21128"}
+      ]
+    },
+    {
+      "title": "Sound-Designed Human and Animal Voices for Non-human Voice Conversion",
+      "url": "https://arxiv.org/abs/2607.20951",
+      "date": "2026-07-24",
+      "authors": "Minsu Kang et al.",
+      "abstract": "引入 Designed Vocalizations Dataset，针对非人声音转换（如怪物低吼、机器人声音）构建数据集。从多样化的原始声源（语音+动物声音）出发，经专业音效处理生成效果变体。提供标准化测试集，按音色组和预设风格划分 seen/unseen 分割以评估泛化能力。已被 Interspeech 2026 接收。",
+      "tags": ["Voice Conversion", "Non-human Voice", "Dataset", "Sound Design", "Interspeech 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.20951"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.20951"}
+      ]
+    },
+    {
+      "title": "Toward Interpretable Speech Deepfake Detection using Artifact-Specific Experts and Calibrated Detection Scores",
+      "url": "https://arxiv.org/abs/2607.21127",
+      "date": "2026-07-24",
+      "authors": "Viola Negroni et al.",
+      "abstract": "提出基于伪影专项专家模型的可解释语音深度伪造检测框架。每个专家检测特定语音合成伪影，输出校准为对数似然比作为可解释证据分数。五个伪影专项专家的输出集成后进行真假分类，同时保持可解释性——显示每个专家对假音频分类的支持或反对程度。跨多个生成管线验证了伪影专项专家捕捉合成语音可解释信号的能力。",
+      "tags": ["Deepfake Detection", "Interpretability", "Audio Security", "Ensemble", "Speech Synthesis"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.21127"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.21127"}
+      ]
+    },
+    {
+      "title": "Investigating Codec-Internal Latent Audio Watermarking for Neural Codec Robustness",
+      "url": "https://arxiv.org/abs/2607.21132",
+      "date": "2026-07-24",
+      "authors": "Zi Hu et al.",
+      "abstract": "探索在神经音频编解码器的连续潜空间内嵌入水印的方法。使用 SEANet 风格编解码器、Conformer 消息嵌入器、RVQ 引导的潜空间分解。在 48kHz 语音上，EnCodec 感知训练将 24kHz EnCodec 比特准确率从 78.8% 提升至 95.6% 和 97.1%，PESQ 从 3.727 降至 3.514 和 3.427。被 SLT 2026 接收。",
+      "tags": ["Audio Watermarking", "Neural Codec", "Latent Space", "EnCodec", "SLT 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.21132"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.21132"}
+      ]
+    },
+    {
+      "title": "An Evaluation Framework for Structured Audio Captions Validated by Controlled Perturbations",
+      "url": "https://arxiv.org/abs/2607.21424",
+      "date": "2026-07-24",
+      "authors": "Liang-Yuan Wu et al.",
+      "abstract": "提出多轴评估框架用于结构化音频描述。基于 AudioCards 数据集，沿五个正交轴评估输出：标签集、描述、逻辑推理、数值测量和频谱剖面。结合 LLM 裁判捕捉语义细微差别与确定性计算度量精确测量声学偏差。引入受控扰动测试协议验证可靠性，成功区分同义改写与真正的语义和声学损坏。已被 DCASE 2026 接收。",
+      "tags": ["Audio Captioning", "Evaluation", "Structured Captions", "LLM Judge", "DCASE 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.21424"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.21424"}
+      ]
+    },
+    {
+      "title": "From Read Speech to Spoken Digits: A Task-Specific Evaluation of Speech Privacy With Informed Attackers",
+      "url": "https://arxiv.org/abs/2607.21393",
+      "date": "2026-07-24",
+      "authors": "Jule Pohlhausen et al.",
+      "abstract": "评估三种语音混淆技术保护语音隐私的效果，以数字识别为任务特定评估场景。使用通用语音识别模型和数字专有分类器作为知情攻击者识别单个数字和数字序列。实验结果显示数字模态、语速和攻击模型之间识别性能差异显著，强调需要更全面的面向应用的语音隐私评估方法。",
+      "tags": ["Speech Privacy", "Obfuscation", "ASR", "Security", "Evaluation"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.21393"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.21393"}
+      ]
+    },
+    {
+      "title": "Improving the Performance of an ASV System Using Hybrid Speech Features",
+      "url": "https://arxiv.org/abs/2607.20706",
+      "date": "2026-07-24",
+      "authors": "Stanisław Ciszkiewicz et al.",
+      "abstract": "研究使用混合特征集改进自动说话人验证(ASV)系统性能。结合 MFCC、CQCC 和创新的 RAB 描述符。在 Google Speech Commands 数据集上测试纯净和噪声条件下的表现，使用 EER 指标比较。结果表明混合特征集(PNCC+RAB)在噪声条件下显著改善说话人验证性能。",
+      "tags": ["Speaker Verification", "Feature Engineering", "MFCC", "CQCC", "Noise Robustness"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.20706"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.20706"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "OpenAI 发布 Presence 企业级语音+聊天 AI Agent 平台",
+      "url": "https://venturebeat.com/orchestration/openai-unveils-presence-a-new-platform-that-lets-enterprises-launch-and-manage-realtime-voice-agents-and-chatbots",
+      "summary": "7月22日，OpenAI 正式发布 Presence，一款面向企业客户的托管平台，支持部署和管理跨语音和聊天渠道的 AI Agent。平台整合了 GPT-Live 全双工语音模型和 GPT-5.6，内置 Codex 驱动的持续改进循环——自动分析生产会话和升级案例，识别弱点并提出行为变更。OpenAI 内部支持热线已实现 75% 来电无需人工介入，10天内 Codex 优化将人工转接降低 15 个百分点。首批客户包括 BBVA Mexico、软银和澳大利亚 IAG 保险。这标志着 OpenAI 从模型供应商向企业 AI 平台服务商的战略转型。"
+    }
+  ]
+}

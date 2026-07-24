@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-24-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-24-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月24日 (周五) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">8</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.21075" target="_blank">VibeVoice-ASR-BitNet Technical Report</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-24</span><span>👥 Songchen Xu et al.</span></div>
+      <div class="abstract">提出 VibeVoice-ASR-BitNet，一种专为边缘 CPU 实时推理优化的压缩版 ASR 模型。采用异构量化策略：VAE 声学分词器使用全流程 INT8 量化配合内核融合与 SIMD 优化，自回归语言模型采用 BitNet 风格的三值权重（I2_S）。在 ggml 框架内实现自定义 SIMD 内核和融合算子，仅需 3 个 CPU 线程即可实现 RTF < 1 的实时识别。在约 1.6GB 模型体积下，比 Whisper.cpp 快 1.6-2.3 倍，相比 FP16 基线准确率仅小幅下降。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Edge Computing</span><span class="tag">Quantization</span><span class="tag">BitNet</span><span class="tag">Real-Time</span><span class="tag">ggml</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.21075" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.21075" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.21128" target="_blank">Integrating Convolution Gated Local-Global Attentions for Enhanced Time-Frequency Domain Monaural Speech Separation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-24</span><span>👥 Shengkui Zhao et al.</span></div>
+      <div class="abstract">提出 TF-MossFormer，一种时频域 Transformer 结合局部和全局注意力机制用于单声道语音分离。核心是内容感知滑动窗口注意力机制，动态调整感受野以增强局部交互。在 WSJ0-2Mix 上，5.9M/16.9M/25.4M 参数版本分别达到 SI-SDRi 22.6/24.0/24.4 dB，超越此前方法。已被 Interspeech 2026 接收。</div>
+      <div class="tags"><span class="tag">Speech Separation</span><span class="tag">Transformer</span><span class="tag">Time-Frequency</span><span class="tag">Attention</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.21128" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.21128" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.20951" target="_blank">Sound-Designed Human and Animal Voices for Non-human Voice Conversion</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-24</span><span>👥 Minsu Kang et al.</span></div>
+      <div class="abstract">引入 Designed Vocalizations Dataset，针对非人声音转换（如怪物低吼、机器人声音）构建数据集。从多样化的原始声源（语音+动物声音）出发，经专业音效处理生成效果变体。提供标准化测试集，按音色组和预设风格划分 seen/unseen 分割以评估泛化能力。已被 Interspeech 2026 接收。</div>
+      <div class="tags"><span class="tag">Voice Conversion</span><span class="tag">Non-human Voice</span><span class="tag">Dataset</span><span class="tag">Sound Design</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.20951" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.20951" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.21127" target="_blank">Toward Interpretable Speech Deepfake Detection using Artifact-Specific Experts and Calibrated Detection Scores</a></h4>
+      <div class="meta"><span>📅 2026-07-24</span><span>👥 Viola Negroni et al.</span></div>
+      <div class="abstract">提出基于伪影专项专家模型的可解释语音深度伪造检测框架。每个专家检测特定语音合成伪影，输出校准为对数似然比作为可解释证据分数。五个伪影专项专家的输出集成后进行真假分类，同时保持可解释性——显示每个专家对假音频分类的支持或反对程度。跨多个生成管线验证了伪影专项专家捕捉合成语音可解释信号的能力。</div>
+      <div class="tags"><span class="tag">Deepfake Detection</span><span class="tag">Interpretability</span><span class="tag">Audio Security</span><span class="tag">Ensemble</span><span class="tag">Speech Synthesis</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.21127" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.21127" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.21132" target="_blank">Investigating Codec-Internal Latent Audio Watermarking for Neural Codec Robustness</a></h4>
+      <div class="meta"><span>📅 2026-07-24</span><span>👥 Zi Hu et al.</span></div>
+      <div class="abstract">探索在神经音频编解码器的连续潜空间内嵌入水印的方法。使用 SEANet 风格编解码器、Conformer 消息嵌入器、RVQ 引导的潜空间分解。在 48kHz 语音上，EnCodec 感知训练将 24kHz EnCodec 比特准确率从 78.8% 提升至 95.6% 和 97.1%，PESQ 从 3.727 降至 3.514 和 3.427。被 SLT 2026 接收。</div>
+      <div class="tags"><span class="tag">Audio Watermarking</span><span class="tag">Neural Codec</span><span class="tag">Latent Space</span><span class="tag">EnCodec</span><span class="tag">SLT 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.21132" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.21132" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.21424" target="_blank">An Evaluation Framework for Structured Audio Captions Validated by Controlled Perturbations</a></h4>
+      <div class="meta"><span>📅 2026-07-24</span><span>👥 Liang-Yuan Wu et al.</span></div>
+      <div class="abstract">提出多轴评估框架用于结构化音频描述。基于 AudioCards 数据集，沿五个正交轴评估输出：标签集、描述、逻辑推理、数值测量和频谱剖面。结合 LLM 裁判捕捉语义细微差别与确定性计算度量精确测量声学偏差。引入受控扰动测试协议验证可靠性，成功区分同义改写与真正的语义和声学损坏。已被 DCASE 2026 接收。</div>
+      <div class="tags"><span class="tag">Audio Captioning</span><span class="tag">Evaluation</span><span class="tag">Structured Captions</span><span class="tag">LLM Judge</span><span class="tag">DCASE 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.21424" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.21424" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.21393" target="_blank">From Read Speech to Spoken Digits: A Task-Specific Evaluation of Speech Privacy With Informed Attackers</a></h4>
+      <div class="meta"><span>📅 2026-07-24</span><span>👥 Jule Pohlhausen et al.</span></div>
+      <div class="abstract">评估三种语音混淆技术保护语音隐私的效果，以数字识别为任务特定评估场景。使用通用语音识别模型和数字专有分类器作为知情攻击者识别单个数字和数字序列。实验结果显示数字模态、语速和攻击模型之间识别性能差异显著，强调需要更全面的面向应用的语音隐私评估方法。</div>
+      <div class="tags"><span class="tag">Speech Privacy</span><span class="tag">Obfuscation</span><span class="tag">ASR</span><span class="tag">Security</span><span class="tag">Evaluation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.21393" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.21393" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.20706" target="_blank">Improving the Performance of an ASV System Using Hybrid Speech Features</a></h4>
+      <div class="meta"><span>📅 2026-07-24</span><span>👥 Stanisław Ciszkiewicz et al.</span></div>
+      <div class="abstract">研究使用混合特征集改进自动说话人验证(ASV)系统性能。结合 MFCC、CQCC 和创新的 RAB 描述符。在 Google Speech Commands 数据集上测试纯净和噪声条件下的表现，使用 EER 指标比较。结果表明混合特征集(PNCC+RAB)在噪声条件下显著改善说话人验证性能。</div>
+      <div class="tags"><span class="tag">Speaker Verification</span><span class="tag">Feature Engineering</span><span class="tag">MFCC</span><span class="tag">CQCC</span><span class="tag">Noise Robustness</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.20706" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.20706" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>OpenAI 发布 Presence 企业级语音+聊天 AI Agent 平台</h4>
+      <p>7月22日，OpenAI 正式发布 Presence，一款面向企业客户的托管平台，支持部署和管理跨语音和聊天渠道的 AI Agent。平台整合了 GPT-Live 全双工语音模型和 GPT-5.6，内置 Codex 驱动的持续改进循环——自动分析生产会话和升级案例，识别弱点并提出行为变更。OpenAI 内部支持热线已实现 75% 来电无需人工介入，10天内 Codex 优化将人工转接降低 15 个百分点。首批客户包括 BBVA Mexico、软银和澳大利亚 IAG 保险。这标志着 OpenAI 从模型供应商向企业 AI 平台服务商的战略转型。 <a href="https://venturebeat.com/orchestration/openai-unveils-presence-a-new-platform-that-lets-enterprises-launch-and-manage-realtime-voice-agents-and-chatbots" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-24-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
