@@ -1,0 +1,21 @@
+{
+  "papers": [
+    {
+      "title": "（下午时段暂无新内容）",
+      "url": "",
+      "date": "2026-07-25",
+      "authors": "N/A",
+      "abstract": "本日为周六，arXiv 不在周末更新新论文。下午时段（2026-07-25 09:30 ~ 14:00 CST）cs.SD 和 eess.AS 类目无新论文提交。",
+      "tags": ["Weekend", "No New Papers"],
+      "highlight": false,
+      "links": []
+    }
+  ],
+  "news": [
+    {
+      "title": "（下午时段暂无新内容）",
+      "url": "",
+      "summary": "下午6小时窗口（2026-07-25 09:30~14:00 CST）内，语音/Audio 领域无新发布或重大新闻。上一轮重大信息（7月24日 OpenAI GPT-Live 桌面版上线）已收录于上午版。"
+    }
+  ]
+}
