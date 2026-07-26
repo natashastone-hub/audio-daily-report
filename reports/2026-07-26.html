@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-26</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-26</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月26日 (周日) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">13</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.21128" target="_blank">TF-MossFormer: Integrating Convolution Gated Local-Global Attentions for Enhanced Time-Frequency Domain Monaural Speech Separation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-23</span><span>👥 Shengkui Zhao et al.</span></div>
+      <div class="abstract">提出 TF-MossFormer，一种结合局部和全局注意力的时频域 Transformer，用于单通道语音分离。核心是内容感知滑动窗口注意力机制，动态调整感受野以增强局部交互。在 WSJ0-2Mix 上以 5.9M 参数达到 SI-SDRi 22.6 dB，16.9M 参数达到 24.0 dB，超越先前方法。</div>
+      <div class="tags"><span class="tag">Speech Separation</span><span class="tag">Transformer</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.21128" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.21128" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.21075" target="_blank">VibeVoice-ASR-BitNet Technical Report</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-23</span><span>👥 Songchen Xu et al. (Microsoft)</span></div>
+      <div class="abstract">微软提出的 VibeVoice-ASR 压缩变体，针对边缘 CPU 实时推理优化。采用异构量化：VAE 声学分词器使用全流水线 INT8 量化，自回归语言模型采用 BitNet 风格三值权重 (I2_S)。基于 ggml 框架实现自定义 SIMD 内核，仅需 3 个 CPU 线程即可达到 RTF < 1 的实时识别，比 whisper.cpp 快 1.6-2.3 倍。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Edge Inference</span><span class="tag">Quantization</span><span class="tag">Microsoft</span><span class="tag">VibeVoice</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.21075" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.21075" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.20253" target="_blank">Pushing the Frontier of Full-Song Generation: Hierarchical Autoregressive Planning Meets Flow-Matching Rendering</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Junyu Dai, Xinyue Fan, Weiqin Li et al.</span></div>
+      <div class="abstract">提出统一歌曲生成框架，支持从歌词/文本描述/音乐属性生成完整歌曲。架构包含语义感知分词器、hybird-LM 分层自回归建模、FullDiT 全曲 Flow Matching 渲染和两级旋律模块。支持歌词到歌曲、纯器乐和翻唱歌曲三种任务。引入 DPO/GRPO/OPD 后训练策略提升音乐性和渲染质量，在 Artificial Analysis Music 排行榜上表现有竞争力。</div>
+      <div class="tags"><span class="tag">Music Generation</span><span class="tag">Flow Matching</span><span class="tag">Full-Song</span><span class="tag">RLHF</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.20253" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.20253" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.20166" target="_blank">Audio-Zero: Label-Free Self-Evolution for Fine-Grained Audio Reasoning</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Siqian Tong et al.</span></div>
+      <div class="abstract">首个用于大音频语言模型 (LALM) 的无标签自我进化框架 Audio-Zero。通过听觉自对弈游戏从无标注音频对比对中提升细粒度听觉感知和推理能力。模型首先生成描述听到内容的线索，再通过推理线索间的不一致识别异常听者。在 TREA、MMAU Test-mini 和 MMAR 上显著提升细粒度音频推理，同时保持广泛音频理解能力。</div>
+      <div class="tags"><span class="tag">Audio Reasoning</span><span class="tag">LALM</span><span class="tag">Self-Supervised</span><span class="tag">Fine-Grained</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.20166" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.20166" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.21127" target="_blank">Toward Interpretable Speech Deepfake Detection using Artifact-Specific Experts and Calibrated Detection Scores</a></h4>
+      <div class="meta"><span>📅 2026-07-23</span><span>👥 Viola Negroni et al.</span></div>
+      <div class="abstract">提出基于特定合成伪影专家的可解释语音深度伪造检测框架。每个专家检测一种特定的语音合成伪影，输出经校准为对数似然比作为可解释证据分数。五个专家模型的聚合结果提供真实/伪造分类的同时保持可解释性，展示跨多种生成流水线的可解释检测信号。</div>
+      <div class="tags"><span class="tag">Deepfake Detection</span><span class="tag">Speech Security</span><span class="tag">Interpretable AI</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.21127" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.21127" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.21132" target="_blank">Investigating Codec-Internal Latent Audio Watermarking for Neural Codec Robustness</a></h4>
+      <div class="meta"><span>📅 2026-07-23</span><span>👥 Zi Hu et al.</span></div>
+      <div class="abstract">研究神经音频编解码器的潜在空间水印技术。将 32-bit 消息嵌入到编解码器样式的 SEANet 自编码器连续潜在表示中。EnCodec 感知训练将 EnCodec-24k 比特准确率从 78.8% 提升至 97.1%，代价是 PESQ 从 3.727 降至 3.427。已投稿 IEEE SLT。</div>
+      <div class="tags"><span class="tag">Audio Watermarking</span><span class="tag">Neural Codec</span><span class="tag">Security</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.21132" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.21132" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.19918" target="_blank">Scalable Keyword Spotting via Modular Network Expansion</a></h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Dzmitry Saladukha et al.</span></div>
+      <div class="abstract">提出参数上限模块化扩展方法用于关键词检测 (KWS)。冻结基础网络（含 BN 统计和核心分类器），仅训练轻量级扩展分支和新关键词头。在同等参数预算 (≤10k) 下，新关键词误拒率从 6.46 降至 4.37，MAC 更少 (16.34M vs 18.45M/20.52M)。已被 Interspeech 2026 接收。</div>
+      <div class="tags"><span class="tag">KWS</span><span class="tag">Keyword Spotting</span><span class="tag">Edge AI</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.19918" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.19918" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.20086" target="_blank">Cumsum-Composable Phase Transport for Low-Cost Streaming Keyword Spotting</a></h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Mahesh Godavarti et al.</span></div>
+      <div class="abstract">提出 cumsum 可组合相位传输，一种用于流式关键词检测的低成本时序层。每层将声学帧投影到复通道，通过可学习酉旋转传输，使用前缀差分累积有限窗口。在 Google Speech Commands v2 上，51.6K 参数模型达 97.3% 准确率，相比 scan 基线训练快 1.07x，延迟从 7.09ms 降至 5.01ms。</div>
+      <div class="tags"><span class="tag">KWS</span><span class="tag">Streaming</span><span class="tag">Low-Cost</span><span class="tag">Phase Transport</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.20086" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.20086" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.19776" target="_blank">RPPNet: Perceptually-Grouped Rhythm-Pitch Primitives for Long-Term Structure Melody Generation</a></h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Yuke Liu et al.</span></div>
+      <div class="abstract">提出 RPPNet，一个两阶段深度学习架构用于旋律生成。首先生成可变长度的节奏-音高原语 (RPP) 序列，编码音符数、节奏和轮廓，再解码为具体音符。RPP 的分组自动从声学线索、听觉惯性和基于音乐心理学的相似性感知中推导。生成旋律在长期结构和音乐性上均优于基线方法。</div>
+      <div class="tags"><span class="tag">Music Generation</span><span class="tag">Melody</span><span class="tag">Music Psychology</span><span class="tag">Structure</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.19776" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.19776" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.21393" target="_blank">From Read Speech to Spoken Digits: A Task-Specific Evaluation of Speech Privacy With Informed Attackers</a></h4>
+      <div class="meta"><span>📅 2026-07-23</span><span>👥 Jule Pohlhausen et al.</span></div>
+      <div class="abstract">评估三种语音混淆技术在保护语言内容方面的有效性，以数字识别作为任务特定评估场景。实验结果表明数字模态、语速和攻击模型对识别性能有显著差异，强调需要更全面、面向应用的语音隐私评估方法。</div>
+      <div class="tags"><span class="tag">Speech Privacy</span><span class="tag">Obfuscation</span><span class="tag">Security</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.21393" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.21393" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.20706" target="_blank">Improving the Performance of an ASV System using Hybrid Speech Features</a></h4>
+      <div class="meta"><span>📅 2026-07-23</span><span>👥 Stanisław Ciszkiewicz et al.</span></div>
+      <div class="abstract">研究混合特征集（MFCC+CQCC+RAB）提升自动说话人验证 (ASV) 系统性能。在干净和噪声条件下使用 Google Speech Commands 数据集实验，结果表明 PNCC+RAB 混合特征集在噪声条件下显著降低验证错误率 (EER)。</div>
+      <div class="tags"><span class="tag">Speaker Verification</span><span class="tag">ASV</span><span class="tag">Feature Fusion</span><span class="tag">Noise Robust</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.20706" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.20706" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.20023" target="_blank">Layer-Wise Decision Fusion for Fake Audio Detection Using XLS-R</a></h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Yixuan Xiao et al.</span></div>
+      <div class="abstract">提出新颖的逐层决策融合方法用于虚假音频检测。在每层决策后应用融合而非单一层表示，在 In-the-Wild 数据集上达到 EER 6.90% 的跨数据集最佳性能。模型设计透明，允许详细分析揭示决策机制的底层原理。已被 Interspeech 2025 接收。</div>
+      <div class="tags"><span class="tag">Fake Audio Detection</span><span class="tag">Deepfake</span><span class="tag">Layer Fusion</span><span class="tag">XLS-R</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.20023" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.20023" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.19636" target="_blank">Multimodal Speaker Verification as a Threat to Speaker Anonymization</a></h4>
+      <div class="meta"><span>📅 2026-07-22</span><span>👥 Ashi Garg et al.</span></div>
+      <div class="abstract">研究多话语、多模态设置下的自动说话人验证对说话人匿名化的威胁。发现随着语音累积，通过声学、韵律和语言线索可获取丰富的说话人信息。仅用5条匿名化话语，结合音频和文本可将 EER 降低超过 15%，表明匿名化后仍存在大量说话人鉴别信息。</div>
+      <div class="tags"><span class="tag">Speaker Verification</span><span class="tag">Anonymization</span><span class="tag">Privacy</span><span class="tag">Multi-Modal</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.19636" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.19636" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>阿里千问发布 Qwen-Audio-3.0-TTS：Flash 版本首包延迟 300ms，Plus 版本登顶 Artificial Analysis 榜首</h4>
+      <p>阿里通义千问 7/20 发布新一代语音合成大模型，Flash 版本面向实时交互（首包延迟 300ms 级别），Plus 版本面向高质量生成，在细粒度标签控制、方言覆盖和复杂声学鲁棒性方面系统性提升。在 Artificial Analysis 语音合成排行榜上位列榜首。与此同时，字节跳动 Seed Audio 同日发布音频创作模型，国内语音大模型竞争白热化。 <a href="https://developer.aliyun.com/article/1749598" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>字节跳动 Seed Audio 正式发布，与阿里千问 TTS 同日「亮剑」</h4>
+      <p>7 月 20 日，字节跳动 Seed 团队发布音频创作模型 Seed Audio，与阿里巴巴 Qwen-Audio-3.0-TTS 同日发布。两家互联网巨头的语音大模型同日亮相，标志着国内语音大模型竞争从基础 TTS 向情感表达、实时交互方向升级。该周也是 WAIC 2026 举办期间。 <a href="https://news.qq.com/rain/a/20260721A0BWW500" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>MarkTechPost：2026 年最佳开源语音识别模型全面对比（16 款）</h4>
+      <p>对比 16 款开源 ASR 模型的 WER、语言覆盖、延迟和许可证，涵盖 Cohere Transcribe、Granite Speech、Voxtral、Whisper v3 等。为开发者提供 2026 年开源语音识别模型选型参考。 <a href="https://www.marktechpost.com/2026/07/23/best-open-speech-recognition-asr-models-in-2026-wer-languages-latency-and-license-compared/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Microsoft VibeVoice-ASR-BitNet：将 ASR 压缩到边缘 CPU 实时运行</h4>
+      <p>微软发布 VibeVoice-ASR 的 BitNet 量化版本，采用三值权重和 INT8 混合量化，基于 ggml 框架实现 SIMD 加速。仅需 3 个 CPU 线程即可实时识别 (RTF < 1)，速度是 whisper.cpp 的 1.6-2.3 倍。这是大语音模型走向低成本边缘部署的重要探索。 <a href="https://arxiv.org/abs/2607.21075" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-26') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
