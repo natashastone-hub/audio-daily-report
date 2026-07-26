@@ -1,0 +1,26 @@
+{
+  "date": "2026-07-26-pm",
+  "timeWindow": "2026-07-26 09:30 ~ 14:00 CST",
+  "papers": [],
+  "news": [],
+  "status": "no_new_content",
+  "note": "下午时段（09:30-14:00 CST）无新发布内容。原因：周日 arXiv 不更新（最近一次 new submission 为 7/24 周五），且该时间段内未发现新的 audio/speech 相关新闻或产品发布。所有近期论文已在早间版日报中收录。",
+  "heavyweightCheck": {
+    "GPT-Live": "OpenAI GPT-Live 全双工语音模型于 7/8 发布，不在今天下午窗口内",
+    "OpenAI voice model": "无新发布",
+    "Google Gemini voice": "无新发布",
+    "full-duplex speech model": "无新发布",
+    "release_zh": "无新发布",
+    "real-time voice AI": "无新发布"
+  },
+  "reference": {
+    "morningEdition": "https://natashastone-hub.github.io/audio-daily-report/reports/2026-07-26.html",
+    "lastArxivUpdate": "2026-07-24 (Friday)"
+  },
+  "stats": {
+    "totalPapers": 0,
+    "highlightPapers": 0,
+    "totalNews": 0,
+    "dateRange": "2026-07-26 09:30 ~ 14:00"
+  }
+}
