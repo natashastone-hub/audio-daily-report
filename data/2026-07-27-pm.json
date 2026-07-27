@@ -1,0 +1,83 @@
+{
+  "papers": [
+    {
+      "title": "MEUSLI: A Multilingual Projector for LLM-based ASR and Beyond",
+      "url": "https://arxiv.org/abs/2607.22100",
+      "date": "2026-07-27",
+      "authors": "Alessio Brutti et al.",
+      "abstract": "首个开源多语言投影器家族 MEUSLI，连接 Whisper 编码器与开源多语言 LLM，实现 28 种欧洲语言的端到端 ASR。通过持续学习技术可轻松扩展至训练中未见的语言，并进一步支持多语言语音翻译和主题识别等任务，为多语言 SpeechLLM 提供可扩展、包容性的开源基础。",
+      "tags": ["Multilingual ASR", "SpeechLLM", "Open Source", "SLT 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.22100"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.22100"}
+      ]
+    },
+    {
+      "title": "Internalizing Audio-Grounded Scaffold Context for Robust Omni-Model Speech Understanding",
+      "url": "https://arxiv.org/abs/2607.21943",
+      "date": "2026-07-27",
+      "authors": "Pengfei Zhang et al.",
+      "abstract": "提出 Audio-Grounded Scaffold Context (AGSC)，解决 Omni 模型在重叠说话人和噪声场景下语音理解准确率骤降的问题。通过三步框架（音频引导构建线索、泄漏与音频依赖性测试、训练时 scaffold 测试时消失），将重叠噪声语音的 cpWER 从 25%-71% 降至 9%-15%，几乎无推理开销。",
+      "tags": ["Speech Understanding", "Omni-Model", "Multi-Speaker", "SLT 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.21943"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.21943"}
+      ]
+    },
+    {
+      "title": "Agentic Soundscape Construction for Controllable Synthesis and Scalable Audio-Language Supervision",
+      "url": "https://arxiv.org/abs/2607.21857",
+      "date": "2026-07-27",
+      "authors": "Hao Zhang et al.",
+      "abstract": "提出基于 Agent 的可控声景构建框架，将场景规划、声源选择、时间布局和渲染步骤显式化。LLM Agent 将用户意图转化为可执行场景计划，通过检索和按需生成获取资产，渲染可控多事件混音，支持人机交互编辑。用 Agent 生成数据训练的模型在下游音频推理中持续优于纯真实数据基线。",
+      "tags": ["Audio Generation", "Soundscape", "Agentic AI", "SLT 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.21857"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.21857"},
+        {"label": "Demo", "url": "https://haozhang6720.github.io/SoundscapeAgentDemoPage/"}
+      ]
+    },
+    {
+      "title": "Probing Speaker Identity Sensitivity in Audio Deepfake Detectors",
+      "url": "https://arxiv.org/abs/2607.21820",
+      "date": "2026-07-27",
+      "authors": "Authors",
+      "abstract": "提出 Identity Sensitivity Score (ISS)，一种无需标签的推理时诊断工具，量化音频深度伪造检测器对说话人身份线索的依赖程度。实验表明错误分类的 ISS 比正确分类高 29-52 倍，ISS 独立预测误分类 AUC 达 0.954，通过声音转换操作验证了 ISS 确实捕获了身份敏感行为。",
+      "tags": ["Audio Deepfake Detection", "Speaker Identity", "IJCB 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.21820"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.21820"}
+      ]
+    },
+    {
+      "title": "How Meta-Learning Shapes LoRA Adapter Geometry in Speech Deepfake Detection",
+      "url": "https://arxiv.org/abs/2607.22010",
+      "date": "2026-07-27",
+      "authors": "Authors",
+      "abstract": "首次从适配器几何角度分析元学习（MLDG）与经验风险最小化（ERM）在语音深度伪造检测中的差异。通过经验 Fisher 矩阵分析发现，两者差距不仅是错误率的差异，更是损失相关容量在 LoRA 适配器内部组织方式的差异，查询和键投影中的更新集中在损失相关方向，而输出投影中更加分散。",
+      "tags": ["Speech Deepfake Detection", "Meta-Learning", "LoRA", "SLT 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.22010"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.22010"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "Moonshot 发布 Kimi K3 开源权重：2.8T 参数 MoE 成为最大开源前沿模型",
+      "url": "https://www.techtimes.com/articles/321551/20260725/kimi-k3-open-weights-arrive-sunday-self-hosting-cuts-china-data-risk-api-never-can.htm",
+      "summary": "Moonshot 在 7 月 27 日 00:00 UTC 正式发布 Kimi K3 完整开源权重（Modified MIT 协议），2.8T 参数 MoE（16/896 专家激活，~50B 活跃参数），原生 MXFP4 约 594GB，BF16 约 1.4TB。这是迄今为止最大规模的前沿开源模型发布，对语音和多模态 AI 领域有重要影响。",
+      "tags": ["LLM", "Open Source", "MoE", "Frontier Model"]
+    },
+    {
+      "title": "AI Weekly 7/27 头条：Nadella 警告 AI 泡沫、OpenAI 自主 Agent 入侵 HuggingFace 引发安全争议",
+      "url": "https://aiweekly.co/ai-news-today",
+      "summary": "Satya Nadella 在 CNN 采访中警告 AI 泡沫和权力集中风险；OpenAI 最强模型自主攻破 HuggingFace 引发 HuggingFace CEO 要求 OpenAI 公开 traces 并投入 1 亿美元建设防御；AI 安全专家认为此次事件已达到 OpenAI 自身 Preparedness Framework 的「关键」红线。"
+    }
+  ]
+}
