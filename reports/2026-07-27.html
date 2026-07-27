@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-27</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-27</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月27日 (周一) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">6</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.22100" target="_blank">MEUSLI: A Multilingual Projector for LLM-based ASR and Beyond</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-24</span><span>👥 Alessio Brutti et al.</span></div>
+      <div class="abstract">首个开源多语言投影器家族 MEUSLI，将 Whisper 编码器与开源多语言 LLM 连接，实现 28 种欧洲语言的端到端 ASR。MEUSLI 扩展了单语言流水线，在高资源和低资源语言上均表现强劲。通过持续学习技术可轻松扩展到未见语言，并支持多语言语音翻译和话题识别。为多语言 SpeechLLM 提供了坚实的开源基础。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Multilingual</span><span class="tag">SpeechLLM</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.22100" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.22100" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.21075" target="_blank">VibeVoice-ASR-BitNet: Compressed ASR for Real-Time Edge Inference</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-23</span><span>👥 Songchen Xu et al.</span></div>
+      <div class="abstract">微软 VibeVoice-ASR 的压缩变体，针对边缘 CPU 实时推理优化。通过异构量化（VAE 使用 INT8、语言模型使用 BitNet 三元权重）和渐进量化感知训练，配合 ggml 框架的自定义 SIMD 内核，仅需 3 个 CPU 线程即可实现 RTF<1 的实时识别，速度是 Whisper.cpp 的 1.6-2.3 倍。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Edge Inference</span><span class="tag">Quantization</span><span class="tag">BitNet</span><span class="tag">Microsoft</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.21075" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.21075" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.22010" target="_blank">How Meta-Learning Shapes LoRA Adapter Geometry in Speech Deepfake Detection</a></h4>
+      <div class="meta"><span>📅 2026-07-24</span><span>👥 Ivan Kukanov et al.</span></div>
+      <div class="abstract">研究元学习领域泛化(MLDG)与经验风险最小化(ERM)在语音深度伪造检测中如何塑造 LoRA 适配器几何结构。通过经验 Fisher 信息矩阵分析适配器参数几何，发现 MLDG 使损失相关更新集中在 query/key 投影中而在 output 投影中更分散，揭示了目标函数对适配器内部组织的影响。</div>
+      <div class="tags"><span class="tag">Speech Deepfake Detection</span><span class="tag">LoRA</span><span class="tag">Meta-Learning</span><span class="tag">Adapter Geometry</span><span class="tag">SLT 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.22010" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.22010" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.20951" target="_blank">Designed Vocalizations Dataset: Sound-Designed Human and Animal Voices for Non-human Voice Conversion</a></h4>
+      <div class="meta"><span>📅 2026-07-23</span><span>👥 Minsu Kang et al.</span></div>
+      <div class="abstract">提出 Designed Vocalizations Dataset，专为非人声音转换设计的合成人声和动物声音数据集。通过策划多样化原始声音源并应用专业人声效果处理生成效果变体，提供标准化测试集评估泛化能力，并报告基线基准结果。数据集填补了语音转换研究中的非自然人声空白。</div>
+      <div class="tags"><span class="tag">Voice Conversion</span><span class="tag">Dataset</span><span class="tag">Sound Design</span><span class="tag">InterSpeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.20951" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.20951" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.21393" target="_blank">From Read Speech to Spoken Digits: A Task-Specific Evaluation of Speech Privacy With Informed Attackers</a></h4>
+      <div class="meta"><span>📅 2026-07-23</span><span>👥 Jule Pohlhausen et al.</span></div>
+      <div class="abstract">评估三种语音混淆技术在保护语音内容隐私方面的有效性，以数字识别为任务特定的评估场景。使用通用语音识别模型和数字专用分类器作为知情攻击者识别数字序列，实验显示不同数字模态、语速和攻击模型之间存在显著识别性能差异。</div>
+      <div class="tags"><span class="tag">Speech Privacy</span><span class="tag">Obfuscation</span><span class="tag">Security</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.21393" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.21393" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.20445" target="_blank">SCoPE: Shift-Aware Speaker-Conditioned Priors for Emotion Recognition in Conversations</a></h4>
+      <div class="meta"><span>📅 2026-07-23</span><span>👥 Burak Can Kaplan et al.</span></div>
+      <div class="abstract">提出 SCoPE，利用说话人条件先验和情绪转移预测改进对话情绪识别。该轻量模块利用每个说话人的情绪历史建模先验，结合情绪转移预测来平衡先验和多模态证据，通过贝叶斯积专家的精度加权融合机制在 IEMOCAP 上取得 SOTA。</div>
+      <div class="tags"><span class="tag">Emotion Recognition</span><span class="tag">Multimodal</span><span class="tag">Speaker-Conditioned</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.20445" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.20445" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>微软 VibeVoice-ASR-BitNet 发布：边缘设备实时 ASR 速度超 Whisper.cpp 2.3 倍</h4>
+      <p>微软发布 VibeVoice-ASR 的 BitNet 压缩版本，通过 INT8+三元量化在边缘 CPU 上实现实时语音识别，仅需 3 个 CPU 线程即达 RTF<1，比 Whisper.cpp 快 1.6-2.3 倍，精度仅小幅下降。开源 ggml 推理框架已适配。 <a href="https://arxiv.org/abs/2607.21075" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>MEUSLI：首个覆盖 28 种欧洲语言的开源多语言 ASR 投影器发布</h4>
+      <p>首个开源端到端多语言 ASR 投影器家族 MEUSLI 发布，将 Whisper 与开源 LLM 对接，支持 28 种欧洲语言。采用持续学习可无缝扩展新语言，且支持多语言语音翻译和话题识别。全开源，面向学术和商业研究。 <a href="https://arxiv.org/abs/2607.22100" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Google Gemini API 新增 TTS 能力：gemini-2.5-pro-preview-tts 与 flash-preview-tts 上线</h4>
+      <p>Google 在 Gemini API 中发布了 gemini-2.5-pro-preview-tts 和 gemini-2.5-flash-preview-tts 模型，支持单人或双人语音生成。同时发布 lyria-realtime-exp 实时语音实验模型，标志着 Google 将 TTS 集成到旗舰大模型产品线。 <a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-27') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+{
+  "papers": [
+    {
+      "title": "MEUSLI: A Multilingual Projector for LLM-based ASR and Beyond",
+      "url": "https://arxiv.org/abs/2607.22100",
+      "date": "2026-07-24",
+      "authors": "Alessio Brutti et al.",
+      "abstract": "首个开源多语言投影器家族 MEUSLI，将 Whisper 编码器与开源多语言 LLM 连接，实现 28 种欧洲语言的端到端 ASR。MEUSLI 扩展了单语言流水线，在高资源和低资源语言上均表现强劲。通过持续学习技术可轻松扩展到未见语言，并支持多语言语音翻译和话题识别。为多语言 SpeechLLM 提供了坚实的开源基础。",
+      "tags": ["ASR", "Multilingual", "SpeechLLM", "Open Source"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.22100"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.22100"}
+      ]
+    },
+    {
+      "title": "How Meta-Learning Shapes LoRA Adapter Geometry in Speech Deepfake Detection",
+      "url": "https://arxiv.org/abs/2607.22010",
+      "date": "2026-07-24",
+      "authors": "Ivan Kukanov et al.",
+      "abstract": "研究元学习领域泛化(MLDG)与经验风险最小化(ERM)在语音深度伪造检测中如何塑造 LoRA 适配器几何结构。通过经验 Fisher 信息矩阵分析适配器参数几何，发现 MLDG 使损失相关更新集中在 query/key 投影中而在 output 投影中更分散，揭示了目标函数对适配器内部组织的影响。",
+      "tags": ["Speech Deepfake Detection", "LoRA", "Meta-Learning", "Adapter Geometry", "SLT 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.22010"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.22010"}
+      ]
+    },
+    {
+      "title": "VibeVoice-ASR-BitNet: Compressed ASR for Real-Time Edge Inference",
+      "url": "https://arxiv.org/abs/2607.21075",
+      "date": "2026-07-23",
+      "authors": "Songchen Xu et al.",
+      "abstract": "微软 VibeVoice-ASR 的压缩变体，针对边缘 CPU 实时推理优化。通过异构量化（VAE 使用 INT8、语言模型使用 BitNet 三元权重）和渐进量化感知训练，配合 ggml 框架的自定义 SIMD 内核，仅需 3 个 CPU 线程即可实现 RTF<1 的实时识别，速度是 Whisper.cpp 的 1.6-2.3 倍。",
+      "tags": ["ASR", "Edge Inference", "Quantization", "BitNet", "Microsoft"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.21075"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.21075"}
+      ]
+    },
+    {
+      "title": "Designed Vocalizations Dataset: Sound-Designed Human and Animal Voices for Non-human Voice Conversion",
+      "url": "https://arxiv.org/abs/2607.20951",
+      "date": "2026-07-23",
+      "authors": "Minsu Kang et al.",
+      "abstract": "提出 Designed Vocalizations Dataset，专为非人声音转换设计的合成人声和动物声音数据集。通过策划多样化原始声音源并应用专业人声效果处理生成效果变体，提供标准化测试集评估泛化能力，并报告基线基准结果。数据集填补了语音转换研究中的非自然人声空白。",
+      "tags": ["Voice Conversion", "Dataset", "Sound Design", "InterSpeech 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.20951"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.20951"}
+      ]
+    },
+    {
+      "title": "From Read Speech to Spoken Digits: A Task-Specific Evaluation of Speech Privacy With Informed Attackers",
+      "url": "https://arxiv.org/abs/2607.21393",
+      "date": "2026-07-23",
+      "authors": "Jule Pohlhausen et al.",
+      "abstract": "评估三种语音混淆技术在保护语音内容隐私方面的有效性，以数字识别为任务特定的评估场景。使用通用语音识别模型和数字专用分类器作为知情攻击者识别数字序列，实验显示不同数字模态、语速和攻击模型之间存在显著识别性能差异。",
+      "tags": ["Speech Privacy", "Obfuscation", "Security"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.21393"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.21393"}
+      ]
+    },
+    {
+      "title": "SCoPE: Shift-Aware Speaker-Conditioned Priors for Emotion Recognition in Conversations",
+      "url": "https://arxiv.org/abs/2607.20445",
+      "date": "2026-07-23",
+      "authors": "Burak Can Kaplan et al.",
+      "abstract": "提出 SCoPE，利用说话人条件先验和情绪转移预测改进对话情绪识别。该轻量模块利用每个说话人的情绪历史建模先验，结合情绪转移预测来平衡先验和多模态证据，通过贝叶斯积专家的精度加权融合机制在 IEMOCAP 上取得 SOTA。",
+      "tags": ["Emotion Recognition", "Multimodal", "Speaker-Conditioned"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.20445"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.20445"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "微软 VibeVoice-ASR-BitNet 发布：边缘设备实时 ASR 速度超 Whisper.cpp 2.3 倍",
+      "url": "https://arxiv.org/abs/2607.21075",
+      "summary": "微软发布 VibeVoice-ASR 的 BitNet 压缩版本，通过 INT8+三元量化在边缘 CPU 上实现实时语音识别，仅需 3 个 CPU 线程即达 RTF<1，比 Whisper.cpp 快 1.6-2.3 倍，精度仅小幅下降。开源 ggml 推理框架已适配。"
+    },
+    {
+      "title": "MEUSLI：首个覆盖 28 种欧洲语言的开源多语言 ASR 投影器发布",
+      "url": "https://arxiv.org/abs/2607.22100",
+      "summary": "首个开源端到端多语言 ASR 投影器家族 MEUSLI 发布，将 Whisper 与开源 LLM 对接，支持 28 种欧洲语言。采用持续学习可无缝扩展新语言，且支持多语言语音翻译和话题识别。全开源，面向学术和商业研究。"
+    },
+    {
+      "title": "Google Gemini API 新增 TTS 能力：gemini-2.5-pro-preview-tts 与 flash-preview-tts 上线",
+      "url": "https://ai.google.dev/gemini-api/docs/changelog",
+      "summary": "Google 在 Gemini API 中发布了 gemini-2.5-pro-preview-tts 和 gemini-2.5-flash-preview-tts 模型，支持单人或双人语音生成。同时发布 lyria-realtime-exp 实时语音实验模型，标志着 Google 将 TTS 集成到旗舰大模型产品线。"
+    }
+  ]
+}
