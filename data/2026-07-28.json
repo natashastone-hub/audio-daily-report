@@ -1,0 +1,92 @@
+{
+  "date": "2026-07-28",
+  "papers": [
+    {
+      "title": "Expose Your Disguise: Recovering Source Speaker Identity From Voice Conversion",
+      "url": "https://arxiv.org/abs/2607.23650",
+      "date": "2026-07-26",
+      "authors": "Hanlei Zhang, Zhongming Ma, Mingyang Zhang, Tengfei Liu, Yushi Cheng, Yanjiao Chen",
+      "abstract": "提出 TRIDENT 框架，从一个经语音转换（VC）后的音频样本中恢复原始说话人身份。TRIDENT 采用三分支架构：一个主提取器和两个辅助分支，分别识别底层VC机制和提取目标说话人的潜在表征。对 7 种 SOTA VC 方法最高实现 90.99% 的识别准确率，在电话信道、未见语言和自适应场景下均保持鲁棒性。对语音安全和溯源取证具有重要意义。",
+      "tags": ["Voice Conversion", "Speaker Identity", "Security", "Forensics"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.23650"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.23650"}]
+    },
+    {
+      "title": "Improving Zero-Shot Phonetic Classification through Language-Agnostic Articulatory Features",
+      "url": "https://arxiv.org/abs/2607.23606",
+      "date": "2026-07-26",
+      "authors": "Ryo Magoshi, Jaeyoung Lee, Shinsuke Sakai, Tatsuya Kawahara",
+      "abstract": "评估语音基础模型(PFM)在汉语送气和日语特殊鼻音上的零样本语音分类，发现仅依赖离散 IPA token 的多语言覆盖不足以应对未见场景。提出基于连续发音特征(AF)向量的分类方法，优于离散 token 方法，尤其在稀有音素上表现显著。已在 Interspeech 2026 接受。",
+      "tags": ["Phonetic Classification", "Zero-Shot", "Articulatory Features", "Interspeech 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.23606"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.23606"}]
+    },
+    {
+      "title": "Singlish, Can or Not? Fine-Tuning and Evaluating Zero-Shot TTS for Singapore English",
+      "url": "https://arxiv.org/abs/2607.23027",
+      "date": "2026-07-25",
+      "authors": "Ivan Kukanov, Zheng Xin Chai",
+      "abstract": "针对零样本 TTS 对地区口音（如新加坡英语 Singlish）复现不佳的问题，在 IMDA 国家语音语料库的 50 名 Singlish 说话人上微调 Chatterbox 和 CosyVoice 3 两个前沿 ZS-TTS 模型。微调后口音相似度在域内和域外说话人上均显著提升，是首个系统研究 Singlish 口音 TTS 的工作。已提交 SLT 2026。",
+      "tags": ["TTS", "Zero-Shot", "Singlish", "Accent Transfer", "SLT 2026"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.23027"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.23027"}]
+    },
+    {
+      "title": "Low-Latency Turn-Taking via Context-Aware Preface Generation in a Real-World Dialogue Robot",
+      "url": "https://arxiv.org/abs/2607.23204",
+      "date": "2026-07-25",
+      "authors": "Yuki Okafuji, Koji Inoue, Yoshiki Ohira",
+      "abstract": "提出两阶段增量式框架，将预备应答准备与语音开始解耦：当用户意图可预测时，意图就绪检测器触发 LLM 生成简短预备应答，同时声音活动投影(VAP)模型决定何时下发。商场导引机器人的实地实验表明，上下文预备应答相比固定填充词显著缩短了初始到主应答的间隔。已获 ICMI LBR 2026 接受。",
+      "tags": ["Dialogue System", "Turn-Taking", "Voice Agent", "Low Latency", "ICMI 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.23204"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.23204"}]
+    },
+    {
+      "title": "PathRIR: Physics-Guided Acoustic Path Selection and Late-Tail Compensation for Fast Room Impulse Response Simulation",
+      "url": "https://arxiv.org/abs/2607.23293",
+      "date": "2026-07-25",
+      "authors": "Shaoheng Xu, Chunyi Sun, Jihui Zhang, Amy Bastine, Prasanga N. Samarasinghe, Thushara D. Abhayapala",
+      "abstract": "提出物理引导的快速 RIR 仿真框架 PathRIR，在保持 ISM 几何结构的同时学习仅保留声学上重要的镜源路径。使用轻量级补偿 MLP 预测缺失的晚期尾部能量包络。实验中相比全阶 ISM 显著降低计算量，同时保持低波形和衰变误差。已被 IWAENC 2026 接受，代码开源。",
+      "tags": ["RIR Simulation", "Acoustic Modeling", "IWAENC 2026", "Open Source"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.23293"}, {"label": "GitHub", "url": "https://github.com/ShaoHenry/PathRIR"}]
+    },
+    {
+      "title": "Music-Source-Separation-Training (MSST): A Unified Framework for Training and Evaluating Music Demixing Models",
+      "url": "https://arxiv.org/abs/2607.23395",
+      "date": "2026-07-25",
+      "authors": "Roman Solovyev, Ilya Kiselev, Alexander Stempkovskiy, Tatiana Gabruseva",
+      "abstract": "提出 MSST——一个统一的开源框架用于音乐源分离任务的训练、验证和推理。支持多种模型架构、数据预处理和增强、多种损失函数和评估指标，以及滑动窗口推理、测试时增强和 LoRA 微调等实用技术。通过 YAML 配置驱动的接口大幅降低系统实验门槛。开源发布。",
+      "tags": ["Music Source Separation", "Open Source", "Training Framework", "Audio Processing"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.23395"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "OpenAI 发布 GPT-Live 全双工语音模型，ChatGPT Voice 全线升级",
+      "url": "https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/",
+      "summary": "OpenAI 于7月8日发布 GPT-Live-1 和 GPT-Live-1 mini 全双工语音模型，支持同时听取和说话、实时打断和同声传译。采用前端全双工模型+后台 GPT-5.5 深度推理的分层架构，一周内 ChatGPT Voice 用户突破 1.5 亿。这标志着语音 AI 从级联方案向全双工实时交互的范式转变。"
+    },
+    {
+      "title": "阿里发布 Qwen-Audio-3.0-TTS：Flash 版本首包 300ms，Plus 版本登顶 Artificial Analysis 榜单",
+      "url": "https://finance.sina.com.cn/roll/2026-07-20/doc-iniinfpx2969101.shtml",
+      "summary": "阿里巴巴于7月20日发布 Qwen-Audio-3.0-TTS 语音合成大模型，在细粒度标签控制、指令遵循、多语种方言覆盖及复杂声学鲁棒性方面全面提升。包含面向实时交互的 Flash 版本（首包延时 300ms 级别）和面向高质量生成的 Plus 版本，在全球第三方权威榜单 Artificial Analysis 登顶。"
+    },
+    {
+      "title": "字节跳动 Seed Audio 发布：音频创作大模型正式亮相",
+      "url": "https://www.msn.cn/zh-cn/技术/人工智能/字节跳动seed-audio-阿里千问tts同日-亮剑-语音大模型的竞争从云端api向端侧设备迁移/ar-AA28nD6s",
+      "summary": "字节跳动 Seed 团队于7月20日正式发布音频创作模型 Seed Audio，与阿里 Qwen-Audio-3.0-TTS 同日亮相。语音大模型迭代速度明显加快，从基础语音合成到实时对话再到具备情绪表达的拟人化语音，技术边界不断扩展，互联网头部厂商争相布局端侧语音能力。"
+    },
+    {
+      "title": "腾讯 PCG 联合河套学院全双工语音大模型获 ACL 2026 杰出论文奖",
+      "url": "https://km.woa.com/articles/show/665955",
+      "summary": "腾讯 PCG AI 创新应用中心联合深圳河套学院在全双工语音大模型方向取得突破，论文《Hierarchical Acoustic-Semantic Modeling: Modality Separation and Semantic Coherence for Full-Duplex SLMs》获得 ACL 2026 杰出论文奖。该工作提出了模态分离和语义连贯的全双工语音语言模型新范式。"
+    },
+    {
+      "title": "Google Gemini 3.6 Flash 发布更新，增强实时语音能力",
+      "url": "https://ai.google.dev/gemini-api/docs/changelog",
+      "summary": "Google 于7月21日发布 Gemini 3.6 Flash 和 Gemini 3.5 Flash-Lite 更新，进一步强化实时语音交互能力和多模态处理性能，继续推进 Gemini Omni 的全模态融合战略。"
+    }
+  ]
+}
