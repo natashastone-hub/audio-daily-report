@@ -1,0 +1,73 @@
+{
+  "date": "2026-07-28",
+  "edition": "pm",
+  "papers": [
+    {
+      "title": "Qwen-Audio-3.0-TTS: Freely Controllable and Highly Robust Speech Synthesis with Multi-Stage Training Paradigm",
+      "url": "https://arxiv.org/abs/2607.23938",
+      "date": "2026-07-28",
+      "authors": "Bajian Xiang, Cheng Wen, Han Zhao, Hao Wang, Haoxu Wang, Jiawei Jin, Jiayan Cui, Jie Chen, Mengxi Nie, Tianyu Zhao, Weiqin Li, Xiang Lv, Xiangang Li, Yang Xiang, Yang Zhou",
+      "abstract": "阿里通义千问团队发布 Qwen-Audio-3.0-TTS 技术报告。该生产级语音合成系统采用 12.5Hz 低帧率语音 tokenizer 降低推理延迟，配合五阶段渐进式训练范式协同优化语言模型(LM)和流匹配模型(FM)。支持自然语言指令和细粒度 inline 标签的灵活控制，覆盖 16 种语言和 20 个汉语方言区域，支持最长 3 分钟一次性长文本合成，并对噪声、混响和不清晰参考语音具有鲁棒性。在 SEED-TTS-Eval、CV3-Eval、指令遵循、长文本和声学鲁棒性等多个评测维度上达到 SOTA 水平。",
+      "tags": ["TTS", "Qwen", "Speech Synthesis", "Multi-Stage Training", "Multilingual", "阿里"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.23938"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.23938"}]
+    },
+    {
+      "title": "FacialTalker: Let Me Look at You — Advanced Facial Expression Modeling for Conversational Speech Synthesis",
+      "url": "https://arxiv.org/abs/2607.24430",
+      "date": "2026-07-28",
+      "authors": "Anonymous (ACM MM 2026)",
+      "abstract": "提出 FacialTalker，一个基于 LLM 主干的面部表情感知对话语音合成(CSS)框架。设计 AUTokenizer 单码本视觉 tokenizer 将帧级面部表情离散化为紧凑 token，通过面部 Action Units 组合监督训练。引入 DualDPO 策略，在视觉和语音 token 序列上联合施加偏好约束。构建 VSDD-1K 大规模多模态对话数据集（1033 小时），85% 以上帧含有效人脸。实验表明在表情感知和语音合成质量上均显著超越基线。已被 ACM MM 2026 接收。",
+      "tags": ["Conversational TTS", "Facial Expression", "Multimodal", "LLM", "ACM MM 2026"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.24430"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.24430"}]
+    },
+    {
+      "title": "Leveraging Gradient Reversal Loss and Multitask Learning for Datasets-Aware Audio Deepfake Detection",
+      "url": "https://arxiv.org/abs/2607.23961",
+      "date": "2026-07-28",
+      "authors": "Anonymous (SPSC 2026)",
+      "abstract": "提出实用的数据集感知音频深伪检测框架。针对异构数据集缺乏统一辅助标注（语言、编解码器、欺骗方法）的问题，仅依赖数据集身份作为自然可用的监督信号。通过多任务学习(MT)和梯度反转层(GRL)训练，多任务方法将平均 EER 相对降低 13.14%，GRL 将汇聚 EER 相对降低 5.32%。已被 SPSC 2026 接收。",
+      "tags": ["Deepfake Detection", "Audio Security", "Multitask Learning", "SPSC 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.23961"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.23961"}]
+    },
+    {
+      "title": "Revisiting Vocos: That Phasiness Business in Time-Frequency Neural Vocoding",
+      "url": "https://arxiv.org/abs/2607.24323",
+      "date": "2026-07-28",
+      "authors": "Ünal Ege Gaznepoğlu et al.",
+      "abstract": "从相位重建视角重新审视 Vocos 神经声码器。量化了时域和时频域声码器在使用带限 mel 频谱图时的差距，验证 Vocos 架构在幅度建模上有效但相位建模不足。将 Vocos 主干适配为预测相位差，发现 1D 卷积层是准确预测的瓶颈。建议未来研究聚焦于更好地建模语音信号时频结构的归纳偏置。已被 IWAENC 2026 接收。",
+      "tags": ["Neural Vocoder", "Phase Reconstruction", "Vocos", "IWAENC 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.24323"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.24323"}]
+    },
+    {
+      "title": "Automatic Audio Equalization with Semantic Embeddings",
+      "url": "https://arxiv.org/abs/2607.23846",
+      "date": "2026-07-28",
+      "authors": "Eloi Moliner et al.",
+      "abstract": "提出基于数据驱动的自动盲均衡方法，通过预训练模型提供语义嵌入作为骨干，仅训练轻量级头部网络来预测 log-mel 频谱特征并推导逆滤波器。在音乐和语音上联合训练，对噪声和混响具有鲁棒性。主观测试显示性能与使用真实 log-mel 特征的 oracle 方法相当。已在 AES AI/ML for Audio 会议发表。",
+      "tags": ["Audio Equalization", "Semantic Embeddings", "Audio Enhancement", "AES"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.23846"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.23846"}]
+    },
+    {
+      "title": "Speech Entrainment in Multi-Party Conversations with a Digital Agent",
+      "url": "https://arxiv.org/abs/2607.22939",
+      "date": "2026-07-28",
+      "authors": "Nicholas Mehlman et al.",
+      "abstract": "研究多人群组与数字代理对话中的语音趋同(entrainment)效应。收集包含成人和家庭（亲子）会话的独特数据集，分析知识驱动和模型驱动的趋同特征。发现个体在局部层面与其他人存在趋同，但与数字代理的整体趋同仍然有限且依赖群体类型。为人机多模态对话系统设计提供重要见解。",
+      "tags": ["Speech Entrainment", "Multi-Party Conversation", "Digital Agent", "Dialogue"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.22939"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.22939"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "云知声完成 U2-ASR/U2-TTS 多语种全面升级，覆盖 100+ 方言及 15+ 国际语言",
+      "url": "https://news.qq.com/rain/a/20260728A0575100",
+      "summary": "云知声于7月28日公告，其 U2-ASR 语音识别与 U2-TTS 语音合成模型完成多语种能力全面升级。ASR 模块新增 13 种国际语言（阿拉伯语、德语、西班牙语、法语、日语、韩语等），平均字错率 6.58%；TTS 模块新增 8 种东南亚语言（泰语、越南语、印尼语等）。至此覆盖超 100 种中国方言及 15+ 国际语言。公司预计 2026 上半年营收 5.3-5.8 亿元，同比增长 31%-43%，智能体业务收入增长 200%+。"
+    }
+  ]
+}
