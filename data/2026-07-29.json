@@ -1,0 +1,104 @@
+{
+  "papers": [
+    {
+      "title": "Extracting Voice Styles from Frozen TTS Models via Gradient-Based Inverse Optimization",
+      "url": "https://arxiv.org/abs/2607.25351",
+      "date": "2026-07-28",
+      "authors": "Gyeongmin Kim",
+      "abstract": "部分TTS系统发布合成模型和预设风格向量，但不提供将音频转为风格向量的参考编码器。本文通过梯度下降直接逆向求解该输入：保持所有权重冻结，仅优化风格向量，使用单段录音的WavLM时间池化统计量作为目标。由于目标丢弃了时间轴，合成文本可以与录音不同，无需转录和对齐。在154个说话人上，ECAPA-TDNN相似度从0.132提升至0.413，ResNet从0.099提升至0.401。验证器在等错误点接受53%恢复的声音为目标声音，而预设仅为1%。",
+      "tags": ["TTS", "Voice Style", "Inverse Optimization", "Open Source"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.25351"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.25351"},
+        {"label": "Code", "url": "https://github.com/kdrkdrkdr/supertonic.embed"}
+      ]
+    },
+    {
+      "title": "faster-enhancer.c: A Dependency-Free int8 Runtime for Streaming Speech Enhancement on Commodity CPUs",
+      "url": "https://arxiv.org/abs/2607.25350",
+      "date": "2026-07-28",
+      "authors": "Gyeongmin Kim",
+      "abstract": "将 FastEnhancer-Medium（48kHz）移植到纯C的int8运行时 faster-enhancer.c。Apple M2单核实时因子仅0.069，比fp32 ONNX Runtime快3.3倍；Galaxy S23+（骁龙8 Gen2）达到0.096。加速来自围绕固定模型对每一层进行特化，使用Winograd F(2,3)处理k=3卷积，GRU和解量化尾调用融合，启动后零分配。在824条VoiceBank-DEMAND语音上精度损失仅-0.006 PESQ和-0.08dB SNR。音频回调模式比基准测试的逐帧处理节省49%能耗。",
+      "tags": ["Speech Enhancement", "On-Device", "int8 Optimization", "Open Source"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.25350"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.25350"},
+        {"label": "Code", "url": "https://github.com/kdrkdrkdr/faster-enhancer.c"}
+      ]
+    },
+    {
+      "title": "From Semantics to Readout: Mechanistic Understanding of Audio Tokens after Fine-Tuning for Temporal Audio Grounding",
+      "url": "https://arxiv.org/abs/2607.25355",
+      "date": "2026-07-28",
+      "authors": "Yujian Ma, Jinqiu Sang, Ruizhe Li, Jiaao Yu, Ang Li",
+      "abstract": "以时间音频定位为诊断任务，通过query条件化的token语义、token读出校准、时间窗口探针和残差增量擦除四种互补分析，研究微调如何影响大音频语言模型(Qwen2.5-Omni)中音频token的层间语义、解码器可访问性和时间输出对齐。发现查询事件的潜在证据在微调前已存在，微调主要提高解码器对已有信息的可读性。结果支持\"语义至读出\"假说——定位微调帮助解码器更好地读取已有事件证据并将其可靠地连接到时间输出。",
+      "tags": ["Audio-Language Model", "Audio Understanding", "Mechanistic Interpretability"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.25355"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.25355"}
+      ]
+    },
+    {
+      "title": "Multi-Phonation Graph Learning with Self-Supervised Speech Embeddings for ALS Detection and Progression Prediction",
+      "url": "https://arxiv.org/abs/2607.25284",
+      "date": "2026-07-28",
+      "authors": "Behrad TaghiBeyglou, Fatemeh Bagheri, Ervin Sejdic",
+      "abstract": "提出基于图的框架将多段发音录音聚合为k近邻图，利用预训练SSL嵌入进行ALS检测和进展预测。在SAND数据集（339人）上，HuBERT+GIN在5级构音障碍严重度任务上达到macro-F1 0.73，4级进展预测达0.69，显著优于基线(0.61/0.58)。被Interspeech 2026接收。",
+      "tags": ["Speech Biomarker", "ALS Detection", "GNN", "Interspeech 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.25284"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.25284"}
+      ]
+    },
+    {
+      "title": "Self-Supervised Audio Representation Learning for Pediatric Asthma Detection in Emergency Care",
+      "url": "https://arxiv.org/abs/2607.25286",
+      "date": "2026-07-28",
+      "authors": "Fatemeh Bagheri, Thalia Pandolfi, Ervin Sejdic, Rohit Mohindra",
+      "abstract": "在急诊场景中使用呼吸音和自监督语音表示模型进行儿科哮喘检测。Wav2Vec 2.0结合直方图梯度提升在严格交叉验证下达到准确率0.84、灵敏度0.80、特异性0.86、F1 0.76。被EMBC 2026接收。",
+      "tags": ["Audio Health", "SSL", "EMBC 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.25286"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.25286"}
+      ]
+    },
+    {
+      "title": "Finding the noise: Zero-shot AI Music Detection",
+      "url": "https://arxiv.org/abs/2607.25530",
+      "date": "2026-07-28",
+      "authors": "Darius Afchar, Romain Hennequin",
+      "abstract": "提出AI生成音乐检测方法，可应对未知生成模型的零样本检测场景。结合伪影提取方法与非负矩阵分解和简单分类/聚类方法，在区分真实与合成音乐以及零样本多类识别两个任务上均表现优异。可用于监控可能接收各种新发布AI模型生成样本的大规模目录。",
+      "tags": ["AI Music Detection", "Audio Forensics", "Zero-Shot"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.25530"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.25530"}
+      ]
+    },
+    {
+      "title": "GraphIDyOM: A Graph-Native Python Reimplementation of IDyOM for Musical Expectation Modelling",
+      "url": "https://arxiv.org/abs/2607.25787",
+      "date": "2026-07-28",
+      "authors": "Lluc Bono Rosselló",
+      "abstract": "将经典音乐期望模型IDyOM以图原生Python重新实现，将长期和短期预测记忆表示为显式图对象，保留原模型的可变阶多视角架构，支持网络分析、音乐网络投影和交互应用。",
+      "tags": ["Music Modeling", "Computational Musicology", "Python"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.25787"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.25787"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "云知声 U2 语音大模型完成多语种升级：ASR 新增 13 种语言，TTS 新增 8 种东南亚语言",
+      "url": "https://news.qq.com/rain/a/20260728A0575100",
+      "summary": "云知声7月28日宣布U2-ASR与U2-TTS完成多语种全面升级。ASR新增阿拉伯语、德语、西班牙语等13种国际语言，13语种平均CER低至6.58%；TTS新增泰语、越南语等8种东南亚语言合成。至此U2已覆盖100+中国方言及15+国际语言。已全量上线TokenHub平台开放API调用。语音大模型赛道竞争升温，此前字节Seed Audio 1.0和阿里的Qwen-Audio-3.0-TTS同日发布。"
+    }
+  ]
+}
