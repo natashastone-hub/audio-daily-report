@@ -1,0 +1,83 @@
+{
+  "date": "2026-07-29",
+  "edition": "pm",
+  "papers": [
+    {
+      "title": "Extracting Voice Styles from Frozen TTS Models via Gradient-Based Inverse Optimization",
+      "url": "https://arxiv.org/abs/2607.25351",
+      "date": "2026-07-29",
+      "authors": "Gyeongmin Kim et al.",
+      "abstract": "针对商用 TTS 系统仅发布合成模型和预设风格向量但不含参考编码器的问题，提出通过梯度下降直接反解风格向量的方法。模型权重全部冻结，仅优化风格向量，基于单段录音的 WavLM 时间池化统计量进行匹配，无需文本标注或对齐。在 154 个说话人上的实验表明，ECAPA-TDNN 相似度从 0.132 提升至 0.413，说话人验证系统在等错误点处接受 53% 的恢复声音为目标说话人。代码已开源。",
+      "tags": ["TTS", "Voice Cloning", "Style Extraction", "Speaker Verification", "Gradient Optimization"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.25351"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.25351"}, {"label": "Code", "url": "https://github.com/kdrkdrkdr/supertonic.embed"}]
+    },
+    {
+      "title": "From Semantics to Readout: Mechanistic Understanding of Audio Tokens after Fine-Tuning for Temporal Audio Grounding",
+      "url": "https://arxiv.org/abs/2607.25355",
+      "date": "2026-07-29",
+      "authors": "Yujian Ma et al.",
+      "abstract": "对大型音频-语言模型(LALM)中 native audio token 进行机制性分析，以时序音频定位为诊断任务。通过四种互补分析（query-conditioned token semantics、calibrated token readout、temporal-window probes、residual-delta erasure）揭示：事件证据在微调前已潜伏在 token 中，微调主要帮助解码器读取已有证据并更可靠地连接到时序输出。在 Qwen2.5-Omni 和 Qwen2-Audio 上均验证了语义到读出(semantics-to-readout)机制。",
+      "tags": ["Audio-Language Model", "Mechanistic Interpretability", "Temporal Grounding", "Qwen2.5-Omni", "Qwen2-Audio"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.25355"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.25355"}]
+    },
+    {
+      "title": "VAD to the Bone: Ultra-Tiny Speech Activity Detection for Edge Deployment",
+      "url": "https://arxiv.org/abs/2607.25870",
+      "date": "2026-07-29",
+      "authors": "Sheila Seidel et al.",
+      "abstract": "提出 kiloVAD，专为嵌入式推理设计的超轻量语音活动检测模型。仅使用标准 Mel 特征和纯 CNN 层，支持可调上下文/频谱参数。引入逐层结构化剪枝配自蒸馏和角度感知 QAT（比标准 QAT 提升 1-4%）。仅 2.1k 参数和 200ms 上下文即达到 AVA-Speech 0.850 AUC，建立因果部署就绪 VAD 的新 SOTA。已被 INTERSPEECH 2026 接收。",
+      "tags": ["VAD", "Edge Deployment", "Embedded", "Quantization", "INTERSPEECH 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.25870"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.25870"}]
+    },
+    {
+      "title": "Towards Operational Conversational Intelligence: A Speech Intelligence Framework",
+      "url": "https://arxiv.org/abs/2607.24958",
+      "date": "2026-07-29",
+      "authors": "Chaitanya Vishnoi et al.",
+      "abstract": "提出双路径对话智能框架处理执法记录仪(BWC)音频。分离 diarization 和 ASR 分支：diarization 分支使用 DeepFilterNet 降噪+VAD+NVIDIA MSDD 说话人日志；ASR 分支使用响度归一化+WhisperX(Large-v3) 强制对齐+概率引导语音分割。通过最大化时间重叠进行词级说话人归属。在美国和英国警察 BWC 数据上验证了有效性。",
+      "tags": ["Speaker Diarization", "ASR", "WhisperX", "Conversational AI", "BWC Audio"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.24958"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.24958"}]
+    },
+    {
+      "title": "TP-CLAP: Learning Query-Conditioned Audio Representations via Contrastive Learning",
+      "url": "https://arxiv.org/abs/2607.25085",
+      "date": "2026-07-29",
+      "authors": "Mohan Li et al.",
+      "abstract": "提出 Text-Prompted CLAP (TP-CLAP)，参数高效扩展 CLAP 模型，引入交叉注意力融合模块将文本提示融入音频特征。通过 audio-MCQ 框架训练，在音频问答上与更大音频 LLM 竞争力相当，同时在音频-文本检索和零样本分类上超越基线。在属性导向的音频到音频检索中持续优于标准 CLAP。",
+      "tags": ["Audio-Language Model", "CLAP", "Contrastive Learning", "Audio QA", "Audio Retrieval"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.25085"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.25085"}]
+    },
+    {
+      "title": "A Dependency-Free int8 Runtime for Streaming Speech Enhancement on Commodity CPUs",
+      "url": "https://arxiv.org/abs/2607.25350",
+      "date": "2026-07-29",
+      "authors": "Gyeongmin Kim et al.",
+      "abstract": "将 FastEnhancer-Medium @48kHz 移植为纯 C 语言 int8 推理运行时。Apple M2 单核达到 0.069 实时因子（vs fp32 ONNX 的 0.230，加速 3.3x），Galaxy S23+ 达到 0.096。使用逐帧激活范围重计算免校准集，融合 GRU 和反量化，零启动后分配。在 VoiceBank-DEMAND 上跟踪 fp32 至 -0.006 PESQ。代码以零依赖库形式开源。",
+      "tags": ["Speech Enhancement", "Edge Inference", "int8 Quantization", "CPU Optimization", "Open Source"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.25350"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.25350"}, {"label": "Code", "url": "https://github.com/kdrkdrkdr/faster-enhancer.c"}]
+    },
+    {
+      "title": "Finding the Noise: Zero-shot AI Music Detection",
+      "url": "https://arxiv.org/abs/2607.25530",
+      "date": "2026-07-29",
+      "authors": "Darius Afchar et al.",
+      "abstract": "提出零样本 AI 生成音乐检测方法，解决检测器未见过生成模型（如新发布的 Suno/Udio 等）时的泛化问题。基于 artifact-extraction 方法结合非负矩阵分解和简单聚类，在一类判别和零样本多类识别两个任务上均取得优异性能，可用于监控大规模音乐目录。",
+      "tags": ["AI Music Detection", "Zero-shot", "Audio Security", "Deepfake Detection"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.25530"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.25530"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "阿里 Qoder 上线国内首个实时语音交互智能体 Qoder Voice",
+      "url": "https://iwiki.woa.com/p/4028350955",
+      "summary": "7月28日，阿里 Qoder 正式推出实时语音交互智能体 Qoder Voice，定位为国内首个面向开发者的实时语音 Agent 产品。该产品支持全双工语音对话、实时打断、多轮语境保持等能力，可与 Qoder 代码助手深度集成，标志着语音 Agent 从概念验证走向产品化落地。"
+    }
+  ]
+}

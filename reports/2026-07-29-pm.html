@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-29-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-29-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月29日 (周三) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">7</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.25351" target="_blank">Extracting Voice Styles from Frozen TTS Models via Gradient-Based Inverse Optimization</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Gyeongmin Kim et al.</span></div>
+      <div class="abstract">针对商用 TTS 系统仅发布合成模型和预设风格向量但不含参考编码器的问题，提出通过梯度下降直接反解风格向量的方法。模型权重全部冻结，仅优化风格向量，基于单段录音的 WavLM 时间池化统计量进行匹配，无需文本标注或对齐。在 154 个说话人上的实验表明，ECAPA-TDNN 相似度从 0.132 提升至 0.413，说话人验证系统在等错误点处接受 53% 的恢复声音为目标说话人。代码已开源。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Voice Cloning</span><span class="tag">Style Extraction</span><span class="tag">Speaker Verification</span><span class="tag">Gradient Optimization</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.25351" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.25351" target="_blank">🔗 PDF</a> <a href="https://github.com/kdrkdrkdr/supertonic.embed" target="_blank">🔗 Code</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.25355" target="_blank">From Semantics to Readout: Mechanistic Understanding of Audio Tokens after Fine-Tuning for Temporal Audio Grounding</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Yujian Ma et al.</span></div>
+      <div class="abstract">对大型音频-语言模型(LALM)中 native audio token 进行机制性分析，以时序音频定位为诊断任务。通过四种互补分析（query-conditioned token semantics、calibrated token readout、temporal-window probes、residual-delta erasure）揭示：事件证据在微调前已潜伏在 token 中，微调主要帮助解码器读取已有证据并更可靠地连接到时序输出。在 Qwen2.5-Omni 和 Qwen2-Audio 上均验证了语义到读出(semantics-to-readout)机制。</div>
+      <div class="tags"><span class="tag">Audio-Language Model</span><span class="tag">Mechanistic Interpretability</span><span class="tag">Temporal Grounding</span><span class="tag">Qwen2.5-Omni</span><span class="tag">Qwen2-Audio</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.25355" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.25355" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.25870" target="_blank">VAD to the Bone: Ultra-Tiny Speech Activity Detection for Edge Deployment</a></h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Sheila Seidel et al.</span></div>
+      <div class="abstract">提出 kiloVAD，专为嵌入式推理设计的超轻量语音活动检测模型。仅使用标准 Mel 特征和纯 CNN 层，支持可调上下文/频谱参数。引入逐层结构化剪枝配自蒸馏和角度感知 QAT（比标准 QAT 提升 1-4%）。仅 2.1k 参数和 200ms 上下文即达到 AVA-Speech 0.850 AUC，建立因果部署就绪 VAD 的新 SOTA。已被 INTERSPEECH 2026 接收。</div>
+      <div class="tags"><span class="tag">VAD</span><span class="tag">Edge Deployment</span><span class="tag">Embedded</span><span class="tag">Quantization</span><span class="tag">INTERSPEECH 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.25870" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.25870" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.24958" target="_blank">Towards Operational Conversational Intelligence: A Speech Intelligence Framework</a></h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Chaitanya Vishnoi et al.</span></div>
+      <div class="abstract">提出双路径对话智能框架处理执法记录仪(BWC)音频。分离 diarization 和 ASR 分支：diarization 分支使用 DeepFilterNet 降噪+VAD+NVIDIA MSDD 说话人日志；ASR 分支使用响度归一化+WhisperX(Large-v3) 强制对齐+概率引导语音分割。通过最大化时间重叠进行词级说话人归属。在美国和英国警察 BWC 数据上验证了有效性。</div>
+      <div class="tags"><span class="tag">Speaker Diarization</span><span class="tag">ASR</span><span class="tag">WhisperX</span><span class="tag">Conversational AI</span><span class="tag">BWC Audio</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.24958" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.24958" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.25085" target="_blank">TP-CLAP: Learning Query-Conditioned Audio Representations via Contrastive Learning</a></h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Mohan Li et al.</span></div>
+      <div class="abstract">提出 Text-Prompted CLAP (TP-CLAP)，参数高效扩展 CLAP 模型，引入交叉注意力融合模块将文本提示融入音频特征。通过 audio-MCQ 框架训练，在音频问答上与更大音频 LLM 竞争力相当，同时在音频-文本检索和零样本分类上超越基线。在属性导向的音频到音频检索中持续优于标准 CLAP。</div>
+      <div class="tags"><span class="tag">Audio-Language Model</span><span class="tag">CLAP</span><span class="tag">Contrastive Learning</span><span class="tag">Audio QA</span><span class="tag">Audio Retrieval</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.25085" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.25085" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.25350" target="_blank">A Dependency-Free int8 Runtime for Streaming Speech Enhancement on Commodity CPUs</a></h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Gyeongmin Kim et al.</span></div>
+      <div class="abstract">将 FastEnhancer-Medium @48kHz 移植为纯 C 语言 int8 推理运行时。Apple M2 单核达到 0.069 实时因子（vs fp32 ONNX 的 0.230，加速 3.3x），Galaxy S23+ 达到 0.096。使用逐帧激活范围重计算免校准集，融合 GRU 和反量化，零启动后分配。在 VoiceBank-DEMAND 上跟踪 fp32 至 -0.006 PESQ。代码以零依赖库形式开源。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Edge Inference</span><span class="tag">int8 Quantization</span><span class="tag">CPU Optimization</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.25350" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.25350" target="_blank">🔗 PDF</a> <a href="https://github.com/kdrkdrkdr/faster-enhancer.c" target="_blank">🔗 Code</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.25530" target="_blank">Finding the Noise: Zero-shot AI Music Detection</a></h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Darius Afchar et al.</span></div>
+      <div class="abstract">提出零样本 AI 生成音乐检测方法，解决检测器未见过生成模型（如新发布的 Suno/Udio 等）时的泛化问题。基于 artifact-extraction 方法结合非负矩阵分解和简单聚类，在一类判别和零样本多类识别两个任务上均取得优异性能，可用于监控大规模音乐目录。</div>
+      <div class="tags"><span class="tag">AI Music Detection</span><span class="tag">Zero-shot</span><span class="tag">Audio Security</span><span class="tag">Deepfake Detection</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.25530" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.25530" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>阿里 Qoder 上线国内首个实时语音交互智能体 Qoder Voice</h4>
+      <p>7月28日，阿里 Qoder 正式推出实时语音交互智能体 Qoder Voice，定位为国内首个面向开发者的实时语音 Agent 产品。该产品支持全双工语音对话、实时打断、多轮语境保持等能力，可与 Qoder 代码助手深度集成，标志着语音 Agent 从概念验证走向产品化落地。 <a href="https://iwiki.woa.com/p/4028350955" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-29-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
