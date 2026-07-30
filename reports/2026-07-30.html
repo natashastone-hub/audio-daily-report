@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-30</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-30</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月30日 (周四) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">9</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.27011" target="_blank">Qwen-Audio-3.0-Gen-Preview Technical Report</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Junyu Dai, Xiaoyue Duan, Xinyue Fan, Yihan Feng, Xiangang Li, Yunjia Li, Lejun Min, Yufei Shi, Xingchen Song, Yiran Wang, Cheng Wen, Menglin Wu, Bajian Xiang, Huaicheng Zhang, Han Zhao, Ruichen Zheng</span></div>
+      <div class="abstract">呈现 Qwen-Audio-3.0-Gen-Preview，一个统一非自回归框架，使用 Diffusion Transformer (DiT) 和共享 VAE 生成完整混合波形（语音/音乐/音效/环境声）。提示增强将自由形式请求转换为结构化时间记录，两阶段数据课程和语义条件视图训练模型跨域使用这些条件。共享连续 VAE 将 48kHz 立体声波形压缩为 25Hz 潜在序列并整合语义监督，为语音、音乐、音效及其混合提供统一表示。在 Seed-TTS-Eval 上说话人相似度是明显优势，多说话人基准上跨轮一致性高于 Seed-Audio-1.0，使用约 10% 专属音乐数据即可在 SongBench 7 个组件中保持接近并在 3 项领先。展示了统一生成长时间结构化多域音频的潜力。</div>
+      <div class="tags"><span class="tag">Audio Generation</span><span class="tag">TTS</span><span class="tag">Music Generation</span><span class="tag">Diffusion Transformer</span><span class="tag">Unified Framework</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.27011" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.27011" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.26742" target="_blank">Zero-Shot Face-to-Speech Synthesis via Latent Space Adaptation of a Style-Diffusion TTS Model</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Carlos Muñoz-Romero, Jose A. Gonzalez-Lopez</span></div>
+      <div class="abstract">提出 Face-to-Speech (F2S) 框架，从静态面部图像预测自然语音。轻量级 Face Adapter 将人脸识别特征与冻结的 StyleTTS 2 风格空间对齐。在 LRS3 数据集上合成语音自然度极高（UTMOS 3.7-4.0，匹配或超过真值 3.61），人脸到语音检索始终高于随机，生成的语音与目标说话人一致。无需重新训练即可生成流利西班牙语，表明人脸到风格映射在很大程度上是语言无关的。对历史人物配音、游戏角色等场景有重要应用价值。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Face-to-Speech</span><span class="tag">Voice Cloning</span><span class="tag">Zero-Shot</span><span class="tag">IberSPEECH 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.26742" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.26742" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.26698" target="_blank">MPEcho: A Melody and Phoneme-Aware Generative Framework for Controllable Cover Song Generation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Wei-Jaw Lee, Hsuan-Yu Yeh, Ting-Yi Hu, Chih-Pin Tan, Fang-Duo Tsai, Yi-Hsuan Yang</span></div>
+      <div class="abstract">提出 MPEcho，将音素编码器和长度调节器集成到 SongEcho 框架中用于翻唱歌曲生成。通过显式音素级条件化和精确时间边界显著降低音素错误率 (PER)。同时开发了 Phonsa，一个基于 Whisper 的自动转写模型，为歌声提供高精度音素级标注。代码和权重已开源。ISMIR 2026 接收。</div>
+      <div class="tags"><span class="tag">Cover Song Generation</span><span class="tag">Singing Voice Synthesis</span><span class="tag">Whisper</span><span class="tag">ISMIR 2026</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.26698" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.26698" target="_blank">🔗 PDF</a> <a href="https://lonian6.github.io/MPEcho.github.io/" target="_blank">🔗 GitHub</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.27109" target="_blank">MMAC: A Massive Multi-dimensional Benchmark for Audio Captioning</a></h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Weijie Wu, Junbo Li, Lin Li, Jun Fang, Qingyang Hong</span></div>
+      <div class="abstract">提出 MMAC，一个大规模多维音频描述评测基准。包含来自 20+ 数据源的 5,638 个音频片段，覆盖 6 个能力类别和 15 个评测维度。评估了代表性开源和闭源 AudioLLM，结果显示评测维度间、信息覆盖度和描述可靠性方面存在明显差异。将发布基准和评测代码。</div>
+      <div class="tags"><span class="tag">Audio Captioning</span><span class="tag">AudioLLM</span><span class="tag">Benchmark</span><span class="tag">Evaluation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.27109" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.27109" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.26553" target="_blank">ThinkOmni: A Reasoning-Driven Omni-Modal LLM Framework for Audio Forgery Detection and Localization</a></h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Authors</span></div>
+      <div class="abstract">提出 ThinkOmni，一个推理驱动的全模态大语言模型框架用于音频伪造检测和定位。与以往隐式建模取证证据的方法不同，ThinkOmni 联合执行显式取证推理和欺骗检测，将操纵线索与预测链接起来，提高了对微妙、局部和未见操纵的泛化能力。</div>
+      <div class="tags"><span class="tag">Audio Forgery Detection</span><span class="tag">AudioLLM</span><span class="tag">Security</span><span class="tag">Reasoning</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.26553" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.26553" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.26874" target="_blank">Detection of AI-generated stems within hybrid human-AI music</a></h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 François Rigaud, Gabriel Meseguer-Brocal, Benjamin Martin, Romain Hennequin</span></div>
+      <div class="abstract">首次研究混合人机音乐中 AI 生成音轨的检测。提出并行架构，仅用源分离估计源相对能量，训练音轨特定二分类器，输入生成混音预测和目标音轨相对能量。在 MUSDB18-HQ 上 track-level 结果令人鼓舞。ISMIR 2026 接收。</div>
+      <div class="tags"><span class="tag">AI Music Detection</span><span class="tag">Source Separation</span><span class="tag">ISMIR 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.26874" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.26874" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.26607" target="_blank">Few-Shot Open-Set Audio Classification via Transductive Prototype Refinement</a></h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Tianyan Deng, Yanxiong Li, Rui Gao, Jiahao Du</span></div>
+      <div class="abstract">提出两阶段转导方法用于少样本开放集音频分类。第一阶段为每个查询样本分配潜在内点分数以降低未知类样本权重，第二阶段在转导损失上直接优化精炼原型。在三个音频数据集上达到 SOTA。</div>
+      <div class="tags"><span class="tag">Audio Classification</span><span class="tag">Few-Shot Learning</span><span class="tag">Open-Set</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.26607" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.26607" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.26623" target="_blank">A Study on Online Mask-based Beamforming Using Per-channel Masking for Spatially Distributed Microphones</a></h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Wiebke Middelberg, Svantje Void, Simon Doclo, Ryan Corey</span></div>
+      <div class="abstract">将基于掩码的波束成形扩展到多通道形式，每个麦克风由单独掩码预滤波。采用帧因果在线实现应对时变声学场景。实验表明当麦克风信号差异显著时多通道掩码优于单掩码。IWAENC 2026 接收。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Beamforming</span><span class="tag">Multi-Microphone</span><span class="tag">IWAENC 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.26623" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.26623" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.26575" target="_blank">Unfolded Recursive Expectation-Maximization Neural Network For Speaker Tracking</a></h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Rina Veler, Sharon Gannot</span></div>
+      <div class="abstract">提出深度展开 REM 网络用于混响环境中单个移动说话人的鲁棒跟踪。引入 Step Size Network 利用 FiLM 和位置编码根据时间上下文和收敛状态动态调整递归权重。单说话人跟踪任务中 RMSE 低于经典 CREM 基线。IWAENC 2026 接收。</div>
+      <div class="tags"><span class="tag">Speaker Tracking</span><span class="tag">Deep Unfolding</span><span class="tag">IWAENC 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.26575" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.26575" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>xAI 发布 Grok Voice Think Fast 2.0：0.70 秒延迟语音 AI，击败 GPT-Realtime</h4>
+      <p>2026年7月29日，xAI 发布 Grok Voice Think Fast 2.0，一个内置端到端语音对话能力的新模型。该模型以0.70秒响应延迟登上 Speech-to-Speech 基准第二名，超越 GPT-Realtime。支持实时「边说话边思考」的多语言语音 AI，音频定价为每分钟 0.08 美元。现有 grok-voice-latest 别名将于 8月5日自动切换至新模型。标志着 xAI 正式加入全双工语音模型竞争。 <a href="https://24-ai.news/zh/news/2026-07-29/xai-grok-voice-think-fast-2/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>阿里通义千问发布 Qwen-Audio-3.0-Gen-Preview：统一语音/音乐/音效生成</h4>
+      <p>2026年7月29日，阿里通义千问团队发布 Qwen-Audio-3.0-Gen-Preview 技术报告。该模型基于 DiT + VAE 统一架构，可同时生成语音、音乐、音效和环境声的完整混合波形。支持 48kHz 立体声，在多说话人一致性和时间定位能力上超越 Seed-Audio-1.0。展示了将多种音频模态统一到一个框架中的技术可行性。 <a href="https://arxiv.org/abs/2607.27011" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>面部到语音合成新突破：只看照片就能生成自然语音</h4>
+      <p>研究人员提出 Face-to-Speech 框架，仅从静态人脸照片即可生成高度自然的语音（UTMOS 3.7-4.0），且语言无关（英语训练即可生成西班牙语）。对历史人物重建、游戏角色配音等场景具有开创性意义。 <a href="https://arxiv.org/abs/2607.26742" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>MPEcho 开源：翻唱歌曲生成新框架，音素级精准控制</h4>
+      <p>MPEcho 翻唱歌曲生成框架开源，通过集成音素编码器和 Whisper 歌声转写模型 Phonsa，实现精确歌词匹配和可控翻唱生成。代码、权重和音频样本均已发布，ISMIR 2026 接收。 <a href="https://arxiv.org/abs/2607.26698" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-30') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

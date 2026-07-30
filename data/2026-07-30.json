@@ -1,0 +1,144 @@
+{
+  "papers": [
+    {
+      "title": "Qwen-Audio-3.0-Gen-Preview Technical Report",
+      "url": "https://arxiv.org/abs/2607.27011",
+      "date": "2026-07-29",
+      "authors": "Junyu Dai, Xiaoyue Duan, Xinyue Fan, Yihan Feng, Xiangang Li, Yunjia Li, Lejun Min, Yufei Shi, Xingchen Song, Yiran Wang, Cheng Wen, Menglin Wu, Bajian Xiang, Huaicheng Zhang, Han Zhao, Ruichen Zheng",
+      "abstract": "呈现 Qwen-Audio-3.0-Gen-Preview，一个统一非自回归框架，使用 Diffusion Transformer (DiT) 和共享 VAE 生成完整混合波形（语音/音乐/音效/环境声）。提示增强将自由形式请求转换为结构化时间记录，两阶段数据课程和语义条件视图训练模型跨域使用这些条件。共享连续 VAE 将 48kHz 立体声波形压缩为 25Hz 潜在序列并整合语义监督，为语音、音乐、音效及其混合提供统一表示。在 Seed-TTS-Eval 上说话人相似度是明显优势，多说话人基准上跨轮一致性高于 Seed-Audio-1.0，使用约 10% 专属音乐数据即可在 SongBench 7 个组件中保持接近并在 3 项领先。展示了统一生成长时间结构化多域音频的潜力。",
+      "tags": ["Audio Generation", "TTS", "Music Generation", "Diffusion Transformer", "Unified Framework"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.27011"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.27011"}
+      ]
+    },
+    {
+      "title": "Zero-Shot Face-to-Speech Synthesis via Latent Space Adaptation of a Style-Diffusion TTS Model",
+      "url": "https://arxiv.org/abs/2607.26742",
+      "date": "2026-07-29",
+      "authors": "Carlos Muñoz-Romero, Jose A. Gonzalez-Lopez",
+      "abstract": "提出 Face-to-Speech (F2S) 框架，从静态面部图像预测自然语音。轻量级 Face Adapter 将人脸识别特征与冻结的 StyleTTS 2 风格空间对齐。在 LRS3 数据集上合成语音自然度极高（UTMOS 3.7-4.0，匹配或超过真值 3.61），人脸到语音检索始终高于随机，生成的语音与目标说话人一致。无需重新训练即可生成流利西班牙语，表明人脸到风格映射在很大程度上是语言无关的。对历史人物配音、游戏角色等场景有重要应用价值。",
+      "tags": ["TTS", "Face-to-Speech", "Voice Cloning", "Zero-Shot", "IberSPEECH 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.26742"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.26742"}
+      ]
+    },
+    {
+      "title": "MMAC: A Massive Multi-dimensional Benchmark for Audio Captioning",
+      "url": "https://arxiv.org/abs/2607.27109",
+      "date": "2026-07-29",
+      "authors": "Weijie Wu, Junbo Li, Lin Li, Jun Fang, Qingyang Hong",
+      "abstract": "提出 MMAC，一个大规模多维音频描述评测基准。包含来自 20+ 数据源的 5,638 个音频片段，覆盖 6 个能力类别和 15 个评测维度。评估了代表性开源和闭源 AudioLLM，结果显示评测维度间、信息覆盖度和描述可靠性方面存在明显差异。将发布基准和评测代码。",
+      "tags": ["Audio Captioning", "AudioLLM", "Benchmark", "Evaluation"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.27109"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.27109"}
+      ]
+    },
+    {
+      "title": "MPEcho: A Melody and Phoneme-Aware Generative Framework for Controllable Cover Song Generation",
+      "url": "https://arxiv.org/abs/2607.26698",
+      "date": "2026-07-29",
+      "authors": "Wei-Jaw Lee, Hsuan-Yu Yeh, Ting-Yi Hu, Chih-Pin Tan, Fang-Duo Tsai, Yi-Hsuan Yang",
+      "abstract": "提出 MPEcho，将音素编码器和长度调节器集成到 SongEcho 框架中用于翻唱歌曲生成。通过显式音素级条件化和精确时间边界显著降低音素错误率 (PER)。同时开发了 Phonsa，一个基于 Whisper 的自动转写模型，为歌声提供高精度音素级标注。代码和权重已开源。ISMIR 2026 接收。",
+      "tags": ["Cover Song Generation", "Singing Voice Synthesis", "Whisper", "ISMIR 2026", "Open Source"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.26698"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.26698"},
+        {"label": "GitHub", "url": "https://lonian6.github.io/MPEcho.github.io/"}
+      ]
+    },
+    {
+      "title": "ThinkOmni: A Reasoning-Driven Omni-Modal LLM Framework for Audio Forgery Detection and Localization",
+      "url": "https://arxiv.org/abs/2607.26553",
+      "date": "2026-07-29",
+      "authors": "Authors",
+      "abstract": "提出 ThinkOmni，一个推理驱动的全模态大语言模型框架用于音频伪造检测和定位。与以往隐式建模取证证据的方法不同，ThinkOmni 联合执行显式取证推理和欺骗检测，将操纵线索与预测链接起来，提高了对微妙、局部和未见操纵的泛化能力。",
+      "tags": ["Audio Forgery Detection", "AudioLLM", "Security", "Reasoning"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.26553"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.26553"}
+      ]
+    },
+    {
+      "title": "Detection of AI-generated stems within hybrid human-AI music",
+      "url": "https://arxiv.org/abs/2607.26874",
+      "date": "2026-07-29",
+      "authors": "François Rigaud, Gabriel Meseguer-Brocal, Benjamin Martin, Romain Hennequin",
+      "abstract": "首次研究混合人机音乐中 AI 生成音轨的检测。提出并行架构，仅用源分离估计源相对能量，训练音轨特定二分类器，输入生成混音预测和目标音轨相对能量。在 MUSDB18-HQ 上 track-level 结果令人鼓舞。ISMIR 2026 接收。",
+      "tags": ["AI Music Detection", "Source Separation", "ISMIR 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.26874"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.26874"}
+      ]
+    },
+    {
+      "title": "Few-Shot Open-Set Audio Classification via Transductive Prototype Refinement",
+      "url": "https://arxiv.org/abs/2607.26607",
+      "date": "2026-07-29",
+      "authors": "Tianyan Deng, Yanxiong Li, Rui Gao, Jiahao Du",
+      "abstract": "提出两阶段转导方法用于少样本开放集音频分类。第一阶段为每个查询样本分配潜在内点分数以降低未知类样本权重，第二阶段在转导损失上直接优化精炼原型。在三个音频数据集上达到 SOTA。",
+      "tags": ["Audio Classification", "Few-Shot Learning", "Open-Set"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.26607"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.26607"}
+      ]
+    },
+    {
+      "title": "A Study on Online Mask-based Beamforming Using Per-channel Masking for Spatially Distributed Microphones",
+      "url": "https://arxiv.org/abs/2607.26623",
+      "date": "2026-07-29",
+      "authors": "Wiebke Middelberg, Svantje Void, Simon Doclo, Ryan Corey",
+      "abstract": "将基于掩码的波束成形扩展到多通道形式，每个麦克风由单独掩码预滤波。采用帧因果在线实现应对时变声学场景。实验表明当麦克风信号差异显著时多通道掩码优于单掩码。IWAENC 2026 接收。",
+      "tags": ["Speech Enhancement", "Beamforming", "Multi-Microphone", "IWAENC 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.26623"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.26623"}
+      ]
+    },
+    {
+      "title": "Unfolded Recursive Expectation-Maximization Neural Network For Speaker Tracking",
+      "url": "https://arxiv.org/abs/2607.26575",
+      "date": "2026-07-29",
+      "authors": "Rina Veler, Sharon Gannot",
+      "abstract": "提出深度展开 REM 网络用于混响环境中单个移动说话人的鲁棒跟踪。引入 Step Size Network 利用 FiLM 和位置编码根据时间上下文和收敛状态动态调整递归权重。单说话人跟踪任务中 RMSE 低于经典 CREM 基线。IWAENC 2026 接收。",
+      "tags": ["Speaker Tracking", "Deep Unfolding", "IWAENC 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.26575"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.26575"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "xAI 发布 Grok Voice Think Fast 2.0：0.70 秒延迟语音 AI，击败 GPT-Realtime",
+      "url": "https://24-ai.news/zh/news/2026-07-29/xai-grok-voice-think-fast-2/",
+      "summary": "2026年7月29日，xAI 发布 Grok Voice Think Fast 2.0，一个内置端到端语音对话能力的新模型。该模型以0.70秒响应延迟登上 Speech-to-Speech 基准第二名，超越 GPT-Realtime。支持实时「边说话边思考」的多语言语音 AI，音频定价为每分钟 0.08 美元。现有 grok-voice-latest 别名将于 8月5日自动切换至新模型。标志着 xAI 正式加入全双工语音模型竞争。"
+    },
+    {
+      "title": "阿里通义千问发布 Qwen-Audio-3.0-Gen-Preview：统一语音/音乐/音效生成",
+      "url": "https://arxiv.org/abs/2607.27011",
+      "summary": "2026年7月29日，阿里通义千问团队发布 Qwen-Audio-3.0-Gen-Preview 技术报告。该模型基于 DiT + VAE 统一架构，可同时生成语音、音乐、音效和环境声的完整混合波形。支持 48kHz 立体声，在多说话人一致性和时间定位能力上超越 Seed-Audio-1.0。展示了将多种音频模态统一到一个框架中的技术可行性。"
+    },
+    {
+      "title": "面部到语音合成新突破：只看照片就能生成自然语音",
+      "url": "https://arxiv.org/abs/2607.26742",
+      "summary": "研究人员提出 Face-to-Speech 框架，仅从静态人脸照片即可生成高度自然的语音（UTMOS 3.7-4.0），且语言无关（英语训练即可生成西班牙语）。对历史人物重建、游戏角色配音等场景具有开创性意义。"
+    },
+    {
+      "title": "MPEcho 开源：翻唱歌曲生成新框架，音素级精准控制",
+      "url": "https://arxiv.org/abs/2607.26698",
+      "summary": "MPEcho 翻唱歌曲生成框架开源，通过集成音素编码器和 Whisper 歌声转写模型 Phonsa，实现精确歌词匹配和可控翻唱生成。代码、权重和音频样本均已发布，ISMIR 2026 接收。"
+    }
+  ]
+}
