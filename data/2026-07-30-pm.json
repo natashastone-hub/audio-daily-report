@@ -1,0 +1,69 @@
+{
+  "papers": [
+    {
+      "title": "Voice Memory for Agentic Speech Recognition",
+      "url": "https://arxiv.org/abs/2607.26410",
+      "date": "2026-07-29",
+      "authors": "Huck Yang et al.",
+      "abstract": "提出 Voice Memory，一种仅推理时生效的 Agentic 语音识别方案：流式识别时，冻结的纠错器读取单个 per-domain memory 文件，对每个话语决定是修改假设还是保留 1-best；异步时，score-gated 优化器通过有界编辑来更新该文件。称为 listener-thinker 架构——两者仅通过 memory 耦合，不修改权重。在十个 HyPoradise 领域，Voice Memory 将加权词错误率从 8.36% 降至 7.52%，航空指令场景从 8.40% 降至 3.40%，CHiME-4 远场语音从 12.69% 降至 10.46%。代码和 Demo 已开源。",
+      "tags": ["ASR", "Error Correction", "Agentic AI", "Memory", "Open Source"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.26410"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.26410"},
+        {"label": "HuggingFace", "url": "https://huggingface.co/huckiyang/voice-memory"}
+      ]
+    },
+    {
+      "title": "Prosody-driven Jailbreaks in Audio LLMs: A Controlled Study and Mechanistic Analysis",
+      "url": "https://arxiv.org/abs/2607.26541",
+      "date": "2026-07-29",
+      "authors": "Jiachen Qian et al.",
+      "abstract": "研究语音韵律变化对 Audio LLM 安全性的影响。在固定文本内容的情况下，仅通过改变六种语音传递预设（唤醒度、权威性、语速）即可实现越狱。提出 PJ-Break 黑盒评估协议和 AdvAudio-Prosody 基准（600 样本）。在 Qwen2-Audio 上，Panic (38/95)、Anger (35/95)、Fast (32/95) 预设远超 Neutral (4/95)，情绪化语音传递的效果远大于纯文本情绪（44/95 vs 11/95）。结论：语音传递应作为 Audio LLM 安全评估的一等要素。ACM Multimedia 2026 (ACM MM '26) 接收。",
+      "tags": ["Audio LLM", "Safety", "Jailbreak", "Prosody", "ACM MM 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.26541"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.26541"}
+      ]
+    },
+    {
+      "title": "Audio-Anchored Fusion of Multi-Ratio DiT Reconstruction Residuals for Cross-Domain Audio Deepfake Detection",
+      "url": "https://arxiv.org/abs/2607.26472",
+      "date": "2026-07-29",
+      "authors": "Haotian Mo, Jie Liu, Siqi Shen et al.",
+      "abstract": "提出基于真实语音训练的 DiT 重建残差进行跨域音频伪造检测。使用掩码比例 0.5/0.75/0.9 生成多比例残差图，通过音频锚定的 WavLM 表征融合。在 ASVspoof 5 Eval 上 EER 6.54%，ITW Full 上 13.84%。结果支持重建残差作为互补证据，为 ASVspoof 到 ITW 迁移提供非竞争性听觉路径。",
+      "tags": ["Audio Deepfake Detection", "Diffusion Transformer", "Cross-Domain", "ASVspoof 5"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.26472"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.26472"}
+      ]
+    },
+    {
+      "title": "Dissecting Sensitivity to Training Language in Self-Supervised Speech Learning Using Neural Audio Codec Tokens",
+      "url": "https://arxiv.org/abs/2607.26350",
+      "date": "2026-07-29",
+      "authors": "Daigo Takizawa et al.",
+      "abstract": "系统分析基于神经音频编解码器（NAC）的自监督语音学习中的语言敏感性。实验表明下游性能对 NAC 训练语言不敏感但强烈依赖于 SSL 预训练语言。结论：单个 NAC 可跨语言复用，但 SSL 预训练语言需与目标语言对齐。Interspeech 2026 接收。",
+      "tags": ["SSL", "Neural Audio Codec", "Multilingual", "Interspeech 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.26350"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.26350"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "Google DeepMind 推出 Lyria 3.5：新一代音乐生成 AI 模型，人声与旋律控制全面升级",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/lyria-3-5/",
+      "summary": "2026年7月29日，Google DeepMind 宣布在 Google Flow Music 平台推出 Lyria 3.5，在音乐性、歌词质量、人声表现力和创作控制方面实现突破。新模型支持生成更丰富的旋律结构，更好遵循用户提示词，用户可自主调整节奏与时长。相比 Lyria 3，人声情感表达更自然细腻，歌词质量显著提升。标志着 AI 音乐生成向专业应用领域迈出重要一步。"
+    },
+    {
+      "title": "xAI 发布 Grok Voice Think Fast 2.0：0.70 秒延迟，语音识别基准超越 GPT-Realtime",
+      "url": "https://xix.ai/zh/live/6274",
+      "summary": "xAI 推出 Grok Voice Think Fast 2.0，以 0.70 秒首次音频延迟登上 Speech-to-Speech 基准第二名，语音识别准确率达 82.9%，超越 GPT-Realtime-2.1 和 Gemini 3.1 Flash。转录准确率比 Deepgram Nova3 和 ElevenLabs Scribe v2 高出 1.5-2 倍。定价每分钟 0.08 美元。grok-voice-latest 别名将于 8月5日自动切换至 v2.0。"
+    }
+  ]
+}

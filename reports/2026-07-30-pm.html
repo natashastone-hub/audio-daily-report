@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-30-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-30-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月30日 (周四) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">4</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.26410" target="_blank">Voice Memory for Agentic Speech Recognition</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Huck Yang et al.</span></div>
+      <div class="abstract">提出 Voice Memory，一种仅推理时生效的 Agentic 语音识别方案：流式识别时，冻结的纠错器读取单个 per-domain memory 文件，对每个话语决定是修改假设还是保留 1-best；异步时，score-gated 优化器通过有界编辑来更新该文件。称为 listener-thinker 架构——两者仅通过 memory 耦合，不修改权重。在十个 HyPoradise 领域，Voice Memory 将加权词错误率从 8.36% 降至 7.52%，航空指令场景从 8.40% 降至 3.40%，CHiME-4 远场语音从 12.69% 降至 10.46%。代码和 Demo 已开源。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Error Correction</span><span class="tag">Agentic AI</span><span class="tag">Memory</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.26410" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.26410" target="_blank">🔗 PDF</a> <a href="https://huggingface.co/huckiyang/voice-memory" target="_blank">🔗 HuggingFace</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.26541" target="_blank">Prosody-driven Jailbreaks in Audio LLMs: A Controlled Study and Mechanistic Analysis</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Jiachen Qian et al.</span></div>
+      <div class="abstract">研究语音韵律变化对 Audio LLM 安全性的影响。在固定文本内容的情况下，仅通过改变六种语音传递预设（唤醒度、权威性、语速）即可实现越狱。提出 PJ-Break 黑盒评估协议和 AdvAudio-Prosody 基准（600 样本）。在 Qwen2-Audio 上，Panic (38/95)、Anger (35/95)、Fast (32/95) 预设远超 Neutral (4/95)，情绪化语音传递的效果远大于纯文本情绪（44/95 vs 11/95）。结论：语音传递应作为 Audio LLM 安全评估的一等要素。ACM Multimedia 2026 (ACM MM '26) 接收。</div>
+      <div class="tags"><span class="tag">Audio LLM</span><span class="tag">Safety</span><span class="tag">Jailbreak</span><span class="tag">Prosody</span><span class="tag">ACM MM 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.26541" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.26541" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.26472" target="_blank">Audio-Anchored Fusion of Multi-Ratio DiT Reconstruction Residuals for Cross-Domain Audio Deepfake Detection</a></h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Haotian Mo, Jie Liu, Siqi Shen et al.</span></div>
+      <div class="abstract">提出基于真实语音训练的 DiT 重建残差进行跨域音频伪造检测。使用掩码比例 0.5/0.75/0.9 生成多比例残差图，通过音频锚定的 WavLM 表征融合。在 ASVspoof 5 Eval 上 EER 6.54%，ITW Full 上 13.84%。结果支持重建残差作为互补证据，为 ASVspoof 到 ITW 迁移提供非竞争性听觉路径。</div>
+      <div class="tags"><span class="tag">Audio Deepfake Detection</span><span class="tag">Diffusion Transformer</span><span class="tag">Cross-Domain</span><span class="tag">ASVspoof 5</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.26472" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.26472" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.26350" target="_blank">Dissecting Sensitivity to Training Language in Self-Supervised Speech Learning Using Neural Audio Codec Tokens</a></h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Daigo Takizawa et al.</span></div>
+      <div class="abstract">系统分析基于神经音频编解码器（NAC）的自监督语音学习中的语言敏感性。实验表明下游性能对 NAC 训练语言不敏感但强烈依赖于 SSL 预训练语言。结论：单个 NAC 可跨语言复用，但 SSL 预训练语言需与目标语言对齐。Interspeech 2026 接收。</div>
+      <div class="tags"><span class="tag">SSL</span><span class="tag">Neural Audio Codec</span><span class="tag">Multilingual</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.26350" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.26350" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>Google DeepMind 推出 Lyria 3.5：新一代音乐生成 AI 模型，人声与旋律控制全面升级</h4>
+      <p>2026年7月29日，Google DeepMind 宣布在 Google Flow Music 平台推出 Lyria 3.5，在音乐性、歌词质量、人声表现力和创作控制方面实现突破。新模型支持生成更丰富的旋律结构，更好遵循用户提示词，用户可自主调整节奏与时长。相比 Lyria 3，人声情感表达更自然细腻，歌词质量显著提升。标志着 AI 音乐生成向专业应用领域迈出重要一步。 <a href="https://blog.google/innovation-and-ai/models-and-research/google-labs/lyria-3-5/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>xAI 发布 Grok Voice Think Fast 2.0：0.70 秒延迟，语音识别基准超越 GPT-Realtime</h4>
+      <p>xAI 推出 Grok Voice Think Fast 2.0，以 0.70 秒首次音频延迟登上 Speech-to-Speech 基准第二名，语音识别准确率达 82.9%，超越 GPT-Realtime-2.1 和 Gemini 3.1 Flash。转录准确率比 Deepgram Nova3 和 ElevenLabs Scribe v2 高出 1.5-2 倍。定价每分钟 0.08 美元。grok-voice-latest 别名将于 8月5日自动切换至 v2.0。 <a href="https://xix.ai/zh/live/6274" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-30-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
