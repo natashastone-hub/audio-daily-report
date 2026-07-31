@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-31</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-31</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月31日 (周五) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">7</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.27768" target="_blank">VocalRender: Score-Native Singing Voice Synthesis for Real-World Composition</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-30</span><span>👥 Yukun Chen, Tianrui Wang, Zhaoxi Mu, Xinyu Yang, EngSiong Chng</span></div>
+      <div class="abstract">提出 VocalRender，一个直接从歌词、音高、符号音符值和速度合成歌声的“乐谱原生”系统。使用交错歌词-音符表示和自回归扩散模型生成连续声学潜在表示并预测输出长度，无需显式时长预测。在 2300 小时歌声数据集上训练，在自然度 CMOS 上超越最强基线 0.42 分，并在域内和域外基准上均实现了强可懂度、强旋律控制和说话人相似度。</div>
+      <div class="tags"><span class="tag">Singing Voice Synthesis</span><span class="tag">Diffusion</span><span class="tag">Score-Native</span><span class="tag">SVS</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.27768" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.27768" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.27756" target="_blank">Cocktail-Talker: Multi-Speaker Dialog Modeling in Noisy Social Environments with Turn Action GRPO</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-30</span><span>👥 Xilin Jiang, Riki Shimizu, Sukru Samet Dindar, Junkai Wu, Zhongweiyang Xu, Nima Mesgarani</span></div>
+      <div class="abstract">提出 Cocktail-Talker，一个面向嘈杂社交环境多说话人口语对话建模的 Speech LLM 框架。引入三个动作令牌（respond/listen/ignore），通过监督微调和强化学习训练模型决定何时回应。同时构建了 Cocktail-DialogGen 数据管线来模拟真实多说话人对话。是语音对话系统向更自然化和选择性交互迈出的重要一步。</div>
+      <div class="tags"><span class="tag">Speech LLM</span><span class="tag">Multi-Speaker Dialog</span><span class="tag">Reinforcement Learning</span><span class="tag">Turn Taking</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.27756" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.27756" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.27828" target="_blank">CrowdioSet and PaRIRset: Two Datasets Towards Live Music Source Separation</a></h4>
+      <div class="meta"><span>📅 2026-07-30</span><span>👥 Enric Gusó, Xavier Serra</span></div>
+      <div class="abstract">针对音乐源分离模型在现场录音上泛化差的问题，提供两个新数据集：CrowdioSet（4800条真实环境噪声+合成跟唱噪声）和 PaRIRset（40个专业音乐会场地立体声脉冲响应）。添加 CrowdioSet 噪声可有效增强现场录音降噪效果，添加 PaRIRset 房间脉冲响应比仅用语音增强领域的真实 RIR 效果更好。代码、模型权重和数据均已公开。ISMIR 2026 接收。</div>
+      <div class="tags"><span class="tag">Source Separation</span><span class="tag">Live Music</span><span class="tag">Dataset</span><span class="tag">ISMIR 2026</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.27828" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.27828" target="_blank">🔗 PDF</a> <a href="https://enricguso.github.io/crowdioset_parirset" target="_blank">🔗 Project</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.27775" target="_blank">RIPPLE: Generating Multi-Channel Phase, Not Recovering It</a></h4>
+      <div class="meta"><span>📅 2026-07-30</span><span>👥 Jaehyuk Lee, Yeajin Lee, Dayeon Shin, Donghun Lee</span></div>
+      <div class="abstract">提出 RIPPLE，将 Griffin-Lim 重新解释为相位先验而非最终估计器。通过整流流（rectified flow）从源相位初始化的先验细化为目标相位，并在明确的多通道间相位损失下优化。在一阶 Ambisonics 环境传递和地震跨站翻译两个物理无关领域均优于基于恢复的管线，地震情况下将 S 波极化误差从 57.3°（接近随机）降至 33.8°。</div>
+      <div class="tags"><span class="tag">Multi-Channel Audio</span><span class="tag">Phase Generation</span><span class="tag">Rectified Flow</span><span class="tag">Ambisonics</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.27775" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.27775" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.27909" target="_blank">Pereval: Integrating Contextual Embeddings into Evaluation of Expressive MIDI Piano Performances</a></h4>
+      <div class="meta"><span>📅 2026-07-30</span><span>👥 Dmitrii Gavrilev, Ilya Borovik, Vladimir Viro</span></div>
+      <div class="abstract">重新审视 MIDI 钢琴演奏的属性级评估指标，探索自监督符号音乐模型 Aria 和 CLaMP3 中上下文嵌入的感知特性。听力研究表明这些模型可作为感知代理，与人工评分的一致性不亚于传统指标。将 Kernel Audio Distance 适配到符号音乐领域衡量条件分布相似度，无需音符对齐即可捕捉上下文扰动。开源 Pereval 库集成属性和深度特征评估工具。ISMIR 2026 接收。</div>
+      <div class="tags"><span class="tag">MIDI</span><span class="tag">Music Evaluation</span><span class="tag">Symbolic Music</span><span class="tag">ISMIR 2026</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.27909" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.27909" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.27436" target="_blank">WeSep: A Modular and Cue-Composable Framework for Target Speaker Extraction</a></h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Ke Zhang, Xiaoyang Yu, Haoyu Li, Shuai Wang, Shuhan Zhang, Haizhou Li</span></div>
+      <div class="abstract">提出 WeSep，通过标准化接口将线索模块和分离器骨干解耦，将目标说话人提取重新定义为异质线索条件下的学习问题。支持注册、空间、视觉和文本等多种模态线索的组合注入。异地线索可用性下实现稳定优化，支持动态线索可用性场景。代码将公开。Interspeech 2026 接收。</div>
+      <div class="tags"><span class="tag">Target Speaker Extraction</span><span class="tag">Multimodal</span><span class="tag">Modular</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.27436" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.27436" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.27454" target="_blank">Improved Robustness in AI-Generated Music Detection</a></h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Emile Dugelay, Thomas Barand, Baptiste Campeas, Aurélien Laouar, Darius Afchar, Romain Hennequin</span></div>
+      <div class="abstract">解决 AI 音乐检测器在音频处理（变速/变调）下性能下降的鲁棒性问题。提出频率缩放不变检测管线，通过对数 STFT 重映射、学习交叉相关滤波器和最大池化实现设计层面的变速鲁棒性。训练使用双监督检测和伪影峰值定位的混合损失，输出二元决策和变速因子估计。ISMIR 2026 接收。</div>
+      <div class="tags"><span class="tag">AI Music Detection</span><span class="tag">Robustness</span><span class="tag">ISMIR 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.27454" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.27454" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>Google 发布 Gemini 3.1 Flash Live Preview：新一代 Audio-to-Audio 实时对话模型</h4>
+      <p>2026年7月30日，Google 在 Gemini API 上发布了 gemini-3.1-flash-live-preview，这是最新的 audio-to-audio (A2A) 模型，专为实时对话和语音优先应用设计。该模型支持原生语音输入和输出，标志着 Google 正式加入全双工语音 AI 军备竞赛，与 OpenAI GPT-Live、字节跳动 Seeduplex 形成三足鼎立。 <a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Grok Voice Think Fast 2.0 持续引发关注：0.70 秒延迟，定价 0.08 美元/分钟</h4>
+      <p>IT之家 7月30日报道，xAI/SpaceXAI 旗下 Grok Voice Think Fast 2.0 语音模型引发广泛关注。该语音到语音模型以 0.70 秒响应延迟实现全双工交互，音频定价 0.08 美元/分钟，将于 8月5日自动升级 grok-voice-latest 别名。标志着马斯克旗下 AI 正式进入语音赛道。 <a href="https://www.ithome.com/0/983/587.htm" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>腾讯 PCG 联合河套学院获 ACL 2026 杰出论文奖：全双工语音大模型突破</h4>
+      <p>腾讯 PCG 技术线联合深圳河套学院，凭借全双工语音大模型研究成果《Hierarchical Acoustic-Semantic Modeling: Modality Separation and Semantic Coherence for Full-Duplex SLMs》获得 ACL 2026 杰出论文奖。该研究提出了层次化声学-语义建模方法，实现语音模态分离与语义连贯性。 <a href="https://km.woa.com/articles/show/665955" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-31') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+{
+  "papers": [
+    {
+      "title": "VocalRender: Score-Native Singing Voice Synthesis for Real-World Composition",
+      "url": "https://arxiv.org/abs/2607.27768",
+      "date": "2026-07-30",
+      "authors": "Yukun Chen, Tianrui Wang, Zhaoxi Mu, Xinyu Yang, EngSiong Chng",
+      "abstract": "提出 VocalRender，一个直接从歌词、音高、符号音符值和速度合成歌声的“乐谱原生”系统。使用交错歌词-音符表示和自回归扩散模型生成连续声学潜在表示并预测输出长度，无需显式时长预测。在 2300 小时歌声数据集上训练，在自然度 CMOS 上超越最强基线 0.42 分，并在域内和域外基准上均实现了强可懂度、强旋律控制和说话人相似度。",
+      "tags": ["Singing Voice Synthesis", "Diffusion", "Score-Native", "SVS"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.27768"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.27768"}
+      ]
+    },
+    {
+      "title": "Cocktail-Talker: Multi-Speaker Dialog Modeling in Noisy Social Environments with Turn Action GRPO",
+      "url": "https://arxiv.org/abs/2607.27756",
+      "date": "2026-07-30",
+      "authors": "Xilin Jiang, Riki Shimizu, Sukru Samet Dindar, Junkai Wu, Zhongweiyang Xu, Nima Mesgarani",
+      "abstract": "提出 Cocktail-Talker，一个面向嘈杂社交环境多说话人口语对话建模的 Speech LLM 框架。引入三个动作令牌（respond/listen/ignore），通过监督微调和强化学习训练模型决定何时回应。同时构建了 Cocktail-DialogGen 数据管线来模拟真实多说话人对话。是语音对话系统向更自然化和选择性交互迈出的重要一步。",
+      "tags": ["Speech LLM", "Multi-Speaker Dialog", "Reinforcement Learning", "Turn Taking"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.27756"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.27756"}
+      ]
+    },
+    {
+      "title": "CrowdioSet and PaRIRset: Two Datasets Towards Live Music Source Separation",
+      "url": "https://arxiv.org/abs/2607.27828",
+      "date": "2026-07-30",
+      "authors": "Enric Gusó, Xavier Serra",
+      "abstract": "针对音乐源分离模型在现场录音上泛化差的问题，提供两个新数据集：CrowdioSet（4800条真实环境噪声+合成跟唱噪声）和 PaRIRset（40个专业音乐会场地立体声脉冲响应）。添加 CrowdioSet 噪声可有效增强现场录音降噪效果，添加 PaRIRset 房间脉冲响应比仅用语音增强领域的真实 RIR 效果更好。代码、模型权重和数据均已公开。ISMIR 2026 接收。",
+      "tags": ["Source Separation", "Live Music", "Dataset", "ISMIR 2026", "Open Source"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.27828"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.27828"},
+        {"label": "Project", "url": "https://enricguso.github.io/crowdioset_parirset"}
+      ]
+    },
+    {
+      "title": "RIPPLE: Generating Multi-Channel Phase, Not Recovering It",
+      "url": "https://arxiv.org/abs/2607.27775",
+      "date": "2026-07-30",
+      "authors": "Jaehyuk Lee, Yeajin Lee, Dayeon Shin, Donghun Lee",
+      "abstract": "提出 RIPPLE，将 Griffin-Lim 重新解释为相位先验而非最终估计器。通过整流流（rectified flow）从源相位初始化的先验细化为目标相位，并在明确的多通道间相位损失下优化。在一阶 Ambisonics 环境传递和地震跨站翻译两个物理无关领域均优于基于恢复的管线，地震情况下将 S 波极化误差从 57.3°（接近随机）降至 33.8°。",
+      "tags": ["Multi-Channel Audio", "Phase Generation", "Rectified Flow", "Ambisonics"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.27775"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.27775"}
+      ]
+    },
+    {
+      "title": "Pereval: Integrating Contextual Embeddings into Evaluation of Expressive MIDI Piano Performances",
+      "url": "https://arxiv.org/abs/2607.27909",
+      "date": "2026-07-30",
+      "authors": "Dmitrii Gavrilev, Ilya Borovik, Vladimir Viro",
+      "abstract": "重新审视 MIDI 钢琴演奏的属性级评估指标，探索自监督符号音乐模型 Aria 和 CLaMP3 中上下文嵌入的感知特性。听力研究表明这些模型可作为感知代理，与人工评分的一致性不亚于传统指标。将 Kernel Audio Distance 适配到符号音乐领域衡量条件分布相似度，无需音符对齐即可捕捉上下文扰动。开源 Pereval 库集成属性和深度特征评估工具。ISMIR 2026 接收。",
+      "tags": ["MIDI", "Music Evaluation", "Symbolic Music", "ISMIR 2026", "Open Source"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.27909"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.27909"}
+      ]
+    },
+    {
+      "title": "WeSep: A Modular and Cue-Composable Framework for Target Speaker Extraction",
+      "url": "https://arxiv.org/abs/2607.27436",
+      "date": "2026-07-29",
+      "authors": "Ke Zhang, Xiaoyang Yu, Haoyu Li, Shuai Wang, Shuhan Zhang, Haizhou Li",
+      "abstract": "提出 WeSep，通过标准化接口将线索模块和分离器骨干解耦，将目标说话人提取重新定义为异质线索条件下的学习问题。支持注册、空间、视觉和文本等多种模态线索的组合注入。异地线索可用性下实现稳定优化，支持动态线索可用性场景。代码将公开。Interspeech 2026 接收。",
+      "tags": ["Target Speaker Extraction", "Multimodal", "Modular", "Interspeech 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.27436"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.27436"}
+      ]
+    },
+    {
+      "title": "Improved Robustness in AI-Generated Music Detection",
+      "url": "https://arxiv.org/abs/2607.27454",
+      "date": "2026-07-29",
+      "authors": "Emile Dugelay, Thomas Barand, Baptiste Campeas, Aurélien Laouar, Darius Afchar, Romain Hennequin",
+      "abstract": "解决 AI 音乐检测器在音频处理（变速/变调）下性能下降的鲁棒性问题。提出频率缩放不变检测管线，通过对数 STFT 重映射、学习交叉相关滤波器和最大池化实现设计层面的变速鲁棒性。训练使用双监督检测和伪影峰值定位的混合损失，输出二元决策和变速因子估计。ISMIR 2026 接收。",
+      "tags": ["AI Music Detection", "Robustness", "ISMIR 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.27454"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.27454"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "Google 发布 Gemini 3.1 Flash Live Preview：新一代 Audio-to-Audio 实时对话模型",
+      "url": "https://ai.google.dev/gemini-api/docs/changelog",
+      "summary": "2026年7月30日，Google 在 Gemini API 上发布了 gemini-3.1-flash-live-preview，这是最新的 audio-to-audio (A2A) 模型，专为实时对话和语音优先应用设计。该模型支持原生语音输入和输出，标志着 Google 正式加入全双工语音 AI 军备竞赛，与 OpenAI GPT-Live、字节跳动 Seeduplex 形成三足鼎立。"
+    },
+    {
+      "title": "Grok Voice Think Fast 2.0 持续引发关注：0.70 秒延迟，定价 0.08 美元/分钟",
+      "url": "https://www.ithome.com/0/983/587.htm",
+      "summary": "IT之家 7月30日报道，xAI/SpaceXAI 旗下 Grok Voice Think Fast 2.0 语音模型引发广泛关注。该语音到语音模型以 0.70 秒响应延迟实现全双工交互，音频定价 0.08 美元/分钟，将于 8月5日自动升级 grok-voice-latest 别名。标志着马斯克旗下 AI 正式进入语音赛道。"
+    },
+    {
+      "title": "腾讯 PCG 联合河套学院获 ACL 2026 杰出论文奖：全双工语音大模型突破",
+      "url": "https://km.woa.com/articles/show/665955",
+      "summary": "腾讯 PCG 技术线联合深圳河套学院，凭借全双工语音大模型研究成果《Hierarchical Acoustic-Semantic Modeling: Modality Separation and Semantic Coherence for Full-Duplex SLMs》获得 ACL 2026 杰出论文奖。该研究提出了层次化声学-语义建模方法，实现语音模态分离与语义连贯性。"
+    }
+  ]
+}
