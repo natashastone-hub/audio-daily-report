@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-07-31-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-07-31-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年7月31日 (周五) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">5</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.28351" target="_blank">Teffic-Audio: Tell Fact from Fiction — General Speech Deepfake Detection with SOTA Performance</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-30</span><span>👥 Wan Lin, Li Wang, Jindong Wang, Kunyu Feng, Zhizheng Wu</span></div>
+      <div class="abstract">语音深度伪造检测面临日益多样的欺骗机制挑战。Teffic-Audio 采用 Conformer 编码器+多头注意力统计池化+二分类器的简洁架构，不依赖复杂结构，通过多源数据训练、攻击与源平衡采样和多样化音频增强来提升泛化能力。仅使用开源数据训练，在 Speech-DF-Arena 的 14 个测试集上达到 1.454% 的 pooled EER，超越所有已公开系统。</div>
+      <div class="tags"><span class="tag">Speech Deepfake Detection</span><span class="tag">Conformer</span><span class="tag">Anti-Spoofing</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.28351" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.28351" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.27756" target="_blank">Cocktail-Talker: Multi-Speaker Dialog Modeling in Noisy Social Environments with Turn Action GRPO</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-30</span><span>👥 Xilin Jiang, Riki Shimizu, Sukru Samet Dindar, Junkai Wu, Zhongweiyang Xu, Nima Mesgarani</span></div>
+      <div class="abstract">提出 Cocktail-Talker，一个面向嘈杂社交环境多说话人对话建模的语音 LLM 框架。通过三个动作 token（respond/listen/ignore）让助手决定是否说话及如何回应，使用监督微调+强化学习训练。配套的数据管道 Cocktail-DialogGen 用 LLM 模拟真实多说话人对话场景，推动语音对话系统向更自然的社交交互迈进。</div>
+      <div class="tags"><span class="tag">Speech LLM</span><span class="tag">Multi-Speaker</span><span class="tag">Dialog Modeling</span><span class="tag">RL</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.27756" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.27756" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.27768" target="_blank">VocalRender: Score-Native Singing Voice Synthesis for Real-World Composition</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-30</span><span>👥 Yukun Chen, Tianrui Wang, Zhaoxi Mu, Xinyu Yang, Eng Siong Chng</span></div>
+      <div class="abstract">提出 VocalRender，直接从歌词、音高、音符值和速度合成歌声的乐谱原生系统。采用交错歌词-音符表示和自回归扩散模型生成连续声学潜变量，无需显式时长预测。在 2300 小时歌声数据上训练，在自然度 CMOS 上超越最强基线 0.42 分，展示了乐谱原生架构的有效性。</div>
+      <div class="tags"><span class="tag">Singing Voice Synthesis</span><span class="tag">Score-Native</span><span class="tag">Autoregressive Diffusion</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.27768" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.27768" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.27436" target="_blank">WeSep: A Modular and Cue-Composable Framework for Target Speaker Extraction</a></h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Ke Zhang, Xiaoyang Yu, Haoyu Li, Shuai Wang, Shuhan Zhang, Haizhou Li</span></div>
+      <div class="abstract">提出 WeSep，将目标说话人提取重新定义为异构线索条件学习问题。通过标准化接口解耦线索模块和分离器骨干，支持注册、空间、视觉和文本等多种模态线索的灵活组合注入，在统一优化框架内支持异构线索可用性，适应真实场景的动态条件。已接收 Interspeech 2026。</div>
+      <div class="tags"><span class="tag">Target Speaker Extraction</span><span class="tag">Multi-Modal</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.27436" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.27436" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.25289" target="_blank">AMRD: Adaptive Multi-Teacher Relational Distillation for Lightweight Speech Emotion Recognition</a></h4>
+      <div class="meta"><span>📅 2026-07-28</span><span>👥 Yuqi Li, Yi-Cheng Lin, Xianglong Wang, Kuo Yang, Xiaoqin Feng, Yixuan Wang, Huiran Duan, Yingli Tian</span></div>
+      <div class="abstract">提出 AMRD，通过自适应多教师关系蒸馏实现轻量级语音情感识别。使用 one-class SVM 对各教师 logit 相似度矩阵分配逐批权重，关系蒸馏损失对齐师生相似度矩阵，捕捉 logit 匹配遗漏的结构信息。在 IEMOCAP 和 CREMA-D 上超越单教师蒸馏基线，适合端侧部署。</div>
+      <div class="tags"><span class="tag">Speech Emotion Recognition</span><span class="tag">Knowledge Distillation</span><span class="tag">On-Device</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.25289" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2607.25289" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>OpenAI GPT-5.6 全线降价：Luna 直降 80%，API 价格战白热化</h4>
+      <p>OpenAI 于 7 月 30 日宣布 GPT-5.6 系列全新定价：Luna 输入/输出费用同步下调 80%，Terra 下调 20%，旗舰 Sol 定价不变但首次推出 2.5 倍速推理选项。此次降价使 GPT-5.6 Luna 性价比超越 DeepSeek V4 Pro 和 Gemini 3.5 Flash，标志着 AI API 价格战进入新阶段。对语音 AI 开发者而言，更低的 LLM 推理成本将直接降低全双工语音 Agent 和实时语音交互系统的运营门槛。 <a href="https://finance.sina.com.cn/tech/roll/2026-07-31/doc-iniksaik9310795.shtml" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>MiniMax H3 正式发布：全模态生成模型，计划开源</h4>
+      <p>MiniMax 于 7 月 31 日发布 H3 全模态生成模型，支持 15 秒 2K 分辨率视频生成。虽然主打视频生成，但其全模态架构中音频生成能力备受关注，公司宣布计划开源，有望推动语音/音频生成领域的开源生态进一步壮大。 <a href="https://iwiki.woa.com/p/4028924507" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-07-31-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

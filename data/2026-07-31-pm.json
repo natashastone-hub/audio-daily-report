@@ -1,0 +1,66 @@
+{
+  "papers": [
+    {
+      "title": "Teffic-Audio: Tell Fact from Fiction — General Speech Deepfake Detection with SOTA Performance",
+      "url": "https://arxiv.org/abs/2607.28351",
+      "date": "2026-07-30",
+      "authors": "Wan Lin, Li Wang, Jindong Wang, Kunyu Feng, Zhizheng Wu",
+      "abstract": "语音深度伪造检测面临日益多样的欺骗机制挑战。Teffic-Audio 采用 Conformer 编码器+多头注意力统计池化+二分类器的简洁架构，不依赖复杂结构，通过多源数据训练、攻击与源平衡采样和多样化音频增强来提升泛化能力。仅使用开源数据训练，在 Speech-DF-Arena 的 14 个测试集上达到 1.454% 的 pooled EER，超越所有已公开系统。",
+      "tags": ["Speech Deepfake Detection", "Conformer", "Anti-Spoofing"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.28351"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.28351"}]
+    },
+    {
+      "title": "Cocktail-Talker: Multi-Speaker Dialog Modeling in Noisy Social Environments with Turn Action GRPO",
+      "url": "https://arxiv.org/abs/2607.27756",
+      "date": "2026-07-30",
+      "authors": "Xilin Jiang, Riki Shimizu, Sukru Samet Dindar, Junkai Wu, Zhongweiyang Xu, Nima Mesgarani",
+      "abstract": "提出 Cocktail-Talker，一个面向嘈杂社交环境多说话人对话建模的语音 LLM 框架。通过三个动作 token（respond/listen/ignore）让助手决定是否说话及如何回应，使用监督微调+强化学习训练。配套的数据管道 Cocktail-DialogGen 用 LLM 模拟真实多说话人对话场景，推动语音对话系统向更自然的社交交互迈进。",
+      "tags": ["Speech LLM", "Multi-Speaker", "Dialog Modeling", "RL"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.27756"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.27756"}]
+    },
+    {
+      "title": "VocalRender: Score-Native Singing Voice Synthesis for Real-World Composition",
+      "url": "https://arxiv.org/abs/2607.27768",
+      "date": "2026-07-30",
+      "authors": "Yukun Chen, Tianrui Wang, Zhaoxi Mu, Xinyu Yang, Eng Siong Chng",
+      "abstract": "提出 VocalRender，直接从歌词、音高、音符值和速度合成歌声的乐谱原生系统。采用交错歌词-音符表示和自回归扩散模型生成连续声学潜变量，无需显式时长预测。在 2300 小时歌声数据上训练，在自然度 CMOS 上超越最强基线 0.42 分，展示了乐谱原生架构的有效性。",
+      "tags": ["Singing Voice Synthesis", "Score-Native", "Autoregressive Diffusion"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.27768"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.27768"}]
+    },
+    {
+      "title": "WeSep: A Modular and Cue-Composable Framework for Target Speaker Extraction",
+      "url": "https://arxiv.org/abs/2607.27436",
+      "date": "2026-07-29",
+      "authors": "Ke Zhang, Xiaoyang Yu, Haoyu Li, Shuai Wang, Shuhan Zhang, Haizhou Li",
+      "abstract": "提出 WeSep，将目标说话人提取重新定义为异构线索条件学习问题。通过标准化接口解耦线索模块和分离器骨干，支持注册、空间、视觉和文本等多种模态线索的灵活组合注入，在统一优化框架内支持异构线索可用性，适应真实场景的动态条件。已接收 Interspeech 2026。",
+      "tags": ["Target Speaker Extraction", "Multi-Modal", "Interspeech 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.27436"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.27436"}]
+    },
+    {
+      "title": "AMRD: Adaptive Multi-Teacher Relational Distillation for Lightweight Speech Emotion Recognition",
+      "url": "https://arxiv.org/abs/2607.25289",
+      "date": "2026-07-28",
+      "authors": "Yuqi Li, Yi-Cheng Lin, Xianglong Wang, Kuo Yang, Xiaoqin Feng, Yixuan Wang, Huiran Duan, Yingli Tian",
+      "abstract": "提出 AMRD，通过自适应多教师关系蒸馏实现轻量级语音情感识别。使用 one-class SVM 对各教师 logit 相似度矩阵分配逐批权重，关系蒸馏损失对齐师生相似度矩阵，捕捉 logit 匹配遗漏的结构信息。在 IEMOCAP 和 CREMA-D 上超越单教师蒸馏基线，适合端侧部署。",
+      "tags": ["Speech Emotion Recognition", "Knowledge Distillation", "On-Device"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2607.25289"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2607.25289"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "OpenAI GPT-5.6 全线降价：Luna 直降 80%，API 价格战白热化",
+      "url": "https://finance.sina.com.cn/tech/roll/2026-07-31/doc-iniksaik9310795.shtml",
+      "summary": "OpenAI 于 7 月 30 日宣布 GPT-5.6 系列全新定价：Luna 输入/输出费用同步下调 80%，Terra 下调 20%，旗舰 Sol 定价不变但首次推出 2.5 倍速推理选项。此次降价使 GPT-5.6 Luna 性价比超越 DeepSeek V4 Pro 和 Gemini 3.5 Flash，标志着 AI API 价格战进入新阶段。对语音 AI 开发者而言，更低的 LLM 推理成本将直接降低全双工语音 Agent 和实时语音交互系统的运营门槛。"
+    },
+    {
+      "title": "MiniMax H3 正式发布：全模态生成模型，计划开源",
+      "url": "https://iwiki.woa.com/p/4028924507",
+      "summary": "MiniMax 于 7 月 31 日发布 H3 全模态生成模型，支持 15 秒 2K 分辨率视频生成。虽然主打视频生成，但其全模态架构中音频生成能力备受关注，公司宣布计划开源，有望推动语音/音频生成领域的开源生态进一步壮大。"
+    }
+  ]
+}
