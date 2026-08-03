@@ -1,0 +1,260 @@
+{
+  "date": "2026-08-03",
+  "papers": [
+    {
+      "title": "Cocktail-Talker: Multi-Speaker Dialog Modeling in Noisy Social Environments with Turn Action GRPO",
+      "url": "https://arxiv.org/abs/2607.27756",
+      "date": "2026-07-30",
+      "authors": "Xilin Jiang, Riki Shimizu, Sukru Samet Dindar, Junkai Wu, Zhongweiyang Xu, Nima Mesgarani",
+      "abstract": "Introduces Cocktail-Talker, a speech LLM framework for multi-speaker dialog in noisy social environments. Uses three action tokens (respond/listen/ignore) to decide whether to speak. Trained via supervised finetuning and GRPO reinforcement learning. Includes Cocktail-DialogGen, an LLM-based data pipeline for realistic multi-speaker dialogs.",
+      "tags": [
+        "speech LLM",
+        "multi-speaker dialog",
+        "GRPO",
+        "spoken dialog system"
+      ],
+      "highlight": true,
+      "links": [
+        {
+          "label": "Arxiv",
+          "url": "https://arxiv.org/abs/2607.27756"
+        },
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2607.27756"
+        }
+      ]
+    },
+    {
+      "title": "WeSep: A Modular and Cue-Composable Framework for Target Speaker Extraction",
+      "url": "https://arxiv.org/abs/2607.27436",
+      "date": "2026-07-29",
+      "authors": "Ke Zhang, Xiaoyang Yu, Haoyu Li, Shuai Wang, Shuhan Zhang, Haizhou Li",
+      "abstract": "Presents WeSep, a unified TSE framework with decoupled cue modules and separator backbones via standardized interfaces. Supports enrollment, spatial, visual, and textual cues. Accepted by Interspeech 2026. Toolkit to be publicly available.",
+      "tags": [
+        "target speaker extraction",
+        "TSE",
+        "Interspeech 2026",
+        "open source"
+      ],
+      "highlight": true,
+      "links": [
+        {
+          "label": "Arxiv",
+          "url": "https://arxiv.org/abs/2607.27436"
+        },
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2607.27436"
+        }
+      ]
+    },
+    {
+      "title": "VocalRender: Score-Native Singing Voice Synthesis for Real-World Composition",
+      "url": "https://arxiv.org/abs/2607.27768",
+      "date": "2026-07-30",
+      "authors": "Yukun Chen et al.",
+      "abstract": "Score-native singing voice synthesis system using interleaved lyric-note representation and autoregressive diffusion model. Trained on 2,300-hour singing dataset. Eliminates explicit duration prediction, outperforming baselines by 0.42 points in naturalness CMOS.",
+      "tags": [
+        "singing voice synthesis",
+        "SVS",
+        "diffusion model",
+        "music AI"
+      ],
+      "highlight": true,
+      "links": [
+        {
+          "label": "Arxiv",
+          "url": "https://arxiv.org/abs/2607.27768"
+        },
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2607.27768"
+        }
+      ]
+    },
+    {
+      "title": "Teffic-Audio: Tell Fact from Fiction — General Speech Deepfake Detection",
+      "url": "https://arxiv.org/abs/2607.28351",
+      "date": "2026-07-30",
+      "authors": "Wan Lin et al.",
+      "abstract": "General speech deepfake detection system using Conformer-based encoder + attentive statistics pooling. Achieves pooled EER of 1.454% on 14 test sets of Speech-DF-Arena, outperforming all public systems. Trained only with open-source data.",
+      "tags": [
+        "deepfake detection",
+        "speech anti-spoofing",
+        "Conformer",
+        "Speech-DF-Arena"
+      ],
+      "highlight": true,
+      "links": [
+        {
+          "label": "Arxiv",
+          "url": "https://arxiv.org/abs/2607.28351"
+        },
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2607.28351"
+        }
+      ]
+    },
+    {
+      "title": "Enhancing Law-Enforcement Audio Transcription: A LoRA-Based Adaptation of Whisper for BWC Footage",
+      "url": "https://arxiv.org/abs/2607.27245",
+      "date": "2026-07-27",
+      "authors": "Vivek Senthil et al.",
+      "abstract": "Adapts OpenAI Whisper for body-worn camera footage transcription using LoRA PEFT. Addresses high-stress police scenarios with sirens/radio interference. Demonstrated on consumer-grade hardware (4GB GPU) with 8-bit quantization and gradient checkpointing, achieving 93.7% lexicon mapping rate.",
+      "tags": [
+        "ASR",
+        "Whisper",
+        "LoRA",
+        "domain adaptation"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "Arxiv",
+          "url": "https://arxiv.org/abs/2607.27245"
+        },
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2607.27245"
+        }
+      ]
+    },
+    {
+      "title": "Does EEG Foundation Models Transfer to Speech? A Benchmark on Overt and Imagined Speech Decoding",
+      "url": "https://arxiv.org/abs/2607.27268",
+      "date": "2026-07-29",
+      "authors": "Jose A. Gonzalez-Lopez et al.",
+      "abstract": "First systematic benchmark of EEG foundation models (LaBraM, EEGMamba) vs CNN baselines for speech decoding. Finds that large-scale EEG pretraining yields no consistent advantage over 16K-parameter CNN on speech tasks. Submitted to IberSPEECH 2026.",
+      "tags": [
+        "EEG",
+        "speech decoding",
+        "BCI",
+        "foundation model"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "Arxiv",
+          "url": "https://arxiv.org/abs/2607.27268"
+        },
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2607.27268"
+        }
+      ]
+    },
+    {
+      "title": "Improved Robustness in AI-Generated Music Detection",
+      "url": "https://arxiv.org/abs/2607.27454",
+      "date": "2026-07-29",
+      "authors": "Emile Dugelay et al.",
+      "abstract": "Frequency-scaling-invariant detection pipeline for AI-generated music using log-STFT remapping and learned cross-correlation filter. Addresses robustness to speed/pitch manipulation attacks. Accepted at ISMIR 2026.",
+      "tags": [
+        "AI music detection",
+        "audio forensics",
+        "ISMIR 2026",
+        "robustness"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "Arxiv",
+          "url": "https://arxiv.org/abs/2607.27454"
+        },
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2607.27454"
+        }
+      ]
+    },
+    {
+      "title": "CrowdioSet and PaRIRset: Two Datasets Towards Live Music Source Separation",
+      "url": "https://arxiv.org/abs/2607.27828",
+      "date": "2026-07-30",
+      "authors": "Enric Gusó, Xavier Serra",
+      "abstract": "Two novel datasets for live music source separation: CrowdioSet (4800 ambience tracks + synthetic sing-alongs) and PaRIRset (stereo impulse responses from 40 concert venues). Code, weights, and datasets freely available. Accepted at ISMIR 2026.",
+      "tags": [
+        "music source separation",
+        "dataset",
+        "ISMIR 2026",
+        "open source"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "Arxiv",
+          "url": "https://arxiv.org/abs/2607.27828"
+        },
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2607.27828"
+        }
+      ]
+    },
+    {
+      "title": "RIPPLE: Generating Multi-Channel Phase, Not Recovering It",
+      "url": "https://arxiv.org/abs/2607.27775",
+      "date": "2026-07-30",
+      "authors": "Jaehyuk Lee et al.",
+      "abstract": "Argues that phase should be generated rather than recovered for multi-channel audio. Reinterprets Griffin-Lim as a phase prior and uses rectified flow for refinement. Demonstrates on ambisonics and seismic cross-station translation, significantly reducing polarization error.",
+      "tags": [
+        "audio signal processing",
+        "phase generation",
+        "multi-channel",
+        "ambisonics"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "Arxiv",
+          "url": "https://arxiv.org/abs/2607.27775"
+        },
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2607.27775"
+        }
+      ]
+    },
+    {
+      "title": "Integrating Contextual Embeddings into Evaluation of Expressive MIDI Piano Performances",
+      "url": "https://arxiv.org/abs/2607.27909",
+      "date": "2026-07-30",
+      "authors": "Dmitrii Gavrilev et al.",
+      "abstract": "Reexamines attribute-scoped metrics for MIDI piano evaluation using contextual embeddings from self-supervised symbolic music models (Aria, CLaMP3). Adapts Kernel Audio Distance to symbolic domain. Releases Pereval open-source evaluation library. Accepted at ISMIR 2026.",
+      "tags": [
+        "music evaluation",
+        "MIDI",
+        "symbolic music",
+        "ISMIR 2026"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "Arxiv",
+          "url": "https://arxiv.org/abs/2607.27909"
+        },
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2607.27909"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "全双工多模态交互模型：Interaction Models 与 Thinker–Talker 架构解析（iWiki技术分析）",
+      "url": "https://iwiki.woa.com/p/4029215196",
+      "summary": "Thinking Machines Lab 发布的 Interaction Models 论文提出可扩展的人机交互方法，包含 Thinker–Talker 架构。该文档对全双工语音交互模型进行了技术深度解析。发布于8月2日。",
+      "date": "2026-08-02"
+    },
+    {
+      "title": "GPT-Live 全面实测对比：语音AI交互范式革命持续发酵",
+      "url": "https://www.aitoollab.cn/articles/gpt-live-ai-voice-assistant-comparison-202607/",
+      "summary": "OpenAI 7月8日发布 GPT-Live 后持续引发行业震动，一周内 ChatGPT Voice 用户突破1.5亿。本文深度对比 GPT-Live 与豆包等国产语音AI产品。",
+      "date": "2026-08-02"
+    }
+  ],
+  "note": "2026年8月1-2日为周末，arxiv无新论文提交。最近一批论文为7月31日（周五）arxiv listing，对应提交日期7月27-30日。24小时内无新arxiv论文。本期收录10篇上周五/周末前最新论文和2条新闻。"
+}

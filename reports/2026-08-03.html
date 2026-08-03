@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-08-03</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-08-03</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年8月3日 (周一) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">10</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.27756" target="_blank">Cocktail-Talker: Multi-Speaker Dialog Modeling in Noisy Social Environments with Turn Action GRPO</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-30</span><span>👥 Xilin Jiang, Riki Shimizu, Sukru Samet Dindar, Junkai Wu, Zhongweiyang Xu, Nima Mesgarani</span></div>
+      <div class="abstract">Introduces Cocktail-Talker, a speech LLM framework for multi-speaker dialog in noisy social environments. Uses three action tokens (respond/listen/ignore) to decide whether to speak. Trained via supervised finetuning and GRPO reinforcement learning. Includes Cocktail-DialogGen, an LLM-based data pipeline for realistic multi-speaker dialogs.</div>
+      <div class="tags"><span class="tag">speech LLM</span><span class="tag">multi-speaker dialog</span><span class="tag">GRPO</span><span class="tag">spoken dialog system</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.27756" target="_blank">🔗 Arxiv</a> <a href="https://arxiv.org/pdf/2607.27756" target="_blank">🔗 pdf</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.27436" target="_blank">WeSep: A Modular and Cue-Composable Framework for Target Speaker Extraction</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Ke Zhang, Xiaoyang Yu, Haoyu Li, Shuai Wang, Shuhan Zhang, Haizhou Li</span></div>
+      <div class="abstract">Presents WeSep, a unified TSE framework with decoupled cue modules and separator backbones via standardized interfaces. Supports enrollment, spatial, visual, and textual cues. Accepted by Interspeech 2026. Toolkit to be publicly available.</div>
+      <div class="tags"><span class="tag">target speaker extraction</span><span class="tag">TSE</span><span class="tag">Interspeech 2026</span><span class="tag">open source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.27436" target="_blank">🔗 Arxiv</a> <a href="https://arxiv.org/pdf/2607.27436" target="_blank">🔗 pdf</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.27768" target="_blank">VocalRender: Score-Native Singing Voice Synthesis for Real-World Composition</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-30</span><span>👥 Yukun Chen et al.</span></div>
+      <div class="abstract">Score-native singing voice synthesis system using interleaved lyric-note representation and autoregressive diffusion model. Trained on 2,300-hour singing dataset. Eliminates explicit duration prediction, outperforming baselines by 0.42 points in naturalness CMOS.</div>
+      <div class="tags"><span class="tag">singing voice synthesis</span><span class="tag">SVS</span><span class="tag">diffusion model</span><span class="tag">music AI</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.27768" target="_blank">🔗 Arxiv</a> <a href="https://arxiv.org/pdf/2607.27768" target="_blank">🔗 pdf</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.28351" target="_blank">Teffic-Audio: Tell Fact from Fiction — General Speech Deepfake Detection</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-07-30</span><span>👥 Wan Lin et al.</span></div>
+      <div class="abstract">General speech deepfake detection system using Conformer-based encoder + attentive statistics pooling. Achieves pooled EER of 1.454% on 14 test sets of Speech-DF-Arena, outperforming all public systems. Trained only with open-source data.</div>
+      <div class="tags"><span class="tag">deepfake detection</span><span class="tag">speech anti-spoofing</span><span class="tag">Conformer</span><span class="tag">Speech-DF-Arena</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.28351" target="_blank">🔗 Arxiv</a> <a href="https://arxiv.org/pdf/2607.28351" target="_blank">🔗 pdf</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.27245" target="_blank">Enhancing Law-Enforcement Audio Transcription: A LoRA-Based Adaptation of Whisper for BWC Footage</a></h4>
+      <div class="meta"><span>📅 2026-07-27</span><span>👥 Vivek Senthil et al.</span></div>
+      <div class="abstract">Adapts OpenAI Whisper for body-worn camera footage transcription using LoRA PEFT. Addresses high-stress police scenarios with sirens/radio interference. Demonstrated on consumer-grade hardware (4GB GPU) with 8-bit quantization and gradient checkpointing, achieving 93.7% lexicon mapping rate.</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Whisper</span><span class="tag">LoRA</span><span class="tag">domain adaptation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.27245" target="_blank">🔗 Arxiv</a> <a href="https://arxiv.org/pdf/2607.27245" target="_blank">🔗 pdf</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.27268" target="_blank">Does EEG Foundation Models Transfer to Speech? A Benchmark on Overt and Imagined Speech Decoding</a></h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Jose A. Gonzalez-Lopez et al.</span></div>
+      <div class="abstract">First systematic benchmark of EEG foundation models (LaBraM, EEGMamba) vs CNN baselines for speech decoding. Finds that large-scale EEG pretraining yields no consistent advantage over 16K-parameter CNN on speech tasks. Submitted to IberSPEECH 2026.</div>
+      <div class="tags"><span class="tag">EEG</span><span class="tag">speech decoding</span><span class="tag">BCI</span><span class="tag">foundation model</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.27268" target="_blank">🔗 Arxiv</a> <a href="https://arxiv.org/pdf/2607.27268" target="_blank">🔗 pdf</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.27454" target="_blank">Improved Robustness in AI-Generated Music Detection</a></h4>
+      <div class="meta"><span>📅 2026-07-29</span><span>👥 Emile Dugelay et al.</span></div>
+      <div class="abstract">Frequency-scaling-invariant detection pipeline for AI-generated music using log-STFT remapping and learned cross-correlation filter. Addresses robustness to speed/pitch manipulation attacks. Accepted at ISMIR 2026.</div>
+      <div class="tags"><span class="tag">AI music detection</span><span class="tag">audio forensics</span><span class="tag">ISMIR 2026</span><span class="tag">robustness</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.27454" target="_blank">🔗 Arxiv</a> <a href="https://arxiv.org/pdf/2607.27454" target="_blank">🔗 pdf</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.27828" target="_blank">CrowdioSet and PaRIRset: Two Datasets Towards Live Music Source Separation</a></h4>
+      <div class="meta"><span>📅 2026-07-30</span><span>👥 Enric Gusó, Xavier Serra</span></div>
+      <div class="abstract">Two novel datasets for live music source separation: CrowdioSet (4800 ambience tracks + synthetic sing-alongs) and PaRIRset (stereo impulse responses from 40 concert venues). Code, weights, and datasets freely available. Accepted at ISMIR 2026.</div>
+      <div class="tags"><span class="tag">music source separation</span><span class="tag">dataset</span><span class="tag">ISMIR 2026</span><span class="tag">open source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.27828" target="_blank">🔗 Arxiv</a> <a href="https://arxiv.org/pdf/2607.27828" target="_blank">🔗 pdf</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.27775" target="_blank">RIPPLE: Generating Multi-Channel Phase, Not Recovering It</a></h4>
+      <div class="meta"><span>📅 2026-07-30</span><span>👥 Jaehyuk Lee et al.</span></div>
+      <div class="abstract">Argues that phase should be generated rather than recovered for multi-channel audio. Reinterprets Griffin-Lim as a phase prior and uses rectified flow for refinement. Demonstrates on ambisonics and seismic cross-station translation, significantly reducing polarization error.</div>
+      <div class="tags"><span class="tag">audio signal processing</span><span class="tag">phase generation</span><span class="tag">multi-channel</span><span class="tag">ambisonics</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.27775" target="_blank">🔗 Arxiv</a> <a href="https://arxiv.org/pdf/2607.27775" target="_blank">🔗 pdf</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2607.27909" target="_blank">Integrating Contextual Embeddings into Evaluation of Expressive MIDI Piano Performances</a></h4>
+      <div class="meta"><span>📅 2026-07-30</span><span>👥 Dmitrii Gavrilev et al.</span></div>
+      <div class="abstract">Reexamines attribute-scoped metrics for MIDI piano evaluation using contextual embeddings from self-supervised symbolic music models (Aria, CLaMP3). Adapts Kernel Audio Distance to symbolic domain. Releases Pereval open-source evaluation library. Accepted at ISMIR 2026.</div>
+      <div class="tags"><span class="tag">music evaluation</span><span class="tag">MIDI</span><span class="tag">symbolic music</span><span class="tag">ISMIR 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2607.27909" target="_blank">🔗 Arxiv</a> <a href="https://arxiv.org/pdf/2607.27909" target="_blank">🔗 pdf</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>全双工多模态交互模型：Interaction Models 与 Thinker–Talker 架构解析（iWiki技术分析）</h4>
+      <p>Thinking Machines Lab 发布的 Interaction Models 论文提出可扩展的人机交互方法，包含 Thinker–Talker 架构。该文档对全双工语音交互模型进行了技术深度解析。发布于8月2日。 <a href="https://iwiki.woa.com/p/4029215196" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>GPT-Live 全面实测对比：语音AI交互范式革命持续发酵</h4>
+      <p>OpenAI 7月8日发布 GPT-Live 后持续引发行业震动，一周内 ChatGPT Voice 用户突破1.5亿。本文深度对比 GPT-Live 与豆包等国产语音AI产品。 <a href="https://www.aitoollab.cn/articles/gpt-live-ai-voice-assistant-comparison-202607/" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-08-03') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
