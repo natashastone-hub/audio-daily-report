@@ -1,0 +1,94 @@
+{
+  "papers": [
+    {
+      "title": "Experience-Calibrated Contrastive Decoding for Mitigating Hallucinations in LM-Based Text-to-Speech",
+      "url": "https://arxiv.org/abs/2608.00722",
+      "date": "2026-08-02",
+      "authors": "Chenlin Liu, Minghui Fang, Zhonghao Bi, Zekai Su, Rong Wang, Jiqing Han",
+      "abstract": "LM-based TTS仍然容易产生偏离目标文本的语音幻觉。现有缓解方法主要依赖架构变更或额外训练，而解码时控制仍未被充分探索。本文提出Experience-Calibrated Contrastive Decoding (ECCD)，一种训练免方法，通过区分文本对齐信息和经验信息，在解码时加强对齐支持同时保留有用的经验信息。在4个模型上，ECCD在所有SeedTTS-Eval设置中降低WER/CER高达55.6%，在24/25个多语言CV3-Eval设置中均有改进，听感测试获得+0.644 CMOS增益且保持强说话人相似度。",
+      "tags": ["TTS", "Hallucination Mitigation", "Contrastive Decoding", "LM-TTS", "Decoding-time Control"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.00722"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.00722"}
+      ]
+    },
+    {
+      "title": "AnyBand: Unified Multi-Bandwidth Speech Extension via Frequency-Aware In-Context Spectral Infilling",
+      "url": "https://arxiv.org/abs/2608.00572",
+      "date": "2026-08-01",
+      "authors": "Authors",
+      "abstract": "带宽扩展(BWE)旨在从带限语音中恢复缺失的高频内容。现有方法通常将BWE公式化为固定或预定义的带宽转换问题，当输入带宽变化时可能需要特定截止频率的模型或重新训练。本文提出AnyBand，一个统一的BWE框架，将带宽扩展重新定义为上下文频谱填充。受prompt-based零样本语音生成启发，AnyBand以观察到的低频频谱作为频域提示条件化高频生成，使用可用频带传递内容、说话人、韵律和频谱包络线索，使单一模型能够处理任意输入带宽。",
+      "tags": ["Bandwidth Extension", "Speech Enhancement", "In-Context Learning", "Unified Framework"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.00572"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.00572"}
+      ]
+    },
+    {
+      "title": "Beyond One-Size-Fits-All: Personalized and Culturally Adaptive Emotional TTS via Interactive Optimization of Individual Emotion Perception Spaces",
+      "url": "https://arxiv.org/abs/2608.00998",
+      "date": "2026-08-02",
+      "authors": "Wangzixi Zhou, Bagus Tris Atmaja, Sakriani Sakti",
+      "abstract": "对话AI的兴起增加了对情感TTS的兴趣。大多数系统依赖离散情感标签，无法捕捉人类情感的细微差别。近期模型采用维度表示如Russell的唤醒-效价(A-V)模型，提供更精细的控制。然而情感感知因个体和文化而异，可能导致建模情感与感知情感之间的不匹配。本文提出个性化和文化自适应情感TTS框架，通过交互式遗传算法对个体A-V感知空间进行迭代优化。在日本、中国和印尼参与者的评估中展示了超越平均A-V值模型的感知对齐效果。已被INTERSPEECH 2026接收。",
+      "tags": ["Emotional TTS", "Personalization", "Cultural Adaptation", "INTERSPEECH 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.00998"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.00998"}
+      ]
+    },
+    {
+      "title": "REIMU: Efficient Heterogeneous Hierarchical Reasoning for SSL-Based Speech Deepfake Detection",
+      "url": "https://arxiv.org/abs/2608.00857",
+      "date": "2026-08-01",
+      "authors": "Kwok-Ho Ng, Tingting Song, Bingwen Feng, Peiya Li",
+      "abstract": "TTS和语音转换系统生成的语音越来越逼真，对媒体完整性和语音认证构成日益增长的挑战。自监督学习(SSL)极大地推进了语音深度伪造检测。本文系统比较了传统单次前向骨干网络、权重共享循环、同构HRM和异构HRM在四种Base级SSL前端上的表现。实验表明循环和层次分解不固有地改善检测，而异构操作分配提供更具竞争力的配置，在使用比基线少10.8%下游参数的同时保持竞争力。",
+      "tags": ["Speech Deepfake Detection", "SSL", "ASVspoof", "Efficient Architecture"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.00857"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.00857"}
+      ]
+    },
+    {
+      "title": "SoniSpeech: A Large-Scale Open-Vocabulary Tri-Modal Dataset for Wearable Silent Speech Interfaces",
+      "url": "https://arxiv.org/abs/2608.00803",
+      "date": "2026-08-01",
+      "authors": "Ruidong Zhang, Jiacheng Liu, François Guimbretière, Cheng Zhang",
+      "abstract": "可穿戴无声语音接口(SSI)受限于小型封闭词汇表。本文提出SoniSpeech，首个大规模开放词汇三模态数据集，使用声学感知眼镜。包含34小时18000条话语，三种同步模态：超声回波剖面、有声语音和正面视频，覆盖有声和无声模式。从SODA对话数据集提取当代会话英语，包含5356个独特词汇和完整音素覆盖。基于CTC的ResNet-34基线在开放词汇无声语音识别上实现26.3% WER，是该任务的第一个基准。数据集已公开。",
+      "tags": ["Silent Speech", "Wearable", "Multi-Modal", "Speech Recognition", "Dataset"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.00803"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.00803"}
+      ]
+    },
+    {
+      "title": "DRONEAUDIONET: Noise Suppression for Drone Audition-based Search and Rescue",
+      "url": "https://arxiv.org/abs/2608.00875",
+      "date": "2026-08-01",
+      "authors": "Chitralekha Gupta, Soundarya Ramesh, Yifei Luo, Suranga Nanayakkara",
+      "abstract": "无人机搭载麦克风实现空中声学场景分析如搜索救援、野生动物监测和工业检测。然而无人机旋翼噪声通常在-10dB以下SNR主导混合信号，使源恢复极具挑战。本文提出DRONEAUDIONET，一种将源分离模型重构为无人机噪声估计器的方法。引入可学习掩码缩放机制允许掩码幅度超过单位值，配合加性残差校正项改善无人机估计和源恢复。在公开无人机听觉数据集上训练评估，并在未见无人机硬件和飞行模式的外域数据集上测试泛化性。结果一致改善了人声分类性能。",
+      "tags": ["Drone Audio", "Noise Suppression", "Search and Rescue", "Source Separation"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.00875"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.00875"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "OpenAI 首次公开 GPT-Live 全双工语音系统架构细节",
+      "url": "https://zglg.work/en/ai/news/2026-08-03-openai-details-gpt-live-realtime-voice-system-full-duplex-model-six-months-of",
+      "summary": "OpenAI 于8月3日首次公开了 GPT-Live 第三代语音系统的详细架构：这是一个在六个月内打造的全双工语音模型。核心技术突破包括：移除了转向检测器（turn detector），实现了真正的全双工架构，可以同时听和说；音频流连续处理，无需等待轮次切换；支持自然的来回对话、主动聆听反馈（如 backchanneling）。这标志着语音 AI 从轮次制到全双工通信的范式转变。"
+    },
+    {
+      "title": "Alibaba 开源语音识别模型 SenseVoice 登顶 HuggingFace Trending",
+      "url": "https://huggingface.co/papers/date/2026-08-03",
+      "summary": "阿里巴巴开源的 SenseVoice 多语言语音识别模型在 HuggingFace Trending 上引发关注，支持50+语言的语音识别和情感识别，在多个基准上达到 SOTA 水平，为多语言 ASR 提供了强大的开源选择。"
+    }
+  ]
+}
