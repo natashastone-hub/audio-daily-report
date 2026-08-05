@@ -1,0 +1,95 @@
+{
+  "papers": [
+    {
+      "title": "SwanTale: Unified Multi-Speaker Speech and Audio Generation for Instruct and Zero-Shot Tasks",
+      "url": "https://arxiv.org/abs/2608.02023",
+      "date": "2026-08-03",
+      "authors": "Yu Zhang et al. (ByteDance)",
+      "abstract": "语音和音频生成在动画配音、有声剧、电影、广告、游戏、播客和短视频制作中有广泛应用。SwanTale 是字节跳动提出的统一多说话人表现力语音和音频生成模型，同时支持指令控制(zero-shot 和 instruct)两类任务。提出 SwanData-Caption 数据管线清洗原始语音音频数据并添加多级标注；引入 SwanVAE 支持高质量多模态音频生成；采用奖励条件质量控制、Engram 条件化和 Unified MoE 进行多任务多模态建模；使用课程学习和 GRPO 后训练逐步增强能力。实验表明 SwanTale 在多项 zero-shot 和 instruct 指标上领先，在两个任务中均获得最佳表现力评分，并支持包含多说话人语音和音频的复杂指令生成。",
+      "tags": ["TTS", "Audio Generation", "Zero-shot", "Instruct", "ByteDance", "Unified Model"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.02023"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.02023"},
+        {"label": "Demo", "url": "https://swanaigc.github.io/#swantale"}
+      ]
+    },
+    {
+      "title": "LS-MOPD: Language-Specialized Multi-Teacher On-Policy Distillation for Multilingual LLM-Based ASR",
+      "url": "https://arxiv.org/abs/2608.03610",
+      "date": "2026-08-04",
+      "authors": "Yuan Xie, Jiaqi Song, Xianliang Wang, Ming Lei, Jie Gao, Jie Wu",
+      "abstract": "现代基于 LLM 的 ASR 系统依赖大规模多语言语料库实现多语言能力，但不同语言间异构的声学、音系和词汇特征会引入优化冲突。本文提出语言专业化多教师在策略蒸馏(LS-MOPD)，通过 RL 独立优化各语言的专家教师，再通过语言路由和 token 级多教师蒸馏将知识整合到通用多语言学生模型中。在中文普通话、方言、粤语和英文基准上，LS-MOPD 显著优于 RL 基线并稳定超越最优 RL 教师组成的经验性能边界。",
+      "tags": ["ASR", "Multilingual", "Knowledge Distillation", "LLM", "RL"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.03610"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.03610"}
+      ]
+    },
+    {
+      "title": "MSA-EchoLite: Echo-Aware Modulation for Compact-Latent Frequency-Time Modeling in Lightweight Acoustic Echo Cancellation",
+      "url": "https://arxiv.org/abs/2608.03650",
+      "date": "2026-08-04",
+      "authors": "Ye Ni, Ruiyu Liang, Qingyun Wang, Kai Xie, Cairong Zou, Björn W. Schuller",
+      "abstract": "现有轻量级 AEC 系统使用 Bark 域 DNN 降噪配合线性 AEC，但下采样层的特征压缩会削弱频时建模能力。本文提出 MSA-EchoLite 轻量级 Bark 域 AEC 框架，含非对称双分支编码器和回声感知频时调制(EAM)模块。EAM 增强后的 Bark 域变体仅需频率域方案近一半的 FLOPs 即可达到其 PESQ 的 99.1%，在 SDR 上甚至超越。整体仅用 0.2M 参数和 100M FLOPs/s 即可超越 SOTA 轻量级 AEC。",
+      "tags": ["Acoustic Echo Cancellation", "Lightweight", "Speech Enhancement", "DNN"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.03650"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.03650"}
+      ]
+    },
+    {
+      "title": "Speaker Verification Under Real Classroom Conditions for English Speech",
+      "url": "https://arxiv.org/abs/2608.03623",
+      "date": "2026-08-04",
+      "authors": "Saba Tabatabaee, Jing Liu, Megh Krishnaswamy, Carol Espy-Wilson",
+      "abstract": "针对真实教室场景的说话人验证(SV)研究，使用包含部分标注的英语教室录音数据集。将 WavLM-TDNN 模型适配用于教室 SV，相比 ECAPA-TDNN 基线实现 23.99% 的 EER 相对降低。研究了两阶段训练策略（先自监督预训练再微调）优于纯 SSL 方案，平均相对 EER 再降低 13.39%。",
+      "tags": ["Speaker Verification", "Classroom", "WavLM", "SSL", "Educational AI"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.03623"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.03623"}
+      ]
+    },
+    {
+      "title": "On the Geometry of Music Bandwidth Extension in Latent Spaces of Audio Codecs",
+      "url": "https://arxiv.org/abs/2608.03721",
+      "date": "2026-08-04",
+      "authors": "Hendrik Vincent Koops, Hao Hao Tan, Elio Quinton",
+      "abstract": "研究了多种 SOTA 条件潜在生成模型与简单算术变换在神经编解码器潜在空间中的音乐带宽扩展性能。发现仅需估算一个传输向量（干净和退化潜在质心之差）并加到退化潜在上，即可获得与大扩散模型有竞争力的恢复性能。表明某些神经编解码器潜在空间存在与音频带宽对齐的结构，复杂条件模型提供的增益有限。已被 ISMIR 2026 接收。",
+      "tags": ["Bandwidth Extension", "Audio Codec", "Latent Space", "Diffusion", "ISMIR 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.03721"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.03721"}
+      ]
+    },
+    {
+      "title": "AI-Based Sound Effect Generation: A Narrative Review of Generative Models Across Input Modalities",
+      "url": "https://arxiv.org/abs/2608.03742",
+      "date": "2026-08-04",
+      "authors": "Sandy Abdo, Bill Kapralos, Priyamvada Tripathi, KC Collins, Adam Dubrowski",
+      "abstract": "系统回顾 30 篇 AI 音效生成相关文献，分析文本、视觉、音频和多模态等不同输入方式对生成质量、可控性和上下文适配性的影响。结果表明多种模型已在多任务上达到 SOTA 性能，但在复杂多事件场景的时间同步、客观指标与人类感知之间的差距以及可控性与多样性权衡等方面仍存在挑战。即将发表于 Springer 书籍 Advances in Global Applied Artificial Intelligence。",
+      "tags": ["Sound Effect Generation", "Survey", "Generative Models", "Multi-Modal"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.03742"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.03742"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "字节跳动发布统一音频生成模型 SwanTale，同时登顶 HuggingFace 热门论文",
+      "url": "https://huggingface.co/papers/2608.02023",
+      "summary": "字节跳动 SwanAIGC 团队于 8 月 3 日发布 SwanTale，一个统一的多说话人语音和音频生成模型，同时支持指令控制(instruct)和零样本(zero-shot)生成。该模型集成 SwanVAE 高质量多模态音频生成、Unified MoE 多任务建模、GRPO 后训练等先进技术，在多项指标上达到 SOTA。已在 HuggingFace Daily Papers 获得高热度，标志着统一语音+音效+音乐生成的重要里程碑。"
+    },
+    {
+      "title": "ACL 2026 获奖：腾讯 PCG 联合深圳河套学院获全双工语音大模型杰出论文奖",
+      "url": "https://km.woa.com/articles/show/665955",
+      "summary": "腾讯 PCG 技术线 AI 创新应用中心联合深圳河套学院张民教授团队，凭借全双工语音大模型研究成果《Hierarchical Acoustic-Semantic Modeling: Modality Separation and Semantic Coherence for Full-Duplex SLMs》获得 ACL 2026 杰出论文奖。该研究聚焦全双工语音对话系统的模态分离和语义连贯性建模，为语音 AI 的全双工交互提供了理论基础。"
+    }
+  ]
+}
