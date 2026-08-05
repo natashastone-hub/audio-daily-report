@@ -1,0 +1,116 @@
+{
+  "papers": [
+    {
+      "title": "GROW: Group-Relative Advantage-Weighted On-Policy Reinforcement Learning of Autoregressive-Diffusion Text-to-Speech Model",
+      "url": "https://arxiv.org/abs/2608.03215",
+      "date": "2026-08-04",
+      "authors": "Guanrou Yang, Tian Tan, Qian Chen, Ziyang Ma, Yakun Song, Zhikang Niu, Qi Chen, Wenming Tu, Haitao Li, Shan Yang, Xie Chen",
+      "abstract": "针对流匹配 TTS 的强化学习因确定性 ODE 采样而复杂。GROW 提出组相对优势加权在策略 RL 方法，直接作用于标准流匹配目标。对每组 prompt 采样一组在策略语音，分别标准化可懂度和说话人相似度 reward，结合重加权流匹配回归，并使用 Wasserstein-2 速度惩罚锚定预训练参考。在 DiTAR 上评估，GROW 将平均 WER 从 2.016 降至 1.558，说话人相似度从 0.676 提升至 0.715，同时保持 UTMOS。10-NFE 训练/32-NFE 评估比 DiTAR-GRPO 快 2.9x。代码和模型将开源。",
+      "tags": ["TTS", "Reinforcement Learning", "Flow Matching", "DiTAR", "RLHF", "Open Source"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.03215"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.03215"}
+      ]
+    },
+    {
+      "title": "DAIEN-TTS: Towards Real-world Environment-aware Zero-shot Text-to-Speech Synthesis via Disentangled Audio Infilling",
+      "url": "https://arxiv.org/abs/2608.03011",
+      "date": "2026-08-04",
+      "authors": "Ye-Xin Lu, Xin Wang, Yang Ai, Hui-Peng Du, Zhen-Hua Ling, Junichi Yamagishi",
+      "abstract": "当前零样本 TTS 系统通常剥离或纠缠声学环境特征，限制了真实场景应用。DAIEN-TTS 提出环境感知零样本 TTS 框架，解耦并联合建模语音、背景噪声和混响三个组件，通过独立的说话人和环境 prompt 实现对音色和声学环境的独立控制。基于流匹配的 F5-TTS，使用语音-环境分离模块将环境语音分解为语音、噪声和混响分量。三重 CFG 实现精细控制，SNR 自适应策略将合成语音与环境 prompt 对齐。实验表明可生成高自然度、强说话人相似度的环境化个性语音。",
+      "tags": ["TTS", "Environment-aware", "Zero-shot", "Flow Matching", "Disentanglement", "NII", "USTC"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.03011"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.03011"}
+      ]
+    },
+    {
+      "title": "ParaIntent + ALPO: Towards More Expressive Spoken LLMs with Fine-Grained Intent Benchmarking and Acoustic-Lexical Decoupled Policy Optimization",
+      "url": "https://arxiv.org/abs/2608.03054",
+      "date": "2026-08-04",
+      "authors": "Xiang Lin, Tian-Hao Zhang, Chunfeng Wang, Zhou Pan, Kun Zhan, Liang Li",
+      "abstract": "语音情感对话要求模型理解用户口语输入并生成语义恰当且情感表达丰富的回复。本文推出 ParaIntent（中文 14 类意图基准，平衡显式和隐式样本），并提出 ALPO（声学-词汇解耦策略优化），在统一 rollout 内计算独立的文本和声学优势并路由到对应 token。在相同 reward 函数和训练预算下，ALPO 在多数自动指标上超越标准 GRPO，在合成和真人测试集上情感表达力提升尤为明显。",
+      "tags": ["Spoken LLM", "Emotional TTS", "RL", "GRPO", "Chinese", "ParaIntent"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.03054"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.03054"}
+      ]
+    },
+    {
+      "title": "CLASVS: Continuous-Latent Autoregression for Melody-Preserving Lyric Editing in Singing Voice Synthesis",
+      "url": "https://arxiv.org/abs/2608.03253",
+      "date": "2026-08-04",
+      "authors": "Yizhong Geng, Tian-Hao Zhang, Chunfeng Wang, Wenxin Fu, Yingming Gao, Ruimin Wang, Zhou Pan, Kun Zhan, Liang Li, Ya Li",
+      "abstract": "参考条件旋律保持歌词编辑需替换词语同时保留节奏、歌手身份和自然度。连续潜在自回归可避免离散码本限制。CLASVS 引入 SCT 路由机制保持目标歌词和参考旋律控制持久化，将语义反馈传回因果规划器，限制前一个潜在块到局部 Transition 中。在两个中文基准上比离散 AR Vevo2 改进所有四种编辑操作，macro-PER 降低 46.2%，同时保持旋律、歌手相似度和感知质量。",
+      "tags": ["Singing Voice Synthesis", "Lyric Editing", "Continuous AR", "CLASVS", "Chinese"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.03253"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.03253"},
+        {"label": "Demo", "url": "https://piedpiperg.github.io/Liyric-SVS/"}
+      ]
+    },
+    {
+      "title": "dots.tts.edit: Precisely Controlled Speech Editing with a Continuous Autoregressive Model",
+      "url": "https://arxiv.org/abs/2608.02673",
+      "date": "2026-08-04",
+      "authors": "Hankun Wang, Bohan Li, Shi Lian, Xiaoyu Gu, Jing Peng, Da Zheng, Colin Zhang, Kai Yu",
+      "abstract": "语音编辑需要精确控制编辑内容和位置。dots.tts.edit 采用基于转录本锚定的结构化编辑指令（XML 标签风格），精确定义操作类型和目标区间。基于连续自回归 dots.tts 基础模型，涵盖四种编辑控制：文本编辑、情感编辑、韵律编辑和停顿编辑。推出 doteBench 双语评估套件。实验表明在五种编辑类别中整体指令跟随能力和局部保留度领先，零样本 TTS 的 WER 和说话人相似度与基础模型差异可忽略。代码和模型即将发布。",
+      "tags": ["Speech Editing", "TTS", "Continuous AR", "dots.tts", "Bilingual"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.02673"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.02673"}
+      ]
+    },
+    {
+      "title": "Identity-Faithful Audio-Visual Target Speaker Extraction with QIANGDA and VOXBLINK2-AVSE",
+      "url": "https://arxiv.org/abs/2608.03964",
+      "date": "2026-08-04",
+      "authors": "Zhan Jin, Juan Liu, Ming Li",
+      "abstract": "视听目标说话人提取应返回视频指示的说话人，但分离器可能忽略视觉线索而重复输出声学主导的声音。QIANGDA 是一个中文 AV-TSE 基准，包含 77 个场景、6,038 个评估混合和 12,076 条目标说话人记录。VOXBLINK2-AVSE 包含 28,421 身份、766 小时语音的同步音频-唇部 ROI 对。使用冻结 AV-HuBERT 特征和目标条件训练，联合 Qwen3-ASR-1.7B CER 和 WeSpeaker ResNet34 评估。最佳存档检查点获得 0.2261 CER 和 82.22% 严格输出正确率。",
+      "tags": ["Target Speaker Extraction", "Audio-Visual", "AV-HuBERT", "AV-TSE", "Chinese"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.03964"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.03964"}
+      ]
+    },
+    {
+      "title": "Equivariant Music Transformer",
+      "url": "https://arxiv.org/abs/2608.03920",
+      "date": "2026-08-04",
+      "authors": "Zixun Guo, Simon Dixon",
+      "abstract": "人类可以识别时间偏移或音高移调后的音乐段落，但标准音乐 Transformer 将这些输入映射到不相关的表示。本文提出等变音乐 Transformer (EMT)，通过自蒸馏联合优化 next-token prediction 和对等变正则化损失。实验表明附加等变损失作为有益正则化，同时改进预测并产生等变潜在表示。代码、权重和演示已上线。",
+      "tags": ["Music Generation", "Transformer", "Equivariance", "Self-distillation", "ISMIR"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.03920"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.03920"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "腾讯混元发布新一代语音识别模型 Hy ASR 3.0 preview",
+      "url": "https://news.qq.com/rain/a/20260804A0C9SH00",
+      "summary": "8月4日，腾讯混元正式发布 Hy ASR 3.0 preview，基于最新一代大语言模型 Hy3 的语言理解能力，融合高精度语音识别与深度语义理解。新模型在通用识别精度、方言覆盖、复杂声场鲁棒性方面全面升级。已在元宝首发上线，WorkBuddy 等更多司内业务陆续接入中。",
+      "tags": ["ASR", "Tencent", "Hunyuan", "Hy3", "Chinese", "Product Launch"]
+    },
+    {
+      "title": "OpenAI 发布 GPT-Live 全双工语音系统技术详情：第三代语音架构揭秘",
+      "url": "https://zglg.work/en/ai/news/2026-08-03-openai-details-gpt-live-realtime-voice-system-full-duplex-model-six-months-of",
+      "summary": "8月3日，OpenAI 发布 GPT-Live 技术深度解析文章，详细介绍了其第三代全双工语音系统的架构设计。GPT-Live 在 6 个月内完成从轮次制到全双工架构的转型，核心创新包括前端全双工模型 + 后台调用 GPT-5.5 的分层架构、WARP 协议解决对话延迟。GPT-Live 用户已突破 1.5 亿，成为语音 AI 交互范式的重要里程碑。",
+      "tags": ["OpenAI", "GPT-Live", "Full-duplex", "Voice AI", "Architecture", "ChatGPT"]
+    },
+    {
+      "title": "阿里云发布 Qwen-Audio-3.0-TTS 语音合成大模型：从'能说话'到'会表达'",
+      "url": "https://www.jzl.com/industry-news/qwen-audio-3-0-tts",
+      "summary": "7月20日，阿里巴巴通义千问团队正式发布新一代实时语音合成大模型 Qwen-Audio-3.0-TTS，标志着 AI 语音合成从基础的'能说话'阶段迈向具有情感与表现力的'会表达'新阶段。首包延迟大幅优化。",
+      "tags": ["TTS", "Alibaba", "Qwen", "Speech Synthesis", "Real-time", "Product Launch"]
+    }
+  ]
+}
