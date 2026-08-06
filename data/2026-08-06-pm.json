@@ -1,0 +1,56 @@
+{
+  "papers": [
+    {
+      "title": "Teaching Nemotron Greek: Mining a Corpus, Adapting Retrieval, and Grounding Generation for Modern Greek",
+      "url": "https://arxiv.org/abs/2608.05138",
+      "date": "2026-08-05",
+      "authors": "NVIDIA",
+      "abstract": "端到端适配 Nemotron 检索堆栈用于现代希腊语，包括语料挖掘、合成监督、检索模型训练、重排序器适配和阅读器微调。发布 HERA 基准。虽挂 eess.AS 标签，但实质为多语言 RAG 系统，音频相关度较低。",
+      "tags": ["RAG", "Multilingual", "Greek", "Nemotron"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.05138"}]
+    },
+    {
+      "title": "Helping Music Co-Creation Agents 'Listen' Well: Hierarchical Self-Supervised World Models for Understanding and Generation",
+      "url": "https://arxiv.org/abs/2608.04378",
+      "date": "2026-08-05",
+      "authors": "Scott H. Hawley",
+      "abstract": "提出层次化自监督「世界模型」用于符号音乐理解与生成。2.55M 参数 Swin V2 编码器，结合条件流匹配解码器，支持实时交互式音乐共同创作。可在 CPU 上 2.8 秒内生成建议。",
+      "tags": ["Music Generation", "World Model", "Self-Supervised", "Co-Creation"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.04378"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "🔥 字节跳动发布 SeedRealtime：业界首个原生音视频全双工大模型",
+      "url": "https://www.aitoollab.cn/articles/seedrealtime-bytedance-audio-video-full-duplex-2026/",
+      "summary": "2026年8月5日，字节跳动 Seed 团队发布原生音视频全双工大模型 SeedRealtime，并在豆包 App 全量上线。这是业界首个规模化落地的音视频全双工技术产品。模型用统一端到端架构原生融合音频、视频与文本，摆脱了传统的 ASR+视觉+LLM+TTS+VAD 级联流水线。官方人工评测显示对话节奏问题减少约50%。更关键的是 AI 学会了「主动开口」——持续监测画面，认出文物、纠正操作错误、在重要时刻主动提醒。字节早在4月已上线纯音频全双工 Seeduplex，比 OpenAI GPT-Live 早三个月。"
+    },
+    {
+      "title": "📊 四款实时交互语音 AI 模型横评发布",
+      "url": "https://www.aitoollab.cn/articles/seedrealtime-bytedance-audio-video-full-duplex-2026/",
+      "summary": "2026年下半年，实时交互赛道形成四条路线：字节 SeedRealtime（音视频原生全双工+主动提醒）、OpenAI GPT-Live（音频全双工+后台委派推理，尚无视觉）、Google Gemini Live（摄像头+屏幕共享+低延迟轮次制）、Claude 语音模式（轮次制可切换模型+Gmail/Slack 集成）。四家押注方向完全不同：字节押「原生融合+主动性+规模化落地」，OpenAI 押「对话智能」，Google 押「感知广度」，Anthropic 押「深度与工具」。"
+    },
+    {
+      "title": "Google Gemma Translator：$80 计算机即可运行离线语音翻译",
+      "url": "https://alphasignal.ai/news/google-s-gemma-translator-runs-offline-voice-translation-on-an-80-computer",
+      "summary": "Google 发布 Gemma Translator，基于 Gemma 模型系列的开源离线语音翻译系统，仅需 $80 的计算机即可运行。支持端侧实时语音翻译，无需联网，为低资源语言和设备友好的语音翻译提供了突破性方案。这标志着端侧语音翻译进入「人人可负担」的时代。"
+    },
+    {
+      "title": "GPT-Live 全双工语音系统深度技术解析文章发布",
+      "url": "https://www.happyrock.cloud/zh-cn/blog/2026-08-05_openai_gpt_live_full_duplex_voice_deep_dive_speech_reasoning_decoupling/",
+      "summary": "8月5日发布的技术深度解析文章，详细拆解 OpenAI GPT-Live 全双工语音系统的核心架构：语音层与推理层完全解耦，前台语音流实时处理（听+说+打断），后台 GPT-5.5 异步委派深度推理。这种「前台轻量语音 + 后台重量推理」的双层架构成为目前全双工语音的主力范式。"
+    },
+    {
+      "title": "腾讯混元 Hy ASR 3.0 preview 语音识别模型（技术分析跟进）",
+      "url": "https://zhuanlan.zhihu.com/p/2068271144545919254",
+      "summary": "8月6日技术社区发布 Hy ASR 3.0 深度解读。基于 Hy3 大语言模型的语言理解能力，融合高精度语音识别与深度语义理解，在通用识别、上下文感知、方言覆盖和多场景鲁棒性上全面提升。被定位为范式跃迁——将语音识别从「逐字转写、单点优化」推进到「理解语境、兼顾语义」。"
+    },
+    {
+      "title": "京东开源实时流式视频编辑模型 JoyAI-Video-Edit",
+      "url": "https://www.aitoollab.cn/articles/seedrealtime-bytedance-audio-video-full-duplex-2026/",
+      "summary": "与 SeedRealtime 同一天（8月5日），京东宣布开源自研实时流式视频编辑模型 JoyAI-Video-Edit，支持用户边看视频边修改人物和场景。两条新闻共同指向 2026 下半年的关键词从「生成」转向「实时」。上半年核心是参数规模与生成质量，下半年核心变为流式交互与即时反应。"
+    }
+  ]
+}
