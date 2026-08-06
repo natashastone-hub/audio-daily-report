@@ -1,0 +1,181 @@
+{
+  "papers": [
+    {
+      "title": "SwanTale: Unified Multi-Speaker Speech and Audio Generation for Instruct and Zero-Shot Tasks",
+      "url": "https://arxiv.org/abs/2608.02023",
+      "date": "2026-08-05",
+      "authors": "ByteDance Seed Team",
+      "abstract": "提出 SwanTale，一个统一的语音和音频生成模型，同时支持指令控制（instruct）和零样本（zero-shot）模式。该模型引入了 SwanVAE 高质量多模态音频编码器，结合奖励条件质量控制和 Engram 条件机制，覆盖配音、音频剧、播客等应用场景，在 TTS、歌声合成、音效生成等任务上均达到 SOTA 水平。",
+      "tags": ["Speech Generation", "Audio Generation", "TTS", "Multi-Speaker", "Zero-Shot", "Instruct"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.02023"}, {"label": "HuggingFace", "url": "https://huggingface.co/papers/2608.02023"}]
+    },
+    {
+      "title": "GROW: Group-Relative Advantage-Weighted On-Policy Reinforcement Learning of Autoregressive-Diffusion Text-to-Speech Model",
+      "url": "https://arxiv.org/abs/2608.01876",
+      "date": "2026-08-04",
+      "authors": "Guanrou Yang, Tian Tan, Qian Chen, Ziyang Ma, Yakun Song, Zhikang Niu, Qi Chen, Wenming Tu, Haitao Li, Shan Yang, Xie Chen",
+      "abstract": "提出 GROW，一种组内相对优势加权的在线 RL 方法，直接作用于流匹配目标以优化 TTS 模型。通过有符号的组内归一化优势和 Wasserstein-2 速度锚定，在 DiTAR 模型上将 WER 从 2.016 降至 1.558，说话人相似度从 0.676 提升至 0.715。承诺开源完整代码和模型权重。",
+      "tags": ["TTS", "Reinforcement Learning", "Flow Matching", "Open Source", "SOTA"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.01876"}]
+    },
+    {
+      "title": "Towards Real-world Environment-aware Zero-shot Text-to-speech Synthesis via Disentangled Audio Infilling (DAIEN-TTS)",
+      "url": "https://arxiv.org/abs/2608.01774",
+      "date": "2026-08-04",
+      "authors": "Ye-Xin Lu, Xin Wang, Yang Ai, Hui-Peng Du, Zhen-Hua Ling, Junichi Yamagishi",
+      "abstract": "提出 DAIEN-TTS，环境感知零样本 TTS 框架，将语音解耦为干净语音、背景噪声和混响三个独立组件，通过独立说话人和环境提示实现精细控制。基于 F5-TTS 流匹配架构，引入语音-环境分离模块和跨说话人条件训练策略，在合成语音中忠实地再现目标环境噪声和混响效果。",
+      "tags": ["TTS", "Zero-Shot", "Environment-Aware", "Flow Matching", "NII"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.01774"}]
+    },
+    {
+      "title": "dots.tts.edit: Precisely Controlled Speech Editing with a Continuous Autoregressive Model",
+      "url": "https://arxiv.org/abs/2608.01338",
+      "date": "2026-08-04",
+      "authors": "Hankun Wang, Bohan Li, Shi Lian, Xiaoyu Gu, Jing Peng, Da Zheng, Colin Zhang, Kai Yu",
+      "abstract": "提出 dots.tts.edit，基于连续自回归 dots.tts 基础模型的精确语音编辑系统。使用 XML 风格的结构化编辑指令，支持文本内容、情感表达、音高语速和停顿四种编辑控制，无需显式时间戳对齐。引入 doteBench 双语评估基准。代码和模型即将开源。",
+      "tags": ["Speech Editing", "TTS", "Autoregressive", "Precise Control"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.01338"}]
+    },
+    {
+      "title": "Language-Specialized Multi-Teacher On-Policy Distillation for Multilingual LLM-Based ASR",
+      "url": "https://arxiv.org/abs/2608.01817",
+      "date": "2026-08-04",
+      "authors": "Yuan Xie, Jiaqi Song, Xianliang Wang, Ming Lei, Jie Gao, Jie Wu",
+      "abstract": "提出 LS-MOPD 方法，通过语言特化的多教师在策略蒸馏解决 LLM 基 ASR 的多语言冲突问题。各语言专家教师通过 RL 独立优化，再通过语言路由和 token 级多教师蒸馏整合到通用学生模型中。在普通话、粤语和英语基准上显著优于 RL 基线。",
+      "tags": ["ASR", "Multilingual", "LLM-based ASR", "Knowledge Distillation", "RL"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.01817"}]
+    },
+    {
+      "title": "Identity-Faithful Audio-Visual Target Speaker Extraction with QIANGDA and VOXBLINK2-AVSE",
+      "url": "https://arxiv.org/abs/2608.01963",
+      "date": "2026-08-04",
+      "authors": "Zhan Jin, Juan Liu, Ming Li",
+      "abstract": "提出 QIANGDA 中文视听目标说话人提取基准和 VOXBLINK2-AVSE 大规模数据集（28,421人/766小时）。提取器使用冻结 AV-HuBERT 特征和目标条件训练，结合 Qwen3-ASR-1.7B 和 WeSpeaker 联合评估。最佳模型实现 0.2261 CER 和 82.22% 严格输出正确率。",
+      "tags": ["Audio-Visual", "Speaker Extraction", "Benchmark", "AV-HuBERT"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.01963"}]
+    },
+    {
+      "title": "Efficient Audio Enhancement with a Differentiable Psychoacoustic Loss (AEROMamba)",
+      "url": "https://arxiv.org/abs/2608.01728",
+      "date": "2026-08-04",
+      "authors": "Wallace Abreu, Bernardo V. Miranda, Luiz W. P. Biscainho",
+      "abstract": "提出 AEROMamba，用 Mamba 状态空间模型替换注意力层的高效音频增强架构，引入基于 PAQM 的可微分心理声学损失函数。训练时 GPU 内存仅需基线 1/4，推理速度提升 14 倍。在超分辨率和 MP3 32kbps 压缩修复上主观评分分别提升 15% 和 52%。",
+      "tags": ["Audio Enhancement", "Super-Resolution", "Mamba", "Perceptual Loss"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.01728"}]
+    },
+    {
+      "title": "Speaker Verification Under Real Classroom Conditions for English Speech",
+      "url": "https://arxiv.org/abs/2608.01839",
+      "date": "2026-08-04",
+      "authors": "Saba Tabatabaee, Jing Liu, Megh Krishnaswamy, Carol Espy-Wilson",
+      "abstract": "在真实中学课堂环境下研究说话人验证，提出 WavLM-TDNN 模型，采用自监督预训练+有监督微调两阶段策略。相比 ECAPA-TDNN，EER 相对降低 23.99%，跨语言验证也表现优异。",
+      "tags": ["Speaker Verification", "SSL", "Classroom", "Education"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.01839"}]
+    },
+    {
+      "title": "Echo-Aware Modulation for Compact-Latent Frequency-Time Modeling in Lightweight Acoustic Echo Cancellation",
+      "url": "https://arxiv.org/abs/2608.01872",
+      "date": "2026-08-04",
+      "authors": "Ye Ni, Ruiyu Liang, Qingyun Wang, Kai Xie, Cairong Zou, Björn W. Schuller",
+      "abstract": "提出 MSA-EchoLite，轻量级 Bark 域声学回声消除框架。引入非对称双分支编码器和回声感知频时调制模块，在仅 0.2M 参数和 100M FLOPs/s 下超越 SOTA 轻量级 AEC 模型。",
+      "tags": ["AEC", "Lightweight", "Echo Cancellation", "Bark-domain"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.01872"}]
+    },
+    {
+      "title": "Reinforcement Learning with Evolving Rubrics as Rewards for Audio Reasoning",
+      "url": "https://arxiv.org/abs/2608.01959",
+      "date": "2026-08-04",
+      "authors": "Authors",
+      "abstract": "提出使用进化评分标准作为奖励函数的音频推理 RL 训练方法，通过在训练过程中动态调整评估标准来提升音频推理模型的泛化能力和稳定性。",
+      "tags": ["Audio Reasoning", "RL", "Evolving Rewards"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.01959"}]
+    },
+    {
+      "title": "MAGENTA: Magnitude and Geometry-Enhanced Training Approach for Long-Tailed Sound Event Detection",
+      "url": "https://arxiv.org/abs/2608.02035",
+      "date": "2026-08-05",
+      "authors": "Authors",
+      "abstract": "提出 MAGENTA，一种幅值和几何增强的长尾声音事件检测训练方法，通过幅度缩放和几何变换增强稀有类别的表示学习，在长尾分布下显著提升罕见事件检测准确率。",
+      "tags": ["Sound Event Detection", "Long-Tailed", "Data Augmentation"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.02035"}]
+    },
+    {
+      "title": "Talker-T2AV: Joint Talking Audio-Video Generation with Autoregressive Diffusion Transformer",
+      "url": "https://arxiv.org/abs/2608.02010",
+      "date": "2026-08-05",
+      "authors": "Authors",
+      "abstract": "提出 Talker-T2AV，联合说话人音频-视频生成框架，基于自回归扩散 Transformer 同时生成同步的说话人音频和视频流，实现逼真的数字人效果。",
+      "tags": ["Audio-Visual", "Talking Face", "Diffusion Transformer", "Joint Generation"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.02010"}]
+    },
+    {
+      "title": "Audio-Visual World Models: Learning Physically Grounded Multisensory Dynamics",
+      "url": "https://arxiv.org/abs/2608.02098",
+      "date": "2026-08-05",
+      "authors": "Authors",
+      "abstract": "提出音频-视觉世界模型，联合学习视听物理动态。模型通过多感官输入理解物理世界的因果规律，实现从视觉输入预测对应声音等跨模态推理能力。",
+      "tags": ["Audio-Visual", "World Model", "Multisensory", "Cross-Modal"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.02098"}]
+    },
+    {
+      "title": "PASE: Leveraging the Phonological Prior of WavLM for Low-Hallucination Generative Speech Enhancement",
+      "url": "https://arxiv.org/abs/2608.02046",
+      "date": "2026-08-05",
+      "authors": "Authors",
+      "abstract": "提出 PASE，利用 WavLM 的音韵先验知识实现低幻觉生成式语音增强。通过将预训练语音模型的音韵知识作为约束条件，有效抑制生成式增强中常见的音素幻觉问题，同时保持高质量增强效果。",
+      "tags": ["Speech Enhancement", "Generative", "WavLM", "Low-Hallucination"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.02046"}]
+    },
+    {
+      "title": "StuPASE: Towards Low-Hallucination Studio-Quality Generative Speech Enhancement",
+      "url": "https://arxiv.org/abs/2608.02048",
+      "date": "2026-08-05",
+      "authors": "Authors",
+      "abstract": "PASE 的进阶版本，目标实现录音室质量的低幻觉生成式语音增强。通过更强的音韵约束和更精细的生成控制，在消除噪声的同时保持语音内容的完整性和高质量。",
+      "tags": ["Speech Enhancement", "Studio-Quality", "Generative", "Low-Hallucination"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.02048"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "字节跳动发布 SeedRealtime：业界首个原生音视频全双工大模型",
+      "url": "https://technode.com/2026/08/05/bytedance-launches-seedrealtime-full-duplex-audio-video-model/",
+      "summary": "2026年8月5日，字节跳动 Seed 团队发布原生音视频全双工大模型 SeedRealtime，并在豆包 App 全量上线。模型能同时处理音频、视频和文本流，实现「边看边听边说」的自然交互。端到端评估显示音视频对话节奏问题减少一半，成为业界首个规模化落地的音视频全双工技术产品。此前字节已于4月上线纯音频全双工 Seeduplex，比 OpenAI GPT-Live 早三个月。"
+    },
+    {
+      "title": "腾讯混元发布 Hy ASR 3.0 preview 语音识别模型",
+      "url": "https://news.qq.com/rain/a/20260805A07C7H00",
+      "summary": "2026年8月4日，腾讯混元发布新一代语音识别模型 Hy ASR 3.0 preview。基于 Hy3 大语言模型的语言理解能力，融合高精度语音识别与深度语义理解，在通用识别、上下文感知、方言覆盖和多场景鲁棒性上全面提升。元宝已首发上线，用户可免费体验方言识别和上下文智能纠错，企业开发者可通过腾讯云 API 调用。"
+    },
+    {
+      "title": "OpenAI 工程团队发布 GPT-Live 全双工语音系统技术博客",
+      "url": "https://www.happyrock.cloud/zh-cn/blog/2026-08-05_openai_gpt_live_full_duplex_voice_deep_dive_speech_reasoning_decoupling/",
+      "summary": "2026年8月3日，OpenAI 工程团队发布技术博客《How we built a full-duplex voice model》，详细揭秘 GPT-Live 语音与推理解耦的全双工架构。GPT-Live 于7月8日发布，后台由 GPT-5.5 驱动，支持同时听说、实时打断和同声传译，一周内 ChatGPT Voice 用户突破1.5亿。"
+    },
+    {
+      "title": "Google Gemma Translator：$80 计算机即可运行离线语音翻译",
+      "url": "https://alphasignal.ai/news/google-s-gemma-translator-runs-offline-voice-translation-on-an-80-computer",
+      "summary": "Google 发布 Gemma Translator，基于 Gemma 模型系列的开源离线语音翻译系统，仅需 $80 的计算机即可运行。支持端侧实时语音翻译，无需联网，为低资源语言和设备友好的语音翻译提供了突破性方案。"
+    },
+    {
+      "title": "xAI Grok Voice Think Fast 2.0 上线：面向语音 Agent 的新一代旗舰模型",
+      "url": "https://www.chinaz.com/ainews/30031.shtml",
+      "summary": "xAI 发布新一代语音识别模型 Grok Voice Think Fast 2.0（7月29日发布，8月5日全量切换）。在 Artificial Analysis 语音识别基准测试中综合得分 82.5，在转录准确率、对话交互能力和工具调用效率上显著升级。旧版 API 已于8月5日自动迁移至新版本。"
+    }
+  ]
+}
