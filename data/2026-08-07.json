@@ -1,0 +1,106 @@
+{
+  "papers": [
+    {
+      "title": "HyPASE: Hyperbolic Geometry for Parameter-Efficient Speech Emotion Fine-Tuning Framework for Large Audio-Language Models",
+      "url": "https://arxiv.org/abs/2608.04351",
+      "date": "2026-08-06",
+      "authors": "Tian Jin et al.",
+      "abstract": "提出 HyPASE，基于双曲几何的参数高效微调框架用于大规模音频语言模型的语音情感识别。利用 Poincaré 球模型，以双曲半径显式表示粒度级别，包含 Hyperbolic Geometric Adapter 和 Emotion-aware Multi-capacity Cross-modal Aggregator 两个核心组件。在 MELD 和 IEMOCAP 基准上优于欧式空间 PEFT 基线，特别在少数类情感识别和大规模零样本跨数据集泛化上表现突出。",
+      "tags": ["Speech Emotion Recognition", "LALM", "PEFT", "Hyperbolic Geometry", "Parameter-Efficient"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.04351"}]
+    },
+    {
+      "title": "Learning Music Style for Piano Arrangement Through Cross-Modal Bootstrapping",
+      "url": "https://arxiv.org/abs/2608.03050",
+      "date": "2026-08-05",
+      "authors": "Jingwei Zhao et al.",
+      "abstract": "提出跨模态框架，从原始音频中学习隐式音乐风格并应用于符号音乐生成。借鉴 BLIP-2 思想，使用 Q-Former 从预训练音频语言模型中提取风格表征，条件控制符号音乐 LM 生成钢琴编曲。两阶段训练：对比学习对齐听觉风格与符号表达，生成建模完成编曲。在钢琴翻唱生成、风格迁移和音频到 MIDI 检索上取得显著提升。被 ISMIR 2026 接收。",
+      "tags": ["Music Generation", "Cross-Modal", "Style Transfer", "Piano Arrangement", "ISMIR"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.03050"}]
+    },
+    {
+      "title": "DiVers: Towards Robust Version Identification in the Wild — A Dataset, Benchmark, and Fine-Tuning Study",
+      "url": "https://arxiv.org/abs/2608.04543",
+      "date": "2026-08-06",
+      "authors": "Simon Hachmeier et al.",
+      "abstract": "提出 DiVers，大规模音乐版本识别数据集，包含超过 110 万音乐版本，与 Discogs-VI-YT、SHS100K、Da-TACOS 兼容。提供自动标注标签（器乐、现场等）和音乐存在性预测。在含噪声的多样声学输入上显著提升鲁棒性，在录音室质量基准上保持稳定性能。被 ISMIR 2026 接收。",
+      "tags": ["Version Identification", "Music Information Retrieval", "Dataset", "Benchmark", "ISMIR"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.04543"}]
+    },
+    {
+      "title": "Helping Music Co-Creation Agents 'Listen' Well: Hierarchical Self-Supervised World Models for Understanding and Generation",
+      "url": "https://arxiv.org/abs/2608.04378",
+      "date": "2026-08-06",
+      "authors": "Scott Hawley et al.",
+      "abstract": "提出分层自监督音乐世界模型，基于 Swin V2 编码器和 JEPA 风格目标（音高/时移等变性、掩码嵌入预测、分布正则化），无需标签和乐理词汇。不同层次编码可解码音乐的不同时间尺度属性：粗粒度层解码乐句边界，细粒度层解码音符密度与和声细节。配合条件流匹配模型实现像素级重建（F1 0.996），支持掩码修复。CPU 上 2.8 秒生成建议，演示了实时交互原型。",
+      "tags": ["Music Co-Creation", "World Model", "Self-Supervised", "Flow Matching", "Human-AI Collaboration"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.04378"}, {"label": "Demo", "url": "https://drscotthawley-midi-rae-jepa-son.hf.space/"}]
+    },
+    {
+      "title": "Deep Learning for Real-Time Sound Order Recognition in Human-Robot Interaction",
+      "url": "https://arxiv.org/abs/2608.04072",
+      "date": "2026-08-05",
+      "authors": "Rezaul Tutul et al.",
+      "abstract": "提出深度学习框架用于实时声音顺序识别，服务于人机交互应用（如第一响应者检测系统）。使用多分支 CNN 处理 Mel 频谱图、MFCC 和 STFT 特征，以注意力融合机制强调关键时间线索。平衡重叠下 99% 准确率，幅度变化下 91%，未见测试数据上 74%。报告了实时延迟基准。",
+      "tags": ["Sound Order Recognition", "HRI", "CNN", "Real-Time", "Attention"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.04072"}]
+    },
+    {
+      "title": "AEROMamba: Efficient Audio Enhancement with a Differentiable Psychoacoustic Loss",
+      "url": "https://arxiv.org/abs/2608.02918",
+      "date": "2026-08-05",
+      "authors": "Wallace Abreu, Bernardo V. Miranda, Luiz W. P. Biscainho",
+      "abstract": "提出 AEROMamba，用 Mamba 状态空间模型替换注意力层的高效音频增强架构，引入基于 PAQM 的可微分心理声学损失函数。训练时 GPU 内存仅需基线 1/4，推理速度提升 14 倍。超分辨率主观评分提升 15%，MP3 32kbps 修复质量提升 52%。已被 JAES 接收发表。",
+      "tags": ["Audio Enhancement", "Super-Resolution", "Mamba", "Psychoacoustic Loss", "JAES"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.02918"}]
+    },
+    {
+      "title": "Precisely Controlled Speech Editing with a Continuous Autoregressive Model (dots.tts.edit)",
+      "url": "https://arxiv.org/abs/2608.02673",
+      "date": "2026-08-05",
+      "authors": "Hankun Wang, Bohan Li, Shi Lian, Xiaoyu Gu, Jing Peng, Da Zheng, Colin Zhang, Kai Yu",
+      "abstract": "提出 dots.tts.edit，基于连续自回归 dots.tts 基础模型的精确语音编辑系统。使用 XML 风格结构化编辑指令，支持文本内容、情感表达、音高语速和停顿四种编辑控制，无需显式时间戳对齐。引入 doteBench 双语评估基准。代码和模型即将开源。",
+      "tags": ["Speech Editing", "TTS", "Autoregressive", "Precise Control", "Open Source"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.02673"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "OpenAI 更新 ChatGPT：GPT-5.6 Sol 提升准确性，免费用户可用 GPT-5.6 Luna 无限文本聊天",
+      "url": "https://www.ithome.com/0/986/776.htm",
+      "summary": "2026年8月6日，OpenAI 宣布更新 ChatGPT。Plus/Pro 用户获更新版 GPT-5.6 Sol，事实准确性更高、回答更聚焦、支持思考深度调节滑块。免费用户默认模型升级为 GPT-5.6 Luna，下周起开放无限文本聊天权限。"
+    },
+    {
+      "title": "字节跳动发布 SeedRealtime：业界首个原生音视频全双工大模型",
+      "url": "https://www.aitoollab.cn/articles/seedrealtime-bytedance-audio-video-full-duplex-2026/",
+      "summary": "2026年8月5日，字节跳动 Seed 团队发布原生音视频全双工大模型 SeedRealtime，并在豆包 App 全量上线。模型能同时处理音频、视频和文本流，实现「边看边听边说」的自然交互。端到端评估显示音视频对话节奏问题减少一半，成为业界首个规模化落地的音视频全双工技术产品。"
+    },
+    {
+      "title": "腾讯混元发布 Hy ASR 3.0 preview 语音识别模型",
+      "url": "https://zhuanlan.zhihu.com/p/2068271144545919254",
+      "summary": "2026年8月4日，腾讯混元发布新一代语音识别模型 Hy ASR 3.0 preview。基于 Hy3 大语言模型，融合高精度语音识别与深度语义理解，在通用识别、上下文感知、方言覆盖和多场景鲁棒性上全面提升。元宝已首发上线，企业开发者可通过腾讯云 API 调用。"
+    },
+    {
+      "title": "xAI Grok Voice Think Fast 2.0 全量切换：面向语音 Agent 的新一代旗舰模型",
+      "url": "https://www.chinaz.com/ainews/30031.shtml",
+      "summary": "xAI 新一代语音识别模型 Grok Voice Think Fast 2.0 于8月5日完成全量切换。在 Artificial Analysis 语音识别基准测试中综合得分 82.5，在转录准确率、对话交互和工具调用效率上显著升级。"
+    },
+    {
+      "title": "OpenAI GPT-Live 技术博客深度解读：语音与推理解耦的全双工架构",
+      "url": "https://www.happyrock.cloud/zh-cn/blog/2026-08-05_openai_gpt_live_full_duplex_voice_deep_dive_speech_reasoning_decoupling/",
+      "summary": "2026年8月3日，OpenAI 工程团队发布技术博客《How we built a full-duplex voice model》，详细揭秘 GPT-Live 的语音层与推理层解耦架构。GPT-Live 于7月8日发布，后台由 GPT-5.5 驱动，支持同时听说、实时打断和同声传译，一周内 ChatGPT Voice 用户突破1.5亿。"
+    },
+    {
+      "title": "Google Gemma Translator：$80 计算机即可运行离线语音翻译",
+      "url": "https://alphasignal.ai/news/google-s-gemma-translator-runs-offline-voice-translation-on-an-80-computer",
+      "summary": "Google 发布 Gemma Translator，基于 Gemma 模型系列的开源离线语音翻译系统，仅需 $80 的计算机即可运行。支持端侧实时语音翻译，无需联网，为低资源语言和设备友好的语音翻译提供了突破性方案。"
+    }
+  ]
+}
