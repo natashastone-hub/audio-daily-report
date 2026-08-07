@@ -1,0 +1,56 @@
+{
+  "papers": [
+    {
+      "title": "AffectDF: The Most Comprehensive Benchmark for Speech Deepfake Detection against Emotionally Expressive Attacks",
+      "url": "https://arxiv.org/abs/2608.05507",
+      "date": "2026-08-06",
+      "authors": "Aurosweta Mahapatra et al.",
+      "abstract": "目前语音深度伪造检测(SDD)在传统基准上表现良好，但现有数据集对情感表达和最新大音频语言模型(LALM)攻击的覆盖有限。本文提出 AffectDF，包含约 260 小时语音，覆盖 21 种欺骗攻击和 5 种情绪状态。实验表明，在传统基准上训练的模型在 AffectDF 上接近随机性能，即使大规模情感训练也未能持续改善跨域鲁棒性。",
+      "tags": ["Speech Deepfake Detection", "TTS Security", "Voice Cloning Detection", "LALM"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.05507"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.05507"}]
+    },
+    {
+      "title": "LILAC: An Idempotent Neural Speech Codec",
+      "url": "https://arxiv.org/abs/2608.05727",
+      "date": "2026-08-06",
+      "authors": "June Young Yi et al.",
+      "abstract": "现有神经音频编解码器均非幂等的：在 12 个基线系统测试中，每个配置在单次解码-重编码过程中平均重写至少 15% 的 token。本文提出 LILAC，一个 24kHz 全卷积语音编解码器（9.375Hz/0.75kbit/s），通过构造保证编解码幂等性：任何有效 token 流的解码音频重编码后返回相同 token 流。在 LibriSpeech 和 LibriTTS-R 上达到 UTMOS 4.14/4.24，与 SOTA 子 1kbit/s 神经音频编解码器媲美。",
+      "tags": ["Neural Audio Codec", "Speech Codec", "Tokenization", "Speech Generation"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.05727"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.05727"}]
+    },
+    {
+      "title": "Manifold-Constrained Hyper-Connections for Robust Speaker Representation Learning",
+      "url": "https://arxiv.org/abs/2608.05549",
+      "date": "2026-08-06",
+      "authors": "ZeZhong Jin et al.",
+      "abstract": "标准恒等映射将信息流限制在单一路径，限制说话人表示容量。本文提出流形约束超连接(mHC)，将残差路径重构为通过双随机矩阵混合的多流演化，通过 Sinkhorn-Knopp 迭代确保能量守恒。在 ECAPA-TDNN、ResNet-34、Res2Net 和 E-Res2Net 上替换标准残差连接，VoxCeleb1 实验表明 mHC 一致增强所有架构的性能。INTERSPEECH 2026 接收。",
+      "tags": ["Speaker Recognition", "Representation Learning", "INTERSPEECH 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.05549"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.05549"}]
+    },
+    {
+      "title": "A Study of ASR Adaptation and Representation Dimensionality Reduction in Persian Speech Emotion Recognition Using Whisper",
+      "url": "https://arxiv.org/abs/2608.05165",
+      "date": "2026-08-05",
+      "authors": "Ali Shendabadi et al.",
+      "abstract": "针对低资源语言的语音情感识别(SER)，研究 Whisper 用于波斯语 SER，重点探索表示降维和语言特定模型自适应。提出基于 PCA 降维的 SER 框架，消除了学习投影层的需求，大幅减少可训练参数。在 ShEMO 数据集上，PCA 降维持续改善情感识别性能，同时降低训练延迟和内存使用。ASR 微调仅带来适度收益。",
+      "tags": ["Speech Emotion Recognition", "ASR", "Whisper", "Low-Resource"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.05165"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.05165"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "OpenAI GPT-Live工程揭秘：语音层与推理层的模态解耦架构",
+      "url": "https://www.happyrock.cloud/zh-cn/blog/2026-08-05_openai_gpt_live_full_duplex_voice_deep_dive_speech_reasoning_decoupling/",
+      "summary": "OpenAI 工程团队于 8 月 3 日发布技术博客，深度解析 GPT-Live 全双工语音系统的核心架构：语音层与推理层解耦设计，实现「边听边说」的全双工交互。该架构将语音生成与深度推理委托给不同模块，在保证实时性的同时不牺牲推理深度，标志着语音AI从「轮次制」到「全双工」的范式转变。"
+    },
+    {
+      "title": "AI语音交互2026最新进展：端到端架构全面替代三段式级联",
+      "url": "https://k.sina.cn/article_7879923802_1d5ae185a06801g1ru.html",
+      "summary": "截至 2026 年 8 月 3 日，AI 语音交互行业正经历从 ASR→LLM→TTS 三段式级联架构向端到端统一神经网络的全面转型。主流云端模型端到端延迟已压缩至 250ms-700ms，全双工能力成为新的行业标配。"
+    }
+  ]
+}
