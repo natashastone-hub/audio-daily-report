@@ -1,0 +1,111 @@
+{
+  "papers": [
+    {
+      "title": "LILAC: An Idempotent Neural Speech Codec",
+      "url": "https://arxiv.org/abs/2608.05727",
+      "date": "2026-08-07",
+      "authors": "June Young Yi et al.",
+      "abstract": "提出 LILAC，首个设计上即保证幂等性 (idempotent) 的全卷积神经语音编解码器。24 kHz 采样率，9.375 Hz / 0.75 kbit/s，编解码-重编码不改变 token 流。在 LibriSpeech 和 LibriTTS-R 上 UTMOS 分别达 4.14 和 4.24，与 SOTA sub-1 kbit/s 编解码器相当。解决了当前 12 种基线系统在单次解码-重编码中平均重写 15% token 的问题。",
+      "tags": ["Neural Codec", "Speech Codec", "Idempotent", "Audio Codec", "SOTA"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.05727"}]
+    },
+    {
+      "title": "Audio-to-Score Transcription using Pre-trained Features, Data Augmentation, and the New SheetSage-A2S Dataset",
+      "url": "https://arxiv.org/abs/2608.06165",
+      "date": "2026-08-07",
+      "authors": "Alexandre D'Hooge et al.",
+      "abstract": "首次针对流行音乐的音频到乐谱(A2S)转录研究。发布 SheetSage-A2S 数据集，含 61 小时音频和 9468 段片段（6066 首独立歌曲），是首个流行音乐 A2S 数据集。结合数据增强和 MuQ 预训练特征，在古典音乐上实现 4.98% 符号错误率 (SER)（远超此前 SOTA 的 15.3%），流行音乐上 SER 20.92%。代码、模型和数据集全部开源。已被 ACM Multimedia 2026 接收。",
+      "tags": ["Audio-to-Score", "Music Transcription", "Dataset", "Open Source", "ACM MM 2026"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.06165"}, {"label": "GitHub", "url": "https://github.com/Multimodal-Music-Research-Lab/SheetSage2Kern_model"}]
+    },
+    {
+      "title": "AffectDF: The Most Comprehensive Benchmark for Speech Deepfake Detection against Emotionally Expressive Attacks",
+      "url": "https://arxiv.org/abs/2608.05507",
+      "date": "2026-08-07",
+      "authors": "Aurosweta Mahapatra et al.",
+      "abstract": "发布 AffectDF，最全面的情感表达语音深伪检测基准。涵盖 TTS、VC、情感 VC 和 LALM 攻击，跨 5 种情感状态，约 260 小时语音，21 种伪冒攻击。实验显示 SOTA 深伪检测系统在 AffectDF 上严重退化，多个系统接近随机表现。即使大规模情感训练也无法持续提升跨域鲁棒性，揭示了当前 SDD 系统的根本局限性。",
+      "tags": ["Deepfake Detection", "Speech Security", "Benchmark", "Emotion", "LALM"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.05507"}]
+    },
+    {
+      "title": "Phoneme-Driven 3DGS for Audio-Driven Talking Heads",
+      "url": "https://arxiv.org/abs/2608.05218",
+      "date": "2026-08-07",
+      "authors": "Ao Fu et al.",
+      "abstract": "提出 PD-GS，用时间对齐音素 token 增强 3D Gaussian Splatting 的语音驱动说话人头。核心组件 Linguistic Fusion Module 通过可学习门控自适应融合连续音频上下文与离散音素嵌入，解决「漏嘴」伪影。在 HDTF 上实现最佳唇部几何 (LMD 2.66)。仅需单目视频训练。已被 ACM MM 2026 接收。",
+      "tags": ["Talking Head", "3DGS", "Phoneme", "Audio-Visual", "ACM MM 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.05218"}]
+    },
+    {
+      "title": "Manifold-Constrained Hyper-Connections for Robust Speaker Representation Learning",
+      "url": "https://arxiv.org/abs/2608.05549",
+      "date": "2026-08-07",
+      "authors": "ZeZhong Jin et al.",
+      "abstract": "提出 mHC (Manifold-Constrained Hyper-Connections)，将残差路径重构为多流演化，通过 Sinkhorn-Knopp 迭代生成双随机矩阵混合信息，确保能量守恒。在 ECAPA-TDNN、ResNet-34、Res2Net 和 E-Res2Net 上一致提升说话人识别性能。已被 Interspeech 2026 接收。",
+      "tags": ["Speaker Recognition", "Residual Connection", "Sinkhorn-Knopp", "Interspeech 2026", "Representation Learning"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.05549"}]
+    },
+    {
+      "title": "Diff2Mix: Controllable Music Mixing via Diffusion Models and Differentiable Audio Effects",
+      "url": "https://arxiv.org/abs/2608.05442",
+      "date": "2026-08-07",
+      "authors": "Yisu Zong et al.",
+      "abstract": "提出 Diff2Mix，基于扩散模型和可微分混音控制台的生成式自动混音系统。两级可选用户控制：参考音频实现整体制作风格控制，可微分混音控制台提供显式音频效果参数。在混音质量和控制能力上通过主客观评估展现竞争性能。代码和音频样本已开源。已被 ISMIR 2026 接收。",
+      "tags": ["Music Mixing", "Diffusion Model", "Differentiable Audio", "ISMIR 2026", "Open Source"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.05442"}, {"label": "Demo", "url": "https://zys711.github.io/Diff2Mix"}]
+    },
+    {
+      "title": "Diff-Symbo: Text-Controlled Long-Duration Symbolic Music Generation Using Autoregressive Latent Diffusion Model",
+      "url": "https://arxiv.org/abs/2608.05222",
+      "date": "2026-08-07",
+      "authors": "Zhiwei Lin et al.",
+      "abstract": "提出 Diff-Symbo，基于潜在扩散模型(LDM)的文本控制长时长符号音乐生成。构建含 19345 个文本模板的数据集，设计音乐信息编码器降低训练开销。自回归方法提升音乐时长和结构一致性。在文本可控性、时长和质量上显著优于 GPT-4、MuseCoco 和 MMT。",
+      "tags": ["Music Generation", "Symbolic Music", "Diffusion", "Text-to-Music", "Autoregressive"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.05222"}]
+    },
+    {
+      "title": "Rethinking Automatic Music Mixing as Sequential Stem Blending",
+      "url": "https://arxiv.org/abs/2608.05506",
+      "date": "2026-08-07",
+      "authors": "Yen Tung Yeh et al.",
+      "abstract": "提出自动混音新范式：将并行处理重构为顺序 stem 混合。训练潜在流匹配模型，在 submix 上下文条件下逐步混合任意数量轨道。引入基于降质的数据合成策略模拟真实混音场景。提供音频示例。",
+      "tags": ["Music Mixing", "Flow Matching", "Stem Blending", "Audio Processing"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.05506"}]
+    },
+    {
+      "title": "EG-VAE: A Unified Framework for Electric Guitar Tone Transfer and Removal",
+      "url": "https://arxiv.org/abs/2608.05513",
+      "date": "2026-08-07",
+      "authors": "Yen Tung Yeh et al.",
+      "abstract": "提出 EG-VAE，统一框架联合建模电吉他音色迁移 (EGTT) 和音色去除 (EGTR)。通过 VAE 解耦帧级内容和全局音色表征，音色迁移通过内容-音色重组实现，音色去除通过新颖的音色掩码目标实现。第二阶段变分采样和音频效果增强塑造平滑音色空间。提供在线演示。",
+      "tags": ["Guitar Tone", "VAE", "Tone Transfer", "Audio Effects"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.05513"}, {"label": "Demo", "url": "https://guitar-tone-demo.vercel.app/"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "阿里云发布全栈语音模型：Qwen-Audio-3.0、Qwen-Audio-3.0-Realtime 引领语音原生交互",
+      "url": "https://finance.sina.com.cn/tech/roll/2026-08-07/doc-inimnzsm4690583.shtml",
+      "summary": "2026年8月7日报道，阿里云将旗下语音全栈模型能力全面对外展示。Qwen-Audio-3.0-TTS 支持自由可控、高鲁棒语音合成，Qwen-Audio-3.0-Realtime 实现毫秒级响应的实时语音交互。阿里正从文本 AI 向语音原生 AI 全面进军，语音正成为人机交互的核心入口。"
+    },
+    {
+      "title": "微软测试自研 MAI Realtime：首款原生全双工语音模型",
+      "url": "https://tech.ifeng.com/c/8vJBnqrdjz6",
+      "summary": "2026年8月4日报道，微软正测试其首款自研原生实时语音模型 MAI Realtime，支持 16 种语言和 2 种语音效果，可在对话中「听说并行」，支持自动识别和中途切换语言。继 OpenAI GPT-Live、字节 SeedRealtime 之后，微软也加入全双工语音模型竞争。"
+    },
+    {
+      "title": "字节跳动 SeedRealtime 全量上线豆包 App：业界首个原生音视频全双工大模型",
+      "url": "https://www.aitoollab.cn/articles/seedrealtime-bytedance-audio-video-full-duplex-2026/",
+      "summary": "2026年8月5日，字节跳动 Seed 团队发布原生音视频全双工大模型 SeedRealtime 并在豆包 App 全量上线。模型能同时处理音频、视频和文本流，实现「边看边听边说」，端到端评估显示对话节奏问题减少一半。成为继 OpenAI GPT-Live 后业界第二个规模化落地的全双工语音产品。"
+    }
+  ]
+}
