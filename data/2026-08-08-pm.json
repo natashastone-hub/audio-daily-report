@@ -1,0 +1,56 @@
+{
+  "date": "2026-08-08-pm",
+  "timeWindow": "09:30-14:00 CST",
+  "papers": [
+    {
+      "title": "LILAC: An Idempotent Neural Speech Codec",
+      "url": "https://arxiv.org/abs/2608.05727",
+      "date": "2026-08-07",
+      "authors": "June Young Yi et al.",
+      "abstract": "提出 LILAC，一种全卷积 24kHz 语音编解码器（9.375 Hz / 0.75 kbit/s），构建上保证编解码等幂性 — 对任何有效 token 流的解码音频重新编码会返回相同 token 流。在 12 个基线系统上测试，每个配置在单次解码-重编码过程中平均重写至少 15% 的 token，而 LILAC 完全避免了这一问题。在 LibriSpeech 和 LibriTTS-R 上达到 UTMOS 4.14 和 4.24，与 SOTA 亚 1kbit/s 神经音频编解码器持平。",
+      "tags": ["Neural Audio Codec", "Speech Tokenization", "Idempotent", "TTS Pipeline"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.05727"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.05727"}]
+    },
+    {
+      "title": "AffectDF: The Most Comprehensive Benchmark for Speech Deepfake Detection against Emotionally Expressive Attacks",
+      "url": "https://arxiv.org/abs/2608.05507",
+      "date": "2026-08-07",
+      "authors": "Aurosweta Mahapatra et al.",
+      "abstract": "提出 AffectDF，针对情绪表达性语音深伪的综合基准测试。包含约 260 小时语音，使用 21 种欺骗攻击（覆盖 TTS、语音转换、情绪 VC 和 LALM 攻击）在 5 种情绪状态下生成。实验显示传统基准训练的模型在 AffectDF 上显著退化，多个系统接近随机水平。即使大规模情绪训练也不能持续提升跨域鲁棒性，当前 SDD 系统在情绪和韵律变异性下缺乏通用伪造表征学习能力。",
+      "tags": ["Speech Deepfake Detection", "Voice Cloning Security", "TTS Attacks", "Benchmark"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.05507"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.05507"}]
+    },
+    {
+      "title": "Manifold-Constrained Hyper-Connections for Robust Speaker Representation Learning",
+      "url": "https://arxiv.org/abs/2608.05549",
+      "date": "2026-08-07",
+      "authors": "ZeZhong Jin et al.",
+      "abstract": "提出流形约束超连接（mHC），将残差路径重构为多流演化，通过双随机矩阵混合信息。利用 Sinkhorn-Knopp 迭代确保能量守恒，保持信号强度和特征均值。在 VoxCeleb1 上评估 ECAPA-TDNN、ResNet-34、Res2Net 和 E-Res2Net，mHC 在所有架构上一致提升性能。已接受为 INTERSPEECH 2026。",
+      "tags": ["Speaker Recognition", "Voice Cloning", "Representation Learning", "INTERSPEECH 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.05549"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.05549"}]
+    },
+    {
+      "title": "Audio-to-Score Transcription using Pre-trained Features, Data Augmentation, and the New SheetSage-A2S Dataset",
+      "url": "https://arxiv.org/abs/2608.06165",
+      "date": "2026-08-07",
+      "authors": "Alexandre D'Hooge et al.",
+      "abstract": "提出 SheetSage-A2S 数据集（61 小时音频，9468 片段，6066 首独特歌曲），首个面向流行音乐音频转乐谱研究的数据集。使用数据增强和 MuQ 预训练特征提取模型，在经典音乐的 Quartets 集合上实现 4.98% 符号错误率（SER），远优于现有 SOTA 的 15.3%。已接受 ACM Multimedia 2026。",
+      "tags": ["Audio-to-Score", "Music Transcription", "Audio Understanding", "ACM MM 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.06165"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.06165"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "OpenAI 暂停 Astra 模型研发 — 首个触发'关键级'网络安全阈值的模型",
+      "summary": "OpenAI 宣布暂停其 Astra 模型的研发工作，这是 OpenAI 首个触发'关键级'网络安全阈值的模型。该决策标志着 AI 安全治理的重要里程碑。虽然非直接语音领域，但 Astra 的暂停可能影响 OpenAI 整体产品路线图，包括 GPT-Live 语音生态。",
+      "source": "iWiki 内部日报",
+      "url": "https://iwiki.woa.com/p/4030876053",
+      "time": "2026-08-08",
+      "tags": ["OpenAI", "AI Safety", "Industry"]
+    }
+  ]
+}
