@@ -1,0 +1,200 @@
+{
+  "papers": [
+    {
+      "title": "LILAC: An Idempotent Neural Speech Codec",
+      "url": "https://arxiv.org/abs/2608.05727",
+      "date": "2026-08-06",
+      "authors": "June Young Yi et al.",
+      "abstract": "现有神经音频编解码器缺乏幂等性——在12个基准系统测试中，每次解码-重编码至少重写15%的token。本文提出LILAC，一个24kHz全卷积语音编解码器（9.375Hz, 0.75kbit/s），通过构造实现编解码幂等性：任何有效token流解码后重编码返回相同token流。在LibriSpeech和LibriTTS-R测试集上达到UTMOS 4.14和4.24，与SOTA 1kbit/s以下编解码器持平，同时保持幂等性。",
+      "tags": ["Neural Audio Codec", "Speech Generation", "Idempotent", "Tokenization"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.05727"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.05727"}
+      ]
+    },
+    {
+      "title": "HyPASE: Hyperbolic Geometry for Parameter-Efficient Speech Emotion Fine-Tuning Framework for Large Audio-Language Models",
+      "url": "https://arxiv.org/abs/2608.04351",
+      "date": "2026-08-05",
+      "authors": "Tian Jin et al.",
+      "abstract": "提出HyPASE，基于双曲几何（Poincaré球模型）的LALM语音情感识别参数高效微调框架。包含双曲几何适配器(HGA)和情感感知多容量跨模态聚合器(EMCA)，利用双曲半径作为表示粒度的显式代理。在MELD和IEMOCAP上优于欧几里得空间PEFT基线，尤其在类别不平衡情感识别上表现突出，并实现强大的零样本跨数据集泛化。",
+      "tags": ["Speech Emotion Recognition", "LALM", "Hyperbolic Geometry", "PEFT"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.04351"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.04351"}
+      ]
+    },
+    {
+      "title": "AffectDF: The Most Comprehensive Benchmark for Speech Deepfake Detection against Emotionally Expressive Attacks",
+      "url": "https://arxiv.org/abs/2608.05507",
+      "date": "2026-08-06",
+      "authors": "Aurosweta Mahapatra et al.",
+      "abstract": "引入AffectDF，最全面的情感表达语音Deepfake基准，包含21种欺骗攻击（TTS、VC、情感VC、LALM）、5种情感状态、约260小时语音。测试显示现有SOTA系统在情感欺骗条件下性能严重退化，部分接近随机水平。即使大规模情感训练也未能持续改善跨域鲁棒性，暴露了当前SDD系统的根本局限性。",
+      "tags": ["Speech Deepfake Detection", "Emotional Speech", "Benchmark", "Security"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.05507"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.05507"}
+      ]
+    },
+    {
+      "title": "Identity-Faithful Audio-Visual Target Speaker Extraction with REAL-2MIX and VOXBLINK2-AVSE",
+      "url": "https://arxiv.org/abs/2608.03964",
+      "date": "2026-08-04",
+      "authors": "Zhan Jin et al.",
+      "abstract": "引入REAL-2MIX（中英文真实双人混合语音AV-TSE基准，含多视角视频和说话人参考）和VOXBLINK2-AVSE（250,828个音频-唇部ROI对，28,421个说话人，766小时）。提取器使用冻结AV-HuBERT特征、目标条件训练和逐层特征调制，结合Qwen3-ASR-1.7B进行内容评估和WeSpeaker进行身份验证，在严格输出正确率上达到82.22%。",
+      "tags": ["Speaker Extraction", "Audio-Visual", "Benchmark", "AV-HuBERT"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.03964"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.03964"}
+      ]
+    },
+    {
+      "title": "Manifold-Constrained Hyper-Connections for Robust Speaker Representation Learning",
+      "url": "https://arxiv.org/abs/2608.05549",
+      "date": "2026-08-06",
+      "authors": "ZeZhong Jin et al.",
+      "abstract": "提出流形约束超连接(mHC)，将残差路径重新构建为多流演化，通过双重随机矩阵混合信息。利用Sinkhorn-Knopp迭代确保能量守恒，稳定梯度并缓解信号退化。在ECAPA-TDNN、ResNet-34、Res2Net、E-Res2Net上一致提升VoxCeleb1性能，已被INTERSPEECH 2026接收。",
+      "tags": ["Speaker Recognition", "Residual Connections", "INTERSPEECH 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.05549"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.05549"}
+      ]
+    },
+    {
+      "title": "AudioScape-TTA: A Structured Soundscape Benchmark for Fine-Grained Text-to-Audio Evaluation",
+      "url": "https://arxiv.org/abs/2608.04479",
+      "date": "2026-08-05",
+      "authors": "Jinting Wang et al.",
+      "abstract": "提出AudioScape-TTA，一个结构化和复杂度感知的细粒度TTA评估基准。包含2,258个音频-文本对和25,707个二元QA评分标准(rubrics)，支持事件实现、声学属性和语音内容的细粒度验证。在13个代表性开源TTA模型上的实验揭示了细致属性控制、语音内容保留和组合声景生成方面的持续局限性，人工验证表明rubric评估比传统全局相似度指标更符合人类语义判断。",
+      "tags": ["Text-to-Audio", "Evaluation Benchmark", "Soundscape", "Fine-Grained"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.04479"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.04479"}
+      ]
+    },
+    {
+      "title": "MSA-EchoLite: Echo-Aware Modulation for Compact-Latent Frequency-Time Modeling in Lightweight Acoustic Echo Cancellation",
+      "url": "https://arxiv.org/abs/2608.03650",
+      "date": "2026-08-04",
+      "authors": "Ye Ni et al.",
+      "abstract": "提出MSA-EchoLite轻量级Bark域AEC框架，采用非对称双分支编码器和回声感知频率-时间调制(EAM)模块。EAM模块通过建模麦克风和回声相关潜在特征之间的差异与相关性线索丰富压缩瓶颈表示。仅0.2M参数和100M FLOPs/s，EAM增强版以26.1%额外FLOPs达到频率域版本99.1%的PESQ，超越SOTA轻量级AEC模型。",
+      "tags": ["Acoustic Echo Cancellation", "Lightweight", "Bark-domain"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.03650"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.03650"}
+      ]
+    },
+    {
+      "title": "Helping Music Co-Creation Agents 'Listen' Well: Hierarchical Self-Supervised World Models for Understanding and Generation",
+      "url": "https://arxiv.org/abs/2608.04378",
+      "date": "2026-08-05",
+      "authors": "Scott Hawley et al.",
+      "abstract": "提出分层自监督'世界模型'用于符号音乐：255万参数Swin V2编码器在MIDI钢琴卷图像上训练（JEPA目标：音高/时间平移等变性、掩码嵌入预测、分布正则化），无需标签或乐理词汇。短语边界从最粗层级解码，音符密度与和声细节从最细层级解码。条件流匹配模型作为解码器，像素F1达0.996。配合LLM大脑构成协作音乐创作智能体。",
+      "tags": ["Music AI", "World Model", "Self-Supervised", "JEPA", "NeurIPS 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.04378"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.04378"},
+        {"label": "Demo", "url": "https://drscotthawley-midi-rae-jepa-son.hf.space/"}
+      ]
+    },
+    {
+      "title": "Masked Diffusion Enables Coherent Beat Tracking",
+      "url": "https://arxiv.org/abs/2608.04624",
+      "date": "2026-08-05",
+      "authors": "Francesco Foscarin et al.",
+      "abstract": "当前节拍跟踪神经网络常生成无效输出（连续强拍、不稳定速度变化），即使用后处理也难以根除。本文提出掩码扩散方法，通过独立掩码训练/推理、平衡掩码调度和跨步峰值挑选，正确建模多个合理输出并构建连贯预测。在减少错误行为的同时提升节拍跟踪性能，已被ISMIR 2026接收。",
+      "tags": ["Beat Tracking", "Masked Diffusion", "Music", "ISMIR 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.04624"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.04624"}
+      ]
+    },
+    {
+      "title": "Audio-to-Score Transcription using Pre-trained Features, Data Augmentation, and the New SheetSage-A2S Dataset",
+      "url": "https://arxiv.org/abs/2608.06165",
+      "date": "2026-08-06",
+      "authors": "Alexandre D'Hooge et al.",
+      "abstract": "推出SheetSage-A2S数据集（61小时音频，9,468段，6,066首歌曲），首个面向流行音乐的音频转乐谱数据集。使用MuQ预训练特征和数据增强，在古典音乐Quartets上达到4.98%符号错误率（SER），远超此前SOTA的15.3%；在流行音乐SheetSage-A2S上达到20.92% SER，为未来研究提供强基线。已被ACM MM '26接收。",
+      "tags": ["Music Transcription", "Audio-to-Score", "Dataset", "ACM MM 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.06165"},
+        {"label": "GitHub", "url": "https://github.com/Multimodal-Music-Research-Lab/SheetSage2Kern_model"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.06165"}
+      ]
+    },
+    {
+      "title": "InvFlowFD: Reference-Free and Background-Set-Free Perceptual Music Quality Metric with Flow Matching Inversion",
+      "url": "https://arxiv.org/abs/2608.04142",
+      "date": "2026-08-04",
+      "authors": "Alon Ziv et al.",
+      "abstract": "提出InvFlowFD，首个同时无需参考音频和背景集的感知音乐质量评估方法，仅使用预训练Flow Matching骨干。通过无条件Flow Matching反演（简单Euler积分）检测人工失真并准确排名生成模型质量。人类研究表明与感知失真和生成质量高度相关，同时比现有方法更灵活。已被ISMIR 2026接收。",
+      "tags": ["Music Quality", "Flow Matching", "Perceptual Metric", "ISMIR 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.04142"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.04142"}
+      ]
+    },
+    {
+      "title": "Learning Music Style for Piano Arrangement Through Cross-Modal Bootstrapping",
+      "url": "https://arxiv.org/abs/2608.03050",
+      "date": "2026-08-04",
+      "authors": "Jingwei Zhao et al.",
+      "abstract": "提出跨模态框架，从原始音频学习隐式音乐风格并应用于符号音乐生成。受BLIP-2启发，利用Q-Former从预训练音频语言模型提取风格表示，条件化符号语言模型生成钢琴编曲。两阶段训练：对比学习对齐听觉风格与符号表达，然后生成建模。在钢琴cover生成、风格转移和音频到MIDI检索方面取得显著改进。已被ISMIR 2026接收。",
+      "tags": ["Music Generation", "Style Transfer", "Cross-Modal", "ISMIR 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.03050"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.03050"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "字节跳动发布 SeedRealtime：业界首个原生音视频全双工大模型",
+      "url": "https://www.aitoollab.cn/articles/seedrealtime-bytedance-audio-video-full-duplex-2026/",
+      "summary": "2026年8月5日，字节跳动Seed团队发布原生音视频全双工大模型SeedRealtime，并在豆包App全量上线，成为业界首个规模化落地音视频全双工技术的产品。模型支持同时处理音频和视频输入，实现'边看边听边说'的自然交互。",
+      "date": "2026-08-05"
+    },
+    {
+      "title": "腾讯混元发布 Hy ASR 3.0 preview：语音识别范式跃迁",
+      "url": "https://zhuanlan.zhihu.com/p/2068271144545919254",
+      "summary": "2026年8月4日，腾讯混元发布新一代语音识别模型Hy ASR 3.0 preview。这是一次范式跃迁，将语音识别从'逐字转写、单点优化'推进到'理解语境、兼顾语义'，支持多语言混合识别和上下文感知。",
+      "date": "2026-08-04"
+    },
+    {
+      "title": "阿里通义千问APP重大更新：Qwen3.8-MAX加持，新增语音通话功能",
+      "url": "https://www.sohu.com/a/1060012523_122554258",
+      "summary": "2026年8月7日，通义千问APP及PC端同步上线多项新功能，包括思考研究、定时任务、办公助理、智能体广场以及语音通话。底层接入阿里最新旗舰模型Qwen3.8-MAX，所有新功能面向所有用户免费开放。",
+      "date": "2026-08-07"
+    },
+    {
+      "title": "OpenAI GPT-Live全双工语音系统技术详解发布",
+      "url": "https://zglg.work/ai/news/zh/2026-08-03-openai-details-gpt-live-realtime-voice-system-full-duplex-model-six-months-of",
+      "summary": "2026年8月3日，OpenAI发布GPT-Live技术博客，详解第三代全双工语音系统架构：移除轮次检测器，以全双工语音模型实现边说边听，异步调用GPT-5.5完成深度推理。历时六个月打造，代表语音交互新范式。",
+      "date": "2026-08-03"
+    },
+    {
+      "title": "Google Assistant宣布退场：Gemini全面接管安卓语音助手",
+      "url": "https://www.openai-hub.com/news/1428/",
+      "summary": "Google宣布从2026年9月4日起分批停用移动端Google Assistant，Gemini将接管安卓手机、平板、Wear OS手表及兼容设备上的默认语音助手功能。标志语音助手市场进入大模型驱动的全新时代。",
+      "date": "2026-08-05"
+    },
+    {
+      "title": "AI语音交互最新进展：端到端架构与全双工成为主流",
+      "url": "https://k.sina.cn/article_7879923802_1d5ae185a06801g1ru.html",
+      "summary": "截至2026年8月3日，AI语音交互行业正经历从三段式级联架构向端到端统一神经网络的全面转型。主流云端模型端到端延迟已压缩至250ms-700ms，全双工语音交互成为新标配。",
+      "date": "2026-08-03"
+    }
+  ]
+}
