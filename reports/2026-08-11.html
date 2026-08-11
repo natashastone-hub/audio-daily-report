@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-08-11</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-08-11</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年8月11日 (周二) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">2</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.07285" target="_blank">How Much AI Is in This Track? Quantifying the Proportion of AI-Generated Stems in Hybrid Music Mixtures</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-07</span><span>👥 Fernando Garcia De La Cruz et al.</span></div>
+      <div class="abstract">AI-generated music is increasingly used at the stem level, with producers integrating synthetic drums, basslines, or vocals alongside human-performed instruments. However, current AI music detection systems are binary, treating tracks as either fully AI or fully human. In this paper, we reformulate AI music detection as a regression problem on a continuous AI energy ratio α∈[0,1]. The CNN-based model achieves >99% accuracy as a binary detector, but when faced with mixed content, it outputs a noisy and miscalibrated estimator. Detection sensitivity depends on the instrument: drums and guitar carry strong codec-artifact signatures, while vocals and bass are less detectable. A regression-formulated CNN achieves MAE=0.076 and R²=0.85 on held-out mixtures. Accepted at ISMIR 2026.</div>
+      <div class="tags"><span class="tag">AI Music Detection</span><span class="tag">ISMIR 2026</span><span class="tag">Audio Forensics</span><span class="tag">Stem Analysis</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.07285" target="_blank">🔗 arXiv</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.07359" target="_blank">Assessing AI-generated Music Detection in Real-world Broadcast Monitoring</a></h4>
+      <div class="meta"><span>📅 2026-08-07</span><span>👥 Jorge David Lopez Ayala et al.</span></div>
+      <div class="abstract">The proliferation of AI-generated music in broadcast media raises concerns about transparency and fair compensation. Existing studies report substantial performance degradation in broadcast conditions, yet evaluations are limited to synthetic data. This paper introduces BAMM (Broadcast AI-Music Monitoring), a 40-hour dataset of real-world television recordings containing AI-generated and human-made music. Both clean-trained and broadcast-trained CNN models achieve near-perfect performance on clean foreground music but degrade substantially under synthetic broadcast conditions. On real TV broadcast data, both models show substantial score overlap between AI-generated and human-made music, exposing a critical domain gap. Accepted at ISMIR 2026.</div>
+      <div class="tags"><span class="tag">AI Music Detection</span><span class="tag">ISMIR 2026</span><span class="tag">Broadcast Monitoring</span><span class="tag">Dataset</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.07359" target="_blank">🔗 arXiv</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>GPT-Live 全双工语音系统深度解析：语音层与推理层彻底解耦 - 技术深度文章</h4>
+      <p>8月5日发表的GPT-Live全双工语音系统技术深度分析文章，详细解析了OpenAI第三代语音系统的架构设计。核心技术突破在于语音层与推理层的彻底解耦：前台由GPT-Live处理实时语音交互（同时听说、打断、同声传译），后台将搜索和深度推理委托给GPT-5.5，对话不中断。该架构开创了全双工语音模型的新范式，标志着语音AI从'三段式级联向端到端统一'转型的关键里程碑。 <a href="https://www.happyrock.cloud/zh-cn/blog/2026-08-05_openai_gpt_live_full_duplex_voice_deep_dive_speech_reasoning_decoupling/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>GPT-Live 全面实测对比：OpenAI vs 豆包、讯飞星火、Gemini Voice、Kimi、腾讯混元</h4>
+      <p>深度实测GPT-Live并与豆包、讯飞星火、Gemini Voice、Kimi、腾讯混元等6款主流AI语音助手进行横向对比。GPT-Live在语音自然度、实时性和多轮对话流畅性方面表现领先。报告显示ChatGPT Voice周活用户已突破1.5亿，语音正成为AI交互的核心入口。 <a href="https://www.aitoollab.cn/articles/gpt-live-ai-voice-assistant-comparison-202607/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>AI语音大模型行业2026年8月最新进展：端到端架构与全双工落地</h4>
+      <p>截至2026年8月初，AI语音大模型行业正经历从三段式级联架构向端到端统一神经网络的全面转型。全双工语音交互已成为新一代语音AI产品的核心竞争维度。OpenAI GPT-Live和腾讯PCG的全双工语音大模型代表行业最前沿水平。主流云厂商和模型公司普遍将低延迟全双工作为下一代产品标准配置。 <a href="https://k.sina.cn/article_7879923802_1d5ae185a06801g1ru.html" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-08-11') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+{
+  "date": "2026-08-11",
+  "coverage": "2026-08-10 09:30 ~ 2026-08-11 09:30 (Asia/Shanghai)",
+  "papers": [
+    {
+      "title": "How Much AI Is in This Track? Quantifying the Proportion of AI-Generated Stems in Hybrid Music Mixtures",
+      "url": "https://arxiv.org/abs/2608.07285",
+      "date": "2026-08-07",
+      "authors": "Fernando Garcia De La Cruz et al.",
+      "abstract": "AI-generated music is increasingly used at the stem level, with producers integrating synthetic drums, basslines, or vocals alongside human-performed instruments. However, current AI music detection systems are binary, treating tracks as either fully AI or fully human. In this paper, we reformulate AI music detection as a regression problem on a continuous AI energy ratio α∈[0,1]. The CNN-based model achieves >99% accuracy as a binary detector, but when faced with mixed content, it outputs a noisy and miscalibrated estimator. Detection sensitivity depends on the instrument: drums and guitar carry strong codec-artifact signatures, while vocals and bass are less detectable. A regression-formulated CNN achieves MAE=0.076 and R²=0.85 on held-out mixtures. Accepted at ISMIR 2026.",
+      "tags": ["AI Music Detection", "ISMIR 2026", "Audio Forensics", "Stem Analysis"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.07285"}
+      ]
+    },
+    {
+      "title": "Assessing AI-generated Music Detection in Real-world Broadcast Monitoring",
+      "url": "https://arxiv.org/abs/2608.07359",
+      "date": "2026-08-07",
+      "authors": "Jorge David Lopez Ayala et al.",
+      "abstract": "The proliferation of AI-generated music in broadcast media raises concerns about transparency and fair compensation. Existing studies report substantial performance degradation in broadcast conditions, yet evaluations are limited to synthetic data. This paper introduces BAMM (Broadcast AI-Music Monitoring), a 40-hour dataset of real-world television recordings containing AI-generated and human-made music. Both clean-trained and broadcast-trained CNN models achieve near-perfect performance on clean foreground music but degrade substantially under synthetic broadcast conditions. On real TV broadcast data, both models show substantial score overlap between AI-generated and human-made music, exposing a critical domain gap. Accepted at ISMIR 2026.",
+      "tags": ["AI Music Detection", "ISMIR 2026", "Broadcast Monitoring", "Dataset"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.07359"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "GPT-Live 全双工语音系统深度解析：语音层与推理层彻底解耦 - 技术深度文章",
+      "url": "https://www.happyrock.cloud/zh-cn/blog/2026-08-05_openai_gpt_live_full_duplex_voice_deep_dive_speech_reasoning_decoupling/",
+      "summary": "8月5日发表的GPT-Live全双工语音系统技术深度分析文章，详细解析了OpenAI第三代语音系统的架构设计。核心技术突破在于语音层与推理层的彻底解耦：前台由GPT-Live处理实时语音交互（同时听说、打断、同声传译），后台将搜索和深度推理委托给GPT-5.5，对话不中断。该架构开创了全双工语音模型的新范式，标志着语音AI从'三段式级联向端到端统一'转型的关键里程碑。"
+    },
+    {
+      "title": "GPT-Live 全面实测对比：OpenAI vs 豆包、讯飞星火、Gemini Voice、Kimi、腾讯混元",
+      "url": "https://www.aitoollab.cn/articles/gpt-live-ai-voice-assistant-comparison-202607/",
+      "summary": "深度实测GPT-Live并与豆包、讯飞星火、Gemini Voice、Kimi、腾讯混元等6款主流AI语音助手进行横向对比。GPT-Live在语音自然度、实时性和多轮对话流畅性方面表现领先。报告显示ChatGPT Voice周活用户已突破1.5亿，语音正成为AI交互的核心入口。"
+    },
+    {
+      "title": "AI语音大模型行业2026年8月最新进展：端到端架构与全双工落地",
+      "url": "https://k.sina.cn/article_7879923802_1d5ae185a06801g1ru.html",
+      "summary": "截至2026年8月初，AI语音大模型行业正经历从三段式级联架构向端到端统一神经网络的全面转型。全双工语音交互已成为新一代语音AI产品的核心竞争维度。OpenAI GPT-Live和腾讯PCG的全双工语音大模型代表行业最前沿水平。主流云厂商和模型公司普遍将低延迟全双工作为下一代产品标准配置。"
+    }
+  ]
+}
