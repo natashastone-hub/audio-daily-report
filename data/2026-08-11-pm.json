@@ -1,0 +1,77 @@
+{
+  "date": "2026-08-11",
+  "edition": "pm",
+  "generated_at": "2026-08-11T14:01:00+08:00",
+  "papers": [
+    {
+      "title": "CtrlSpeech: Coarse-to-Fine Control for Expressive Speech Synthesis",
+      "url": "https://arxiv.org/abs/2608.08362",
+      "date": "2026-08-08",
+      "authors": "Zhisheng Zheng, Xiaohang Sun, Zhu Liu, Caren Chen, Rohith Kumar, Manoj Aggarwal, Gerard Medioni, David Harwath",
+      "abstract": "针对当前TTS系统在词/音素级精细韵律控制上的不足，提出CtrlSpeech框架。基于DiTAR架构，结合全局说话人条件与音高、响度、时长等音素级对齐信号，实现从粗到细的可控表现力语音合成，在保持零样本TTS性能的同时大幅提升可控性。",
+      "tags": ["TTS", "Expressive Speech Synthesis", "Controllable", "Interspeech 2026"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.08362"}, {"label": "Demo", "url": "https://zhishengzheng.com/ctrlspeech"}]
+    },
+    {
+      "title": "ReLMCodec: Designing Predictable Speech Tokens from Pre-Quantization Phoneme Structure",
+      "url": "https://arxiv.org/abs/2608.08286",
+      "date": "2026-08-08",
+      "authors": "Zixiang Wan, Xusheng Yang, Zheng Wang, Peiji Yang",
+      "abstract": "提出低码率单码本语音编解码器ReLMCodec，基于preserve-control-refine三原则：保留冻结SSL特征的语音组织、通过预量化锚保持适应控制量化漂移、用WavLM教师精炼潜在空间。在650和800 bps码率下同时实现高保真重建和可预测token序列，下游TTS任务中可懂度和说话人相似度均获提升。",
+      "tags": ["Neural Speech Codec", "TTS", "Speech Tokenization", "Low Bitrate"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.08286"}, {"label": "GitHub", "url": "https://github.com/ggiggit/ReLMCodec"}]
+    },
+    {
+      "title": "SraVaani 1.0: Scaling Inclusive Speech Recognition for Indic Languages",
+      "url": "https://arxiv.org/abs/2608.08235",
+      "date": "2026-08-08",
+      "authors": "Sujith Pulikodan, Agneedh Basu, Pavan Kumar J, Pranav D Bhat, Suryansh Shukla, Nihar Desai, Prasanta Kumar Ghosh",
+      "abstract": "针对印度超过700种语言中绝大多数缺乏ASR支持的问题，提出SraVaani 1.0，大规模扩展了印度语言的包容性语音识别，覆盖大量此前未被服务的语言和方言。",
+      "tags": ["ASR", "Indic Languages", "Multilingual", "Low-Resource"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.08235"}]
+    },
+    {
+      "title": "BAMU: Bitstream-Aware Marginal-Utility Allocation for Frozen Pretrained Neural Speech Codecs",
+      "url": "https://arxiv.org/abs/2608.08432",
+      "date": "2026-08-09",
+      "authors": "Mingyu Zhao, Zijian Lin, Yutang Feng, Jiatao Chen, Fan Wang, Jiehui Luo, Yuhao Ding, Jinchao Zhang, Zhiyong Wu",
+      "abstract": "提出BAMU框架，为冻结预训练的神经语音编解码器实现比特流感知的动态RVQ分配。轻量级预测器估计每帧每层边际失真减少，约束分配器在严格码率预算下选择前缀有效的量化深度。MOS从3.449提升至3.780。",
+      "tags": ["Neural Speech Codec", "Dynamic RVQ", "Audio Compression"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.08432"}]
+    },
+    {
+      "title": "Dynamic Clustering for Cross-Segment Permutation Alignment in Long Speech Separation",
+      "url": "https://arxiv.org/abs/2608.09451",
+      "date": "2026-08-10",
+      "authors": "Yuzhu Wang, Archontis Politis, Konstantinos Drossos, Tuomas Virtanen",
+      "abstract": "针对长语音分离中跨段置换对齐难题，提出免训练动态聚类方法。通过说话人嵌入参考池的余弦相似度预测置换，保持最具代表性的嵌入更新参考池。在稀疏场景中表现尤为优越，对未知说话人数估计误差具有鲁棒性。MLSP 2026接收。",
+      "tags": ["Speech Separation", "Speaker Diarization", "Clustering", "MLSP 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.09451"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "🔥 OpenAI 发布 GPT-5.6-Cyber 网络安全专用模型",
+      "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows",
+      "summary": "OpenAI 于8月10日（北京时间11日凌晨）推出 GPT-5.6-Cyber，这是其旗舰模型在网络安全防御方向的专用衍生版。同时重构 Daybreak 项目为 Blue/Red 双层准入机制，标志着 AI 在主动网络防御领域进入新阶段。虽然该模型非语音方向，但 GPT-5.6 系列作为 GPT-Live 全双工语音的推理后端，其能力提升将直接惠及语音交互质量。",
+      "highlight": true
+    },
+    {
+      "title": "🎙️ NVIDIA 开源 VoiceChat 11B：首个全双工语音+工具调用模型",
+      "url": "https://huggingface.co/nvidia/NVIDIA-NemotronLabs-VoiceChat-11B",
+      "summary": "NVIDIA 于8月9日发布 NemotronLabs VoiceChat 11B 并开源权重，这是目前首个同时支持全双工语音对话和工具调用（Function Calling）的端到端语音模型。11B参数规模，支持实时打断、自然停顿感知，已上架 Hugging Face。多家媒体在8月10-11日持续报道，此模型代表开源社区在语音Agent方向上的重要里程碑。",
+      "highlight": true
+    },
+    {
+      "title": "📊 OpenAI 完成 70 亿美元员工股权出售",
+      "url": "https://techcrunch.com",
+      "summary": "OpenAI 在8月11日完成创纪录的70亿美元员工股权出售交易，凸显公司估值持续攀升，也反映硅谷AI人才争夺战的激烈程度。",
+      "highlight": false
+    }
+  ]
+}

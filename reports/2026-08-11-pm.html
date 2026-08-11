@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-08-11-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-08-11-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年8月11日 (周二) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">5</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.08362" target="_blank">CtrlSpeech: Coarse-to-Fine Control for Expressive Speech Synthesis</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-08</span><span>👥 Zhisheng Zheng, Xiaohang Sun, Zhu Liu, Caren Chen, Rohith Kumar, Manoj Aggarwal, Gerard Medioni, David Harwath</span></div>
+      <div class="abstract">针对当前TTS系统在词/音素级精细韵律控制上的不足，提出CtrlSpeech框架。基于DiTAR架构，结合全局说话人条件与音高、响度、时长等音素级对齐信号，实现从粗到细的可控表现力语音合成，在保持零样本TTS性能的同时大幅提升可控性。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Expressive Speech Synthesis</span><span class="tag">Controllable</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.08362" target="_blank">🔗 arXiv</a> <a href="https://zhishengzheng.com/ctrlspeech" target="_blank">🔗 Demo</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.08286" target="_blank">ReLMCodec: Designing Predictable Speech Tokens from Pre-Quantization Phoneme Structure</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-08</span><span>👥 Zixiang Wan, Xusheng Yang, Zheng Wang, Peiji Yang</span></div>
+      <div class="abstract">提出低码率单码本语音编解码器ReLMCodec，基于preserve-control-refine三原则：保留冻结SSL特征的语音组织、通过预量化锚保持适应控制量化漂移、用WavLM教师精炼潜在空间。在650和800 bps码率下同时实现高保真重建和可预测token序列，下游TTS任务中可懂度和说话人相似度均获提升。</div>
+      <div class="tags"><span class="tag">Neural Speech Codec</span><span class="tag">TTS</span><span class="tag">Speech Tokenization</span><span class="tag">Low Bitrate</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.08286" target="_blank">🔗 arXiv</a> <a href="https://github.com/ggiggit/ReLMCodec" target="_blank">🔗 GitHub</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.08235" target="_blank">SraVaani 1.0: Scaling Inclusive Speech Recognition for Indic Languages</a></h4>
+      <div class="meta"><span>📅 2026-08-08</span><span>👥 Sujith Pulikodan, Agneedh Basu, Pavan Kumar J, Pranav D Bhat, Suryansh Shukla, Nihar Desai, Prasanta Kumar Ghosh</span></div>
+      <div class="abstract">针对印度超过700种语言中绝大多数缺乏ASR支持的问题，提出SraVaani 1.0，大规模扩展了印度语言的包容性语音识别，覆盖大量此前未被服务的语言和方言。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Indic Languages</span><span class="tag">Multilingual</span><span class="tag">Low-Resource</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.08235" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.08432" target="_blank">BAMU: Bitstream-Aware Marginal-Utility Allocation for Frozen Pretrained Neural Speech Codecs</a></h4>
+      <div class="meta"><span>📅 2026-08-09</span><span>👥 Mingyu Zhao, Zijian Lin, Yutang Feng, Jiatao Chen, Fan Wang, Jiehui Luo, Yuhao Ding, Jinchao Zhang, Zhiyong Wu</span></div>
+      <div class="abstract">提出BAMU框架，为冻结预训练的神经语音编解码器实现比特流感知的动态RVQ分配。轻量级预测器估计每帧每层边际失真减少，约束分配器在严格码率预算下选择前缀有效的量化深度。MOS从3.449提升至3.780。</div>
+      <div class="tags"><span class="tag">Neural Speech Codec</span><span class="tag">Dynamic RVQ</span><span class="tag">Audio Compression</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.08432" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.09451" target="_blank">Dynamic Clustering for Cross-Segment Permutation Alignment in Long Speech Separation</a></h4>
+      <div class="meta"><span>📅 2026-08-10</span><span>👥 Yuzhu Wang, Archontis Politis, Konstantinos Drossos, Tuomas Virtanen</span></div>
+      <div class="abstract">针对长语音分离中跨段置换对齐难题，提出免训练动态聚类方法。通过说话人嵌入参考池的余弦相似度预测置换，保持最具代表性的嵌入更新参考池。在稀疏场景中表现尤为优越，对未知说话人数估计误差具有鲁棒性。MLSP 2026接收。</div>
+      <div class="tags"><span class="tag">Speech Separation</span><span class="tag">Speaker Diarization</span><span class="tag">Clustering</span><span class="tag">MLSP 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.09451" target="_blank">🔗 arXiv</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>🔥 OpenAI 发布 GPT-5.6-Cyber 网络安全专用模型</h4>
+      <p>OpenAI 于8月10日（北京时间11日凌晨）推出 GPT-5.6-Cyber，这是其旗舰模型在网络安全防御方向的专用衍生版。同时重构 Daybreak 项目为 Blue/Red 双层准入机制，标志着 AI 在主动网络防御领域进入新阶段。虽然该模型非语音方向，但 GPT-5.6 系列作为 GPT-Live 全双工语音的推理后端，其能力提升将直接惠及语音交互质量。 <a href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>🎙️ NVIDIA 开源 VoiceChat 11B：首个全双工语音+工具调用模型</h4>
+      <p>NVIDIA 于8月9日发布 NemotronLabs VoiceChat 11B 并开源权重，这是目前首个同时支持全双工语音对话和工具调用（Function Calling）的端到端语音模型。11B参数规模，支持实时打断、自然停顿感知，已上架 Hugging Face。多家媒体在8月10-11日持续报道，此模型代表开源社区在语音Agent方向上的重要里程碑。 <a href="https://huggingface.co/nvidia/NVIDIA-NemotronLabs-VoiceChat-11B" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>📊 OpenAI 完成 70 亿美元员工股权出售</h4>
+      <p>OpenAI 在8月11日完成创纪录的70亿美元员工股权出售交易，凸显公司估值持续攀升，也反映硅谷AI人才争夺战的激烈程度。 <a href="https://techcrunch.com" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-08-11-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
