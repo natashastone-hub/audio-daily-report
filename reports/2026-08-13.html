@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-08-13</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-08-13</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年8月13日 (周四) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">11</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.10206" target="_blank">Edge Phoneme Recognition for Children's Speech through Age-Aware Training</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-11</span><span>👥 Joel Walsh et al.</span></div>
+      <div class="abstract">儿童语音音素识别长期受训练数据稀缺和儿童语音独特特征困扰。作者在音素检测竞赛中发现，训练轻量模型同时预测学习者年龄和音素序列，使得仅 94M 参数的模型在目标 DrivenData 分布上超越 WavLM Large（317M）模型，CER 与 90 倍参数的竞赛集成模型相差仅约 0.04。由此构建了可在现代手机上运行的 PhonemeTrainer 应用，为儿童语音 ASR 和发音辅助应用提供了边缘部署能力。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Children's Speech</span><span class="tag">Edge Computing</span><span class="tag">Phoneme Recognition</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.10206" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.10206" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.10573" target="_blank">Learning Relative Audio Effects Representations via Contrastive Distance Learning</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-11</span><span>👥 Xinlu Liu et al.</span></div>
+      <div class="abstract">音频效果（Fx）表示学习在智能音乐制作中扮演关键角色。现有方法依赖干声或多近干参考，但真实录音不可避免包含麦克风、房间声学和前序处理。提出 RelFx，一种无需干参考的对比学习框架，用双分支孪生编码器结合交叉注意力和差分门控融合推断参考与效果处理片段间的共享效果变换，并提出反对称融合变体实现双向效果编码。在 Fx 风格迁移标准评测上取得 SOTA。</div>
+      <div class="tags"><span class="tag">Audio Effects</span><span class="tag">Representation Learning</span><span class="tag">Contrastive Learning</span><span class="tag">ISMIR 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.10573" target="_blank">🔗 arXiv</a> <a href="https://relative-fx.github.io" target="_blank">🔗 Project</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.09032" target="_blank">Speaker Role and Language Diarization for Analyzing Multilingual Interviews for Language Proficiency of Older Adults</a></h4>
+      <div class="meta"><span>📅 2026-08-10</span><span>👥 Anfeng Xu, Tiantian Feng, Kevin Huang, Shrikanth Narayanan et al.</span></div>
+      <div class="abstract">开发基于 Whisper 的说话人角色与语言分类（diarization）系统，自动提取受访者语音并刻画多语言访谈中的语言使用情况。语言自适应 Whisper 显著提升低资源和相近印度语种的语言分类性能；受访者语音占比和预期语言使用是语言能力评级的有力预测因子，且全自动 diarization 输出下预测性能几乎不被削弱，展示了面向可扩展语言能力评估的潜力。</div>
+      <div class="tags"><span class="tag">Speaker Diarization</span><span class="tag">Language Diarization</span><span class="tag">Multilingual</span><span class="tag">Whisper</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.09032" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.09032" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.09451" target="_blank">Dynamic Clustering for Cross-Segment Permutation Alignment in Long Speech Separation</a></h4>
+      <div class="meta"><span>📅 2026-08-10</span><span>👥 Yuzhu Wang et al.</span></div>
+      <div class="abstract">长语音分离通常采用分段-分离-拼接范式，难点在于预测跨段置换。提出一种免训练的动态聚类方法，利用说话人嵌入参考池，通过当前段嵌入与参考池的余弦相似度预测置换，并保留最具代表性的说话人嵌入更新参考池。作为即插即用的后处理模块，在密集和稀疏长语音场景下均优于现有方法，尤其在长话段间隔的稀疏场景表现突出，并对未知说话人数目估计误差表现出鲁棒性。</div>
+      <div class="tags"><span class="tag">Speech Separation</span><span class="tag">Speaker Diarization</span><span class="tag">Long-form</span><span class="tag">MLSP 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.09451" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.09451" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.09767" target="_blank">Structured Phonological Representations for Audio-Articulatory rtMRI Speech Classification</a></h4>
+      <div class="meta"><span>📅 2026-08-10</span><span>👥 Abner Hernandez et al.</span></div>
+      <div class="abstract">实时 MRI 使观察言语过程中的声道发音成为可能，但将发音模式映射到语音音位类别仍具挑战。研究音频模型 PhonoQ 的 Conformer 表示是否能辅助音频-发音建模。跨未见语音和未见说话人设定下，PhonoQ 特征在方式、位置、清浊、元音高度/后位等音位目标上提升 macro-F1，也改善细粒度 39 音素分类，表明同步音频的音位信息可部分迁移到发音模型。</div>
+      <div class="tags"><span class="tag">Articulatory</span><span class="tag">rtMRI</span><span class="tag">Phonological Features</span><span class="tag">SLT 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.09767" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.09767" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.09425" target="_blank">Neural Array-Generic Direction-of-Arrival Estimation Exploiting Array Transfer Functions</a></h4>
+      <div class="meta"><span>📅 2026-08-10</span><span>👥 Mikko Heikkinen et al.</span></div>
+      <div class="abstract">方向到达（DoA）估计是多通道音频处理的关键组件，但多数深度学习方法受限于训练所用麦克风阵列，对未见设备泛化差。提出一种阵列通用神经 DoA 估计框架，利用实测或仿真的复方向阵列传递函数（ATF）匹配真实多麦克风设备，通过独立卷积编码器处理多通道频谱图和 ATF 元数据并用交叉注意力融合。在混响和扩散噪声下的 2D/3D 定位任务中泛化到未见阵列，性能无明显下降。</div>
+      <div class="tags"><span class="tag">DoA Estimation</span><span class="tag">Array Processing</span><span class="tag">Multichannel Audio</span><span class="tag">IWAENC 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.09425" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.09425" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.11026" target="_blank">Morphing and Assessing in a Unified Piano Performance Space</a></h4>
+      <div class="meta"><span>📅 2026-08-11</span><span>👥 Jinwen Zhou et al.</span></div>
+      <div class="abstract">提出 MAJEPPA，一个自监督框架，学习覆盖从初学者练习到大师音乐会录制全技能谱系的钢琴演奏表示，并整理约 4000 条跨六个专业级别和六种录音语境的标注数据集。通过联合目标——下一 token 预测学习不同技能水平的乐谱条件演奏生成，InfoNCE 和监督对比损失对齐抽象乐谱与演奏表示——在统一框架内生成并理解演奏。引入 EVPMR 基准评估学习到的表示质量。</div>
+      <div class="tags"><span class="tag">Music Performance</span><span class="tag">Self-Supervised</span><span class="tag">Representation Learning</span><span class="tag">Piano</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.11026" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.11026" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.10360" target="_blank">A knowledge-based performance-to-prompt compiler for real-time Arabic maqam accompaniment with a streaming text-to-music model</a></h4>
+      <div class="meta"><span>📅 2026-08-11</span><span>👥 Jiaxin Du et al.</span></div>
+      <div class="abstract">阿拉伯木卡姆音乐（微分音、调式、基于装饰性呼应的应答）是生成音乐模型最欠缺服务的传统之一。提出 MazzikaAI，一个知识驱动系统，以自然语言作为实时控制环的执行器——将实时 MIDI、手势和推断和声编译为持续更新的文本提示，操控未经微调的流式生成器 Google Lyria RealTime。系统嵌入六种核心木卡姆的专业知识，实现亚秒级按键到可听更新的实时响应，显著增加离格四分音内容。</div>
+      <div class="tags"><span class="tag">Music Generation</span><span class="tag">Real-Time</span><span class="tag">Arabic Maqam</span><span class="tag">Co-Creation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.10360" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.10360" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.10979" target="_blank">Pitch Contour Tokenization using VQ-VAE and Its Application on Korean Traditional Music Analysis</a></h4>
+      <div class="meta"><span>📅 2026-08-11</span><span>👥 Dasaem Jeong et al.</span></div>
+      <div class="abstract">音乐计算分析常依赖离散表示，但许多音乐传统围绕连续音高运动组织，难以切分为类音符单元。用 VQ-VAE 直接从无标注音频学习局部音高轮廓模式词汇表，将固定长度轮廓段量化为有限码本，并通过候选时序与音高域变换下的最优对齐训练以保持 token 稳定性。应用于韩国传统音乐，学到的 token 无监督地恢复了专家定义的 sigimsae 类别，并对应 pansori 的两种主要调式。</div>
+      <div class="tags"><span class="tag">Music Tokenization</span><span class="tag">VQ-VAE</span><span class="tag">Pitch Contour</span><span class="tag">ISMIR 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.10979" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.10979" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.08985" target="_blank">Cross-Instrument MIDI Velocity Estimation via Differentiable SoundFont Proxies</a></h4>
+      <div class="meta"><span>📅 2026-08-10</span><span>👥 Zhanhong He et al.</span></div>
+      <div class="abstract">许多音乐数据集含 MIDI 音符但缺少可靠力度，默认取常量，钢琴域以外尤其成问题。从钢琴训练的力度估计器出发，将目标乐器自适应重构为预测渲染器条件化的力度，使渲染匹配演奏音频动态。提出可微 SoundFont 代理（Diff-SFProxy），通过音符级响度相关声学参数监督力度而非波形重建，将梯度聚焦于力度相关行为。在钢琴和吉他上证明跨乐器力度估计有效。</div>
+      <div class="tags"><span class="tag">MIDI</span><span class="tag">Velocity Estimation</span><span class="tag">Music</span><span class="tag">ISMIR 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.08985" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.08985" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.10980" target="_blank">Measuring Cross-Cultural Style Diffusion Through Era Classification: US and Korean Popular Music</a></h4>
+      <div class="meta"><span>📅 2026-08-11</span><span>👥 Dasaem Jeong et al.</span></div>
+      <div class="abstract">流行音乐在全球流通的同时被本地化重释，但跨文化风格扩散过程鲜有量化。提出时代分类框架衡量榜单文化间的时间对齐。在 Billboard Hot 100 音频上从头训练的 CNN 分类器应用于韩国 Melon 榜单歌曲，发现 1960-1980 年代韩国榜单歌曲被一致推断为更早的 Billboard 时代（中位数约 4-5 年），1990 年代差距减半至 2-3 年并保持，反映了全球流行风格的本地采纳与渐进同步。</div>
+      <div class="tags"><span class="tag">Music Analysis</span><span class="tag">Era Classification</span><span class="tag">Cross-Cultural</span><span class="tag">ISMIR 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.10980" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.10980" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-08-13') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

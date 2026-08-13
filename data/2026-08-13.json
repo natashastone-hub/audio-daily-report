@@ -1,0 +1,115 @@
+{
+  "papers": [
+    {
+      "title": "Edge Phoneme Recognition for Children's Speech through Age-Aware Training",
+      "url": "https://arxiv.org/abs/2608.10206",
+      "date": "2026-08-11",
+      "authors": "Joel Walsh et al.",
+      "abstract": "儿童语音音素识别长期受训练数据稀缺和儿童语音独特特征困扰。作者在音素检测竞赛中发现，训练轻量模型同时预测学习者年龄和音素序列，使得仅 94M 参数的模型在目标 DrivenData 分布上超越 WavLM Large（317M）模型，CER 与 90 倍参数的竞赛集成模型相差仅约 0.04。由此构建了可在现代手机上运行的 PhonemeTrainer 应用，为儿童语音 ASR 和发音辅助应用提供了边缘部署能力。",
+      "tags": ["ASR", "Children's Speech", "Edge Computing", "Phoneme Recognition"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.10206"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.10206"}]
+    },
+    {
+      "title": "Speaker Role and Language Diarization for Analyzing Multilingual Interviews for Language Proficiency of Older Adults",
+      "url": "https://arxiv.org/abs/2608.09032",
+      "date": "2026-08-10",
+      "authors": "Anfeng Xu, Tiantian Feng, Kevin Huang, Shrikanth Narayanan et al.",
+      "abstract": "开发基于 Whisper 的说话人角色与语言分类（diarization）系统，自动提取受访者语音并刻画多语言访谈中的语言使用情况。语言自适应 Whisper 显著提升低资源和相近印度语种的语言分类性能；受访者语音占比和预期语言使用是语言能力评级的有力预测因子，且全自动 diarization 输出下预测性能几乎不被削弱，展示了面向可扩展语言能力评估的潜力。",
+      "tags": ["Speaker Diarization", "Language Diarization", "Multilingual", "Whisper"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.09032"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.09032"}]
+    },
+    {
+      "title": "Dynamic Clustering for Cross-Segment Permutation Alignment in Long Speech Separation",
+      "url": "https://arxiv.org/abs/2608.09451",
+      "date": "2026-08-10",
+      "authors": "Yuzhu Wang et al.",
+      "abstract": "长语音分离通常采用分段-分离-拼接范式，难点在于预测跨段置换。提出一种免训练的动态聚类方法，利用说话人嵌入参考池，通过当前段嵌入与参考池的余弦相似度预测置换，并保留最具代表性的说话人嵌入更新参考池。作为即插即用的后处理模块，在密集和稀疏长语音场景下均优于现有方法，尤其在长话段间隔的稀疏场景表现突出，并对未知说话人数目估计误差表现出鲁棒性。",
+      "tags": ["Speech Separation", "Speaker Diarization", "Long-form", "MLSP 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.09451"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.09451"}]
+    },
+    {
+      "title": "Structured Phonological Representations for Audio-Articulatory rtMRI Speech Classification",
+      "url": "https://arxiv.org/abs/2608.09767",
+      "date": "2026-08-10",
+      "authors": "Abner Hernandez et al.",
+      "abstract": "实时 MRI 使观察言语过程中的声道发音成为可能，但将发音模式映射到语音音位类别仍具挑战。研究音频模型 PhonoQ 的 Conformer 表示是否能辅助音频-发音建模。跨未见语音和未见说话人设定下，PhonoQ 特征在方式、位置、清浊、元音高度/后位等音位目标上提升 macro-F1，也改善细粒度 39 音素分类，表明同步音频的音位信息可部分迁移到发音模型。",
+      "tags": ["Articulatory", "rtMRI", "Phonological Features", "SLT 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.09767"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.09767"}]
+    },
+    {
+      "title": "Neural Array-Generic Direction-of-Arrival Estimation Exploiting Array Transfer Functions",
+      "url": "https://arxiv.org/abs/2608.09425",
+      "date": "2026-08-10",
+      "authors": "Mikko Heikkinen et al.",
+      "abstract": "方向到达（DoA）估计是多通道音频处理的关键组件，但多数深度学习方法受限于训练所用麦克风阵列，对未见设备泛化差。提出一种阵列通用神经 DoA 估计框架，利用实测或仿真的复方向阵列传递函数（ATF）匹配真实多麦克风设备，通过独立卷积编码器处理多通道频谱图和 ATF 元数据并用交叉注意力融合。在混响和扩散噪声下的 2D/3D 定位任务中泛化到未见阵列，性能无明显下降。",
+      "tags": ["DoA Estimation", "Array Processing", "Multichannel Audio", "IWAENC 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.09425"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.09425"}]
+    },
+    {
+      "title": "Learning Relative Audio Effects Representations via Contrastive Distance Learning",
+      "url": "https://arxiv.org/abs/2608.10573",
+      "date": "2026-08-11",
+      "authors": "Xinlu Liu et al.",
+      "abstract": "音频效果（Fx）表示学习在智能音乐制作中扮演关键角色。现有方法依赖干声或多近干参考，但真实录音不可避免包含麦克风、房间声学和前序处理。提出 RelFx，一种无需干参考的对比学习框架，用双分支孪生编码器结合交叉注意力和差分门控融合推断参考与效果处理片段间的共享效果变换，并提出反对称融合变体实现双向效果编码。在 Fx 风格迁移标准评测上取得 SOTA。",
+      "tags": ["Audio Effects", "Representation Learning", "Contrastive Learning", "ISMIR 2026"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.10573"}, {"label": "Project", "url": "https://relative-fx.github.io"}]
+    },
+    {
+      "title": "Morphing and Assessing in a Unified Piano Performance Space",
+      "url": "https://arxiv.org/abs/2608.11026",
+      "date": "2026-08-11",
+      "authors": "Jinwen Zhou et al.",
+      "abstract": "提出 MAJEPPA，一个自监督框架，学习覆盖从初学者练习到大师音乐会录制全技能谱系的钢琴演奏表示，并整理约 4000 条跨六个专业级别和六种录音语境的标注数据集。通过联合目标——下一 token 预测学习不同技能水平的乐谱条件演奏生成，InfoNCE 和监督对比损失对齐抽象乐谱与演奏表示——在统一框架内生成并理解演奏。引入 EVPMR 基准评估学习到的表示质量。",
+      "tags": ["Music Performance", "Self-Supervised", "Representation Learning", "Piano"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.11026"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.11026"}]
+    },
+    {
+      "title": "A knowledge-based performance-to-prompt compiler for real-time Arabic maqam accompaniment with a streaming text-to-music model",
+      "url": "https://arxiv.org/abs/2608.10360",
+      "date": "2026-08-11",
+      "authors": "Jiaxin Du et al.",
+      "abstract": "阿拉伯木卡姆音乐（微分音、调式、基于装饰性呼应的应答）是生成音乐模型最欠缺服务的传统之一。提出 MazzikaAI，一个知识驱动系统，以自然语言作为实时控制环的执行器——将实时 MIDI、手势和推断和声编译为持续更新的文本提示，操控未经微调的流式生成器 Google Lyria RealTime。系统嵌入六种核心木卡姆的专业知识，实现亚秒级按键到可听更新的实时响应，显著增加离格四分音内容。",
+      "tags": ["Music Generation", "Real-Time", "Arabic Maqam", "Co-Creation"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.10360"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.10360"}]
+    },
+    {
+      "title": "Pitch Contour Tokenization using VQ-VAE and Its Application on Korean Traditional Music Analysis",
+      "url": "https://arxiv.org/abs/2608.10979",
+      "date": "2026-08-11",
+      "authors": "Dasaem Jeong et al.",
+      "abstract": "音乐计算分析常依赖离散表示，但许多音乐传统围绕连续音高运动组织，难以切分为类音符单元。用 VQ-VAE 直接从无标注音频学习局部音高轮廓模式词汇表，将固定长度轮廓段量化为有限码本，并通过候选时序与音高域变换下的最优对齐训练以保持 token 稳定性。应用于韩国传统音乐，学到的 token 无监督地恢复了专家定义的 sigimsae 类别，并对应 pansori 的两种主要调式。",
+      "tags": ["Music Tokenization", "VQ-VAE", "Pitch Contour", "ISMIR 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.10979"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.10979"}]
+    },
+    {
+      "title": "Cross-Instrument MIDI Velocity Estimation via Differentiable SoundFont Proxies",
+      "url": "https://arxiv.org/abs/2608.08985",
+      "date": "2026-08-10",
+      "authors": "Zhanhong He et al.",
+      "abstract": "许多音乐数据集含 MIDI 音符但缺少可靠力度，默认取常量，钢琴域以外尤其成问题。从钢琴训练的力度估计器出发，将目标乐器自适应重构为预测渲染器条件化的力度，使渲染匹配演奏音频动态。提出可微 SoundFont 代理（Diff-SFProxy），通过音符级响度相关声学参数监督力度而非波形重建，将梯度聚焦于力度相关行为。在钢琴和吉他上证明跨乐器力度估计有效。",
+      "tags": ["MIDI", "Velocity Estimation", "Music", "ISMIR 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.08985"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.08985"}]
+    },
+    {
+      "title": "Measuring Cross-Cultural Style Diffusion Through Era Classification: US and Korean Popular Music",
+      "url": "https://arxiv.org/abs/2608.10980",
+      "date": "2026-08-11",
+      "authors": "Dasaem Jeong et al.",
+      "abstract": "流行音乐在全球流通的同时被本地化重释，但跨文化风格扩散过程鲜有量化。提出时代分类框架衡量榜单文化间的时间对齐。在 Billboard Hot 100 音频上从头训练的 CNN 分类器应用于韩国 Melon 榜单歌曲，发现 1960-1980 年代韩国榜单歌曲被一致推断为更早的 Billboard 时代（中位数约 4-5 年），1990 年代差距减半至 2-3 年并保持，反映了全球流行风格的本地采纳与渐进同步。",
+      "tags": ["Music Analysis", "Era Classification", "Cross-Cultural", "ISMIR 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.10980"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.10980"}]
+    }
+  ],
+  "news": []
+}
