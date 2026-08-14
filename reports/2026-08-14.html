@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-08-14</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-08-14</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年8月14日 (周五) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">11</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.12951" target="_blank">VoxAudio: Vocalized Audio Synthesis via Multi-Reward Autoregressive Flow Matching</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-13</span><span>👥 Wenxiang Guo, Changhao Pan, Ziyue Jiang, Fei Wu, Zhou Zhao</span></div>
+      <div class="abstract">「带语音的音频合成」（vocalized audio synthesis）任务要求在环境声景中嵌入清晰可懂的语音，支撑播客、视频配音等应用。现有文本到音频（T2A）系统要么把引述语音降级为不可懂的喃喃声，要么交给独立 TTS 后再混音，失去对语音何时出现以及如何与场景交互的控制。作者提出 VoxAudio，一个因果自回归流匹配模型：架构上用逐块因果分解 + 每块独立噪声水平，支持滑动窗口流式推理与 KV 缓存，并通过随机化块边界预训练支持任意块粒度推理；偏好层用多奖励 Negative-aware FineTuning（NFT）联合优化语义保真、语言准确度、美学质量与时间定位；数据层构建 VoxCorpus（大规模带逐字转录与时间区间的语料）与 VoxBench（带区间标注的基准与时间定位指标）。在四个基准上验证了有效性与效率，代码与 demo 已开源（https://voxaudio.github.io）。</div>
+      <div class="tags"><span class="tag">Audio Generation</span><span class="tag">TTS</span><span class="tag">Flow Matching</span><span class="tag">Vocalized Audio</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.12951" target="_blank">🔗 arXiv</a> <a href="https://voxaudio.github.io" target="_blank">🔗 Project</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.11650" target="_blank">Confucius4-TTS: Transcript-Free Cross-Lingual Zero-Shot TTS with a Learnable Speaker Encoder</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-12</span><span>👥 Huaxuan Wang et al. (Netease Youdao)</span></div>
+      <div class="abstract">多数 zero-shot TTS 在推理时依赖音频提示的转录文本，而真实场景中的参考音频往往无转录，这限制了跨语言声音克隆。作者提出 Confucius4-TTS，支持 14 种语言的多语种 zero-shot TTS，无需参考音频转录即可做语内和跨语言克隆。采用两阶段架构：基于 LLM 的 text-to-semantic（T2S）模块用可学习说话人编码器从自监督语音表征中提取音色特征，条件流匹配的 semantic-to-acoustic（S2A）模块将语义 token 转为梅尔谱。在 CV3-Eval 跨语言基准上六方向平均 WER 3.73%，内部跨语言集上人类评测平均排名最优。代码、权重与 demo 已开源（网易有道）。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Cross-Lingual</span><span class="tag">Zero-shot Voice Cloning</span><span class="tag">Flow Matching</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.11650" target="_blank">🔗 arXiv</a> <a href="https://github.com/netease-youdao/Confucius4-TTS" target="_blank">🔗 GitHub</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.11590" target="_blank">CookVoice: Unified Framework for Style Controllable Multi-Modal Human Voice Generation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-12</span><span>👥 Haowei Lou et al.</span></div>
+      <div class="abstract">人声生成在语音合成、歌声合成、声音克隆与编辑上进展迅速，但现有系统多为特定任务设计，依赖任务专用架构、控制信号或自回归解码，精细可控性与推理效率受限。作者提出 CookVoice，统一的多模态、多风格、多任务人声生成框架：将人声解耦为内容（content）、韵律（prosody）、风格（style）三要素，用灵活对齐策略把文本、风格、韵律控制信号映射到频谱帧级。可支持 TTS、文本到歌声、风格可控、声音模仿、音色转换与编辑等任务。仅 43.51M 参数、少至 4 个 ODE 步即可达到与大规模基线相当的性能。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Singing Voice</span><span class="tag">Voice Conversion</span><span class="tag">Unified Model</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.11590" target="_blank">🔗 arXiv</a> <a href="https://haoweilou.github.io/CookVoice/" target="_blank">🔗 Demo</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.11329" target="_blank">Qwen-MusicAVQA-7B: A Multimodal Model for Music Audio-Visual QA</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-11</span><span>👥 Maryam Dehdashti et al.</span></div>
+      <div class="abstract">给视觉语言模型加音频能力的常见做法是训练或适配大型全模态系统。作者证明在音乐音视问答（AVQA）上，轻量方案同样高效：Qwen-MusicAVQA-7B 用学习到的线性投影，把冻结的 Whisper 编码器接到 Qwen2-VL-7B-Instruct 上——同一冻结编码器经独立投影分别处理视频配乐与 TTS 朗读的问题，语言模型通过预训练自注意力融合视觉帧、音乐与问题音频，无需专用融合网络。在 MUSIC-AVQA 上 7,402 题可用视频子集准确率达 96.0%，核心发现是下游准确率取决于音频表征保留的细粒度局部时序信息。全部适配仅需单张 A100 80GB 约 5 小时。</div>
+      <div class="tags"><span class="tag">Music Understanding</span><span class="tag">Audio-Visual QA</span><span class="tag">Multimodal</span><span class="tag">Whisper</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.11329" target="_blank">🔗 arXiv</a> <a href="https://github.com/MKDehdashti/Qwen2-vl-audio" target="_blank">🔗 GitHub</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.13101" target="_blank">CASA: Content-Acoustic Speaking Assessment with Speech Encoder and Large Language Model</a></h4>
+      <div class="meta"><span>📅 2026-08-13</span><span>👥 Nhan Phan, Ilona Lähteenmäki, Anna von Zansen, Olli-Pekka Pauna, Yaroslav Getman, Tamás Grósz, Mikko Kurimo</span></div>
+      <div class="abstract">自动口语评估（ASA）越来越多采用多模态语音大模型评估学习者的口语表现，但现有研究对声学与内容信息如何贡献于预测、以及性能稳定性缺乏分析。作者提出 CASA，一个更简单的架构，结合 Whisper-medium 与 Qwen3.5-2B，取得 SOTA 的同时提供了语音表达与内容之间更可解释的分离。在 Speak & Improve Corpus 2025 上 RMSE 达 0.358，改进此前最优，所用推理参数量约为其一半。架构通用，无需结构改动即可适配其他 ASA 语料，并依赖三个手工流畅度特征。代码已开源（aalto-speech/casa）。</div>
+      <div class="tags"><span class="tag">Speaking Assessment</span><span class="tag">Speech LLM</span><span class="tag">ASR</span><span class="tag">Interpretability</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.13101" target="_blank">🔗 arXiv</a> <a href="https://github.com/aalto-speech/casa" target="_blank">🔗 GitHub</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.11755" target="_blank">MUSECRITIC: Learning Multi-Aspect Song Rewards through Natural-Language Aesthetic Critiques</a></h4>
+      <div class="meta"><span>📅 2026-08-12</span><span>👥 Jiabao Zhuang, Changhao Jiang, Hanchen Wang et al. (Fudan FudanNLP)</span></div>
+      <div class="abstract">长时歌曲生成模型在时长、结构与声学复杂度上持续提升，可靠的审美奖励模型对对齐人类偏好越来越重要。作者提出 MUSECRITIC，一个半标量奖励模型：生成覆盖五个审美维度的自然语言评论，并以此为中间表征预测连续奖励分数。采用两阶段训练（教师模型先提供高质量评论做监督微调，再自生成评论做奖励学习，缓解训练与推理分布偏移）。在 200 首 SongEval 歌曲上 macro MSE 从 0.2875 降至 0.2316，LCC/SRCC/Kendall's tau 达 0.9068/0.8838/0.7178；域外 Music Arena 733 对偏好准确率 71.35% 最高。配合 GRPO 提升 Muse-0.6B 全部九项审美指标。代码开源。</div>
+      <div class="tags"><span class="tag">Music Generation</span><span class="tag">Reward Model</span><span class="tag">Preference Learning</span><span class="tag">GRPO</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.11755" target="_blank">🔗 arXiv</a> <a href="https://github.com/WuqnEl/MuseCritic" target="_blank">🔗 GitHub</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.12715" target="_blank">HybridSB-MoE: Dual-Domain Schrödinger Bridges with Scene-Adaptive Expert Routing for Speech Enhancement</a></h4>
+      <div class="meta"><span>📅 2026-08-13</span><span>👥 Zhengyi Lu, Aswini Sivakumar, Jie Hu, Yao Qiang</span></div>
+      <div class="abstract">生成式语音增强面临三个缺口：谱模型捕捉谐波结构但常破坏相位、波形模型保留相位但丢失谐波、Schrödinger Bridge 缩短了从噪声到干净语音的传输但推理代价与训练脱节。作者提出 HybridSB-MoE 双域框架：非对称不确定性融合（谱路径用专家分歧捕捉认知不确定性、波形桥用随机动力学建模偶然方差，非对称融合让混合权重适配不同误差域）；跨五类架构原型的 top-k=2 异构 MoE 路由；以及桥采样误差在 2-Wasserstein 距离上的 K^{-α} 离散化界（定理 1）。在 VoiceBank+DEMAND 上优于扩散与 SB 基线。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Schrödinger Bridge</span><span class="tag">MoE</span><span class="tag">Generative</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.12715" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.12703" target="_blank">Alignment Drift in Single-Model Speculative Decoding for ASR: Mechanism, Correction, and Cost</a></h4>
+      <div class="meta"><span>📅 2026-08-13</span><span>👥 Xinyu Wang, Huapeng Zhou, Ziyu Zhao, Silin Meng, Ke Bai, Dongming Shen, Xiao-Wen Chang, Alex Smola</span></div>
+      <div class="abstract">推测解码让便宜的 draft 每步提出多个 token、由目标模型一次校验以加速生成。在单模型形式下，draft 是挂在目标模型上的轻量模块而非独立模型。将这一设计用于 ASR 引入新问题：draft 每步都能读整段音频，但其提案随独立运行而变差。作者分析音频位置漂移的机理与代价，测试两种修正方案——从校验注意力读取音频位置引导下一轮 draft、以及 AnchorDraft（训练时教 draft 追踪音频位置而不改推理图）。结果表明 ASR 自推测依赖 token 预测、音频位置追踪与 draft 成本三者的协同。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Speculative Decoding</span><span class="tag">Inference Acceleration</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.12703" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.12615" target="_blank">Drive-to-Music: Context-Aware Generative Audio for In-Vehicle Experiences</a></h4>
+      <div class="meta"><span>📅 2026-08-12</span><span>👥 Cosmin Dragoiu, Nooshin Nabizadeh</span></div>
+      <div class="abstract">车内音乐可作为自适应接口，提升驾驶体验、注意力与幸福感。作者提出 Drive-to-Music，一个上下文感知系统，从多模态驾驶信号实时生成音乐：利用行车记录图像与车辆遥测提取场景语义与驾驶上下文，映射为高层音乐描述子，条件化生成音频模型产出与情境对齐的配乐。架构结合感知与生成组件，将视觉与运动学输入转化为结构化音乐属性并低延迟合成音频，支持驾驶条件演变时的平滑过渡，并融入约束控制与安全检查。展示了车载实时上下文音乐生成的可行性。</div>
+      <div class="tags"><span class="tag">Music Generation</span><span class="tag">Context-Aware</span><span class="tag">Real-Time</span><span class="tag">Automotive</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.12615" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.12536" target="_blank">Evaluating Pre-trained Speech Encoders for Spontaneous Speech Detection and Out of Domain Synthetic Speech Generalisation in Indic Languages</a></h4>
+      <div class="meta"><span>📅 2026-08-12</span><span>👥 Varun Rai, Pavan Kumar J, Sujith Pulikodan, Nihar Desai</span></div>
+      <div class="abstract">Transformer 模型在区分自发/照稿语音以及自然/合成语音上表现强，但此前仅限资源丰富语言且未扩展到印度语族。作者评估五种冻结 Transformer 编码器（AST、Vaani-FastConformer、Wav2vec2、Whisper、BEATs）在 22 种印度语言上的表现，并做多系统 TTS 泛化实验。质心分析揭示：域外泛化由训练系统与未见 TTS 嵌入的邻近度预测，而非其与自然语音的距离——这一发现对真实场景深度伪造检测器的训练数据选择有直接意义。</div>
+      <div class="tags"><span class="tag">Speaker Verification</span><span class="tag">Deepfake Detection</span><span class="tag">Indic Languages</span><span class="tag">Synthetic Speech</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.12536" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.12099" target="_blank">RT-SEMamba: Real-Time Speech Enhancement Mamba via Progressive Knowledge Distillation</a></h4>
+      <div class="meta"><span>📅 2026-08-12</span><span>👥 Rong Chao, Sung-Feng Huang, Moreno La Quatra, Sabato Marco Siniscalchi, Wen-Huang Cheng, Szu-Wei Fu, Yu Tsao</span></div>
+      <div class="abstract">作者提出 RT-SEMamba，一个全因果语音增强模型，基于因果时频 Mamba 块。相比依赖增长型 KV 缓存的 Transformer，Mamba 每层传播固定大小的循环状态，实现内存与带宽高效的长时推理。进一步引入渐进知识蒸馏策略，把 8 层教师压缩为浅层 1 层学生。在 Voicebank-DEMAND 上 8 层模型以 25ms 算法延迟约束达 3.32 PESQ，蒸馏后的 1 层学生从 3.06 提升到 3.18 PESQ，同时保持相同 RTF，实现 2.75x 加速。已入选 INTERSPEECH 2026。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Mamba</span><span class="tag">Knowledge Distillation</span><span class="tag">Real-Time</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.12099" target="_blank">🔗 arXiv</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>Google Gemini 3.7 Flash 正式 GA（含 Live 实时语音能力）</h4>
+      <p>Gemini API 更新日志显示，2026 年 8 月 13 日 Gemini 3.7 Flash 正式全面可用（GA）。Gemini 3.7 Flash 定位高性价比的编码与智能体主力模型，延续 Gemini Live 系列实时语音/音频多模态能力，与 GPT-Live、SeedRealtime 等全双工语音模型形成新一轮实时语音交互竞争。 <a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>OpenAI 开始向 Web 端推广 Advanced Voice Mode</h4>
+      <p>OpenAI 更新日志显示，Advanced Voice Mode 开始向 Web 端逐步推出（此前已在移动端与桌面 App 上线），用户现可在浏览器中直接开启实时语音对话。此举将 ChatGPT Voice 的实时语音入口扩大至网页端，进一步降低语音 AI 的使用门槛。 <a href="https://releases.sh/openai" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-08-14') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
