@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-08-15</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-08-15</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年8月15日 (周六) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">8</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.11593" target="_blank">Luna-TTS Family Technical Report</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-12</span><span>👥 Feng Yin, Shuai Shi, Junjie Zheng, Kechenying Zhou, Yiqiu Wang, Chenyang He, Qiuhua Jiang, Mengxiao Bi, Yanmin Qian, Mingxin Chen, Xun Gong, et al.</span></div>
+      <div class="abstract">现代 TTS 被自回归（AR）codec 语言模型主导，左到右解码带来随句长增长、前缀误差累积，以及对 RVQ token 网格强加人为生成顺序的延迟问题。作者提出 Luna-TTS 系列——基于扩散语言模型的 TTS，在 100 万小时中英日韩四语言语音上预训练。通过在预训练 AR 文本 LLM 上做渐进式注意力适配（因果→双向→块因果），衍生出共享 tokenizer/数据管线/0.6B 骨干的两个变体。Luna-TTS 完全非自回归：固定并行步数生成整张 RVQ token 网格，zero-shot 声音克隆与语音编辑以 infilling 形式原生涌现；Luna-TTS Realtime 由持续训练得到，以 32 帧 codec（1.28s）为块自回归、块内并行去噪，支持 KV 缓存块级生成与增量音频输出，端到端 RTF 0.0240、首块本地延迟 41.6ms。在 Seed-TTS-Eval 四项指标全面最优（test-zh 0.73 CER/79.7 SIM），CV3-Eval 开放域中英错误率最低，情感与非言语发声控制多项指标领先商业系统。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Zero-shot Voice Cloning</span><span class="tag">Diffusion LM</span><span class="tag">Real-Time</span><span class="tag">Multilingual</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.11593" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.11804" target="_blank">Unified Audio Scene Generation via LLM-Driven Autoregressive Flow Matching</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-12</span><span>👥 Xingwei Sun et al. (Xiaomi)</span></div>
+      <div class="abstract">同时融合语音、音乐与音效生成连贯音频场景仍是一大挑战。现有方法用冻结解耦的文本编码器接独立音频解码器，限制跨模态优化并导致语音清晰度差。作者提出 MiDashengLM-Gen，一个端到端框架，把预训练 LLM 与逐 token 条件流匹配耦合，实现自回归、变长混合音频场景生成，为首个端到端训练的统一文本到音频模型。在 Seed-TTS 基准上英文 WER 从 12.15% 降至 2.79%，逼近专用 TTS（1.24%）；多语言 WER 亦具竞争力，MECAT 混合音频质量保持领先。代码与权重已开源（小米）。</div>
+      <div class="tags"><span class="tag">Audio Generation</span><span class="tag">TTS</span><span class="tag">Flow Matching</span><span class="tag">LLM</span><span class="tag">Unified Model</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.11804" target="_blank">🔗 arXiv</a> <a href="https://github.com/xiaomi-research/midashenglm-gen" target="_blank">🔗 GitHub</a> <a href="https://xingws.github.io/midashenglm-gen-demo/" target="_blank">🔗 Demo</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.11898" target="_blank">On-Policy Self-Distillation for Multi-Dialect ASR: Mastering Dialects, Retaining Mandarin</a></h4>
+      <div class="meta"><span>📅 2026-08-12</span><span>👥 Shuiyuan Wang et al.</span></div>
+      <div class="abstract">大规模 ASR 模型已具备较强的普通话识别能力并有一定方言识别能力，但真实场景方言精度仍受限。直接方言适配会降方言 CER，却可能抬高普通话 CER。作者研究如何在提升多方言识别的同时不损害普通话。采用持续预训练（CPT）+ 方言监督微调（SFT）+ On-Policy 自蒸馏（OPSD）三阶段：OPSD 让学生模型在自己的解码前缀上训练、由以参考转录为特权上下文的冻结教师提供软 token 级目标，替代方言数据上的硬交叉熵，既保留普通话能力又精化方言识别。以 Qwen3-ASR-1.7B 为基座在公开与内部普通/方言测试集验证：OPSD 提升方言识别而不抬高普通话 CER，而持续 teacher-forcing 微调则会导致普通话 CER 上升。将开源权重与评测脚本。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Multi-Dialect</span><span class="tag">Self-Distillation</span><span class="tag">Qwen3-ASR</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.11898" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.12082" target="_blank">Rethinking Language Model-Based Generative Speech Enhancement in the Latent Space of a Neural Audio Codec</a></h4>
+      <div class="meta"><span>📅 2026-08-12</span><span>👥 Yihui Fu et al.</span></div>
+      <div class="abstract">基于语言模型的语音增强（SE）近年借助神经音频编码器（NAC）隐空间特征快速兴起。作者首先提出统一框架，覆盖基于离散/连续 NAC 隐特征的六种主流生成式 SE 范式：离散/连续自回归（D/CAR）、离散/连续非自回归（D/CNAR）、离散扩散（DDiff）与连续流匹配（CFM）。首次在统一实验设置下对这六种范式做公平全面的对比评估，并提出在重建语音上加辅助损失的微调策略。在 URGENT 2025 挑战集上训练评测，连续域范式全面优于离散域，整体最佳为 CNAR；所提辅助损失微调可一致提升六种范式的 DNSMOS/NISQA/PESQ/POLQA。IWAENC 2026 接收。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Generative</span><span class="tag">Audio Codec</span><span class="tag">Survey</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.12082" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.13425" target="_blank">Motor, Cognitive, or Corpus? What Survives Cross-Lingual Transfer in Speech-Based Parkinson's Disease Detection</a></h4>
+      <div class="meta"><span>📅 2026-08-13</span><span>👥 Serli Kopar et al.</span></div>
+      <div class="abstract">自监督（SSL）语音表征在单一语料内的帕金森病（PD）检测上表现强劲，但不清楚它们捕捉的是疾病相关特征还是语料特异混杂因素——尤其多数 SSL 骨干仅在健康语音上预训练。作者对九个 SSL 语音骨干做逐层分析，用低容量逻辑回归探针跨三种语言评估，逐步引入参与者身份、录音条件、语言与病理的分布偏移。得到两个关键发现：一是层选择高度依赖语料（最优表征层主要由源数据集而非 SSL 架构决定）；二是迁移的判别信号缺乏病理特异性（训练检测 PD 的分类器对目标语料中的 PD 与痴呆语音给出相似高分）。这些结果凸显语音病理识别模型临床落地前必须解决的关键局限。</div>
+      <div class="tags"><span class="tag">Health</span><span class="tag">Pathology Detection</span><span class="tag">SSL Representations</span><span class="tag">Cross-Lingual</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.13425" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.12034" target="_blank">The SLT 2026 SmartGlasses Challenge: Benchmarking Egocentric Multi-Talker Speech Recognition and Understanding with Audio-Language Models</a></h4>
+      <div class="meta"><span>📅 2026-08-12</span><span>👥 Dehui Gao, Zhixian Zhao, Zhennan Lin, Yujie Liao, Yuhang Dai, Yike Zhu, et al.</span></div>
+      <div class="abstract">LLM 与多模态 LLM 的进展为可穿戴语音接口创造新机遇，智能眼镜提供以佩戴者为中心的连续音频感知与辅助平台。但该设置下的语音识别与理解因动态声学条件、说话人重叠以及佩戴者中心录音几何带来的空间歧义而极具挑战。作者推出 IEEE SLT 2026 SmartGlasses Challenge，含双人对话理解与多方会议理解两个赛道，联评时间戳说话人归因 ASR（TSA-ASR）与口语理解（SLU）。基于 106 小时四通道、714 会话的自中心语音真实场景语料。结果表明重度说话人重叠仍是影响 TSA-ASR 性能的主因，而副语言声学理解对当前音频语言模型在复杂 SLU 设置下仍属难点。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">SLU</span><span class="tag">Audio-Language Model</span><span class="tag">Egocentric</span><span class="tag">Benchmark</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.12034" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.11627" target="_blank">Deep Learning Based Relative Transfer Matrix Estimation for Multiple Sources and Multiple Microphones</a></h4>
+      <div class="meta"><span>📅 2026-08-12</span><span>👥 Oshan Yalegama et al.</span></div>
+      <div class="abstract">相对传输矩阵（ReTM）作为多接收多声源相对传输函数的泛化，在噪声环境语音增强中表现优异，通过多通道录音协方差矩阵估计 ReTM 至今是唯一可行方案。本文研究基于深度学习的 ReTM 估计，提出三种监督学习框架（时域与短时频域卷积网络 + LSTM 循环网络）。实验表明相较协方差法，所提模型在五个客观指标上均取得更准确的 ReTM 估计，且语音增强性能与基线相当。Interspeech 2026 接收。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Array Signal Processing</span><span class="tag">Deep Learning</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.11627" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.11587" target="_blank">Robust Multi-Tier Infant-Centered Audio Understanding with Whisper via Structured Speaker Conditioning</a></h4>
+      <div class="meta"><span>📅 2026-08-12</span><span>👥 Xulin Fan et al.</span></div>
+      <div class="abstract">婴幼儿中心自然录音因标注稀缺、信噪比低、跨家庭域偏移而极具挑战。作者提出家庭条件化多层级音频打标器：LoRA 微调的 Whisper 编码器 + 轻量目标说话人感知 Transformer，支持长上下文推理与逐帧跨层级预测。引入序列级平滑损失提升时间连贯性，并提出分解式说话人 token 设计（共享层级 token + 学习到的家庭专属偏移）降低家庭偏置、促进泛化。实现对家庭环境全天候录音的高效婴幼儿中心音频打标。Interspeech 2026 接收。</div>
+      <div class="tags"><span class="tag">Audio Understanding</span><span class="tag">Whisper</span><span class="tag">Healthcare</span><span class="tag">Long-context</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.11587" target="_blank">🔗 arXiv</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>NVIDIA 开源 NemotronLabs VoiceChat 11B：首个支持工具调用的开源全双工语音模型</h4>
+      <p>NVIDIA 在 Hugging Face 开源 110 亿参数全双工语音转语音模型 VoiceChat 11B，为首个在单一统一模型中同时实现听、说与工具调用的开源权重模型，补上了开源语音智能体生态中缺失的一环（近期持续发酵的动态，未见 24 小时内重大更新）。 <a href="https://blog.mushroom.cv/blog/nvidia-voicechat-11b-full-duplex-tool-calling-speech-agent/" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-08-15') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
