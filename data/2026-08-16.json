@@ -1,0 +1,78 @@
+{
+  "papers": [
+    {
+      "title": "VoxAudio: Vocalized Audio Synthesis via Multi-Reward Autoregressive Flow Matching",
+      "url": "https://arxiv.org/abs/2608.12951",
+      "date": "2026-08-13",
+      "authors": "Wenxiang Guo et al.",
+      "abstract": "提出 VoxAudio，一个因果自回归流匹配模型，解决「在环境声景中嵌入清晰语音」的合成难题（播客制作、视频配音等场景）。架构上采用分块因果分解 + 每块独立噪声水平，配合随机块边界预训练，支持滑动窗口流式推理与 KV 缓存、可变时长输出；偏好层面用多奖励 Negative-aware FineTuning (NFT) 联合优化语义保真度、语言准确率、美学质量与时间接地；数据层面构建 VoxCorpus（带逐字转录与时间区间的语音声景语料）与 VoxBench（区间标注基准）。在通用音频、语音与统一发声音频四个基准上验证有效性与效率，代码与 demo 已开源。",
+      "tags": ["Audio Generation", "Vocalized Audio", "Flow Matching", "TTS", "Open Source"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.12951"},
+        {"label": "Demo", "url": "https://voxaudio.github.io"}
+      ]
+    },
+    {
+      "title": "Dual-Domain Schrödinger Bridges with Scene-Adaptive Expert Routing for Speech Enhancement",
+      "url": "https://arxiv.org/abs/2608.12715",
+      "date": "2026-08-13",
+      "authors": "Yao Qiang et al.",
+      "abstract": "针对生成式语音增强的三大缺口（谱模型破坏相位、波形模型丢失谐波、Schrödinger Bridge 推理成本与训练松耦合），提出双域框架 HybridSB-MoE：谱路径经专家分歧捕捉认知不确定性，波形桥经随机动力学建模偶然方差，非对称融合权重自适应误差机制；异构 MoE（top-k=2 路由、五种不同架构原型）；并给出离散化误差界（Theorem 1，2-Wasserstein 距离下 K 步采样误差以 K^-α 收敛）。在 VoiceBank+DEMAND 上以相同步数预算优于扩散/SB 基线，并与一致性蒸馏少步方法相当。",
+      "tags": ["Speech Enhancement", "Schrödinger Bridge", "MoE", "Generative"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.12715"}
+      ]
+    },
+    {
+      "title": "Alignment Drift in Single-Model Speculative Decoding for ASR: Mechanism, Correction, and Cost",
+      "url": "https://arxiv.org/abs/2608.12703",
+      "date": "2026-08-13",
+      "authors": "Xinyu Wang et al.",
+      "abstract": "研究单模型推测解码（self-speculation）应用于 ASR 时的「对齐漂移」问题：草稿模块每步都能读取整段音频，但独立运行时间越长提案越差——访问不等于定位。作者揭示音频位置跟踪是核心瓶颈（最难条件下后期草稿中位误差达 21 帧，而验证注意力仅 2 帧），并提出两种纠偏方案：从验证注意力读取音频位置引导下一轮草稿、以及 AnchorDraft（训练期教会草稿跟踪音频位置、不改推理图）。实验表明 ASR 自推测性能取决于 token 预测、音频位置跟踪与草稿成本三者。",
+      "tags": ["ASR", "Speculative Decoding", "Inference Acceleration"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.12703"}
+      ]
+    },
+    {
+      "title": "Drive-to-Music: Context-Aware Generative Audio for In-Vehicle Experiences",
+      "url": "https://arxiv.org/abs/2608.12615",
+      "date": "2026-08-12",
+      "authors": "Cosmin Dragoiu et al.",
+      "abstract": "提出 Drive-to-Music，一个上下文感知的车载实时音乐生成系统：利用行车记录仪图像与车辆遥测提取场景语义与驾驶上下文，映射为高层音乐描述符，条件化生成音频模型输出与情境对齐的配乐。架构融合感知与生成组件，将视觉与运动学输入转化为结构化音乐属性并低延迟合成音频，支持驾驶条件变化时的平滑过渡，并引入约束控制与安全检查保证部署鲁棒性。验证了汽车场景下实时上下文感知音乐生成的可行性。",
+      "tags": ["Audio Generation", "Context-Aware", "Automotive", "Music"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.12615"}
+      ]
+    },
+    {
+      "title": "Evaluating Pre-trained Speech Encoders for Spontaneous Speech Detection and Out of Domain Synthetic Speech Generalisation in Indic Languages",
+      "url": "https://arxiv.org/abs/2608.12536",
+      "date": "2026-08-12",
+      "authors": "Sujith Pulikodan et al.",
+      "abstract": "在 22 种印度语言上系统评估五个冻结 Transformer 语音编码器（AST、Vaani-FastConformer、Wav2vec2、Whisper、BEATs）区分自发/照读语音与自然/合成语音的能力，并做多系统 TTS 泛化实验。语言隔离探测揭示语言可区分性与自发检测之间依赖编码器的权衡；质心分析表明域外泛化由训练系统与未见 TTS 嵌入的邻近度决定（而非距自然语音的距离），对真实场景深度伪造检测器的训练数据选择有直接启示。",
+      "tags": ["ASR", "Deepfake Detection", "Self-supervised", "Multilingual", "Indic Languages"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.12536"}
+      ]
+    },
+    {
+      "title": "CASA: Content-Acoustic Speaking Assessment with Speech Encoder and Large Language Model",
+      "url": "https://arxiv.org/abs/2608.13101",
+      "date": "2026-08-13",
+      "authors": "Nhan Phan et al.",
+      "abstract": "提出 CASA，结合 Whisper-medium 与 Qwen3.5-2B 的自动口语评测架构，在说话流畅度（delivery）与内容（content）之间实现更可解释的分离，达到 SOTA 性能。在 Speak & Improve Corpus 2025 上取得 RMSE 0.358，超越此前最佳成绩同时仅用约一半推理参数，且无需结构改动即可适配其他 ASA 语料。通过消融与多次重复实验，系统分析了声学与内容信息的单独及互补贡献，并展示 LLM 推理在免训练内容校验中的潜力。拟投 ICASSP 2027，代码开源。",
+      "tags": ["Speaking Assessment", "LLM", "Whisper", "Qwen", "Multimodal"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.13101"}
+      ]
+    }
+  ],
+  "news": []
+}
