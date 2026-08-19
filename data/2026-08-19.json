@@ -1,0 +1,136 @@
+{
+  "papers": [
+    {
+      "title": "Iterative Self-Learning for Expressive Text-to-Speech Synthesis",
+      "url": "https://arxiv.org/abs/2608.15910",
+      "date": "2026-08-18",
+      "authors": "Nicholas Sanders et al.",
+      "abstract": "表现力 TTS 依赖显式标签来提供可解释控制，但大规模获取这些标签成本高昂。本文提出 Iterative Self-Learning (ISL) 框架，基于 Invert-Classify 方法从冻结生成模型逆推离散表现力标签，迭代地对未标注语音打伪标签、重训练、逐步提升标签质量和合成效果。在词级重音和句级情绪两个任务上的实验表明，ISL 显著提升伪标签准确率与合成质量，在数据极度稀缺场景下逼近全监督性能。",
+      "tags": ["TTS", "Expressive", "Self-Learning", "Low-Resource"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.15910"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.15910"}]
+    },
+    {
+      "title": "CineDub: Scaling End-to-End Video Dubbing to Multi-Speaker Dialogues with Coherent Sound Effects",
+      "url": "https://arxiv.org/abs/2608.15734",
+      "date": "2026-08-18",
+      "authors": "Yuxuan Jiang et al.",
+      "abstract": "野外视频配音长期受限于分层管线脆弱、以及整体式方法在多说话人场景下时间对齐弱和说话人-语句歧义两大矛盾。本文提出 CineDub，一个统一扩散模型，无需人脸裁剪或说话人日志即可从未裁剪视频直接实现精确的多说话人对话配音。核心是 Implicitly-Coupled Holistic Conditioning (ICHC) 范式，并进一步扩展到联合语音与音频生成。同时发布 CineDub-Multi 与 CineDub-SA 两个野外基准，达到 SOTA 效果。",
+      "tags": ["Video Dubbing", "S2ST", "Multi-Speaker", "Diffusion"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.15734"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.15734"}]
+    },
+    {
+      "title": "Speaker-Normalized Semantic Speech Tokens via Iterative S2U-T2U Refinement",
+      "url": "https://arxiv.org/abs/2608.16235",
+      "date": "2026-08-18",
+      "authors": "Hanlin Zhang et al.",
+      "abstract": "语义语音 token 应保留语言内容同时抑制说话人与时长相关的变化。本文提出 Iterative Semantic Token Purification (ISTP)，交替执行语音到单元 (S2U) 和文本到单元 (T2U) 训练，用文本可预测性引导，逐步对齐两个 token 生成器，使 token 空间偏向可从文本恢复的信息。实验显示生成的 token 保留足够内容以支持高可懂度的声音转换与 TTS，并显著提升跨说话人一致性、减少说话人信息泄露。",
+      "tags": ["Semantic Tokens", "Voice Conversion", "TTS", "Speaker Normalization"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.16235"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.16235"}]
+    },
+    {
+      "title": "Cached LLM Probability Retrieval for Speech Recognition",
+      "url": "https://arxiv.org/abs/2608.16023",
+      "date": "2026-08-18",
+      "authors": "Sheng Li et al.",
+      "abstract": "LLM 通过语言先验增强 ASR，但直接重打分需评估每个 N-best 假设、代价高昂。本文提出『缓存 LLM 概率检索』：离线查询本地教师 LLM 获取上下文-目标对的 next-token 概率，识别时通过缓存查找、回退策略和可选打分使用。该方法免训练、无需修改声学模型。实验表明其无需训练即在 39 个设置中 28 个超越单遍 ASR，是轻量高效的 ASR 适配方案。",
+      "tags": ["ASR", "LLM", "Rescoring", "Training-Free"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.16023"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.16023"}]
+    },
+    {
+      "title": "Separate First, Then Associate: A Two-Stage Approach for Real-World Audio-Visual Speech Enhancement",
+      "url": "https://arxiv.org/abs/2608.14812",
+      "date": "2026-08-18",
+      "authors": "Tongtao Ling et al.",
+      "abstract": "音视觉语音增强 (AVSE) 在模拟数据集上表现强劲，但在真实世界录音中性能大幅下降。针对 ISCSLP 2026 Real-World AVSE 挑战，本文提出解耦的『先分离后关联』两阶段方法：先由纯音频模型分离多说话人混合信号，再由音频-视觉 CLIP 模型通过跨模态相似度匹配识别目标说话人的面部视频对应的分离信号。在挑战数据集上验证了方法的有效性。",
+      "tags": ["AVSE", "Speech Enhancement", "Audio-Visual", "Challenge"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.14812"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.14812"}]
+    },
+    {
+      "title": "Listen, Reason, and Segment: Aligning LALMs with Editorial Judgment for Media Chapterization",
+      "url": "https://arxiv.org/abs/2608.16539",
+      "date": "2026-08-18",
+      "authors": "Tony Alex et al.",
+      "abstract": "大型音频语言模型 (LALM) 在标准基准上进展迅速，但在媒体工作流中的实际部署仍有限。本文聚焦音频章节化任务，提出 AudioChaps 后训练框架，通过 Group Relative Policy Optimization (GRPO) 结合思维链推理对齐端到端 LALM，并构建了三个数据集。GRPO 无需 SFT 冷启动即比 SOTA 的 Audio-Flamingo-3-Think 平均 F1 提升 33 点，最终模型 AudioChaps-R1 提升达 49 点，代码与数据集将开源。",
+      "tags": ["Audio Language Model", "LALM", "Chapterization", "GRPO"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.16539"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.16539"}]
+    },
+    {
+      "title": "DuplexGen: Decoupling Content, Timing, and Acoustics for Synthetic Dialogue Speech",
+      "url": "https://arxiv.org/abs/2608.16053",
+      "date": "2026-08-18",
+      "authors": "Sheng Li et al.",
+      "abstract": "现有对话合成管线通常先生成对话内容，再用手工标记或时序规则插入打断、重叠和反馈词，使对话时序是预设而非交互驱动的。本文提出 DuplexGen 框架，显式解耦内容、时序与声学：LLM 生成脚本，两个全双工对话模型实时边听边说执行脚本让时序自然涌现，最后高保真 TTS 在不改变时序的前提下重新渲染。在患者-临床医生对话语料上验证，生成对话动态更接近真实对话。",
+      "tags": ["Dialogue Synthesis", "Full-Duplex", "TTS", "Conversational"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.16053"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.16053"}]
+    },
+    {
+      "title": "A Benchmark for Instruction-Aware Speech Retrieval",
+      "url": "https://arxiv.org/abs/2608.16203",
+      "date": "2026-08-18",
+      "authors": "Chen-An Li et al.",
+      "abstract": "现有语音检索系统依赖固定相似度匹配，无法适应多样化的用户意图。本文引入 INSPIRE，首个面向指令感知语音检索的基准，自然语言指令动态指定相关标准（语义内容、说话人身份、语体、环境声及其组合）。评估四类检索范式发现，尚无方法能鲁棒处理所有检索意图，凸显了对统一指令感知语音检索架构的需求。",
+      "tags": ["Speech Retrieval", "Instruction-Aware", "Benchmark", "Interspeech 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.16203"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.16203"}]
+    },
+    {
+      "title": "A Novel Binaural Cue Preservation Loss for DNN-Based Binaural Speech Enhancement",
+      "url": "https://arxiv.org/abs/2608.16299",
+      "date": "2026-08-18",
+      "authors": "Jayteerth Amble et al.",
+      "abstract": "助听器双耳语音增强需降噪同时保留空间定位所需的双耳线索，但 DNN 方法常扭曲左右信号关系。本文提出两种新颖的双耳线索保持损失：直接惩罚左右频谱关系的重建误差损失，以及联合建模 ILD 与 IPD 的双耳线索损失。实验表明两个损失在保持强降噪性能的同时降低了掩蔽引入的失真，后者在 ILD 保持上尤其优于基线。",
+      "tags": ["Binaural", "Speech Enhancement", "Hearing Aid", "IWAENC 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.16299"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.16299"}]
+    },
+    {
+      "title": "DiffM2A: Geometry-adaptive Ambisonic Encoding for Sparse Microphone Arrays Using Physics-Informed Diffusion",
+      "url": "https://arxiv.org/abs/2608.16240",
+      "date": "2026-08-18",
+      "authors": "Wen Zhang et al.",
+      "abstract": "高阶 Ambisonic 编码对稀疏不规则的穿戴式麦克风阵列而言病态。本文提出 DiffM2A，一个几何自适应条件扩散框架，其 Geometry-Adaptive Spherical Harmonic Projection (GASHP) 前端构建边界感知的球谐转向函数并做能量归一化模态投影，双分支 Elucidated Diffusion Model 估计复 Ambisonic 系数。在模拟房间声学和真实 LOCATA 录音上，DiffM2A 在信号保真度、空间一致性、双耳线索保持上都优于基线与神经基线。",
+      "tags": ["Ambisonic", "Spatial Audio", "Diffusion", "Microphone Array"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.16240"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.16240"}]
+    },
+    {
+      "title": "Contrastive Learning with Variational Regularization for Multi-Session EEG-to-Speech Decoding",
+      "url": "https://arxiv.org/abs/2608.16360",
+      "date": "2026-08-18",
+      "authors": "Tomoaki Mizuno et al.",
+      "abstract": "从非侵入式脑电 (EEG) 重建所听语音因低信噪比和跨会话变异性而困难。本文利用同一刺激在不同会话的重复 EEG 响应作为对比学习的正样本对，并引入变分正则化保持编码器表示空间宽广。在日本 EEG 数据集上的实验表明，会话不变策略与变分正则化结合可降低字符错误率 (CER)，同时保持梅尔谱重建保真度，实现会话不变的表征。",
+      "tags": ["EEG-to-Speech", "Decoding", "Contrastive Learning", "APSIPA 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.16360"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.16360"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "OpenAI GPT-Live-1 全双工语音模型持续走热：第三代语音系统深度解析",
+      "url": "https://www.happyrock.cloud/zh-cn/blog/2026-08-05_openai_gpt_live_full_duplex_voice_deep_dive_speech_reasoning_decoupling/",
+      "summary": "GPT-Live 是 OpenAI 第三代语音系统，采用全双工架构，可同时监听与说话、实时打断与同声传译，核心突破在于彻底抛弃沿袭多年的『轮流说话』(turn-based) 架构，转向原生全双工，并将语音层与推理层解耦。"
+    },
+    {
+      "title": "腾讯 PCG 联合深圳河套学院全双工语音大模型获 ACL 2026 杰出论文奖",
+      "url": "https://km.woa.com/articles/show/665955",
+      "summary": "腾讯 PCG 与深圳河套学院合作的论文《Hierarchical Acoustic-Semantic Modeling: Modality Separation and Semantic Coherence for Full-Duplex SLMs》获 ACL 2026 Outstanding Paper Award，本届 ACL 投稿 12148 篇仅评选 18 篇杰出论文。"
+    },
+    {
+      "title": "Google Gemini 3.7 Flash 正式 GA；DeepMind 或裁员超三分之一",
+      "url": "https://ai.google.dev/gemini-api/docs/changelog",
+      "summary": "Google 于 8 月 13 日宣布 Gemini 3.7 Flash 全面可用 (GA)，在代码调试等编程任务上优于上一版本；同时有报道称 Google DeepMind 或裁员超三分之一，短期不再追逐旗舰模型。"
+    },
+    {
+      "title": "SigmaOS 发布 VibeVoice：微软开源前沿语音 AI 模型家族",
+      "url": "https://txtmix.com/posts/tech/vibevoice-microsoft-voice-ai/",
+      "summary": "VibeVoice 是微软开源的前沿语音 AI 模型家族，包含 ASR 语音识别（支持 60 分钟长音频、50+ 语言）和 Realtime 实时语音能力，被视为开源语音 AI 的重要进展。"
+    }
+  ]
+}
