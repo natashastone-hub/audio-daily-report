@@ -1,0 +1,35 @@
+{
+  "papers": [
+    {
+      "title": "DNN-Based Frequency-Dependent Estimation of Speech, Music, and Noise Power in Acoustic Mixtures for Hearing-Aid Scene Analysis",
+      "url": "https://arxiv.org/abs/2608.17482",
+      "date": "2026-08-19",
+      "authors": "Thomas Haubner, Nina Kiessling, Christoph Hoog Antink, Henning Puder",
+      "abstract": "声学场景分析对助听器信号处理算法适应当前听觉环境至关重要，但现有 SOTA 系统通常依赖多个独立估计器（场景分类、VAD、SNR 估计等），计算复杂度高且未能利用相关任务间的依赖关系。本文提出一种统一且可解释的声学场景表示，将观测到的混合频谱分解为语音、音乐和噪声功率分量。具体通过一个因果低复杂度深度神经网络估计时频相关的功率占比，多个下游声学场景分析指标原则上可由此经简单后处理推导得到。作者以 VAD 作为代表性下游任务验证该表示，性能与 SOTA 估计器相当，同时提供显著更丰富的场景描述。",
+      "tags": ["Hearing Aid", "Scene Analysis", "Speech Enhancement", "VAD"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.17482"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.17482"}]
+    },
+    {
+      "title": "A Multiplication-Free Feature Extractor for Signal Classification: Keyword Spotting Case Study",
+      "url": "https://arxiv.org/abs/2608.17108",
+      "date": "2026-08-19",
+      "authors": "Authors",
+      "abstract": "提出一种极低复杂度的特征提取器 next iRDT，用于关键词识别 (KWS)。与广泛使用的 MFCC 或 CNN 自适应提取器不同，该算法无乘法运算，仅使用简单、高能效的算术算子。由于语音命令 KWS 是 TinyML 平台的典型应用，需要低复杂度的信号分类链路，作者以此作为案例研究来评估复杂度与功能性能。适当调优后，iRDT 在 Google KWS 12 类数据集上与基于 MFCC 或 CNN 提取器的基线分类器达到相似精度，配合另一分类器可达 94.7% 验证准确率。CPU 处理时间比 MFCC 至少小一个数量级，硬件占用极低，非常适合超低功耗边缘设备，代码与演示已公开。",
+      "tags": ["Keyword Spotting", "TinyML", "Edge AI", "Feature Extraction"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.17108"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.17108"}]
+    },
+    {
+      "title": "Emotion Across Speech and Faces: Shared Affective Mechanisms in Multimodal Foundation Models",
+      "url": "https://arxiv.org/abs/2608.17102",
+      "date": "2026-08-19",
+      "authors": "Luqi Sun, Björn Schuller, Berrak Sisman",
+      "abstract": "现代多模态基础模型 (MFM) 在语音、视觉、语言融合感知（含情绪识别）上进展迅速，但尚不清楚它们是通过共享的情感功能单元还是模态特异性通路来识别语音与面部情绪。作者在 Gemma-4-12B-it、MiniCPM-o-4.5、Qwen2.5-Omni-7B 三个 MFM 中探索情绪敏感神经元 (ESN)——选择性关联情绪类别的稀疏解码器神经元。以语音情绪识别和面部表情识别为互补探针，识别声学与视觉 ESN。视觉 ESN 具有因果意义：失活会选择性损害相关面部情绪识别，而调控其激活则选择性增强该情绪识别。声学与视觉 ESN 还表现出情绪匹配的重叠和相似的层级分布，表明跨语音和面部的情感表征存在部分结构对齐。跨模态干预揭示了双向因果迁移。该工作为 MFM 中情感功能单元的跨模态激活级分析提供了首批证据之一。",
+      "tags": ["Multimodal", "Emotion Recognition", "Speech Emotion", "Interpretability"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.17102"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.17102"}]
+    }
+  ],
+  "news": []
+}
