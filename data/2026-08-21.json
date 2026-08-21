@@ -1,0 +1,46 @@
+{
+  "papers": [
+    {
+      "title": "Geometric Iterative Retrieval for Neural Audio Codec Resynthesis",
+      "url": "https://arxiv.org/abs/2608.19141",
+      "date": "2026-08-19",
+      "authors": "Leo Schmidt-Traub, Frédéric Berdoz, Luca A. Lanzendörfer, Roger Wattenhofer",
+      "abstract": "基于残差向量量化 (RVQ) 的神经音频编解码器已成为 token 化通用音频生成的主流离散表示，但从粗粒度 codec token 重建高质量音频仍是开放问题，且制约着所有依赖此类 token 生成系统的保真度上限。此前工作将重合成框定为离散 token 预测与连续回归之间的二选一。作者认为这种二分法是不完备的，提出「几何迭代检索」范式：利用 RVQ 层级结构本身作为连续码本空间中的天然迭代分解。该方法并非在离散词表上分类或回归到单一目标向量，而是在码本的几何空间中进行对比检索。在语音与音乐的编解码恢复任务上的实验表明，该方法相比单次 token 预测和单步回归基线均有提升。",
+      "tags": ["Neural Audio Codec", "RVQ", "Audio Generation", "Resynthesis"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.19141"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.19141"}]
+    },
+    {
+      "title": "Computational Features for Symbolic Melody Analysis",
+      "url": "https://arxiv.org/abs/2608.19061",
+      "date": "2026-08-19",
+      "authors": "David M. Whyatt, Peter M. C. Harrison",
+      "abstract": "本文研究从符号化编码旋律中提取音乐理论与心理学特征的通用问题。作者回顾了现有旋律特征提取工具箱，枚举其特征并整理为统一分类法，然后描述了一个新的 Python 软件库，以简洁的包形式实现所有这些特征。作者在 Essen 民歌集上演示组合特征集，训练一系列风格分类模型，用于回答特征集的可解释性与维度等关键问题。结果显示完整特征集取得优异的分类精度，一个八维因子分析解提供了有前景的可解释性改进。新的工具箱以开源 Python 包 melody-features 发布，可广泛用于音乐分析、音乐心理学与音乐信息检索等应用。",
+      "tags": ["Music Information Retrieval", "Symbolic Melody", "Open Source", "Feature Extraction"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.19061"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.19061"}]
+    },
+    {
+      "title": "Finetuning Strategies for Querying Sounds by Vocal Imitation",
+      "url": "https://arxiv.org/abs/2608.19174",
+      "date": "2026-08-19",
+      "authors": "Aditya Bhattacharjee, Christos Plachouras, Sungkyun Chang, Emmanouil Benetos",
+      "abstract": "该技术报告描述了作者在 AES AIMLA 2025 Challenge「通过声音模仿检索音效」赛道上的获奖方案。作者研究了两种互补的微调策略：基于冻结预训练 CED 编码器的对比学习，以及使用 MobileNetV3 编码器、配合半难负样本 (semi-hard negatives) 的联合对比-三元组学习。报告为存档目的进行了更新，纳入了挑战结束后披露的细节。",
+      "tags": ["Sound Retrieval", "Vocal Imitation", "Contrastive Learning", "Audio Retrieval"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.19174"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.19174"}]
+    },
+    {
+      "title": "FM Synthesizer Audio-Parameter Shared Embeddings",
+      "url": "https://arxiv.org/abs/2608.18226",
+      "date": "2026-08-18",
+      "authors": "David Braun et al.",
+      "abstract": "给定目标音色，找到最接近复现它的合成器预置仍是声音设计中的核心问题。现有方法将合成参数视为扁平向量，丢弃了产生音频的信号路由与参数交互。作者做出两点贡献：其一，为学习包含信号路由的参数表示，设计了一个图神经网络，其消息传递结构模仿 FM 信号处理；其二，将 SLAP 的多模态目标适配为学习音频与 FM 合成器参数的联合嵌入，从而实现从图库中检索预置。作者聚焦于 Yamaha DX7，其六个相同的正弦算子按 32 种路由拓扑之一交互。图编码器的消息传递权重在所有节点与层间共享，可处理任意规模的拓扑。当所有拓扑在训练中可见时，DX7-GNN 与两个基线均取得强音频到预置检索效果；当部分拓扑留作测试时，DX7-GNN 以最少参数量大幅超越两个基线，消融进一步支持「在参数编码器中模仿 FM 信号流可改进对未见拓扑的泛化」这一结论。",
+      "tags": ["Sound Synthesis", "FM Synthesis", "Graph Neural Network", "Preset Retrieval", "DAFx 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.18226"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.18226"}]
+    }
+  ],
+  "news": [],
+  "note": "2026-08-21 早间版。过去 24 小时（8/20 09:30 至 8/21 09:34 CST）arxiv eess.AS 无新增 v1 论文（8/20 批次显示 3 条均为 cross-list 交叉收录，实际 v1 提交为 8/18 或更早）；cs.SD 8/20 批次共 12 条，其中 5 条非 cross-list 新论文，经核验 3 篇 v1 为 8/19（19141、19061、19174，昨日早报未覆盖，本次补录），1 篇 19141 为音频编解码重合成亮点，1 篇 18226 (DAFx 2026) v1 为 8/18 此前未覆盖、亦补录。前沿新闻必搜重磅关键词（OpenAI GPT-Live / voice model、Google Gemini voice、full-duplex speech model、语音模型发布、real-time voice AI）均未命中 24 小时内发布内容。"
+}
