@@ -1,0 +1,26 @@
+{
+  "papers": [
+    {
+      "title": "FireRedTTS3: Unified Speech Generation and Editing with Semantically Enriched Speech Representations",
+      "url": "https://arxiv.org/abs/2608.17492",
+      "date": "2026-08-21",
+      "authors": "Xiaohongshu FireRed Team",
+      "abstract": "小红书 FireRed 团队发布的新一代语音生成与编辑模型，用一个模型打通三大能力：多语言、多方言的零样本音色克隆（24 种语言、21 种中文方言），用自然语言描述即可定制声音设计，以及「哪里不满意改哪里」的精准语音编辑。核心是 RedAE 连续语音表示：训练时引入一个冻结的语义教师（FireRedAudio 音频理解模型的 encoder），在 tokenizer 阶段就把语义蒸馏进连续表示中，从源头抑制连续自回归生成中最头疼的「误差累积/音色漂移」问题，且推理阶段不带来额外成本。基于轻量的 LLM-DiT 框架（Qwen3-1.7B 初始化），分 Base（多语言克隆）与 Instruct（统一克隆/设计/编辑，先规划再合成）两个版本。在 Seed-TTS-Eval、MiniMax-MLS-Test、InstructTTSEval、Ming-Freeform-Audio-Edit 四大公开评测集上全面领先。",
+      "tags": ["TTS", "Voice Cloning", "Speech Editing", "Voice Design", "LLM-DiT", "Zero-shot"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.17492"},
+        {"label": "GitHub", "url": "https://github.com/FireRedTeam/FireRedTTS3"},
+        {"label": "Demo", "url": "https://fireredteam.github.io/demos/firered_tts_3/"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "小红书 FireRedTTS3 发布：一个模型搞定音色克隆、声音设计与语音编辑",
+      "url": "https://finance.sina.com.cn/tech/roll/2026-08-21/doc-ininzprc1594198.shtml",
+      "summary": "小红书 FireRed 团队今日（2026-08-21）正式发布新一代语音生成与编辑模型 FireRedTTS3，用同一个模型打通语音三大能力：多语言多方言零样本音色克隆、自然语言「描述」定制声音设计、以及「指哪改哪」的精准语音编辑。克隆准确率与相似度在 Seed-TTS-Eval 达到双料第一（3.04% WER / 78.8% 相似度），24 种语言克隆同样双料第一（3.75% / 84.8%）。关键创新 RedAE 连续语音表示通过冻结语义教师做蒸馏，从源头抑制音色漂移，且不增加推理成本。"
+    }
+  ],
+  "note": "2026-08-21 午间版。时间窗口：08:01–14:01 CST。arxiv 的 eess.AS 与 cs.SD 类目最近 6 小时内无新增 v1 论文（最新提交仍为 8/20 UTC 晚批次，属于早间版已覆盖范围，下午暂未出现新论文）。重磅新闻必搜关键词（OpenAI GPT-Live / voice model、Google Gemini voice、full-duplex speech model、语音模型发布、real-time voice AI）中，仅「语音模型发布」命中今日新内容——小红书 FireRedTTS3 正式发布（arxiv 2608.17492，新闻今日曝光），其余关键词均命中 7 月/8 月上旬旧闻，未在 6 小时窗口内。"
+}
