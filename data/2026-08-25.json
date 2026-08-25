@@ -1,0 +1,116 @@
+{
+  "papers": [
+    {
+      "title": "Streaming Context-Biasing for Production-Efficient ASR Systems",
+      "url": "https://arxiv.org/abs/2608.21343",
+      "date": "2026-08-24",
+      "authors": "Vladimir Bataev et al.",
+      "abstract": "提出 TurboBias 2.0，一个面向生产环境的 Transducer 语音识别（ASR）高效短语偏置框架。在 GPU 加速 TurboBias 基础上扩展大小写不敏感偏置图和按流批量解码，使同一批次中每条语音可使用独立的个性化上下文偏置配置，支持多个用户同时进行个性化语境识别而互不干扰。支持流式与离线推理、贪心与束搜索解码，在保持低延迟和高吞吐的同时显著提升语境短语识别准确率。",
+      "tags": ["ASR", "Context Biasing", "Streaming", "Production"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.21343"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.21343"}]
+    },
+    {
+      "title": "Do SpeechLMs Hear Their Own Opinions? Diagnosing and Mitigating Previous-Belief Contamination in Streaming Emotion Understanding",
+      "url": "https://arxiv.org/abs/2608.20769",
+      "date": "2026-08-24",
+      "authors": "Haoyue Liu et al.",
+      "abstract": "揭示流式语音情感理解中的「先前信念污染」（PBC）问题：将模型上一时刻的预测作为上下文回灌会导致当前音频感知失真。在 CREMA-D-Stream 反事实诊断上，仅改变注入的历史情感标签即可使当前音频准确率从 72.50% 降至 30.42%，并翻转 65.69% 的预测。提出免训练框架 EmoUpdate，通过先验盲声学防火墙、证据收缩因果信念过滤器和闭式去污染算子分离当前感知与历史状态更新，在 4 个 SpeechLM 和 2 个流式情感基准上全面最优，S-BAcc 最高提升 69.71 分。",
+      "tags": ["SpeechLM", "Emotion Understanding", "Streaming", "Debiasing"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.20769"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.20769"}]
+    },
+    {
+      "title": "Learning Distortion-Aware Speech Quality Assessment through Explicit Distortion Localization",
+      "url": "https://arxiv.org/abs/2608.21176",
+      "date": "2026-08-24",
+      "authors": "Diqun Yan et al.",
+      "abstract": "针对语音质量评估中失真往往局部化、整体 MOS 只提供粗粒度监督的问题，首次构建带帧级失真标注的部分失真语音数据集，训练定位模型生成失真线索，并据此提出 DAMOS 框架，将失真定位信息融入 MOS 预测流程。在多个公开基准上持续优于现有方法，展现出强跨数据集泛化能力。",
+      "tags": ["Speech Quality Assessment", "MOS", "Distortion Localization"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.21176"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.21176"}]
+    },
+    {
+      "title": "Towards Efficient Diffusion-Based Speech Enhancement using Slimmable Networks",
+      "url": "https://arxiv.org/abs/2608.21188",
+      "date": "2026-08-24",
+      "authors": "Shrishti Saha Shetu et al.",
+      "abstract": "提出可瘦身（slimmable）扩散模型用于语音增强，在数据生成过程中自适应调整网络宽度以降低计算成本。通过贪心搜索优化网络宽度调度，在 PESQ 与 SI-SDR 等客观指标无显著下降的前提下，将计算复杂度降低最高 87.5%。",
+      "tags": ["Speech Enhancement", "Diffusion", "Efficiency"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.21188"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.21188"}]
+    },
+    {
+      "title": "Ultra-Low-Memory and Low-Complexity Speech Enhancement for Embedded Digital Signal Processors",
+      "url": "https://arxiv.org/abs/2608.21155",
+      "date": "2026-08-24",
+      "authors": "Shrishti Saha Shetu et al.",
+      "abstract": "提出 μNet，一个面向嵌入式 DSP 的超低内存、低复杂度、低延迟端到端语音增强网络：仅需 90KB 静态内存和 28 MMACs，支持低至 4ms 的算法延迟，性能可媲美同复杂度 SOTA 方法。兼容神经加速器，在 Cadence Tensilica HiFi 4/5 等消费级 DSP 平台支持完整整数运算。",
+      "tags": ["Speech Enhancement", "Embedded DSP", "Low Latency"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.21155"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.21155"}]
+    },
+    {
+      "title": "Training DeepFilterNet with Accurate Room Acoustic Simulations Improves Single-Channel Speech Enhancement",
+      "url": "https://arxiv.org/abs/2608.20971",
+      "date": "2026-08-24",
+      "authors": "Alessia Milo et al.",
+      "abstract": "研究合成房间脉冲响应（RIR）数据集的真实度如何影响 DeepFilterNet3 单通道语音增强训练。对比 DNS4 镜像源法（ISM）RIR 数据集与基于混合波场和几何声学仿真的高保真数据集，发现用更高保真数据训练可在客观指标上稳定小幅提升，并显著降低下游 ASR 词错误率（WER），证明提升合成声学训练数据的整体真实度能改善对未知实测环境的泛化（IWAENC 2026）。",
+      "tags": ["Speech Enhancement", "Room Acoustics", "DeepFilterNet"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.20971"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.20971"}]
+    },
+    {
+      "title": "A Regularized Block Diagonal RLS Algorithm for Acoustic Echo Cancellation",
+      "url": "https://arxiv.org/abs/2608.20693",
+      "date": "2026-08-24",
+      "authors": "Chenggang Zhang et al.",
+      "abstract": "针对 RLS 算法在自适应滤波（如声学回声消除 AEC）中收敛快但计算复杂度高、难以部署长滤波器的问题，提出正则化块对角 RLS（RBD-RLS）算法。通过将逆协方差矩阵近似为块对角结构，把更新过程拆分为子块的独立并行计算以降低复杂度，并对各子块施加 Tikhonov 正则化提升数值稳定性，在保持良好收敛的同时显著降低成本并具备实际场景鲁棒性。",
+      "tags": ["Acoustic Echo Cancellation", "Adaptive Filter", "RLS"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.20693"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.20693"}]
+    },
+    {
+      "title": "Building and Evaluating a Synthetic Bengali Speech Resource for Telecom Customer Care",
+      "url": "https://arxiv.org/abs/2608.20346",
+      "date": "2026-08-24",
+      "authors": "Kawshik Kumar Paul et al.",
+      "abstract": "发布面向电信客服场景的合成孟加拉语语音数据集，含 10,000 条音文对、约 26.82 小时 24kHz 语音，并以 CC-BY-4.0 许可开源至 Hugging Face。语音由 OmniVoice 声音克隆模式生成（女性参考录音、bfloat16、16 步扩散采样），并提供标准化文本字段用于 ASR/STT 训练评估。经领域微调 Whisper ASR 自动评测平均 WER 2.54%、CER 0.59%，展现良好的音文一致性。",
+      "tags": ["Speech Dataset", "Bengali", "ASR", "Voice Cloning"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.20346"}, {"label": "HuggingFace", "url": "https://huggingface.co/datasets/kawshikbuet17/bengali-telecom-customer-care-speech"}]
+    },
+    {
+      "title": "AudioWorldSim: Realistic Binaural Audio Datasets For World Models",
+      "url": "https://arxiv.org/abs/2608.21075",
+      "date": "2026-08-24",
+      "authors": "Luis Vitor Zerkowski et al.",
+      "abstract": "发布开源平台 AudioWorldSim，用于生成真实双耳音频数据集，推进基于音频的机器学习尤其是世界模型研究。作为 Meta SoundSpaces 2.0 的定制扩展，聚焦智能体随机导航的自动 rollout，并修复连续声音合成的关键实现问题，代码已开源以支持复现。",
+      "tags": ["Binaural Audio", "World Models", "Dataset", "Open Source"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.21075"}, {"label": "GitHub", "url": "https://github.com/Luizerko/AudioWorldSim"}]
+    },
+    {
+      "title": "A Factorial Ablation of a Speech-to-SFT Pipeline: Differential Effects on Data Quality and Downstream Transfer",
+      "url": "https://arxiv.org/abs/2608.20394",
+      "date": "2026-08-24",
+      "authors": "Wonsup Shin et al.",
+      "abstract": "对将语音转为监督微调（SFT）数据的工业级多阶段流水线进行首次逐阶段消融。设计可独立开关的转录精修（Phase 0）与 SFT 数据质量精修（Phase 2）的 2×2 因子实验，用韩语医疗/金融会议录音生成 QA 数据并微调 9 个模型（5 个 LLM 家族，2.4B-70B）。核心发现：在固定标准 SFT 配方下，QA 数据质量提升并未统一转化为下游 MCQA 增益，正向迁移集中在家族-领域对齐配对，揭示格式错配问题。作者开源样本、提示、代码与全部 SFT 检查点。",
+      "tags": ["Speech-to-SFT", "Data Pipeline", "LLM", "Ablation"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.20394"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.20394"}]
+    },
+    {
+      "title": "Self-Supervised Speech Representations Track Spoken Language Convergence to Adult Models in Infants and Children Who Are Deaf/Hard-of-Hearing",
+      "url": "https://arxiv.org/abs/2608.20396",
+      "date": "2026-08-24",
+      "authors": "Landon Choy et al.",
+      "abstract": "利用语音表征（HuBERT-BASE）直接从长时程儿童中心录音的声学信号中捕捉儿童语言向成人模式的收敛过程，无需详细转录和语言专业知识。对聋/重听儿童及其女性照护者（>925 小时观测）提取嵌入后发现，儿童-照护者的嵌入距离随听力年龄下降，且该距离度量与婴幼儿到学龄前的多项标准化言语语言指标相关，为可扩展、语言无关的儿童口语发展评估提供了路径（2026 ACL CDL Workshop）。",
+      "tags": ["Speech Representation", "Self-Supervised", "Language Development"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2608.20396"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2608.20396"}]
+    }
+  ],
+  "news": [],
+  "note": "2026-08-25 早间版。时间窗口为 8/24 09:30 至 8/25 09:34 CST。arXiv eess.AS/cs.SD 于周一（8/24）公告新批次共 11 篇（提交时间戳为 8/21 周五，因周末停公告而于周一可见，昨日早报/午报因在公告前生成而漏收，今日全部补录）。HuggingFace Daily Papers 无 24 小时内新音频论文。前沿新闻必搜重磅关键词（OpenAI GPT-Live / voice model release、Google Gemini voice、full-duplex speech model、语音模型发布、real-time voice AI）均未命中 24 小时内新发布内容，命中项均为旧闻（GPT-Live 7/8-7/9、Qwen-Audio-3.0 8/17、DuplexSLA 5/20 等，均已在往期收录）。故今日无新增新闻条目。"
+}
