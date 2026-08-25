@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-08-25-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-08-25-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年8月25日 (周二) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">8</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.22907" target="_blank">Unsupervised Speech Recognition at the Syllable Level</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Liming Wang, Kai-Wei Chang, Kunio Kashino, David Harwath, Mark Hasegawa-Johnson, James R. Glass</span></div>
+      <div class="abstract">无监督语音识别（UASR）通过非配对语音与文本训练，是扩展 ASR 到长尾低资源语言的关键。现有基于音素的方法依赖昂贵的字素到音素转换器（G2P）且训练不稳定。本文提出基于掩码语言建模的音节级 UASR 框架，无需 G2P 也避免了 GAN 方法的不稳定性，在 LibriSpeech 上实现最高 40% 的相对字符错误率（CER）下降，并有效泛化到此前难以处理的低资源语言，代码已开源。</div>
+      <div class="tags"><span class="tag">UASR</span><span class="tag">Syllable-Level</span><span class="tag">Low-Resource</span><span class="tag">Self-Supervised</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.22907" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.22907" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.22796" target="_blank">DiaScriber: A Speech LLM for Joint Diarization and Transcription in Multi-Speaker Scenarios</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Bingshen Mu, Xian Shi, Xiong Wang, Zhifang Guo, Ting He, Xize Cheng, Yu Xi, Jin Xu, Lei Xie</span></div>
+      <div class="abstract">多说话人语音识别（MSASR）需同时预测内容转写、说话人身份与时间戳，回答「谁在何时说了什么」。针对快语轮切换、重叠语音等复杂场景，作者提出 DiaScriber——基于语音大语言模型的端到端多说话人日志与转写模型。通过构建覆盖多说话人场景的多样化数据管线（含校验精修、语轮切换与重叠语音模拟、多模态标注），并在 Qwen3.5-Omni 预训练模型上采用持续预训练、监督微调与强化学习三阶段策略，在广泛测试集上显著优于对比方法，且对未见多说话人场景表现出色泛化。</div>
+      <div class="tags"><span class="tag">MSASR</span><span class="tag">Diarization</span><span class="tag">Speech LLM</span><span class="tag">RL</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.22796" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.22796" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.22196" target="_blank">Mitigating Speaker Leakage in Cascaded Multi-talker ASR with Diarization-based Transcript Correction</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Hermann Yepdjio Nkouanga, Minwei Luo, Maggie Wigness, Suresh Singh</span></div>
+      <div class="abstract">级联式多说话人 ASR 的性能常受分离阶段说话人泄漏所限。作者提出一种互补的剪枝范式，利用预训练说话人日志模型作为多模态验证器，基于时间包含、词汇交叉验证与时间对齐的三重共识剪除泄漏片段。在 LibriMix、LibriSpeechMix 与 AMI Meeting 语料上，该方法在高说话人泄漏子集上实现最高 29% 的相对 cpWER 下降，提升复杂声学环境下级联 MT-ASR 转写的可靠性（INTERSPEECH 2026）。</div>
+      <div class="tags"><span class="tag">Multi-talker ASR</span><span class="tag">Speaker Diarization</span><span class="tag">Speaker Leakage</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.22196" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.22196" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.21599" target="_blank">Separating Voice from Age in COPD Screening</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 George P. Kafentzis, Nikoletta Arvaniti</span></div>
+      <div class="abstract">语音被提出可作为慢阻肺（COPD）低成本筛查信号，但 COPD 与年龄强相关且语音随年龄变化，存在平凡替代解释。作者在严格参与者级别协议下重新评估公开持续发声语料（1246 条录音、68 名参与者），发现在年龄匹配队列中，排除年龄的声学模型保留 ROC-AUC 0.717、平均精度 0.747，而含年龄的模型降至 0.531-0.679，证明存在非年龄相关的声学信号。研究还发现含年龄训练的模型更难迁移到年龄平衡目标队列，十四种经典音质与扰动指标即可达到与 55 维组合表征相当的判别力，对语音疾病筛查的方法论有广泛启示意义。</div>
+      <div class="tags"><span class="tag">Voice Biomarker</span><span class="tag">COPD Screening</span><span class="tag">Health</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.21599" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.21599" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.22872" target="_blank">Better Retrieval, Worse Robustness: How Multi-hop RAG Amplifies Upstream ASR Errors</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Zhenghua Bao</span></div>
+      <div class="abstract">语音应用在检索前先经 ASR，错误作为固定上游约束进入管线。作者实证检验实体图链接与迭代重写两种 RAG 扩展究竟是吸收还是放大了 ASR 错误。使用神经 TTS 合成的四种英语口音，在 HotpotQA、2WikiMultiHopQA 与 MuSiQue 三个多跳 QA 基准上对比四种 RAG 配置：结构更丰富的配置虽保留更高绝对 F1，但两者都放大错误——在干净文本到最高 WER 口音的 F1 差距比朴素稠密检索大 36-67%。主要失败模式是查询实体的损坏（占 87-96%），下游检索结构放大了残留实体错误（EMNLP 2026）。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">RAG</span><span class="tag">Multi-hop QA</span><span class="tag">Robustness</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.22872" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.22872" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.22236" target="_blank">MRMAD: A Multi-Round Multi-Audio Benchmark for Evaluating Acoustic Degradation Perception in Large Audio-Language Models</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Yize Li, Ningyuan Yang, Sile Yin, Sindhuja Thogarrati, Sung-En Chang, Andrew C. Singer, Xue Lin, Chuan-Che Huang, Shuo Zhang</span></div>
+      <div class="abstract">大音频语言模型（LALM）在理解语音、音乐与声音事件方面进展显著，但其对音频信号「劣化」的推理能力尚不明确。作者提出 MRMAD——多轮多音频劣化基准，覆盖语音、音乐与声音，以多轮对话形式要求模型识别劣化类型、比较严重程度并感知跨轮次变化。对 18 个代表性 LALM 的系统评测发现，现有模型常能识别粗粒度内容，但在诊断、比较与推理劣化方面不可靠。该基准揭示了音频语言理解中被忽视的重要维度（EMNLP 2026）。</div>
+      <div class="tags"><span class="tag">LALM</span><span class="tag">Benchmark</span><span class="tag">Audio Quality</span><span class="tag">Evaluation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.22236" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.22236" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.21678" target="_blank">MusPyExpress: Extending MusPy with Enhanced Expression Text Support</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Phillip Long, Hao-Wen Dong, Julian McAuley, Zachary Novack</span></div>
+      <div class="abstract">当前符号音乐建模主要依赖 MIDI 类数据的音符序列表示，却忽略了西方乐谱中普遍的「表情文本」标注（如速度、力度等时间与力度依赖的控制信息）。作者提出 MusPyExpress，为流行符号音乐处理库 MusPy 增加表情文本提取能力，并解析 PDMX 数据集展示 MusicXML 中丰富的表情文本。同时引入联合表情-音符生成、表情条件音乐生成与表情标注等多个生成任务（NeurIPS 2025 AI for Music Workshop）。</div>
+      <div class="tags"><span class="tag">Symbolic Music</span><span class="tag">Expression Text</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.21678" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.21678" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2601.18904" target="_blank">MetaSICL: Globalizing Auditory LLMs for Underserved Speakers and Languages via Meta Speech In-Context Learning</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Haolong Zheng, Siyin Wang, Zengrui Jin, Mark Hasegawa-Johnson</span></div>
+      <div class="abstract">听觉大模型仍主要在高资源数据上训练评估，难以服务低资源语言与社群。作者提出 Meta Speech In-Context Learning（MetaSICL）后训练方法，仅用高资源语音数据增强听觉 LLM 的上下文适应能力。尽管从未在目标低资源领域训练，MetaSICL 在儿童 ASR、音频理解推理、以及未见方向与语言的语音翻译与 ASR 上带来一致提升；将其作为低资源语言 ASR 强化学习的预热可获得最强结果，在五种类型多样语言上优于直接微调（v3 修订）。</div>
+      <div class="tags"><span class="tag">Auditory LLM</span><span class="tag">In-Context Learning</span><span class="tag">Low-Resource</span><span class="tag">Globalization</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2601.18904" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2601.18904" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-08-25-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
