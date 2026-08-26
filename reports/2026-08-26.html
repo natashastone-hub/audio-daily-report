@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-08-26</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-08-26</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年8月26日 (周三) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">12</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">5</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.21378" target="_blank">The Smallest Real-Time Neural TTS on a General-Purpose Microcontroller</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Ashish Thapa et al.</span></div>
+      <div class="abstract">提出当前已知最小的端到端神经网络 TTS 系统：从音素 ID 到 22.05kHz PCM 全程跑在通用微控制器上，部署图仅 567,008 参数、两个 int8 权重块占 679,832 字节。在 ESP32-S3 上完整 duration-acoustic-逆 STFT 路径以 0.22 倍实时生成 4.54 秒语音（无神经加速器）；无 FPU 的 ESP32-C3 上离线跑 5.72 倍实时。从 Piper/VITS 教师的条件 VAE 目标蒸馏而来，在未见文本上嵌入式栈 SCOREQ 2.54 / UTMOS 2.80，而更强的 en_US-amy 教师蒸馏到 1.45M 参数时 SCOREQ 达 4.13。代码、模型清单、运行时移植与可复现产物已开源，并诚实披露了窄模板测试集过估与 sibilant 发音失败等评测陷阱。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Edge Computing</span><span class="tag">Microcontroller</span><span class="tag">Distillation</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.21378" target="_blank">🔗 arXiv</a> <a href="https://github.com/Ampixa/saanotts" target="_blank">🔗 GitHub</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.22111" target="_blank">Self-Supervised Flow Matching for Language-Queried Audio Source Separation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Yi Yuan et al.</span></div>
+      <div class="abstract">语言查询的音源分离（LASS）旨在按自然语言描述从混合音频中提取目标声源。现有基于判别式掩码的方法在多个声源强重叠的复杂声学场景下常过度抑制或无法完全分离。作者提出 FlowSep2，一个文本条件的流匹配生成式模型，在潜空间从高斯噪声生成目标声源表示（以混合表示与文本查询为条件），采用整流流匹配 + Diffusion Transformer 主干，并引入 Self-Flow 自监督流匹配范式促进语义结构化的潜表示。在多个 LASS 基准上取得 SOTA，在重叠声源事件等挑战场景下分离效果显著增强。</div>
+      <div class="tags"><span class="tag">Audio Source Separation</span><span class="tag">Flow Matching</span><span class="tag">LASS</span><span class="tag">SOTA</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.22111" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.22111" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.23437" target="_blank">A Benchmark and Challenge for Robust and All-Type Audio Deepfake Detection</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Yuankun Xie et al.</span></div>
+      <div class="abstract">音频生成模型已能合成高保真语音、环境声、歌声与音乐，给多媒体可信度带来新风险，而现有音频深度伪造检测（ADD）基准仍以语音为中心、对真实信道变化和多样音频类型覆盖不足。本文发布 AT-ADD 大规模基准与挑战（ACM Multimedia 2026 Grand Challenge）：Track 1 评测未见生成器、多样录音条件、信号扰动与回放下的二分类语音检测；Track 2 评测测试时音频类型未知的、跨语音/声音/歌声/音乐的类型无关真伪检测。最强官方基线在 Track 1/2 分别 76.73% / 79.47% Macro-F1，冠军系统达 90.71% / 96.10%。样本级分析揭示大规模自监督表征、条件感知增强、多裁剪推理与结构化融合是泛化关键，而生成器特定鲁棒性与跨音频类型一致性仍是开放难题。</div>
+      <div class="tags"><span class="tag">Audio Deepfake Detection</span><span class="tag">Benchmark</span><span class="tag">Audio Security</span><span class="tag">ACM MM 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.23437" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.23437" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.22704" target="_blank">Waxing-and-Waning KV Cache for Long-Form Speech LLMs</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Yiming Yao et al.</span></div>
+      <div class="abstract">长音频输入使 KV cache 成为语音大模型的主导内存开销。现有的仅 prefill KV 压缩方法一旦驱逐就永久丢弃音频 KV，且无法在解码中恢复。作者发现长音频上 prefill 注意力集中于音频起始处（注意力汇效应），而解码阶段注意力分布广泛，两者排序重叠弱。据此提出 WnW（盈亏 KV cache），通过离线校准将 KV 头分为 anchor/tidal/fixed 三类：anchor 常驻 GPU 作为解码期重要性观察器；tidal 保留 CPU 端补集并按 anchor 聚合分数逐块召回；fixed 仅保留 GPU 子集其余永久丢弃。在 LibriSpeech-Long 上两个 3B 主干（Voxtral-mini-3b、Qwen2.5-Omni-3B）上，WnW 仅保留 20% 音频 token 于 GPU 即可保持接近 Full-Cache 精度，并跨语言/任务/域泛化（EMNLP 2026 Main）。</div>
+      <div class="tags"><span class="tag">Speech LLM</span><span class="tag">KV Cache</span><span class="tag">Long-Form Audio</span><span class="tag">Efficiency</span><span class="tag">EMNLP 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.22704" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.22704" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.22186" target="_blank">Model-free audio watermarking using spatial correlation in flow matching TTS</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Timothy Tin Long Tse et al.</span></div>
+      <div class="abstract">提出 AudioNoisePrints，一种无需训练的水印管线，面向流匹配与扩散 TTS 模型，推理时几乎零额外计算、无需重训模型也不降低生成质量。核心洞察：扩散/流匹配模型中初始高斯噪声与生成输出之间存在强相关性，用简单的余弦相关即可实现水印；并在此基础上训练轻量检测器应对更强增强。在强增强下优于音频水印强基线 AudioSeal，且在 F5TTS 等多个 TTS 与声码器模型上验证了类似的空间相关特性，暗示该方案可推广到更多流匹配 TTS 模型乃至声码器。</div>
+      <div class="tags"><span class="tag">Audio Watermarking</span><span class="tag">TTS</span><span class="tag">Flow Matching</span><span class="tag">Training-Free</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.22186" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.22186" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.23092" target="_blank">Reasoning-Oriented Post-Training and Inference-Time LoRA Rescaling for Audio-Dependent Question Answering</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Weiteng Hu et al.</span></div>
+      <div class="abstract">音频依赖问答（ADQA）要求大音频语言模型（LALM）结合音频感知、证据定位与跨模态推理作答。基于 DCASE 2026 Task 5 官方 ADQA 数据集，作者在 Qwen2.5-Omni 与 MOSS-Audio-8B-Thinking 上探究面向推理的 LoRA 后训练与推理期 LoRA 缩放，并引入结构化思维链（CoT）框架将推理分解为问题分析、问题类型、音频证据与推理。实验显示明显的骨架依赖行为：后训练提升 Qwen 系统却大幅退化 MOSS-Audio；适度 LoRA 缩放将最佳 Qwen 系统 top-1 从 58.93% 提升至 61.05%，最佳 MOSS-Audio 达 67.70%。提交系统获挑战赛总排名第三、10B 以下轻量系统第二。</div>
+      <div class="tags"><span class="tag">Audio QA</span><span class="tag">LALM</span><span class="tag">LoRA</span><span class="tag">Reasoning</span><span class="tag">DCASE 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.23092" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.23092" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.23038" target="_blank">Lipschitz-continuous Neural Networks for Convergent Plug-and-Play Audio Signal Recovery</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Kazuki Matsumoto et al.</span></div>
+      <div class="abstract">DNN 的 Lipschitz 连续性对确立其行为理论保证至关重要，但音频信号处理中常见的、对复值信号幅度/相位分开处理的架构（如时频掩蔽）无法在现有框架下保证 Lipschitz 连续。作者首次为「幅度修饰器（AM）」（仅作用于复值输入幅度的 DNN 类）建立可证 Lipschitz 连续的理论基础，推导充要条件并提出 LipsAM（Lipschitz 连续 AM），涵盖时频掩蔽等常见架构，并给出 Lipschitz 常数的解析求法与高效评估框架。作为应用，提出 CoReM-LipsAM 用于即插即用（PnP）音频信号恢复，将 DNN 作为数据驱动先验嵌入基于模型的算法，PnP 收敛性由架构结构性保证，并在语音去混响实验中验证。</div>
+      <div class="tags"><span class="tag">Signal Recovery</span><span class="tag">Lipschitz Continuity</span><span class="tag">PnP</span><span class="tag">Dereverberation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.23038" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.23038" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.22420" target="_blank">Cross-Subject Generalization in Decoding Perceived Speech from Non-Invasive Brain Recordings</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Aoke Zhang et al.</span></div>
+      <div class="abstract">从非侵入脑信号解码感知语音渐受关注，但跨被试解码因泛化性差、缺乏提取被试一致信息的显式机制而困难，导致训练成本高、性能欠佳。作者提出跨被试感知语音解码框架 CPSD，分两阶段：源模型预训练（用对比学习在多个源被试间捕捉共享表征）+ 个性化微调（从源模型提取一致成分并用目标被试数据微调）；还引入基于位置编码的空间注意力模块 PESA 将 MEG/EEG 数据重映射到标准化参考空间以增强跨被试一致性。在三个涵盖不同模态与语言的感知语音神经数据集上，Top-10 准确率分别超基线 6.8%、15.4%、15.8%（投稿 IEEE TASLP）。</div>
+      <div class="tags"><span class="tag">Brain Speech Decoding</span><span class="tag">MEG/EEG</span><span class="tag">Cross-Subject</span><span class="tag">TASLP</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.22420" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.22420" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.22273" target="_blank">Multi-Task Learning for Non-Canonical Phoneme Recognition via Articulatory Feature Decomposition</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Aneesh Jonelagadda et al.</span></div>
+      <div class="abstract">病理及非规范语音因系统性偏离规范发音、临床标注数据稀缺，对自动音素识别构成严峻挑战。现有系统通常在规范语音上训练、把音素当作原子类别标签，难以检测语音障碍与口音中常见的结构化发音错误。作者提出语言结构化方法，将音素预测分解为构音特征维度（方式、部位、清浊），用分层多任务架构学习特征级表示并经交叉注意力融合产生音素预测；结合动量伪标签（MPL）半监督与分阶段解冻预训练编码器的级联训练策略。在 L2-ARCTIC 上相较强基线取得显著提升，并产生与音系特征结构对齐的可解释错误模式，为更鲁棒、可解释的非规范语音音素识别指明方向。</div>
+      <div class="tags"><span class="tag">Phoneme Recognition</span><span class="tag">Articulatory Features</span><span class="tag">Multi-Task</span><span class="tag">Pathological Speech</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.22273" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.22273" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.22359" target="_blank">Pre-Decoding Acoustic Triage for Budgeted Vision-Language Captioning of Untrimmed Egocentric Video</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Masoud Jalayer et al.</span></div>
+      <div class="abstract">分析数小时长的第一视角视频对物流、施工与制造的进度监控/质检/安全愈发关键，但用 VLM 处理短固定窗口的管线成本随调用次数线性膨胀。作者提出音频优先分诊（audio-first triage）：用最轻量的声学模态、在解码任何视频帧之前打分选取值得 VLM 调用的窗口，天然兼容 token 压缩/量化。创新点在目标而非表征——不训逐帧声事件检测器，而是让选择器每次动作触发一次，该目标偏移在 EPIC-KITCHENS-100 上以不足半数调用即可在匹配覆盖率下削减 9-20% VLM 调用，在 Ego4D 247 个片段上中段超越均匀采样并优于两个近期视觉关键帧选择器，代码开源（投稿 IEEE BigData 2026）。</div>
+      <div class="tags"><span class="tag">Egocentric Video</span><span class="tag">Audio Triage</span><span class="tag">VLM</span><span class="tag">Efficiency</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.22359" target="_blank">🔗 arXiv</a> <a href="https://github.com/masjalayer/PreDecoding-AcousticTriage" target="_blank">🔗 GitHub</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.22057" target="_blank">Vibrato Matching for Modulation Control and Blending in Sound Mixtures</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Jeremy Hyrkas et al.</span></div>
+      <div class="abstract">在多声源声音混合中，不同的颤音（vibrato）模式是人类听众与音源分离算法判断「存在多个声源」的线索。匹配混合信号间的颤音模式可降低多声源感知，尤其在齐奏时。本文提出颤音匹配算法：先抑制目标信号中的颤音，再将源信号的颤音迁移到目标上——对目标信号谐波施加频率/幅度调制，对非谐波残差的谱包络施加幅度调制。示例展示了其作为颤音控制机制与声源融合工具的价值；匹配颤音会降低音源分离算法性能，暗示听者检测多声源存在的能力也相应下降（ICMC 2026）。</div>
+      <div class="tags"><span class="tag">Vibrato</span><span class="tag">Sound Blending</span><span class="tag">Modulation</span><span class="tag">Music Signal Processing</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.22057" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.22057" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.22337" target="_blank">Motion-Aware Reasoning from Speech to Mask Tracks: Runner-up Solution for the MeViS-Audio Track of the 8th LSVOS Challenge 2026</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Jinxing Zhou et al.</span></div>
+      <div class="abstract">语音引导的指代视频目标分割要求按口述运动描述恢复目标掩码轨迹。语音在此承载语言指令而非发声物体的声学证据，因此方案须贯通语音识别、以运动为中心的时间定位、掩码跟踪与显式无目标处理。作者提出 Speech2MaskTrack（MeViS-Audio 赛道、第 8 届 LSVOS 挑战），将口语查询转写并编译为类别、数量、方向、交互角色与时间阶段的结构化约束；SAM3.1 枚举多实例轨迹，TRACE 用完整轨迹运动与关系证据排序；冻结的词法存在门控可抑制 SAM3.1 基础预测；全表达式条件 SaSaSa2VA 替换掩码，空输出进入 GPT 辅助恢复。系统获官方挑战第二名。</div>
+      <div class="tags"><span class="tag">Referring Video Segmentation</span><span class="tag">Speech-Guided</span><span class="tag">Multi-Modal</span><span class="tag">LSVOS 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.22337" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.22337" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-08-26') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
