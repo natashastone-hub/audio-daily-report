@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-08-27-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-08-27-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年8月27日 (周四) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">9</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.26005" target="_blank">VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-26</span><span>👥 Zhifei Xie, Jiaqi Lang, Ze An, Yifan Zhao, Dongchao Yang, Kai Li, Ziyang Ma, Mingbao Lin, Chunyan Miao, Shuicheng Yan</span></div>
+      <div class="abstract">对话系统（如全双工口语语言模型 SLM）仍缺乏一个流式、精准且有共情的记忆系统作为其灵魂。提出 VoiceMem，一个由并行式信息型「左脑」、情感型「右脑」与流式记忆 I/O 机制构成的记忆架构，并构建了记忆感知 SLM 训练、长程评测与可解耦部署的完整流水线。实验与真实部署显示三大优势：左脑在 top-5 检索下比 Mem0 在 top-200 检索高出近 30 分；右脑通过长短程情感归因与双节点人设建模，在三个人设基准上取得 SOTA，综合分比此前最佳系统高 4.29 分；VoiceMem 检索仅需 134ms，处于标准 VAD 延迟内，不增加额外对话延迟。</div>
+      <div class="tags"><span class="tag">Duplex SLM</span><span class="tag">Voice Memory</span><span class="tag">Real-Time Interaction</span><span class="tag">Personalization</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.26005" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.26005" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.25218" target="_blank">TurnBench: A Multi-Domain Benchmark for Turn-Taking Dynamics in Spoken Dialogue</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Freeman Jiang, Ramon Sanabria, Soham Deshmukh, Bandhav Veluri, Simon Michael Vuch Williams, Elliott K. Suen, Garreth Lee, Kevin Yoonho Choi, Takuya Umeki, Riku Kubo, Sathvik Udupa, Chien-yu Huang, Shih-Yun Shan Kuan, Zhuoyan Tao, Satyapriya Krishna, Sefik Emre Eskimez, Yu Tsao, Hung-yi Lee, Shinji Watanabe</span></div>
+      <div class="abstract">自然对话中说话者实时决定何时接话、保持或让出话语权，但打断/话轮转换评估因缺乏一致且语言学扎实的评测协议与覆盖多样对话类型的人工标注数据而受限。提出 TurnBench，一个多域基准，将 30 小时人工标注的双人对话语料与针对话轮结束/打断检测的标准化评测协议配对，并把对话类型作为可控实验变量（六种交互风格，三重标注）。对 14 个异构话轮转换系统的基准评测发现，话轮结束召回率在不同类型间稳定，而打断误报则强依赖类型并集中于回话密集的交互风格。语料、104 小时训练集与公共排行榜（含交互式数据查看器）均开放。</div>
+      <div class="tags"><span class="tag">Turn-Taking</span><span class="tag">Spoken Dialogue</span><span class="tag">Benchmark</span><span class="tag">Duplex</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.25218" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.25218" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.25404" target="_blank">CSAVocoder: A Causal Spatial Audio Vocoder Towards Real-Time Spatial Audio Generation</a></h4>
+      <div class="meta"><span>📅 2026-08-26</span><span>👥 Zhiyuan Zhu, Han Wang, Wenxiang Guo, Yu Zhang, Changhao Pan, Rui Yang, Zhou Zhao</span></div>
+      <div class="abstract">空间音频声码器将生成模型产出的 mel 频谱转为空间音频波形。多数神经声码器面向单声道设计，直接扩展到空间音频会因忽略通道间线索而退化空间质量。提出 CSAVocoder，一个因果 GAN 空间音频声码器，联合优化波形保真与空间渲染：引入融合多通道 mel 频谱与动态声源-听者位姿信息的 Spatial Adaptor，以及监督通道间线索的空间一致性判别器。为满足实时需求，设计了严格因果、有状态的生成器，支持恒定内存开销下的高效流式推理。</div>
+      <div class="tags"><span class="tag">Spatial Audio</span><span class="tag">Vocoder</span><span class="tag">Real-Time</span><span class="tag">GAN</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.25404" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.25404" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.25596" target="_blank">Knowledge Distillation for Efficient Acoustic Echo Control</a></h4>
+      <div class="meta"><span>📅 2026-08-26</span><span>👥 Ernst Seidel, Pejman Mowlaee, Tim Fingscheidt</span></div>
+      <div class="abstract">近年来用更强大的机器学习方法取代经典声学回声控制（AEC）算法的努力众多，但计算复杂度仍是主要挑战——如卷积循环网络（CRN）类架构比经典信号处理方案高出数个数量级，直接缩小模型又会明显降低性能。首次在 AEC 中证明可通过有效的知识蒸馏（KD）过程大幅缓解性能下降：提出的 CGGN16 学生 AEC 模型在仅为教师模型 2% 的计算复杂度下显著降低近端语音失真，并超越一个比其复杂 6 倍、用真值标签训练的模型，且优于近期文献中的其他 AEC 架构。</div>
+      <div class="tags"><span class="tag">Acoustic Echo Control</span><span class="tag">Knowledge Distillation</span><span class="tag">Efficiency</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.25596" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.25596" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.25621" target="_blank">Dissonance Spectrum Explicitly Models Perceptual Frequency Interactions for Better Music Understanding</a></h4>
+      <div class="meta"><span>📅 2026-08-26</span><span>👥 Xinyi Tong, Liangke Zhao, Jishang Chen, Sirui Zhang, Haoxin Zhang, Xin Jin, Duo Xu, Xiaobing Li, Song-Chun Zhu</span></div>
+      <div class="abstract">传统音乐表示仅描述声学能量在时频上的分布，未显式暴露同时出现的频率分量之间的关系。提出「不协和频谱」（Dissonance Spectrum, DS），一种非负时频表示，将基于容差的理性音高关系核与对数谐波距离应用于恒定 Q 频谱，并把聚合的两两交互归因到各个频点。受控乐理测试在音程、和声功能连接与教会调式上显示强序数一致性。DS 被编码为轻量并行分支，零初始化残差投影保证基线的初始化功能不变，在开放式音乐问答与音乐情感识别六组训练种子上均取得最高均值。</div>
+      <div class="tags"><span class="tag">Music Understanding</span><span class="tag">Audio Representation</span><span class="tag">Interpretable</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.25621" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.25621" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.25177" target="_blank">AudioLens: Multi-Perspective Speech Clustering with Reasoning Audio-Language Models</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Wenjun Huang, Qiaosong Chu, Tiger Shao, Pengfei Zhang, Yutong Song, Hanning Chen, Yezi Liu, Weiyi Wu, SungHeon Jeong, Ryozo Masukawa, Sanggeon Yun, Yang Ni, Jiang Gui, Mohsen Imani</span></div>
+      <div class="abstract">音频聚类是组织快速增长语音集合的基础任务，但现有方法依赖固定声学相似度度量或基于 ASR 的文本流水线，难以按用户指定的自然语言视角重新组织同一音频集合。提出「音频多视角聚类」，让模型根据自然语言视角直接划分语音录音，同时推断聚类数目与归属。构建 AudioLens-Bench 基准（覆盖多应用域，评估视角内与跨视角泛化），并提出 AudioLens-R1——一个端到端大型音频语言模型，通过推理蒸馏与偏好优化训练，ARI 整体提升 12.99、V-measure 提升 11.62 分。</div>
+      <div class="tags"><span class="tag">Audio-Language Model</span><span class="tag">Speech Clustering</span><span class="tag">Reasoning</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.25177" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.25177" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.24958" target="_blank">Can We Read the Mind of an Audio LLM? A Verbalizable, Multilingual Middle-Layer Workspace</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Jiajun Fan, Jingyuan Li, Prashanth Gurunath Shivakumar, Qi Luo, Jia-Hong Huang, M. Maruf, Roger Ren, Yile Gu, Rahul Pandey, Ge Liu, Ivan Bulyko</span></div>
+      <div class="abstract">音频语言模型是特定意义上的黑盒。用 logit lens 在音频 token 位置读取基础 Qwen3-Omni，发现口语问题的答案在模型中间层就以「文字」形式变得可读——在发出任何 token 之前。五大发现：读出的内容携带问题/选项/转录之外的概念（如从空转的乱码重建「水门事件→丑闻→总统→尼克松」的隐藏多跳链）；内容与语言无关（38% 的 top-1 读出在英文输入上为中文）；具有副语言性（同一片段，音频「心灵」形成声源/说话角色/情感而被无情感字幕丢弃）；音频驱动信号在输入处缺席、在约十分之一深度处开启、在 35-80% 深度区间与文本先验分离最干净；删除单层可映射出「读入-检索-输出」的分工。</div>
+      <div class="tags"><span class="tag">Audio LLM</span><span class="tag">Interpretability</span><span class="tag">Multilingual</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.24958" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.24958" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.25285" target="_blank">A Training-Free Proactive Defense Against Partial Speech Manipulation via Self-Embedding Steganography</a></h4>
+      <div class="meta"><span>📅 2026-08-26</span><span>👥 Yigitcan Özer, Zhe Zhang, Wanying Ge, Xin Wang, Junichi Yamagishi</span></div>
+      <div class="abstract">部分深度伪造语音（仅篡改话语的有限片段）对现有检测系统构成重大挑战——随着伪造区域比例下降，被动检测器越来越不可靠。本文重新审视音频隐写术，将其作为针对部分深度伪造音频的主动防御：采用自嵌入策略，让干净语音嵌入自身的压缩表示，从而支持事后提取参考内容。实验表明该方法无需任何训练即可与被动防御互补，为部分深度伪造检测提供了稳健、数据高效的替代方案。</div>
+      <div class="tags"><span class="tag">Deepfake Defense</span><span class="tag">Steganography</span><span class="tag">Audio Security</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.25285" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.25285" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.25244" target="_blank">AllMusicCaps: Album Reviews as Complementary Supervision for Music CLAP</a></h4>
+      <div class="meta"><span>📅 2026-08-26</span><span>👥 Pablo Alonso-Jiménez, Xavier Lizarraga-Seijas, Xavier Serra, Dmitry Bogdanov</span></div>
+      <div class="abstract">现有文本-音频对比模型（CLAP）通常用从标签数据集或网络搜索派生、LLM 生成的字幕训练，虽准确但表达力狭窄。探索人类撰写的专辑评论（AllMusic 专家评论）作为互补监督来源，其规模大且携带叙事线索、评价性形容词与场景框架。通过 LLM 预处理流水线构建包含 24 万余样本的字幕语料，发现专辑评论监督在人工撰写字幕基准（Song Describer）上取得最大检索增益，尤其覆盖其他数据集遗漏的复杂查询；SigReg 正则进一步改善 MLP 探测与文本到音乐检索。发布评论派生字幕数据集与模型权重。</div>
+      <div class="tags"><span class="tag">Music CLAP</span><span class="tag">Text-Audio Retrieval</span><span class="tag">Dataset</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.25244" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.25244" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-08-27-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
