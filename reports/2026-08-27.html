@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-08-27</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-08-27</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年8月27日 (周四) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">15</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.24168" target="_blank">FireRedAudio: A General-Purpose Audio Language Model with Decoupled Continuous Representations for Understanding and Generation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Junjie Li, Xuelong Geng, Kun Xie, Feiyu Shen, Yichen Wu, Ziqi Dai, Yichen Han, Yan Jia, Kai Huang, Junjie Chen et al.</span></div>
+      <div class="abstract">提出 FireRedAudio，一个通用音频语言模型，基于共享的 9B 参数 LLM。它是首个公开的统一音-语言模型，在单一可训练自回归 LLM 内为理解和生成分别提供解耦的连续输入表示：待识别/分析的音频由专用 Audio Encoder 处理，用于生成的语音输入走 RedAE 通路。LLM 直接生成文本，或条件化一个 flow-matching DiT 产生连续声学隐变量。通过渐进式多任务训练，FireRedAudio 支持 ASR、长达一小时的音频理解、零样本 TTS、Instruct TTS，以及语义和声学语音编辑，长音频结构化定位达到秒级时间戳精度。代码已开源。</div>
+      <div class="tags"><span class="tag">Audio LM</span><span class="tag">TTS</span><span class="tag">ASR</span><span class="tag">Speech Editing</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.24168" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.24168" target="_blank">🔗 PDF</a> <a href="https://github.com/FireRedTeam/FireRedAudio" target="_blank">🔗 GitHub</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.23791" target="_blank">EmoTra-TTS: Smooth Intra-Utterance Emotion Transitions for Speech Synthesis</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-24</span><span>👥 Tianchi Liu et al.</span></div>
+      <div class="abstract">针对情感 TTS 系统通常只条件化单一离散标签、与情绪随时间演化的本质不符的问题，提出 EmoTra-TTS。通过多遍 flow blending 流水线合成帧对齐的过渡音频，双阶段 Valence-Arousal-Dominance (VAD) 条件化引导 LLM 韵律规划与 flow 解码器声学实现，方向-幅度解耦注入在情绪方向与注入幅度之间结构性地分离，防止内容退化。仅增加 0.43% 参数、无延迟开销，情绪过渡质量相对提升 30%-87%，在四项 SOTA 基线和两个商业系统的配对偏好测试中取得 64.4%-79.5% 胜率。EMNLP 2026 主会。</div>
+      <div class="tags"><span class="tag">Emotional TTS</span><span class="tag">Speech Synthesis</span><span class="tag">EMNLP 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.23791" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.23791" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.24163" target="_blank">Preference Optimization for Non-Verbal Vocalization Synthesis</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Haoyang Li et al.</span></div>
+      <div class="abstract">系统研究面向非言语发声（NV，如笑声、咳嗽、叹息）的 TTS 偏好优化。提出 NV 感知的字符错误率 NV-CER，将 NV 标签作为独立输出符号，对言语和非言语内容计算加权拼音 CER，从而在不改动底层优化算法的前提下可控地优化 NV 实现。基于 Emilia-NV 和涵盖 18 类 NV 的增强版 NV-Bench 的实验揭示了不同设计选择对 NV 实现和词汇保真度的影响，并确立了使用标准 DPO 的有效配置。</div>
+      <div class="tags"><span class="tag">Expressive TTS</span><span class="tag">Non-Verbal</span><span class="tag">Preference Optimization</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.24163" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.24163" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.24659" target="_blank">Recursive Encoder and Decoder for Speech Separation under Unknown Number of Speakers and Variable Number of Microphones</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Zhong-Qiu Wang et al.</span></div>
+      <div class="abstract">提出递归编码器-解码器（RED），构建单一 DNN 模型，可分离包含未知说话人数和未知几何布局下可变麦克风数的多人混合语音。解码器递归检测是否仍有活跃说话者并逐个分离，编码器递归编码每个麦克风通道并顺序融合空间线索。该模型端到端训练，在未知说话人数和可变麦克风数场景下取得多个公开数据集的 SOTA 性能。</div>
+      <div class="tags"><span class="tag">Speech Separation</span><span class="tag">Multi-Speaker</span><span class="tag">SOTA</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.24659" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.24659" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.24639" target="_blank">Investigating voiced and unvoiced regions of speech for audio deepfake detection</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Hemlata Tak et al.</span></div>
+      <div class="abstract">探索语音的清音/浊音区域在区分合成与真实语音中的作用。利用信号周期性测度将语音分解为浊音和清音分量，分别在每类分量上训练基于图注意力的 AASIST 检测系统。结果显示清音区域在区分深度伪造语音上尤其有效，EER 达 6.62%；与浊音区域评分级融合后进一步提升至 5.82% EER，相对全音频基线改善 49%。IEEE ICASSP 2025。</div>
+      <div class="tags"><span class="tag">Audio Deepfake Detection</span><span class="tag">Interpretability</span><span class="tag">ICASSP 2025</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.24639" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.24639" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.24579" target="_blank">Visually-Guided Spatial Audio Generation for 360° In-the-Wild Speech Scenes</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Qingyu Luo et al.</span></div>
+      <div class="abstract">研究野外视觉引导的一阶 Ambisonics (FOA) 语音空间化：给定对齐的 360° 视频和全向音轨，恢复缺失的方向性 FOA 分量。引入面向语音的 360° 视频-FOA 数据集 YT-SPEECH，提出两阶段 Localizer-Renderer 框架，音频-视觉分割骨干提供帧级空间热图，条件复数域 U-Net 从全向通道重建方向性 FOA 信号。INTERSPEECH 2026。</div>
+      <div class="tags"><span class="tag">Spatial Audio</span><span class="tag">Audio-Visual</span><span class="tag">INTERSPEECH 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.24579" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.24579" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.24558" target="_blank">Array-Agnostic Ambisonics Encoding via Diffusion Posterior Sampling (ADEPS)</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Amit Milstein et al.</span></div>
+      <div class="abstract">提出 ADEPS，一个生成式框架，将物理采集模型显式嵌入推理过程，补偿阵列特定失真，并实现对任意阵列拓扑的零样本编码。底层生成先验仅基于目标 Ambisonic 表示进行无监督训练。在多样仿真和真实麦克风阵列上的评估表明，ADEPS 在空间保真度和频谱质量上持续优于传统线性和参数化基线。</div>
+      <div class="tags"><span class="tag">Spatial Audio</span><span class="tag">Ambisonics</span><span class="tag">Diffusion</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.24558" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.24558" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.24327" target="_blank">Speech-to-SOAP: End-to-End Summarization of Medical Dialogues — KIT@BeTraC 2026</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Enes Yavuz Ugan et al.</span></div>
+      <div class="abstract">KIT 团队在 BeTraC 2026 轻量级赛道的提交，探索从语音直接生成临床 SOAP 记录（无需中间转录）。主要贡献是可扩展的数据增强流水线，通过合成语音生成和自动生成的 SOAP 监督统一异构医疗对话数据集，实现语音基础模型向端到端 speech-to-SOAP 生成的稳健适配。BeTraC 2026。</div>
+      <div class="tags"><span class="tag">S2T Summarization</span><span class="tag">Medical</span><span class="tag">End-to-End</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.24327" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.24327" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.24374" target="_blank">CoSTALA: Compositional Spatio-Temporal Audio-Language Alignment via Multi-Grain Hierarchical Contrastive Learning</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Peiwei Ren et al.</span></div>
+      <div class="abstract">提出 CoSTALA，将音频语言对齐从全局粗粒度对比学习推进到细粒度时空推理。通过构建多粒度分层损失函数体系，显式建模时间依赖，并锚定单个声学事件以保持其语义纯度。实验表明 CoSTALA 为时空音频理解建立了强大的新框架。</div>
+      <div class="tags"><span class="tag">Audio-Language Alignment</span><span class="tag">Spatio-Temporal</span><span class="tag">Contrastive Learning</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.24374" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.24374" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.24048" target="_blank">Don't Just Listen, Try Planning: Graph-based Retrieval-Generation Agent (GRGA) for Long-form Audio Meeting Understanding</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Quanwei Tang et al.</span></div>
+      <div class="abstract">针对长音频会议理解（LAMU）任务中声学信息丢失和长期上下文记忆差的问题，构建 LongAudioQA 数据集并提出 GRGA 模型，将异构音频特征建模为多维图，利用智能体规划进行检索和答案生成。ACL Findings 2026。</div>
+      <div class="tags"><span class="tag">Audio Understanding</span><span class="tag">Meeting</span><span class="tag">Agent</span><span class="tag">ACL 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.24048" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.24048" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.23758" target="_blank">EXAM²: Extending Audio Understanding in Multilingual and Multimodal Analysis</a></h4>
+      <div class="meta"><span>📅 2026-08-24</span><span>👥 Jiawen Wang et al.</span></div>
+      <div class="abstract">提出 EXAM²，一个多语言多模态音频理解基准，覆盖六种语言和多种模态（语音、声音、音乐、混合音频及视觉图像）。包含 5667 道多选题、22614 个图像实例和 135684 条多语言翻译。评估 SOTA 开源与专有 LALM 及多模态 LLM，揭示多语言和跨模态理解上的显著差距。并提出轻量融合模型 Gemma3n-EXAM²，多语言设置提升 12.4%、多模态评估提升 21.7%。</div>
+      <div class="tags"><span class="tag">Audio Understanding</span><span class="tag">Benchmark</span><span class="tag">Multilingual</span><span class="tag">Multimodal</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.23758" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.23758" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.24159" target="_blank">On the Robustness of Audio Deepfake Detection under Audio Watermarking</a></h4>
+      <div class="meta"><span>📅 2026-08-25</span><span>👥 Zi Qian Yong et al.</span></div>
+      <div class="abstract">研究音频水印对 ADD 系统的鲁棒性影响，将水印视为结构化、非对抗性扰动。基于 WavMark 的评估框架，在多个基准数据集上评估 SSL、CNN 和 GNN 类 ADD 模型。结果显示水印在 ASVspoof 2021 LA/DF 上导致显著性能下降，而对 ASVspoof 2024、FoR、ITW 影响有限，嵌入空间大幅偏移与检测退化强相关。代码已开源。</div>
+      <div class="tags"><span class="tag">Audio Deepfake Detection</span><span class="tag">Watermarking</span><span class="tag">Robustness</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.24159" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.24159" target="_blank">🔗 PDF</a> <a href="https://github.com/ziqian0925/wm-ADD-robustness.git" target="_blank">🔗 GitHub</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.23437" target="_blank">AT-ADD: A Benchmark and Challenge for Robust and All-Type Audio Deepfake Detection</a></h4>
+      <div class="meta"><span>📅 2026-08-24</span><span>👥 Yuankun Xie, Haonan Cheng, Jiayi Zhou, Xiaoxuan Guo, Tao Wang et al.</span></div>
+      <div class="abstract">提出 AT-ADD，大规模基准与挑战赛，评估鲁棒语音深度伪造检测和全类型音频深度伪造检测。Track 1 评估未知生成器、多样录音条件、信号扰动和重放下的二分类检测；Track 2 评估语音/声音/歌声/音乐的类型无关真伪检测。ACM Multimedia 2026 Grand Challenge，冠军系统在 Track 1/2 分别达 90.71% 和 96.10% Macro-F1。</div>
+      <div class="tags"><span class="tag">Audio Deepfake Detection</span><span class="tag">Benchmark</span><span class="tag">ACM MM 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.23437" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.23437" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.23092" target="_blank">Reasoning-Oriented Post-Training and Inference-Time LoRA Rescaling for Audio-Dependent Question Answering</a></h4>
+      <div class="meta"><span>📅 2026-08-24</span><span>👥 Weiteng Hu et al.</span></div>
+      <div class="abstract">针对音频依赖问答（ADQA），在 Qwen2.5-Omni 和 MOSS-Audio-8B-Thinking 上研究面向推理的 LoRA 后训练和推理时 LoRA 重缩放。引入结构化思维链框架，分解为问题分析、问题类型、音频证据和推理四步。结果显示后训练对 Qwen 系统有效却显著降低 MOSS-Audio 性能，适度 LoRA 重缩放将最佳 Qwen 系统 top-1 从 58.93% 提升至 61.05%，最佳 MOSS-Audio 达 67.70%。DCASE 2026 Task 5 第三名。</div>
+      <div class="tags"><span class="tag">Audio QA</span><span class="tag">Reasoning</span><span class="tag">LoRA</span><span class="tag">DCASE 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.23092" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.23092" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.23038" target="_blank">Lipschitz-continuous Neural Networks for Convergent Plug-and-Play Audio Signal Recovery</a></h4>
+      <div class="meta"><span>📅 2026-08-24</span><span>👥 Kazuki Matsumoto et al.</span></div>
+      <div class="abstract">为幅度修饰器（AM，仅对复值输入的幅度操作的 DNN）建立 Lipschitz 连续性理论。推导出 AM 满足 Lipschitz 连续的充要条件，提出 LipsAM 及评估 Lipschitz 常数的框架，并解析推导部分架构的常数。作为应用，提出 CoReM-LipsAM，将 DNN 作为数据驱动先验集成到模型驱动信号处理算法中，实现 PnP 音频信号恢复，收敛性由架构结构保证，语音去混响实验验证了有效性。</div>
+      <div class="tags"><span class="tag">Audio Signal Recovery</span><span class="tag">Lipschitz</span><span class="tag">Plug-and-Play</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.23038" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.23038" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>Google 发布 Gemini 3.5 Transcribe：迄今最精准的语音转文本模型</h4>
+      <p>Google 于 8 月 26 日推出 Gemini 3.5 Transcribe，定位为迄今最精准的语音转文本（STT）模型，主打『理解式转写』——不仅能逐字记录，还能识别说话人自我修正、自动过滤『um/uh』等口头禅、理解说话人意图并自动整理输出结果，将语音识别从机械记录推向深层语言理解。已落地 Android Gboard Rambler 语音输入与 Mac 版 Gemini 应用，面向开发者、企业及普通用户开放。 <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>DuplexSLA 全双工语音模型：160ms 粒度听-说-规划三通道同步</h4>
+      <p>近期热度持续的全双工口语语言模型 DuplexSLA，将『听（Listening）、说（Speaking）、做（Action）』压缩进同一自回归框架，实现 160ms 粒度的三通道同步，开创实时语音交互新范式。业内持续跟踪其源码解读与精读分析。 <a href="https://arxiv.org/abs/2605.20755" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-08-27') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
