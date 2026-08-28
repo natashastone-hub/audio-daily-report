@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-08-28</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-08-28</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年8月28日 (周五) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">11</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.27176" target="_blank">When Text Misleads: Inconsistent-Aware Reasoning for Audio-Grounded Dialogue</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-27</span><span>👥 Yen-Ju Lu, Yuzhe Wang, Yaohan Guan, Xiluo He, Jiarui Hai, Mingrui Liang, Kaavya Chaparala, Thomas Thebaud, Laureano Moro-Velazquez, Najim Dehak, Jesus Villalba</span></div>
+      <div class="abstract">现有口语对话理解评测常允许模型仅凭转写文本走捷径，掩盖其是否真正以语音信号为依据。本文形式化这一失效模式为「跨模态分歧」：转写文本给出看似合理却错误的表层解读，而声学线索（韵律、说话风格）支持不同答案。作者构建 ContraTalk 基准，含 501 道跨五个话语维度（互动行为、情绪、对话行为、社会立场、会话意图）的题目，并提出 Audio Twin 框架——将语音转为可读的局部声学线索文本表示，把声学证据显式暴露给推理模型。实验显示纯文本 LLM 在一致场景准确率超 90%，但在冲突场景骤降至 33-48%；直接 AudioLLM 仍有 30-40% 落入转写偏见陷阱；Audio Twin 显著提升冲突场景准确率并减少陷阱选择。</div>
+      <div class="tags"><span class="tag">Spoken Dialogue</span><span class="tag">Audio-Grounded Reasoning</span><span class="tag">Benchmark</span><span class="tag">Interpretability</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.27176" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.27176" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.26432" target="_blank">SpeechGym: An Audio-Native Gym for Training Voice Agents via Reinforcement Learning</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-26</span><span>👥 Jiajun Fan, Jingyuan Li, Prashanth Gurunath Shivakumar, Jia-Hong Huang, Qi Luo, M. Maruf, Ivan Bulyko, Ge Liu, Roger Ren</span></div>
+      <div class="abstract">语音 Agent 必须在纯语音下调用工具、进行多轮对话，但主流范式却在文本中训练。现有框架要么在专有语音 API 外包 TTS/ASR 级联（梯度无法流动、按次计费使在线策略强化学习不可行），要么停留在文本域只「评测」不「改进」。提出 SpeechGym，一个音频原生智能体环境：两个全模态模型直接以原生音频对话，无外部 ASR/TTS、无 API 边界，在既有文本智能体基准的原始任务/工具/成功判据上运行，使得交互模态成为唯一变量、回路全程本地可端到端训练。发现语音引入的失败是感知缺陷而非推理缺陷——Agent 选对工具和参数槽，却填入从波形「听错」的值，且「每次过程 reward 计入成功的工具调用」能恢复近乎全组方差，显著优于结果级别的 GRPO。训练后的 Agent 零微调迁移到独立语音基准，任务成功率翻倍以上，将一个开源模型从垫底带到排行榜第二，且用更少的轮次和 token。</div>
+      <div class="tags"><span class="tag">Voice Agent</span><span class="tag">Reinforcement Learning</span><span class="tag">Full-Duplex</span><span class="tag">Tool Use</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.26432" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.26432" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.26431" target="_blank">AudioSpan: Spanning the Duration and Depth of Audio Comprehension</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-26</span><span>👥 Wen Huang, Yunfei Chu, Meng Gao, Haolin He, Jin Xu</span></div>
+      <div class="abstract">通用音频理解如今覆盖语音、声音、音乐，时长从秒到小时，但现有评测基准仍依赖几秒的小片段，分数饱和、模型趋同。提出 AudioSpan，一个同时跨越时长与深度的基准：将 10 分钟到 2 小时以上的音频与 3240 道覆盖三个认知层级（感知、理解、推理）的问题配对。两条路径供给题目——Native QA 从音频内容抽取问题并以多选题/开放式评分形式呈现，Anchor QA 向音频注入声学锚点、构建感知到推理的链、仅按首个错误计分。全自动流水线通过结构化字幕、QA 生成和对抗性批评反馈构题。在 AudioSpan 上评测 12 个 LALM，发现难点出现在推理之前：从长而冗余的信号中提炼少数关键事实；该难度随音频长度增长，且最集中在感知层（尤其时间定位）。基准已开源。</div>
+      <div class="tags"><span class="tag">Audio Understanding</span><span class="tag">Long-Form Audio</span><span class="tag">Benchmark</span><span class="tag">LALM</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.26431" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.26431" target="_blank">🔗 PDF</a> <a href="https://huggingface.co/datasets/holvan/AudioSpan" target="_blank">🔗 Dataset</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.27048" target="_blank">Soft Active Electromyography Interface for Machine Learning-Enabled Silent Speech Recognition</a></h4>
+      <div class="meta"><span>📅 2026-08-27</span><span>👥 Yuta Kurotaki, Shusuke Yamakoshi, Reitaro Yoshida, Yutaka Isoda, Tamami Takano, Yuji Isano, Yusuke Miyake, Kentaro Kuribayashi, Hiroki Ota</span></div>
+      <div class="abstract">无声语音识别（SSR）在无可听语音时为交流提供替代通路，但传统方案受制于需要持续面部贴附、隐私顾虑和信号采集不稳定。提出一种柔软的主动式肌电（EMG）接口，戴在手上、指尖电极可在需要时靠近唇部采集 EMG 信号。接口集成液态金属互连、透明柔性电路板电极和弹性体封装，保证手指运动下的高机械稳定性。在稳定信号上训练深度神经网络，三名受试者对 30 词词汇的分类平均准确率达 97.2±1.3%，并通过对无人机的实时控制验证了其在嘈杂、注重隐私环境中（传统语音识别会失效）的实用性。</div>
+      <div class="tags"><span class="tag">Silent Speech Recognition</span><span class="tag">EMG</span><span class="tag">Wearable</span><span class="tag">HCI</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.27048" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.27048" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.27026" target="_blank">Direct or Mediated? Task-Dependent Audio Information Routing in Large Audio Language Models</a></h4>
+      <div class="meta"><span>📅 2026-08-27</span><span>👥 Yizhou Zhang, Wangjin Zhou, Xin Gu, Yichi Wang, Wei Tan, Yi Zhao, Zhi Gong, Keisuke Imoto, Tatsuya Kawahara</span></div>
+      <div class="abstract">大音频语言模型（LALM）通常在单一连贯音频片段上评测，其对陌生输入配置的行为鲜有探索。作者通过将两段音频拼接为单一输入的受控设置展开研究：在多个 LALM 上观察到任务依赖的鲁棒性鸿沟——ASR 相对稳定，而音频问答（AQA）显著退化。借助逐层注意力敲除分析解码器中音频信息路由，发现不同任务走不同通路：ASR 主要依赖答案 token 对音频 token 的直接检索，而 AQA 更依赖音频信息先整合进 prompt token、再在生成阶段被访问的中介路径。进一步探测发现任务相关音频属性仍可解码（尤其在中后层），说明失败并非音频信息在解码器状态中完全丢失，而更可能是答案生成阶段检索/利用 prompt 中介信息的下游瓶颈。</div>
+      <div class="tags"><span class="tag">LALM</span><span class="tag">Audio QA</span><span class="tag">Interpretability</span><span class="tag">ASR</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.27026" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.27026" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.26925" target="_blank">Mapping Written Words to Spoken Words in a Different Language Using Only Visual Grounding</a></h4>
+      <div class="meta"><span>📅 2026-08-27</span><span>👥 Gabriel Pirlogeanu, Dan Oneata, Horia Cucu, Herman Kamper</span></div>
+      <div class="abstract">在许多低资源场景下，仅采集语音数据都困难重重，让说话人描述图像是一种有前景的途径。给定带印地语口语字幕的图像数据集，作者考虑如何将书面的英文关键词映射到该词在印地语中的口语实现。不同于以往端到端多模态神经模型的路线，本文探索基于自监督语音表示的对齐方法：用现成图像字幕系统自动获得书面英文标签，再用自监督特征对齐与同一关键词关联的印地语话语，聚合对齐证据以识别对应目标词的复现语音片段。关键词定位与检测实验表明，该对齐方法超越此前的注意力神经模型，且加入负例可进一步提升。证明跨语言词-语音映射可仅凭视觉 grounding、无需转写或显式训练习得。</div>
+      <div class="tags"><span class="tag">Keyword Spotting</span><span class="tag">Self-Supervised</span><span class="tag">Low-Resource</span><span class="tag">Cross-Lingual</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.26925" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.26925" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.26403" target="_blank">GAN-based Joint Dereverberation and Directional Filtering</a></h4>
+      <div class="meta"><span>📅 2026-08-26</span><span>👥 Weilong Huang, Shrishti Saha Shetu, Emanuël A. P. Habets</span></div>
+      <div class="abstract">神经方向滤波（NDF）可重建具有期望指向性的虚拟方向麦克风（VDM），通过保留空间线索精准渲染多声源场景，但在强混响环境下空间线索感知上难以区分，限制其空间声捕获。本文提出神经去混响与方向滤波联合方法（NDDF），重建去混响的 VDM 信号，并以判别式与 GAN 两种方式实现，对比级联去混响+方向滤波基线。实验显示 NDDF 持续超越级联基线，且 GAN 版在处理高阶 VDM 目标时优于判别式版。此外提出仅依赖输入输出信号的指向性图估计方法，适用于信号映射式空间滤波。IWAENC 2026。</div>
+      <div class="tags"><span class="tag">Dereverberation</span><span class="tag">Spatial Audio</span><span class="tag">GAN</span><span class="tag">Beamforming</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.26403" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.26403" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.26346" target="_blank">Decay-Region Group Delay as a Forensic Cue for AI-Generated Impulsive Sounds</a></h4>
+      <div class="meta"><span>📅 2026-08-26</span><span>👥 JaeHyeong Chang, Chengzhe Sun, Siwei Lyu</span></div>
+      <div class="abstract">研究 AI 生成的冲击类声音（impulsive sounds）能否通过群延迟分析与人造真实声音区分。核心发现：AI 生成声音在起始区群延迟分布几乎一致，但在衰减区表现出可测差异——衰减区 KL 散度达 0.322，而起始区趋近于零（0.022）。跨频带 GD 变异性单特征 AUC 达 0.720，基于九个衰减区特征的随机森林在样本独立评测下 AUC 达 0.884；群延迟图作为独立 2D 输入给 CNN 分类器可达 90-94% 准确率。生成器留出测试下各方法 AUC 波动较大（0.457-0.918），但衰减区群延迟 RF 取得最高平均留出准确率（66.7%）且避免了极端低于随机的坍缩。该方法可作为物理可解释、补充幅度分类器的法证线索。WIFS 2026。</div>
+      <div class="tags"><span class="tag">Audio Deepfake Detection</span><span class="tag">Forensics</span><span class="tag">Group Delay</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.26346" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.26346" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.26336" target="_blank">StreamAV-Bench: A Comprehensive Benchmark for Streaming Audio-Video Generation</a></h4>
+      <div class="meta"><span>📅 2026-08-26</span><span>👥 Kaiqi Liu, Haoxuan Zeng, Jingqi Liu, Jiacong Fang, Ziqi Cai, Yunyao Mao, Henglin Liu, Yu Sheng, Shuchen Weng, Boxin Shi</span></div>
+      <div class="abstract">生成模型正将视频生成推向面向实时交互世界的无界流式音视频生成，但现有基准主要评估完整序列，难以刻画流式特性。提出 StreamAV-Bench，首个面向流式音视频生成的综合基准：建立统一评测框架，含针对指令遵循与长程稳定性的渐进式赛道，以及针对交互响应与状态保持/复用的交互式赛道。经专家验证、覆盖 32 个细粒度维度的评测案例，对 13 个代表性系统展开评估，发现当前模型在渐进生成中存在时间漂移、交互控制中存在响应瓶颈。基于完整失败分析，分享推进原生联合音视频流式模型发展的见解。</div>
+      <div class="tags"><span class="tag">Audio-Video Generation</span><span class="tag">Streaming</span><span class="tag">Benchmark</span><span class="tag">Interactive</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.26336" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.26336" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.25926" target="_blank">Formal, Executable and Explainable Runtime Monitoring of Spoken Air Traffic Control Operational Procedures</a></h4>
+      <div class="meta"><span>📅 2026-08-26</span><span>👥 Roberto Luvini, Giacomo Longo, Alessandro Armando, Enrico Russo</span></div>
+      <div class="abstract">空中交通管制程序通过管制员与飞行员之间的口语交换执行，其执行失败可能造成严重运行危害。评估一条指令是否被遵守，需将所述内容与涉及的航空器、其状态及飞行员需履行的义务关联。提出一个运行时验证框架，通过检查管制员-飞行员交换、监视数据与机载观察来监测此类程序：将无线电通信解析为与所涉实体关联的事件，与监视及机载观察合并为带时间戳的轨迹；将 ICAO 派生义务形式化为带显式时间界的时间公式并评估。每次违规都会报告所违反的义务与支持判定的观察。在真实流量上完整流水线对盲人标注违规的 F1 达 0.85；在 1495 个合成场景中监视器全部返回预期判定；在两起由官方调查报告重建的历史事故中识别出与调查者相同的程序偏差。</div>
+      <div class="tags"><span class="tag">Air Traffic Control</span><span class="tag">Spoken Language</span><span class="tag">Runtime Verification</span><span class="tag">Speech</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.25926" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.25926" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.25846" target="_blank">Why ML-based cough models do not generalize: A systematic cross-dataset evaluation for tuberculosis screening</a></h4>
+      <div class="meta"><span>📅 2026-08-26</span><span>👥 Wensi Zhang, Tomas Teijeiro, Jérôme Thevenot, David Atienza</span></div>
+      <div class="abstract">咳嗽声学在结核病（TB）无创筛查中前景广阔，但机器学习模型究竟捕捉的是疾病相关声学还是数据采集的伪影尚未解决。作者在三个独立数据集上评估经典 ML 与深度学习咳嗽 TB 分类器的跨数据集泛化能力。尽管数据集内性能中等（ROC-AUC 最高 0.755±0.056），两类流水线均无法泛化，外部性能常低于 0.6。进一步观察发现音频表示按采集设备/数据集而非 TB 状态组织、预测概率跟踪 CODA 中的国家患病率水平、设备不匹配会损害迁移而设备多样训练可改善迁移，且临床变量基线泛化更一致（0.655-0.711）。表明采集特异的变异性而非人群偏移才是泛化差的主要驱动因素——数据集内高性能并不足够，临床部署前必须外部验证。</div>
+      <div class="tags"><span class="tag">Healthcare Audio</span><span class="tag">Cough Analysis</span><span class="tag">Generalization</span><span class="tag">TB Screening</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.25846" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.25846" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-08-28') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
