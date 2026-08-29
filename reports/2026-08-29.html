@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-08-29</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-08-29</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年8月29日 (周六) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">5</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.26005" target="_blank">VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-26</span><span>👥 Zhifei Xie, Jiaqi Lang, Ze An, Yifan Zhao, Dongchao Yang, Kai Li, Ziyang Ma, Mingbao Lin, Chunyan Miao, Shuicheng Yan</span></div>
+      <div class="abstract">双工语音语言模型（SLM）长期缺乏一个流式、精准且富有同理心的「记忆之魂」。作者提出 VoiceMem，一种简洁的记忆架构，由并行的信息型「左脑」与情感型「右脑」以及流式记忆 I/O 机制组成，并构建了记忆感知 SLM 训练、长程评测与可解耦部署（记忆后端可替换）的完整流水线。实验与真实部署显示三重优势：①准确率——top-5 检索下左脑比经典系统（如 Mem0 的 top-200）高出近 30 个点；②情感与个性化——右脑通过长短期情感归因与双节点人设建模，在三个人设基准上取得 SOTA，总分较此前最佳系统提升 4.29 分；③实时与低成本——134ms 内完成检索，完全落在常规 VAD 延迟内，不引入额外对话延迟。为实时、个性化、情感感知的语音交互提供了实用的记忆底座。</div>
+      <div class="tags"><span class="tag">Voice Agent</span><span class="tag">Streaming Memory</span><span class="tag">Speech LLM</span><span class="tag">Persona</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.26005" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.26005" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.25404" target="_blank">CSAVocoder: A Causal Spatial Audio Vocoder Towards Real-Time Spatial Audio Generation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-26</span><span>👥 Zhiyuan Zhu, Han Wang, Wenxiang Guo, Yu Zhang, Changhao Pan, Rui Yang, Zhou Zhao</span></div>
+      <div class="abstract">空间音频声码器能将生成模型产出的 mel 谱转换为空间音频波形。大多数神经声码器面向单声道设计，直接扩展到空间音频会因忽略通道间线索而损害空间质量。作者提出 CSAVocoder，一种因果 GAN 空间音频声码器，联合优化波形保真度与空间渲染。框架引入 Spatial Adaptor 将多通道 mel 谱与动态声源-听者姿态信息融合，并用空间一致性判别器监督通道间线索。为满足实时需求，设计了严格因果、有状态的生成器，支持恒定内存开销的高效流式推理。大规模空间音频数据上的实验表明，CSAVocoder 在保持音频质量与实时性能的同时显著提升空间保真度。</div>
+      <div class="tags"><span class="tag">Spatial Audio</span><span class="tag">Vocoder</span><span class="tag">Audio Generation</span><span class="tag">Real-Time</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.25404" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.25404" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.25285" target="_blank">A Training-Free Proactive Defense Against Partial Speech Manipulation via Self-Embedding Steganography</a></h4>
+      <div class="meta"><span>📅 2026-08-26</span><span>👥 Yigitcan Özer, Zhe Zhang, Wanying Ge, Xin Wang, Junichi Yamagishi</span></div>
+      <div class="abstract">局部深度伪造语音——仅对语句中有限片段进行合成或篡改——对现有深度伪造检测系统构成严峻挑战：随着伪造区域占比下降，被动检测器越来越不可靠，精确检测与还原也愈发困难。作者从新视角重新审视音频隐写术，提出将其作为局部深度伪造音频的主动防御手段。具体采用自嵌入策略，让干净语音信号嵌入自身压缩表示，从而支持事后抽取参考内容；并展示了如何复用现有音频隐写方法，通过基于编解码器的还原来检测局部深度伪造。基准数据集实验显示该方法可有效补充被动防御，且完全无需训练，为局部深度伪造检测提供了鲁棒且数据高效的替代方案。</div>
+      <div class="tags"><span class="tag">Deepfake Detection</span><span class="tag">Audio Watermarking</span><span class="tag">Speech Security</span><span class="tag">Training-Free</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.25285" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.25285" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.25289" target="_blank">Combining Self-Embedding Audio Watermarking with Ultra-Low-Bitrate Neural Codecs</a></h4>
+      <div class="meta"><span>📅 2026-08-26</span><span>👥 Yigitcan Özer, Xin Wang, Zhe Zhang, Junichi Yamagishi</span></div>
+      <div class="abstract">针对语音录音的局部篡改（仅改动一段话语中的局部片段）对内容完整性验证构成重大挑战：篡改比例越低，可靠检测与定位越困难。水印提供了一种主动防御思路，通过分发前嵌入辅助信息；经典哈希方案在理想条件下可实现近乎完美的检测与定位，但片段一旦被篡改、原始内容便无法恢复。本文在先前自嵌入音频隐写框架基础上，从三个维度做初步探索：帧级定位、多位 LSB 变体、以及跨多种超低码率神经编解码器表征的评测。通过嵌入紧凑的神经编解码表征而非密码学哈希，框架额外支持对被篡改区域的还原，同时免训练、无需伪造样本即可检测与定位。四种受控篡改类型（理想信道条件下）的实验显示，嵌入载荷——即真实内容的近似重建——始终能被无错完整恢复，且神经编解码器的选择是检测与定位性能的主导因素。</div>
+      <div class="tags"><span class="tag">Audio Watermarking</span><span class="tag">Speech Integrity</span><span class="tag">Neural Codec</span><span class="tag">Security</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.25289" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.25289" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.25244" target="_blank">AllMusicCaps: Album Reviews as Complementary Supervision for Music CLAP</a></h4>
+      <div class="meta"><span>📅 2026-08-26</span><span>👥 Pablo Alonso-Jiménez, Xavier Lizarraga-Seijas, Xavier Serra, Dmitry Bogdanov</span></div>
+      <div class="abstract">现有开放文本-音频对比模型（CLAP）通常用由标签数据集或网络搜索生成的 LLM 字幕训练，虽准确但表达范围狭窄。作者探索人类撰写的专辑乐评（AllMusic 专家乐评）作为互补监督来源：其规模充足，且携带叙述线索、评价性形容词和场景框架等其它来源缺失的信息。由于原始乐评过于嘈杂无法直接作为字幕，作者先通过 LLM 预处理流水线构建了约 24.5 万条字幕语料（识别描述性音乐引文并改写为训练就绪字幕）。研究发现，专辑乐评监督在人工编写的字幕基准（Song Describer）上带来最大检索提升，尤其是对现有字幕数据集无法覆盖的复杂查询。此外，作者重新审视训练配方，发现 SigReg 正则化（鼓励嵌入空间呈各向同性高斯分布）能提升各分类任务上的 MLP probing 及文本-音乐检索。所提模型在文本-音乐检索、零样本分类和多数 MLP probing 任务上超越开放 CLAP 基线，并开源乐评字幕数据集与模型权重。</div>
+      <div class="tags"><span class="tag">Music CLAP</span><span class="tag">Audio-Language</span><span class="tag">Music Retrieval</span><span class="tag">Dataset</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.25244" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.25244" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-08-29') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
