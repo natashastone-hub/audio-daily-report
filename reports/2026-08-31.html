@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-08-31</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-08-31</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年8月31日 (周一) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">8</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.27848" target="_blank">Is Prosody Lost in Translation? Fine-Grained Cross-Lingual Prosody Similarity Across Languages</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-28</span><span>👥 Haopeng Xie, Ismail Rasim Ulgen, Sofia Son, Berrak Sisman, Philipp Koehn</span></div>
+      <div class="abstract">韵律在语音翻译中承载着字面内容之外的强调、情绪与意图信息。尽管表达性语音到语音翻译（S2ST）近来进步显著，但跨语言的韵律模式相似与差异仍鲜有人知。本文基于英语-德语、英语-西班牙语、英语-法语的多语言配音数据，首次进行细粒度跨语言韵律分析：比较源语言与目标语言语音间音高、能量、时间特征的相似性，并探究影响该相似性的语言与对齐因素。分析揭示了特定语言之间韵律结构的内蕴跨语言相关性，为表达性 S2ST 系统的韵律可迁移性提供了实证指导。</div>
+      <div class="tags"><span class="tag">Speech-to-Speech Translation</span><span class="tag">Prosody</span><span class="tag">Cross-Lingual</span><span class="tag">EMNLP 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.27848" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.27848" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.28472" target="_blank">Multirate State Space Models for End-to-End Processing of Pulse Density Modulated Speech Signals</a></h4>
+      <div class="meta"><span>📅 2026-08-28</span><span>👥 Ludovic Boulanger, Sean U. N. Wood</span></div>
+      <div class="abstract">基于状态空间模型（SSM）的深度网络日益用于语音处理，但通常在脉冲编码调制（PCM）音频上运行，这制约了在低功耗、常开边缘设备上的部署——这类设备普遍使用单比特 PDM MEMS 麦克风。本文展示了 SSM 的两项关键性质：连续时间参数化使其能产生与调制策略、采样率无关的一致性表示；长期记忆使该表示可被激进降采样而无需抗混叠操作。据此提出端到端 PDM 语音处理架构，在低功耗采样率（512 kHz）下实现鲁棒语音分类与增强，输出可降采样超 6.5 万倍，大幅减少下游处理时间步。</div>
+      <div class="tags"><span class="tag">State Space Model</span><span class="tag">Edge Audio</span><span class="tag">PDM Microphone</span><span class="tag">Speech Processing</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.28472" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.28472" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.27817" target="_blank">Auditing Generative Audio Calls for Known-Task Audio-LLM Evaluation</a></h4>
+      <div class="meta"><span>📅 2026-08-28</span><span>👥 Authors</span></div>
+      <div class="abstract">语音与音频 LLM 常通过「波形提示是否优于 ASR 转录」来评测，但对已知闭集任务，这一比较混淆了两个因素：声学证据的获取与调用生成式音频模型的必要性。本文将这一区别形式化为受控调用决策问题。在 VocalSound 上，转录仅达 0.296 准确率，说明需要波形信息；但受监督的 CLAP 与 WavLM 控制组在不做任何生成式音频调用时即达 0.850/0.854。带生成动作的选择器用 12.5% 的调用达到 0.925，与不做调用的对照（0.921）差异微弱（0.004，95% CI [-0.025,0.033]）。结论：对已知任务端点声明，关键量是在转录与编码器证据之后的生成式调用边际价值。</div>
+      <div class="tags"><span class="tag">Audio-LLM</span><span class="tag">Evaluation</span><span class="tag">Audio Understanding</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.27817" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.27817" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.28040" target="_blank">A Shaky Voice Is Not Always a Dodge: Benchmarking Textual and Vocal Evasion Detection in Earnings Calls</a></h4>
+      <div class="meta"><span>📅 2026-08-28</span><span>👥 Mirae Kim, Seonghun Jeong, Youngjun Kwak</span></div>
+      <div class="abstract">现有财报电话会的回避检测只关注文本转录，把回避当作单维现象。本文认为口语交流中的回避本质上是多维的：高管「说了什么」与「怎么说」承载独立互补信息。作者推出 DualEvasion 基准，含 60 场财报电话会、505 个问答对，每个样本带文本回避与声学线索（说话人自信度）双标签。实验表明最先进的多模态模型难以检测声音自信度，尤其在「不自信」的回复上；模型倾向于孤立解读声学线索而非相对每个说话人基线。提供说话人级参考仅有小幅改善，与人类表现仍有显著差距。</div>
+      <div class="tags"><span class="tag">Speech Understanding</span><span class="tag">Vocal Cues</span><span class="tag">Benchmark</span><span class="tag">EMNLP 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.28040" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.28040" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.28127" target="_blank">Exploring the Design Space of Representation Learning for Audio Transformations</a></h4>
+      <div class="meta"><span>📅 2026-08-28</span><span>👥 Sungho Lee, Marco Martínez-Ramírez, Junghyun Koo, Wei-Hsiang Liao, Kyogu Lee, Yuki Mitsufuji</span></div>
+      <div class="abstract">神经音频表示学习支撑了诸多内容导向应用，但对音频处理类任务仍能力有限。本文在「处理一致性、描述对齐、前向预测等变性」三目标统一框架下，系统比较所有目标组合，揭示其相对优势与交互。框架同时产出「变换嵌入」与「处理后音频嵌入」，二者互补：距离类任务偏好前者，探针类任务偏好后者。结合网络架构与训练管线改进，该表示在检索、探针评测与风格迁移上超越先前基线。</div>
+      <div class="tags"><span class="tag">Audio Representation</span><span class="tag">Style Transfer</span><span class="tag">ISMIR 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.28127" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.28127" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.28212" target="_blank">MuSP-Bench: Advanced Multimodal Benchmarking of Music Understanding across Score and Performance</a></h4>
+      <div class="meta"><span>📅 2026-08-28</span><span>👥 Milan Liessens Dujardin, Song-Ze Yu, Kevin Miao</span></div>
+      <div class="abstract">音乐家通过乐谱与演奏两种模态沟通音乐。为探究模型是否能同时理解这两者，作者推出 MuSP-Bench，一个人工撰写的 490 题基准，覆盖古典钢琴与管弦乐作品的乐谱理解、演奏理解、诠释与长程推理。对前沿多模态大模型的评测显示：这些模型在理解乐谱上困难重重，推理演奏音频时挑战更大。基准已开源。</div>
+      <div class="tags"><span class="tag">Music Understanding</span><span class="tag">Multimodal</span><span class="tag">Benchmark</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.28212" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.28212" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.27988" target="_blank">Predicting Turn-Taking Outcomes in Multi-Party Conversation: Interpretable Modelling of Speech and Gaze Dynamics with Interpersonal Closeness</a></h4>
+      <div class="meta"><span>📅 2026-08-28</span><span>👥 Mark Dourado, Karim Haddad, Henrik G. Hassager, Stefania Serafin</span></div>
+      <div class="abstract">平滑的说话人切换是有效对话的基础，依赖交谈者对何时介入的预测能力。本研究利用 GaMMA 语料，建模四人口语对话中目光与语音（及感知的人际亲密度）如何预示话轮切换。逻辑回归模型结果表明：目光特征捕获了预测性结构，与音量结合后 ROC AUC 达 0.76±0.04；音量反映说话人控制，目光离散与指向则反映听者就绪度与竞争性介入。性能在噪声条件下保持鲁棒，说明目光是话轮切换中互补、抗噪的线索。</div>
+      <div class="tags"><span class="tag">Turn-Taking</span><span class="tag">Multi-Party Conversation</span><span class="tag">Speech Dynamics</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.27988" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.27988" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.28422" target="_blank">Effects of HRTF Augmentation on Predicted Spatial Release from Masking in Music</a></h4>
+      <div class="meta"><span>📅 2026-08-28</span><span>👥 Jack Webb, Christophe Lesimple, Volker Kuehnel, Lorenzo Picinali</span></div>
+      <div class="abstract">在复杂混音中分离单个乐器对听力受损听众是一大挑战。本文提出通过增强个体头相关传递函数（HRTF）来提高空间线索显著性。听觉模型分析显示，增强后的 HRTF 可提升乐器可分离性；在中度感音神经性听力损失建模下益处仍然存在但显著降低，而模拟助听器处理无法将益处恢复到正常听力水平。Forum Acusticum 2026。</div>
+      <div class="tags"><span class="tag">Spatial Audio</span><span class="tag">HRTF</span><span class="tag">Hearing Loss</span><span class="tag">Music</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.28422" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.28422" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>Google 发布 Gemini 3.5 Transcribe：迄今最精准的实时语音转文字模型</h4>
+      <p>Google Gemini Audio 团队于 2026-08-26 推出 Gemini 3.5 Transcribe，面向语音 Agent、实时字幕与通话后分析的语音转文字模型。相较前代 Chirp 3，其字错误率（WER）大幅下降（流式 4.0%、非流式 2.6%，据 Artificial Analysis），转写为最终文本的时延改善 70%。支持 85+ 语言自动检测、自定义词汇、最多三说话人归属与词级时间戳，并能智能去除填充词、自动格式化。已通过 Gemini Live API 与 Interactions API 开放，并获 Agora、LiveKit、Vercel、Pipecat 等平台集成。此为补录的重大新闻（此前日报遗漏）。 <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-08-31') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
