@@ -1,0 +1,127 @@
+{
+  "date": "2026-09-01",
+  "papers": [
+    {
+      "title": "PhysWave: Physics-Guided Latent Diffusion Models for Controllable Spatial Audio Generation",
+      "url": "https://arxiv.org/abs/2608.29549",
+      "date": "2026-08-30",
+      "authors": "Lingfeng Yao, Chenpei Huang, Xingke Yang, Ziye Geng, Changqing Luo, Hao Wang, Jiang Liu, Miao Pan",
+      "abstract": "文本到空间音频生成（如文本到一阶 Ambisonics/FOA）为游戏、影视行业提供了便捷的空间音频创作方式。然而现有 text-to-FOA 方法多为纯数据驱动，可能生成违反声源方向与距离之间声学关系的音频，且将描述性控制与参数化控制分离，迫使用户在易用性与精度之间取舍。本文提出 PhysWave，一个物理引导的潜在扩散模型用于可控 text-to-FOA 生成。PhysWave 通过共享的航点-字幕表示统一自然语言与轨迹控制，并以两个可微声学先验增强扩散训练：球谐方向一致性先验与平方反比距离一致性先验。为支持动态空间生成，作者进一步构建了包含 30 万段、覆盖多样声音类别与声源轨迹的 FOA 数据集。实验表明这些物理先验帮助 PhysWave 生成空间一致的 FOA 音频，同时保持具有竞争力的音频质量，且这些先验可在推理时作为免训练的空间细化引导使用。",
+      "tags": ["Spatial Audio", "Latent Diffusion", "Ambisonics", "EMNLP 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.29549"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.29549"},
+        {"label": "Project", "url": "https://lingfengyao.github.io/PhysWave/"}
+      ]
+    },
+    {
+      "title": "What Are You Listening to? Temporal Music Grounding for Audio-to-Text Large Language Models",
+      "url": "https://arxiv.org/abs/2608.29480",
+      "date": "2026-08-30",
+      "authors": "Kun Fang, Ziyu Wang, Ichiro Fujinaga",
+      "abstract": "大型音频语言模型能生成流畅且音乐上看似合理的回答，但这些回答是否真正基于音频输入仍不清晰。本文提出「时序音乐 grounding」任务：模型需返回与所查询的音符、事件或音乐模式对应的一个或多个时间区间。为评估这一能力，作者构建了 MusicGroundingBench，一个通过将算法生成的钢琴 MIDI 渲染为音频、从而获得精确符号-音频对齐的可控基准套件，包含评估音符级 grounding 的 MGBench-3N 子集和评估结构化 grounding 与短时音乐理解的 MGBench-2B 子集。实验表明时序音乐 grounding 对当前音频语言模型仍具挑战，而任务特定训练可带来显著提升。作者还报告了 grounding 监督与音乐理解之间关系的探索性证据，将 MusicGroundingBench 确立为评估音频语言模型是否将其回答锚定于时序局部音乐证据的可控测试平台。",
+      "tags": ["Music Understanding", "Audio-LLM", "Benchmark", "Grounding"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.29480"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.29480"}
+      ]
+    },
+    {
+      "title": "Diagnose, Then Refine: A Closed-Loop TTS System with AudioLLM-Guided Correction",
+      "url": "https://arxiv.org/abs/2608.28970",
+      "date": "2026-08-29",
+      "authors": "Zeyang Song, Tianchi Liu, Tianrui Wang, Chenglin Xu, Steven Y. Guo, Haizhou Li",
+      "abstract": "当前 TTS 系统通常依赖开环、单次生成，可能产生零星的局部韵律缺陷（如重音错位、不自然的停顿或语调扁平），而语句级指标往往无法暴露这些问题。本文提出 LoopTTS，一个由判官引导的 Filter-Judge-Refiner 框架，用于修复被 AudioLLM 诊断出的低质量 TTS 输出。给定基础 TTS 模型生成的初始语句，AudioLLM Judge 识别显著的韵律问题并生成结构化「修正指令」；随后 Refiner（细粒度指令跟随的 TTS 模型）在初始语句、目标文本与指令的条件下进行引导式表达性重合成。为训练 Refiner，作者构建了 Refiner-DB，一个 4.2 万条、由 AudioLLM 标注、带词级韵律弱监督的数据集。对诊断出的低质量语句的人工评测显示，LoopTTS 能检测到可感知的显著错误并用 Refiner 修正，在修复质量上优于原始音频与实用的开环重生成基线。Refiner 还展现出更强的重音与停顿控制指令跟随能力。",
+      "tags": ["TTS", "AudioLLM", "Prosody Correction", "EMNLP 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.28970"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.28970"}
+      ]
+    },
+    {
+      "title": "HEAR Who Said What: Unlocking Speaker-Attributed Reasoning via Counterfactual Voice Grounding",
+      "url": "https://arxiv.org/abs/2608.29120",
+      "date": "2026-08-29",
+      "authors": "Dongwook Lee, Sangkwon Park, Eunwoo Song, Che Hyun Lee, Youngho Cho, Junho Kim, June Young Yi, Heeseung Kim, Sungroh Yoon",
+      "abstract": "语音语言模型（SLM）越来越多地部署于多说话人环境，但其将语音归因于正确说话人并基于说话人身份进行推理的能力仍不明确。为此，作者提出 HEAR，一个概念分层、诊断说话人归因推理基础能力的基准，包含 887 个多样多方音频片段中的 2.4K 条人工验证样本。在 HEAR 上评测 20 个领先 SLM 显示，它们在这些基础任务上表现挣扎，常依赖语义先验而非真实的声学线索。为应对该问题，作者提出 A2R，一个 30B 模型，在「带说话人级强负样本的反事实音频」（CASH）数据集上优化，引导模型优先关注声学声学线索而非语言信号。A2R 在 HEAR 上取得强性能，并展现出对多样多说话人下游任务的零样本泛化，表明习得的说话人归因能解锁模型潜在的说话人感知推理能力。",
+      "tags": ["Speech LLM", "Speaker Diarization", "Benchmark", "EMNLP 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.29120"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.29120"},
+        {"label": "Project", "url": "https://attributetoreason.github.io/AttributeToReason/"}
+      ]
+    },
+    {
+      "title": "Anchoring Speech with Semantics: A Multimodal Adapter Mechanism for Automatic Speech Recognition in Low-Resource Languages",
+      "url": "https://arxiv.org/abs/2608.29239",
+      "date": "2026-08-29",
+      "authors": "Kuan-Tang Huang, Cheng-Yeh Yang, Chien-Chun Wang, Hung-Shin Lee, Hsin-Min Wang, Berlin Chen",
+      "abstract": "低资源 ASR 仍然困难，因为稀缺的转录文本为目标端生成提供的监督证据有限。为弥补这一缺口，作者提出 SAMA-ASR，一个轻量级适配器机制，用来自辅助翻译的语义锚点与来自语音的声学锚点增强解码器；原则上该机制可应用于类似的编码器-解码器多任务语音模型。通过跨模态适配，SAMA-ASR 在 token 预测前以翻译衍生的语义嵌入与语音嵌入为条件来调解码器状态，结合语句级语义与语音grounding 证据。评测时这些语义锚点可由上游语音转文本翻译器自动生成，而无需像 oracle 翻译那样提供。在覆盖低资源汉语方言台湾闽南话与客家话的两个 30 小时数据集上的实验表明，SAMA-ASR 优于声学、基于提示以及纯语义翻译引导的基线，并在实用的自动语义锚设定下依然有效；翻译器容量分析表明一个紧凑的 ST 模型即可产生有用的语义锚点。",
+      "tags": ["ASR", "Low-Resource", "Multimodal Adapter", "EMNLP 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.29239"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.29239"}
+      ]
+    },
+    {
+      "title": "Beyond Speech: Dual-Domain SSL Fusion for Unified All-Type Audio Deepfake Detection",
+      "url": "https://arxiv.org/abs/2608.29021",
+      "date": "2026-08-29",
+      "authors": "Cunhang Fan, Junqin Cao, Tian Gao, Zhipeng Xie, Jun Xue, Zhao Lv, Xin Fang",
+      "abstract": "统一全类型音频深度伪造检测旨在判断输入片段是真实还是伪造，而其音频类型可能是语音、环境声、歌声或音乐。现有以语音为中心或依赖类型的方案对此不够，因为测试时音频类型未知，而输出仍只需单一的二分类判断。本文提出一种双域 SSL 融合方法，将异构音频映射到共享的二分类真实性空间。EAT-large 与 wav2vec 2.0 XLS-R-300M 作为互补的 SSL 特征源，分别提供广域的声学与事件级表示，以及波形级、人声与语音敏感表示。逐层加权融合整合来自不同 transformer 深度的多层次伪影，token 级融合则在不强制两路 SSL 流之间帧对齐的前提下形成统一特征池。融合 token 经多头注意力统计池化汇总后由二分类 MLP 头分类。在该统一核心检测器上叠加保守的语音细化后，所提交系统在 AT-ADD Track 2 评测集上取得 95.58% 的 Macro-F1，位列挑战赛第二名。",
+      "tags": ["Audio Deepfake Detection", "SSL Fusion", "ACM MM 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.29021"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.29021"}
+      ]
+    },
+    {
+      "title": "When Vocal Tone and Literal Meaning Diverge: An Acoustic-Semantic Incongruity Study for Large Audio-Language Models",
+      "url": "https://arxiv.org/abs/2608.28966",
+      "date": "2026-08-29",
+      "authors": "Yu-Wen Chen, William Ho, Maxim Topaz, Zoran Kostic, Julia Hirschberg",
+      "abstract": "跨模态的情感线索可能不一致（如反讽或讽刺式赞美），仅依赖单一模态时可能导致误解。大型音频语言模型（LALM）近来流行并已被应用于多模态情感识别，但它们解耦声学与语义线索的能力——尤其在不一致情况下——仍未被充分探索。为填补这一空白，作者构建 CREMA-ASIS 数据集，专门用于研究声学情感与语义情感极性之间的不一致，将声学情感标签与语义情感极性配对。作者在该数据集上评测 LALM 在多任务框架下的偏见，并进行逐层分析以识别跨层模态主导性。实验发现 LALM 在语义-声学不一致样本上表现挣扎、很少预测不一致，且 LALM 主要受语义信息影响；然而监督微调显著提升了 LALM 在 CREMA-ASIS 测试集上的表现，同时保持转写准确率与联合情感识别，展示了在域外数据上增强声学与语义理解双能力的潜力。",
+      "tags": ["Audio-LLM", "Emotion Recognition", "Acoustic-Semantic", "EMNLP 2026 Findings"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.28966"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.28966"}
+      ]
+    },
+    {
+      "title": "Disentangling Representation using Attributes-based Gaussian Estimation for Medical Sound Diagnosis",
+      "url": "https://arxiv.org/abs/2608.29026",
+      "date": "2026-08-29",
+      "authors": "Ke Zhao",
+      "abstract": "深度学习具有强大的特征提取能力，但深度神经网络公平性与可解释性的缺失限制了其在医疗领域的应用。本文提出一个解耦表示学习（DisenRL）框架，名为「基于属性的高斯估计解耦表示」（AGEDR），其中包含属性映射嵌入（AME）模块，用于将属性映射为向量，并在变分自编码器（VAE）中将其与部分潜在向量对齐。这部分潜在向量通过最小化互信息与剩余潜在向量解耦。随后使用 VAE 潜在向量均值参数训练分类器。大量实验表明 AGEDR 优于传统分类模型与现有解耦表示学习方法，消融实验也表明其解耦能力与公平性。源代码已公开。",
+      "tags": ["Medical Sound", "Disentangled Representation", "Audio Classification"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.29026"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.29026"},
+        {"label": "Code", "url": "https://github.com/ZhaoKe1024/DisentangledRepr"}
+      ]
+    },
+    {
+      "title": "V2TATC: A Joint Voice-Trajectory Embedding Framework and Dataset for Air Traffic Controller Situational Awareness",
+      "url": "https://arxiv.org/abs/2608.28981",
+      "date": "2026-08-29",
+      "authors": "Louis Brusset, Mathurin Petit, Jordan Kam, Alexandre Bayen",
+      "abstract": "随着全国空域空中交通量的持续增长，空管员对可扩展决策支持工具的需求也日益迫切。本文介绍 Voice-to-Trajectory for Air Traffic Control（V2TATC），一个联合语音通信-飞行轨迹数据嵌入框架，可作为拥挤空域态势感知的组成部分，辅助空管员在实时推理 ADS-B 轨迹或飞行员自然语言表达意图时的工具开发。作者证明这两种数据模态并非独立，而是代表一个共同的物理指代：一架在空域中飞行的飞机。V2TATC 将语音指令与所指飞机的轨迹映射到同一潜在空间中相近的点，可双向查询。它结合了自监督轨迹编码器、冻结的大规模语音编码器、对比联合嵌入以及通过归一化流的双射提升。作者在旧金山湾区验证了 V2TATC 的有效性，并发布一个新颖的成对语音-轨迹数据集，报告了跨模态检索、消融与潜在空间分析实验。",
+      "tags": ["Speech Embedding", "Air Traffic Control", "Cross-Modal"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.28981"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.28981"}
+      ]
+    }
+  ],
+  "news": [],
+  "note": "近 24 小时（2026-08-31 09:30 至 2026-09-01 09:34，北京时间）arxiv eess.AS + cs.SD 类目新增 9 篇论文（2026-08-29 与 2026-08-30 提交），均已收录。经逐条执行 OpenAI GPT-Live / OpenAI voice / Google Gemini voice / full-duplex speech / 语音模型发布 / real-time voice AI 等重磅关键词搜索及 TTS/语音合成/音频生成等常规新闻搜索，未发现 24 小时内语音/音频领域的重大新产品发布；Gemini 3.5 Transcribe 相关中文解读文章虽于今日发布，但其模型本体已于 08-26 发布并被 08-31 日报补录，故不重复收录。"
+}
