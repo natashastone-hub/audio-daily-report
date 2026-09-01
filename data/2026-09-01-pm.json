@@ -1,0 +1,6 @@
+{
+  "date": "2026-09-01",
+  "papers": [],
+  "news": [],
+  "note": "下午时段（2026-09-01 09:30 至 14:00，北京时间）无新增内容。arxiv eess.AS + cs.SD 类目最新提交仍停留在 2026-08-31 22:11 UTC（即北京时间 09-01 06:11）之前，6 小时窗口内无新投稿；通过 max_results=50 API 与站点近 30 条提交时间戳交叉验证，均早于 9:30。HuggingFace Daily Papers、前沿新闻及各重磅关键词搜索（OpenAI GPT-Live / voice / Google Gemini voice / full-duplex speech / 语音模型发布 / real-time voice AI）均未命中 6 小时内的音频/语音领域新产品发布。为避免与早间版本重复，本时段不重复收录早间已报道的 08-29/30 论文与 Gemini 3.5 Transcribe 新闻。"
+}
