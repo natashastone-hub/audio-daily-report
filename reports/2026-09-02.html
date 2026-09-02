@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-09-02</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-09-02</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年9月2日 (周三) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">20</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">7</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.30325" target="_blank">Sequential Trajectories and Simultaneous Blending: Multi-Emotion Modeling for Instruction-Following TTS</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-31</span><span>👥 Yan Zhou, Yun Hong, Yang Feng</span></div>
+      <div class="abstract">自然语言指令让语音合成控制更灵活，但现有情绪 TTS 仍主要建模单一语句级情感。本文研究两种互补的多情绪 TTS 任务：情绪轨迹（跨多个有序情感阶段）与情绪混合（多个情绪在同一句中共存）。作者提出 HybridEmo，先用 SFT 初始化，再用基于样本感知混合奖励的 GRPO 对齐语音 token 策略。轨迹样本用分段对齐一致性结合平均与最弱阶段证据；混合样本用 GMM 奖励结合帧级支持与语句级弱目标边际。在 MultiEmo-Test 上 HybridEmo 显著提升轨迹正确性与混合强度，且不损失说话人相似度；人工评测优于 CosyVoice 3 与 EmoVoice-0.5B，与 Qwen3-TTS 接近。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Emotion</span><span class="tag">Multi-Emotion</span><span class="tag">GRPO</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.30325" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.30325" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.01016" target="_blank">Phrase-Localized Language-Contrastive Guidance: Training-Free Localized Accent Control for Code-Switching Text-to-Speech</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-01</span><span>👥 Che Hyun Lee, Sangkwon Park, Donghun Kang, Dongwook Lee, Youngho Cho, Heeseung Kim, Sungroh Yoon</span></div>
+      <div class="abstract">语音合成在处理语码切换（code-switching）时往往让外来语短语带上主语言口音。本文提出 Phrase-Localized Language-Contrastive Guidance (LCG)，一个免训练的推理框架，将整句统一语言引导替换为逐区域的独立引导，使每个短语以自身母语口音发音。为定位引导区域，作者提出自注意力探测技术，无需外部对齐即可找到短语边界。跨多种语言对的实验表明 LCG 稳健提升代码切换短语的原生度、抑制口音泄漏，同时保持说话人身份与自然度。已被 EMNLP 2026 主会接收。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Code-Switching</span><span class="tag">Accent Control</span><span class="tag">EMNLP 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.01016" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.01016" target="_blank">🔗 PDF</a> <a href="https://saga1214.github.io/PhraseLocalizedLCG/" target="_blank">🔗 Demo</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.00562" target="_blank">BiMTokenizer: Preserving Semantic-Acoustic Balance in Low-Bitrate Speech Tokenization via Bidirectional State-Space Modeling</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-01</span><span>👥 Xin Zhang, Lin Li, Chuanbo Liu, Jianquan Liu, Kong Aik Lee</span></div>
+      <div class="abstract">语音编解码器在声学保真与语义保留之间存在固有冲突，近期双塔架构解耦语义与声学建模但引入较大开销。本文重新审视单塔范式，提出 BiMTokenizer，一个约 1.1 kbps 的低码率语音编解码器，结合双向状态空间主干与残差球面 Leech 量化（RSLQ）。双向主干强化时序建模，RSLQ 提供固定且分离良好的格点瓶颈，避免学习码本坍缩。实验表明 BiMTokenizer 达到更优声学重建与低码率编解码基线中最低的 WER，参数量不到近期双塔基线的一半，且语义表示在下游语音理解任务上表现强劲。代码与权重已公开。</div>
+      <div class="tags"><span class="tag">Speech Codec</span><span class="tag">Tokenization</span><span class="tag">Low-Bitrate</span><span class="tag">State-Space</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.00562" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.00562" target="_blank">🔗 PDF</a> <a href="https://github.com/ZhangXinWhut/BiMTokenizer" target="_blank">🔗 Code</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.00640" target="_blank">TUTTI: Toward generalizable audio-to-score transcription via fully synthesized data</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-01</span><span>👥 Jianhuai Hu, Yashan Wang, Shangda Wu, Zhancheng Guo, Shijie Liang, Wuna Meng, Chuanqi Yang, Xiaobing Li, Feng Yu, Maosong Sun</span></div>
+      <div class="abstract">可泛化的音频到乐谱（A2S）转录受高质量真实配对数据稀缺的根本制约。本文提出 TUTTI，一个纯合成大规模数据驱动的预训练范式：利用符号音乐生成模型生成高度可扩展的多乐器语料，并合成具有表现力声学特征的音频-乐谱配对，再以标准 Transformer 编码器-解码器预训练。实验证明在生成的多乐器数据上预训练统一注意力模型能获得比单乐器训练更强的基础表示，微调后在多个 A2S 基准上达成新的 SOTA，并展现出显著跨乐器迁移能力。代码与 TuttiCorpus 将公开。</div>
+      <div class="tags"><span class="tag">Music Transcription</span><span class="tag">Audio-to-Score</span><span class="tag">Synthetic Data</span><span class="tag">SOTA</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.00640" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.00640" target="_blank">🔗 PDF</a> <a href="https://github.com/a-musiclover/TUTTI" target="_blank">🔗 Code</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.29999" target="_blank">TEMPO: Temporally-grounded Multi-task Post-training for Large Audio-Language Models</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-30</span><span>👥 Apoorva Kulkarni, Kaousheik Jayakumar, Sreyan Ghosh, Utathya Aich, Ramani Duraiswami, Dinesh Manocha</span></div>
+      <div class="abstract">大型音频语言模型（LALM）只能在片段级描述音频，无法为事件、说话人或声音赋予时间戳。TEMPO 是首个统一处理音频、语音与音乐时间戳任务的大模型，核心是三项创新的 SFT：原子时间戳 token、注入正弦壁钟编码的时间感知投影器、距离感知高斯损失，并采用合成到真实的课程学习。作者还首次将强化学习（GRPO + 可验证时序奖励）引入统一音频时间戳任务。在 5 个任务、119K 训练样本/10K 评测样本上，TEMPO 超越专门训练时间戳的 SOTA 模型 Audio Flamingo Next 与 Qwen3-Omni。</div>
+      <div class="tags"><span class="tag">Audio-LLM</span><span class="tag">Timestamping</span><span class="tag">Multi-task</span><span class="tag">RL</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.29999" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.29999" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.31106" target="_blank">DreamX-Creator: Democratizing Native Audio-Video Generation at 2K Resolution</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-31</span><span>👥 Jiashu Zhu, Yanhao Zheng, Ruitian Tian, Rujing Dang, Shen Zhang, Bingze Song, Jiachen Lei, Ruimin Lin, Jiahong Wu, Xiangxiang Chu</span></div>
+      <div class="abstract">现有视频生成往往忽略音频或将音频单独合成，限制了视觉动态与声学事件的联合建模。本文提出 DreamX-Creator 1.0，以 7B 生成器为核心的紧凑原生联合音视频生成系统，以首帧与文本提示为条件，通过门控跨模态注意力在生成后半段耦合音频与视频流。统一音视频数据系统构建时序一致的片段，渐进式联合训练加音视频强化学习，配合自回归 1 步 2K 细化管线输出高分辨率结果。整体实现原生同步音视频生成，达到与 SOTA 开源系统相当的性能，并开源 7B 生成器与 2K Refiner。</div>
+      <div class="tags"><span class="tag">Audio-Video Generation</span><span class="tag">Native Generation</span><span class="tag">2K</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.31106" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.31106" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.30776" target="_blank">Likelihood-Constrained Acoustic Reranking for Training-Free Hallucination Mitigation in LLM-Based ASR</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-08-31</span><span>👥 Jiasheng Kuang, Linru Zheng, Hongjin Song, Zhaoqi Cui, Song Li</span></div>
+      <div class="abstract">LLM 驱动的 ASR 借助强语言先验与多语种能力在常规语音上表现良好，但挑战条件下先验可能覆盖声学证据，导致意外翻译、指令执行、重复或灾难性删除等幻觉。本文提出 Likelihood-Constrained Acoustic Reranking (LCAR)，一种免训练解码方法：每步先保留基模型似然在贪婪 token 边际内的 token，再用声学兼容性分数重排。无需额外训练、外部检测器、参考转录或辅助模型。在四个 LLM 基 ASR 系统上，LCAR 消除 38.8–57.1% 检测到的幻觉失败，同时基本保持标准测试集 WER/CER。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">LLM</span><span class="tag">Hallucination</span><span class="tag">Training-Free</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.30776" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.30776" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.30927" target="_blank">Stride-k Subsampling: Train-Free Audio Token Reduction for Whisper</a></h4>
+      <div class="meta"><span>📅 2026-08-31</span><span>👥 Chanhee Cho, Junhyuk Choi, Bugeun Kim</span></div>
+      <div class="abstract">Whisper 以固定 1500-token 编码器接口暴露语音，现已成为 ASR 解码器与 Whisper 系语音语言模型的默认表示，但其冗余鲜有研究。本文提出 stride-k 下采样，一种确定性索引操作，每隔 k 个 token 保留一个。在五个 Whisper 规模上，k=2 在两个位置均保持基线 WER；两处应用 stride-2 使音频 token 减少 75%、总 GFLOPs 减少 52-58%。同样的配置扩展到三个 Whisper 系 SpeechLM，端到端延迟降低 19.6-27.4%。无需训练或辅助计算，stride-k 表明 Whisper 音频 token 接口容量超出下游任务所需。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Whisper</span><span class="tag">Token Reduction</span><span class="tag">Efficiency</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.30927" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.30927" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.30622" target="_blank">Textual Acoustic Grounding for Generalizable LLM-Based Deepfake Voice Detection</a></h4>
+      <div class="meta"><span>📅 2026-08-31</span><span>👥 Yassine El Kheir, Xin Wang, Wanqing Ge, Tim Polzehl, Sebastian Moeller, Junichi Yamagishi</span></div>
+      <div class="abstract">深度伪造语音检测在未见域上的泛化能力差。本文针对音频嵌入与 LLM 语义空间之间的模态鸿沟这一关键瓶颈，将多种音频编码器与 Qwen LLM（0.5B 到 7B）集成进行基准评测。实验表明仅微调 LLM 存在域外过拟合风险，冻结 LLM 是更强的资源高效基线；作者进一步提出跨模态提示策略，将 openSMILE 语言知识驱动的声学特征作为结构化文本 token 注入，既增强冻结基线也使微调更有效。该方法在域外 ITW 与 MLAAD 基准上取得超过现有 ALLM 基线 16.2% 的 Macro-F1 绝对提升。</div>
+      <div class="tags"><span class="tag">Deepfake Detection</span><span class="tag">LLM</span><span class="tag">Cross-Modal</span><span class="tag">SOTA</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.30622" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.30622" target="_blank">🔗 PDF</a> <a href="https://huggingface.co/01Yassine/AudioLLM-Deepfake-Detection" target="_blank">🔗 HuggingFace</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.30713" target="_blank">Closing the Verification Loop: Self-Check Captioning for Long-Paragraph Detailed Audio Captioning</a></h4>
+      <div class="meta"><span>📅 2026-08-31</span><span>👥 Fengji Ma, Yan Rong, Xu Li, Chen Zhang, Pengfei Wan, Li Liu</span></div>
+      <div class="abstract">长段落密集音频字幕（需稠密且转录忠实的细粒度描述）对当前音视多模态语言模型仍未解决。作者归因于数据匮乏与生成模式失败两点，并提出 Self-Check Captioning (SCC)，以音频上下文问答为验证原语的统一框架。SCC 产出三项成果：LACap-50k（50222 段、平均 491.5 词音频字幕加上 ASR 审计）、首个按中间层证据加权的 SFT 方法 LC-SFT、以及推理时自答仲裁的 SCC-Verifier。多基准上取得开源字幕器 SOTA，可与专有基线竞争。</div>
+      <div class="tags"><span class="tag">Audio Captioning</span><span class="tag">LALM</span><span class="tag">SFT</span><span class="tag">Dataset</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.30713" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.30713" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.00727" target="_blank">Heard but Not Heeded: Paralinguistic Information Encoding and Loss in Audio-Language Models</a></h4>
+      <div class="meta"><span>📅 2026-09-01</span><span>👥 Bhuvan Koduru, Dareen Safar B Alharthi, Rita Singh, Bhiksha Raj</span></div>
+      <div class="abstract">音频语言模型能否捕捉“怎么说”而不仅是“说了什么”仍不明确。本文对 Whisper-large-v2、Qwen2-Audio-7B、Qwen2.5-Omni-7B、Chroma-4B 四个开源模型做副语言信息的机理分析。所有模型都在编码器顶层三分之一强编码说话风格，但该信息在到达输出前持续衰减。输出端模型分化为“内容驱动”与“声学驱动”两类，作者用泄漏度量量化该差异，揭示了当前音频语言模型“编码了却未有效利用”的关键局限。</div>
+      <div class="tags"><span class="tag">Audio-LLM</span><span class="tag">Paralinguistics</span><span class="tag">Interpretability</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.00727" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.00727" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.00765" target="_blank">Perceptible or Not? Diagnosing Passive Fingerprints for Speech Deepfake Attribution</a></h4>
+      <div class="meta"><span>📅 2026-09-01</span><span>👥 Yupei Li, Qiyang Sun, Emmanouil Benetos, Berrak Sisman, Björn Schuller</span></div>
+      <div class="abstract">被动指纹（生成器自然留下的内在痕迹）可支撑语音深度伪造的归因，但其持久性、可复现性与内容无关性未经验证，且此前无人区分可感知与不可感知指纹。本文提出 Perceptible-Imperceptible Passive-fingerprint Diagnostic Protocol (PIPDP)，将两类指纹分别分析。跨十个语音生成器与三个归因检测器的实验表明，不可感知指纹提供持久归因线索；感知透明扰动最高使 HiggsAudioV3 归因精度下降 48.2%，而情绪驱动变化几乎不影响归因，说明不可感知指纹对可信归因更可靠。</div>
+      <div class="tags"><span class="tag">Deepfake</span><span class="tag">Attribution</span><span class="tag">Fingerprint</span><span class="tag">Diagnosis</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.00765" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.00765" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.00431" target="_blank">U-PAST: A Phase-Aware Audio Spectrogram Transformer-U-Net for Single-Channel Speech Enhancement</a></h4>
+      <div class="meta"><span>📅 2026-08-31</span><span>👥 Cao Duong Ly, Jörn Anemüller</span></div>
+      <div class="abstract">CNN 在音频增强中被广泛成功使用，但只能通过逐层卷积与池化间接捕捉长程时频依赖。本文提出 U-PAST，一个混合 transformer-U-Net 架构，在复频谱域通过自注意力建模依赖，将复 STFT 表示 token 化后送入多层 transformer 编码器，再用 U-Net 风格解码器重建增强复频谱。在 DNS Challenge、VoiceBank-DEMAND 与 LibriMix 上的四种变体（1.17M–2.40M 参数）评测中，U-PAST 在声学失配下取得最佳 SI-SDR，在数据集失配下取得最强感知质量，以极小参数量实现优异的性能-成本权衡。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Transformer</span><span class="tag">Phase-Aware</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.00431" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.00431" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.00966" target="_blank">ABSE-NET: A Lightweight Neural Model for Active Binaural Speech Enhancement in Open-Fit Hearing Aids</a></h4>
+      <div class="meta"><span>📅 2026-09-01</span><span>👥 De Hu, Xue Du, Qingying Zhao, Qintuya Si</span></div>
+      <div class="abstract">开放式助听器因佩戴舒适而受关注，但开放设计不可避免造成耳道声学泄漏，降低现有双耳语音增强（BSE）性能。本文提出 ABSE-NET，将主动噪声控制（ANC）与 BSE 结合，联合增强目标语音并抑制声学泄漏：级联双耳 MVDR 与轻量神经网络，前者粗增强、后者同时抵消泄漏并补偿失真。与传统自适应滤波方案不同，ABSE-NET 实际部署无需耳内麦克风。实验验证其优于 SOTA 方法，已被 INTERSPEECH 2026 接收。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Binaural</span><span class="tag">Hearing Aid</span><span class="tag">INTERSPEECH 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.00966" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.00966" target="_blank">🔗 PDF</a> <a href="https://github.com/Bream101/ABSE-NET" target="_blank">🔗 Code</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.30974" target="_blank">CoJEPA: Combining Contrastive Learning and JEPA for Global-Local Music Representations</a></h4>
+      <div class="meta"><span>📅 2026-08-31</span><span>👥 Gabriel Meseguer-Brocal, Yuexuan Kong, Romain Hennequin</span></div>
+      <div class="abstract">JEPA 在潜在空间自监督预测上表现强但训练不稳且可能产生无信息表示；对比学习训练稳定、全局表示强但受全局目标限制在局部任务上不足。本文提出 CoJEPA，用单个共享主干联合训练掩码序列 token 的 JEPA 目标与 class token 的对比目标：对比梯度提供稳定性从而完全移除 EMA teacher，JEPA 则通过局部预测丰富序列 token，且不给主干增加额外参数。CoJEPA 在全局与局部 MIR 任务上超越或匹敌两种单方法，在调性与和声理解上优势尤为突出。</div>
+      <div class="tags"><span class="tag">Music Representation</span><span class="tag">Self-Supervised</span><span class="tag">Contrastive</span><span class="tag">JEPA</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.30974" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.30974" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.29987" target="_blank">How Well Do Generative Music Models Follow Emotion Conditioning?</a></h4>
+      <div class="meta"><span>📅 2026-08-30</span><span>👥 Morteza Heydari</span></div>
+      <div class="abstract">生成音乐模型通过文本与音频条件提供了日益细粒度的控制，但遵循情感线索的忠实度仍未充分评估。本文提出统一评测管线：用 GTZAN 全部 1000 轨，用 DashengLM 提取语义描述、Music2Emotion 估源轨效价与唤醒度，构造情绪感知文本提示，评测 Stable Audio Open、MusicGen、InspireMusic 的文本与音频条件生成。结果显示文本条件生成一致优于音频条件，效价比唤醒度保留更可靠，且情绪跟随随流派差异显著，强调了直接评估情感可控性而非仅依赖整体质量指标的重要性。</div>
+      <div class="tags"><span class="tag">Music Generation</span><span class="tag">Emotion Conditioning</span><span class="tag">Evaluation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.29987" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.29987" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.00752" target="_blank">Ontology-based Target Sound Extraction</a></h4>
+      <div class="meta"><span>📅 2026-09-01</span><span>👥 Carlos Hernandez-Olivan, Marc Delcroix, Tsubasa Ochiai, Naohiro Tawara, Shoko Araki</span></div>
+      <div class="abstract">目标声音提取（TSE）旨在给定语义查询从混合中隔离感兴趣声源，但现有系统依赖与单个声音类别绑定的固定类别表示，难以处理环境声音自然组织的层次关系。本文提出基于本体的 TSE，从细粒度叶类（猫、狗）到高层类（动物）在声音本体任意层级提取。作者提出定义于 AudioSet 派生本体所有节点的可学习类别嵌入表，并用 Cophenetic Correlation Coefficient (CPCC) 损失对齐嵌入距离与本体树最短路径距离。实验显示考虑本体结构对训练 TSE 系统的益处，已被 IWAENC 2026 接收。</div>
+      <div class="tags"><span class="tag">Sound Extraction</span><span class="tag">Ontology</span><span class="tag">AudioSet</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.00752" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.00752" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.00055" target="_blank">Zero-Shot Respiratory Sound Classification through LLM-Augmented Audio-Text Alignment</a></h4>
+      <div class="meta"><span>📅 2026-08-30</span><span>👥 Mustafa Talha İlerisoy, Hung Manh Pham, Mathias Funk, Mykola Pechenizkiy, Aaqib Saeed</span></div>
+      <div class="abstract">自监督呼吸声编码器缺乏临床域语义锚定，限制其零样本推理能力。本文提出将编码器与医学术语在共享潜在空间对齐，使之成为零样本可用的基础模型。为缓解配对数据稀缺，用医疗 LLM 从元数据合成结构化报告作为对比学习的密集语义锚点，并采用 sigmoid 对比损失、相似度感知负采样等。在 6 数据集 9 任务上，该方法取得 61.3% 平均零样本 AUC，超越 CLAP（51.4%）与 Qwen2-Audio（54.9%），线性探测 AUC 达 71.6% 且仅用 43% 数据。</div>
+      <div class="tags"><span class="tag">Medical Audio</span><span class="tag">Zero-Shot</span><span class="tag">Audio-Text Alignment</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.00055" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.00055" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.30348" target="_blank">Perceptually Better, Semantically Worse: Measuring Speech Enhancement Impact on LLM-Based Voice Systems</a></h4>
+      <div class="meta"><span>📅 2026-08-31</span><span>👥 Randy Frans Fela, Pejman Mowlaee</span></div>
+      <div class="abstract">语音增强（SE）常作为口语 AI 预处理步骤，隐含假设更好音频质量提升下游性能，但 SE 引入的失真是否会传播到下游 LLM 任务性能仍无定论。本文提出 Output Divergence Rate (ODR)，度量 SE 改变 LLM 意图分类相对于干净语音的频率，在 2974 段 SLURP 片段上基准五种条件。结果显示每种条件 ODR 都显著高于零，MetricGAN+ 在提升 PESQ 的同时 ODR 翻倍（0.318 vs 0.135），未抑制回声经说话人替换达 0.836。标准音频质量指标与 ODR 相关性弱，说明其对 LLM 管线质量不充分。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">LLM</span><span class="tag">Evaluation</span><span class="tag">ODR</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.30348" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.30348" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.30329" target="_blank">Ouroboros: Self-Referential Backdoor Attacks on Speech Enhancement via Clean Audio Triggers</a></h4>
+      <div class="meta"><span>📅 2026-08-31</span><span>👥 Yunjie Zhou, Yuheng Huang, Diqun Yan</span></div>
+      <div class="abstract">语音增强模型被广泛部署为实时语音服务的前端模块，但其后门攻击脆弱性尚未被探索。本文提出 Ouroboros，一个利用增强模型理想干净输出作为自然触发器的后门攻击框架，无需任何外部触发器注入即可在推理时激活，与语音增强模型的被动处理特性相契合。大量评测显示近完美攻击成功率且性能退化极小，物理世界验证确认自然录制的未改变干净音频可可靠激活后门，且能推广到定向内容篡改攻击，并对常见过滤与微调防御保持有效。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Backdoor Attack</span><span class="tag">Security</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.30329" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.30329" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-09-02') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
