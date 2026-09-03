@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-09-03</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-09-03</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年9月3日 (周四) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">6</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.02623" target="_blank">Scalable Direction-Following TTS via Voice Impression-Guided Pseudo Triplet Construction</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-02</span><span>👥 Kenichi Fujita, Yusuke Ijima</span></div>
+      <div class="abstract">配音演员常按导演指示反复重读同一段脚本、调整演绎方式。本文将此设定为「方向跟随 TTS」(direction-following TTS)：给定参考语音与自然语言演绎方向，生成保持说话人身份与语言内容、但反映该方向的新语音。核心瓶颈是缺乏刻画这种相对修改的训练数据。作者提出可扩展的伪三元组构造流程，用一个可控制「印象」(impression) 的 TTS 模型生成受控风格变体，再用 LLM 依据估算的印象差异生成自然语言方向描述，从而自动产出 (参考语音, 方向文本, 修改语音) 三元组。实验表明，仅用伪三元组即可实现稳定的说话人保持修改，伪数据与真实录音结合可进一步提升方向对齐度，同时不损失说话人相似度。已被 INTERSPEECH 2026 接收。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Direction-Following</span><span class="tag">Pseudo Data</span><span class="tag">INTERSPEECH 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.02623" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.02623" target="_blank">🔗 PDF</a> <a href="https://ntt-hilab-gensp.github.io/IS2026pseudo/" target="_blank">🔗 Demo</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.02343" target="_blank">SonicCaps: Large-Scale Diverse and Fine-Grained Captioning for Improved Audio-Retrieval</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-02</span><span>👥 Zineb Lahrichi, Marc Ferras, Gaël Richard, Geoffroy Peeters</span></div>
+      <div class="abstract">大规模音频字幕数据集驱动了音频-语言模型的进展，但现有数据仍受语义多样性低、描述泛化缺乏声学细节、以及一对一声音映射难以反映听觉感知固有歧义等限制。本文提出 SonicCaps，一个大规模音频字幕数据集，包含约 1500 万条字幕与约 70 万个音频片段配对，用多模态大模型 Qwen3-Omni 同时以音频和文本为条件生成。为显式提升多样性，作者通过结构化提示工程与少样本生成，为每个音频生成约 24 条字幕，覆盖主描述、改写变体（详略/风格）与语义标签。人工评测显示 SonicCaps 显著优于现有字幕数据集，细粒度分析表明其描述更精确、更具描述性。在 SonicCaps 上以多字幕采样策略训练 CLAP 模型，持续改善音频检索与零样本分类，在公开与商业基准上泛化更强。SonicCaps 及两个专用 CLAP 模型已在 HuggingFace 开源。</div>
+      <div class="tags"><span class="tag">Audio Captioning</span><span class="tag">Dataset</span><span class="tag">CLAP</span><span class="tag">Audio Retrieval</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.02343" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.02343" target="_blank">🔗 PDF</a> <a href="https://huggingface.co/datasets/Zineb/SonicCaps" target="_blank">🔗 HuggingFace</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.02277" target="_blank">Auditory Illusion Benchmark for Large Audio Language Models</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-02</span><span>👥 Hayoon Kim, Eunice Hong, Kyogu Lee</span></div>
+      <div class="abstract">感知错觉一直是探究人类认知偏差与局限的关键探针，在听觉领域更成为检验大型音频语言模型（LALM）是否复现人类感知倾向的独特镜头。本文提出 AIB，首个面向 LALM 的听觉错觉基准，覆盖音乐、声音、语音三大类共十种代表性错觉，并对每种错觉标注是否涉及知识型先验。方法上将模型评测与受控人类听感研究配对，实现响应直接对比。结果显示系统性差异：多数 LALM 在低级声学错觉上保持信号忠实，而在涉及语言或音乐先验时部分模型表现出更接近人类的响应，但尚无模型真正匹配人类感知剖面。这些发现揭示了当前 LALM 作为认知模型的局限。已被 ICASSP 2026 接收，基准与代码已公开。</div>
+      <div class="tags"><span class="tag">Audio-LLM</span><span class="tag">Benchmark</span><span class="tag">Auditory Illusion</span><span class="tag">ICASSP 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.02277" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.02277" target="_blank">🔗 PDF</a> <a href="https://github.com/gillosae/aib" target="_blank">🔗 Code</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.02474" target="_blank">VAANI Noise Event Dataset: A curated spontaneous speech dataset annotated with timestamps for noise events</a></h4>
+      <div class="meta"><span>📅 2026-09-02</span><span>👥 Pavan Kumar J, Agneedh Basu, Pranav Bhat, Sujith Pulikodan, Suryansh Shukla, Nihar Desai Prasanta K. Ghosh</span></div>
+      <div class="abstract">大多数公开声学事件语料要么面向通用音频标注、要么面向干净语音分离，很少有直接在真实自发语音上叠加带时间戳噪声标注的数据。本文提出 VAANI 噪声事件时间戳数据集，这是基于 Project VAANI 田野录音（覆盖印度 165 个地区、105 种语言的自发语音）构建的派生标注层。与合成混合语料不同，VAANI 在同一现场同步捕获语音与环境噪声，并为重叠背景噪声事件标注细粒度起止时间戳，归入七类语义分类（动物、交通、婴儿/儿童、音乐、信号/警报、家电、非语音人声）。这种自发多语言印度语音、真实地域声景与可重叠语音的片段级噪声标签组合，填补了噪声鲁棒 ASR、声音事件检测（SED）与语音增强等任务的空白。</div>
+      <div class="tags"><span class="tag">Dataset</span><span class="tag">Noise Event</span><span class="tag">ASR</span><span class="tag">Multilingual</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.02474" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.02474" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.02376" target="_blank">Removing Speech, Keeping Activities: A Privacy Firewall for Acoustic Sensing in Assisted Living</a></h4>
+      <div class="meta"><span>📅 2026-09-02</span><span>👥 Pavlos Nicolaou, Christos Efstratiou</span></div>
+      <div class="abstract">声学感知为老年人日常活动监测提供了有前景的非侵入方案，但语音隐私顾虑仍是落地部署的关键障碍。本文提出一个完全基于合成数据训练的 U-Net 编码器-解码器隐私防火墙管线，从环境音频中去除语音、同时保留指示日常活动的环境声音；活动识别用 VGGish 迁移学习 + SVM 分类器完成。在 ESC-50 与 SINS 数据集上跨多语音内容水平评测，所提模型在所有测试条件下将残余语音降至 0% VAD 可检测语音（Silero VAD），优于 Facebook Denoiser（6.55%）、SepFormer（36.34%）与 ConvTasNet（47.21%）。真实家庭录音（AudioHive App 采集）处理后可检测语音同样为 0%，同时保持 76% 精确率与召回率，在不牺牲活动识别性能的前提下实现隐私保护声学感知。</div>
+      <div class="tags"><span class="tag">Privacy</span><span class="tag">Speech Removal</span><span class="tag">Acoustic Sensing</span><span class="tag">U-Net</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.02376" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.02376" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.02165" target="_blank">Sensing Bone-Conducted Speech with Earbuds</a></h4>
+      <div class="meta"><span>📅 2026-09-02</span><span>👥 Christoph Weyer, Peter Jax</span></div>
+      <div class="abstract">使用耳机进行移动通信时，清晰捕捉佩戴者自身语音（OV）至关重要，但在噪声环境下仍具挑战。骨传导（BC）语音可通过耳机外壳振动感知，可用于改善 OV 捕捉。然而，此前对 OV 诱发耳机振动的带宽与空间特性缺乏详细分析，而这两者与传感器选择与放置直接相关。本文基于两款耳机模型的测量，研究了这两类特性：频谱上，OV 诱发振动呈低通特性，400 Hz 以上以每十倍频 -93 dB 陡峭滚降，因此 >1 kHz 振动需极低噪底的传感器；空间上，耳机主要沿耳道入口方向内外振动，不同受试者与佩戴方式间高度一致。仿真确认单轴传感器即可在 <1.5 dB 平均衰减下捕捉 400 Hz 以下高功率振动，为传感器选型与放置提供了依据。</div>
+      <div class="tags"><span class="tag">Bone Conduction</span><span class="tag">Earbuds</span><span class="tag">Own Voice</span><span class="tag">Sensing</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.02165" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.02165" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>Meta 发布首个实时音频感知模型 Muse Voice Transcribe：支持 20+ 人分轨转写</h4>
+      <p>Meta 推出首个实时音频感知模型 Muse Voice Transcribe，可在同一流程中整合流式 ASR、说话人分离与端点检测，边说边转写、无需等待整段结束。支持 20 余名说话者分轨转写、超 1 小时音频、70+ 语言（25 种已验证），并引入「自适应延迟」动态决策机制：对易识别语音快速出结果，对发音不清/术语复杂处调用更多上下文。开发者可通过 Meta Model API 调用，定价每 1000 分钟 3 美元。截至 9 月 1 日位列 Artificial Analysis 流式语音转文本排行榜第 1 名。 <a href="https://www.ithome.com/0/997/218.htm" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Google Gemini 3.8 Flash 正式 GA：面向长任务与智能体的多模态模型</h4>
+      <p>Google 正式发布 Gemini 3.8 Flash（GA），是其迄今最智能的 Flash 模型，面向个人用户、开发者与企业，专为长上下文、agentic 工作流与真实生产场景优化，支持包括音频在内的多模态能力，适合以较低成本大规模部署通用型、可直接用于生产的智能体任务。 <a href="https://www.ithome.com/0/997/702.htm" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-09-03') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
