@@ -1,0 +1,47 @@
+{
+  "date": "2026-09-03",
+  "papers": [
+    {
+      "title": "VibeVoice-ASR-Streaming Technical Report",
+      "url": "https://arxiv.org/abs/2609.02812",
+      "date": "2026-09-03",
+      "authors": "Yujie Tu, Zhiliang Peng, Jianwei Yu, Li Dong, Songchen Xu, Yaoyao Chang, Wenhui Wang, Zilong Wang, Zehua Wang, Yan Xia, Jiajun Zhang, Xie Chen, Furu Wei",
+      "abstract": "传统「说话人归属 ASR」把 ASR 与说话人分割当作两个独立任务，近期端到端模型（如 VibeVoice-ASR）已在单一模型内统一两者，但仍主要支持离线识别，难以满足实时语音助手与智能体的低延迟需求。为此提出 VibeVoice-ASR-Streaming，首批基于 LLM 的流式端到端「说话人归属 ASR」方案之一：交错固定大小音频块、少量前瞻音频与已生成的文本，使模型能在语音到达时即时产出「谁在说什么」，无需独立的分割阶段。转写准确率上，7B 模型在五个评测集上取得最低平均 WER/CER；说话人归属上，在 13 个评测设置中的 12 个取得最优或并列最优。作者开源 1.5B 与 7B 权重及推理代码。",
+      "tags": ["Streaming ASR", "Speaker Attribution", "LLM-based ASR", "Real-Time"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.02812"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.02812"}
+      ]
+    },
+    {
+      "title": "Understanding Automatic Mixing: A Subtask-Oriented Analysis of Two-Stage Mixing System",
+      "url": "https://arxiv.org/abs/2609.02835",
+      "date": "2026-09-03",
+      "authors": "Jinjie Shi, Wei Hua, Kunzhu Xie, Make Li, Yuchen Liu, Joshua Reiss",
+      "abstract": "自动混音将多轨录音转化为感知连贯、平衡且风格一致的成品。真实生产中，由于轨道数量大、乐器多样、轨道间依赖强，这项任务极具挑战。两阶段系统通过将「组内处理」与「组间混音」分离来应对这一复杂性，然而其增益究竟来自更强的组件模型、还是来自显式的任务分解，一直不清晰。本文通过三组受控听感实验对自动混音进行子任务导向分析，考察全混音模型能否迁移到组内混音、下游模型能否补偿分组与响度误差、以及两阶段分解是否真正提升全混音质量。在三段高密度流行/摇滚片段上，不同模型的迁移能力有差异；不当分组会导致明显的下游退化，而响度关系改变的影响较弱且依赖模型；两种两阶段变体均显著优于对应的单阶段基线。结果表明，将「局部平衡」与「全局混音协调」显式分离是一项有价值的设计原则。已被 ISMIR 2026 接收，代码与音频示例已开源。",
+      "tags": ["Automatic Mixing", "Music Production", "ISMIR 2026", "Audio"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.02835"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.02835"},
+        {"label": "Demo", "url": "https://sparrowreivun.github.io/TwoStageMixingAnalysis/"}
+      ]
+    },
+    {
+      "title": "Choosing a PEFT Variant for Per-Patient Dysarthric ASR: A Single-Speaker Case Study on Two ASR Bases",
+      "url": "https://arxiv.org/abs/2609.02735",
+      "date": "2026-09-02",
+      "authors": "Bernard Muller, László Tóth, LaVonne Roberts",
+      "abstract": "逐患者适配器是构音障碍自动语音识别（dysarthric ASR）的首选生产架构，但参数高效微调（PEFT）的各变体此前未在「说话人相关、逐患者」设定下被系统比较。本文以单说话人案例研究，在两种生产基座（Whisper-large-v3 匈牙利语微调版、多语言 Qwen3-ASR-1.7B）上比较七种 LoRA 家族方法（LoRA、QLoRA、AdaLoRA、DoRA、LoHA、VeRA、VB-LoRA），对象为一名中风后匈牙利男性说话人（S1，409 条话语，临床听觉-感知评估为重度构音障碍）。注意力-投影适配器在两种基座上都显著改善 CER；三组种子下配对 bootstrap 未检测到 LoRA 与 DoRA 的显著差异（Whisper 上 13.86/13.90%，Qwen3-ASR 上 28.10/28.33% CER），故采用更简单更便宜的 LoRA。真实 4-bit（NF4）QLoRA 在每种子、两种基座上都更差（14.56/30.09% CER），且此规模下无内存节省；LoHA、VeRA、VB-LoRA、AdaLoRA 未达 LoRA 家族水平。同一基座下全参数微调更准（11.43% CER），但一个同时适配前馈块的 115MB LoRA 在其约 3.7% 的逐患者存储下即可逼近到 0.66 个百分点以内。约 5 分钟患者音频即可捕获零样本到 30 分钟 CER 降幅的 45.6%。",
+      "tags": ["Dysarthric ASR", "PEFT", "LoRA", "Clinical"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.02735"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.02735"}
+      ]
+    }
+  ],
+  "news": [],
+  "note": "下午时段（2026-09-03 09:30–14:00，北京时间）arxiv eess.AS + cs.SD 类目无严格落在此窗口内的新提交（最新一篇 2609.02835 提交于 01:19 北京时间）。但早间版因快照时序遗漏了 3 篇昨夜/凌晨新提交的音频相关论文（提交时间 22:32–01:19 北京时间），均与本日早间版无重复，现补齐收录：VibeVoice-ASR-Streaming（流式说话人归属 ASR）、Understanding Automatic Mixing（自动混音子任务分析）、Choosing a PEFT Variant for Per-Patient Dysarthric ASR（构音障碍 ASR 的 PEFT 选型）。已逐条执行 OpenAI GPT-Live / OpenAI voice / Google Gemini voice / full-duplex speech / 语音模型发布 / real-time voice AI 等重磅新闻关键词搜索并限定 freshness=day，6 小时窗口内无重大语音/Audio 产品发布，命中结果均为 7 月 GPT-Live、8 月 NemotronLabs VoiceChat 等已报道内容，未纳入。"
+}
