@@ -1,0 +1,146 @@
+{
+  "papers": [
+    {
+      "title": "CRAW: Codec Robust Audio Watermarking",
+      "url": "https://arxiv.org/abs/2609.03107",
+      "date": "2026-09-02",
+      "authors": "David Chernin, Ethan Fetaya",
+      "abstract": "生成式语音模型的进步使真假音频日益难以区分，助长了新型欺诈与虚假信息。音频水印通过在生成语音中嵌入不可感知信号、事后检测以验证其来源，是一种有前景的防御手段。但近期研究表明，现有事后水印方法在神经编解码器与降噪器下失效，而这些变换在真实世界的存储、传输与处理中极为常见。本文提出 CRAW，一个编解码器鲁棒的音频水印框架，联合提升对神经编解码器与其他攻击的鲁棒性，显著增强水印在真实场景下的实用价值。",
+      "tags": ["Audio Watermarking", "Deepfake Defense", "Neural Codec"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.03107"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.03107"}]
+    },
+    {
+      "title": "ToolDF: Tool-Integrated Reasoning for Mixed-Authenticity Audio Deepfake Detection",
+      "url": "https://arxiv.org/abs/2609.03620",
+      "date": "2026-09-03",
+      "authors": "Taewoo Kim, Young Han Lee, Nam In Park, Chanwoo Kim",
+      "abstract": "音频深度伪造检测通常被形式化为单域音频的片段级二分类。但真实世界的被操纵音频可能是混合真实性——真实与伪造线索在时间过渡、重叠声源或两者兼有的情况下共存，这要求不仅要检测被操纵音频，还要定位提供证据的成分。本文提出 ToolDF，一个面向混合真实性音频深度伪造检测的工具集成推理框架，以音频大语言模型为编排器，通过监督式工具使用轨迹训练，自适应分析音频场景、选择性进行声源分离、将组件路由到领域专家并聚合证据形成可解释结论。在混合真实性基准上取得最佳综合性能，宏 F1 较最强单体基线提升 3.72 点，较固定流水线提升 14.39 点，代码与数据集已开源。（EMNLP 2026 Findings）",
+      "tags": ["Audio Deepfake Detection", "Audio LLM", "Tool-Use", "EMNLP 2026"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.03620"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.03620"}]
+    },
+    {
+      "title": "PACodec: A Low-bitrate Neural Speech Codec with Parallel Additive Vector Quantization",
+      "url": "https://arxiv.org/abs/2609.03363",
+      "date": "2026-09-03",
+      "authors": "Fei Liu, Yang Ai, Xiao-Hang Jiang, Zhen-Hua Ling",
+      "abstract": "提出 PACodec，一种基于并行加性向量量化（PAVQ）的新型低比特率神经语音编解码器。不同于主流神经语音编解码器中顺序依赖的残差向量量化（RVQ），PACodec 的 PAVQ 策略聚合并行量化结果以优化比特率使用：采用『全局-局部-全局』（GLG）设计，全局编码特征被多个独立向量量化器并行量化，各自关注表示的一个局部成分，输出通过相加聚合得到最终全局量化结果用于解码，实现更高效的比特率利用。",
+      "tags": ["Neural Audio Codec", "Vector Quantization", "Low-bitrate"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.03363"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.03363"}]
+    },
+    {
+      "title": "Summary of the ChinaVoices Challenge 2026: Data, Tasks, Baseline, and Methods",
+      "url": "https://arxiv.org/abs/2609.03471",
+      "date": "2026-09-03",
+      "authors": "Yujie Liao, Bingshen Mu, Shuiyuan Wang, Liumeng Xue, Hexin Liu, Xian Shi, Jie Hu, Lei Xie",
+      "abstract": "本文总结 ChinaVoices Challenge 2026，旨在为汉语方言语音处理建立统一任务定义与评测条件，推进多方言识别与自动语音识别。挑战覆盖 16 个方言类别，定义两项任务：汉语多方言识别与汉语多方言 ASR，使用约 320 小时语音。两项任务使用相同评测音频，各含受限数据与开放数据赛道。论文描述任务设置、数据、评测指标及 Qwen3-ASR-1.7B 基线，并分析排行榜结果与提交系统：共 28 支队伍提交结果、17 支提供系统报告、15 支通过合规审查。多数合格系统超越基线，官方前三在隐藏评测集上保持不变。",
+      "tags": ["ASR", "Multi-Dialect", "Chinese Speech", "Challenge"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.03471"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.03471"}]
+    },
+    {
+      "title": "Is Semantics Enough for Speech Mean Opinion Score Prediction?",
+      "url": "https://arxiv.org/abs/2609.03283",
+      "date": "2026-09-03",
+      "authors": "Tianyu Lan, Yufei Shi, Yang Ai, Honghao Sun, Huipeng Du, Zhenhua Ling",
+      "abstract": "平均意见分（MOS）是评估合成语音自然度的黄金标准。但当前自动 MOS 预测器被优先考虑高层语义的自监督学习（SSL）模型主导，可能损害其对关键声学细节的捕捉能力。本文系统研究三类范式的表征：SSL、纯声学神经音频编解码器（NAC）以及将语义融入重建式架构的统一 NAC。在 BVCC 及多个域外数据集上的广泛基准测试表明，将语义理解与细粒度声学建模协同融合的特征能获得更好的 MOS 预测性能。",
+      "tags": ["Speech Quality Assessment", "MOS Prediction", "Audio Codec"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.03283"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.03283"}]
+    },
+    {
+      "title": "VoxReason: Listener-Free Evaluation of Source-Grounded Speech Planning Before Synthesis",
+      "url": "https://arxiv.org/abs/2609.03203",
+      "date": "2026-09-02",
+      "authors": "Mengzhe Geng",
+      "abstract": "富有表现力的语音系统在任何波形被渲染之前就要做决策：这句话如何表达。在对话智能体、旁白与角色条件化 TTS 中，这个隐藏的规划步骤设定了情感、音高、能量、语速、停顿、强调与立场，但下游音频评分很少揭示这些选择是否被源记录所授权——这是发生在任何波形存在之前的源使用失败。VoxReason 使这个合成前决策可度量，作为一个源grounded语音规划的无听者（listener-free）任务：在合成前测量表达选择是否立足于被引用的源记录。",
+      "tags": ["Speech Planning", "Expressive TTS", "Source-Grounded", "Evaluation"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.03203"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.03203"}]
+    },
+    {
+      "title": "StrixAE: An Intelligent Agent for Audio Enhancement under Complex Distortion Coupling in Real-World Scenarios",
+      "url": "https://arxiv.org/abs/2609.03414",
+      "date": "2026-09-03",
+      "authors": "Chenglin Wu, Junjie Wu, Jinhang Chen, Mingyang Chen, Zixu Lin, Jiabian Chen, Xinghao Ding, Xiaotong Tu",
+      "abstract": "真实场景的音频增强涉及复杂失真耦合，并需要个性化增强，现有方案难以同时解决两者。本文提出 StrixAE，一个基于多模态大语言模型（MLLM）的智能体，以 MLLM 作为控制器协调多个音频增强与个性化模型。通过两阶段训练：先在 AcoustBench 上进行 CoT 监督微调以奠定基础推理与工具调用，再进行『音频感知强化学习』（APRL）——一种专为音频复原流水线设计的奖励，联合优化格式有效性、结构连贯性与感知质量。在真实世界测试数据集上优于多数现有开源与闭源方案，在多项感知指标上取得 SOTA 并展现强泛化鲁棒性。",
+      "tags": ["Audio Enhancement", "Audio LLM Agent", "Reinforcement Learning"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.03414"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.03414"}]
+    },
+    {
+      "title": "StreamWSR: Streamable and Lightweight Waveform-Domain Neural Speech Super-Resolution",
+      "url": "https://arxiv.org/abs/2609.03381",
+      "date": "2026-09-03",
+      "authors": "Yuan Tian, Yang Ai, Hui-Peng Du, Zhen-Hua Ling",
+      "abstract": "提出 StreamWSR，一个可流式处理的波形域神经语音超分辨率模型。通过采用全因果架构和紧凑的帧级波形表示，StreamWSR 支持零前瞻的流式推理，同时避免了基于声码器的重建和显式相位预测。具体而言，用步进因果卷积将输入波形下采样为紧凑帧级表示，再用轻量因果长短期建模骨干捕获局部波形结构与长程历史依赖，最后经因果转置卷积转回波形域并与输入残差连接生成高分辨率语音。在 16kHz 语音超分上以仅 9M 参数、2G FLOPs 实现与代表性基线相媲美或更优的质量。",
+      "tags": ["Speech Super-Resolution", "Streaming", "Waveform-Domain"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.03381"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.03381"}]
+    },
+    {
+      "title": "Masked Autoregressive Speech Enhancement with Continuous Neural Audio Codec Representations",
+      "url": "https://arxiv.org/abs/2609.03940",
+      "date": "2026-09-03",
+      "authors": "Yoto Fujita, Simon Leglaive, Laurent Girin",
+      "abstract": "以往基于掩码生成建模的语音增强（SE）大多依赖神经音频编解码器（NAC）获得的离散 token 表示，但近期研究表明 NAC 的连续潜在表示在语音质量与可懂度方面对 SE 更有利。本文提出掩码自回归语音增强（MARSE），基于连续 NAC 表示迭代解码被掩码的干净语音帧。作者在相同 DNN（Conformer）、相同 NAC（DAC codec）与相同训练设置下系统对比不同解码策略，结果表明 MARSE 能在增强性能与计算成本之间实现灵活权衡。音频示例与代码已公开。（IWAENC 2026）",
+      "tags": ["Speech Enhancement", "Neural Audio Codec", "Autoregressive"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.03940"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.03940"}]
+    },
+    {
+      "title": "Test-time adaptation for speech enhancement with an autoregressive speech prior",
+      "url": "https://arxiv.org/abs/2609.03622",
+      "date": "2026-09-03",
+      "authors": "Sofiene Kammoun, Simon Leglaive, Xavier Alameda-Pineda, Timo Gerkmann",
+      "abstract": "测试时自适应（TTA）为在不匹配声学条件下改进语音增强模型提供了有前景的方向，且无需访问带标签的目标数据。本文提出一种单句 TTA 方法，利用在神经音频编解码器提取的干净语音潜在表示上训练的自回归先验来正则化预训练语音增强模型。通过在增强语音分布与干净语音先验之间最小化 KL 散度实现自适应。在多个含噪语音数据集上的实验显示语音质量一致提升，尤其在训练-测试噪声不匹配条件下。代码与音频示例已公开。（提交至 IWAENC 2026）",
+      "tags": ["Speech Enhancement", "Test-Time Adaptation", "Autoregressive Prior"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.03622"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.03622"}]
+    },
+    {
+      "title": "Neural Music Enhancement with Dual Time-Frequency Spectral Representations for Prediction and Discrimination",
+      "url": "https://arxiv.org/abs/2609.03357",
+      "date": "2026-09-03",
+      "authors": "Fei Liu, Yang Ai, Zhen-Hua Ling",
+      "abstract": "网上分享的非专业音乐录音常受背景噪声与混响影响，降低感知质量并限制复用。本文提出 DSME，一种基于双时频谱表示的音乐增强模型。在生成对抗框架内，DSME 用短时傅里叶变换（STFT）谱进行生成、用常量 Q 变换（CQT）谱进行判别。利用 STFT 固定窗口、可逆性与可预测性，生成器从退化输入估计干净幅相谱并经逆 STFT 重建波形；利用 CQT 的对数频率、可变窗口结构对齐音乐八度，判别器更好地捕捉音质差异。",
+      "tags": ["Music Enhancement", "Audio Restoration", "GAN"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.03357"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.03357"}]
+    },
+    {
+      "title": "Beyond .WAV: Design and Software Verification of VocalCap, a Traceable Browser-Based Audio Capture System for Vocal Biomarker Research",
+      "url": "https://arxiv.org/abs/2609.03320",
+      "date": "2026-09-03",
+      "authors": "Augusto Camargo",
+      "abstract": "远程语音研究常只保留一个最终音频文件，却缺少关于它如何被采集、传输、处理与接受的证据。本文提出 VocalCap，一个机构可控的、基于浏览器的系统，用于无技术训练参与者的自我引导语音与相关声学信号采集。版本化协议驱动工作流，每次被接受的录音都保留浏览器原生对象、客户端无损 Float32 WAV 及服务器规范的单声道 PCM16 WAV，并关联采集执行、技术质量、字节级完整性、恢复与转换来源的证据。IndexedDB 保存已接受浏览器产物。",
+      "tags": ["Vocal Biomarker", "Audio Capture", "Data Provenance"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.03320"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.03320"}]
+    },
+    {
+      "title": "Local Chord Corruption Is Not Recognizer Replay: Chord-Condition Propagation in MIDI-SAG",
+      "url": "https://arxiv.org/abs/2609.03584",
+      "date": "2026-09-03",
+      "authors": "Weiwen Huang",
+      "abstract": "合成和弦污染为歌声伴奏生成（SAG）提供了受控压力测试，而完整的自动和弦识别（ACR）重放则衡量部署系统实际接收的条件。作者通过一个固定 MIDI-SAG 生成器重放 CNN-CRF 与 DeepChroma+CRF 预测，保持轨道、种子、上下文与评分窗口不变，比较两者。在 30 对轨道与三个种子上，中心四秒的三全音在 STFT、CQT、CENS 上产生比 CNN-CRF 重放更大的目标变化。结论是局部污染测试机制，而完整重放评估部署的和弦条件传播。",
+      "tags": ["Singing Accompaniment", "MIDI", "Chord Recognition"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.03584"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.03584"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "Google 发布「迄今最精准」语音转文本模型 Gemini 3.5 Transcribe",
+      "url": "https://www.msn.cn/zh-cn/%E6%8A%80%E6%9C%AF/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E8%B0%B7%E6%AD%8C%E5%8F%91%E5%B8%83-%E6%9C%80%E7%B2%BE%E5%87%86-%E8%AF%AD%E9%9F%B3%E8%BD%AC%E6%96%87%E6%9C%AC%E6%A8%A1%E5%9E%8B-%E5%8A%A0%E9%80%9F%E8%AF%AD%E9%9F%B3%E4%BA%A4%E4%BA%92-%E9%87%8D%E5%A1%91ai%E4%BA%A4%E4%BA%92%E6%96%B0%E6%A0%BC%E5%B1%80/ar-AA2b1AFG",
+      "summary": "谷歌推出被称为「迄今最精准」的语音转文本模型 Gemini 3.5 Transcribe，并整合至多款核心产品、通过 Gemini API 开放开发者预览。该模型专为语音输入优化，支持 85 种语言与最多三位说话者的预录音频，自动过滤「嗯」「啊」等语气词并实时修正口误，较前代 Chirp 3 转录速度提升约 70%，实时语音错误率从 7.32% 降至 5.5%，已在 Pixel 11 Gboard 及 Gemini 应用中上线。"
+    },
+    {
+      "title": "Meta 发布首款实时音频感知模型 Muse Voice Transcribe",
+      "url": "https://news.qq.com/rain/a/20260902A04TQO00",
+      "summary": "Meta Superintelligence Labs 正式推出 Muse Voice Transcribe，这是该公司开发的首款实时音频感知模型，标志着 Meta 在实时语音模型落地上的重要里程碑。模型支持实时流式语音转文字（ASR）、超过 20 人的说话人分离（Diarization）以及端点检测（Endpointing），并具备多语言能力。"
+    }
+  ]
+}
