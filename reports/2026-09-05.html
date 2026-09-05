@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-09-05</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-09-05</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年9月5日 (周六) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">4</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.03992" target="_blank">Alignment-Free Text-Audiobox for Voice Dubbing and Full-Duplex Dialogue Synthesis</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-03</span><span>👥 Sanyuan Chen, Min-Jae Hwang, Sho Inoue, Anna Sun, Bokai Yu, David Kant, Dongmin Hyun, Dorian Desblancs, Gregory Antonovsky, Oleg Repin, Peng-Jen Chen, Xutai Ma, Zehai Tu, Juan Pino, Wei-Ning Hsu</span></div>
+      <div class="abstract">Meta 提出 Alignment-Free Text-Audiobox (Text-AB)，一个统一的配音与全双工对话合成框架。基于 flow-matching 目标的 Diffusion Transformer，采用 DAC-VAE 特征把 48kHz 波形编码为 25Hz 潜在序列，压缩率比 EnCodec 高 10 倍以上；无对齐技术通过交叉注意力学习文本-语音对齐，摆脱强制对齐和显式时长预测。预训练 3B 参数模型于 480k 小时单语语音，再在跨语言配音、全双工对话合成、情感全双工对话三个下游任务微调。在真实配音基准上较内部系统大幅提升韵律/音色/自然度相似度；全双工对话在短对话上逼近人类录音，长对话上显著超越现有模型，原生建模轮次切换、back-channeling 和情感动态。</div>
+      <div class="tags"><span class="tag">Voice Dubbing</span><span class="tag">Full-Duplex</span><span class="tag">TTS</span><span class="tag">Diffusion Transformer</span><span class="tag">Meta</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.03992" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.03992" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.04102" target="_blank">Compressing Streaming Neural Audio Encoders via Latent-Space Distillation</a></h4>
+      <div class="meta"><span>📅 2026-09-03</span><span>👥 Prasanth Yadla, Mohammad Samragh, Dongseong Hwang, Mingbin Xu, Yuanyuan Zhang, Chung-Cheng Chiu, Yongqiang Wang, Yuan Liu, Zhen Huang, Xiaodan Zhuang</span></div>
+      <div class="abstract">Apple 团队研究如何蒸馏压缩设备端始终在线的语音 Tokenizer。区别于以离散 token 或输出分布为监督目标，该方法以量化器前模型实际消费的预量化潜变量（pre-quantizer latent）为回归目标，仅训练学生编码器在平方误差目标下回归教师逐帧潜变量，并用单一仿射层吸收宽度不匹配。在 2.8 倍压缩下，蒸馏学生编码器在六组师生对中的五组上无需微调即可保持在教师 1.9% 相对 WER 以内，且较同容量独立训练的 tokenizer 相对提升 3.9%。</div>
+      <div class="tags"><span class="tag">Speech Tokenizer</span><span class="tag">Distillation</span><span class="tag">On-Device</span><span class="tag">Apple</span><span class="tag">ASR</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.04102" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.04102" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.04085" target="_blank">Deep Neural Compression for RIR-Characterized Acoustic Environments with Structure-Aware Constraints</a></h4>
+      <div class="meta"><span>📅 2026-09-03</span><span>👥 Chen-Yuan Ning, Yang Ai, Hui-Peng Du, Xiao-Hang Jiang, Zhen-Hua Ling</span></div>
+      <div class="abstract">针对房间脉冲响应（RIR）数据量大、存储负担重的问题，提出基于 EnCodec 的神经 RIR 压缩方法，在两级引入 RIR 结构感知约束：RIR 层通过能量衰减曲线（EDC）正则化和短时窗能量约束感知全局衰减与局部能量分布；混响语音层通过重建 RIR 生成的混响语音一致性监督。在 375 bps 低比特率下，较面向音频的通用编解码器实现更低的 RIR 重建误差和更好的混响语音感知一致性。</div>
+      <div class="tags"><span class="tag">Audio Codec</span><span class="tag">RIR Compression</span><span class="tag">Acoustic Environment</span><span class="tag">Immersive Audio</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.04085" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.04085" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.03982" target="_blank">Fairness Evaluation of Edge-AI Implementation for Cleft Lip and Palate Speech ASR</a></h4>
+      <div class="meta"><span>📅 2026-09-03</span><span>👥 Susmita Bhattacharjee, Himashri Deka, H. S. Shekhawat, S. R. M. Prasanna</span></div>
+      <div class="abstract">研究唇腭裂（CLP）病理语音的 ASR 公平性与边缘部署。基于 Whisper-small 微调，探索不同严重程度组合对识别性能和跨说话人公平性的影响。严重度感知微调将最优池化 WER 从 62.46% 降至 22.72%、PER 从 52.72% 降至 18.44%；覆盖更多严重程度的训练配置实现精度与一致性最佳平衡。在 NVIDIA Jetson 上实现实时推理（RTF 0.167-0.171，峰值显存约 566MB），支持脱离互联网的低延迟语音交互，增强 CLP 群体语音交互可及性。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Edge-AI</span><span class="tag">Fairness</span><span class="tag">Pathological Speech</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.03982" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.03982" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-09-05') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

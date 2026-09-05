@@ -1,0 +1,57 @@
+{
+  "papers": [
+    {
+      "title": "Alignment-Free Text-Audiobox for Voice Dubbing and Full-Duplex Dialogue Synthesis",
+      "url": "https://arxiv.org/abs/2609.03992",
+      "date": "2026-09-03",
+      "authors": "Sanyuan Chen, Min-Jae Hwang, Sho Inoue, Anna Sun, Bokai Yu, David Kant, Dongmin Hyun, Dorian Desblancs, Gregory Antonovsky, Oleg Repin, Peng-Jen Chen, Xutai Ma, Zehai Tu, Juan Pino, Wei-Ning Hsu",
+      "abstract": "Meta 提出 Alignment-Free Text-Audiobox (Text-AB)，一个统一的配音与全双工对话合成框架。基于 flow-matching 目标的 Diffusion Transformer，采用 DAC-VAE 特征把 48kHz 波形编码为 25Hz 潜在序列，压缩率比 EnCodec 高 10 倍以上；无对齐技术通过交叉注意力学习文本-语音对齐，摆脱强制对齐和显式时长预测。预训练 3B 参数模型于 480k 小时单语语音，再在跨语言配音、全双工对话合成、情感全双工对话三个下游任务微调。在真实配音基准上较内部系统大幅提升韵律/音色/自然度相似度；全双工对话在短对话上逼近人类录音，长对话上显著超越现有模型，原生建模轮次切换、back-channeling 和情感动态。",
+      "tags": ["Voice Dubbing", "Full-Duplex", "TTS", "Diffusion Transformer", "Meta"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.03992"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.03992"}
+      ]
+    },
+    {
+      "title": "Compressing Streaming Neural Audio Encoders via Latent-Space Distillation",
+      "url": "https://arxiv.org/abs/2609.04102",
+      "date": "2026-09-03",
+      "authors": "Prasanth Yadla, Mohammad Samragh, Dongseong Hwang, Mingbin Xu, Yuanyuan Zhang, Chung-Cheng Chiu, Yongqiang Wang, Yuan Liu, Zhen Huang, Xiaodan Zhuang",
+      "abstract": "Apple 团队研究如何蒸馏压缩设备端始终在线的语音 Tokenizer。区别于以离散 token 或输出分布为监督目标，该方法以量化器前模型实际消费的预量化潜变量（pre-quantizer latent）为回归目标，仅训练学生编码器在平方误差目标下回归教师逐帧潜变量，并用单一仿射层吸收宽度不匹配。在 2.8 倍压缩下，蒸馏学生编码器在六组师生对中的五组上无需微调即可保持在教师 1.9% 相对 WER 以内，且较同容量独立训练的 tokenizer 相对提升 3.9%。",
+      "tags": ["Speech Tokenizer", "Distillation", "On-Device", "Apple", "ASR"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.04102"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.04102"}
+      ]
+    },
+    {
+      "title": "Deep Neural Compression for RIR-Characterized Acoustic Environments with Structure-Aware Constraints",
+      "url": "https://arxiv.org/abs/2609.04085",
+      "date": "2026-09-03",
+      "authors": "Chen-Yuan Ning, Yang Ai, Hui-Peng Du, Xiao-Hang Jiang, Zhen-Hua Ling",
+      "abstract": "针对房间脉冲响应（RIR）数据量大、存储负担重的问题，提出基于 EnCodec 的神经 RIR 压缩方法，在两级引入 RIR 结构感知约束：RIR 层通过能量衰减曲线（EDC）正则化和短时窗能量约束感知全局衰减与局部能量分布；混响语音层通过重建 RIR 生成的混响语音一致性监督。在 375 bps 低比特率下，较面向音频的通用编解码器实现更低的 RIR 重建误差和更好的混响语音感知一致性。",
+      "tags": ["Audio Codec", "RIR Compression", "Acoustic Environment", "Immersive Audio"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.04085"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.04085"}
+      ]
+    },
+    {
+      "title": "Fairness Evaluation of Edge-AI Implementation for Cleft Lip and Palate Speech ASR",
+      "url": "https://arxiv.org/abs/2609.03982",
+      "date": "2026-09-03",
+      "authors": "Susmita Bhattacharjee, Himashri Deka, H. S. Shekhawat, S. R. M. Prasanna",
+      "abstract": "研究唇腭裂（CLP）病理语音的 ASR 公平性与边缘部署。基于 Whisper-small 微调，探索不同严重程度组合对识别性能和跨说话人公平性的影响。严重度感知微调将最优池化 WER 从 62.46% 降至 22.72%、PER 从 52.72% 降至 18.44%；覆盖更多严重程度的训练配置实现精度与一致性最佳平衡。在 NVIDIA Jetson 上实现实时推理（RTF 0.167-0.171，峰值显存约 566MB），支持脱离互联网的低延迟语音交互，增强 CLP 群体语音交互可及性。",
+      "tags": ["ASR", "Edge-AI", "Fairness", "Pathological Speech"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.03982"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.03982"}
+      ]
+    }
+  ],
+  "news": []
+}
