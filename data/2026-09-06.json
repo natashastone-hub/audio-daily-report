@@ -1,0 +1,31 @@
+{
+  "papers": [
+    {
+      "title": "Broadband Acoustic Intensity Direction Estimation with Tight-Frame Cardioid Arrays",
+      "url": "https://arxiv.org/abs/2609.03490",
+      "date": "2026-09-03",
+      "authors": "Akira Omoto",
+      "abstract": "本研究实验性探索基于成对心形麦克风从声强估计声源方向的方法，重点考察被称为「紧框架」（tight frame）的均衡排列。在 6 个或 24 个麦克风位置测量脉冲响应，并考察两种对置间距。所得阵列针对单声源、来自两个正交方向波前之间的相干干扰、以及多方向干扰波存在时的方向跟踪进行评估。结果表明可实现从 50 Hz 到 20 kHz 的宽带声强方向估计，24 麦克风排列与较短间距通常误差更小。",
+      "tags": ["Acoustic Array", "Direction Estimation", "Microphone Array"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.03490"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.03490"}
+      ]
+    },
+    {
+      "title": "Geometric Ceilings on Time-Frequency Masking for Single-Channel Separation",
+      "url": "https://arxiv.org/abs/2609.03481",
+      "date": "2026-09-03",
+      "authors": "Maxime Baelde",
+      "abstract": "大多数单通道分离器通过在每个时频 bin 中给混合信号施加实增益来估计源。该格式的最优解——oracle 掩码作为边界所无法达到的——是源在混合信号所张成直线上的正交投影。定位估计器归结为堆叠谱上实线性算子的块结构，给出四个嵌套类别的链。在 MUSDB18 上，非圆高斯混合先验下的后验均值保持在类别内并低于逐帧天花板 11.44 dB。该工作揭示单通道分离的理论性能上限与相位建模的作用。",
+      "tags": ["Source Separation", "Time-Frequency Masking", "Theory"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.03481"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.03481"}
+      ]
+    }
+  ],
+  "news": []
+}
