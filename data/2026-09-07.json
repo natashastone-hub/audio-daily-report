@@ -1,0 +1,5 @@
+{
+  "papers": [],
+  "news": [],
+  "note": "晨报时段（2026-09-06 09:30 至 2026-09-07 09:34，北京时间）语音/Audio 领域无新内容。arxiv 周末（9/5、9/6）不发布新提交：eess.AS + cs.SD 类目的最新 listing 仍停留在 Friday 4 Sep 2026（共 15 条，含 9 篇新提交/交叉 + 6 篇替换），这些论文已在此前 9/4、9/5 日报中全部收录（ToolDF、ChinaVoices、VoxReason、StreamWSR、Text-Audiobox、Fairness-CLP-ASR、RIR 压缩等），无遗漏需补录。arxiv API 本轮多次 429 限流，已改用 official listing 页交叉验证，结论一致。HuggingFace Daily Papers 与前沿新闻搜索（freshness=day）均无 24 小时窗口内新增；逐条执行的重磅新闻关键词（OpenAI GPT-Live / OpenAI voice model release / Google Gemini voice / full-duplex speech model / 语音模型发布 / real-time voice AI）命中均为已报道旧闻（7 月 GPT-Live、8 月 Qwen-Audio-3.0-TTS、9 月 1-3 日 Meta Muse Voice Transcribe / Gemini 3.5 Transcribe 等），无 24 小时内新产品发布，故不重复收录。"
+}
