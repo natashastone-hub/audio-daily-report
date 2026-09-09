@@ -1,0 +1,24 @@
+{
+  "papers": [
+    {
+      "title": "Grounded Decoding for Autoregressive Speech Enhancement via Adaptive Code-Space Grounding and Local LLM Refinement",
+      "url": "https://arxiv.org/abs/2609.04245",
+      "date": "2026-09-07",
+      "authors": "Hao Shi, et al.",
+      "abstract": "基于 LLM 的自回归语音增强（SE）能生成自然语音，但可能「幻觉」出输入不支持的语音内容；确定性 SE 则保留观测耦合证据但残留噪声或局部失真。本文提出证据接地（evidence-grounded）的生成式 SE 框架：用确定性估计作为不完美证据，经 Whisper 引导的 DPRNN 生成增强波形后 token 化为离散证据序列，自回归干净语音 token 生成器以该证据为条件，并在解码时通过 Code-Space Grounding（CSG，按 FSQ 空间的汉明距离惩罚候选）复用证据。为适应不同 SNR 难度，进一步提出 SNR-CSG，将校准后的残差 SNR 估计映射为 utterance 级接地强度；再引入 GNR-LLM 做局部近邻精修，用 LLM 排序在 FSQ 近邻内交叠 top-K 候选。实验表明 SNR-CSG 提供鲁棒自动接地，GNR-LLM 显著提升低 SNR 感知质量而不损失内容保真度。",
+      "tags": ["Speech Enhancement", "Autoregressive", "LLM", "Generative"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.04245"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.04245"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "Rumik-OSS-1：首个开源印地语系带情感控制的 TTS 模型（22 语言、3B 参数）",
+      "url": "https://huggingface.co/rumik-ai/rumik-oss-1",
+      "summary": "2026 年 9 月 8 日，班加罗尔 Rumik Intelligence 发布 Rumik-OSS-1，号称首个支持表达性情感的开源印度语 TTS 模型。基于 Cohere Tiny Aya Fire + Mimi 音频编解码器，30 亿参数，覆盖 22 种印度语言（本土文字 + 罗马化转写）及英语，支持语码切换、语速/重音/音调参数控制与句内笑声/叹息等 inline 标签，提供 4 个命名音色。权重已在 HuggingFace 开放下载，但采用 CC-BY-NC 4.0 非商用许可，训练代码与技术报告尚未发布，自报 expressiveness 基准 2.92/5、未请求发声率 2.9-5.4%。这是印度开源语音生态从「闭源 API」走向「开放权重」的一个标志性节点。"
+    }
+  ]
+}
