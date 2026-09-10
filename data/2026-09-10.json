@@ -1,0 +1,336 @@
+{
+  "papers": [
+    {
+      "title": "AuK: An Open-Source Foundational Model for Speech Generation and Editing",
+      "url": "https://arxiv.org/abs/2609.08936",
+      "date": "2026-09-08",
+      "authors": "Ziyang Ma, Zhikang Niu, Wenming Tu, et al.",
+      "abstract": "开源语音基础模型 AuK，用统一的自然语言指令 + 音频上下文接口同时支持语音生成与编辑五大任务族（生成、内容编辑、增强分离、副语言编辑、声学编辑）。构建约 30.3 亿条指令-音频实例、195 万小时有效监督。架构上组合多模态 LLM 做语义条件、VAE 做声学条件、混合 rectified-flow Transformer（双流 MMDiT + 单流 DiT）做生成。经 human-feedback 偏好优化 + RL 后训练，再用一致性初始化 + 任务路由 Decoupled DMD 蒸馏出 AuK-Flash，4 步免 CFG 推理、提速 4.5 倍。零样本/指令控制语音生成与通用编辑达领先水平，代码与权重全开源。",
+      "tags": ["Speech Generation", "Speech Editing", "Foundation Model", "Open-source", "TTS"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.08936"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.08936"}
+      ]
+    },
+    {
+      "title": "Gander: Omni Interaction Agent Technical Report",
+      "url": "https://arxiv.org/abs/2609.08977",
+      "date": "2026-09-08",
+      "authors": "Shengpeng Ji, Junlong Tong, Jialong Zuo, et al.",
+      "abstract": "端到端全模态交互智能体 Gander，统一全模态感知、实时交互与 agentic 能力于一个框架。持续接收视频、语音、文本流式输入，支持全双工（用户可随时打断，模型也能主动给中间反馈或追问）。采用 Cerebellum-Brain 协作架构：Cerebellum 负责实时交互与全模态对话，Brain 处理复杂推理与高阶 agent 任务，二者经工具调用持续交互。Cerebellum 基于流式 Thinker-Talker 架构，把输入输出展平成 chunk 级有序 token 流实现低延迟。内部评测显示 Gander 在口语对话自然度、全模态交互与鲁棒性（背景噪声、多方、backchannel）上与 SOTA 开源模型相当。模型、代码、数据全部开源。",
+      "tags": ["Omni Model", "Full-Duplex", "Voice Agent", "Real-time", "Open-source"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.08977"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.08977"}
+      ]
+    },
+    {
+      "title": "TASTE2: Text-Aligned Speech Modeling and Deployment toward Full-Duplex Voice Interaction",
+      "url": "https://arxiv.org/abs/2609.08956",
+      "date": "2026-09-08",
+      "authors": "Yi-Chang Chen, Chun Wei Chen, Dien-Ruei Wu, Hung-yi Lee, et al.",
+      "abstract": "把 utterance 级 TASTE 升级为增量式对话栈 TASTE2，面向全双工语音交互。共享文本 token 词表消除词级平均，模态对齐的对话训练让每个文本 token 预测一个连续音频 latent。构建 TASTE2 VoiceBot，增量处理用户语音、流式合成音频、被打断即停止。在 Full-Duplex-Bench v1.0 上处理打断表现好、对话连贯性高；Merge 版 LLaMA-Questions 达 56.3%（98.2% 精度保持）。经 TensorRT 加速后首次音频延迟约 2.7s（双 A6000），并给出 TASTE 类模型副语言控制的首个系统刻画。",
+      "tags": ["Full-Duplex", "Speech LLM", "Streaming", "Voice Interaction"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.08956"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.08956"}
+      ]
+    },
+    {
+      "title": "TontaubeV1: Streaming Text-to-Speech with Hierarchical Codec Modeling and Bounded Context",
+      "url": "https://arxiv.org/abs/2609.08703",
+      "date": "2026-09-08",
+      "authors": "Fritz Cremer, Jonathan Cremer",
+      "abstract": "流式 TTS 模型 TontaubeV1，在单张消费级 GPU 上保持自然韵律。采用 12.5Hz 的层级 DualCodec 表示分离语义流与声学精化流：Qwen3-1.7B 派生 Transformer 预测语义流（决定时长），三个更小的 Qwen3-0.6B Transformer 各加一层声学精化。字符级 token 化、共享位置成对标记支持有界上下文长文本生成。单 RTX 5090 上流式首次音频约 200ms，非流式 RTF 0.08。LLM-as-a-judge 有声书基准上韵律匹配 ElevenLabs Flash v2.5、超越 Fish Audio S2 Pro 与 Cartesia Sonic 3。权重已上 HuggingFace。",
+      "tags": ["TTS", "Streaming", "Codec", "Voice Cloning"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.08703"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.08703"}
+      ]
+    },
+    {
+      "title": "StreamAlign: Streaming Text-Aligned Speech Tokenization",
+      "url": "https://arxiv.org/abs/2609.09719",
+      "date": "2026-09-09",
+      "authors": "Kang-wook Kim, Jinyoung Park, Sang Hoon Woo, Gunhee Kim, et al.",
+      "abstract": "把文本对齐的语音 tokenization 扩展到流式场景。现有方法依赖离线 ASR，需完整 utterance 且 ASR 与 LLM 词表不匹配把声学粒度从 subword 降到词级。StreamAlign 组合字符级 RNN-Transducer 对齐与词级 ASR 引导实现在线音文对齐，主动词边界分类器在 chunk 边界预测词完成，把 tokenization 延迟从 560ms 降到 270ms。LibriSpeech 上取得最低 WER 与最高 UTMOS；其训练的 StreamAlign-SLM 在语音续写与 SALMon/StoryCloze 一致性上超越其他端到端语音语言模型。",
+      "tags": ["Speech Tokenization", "Streaming", "Speech LLM", "ASR"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.09719"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.09719"}
+      ]
+    },
+    {
+      "title": "UniStream: Multi-Expert Residual Vector Quantization for 48 kHz Causal Streaming Audio Coding",
+      "url": "https://arxiv.org/abs/2609.09866",
+      "date": "2026-09-09",
+      "authors": "Mingyu Zhao, Zhiyong Wu",
+      "abstract": "全因果 48kHz 神经音频编解码器 UniStream，覆盖流式语音/音乐/环境声。核心 Multi-Expert RVQ（ME-RVQ）把每层残差量化单一码本换成 4 个专家码本 + 确定性 Top-K 路由，路由仅依赖已解码状态故无需传专家 ID。辅助 OT-CFM 目标在训练期正则化量化潜空间（推理时移除、零开销）。支持 12kbps Top-1 与 22.5kbps Top-2 模式、实时 GPU 推理。12kbps 下 PESQ/UTMOS 与 EnCodec 相当且 Mel-D 从 13.07 降到 8.21；22.5kbps 下 ViSQOL 语音 4.67、环境声 3.96，超越同码率系统。",
+      "tags": ["Neural Codec", "Audio Coding", "Streaming", "48kHz"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.09866"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.09866"}
+      ]
+    },
+    {
+      "title": "E-Branchformer: Disentangled Global-Local Feature Learning for Audio Deepfake Detection",
+      "url": "https://arxiv.org/abs/2609.08948",
+      "date": "2026-09-08",
+      "authors": "Phuong Tuan Dat, Ho Bao Thu, Nguyen Tran Trung, et al.",
+      "abstract": "面向音频深度伪造检测的 E-Branchformer 架构，利用自监督语音表征。并行分支同时捕获全局上下文（多头自注意力）与局部时序（卷积），集成深度可分离卷积 + Squeeze-and-Excitation 模块增强分类 token。ASVspoof 2021 LA/DF 与 In-the-Wild 上 EER 分别达 0.88%、1.85%、6.30%，大幅超越现有方法，对多样化声学条件与未见 spoofing 攻击泛化强。",
+      "tags": ["Deepfake Detection", "Security", "SSL", "ASVspoof", "SOTA"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.08948"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.08948"}
+      ]
+    },
+    {
+      "title": "DuplexJail: Safety Alignment Breaks Under Spoken Interruption in Full-Duplex Models",
+      "url": "https://arxiv.org/abs/2609.09420",
+      "date": "2026-09-08",
+      "authors": "Jaechul Roh, Deepak Chandran, Amir Houmansadr, Andrea Fanelli",
+      "abstract": "揭示全双工语音模型的安全对齐脆弱性：在模型边听边说时注入固定、与请求无关的口语提示即可越狱。DuplexJail 在 4 个开源模型、720 条有害请求上，固定延迟打断把 PersonaPlex 攻击成功率提升 33.8-39.3 个百分点（达 40.3%/48.7%），拒识触发打断达 35.6%/48.6%。将口语打断确立为新的越狱攻击向量，呼吁在全双工持续交互全过程评估安全。",
+      "tags": ["Safety", "Full-Duplex", "Jailbreak", "Security", "Speech LLM"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.09420"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.09420"}
+      ]
+    },
+    {
+      "title": "Zero-Shot Temporal Localisation of Audio Deepfakes in Multi-Speaker Conversations",
+      "url": "https://arxiv.org/abs/2609.10051",
+      "date": "2026-09-09",
+      "authors": "Soumyadeep Roy",
+      "abstract": "针对语音克隆诈骗中「外科手术式注入」（即真实对话只替换一两句为合成语音）的定位问题。形式化多说话人对话时间深度伪造定位（TDLMC），提出免训练五阶段流水线，用双阈值迟滞有限状态机解码器把噪声窗口分数转成连贯区间。ASVspoof 5 构造的 180 段多人对话上时间 IoU 0.90、时间检测率 0.95，真语音误报率低于 6%（AMI 上低于 2%）。给出首个零样本基线与可复用基准。",
+      "tags": ["Deepfake Detection", "Voice Cloning", "Security", "Zero-Shot"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.10051"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.10051"}
+      ]
+    },
+    {
+      "title": "Orukeet: Multilingual ASR with Frozen Gabor Kernels",
+      "url": "https://arxiv.org/abs/2609.10054",
+      "date": "2026-09-09",
+      "authors": "Nathan Roll, Irene Yi, Büşra Marşan, Calbert Graham, et al.",
+      "abstract": "把 Parakeet 编码器一半时序滤波器替换为 12288 个拟合的 Gabor 核并冻结，其余参数在多语言多口音数据上训练。25 种语言 20146 条 FLEURS 录音上，pooled WER 从 11.01% 降到 9.85%（相对 10.6%），23/25 语言 WER 更低，74 个 split 中 61 个超越 Parakeet（含 LibriSpeech test-clean 1.46% vs 1.53%）。拟合核以普通卷积权重存储，保留原架构与算子。代码与模型开源。",
+      "tags": ["ASR", "Multilingual", "Gabor Kernels", "Open-source"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.10054"},
+        {"label": "GitHub", "url": "https://github.com/Oruk-AI/orukeet"}
+      ]
+    },
+    {
+      "title": "Pushing the Boundaries of Streaming Multi-Speaker ASR: A Systematic Study of Architectural Trade-offs",
+      "url": "https://arxiv.org/abs/2609.10265",
+      "date": "2026-09-09",
+      "authors": "Taejin Park, Ivan Medennikov, Kunal Dhawan, Boris Ginsburg, et al.",
+      "abstract": "系统研究流式多说话人 ASR 的架构权衡（Interspeech 2026）。将流式多说话人 ASR 归纳为 diarization 与 ASR 集成方式的四种架构策略，基于同一对开源流式 ASR + diarization 模型派生四个系统，在多人精度、单人精度退化、内存占用与训练复杂度四维度评估，为不同部署约束下选型提供实操指引。",
+      "tags": ["Multi-Speaker ASR", "Streaming", "Diarization", "Systems"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.10265"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.10265"}
+      ]
+    },
+    {
+      "title": "X2Streaming-ASR: wait when uncertain, emit when ready for streaming ASR",
+      "url": "https://arxiv.org/abs/2609.08672",
+      "date": "2026-09-08",
+      "authors": "Zhiwei Lin, Kaiqi Fu, Rime Wen, et al.",
+      "abstract": "把流式 ASR 分解为「何时 commit」与「commit 什么」。三阶段训练先建立流式识别能力，再用自动探测轨迹热启动 commit 策略，最后用字符级、分段分配的 group-relative 奖励精化策略。AISHELL-1/2/3 与 WenetSpeech 上，字符级 commit 延迟相对强制对齐端点仅 27-84ms（基线 409-585ms），并在 AISHELL-1/3 上取得最优流式 CER 且延迟大幅降低。",
+      "tags": ["ASR", "Streaming", "Full-Duplex", "Voice Agent"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.08672"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.08672"}
+      ]
+    },
+    {
+      "title": "SpeechAnnotator: A Context-Aware Multi-Agent Framework and Benchmark for Multidimensional Speech Annotation",
+      "url": "https://arxiv.org/abs/2609.09947",
+      "date": "2026-09-09",
+      "authors": "Qirui Zhan, Shuiyuan Wang, Jingbin Hu, Liumeng Xue, Lei Xie, et al.",
+      "abstract": "本地可部署、上下文感知的多智能体语音标注框架，全由开源模型构建。前端模块提取说话人感知片段与转写，三个专家 agent 通过共享状态协作（规划/标注/审查），有界审查循环只对无证据或不一致的字段触发重标注。配套推出 8.87 小时人工标注的 SA-Bench 与分层评测 SA-Eval。为可控语音生成的大规模数据标注提供商业化替代方案。",
+      "tags": ["Speech Annotation", "Multi-Agent", "Data Curation", "Benchmark"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.09947"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.09947"}
+      ]
+    },
+    {
+      "title": "NVV-Locator: From Transcript Tags to Acoustic Boundaries for Fine-Grained Nonverbal Vocalization Grounding",
+      "url": "https://arxiv.org/abs/2609.09940",
+      "date": "2026-09-09",
+      "authors": "Yuang Cao, Bingshen Mu, Zhennan Lin, Liumeng Xue, Lei Xie, et al.",
+      "abstract": "面向非语言发声（NVV：笑声、叹息、呼吸、咳嗽等）的细粒度时间定位。统一 26 类 NVV，经双 LLM 校验 + 转写引导强制对齐 + 能量边界精化构建大规模时间戳监督数据，推出专家精修的 NVV-TimeBench（667 utterances、1094 事件）。非自回归 slot-filling 架构联合预测词时间戳、NVV 类别与事件边界，Micro F1 71.0%，优于大音频模型，跨语料泛化强。",
+      "tags": ["Nonverbal Vocalization", "Grounding", "Benchmark", "ASR"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.09940"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.09940"}
+      ]
+    },
+    {
+      "title": "SphereVAE: Hyperspherical Latent Autoencoders for Robust Autoregressive Speech Representation Modeling",
+      "url": "https://arxiv.org/abs/2609.09903",
+      "date": "2026-09-09",
+      "authors": "Haoyu Zhang, Jingbin Hu, Hanke Xie, Lei Xie, et al.",
+      "abstract": "针对连续表征做自回归目标时预测误差沿链累积导致 latent drift 的问题，提出把 VAE 潜空间约束到单位超球面的 SphereVAE。定义 Power Spherical 后验并向均匀先验正则化，信息主要由方向变化承载，为自回归预测提供有界几何目标、降低范数漂移风险。集成进 VoxCPM 的零样本 TTS 与长文本生成后，内容错误率更低、长程说话人一致性更稳定。",
+      "tags": ["Speech Representation", "VAE", "Autoregressive", "TTS"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.09903"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.09903"}
+      ]
+    },
+    {
+      "title": "Deterministic Prompting for Speaker-Stable Low-Resource Greek TTS",
+      "url": "https://arxiv.org/abs/2609.10022",
+      "date": "2026-09-09",
+      "authors": "Georgios Syllas, Efthymios Georgiou, Alexandros Potamianos, et al.",
+      "abstract": "低资源希腊语 TTS。用 WhisperX 对齐+过滤把有声书转成 TTS 数据，微调 Parler-TTS(880M)。发现 LLM 生成的风格 prompt 会导致音色漂移，换成确定性 prompt 解决；再在 3.5h 单说话人数据上做 LoRA 锚定身份（约 5% 参数）。WER 10.7%、MOS-I 4.00、说话人一致性 MOS-C 4.24（接近真人 4.30），证明有限整理数据即可实现稳健单说话人希腊语 TTS。",
+      "tags": ["TTS", "Low-Resource", "Voice Cloning", "Greek"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.10022"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.10022"}
+      ]
+    },
+    {
+      "title": "SCNet: Enhancing GAN-based Speech Generation with Subband Condition Network and Magnitude-aware Phase Loss",
+      "url": "https://arxiv.org/abs/2609.10025",
+      "date": "2026-09-09",
+      "authors": "Nan Xu, Mingxue Yang",
+      "abstract": "GAN 声码器（Interspeech 2026）。用轻量条件网络预测的子带信号作先验，经 STFT 得傅里叶系数整合进骨干以增强重建；引入幅度感知相位损失，按能量加权瞬时相位误差以缓解相位缠绕。客观与主观评测均优于基线，提升高质量语音生成。",
+      "tags": ["Vocoder", "GAN", "Speech Generation", "Phase"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.10025"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.10025"}
+      ]
+    },
+    {
+      "title": "Arti-JEPA: Adapting Video World Model to Real-Time MRI of the Vocal Tract for Speech-Production Analysis",
+      "url": "https://arxiv.org/abs/2609.09757",
+      "date": "2026-09-09",
+      "authors": "Hong Nguyen, Sean Foley, Christina Hagedorn, Shrikanth Narayanan, et al.",
+      "abstract": "把视频世界模型（V-JEPA）的自监督目标延续到约 62h 声道实时 MRI 数据上，学习关节式语音产生表征。跨域音素预测、流利/不流畅分类、舌部分切除术前/术后迁移三个任务发现：时序视频先验显著优于逐帧编码器；领域自适应的增益依赖任务；模型能从术前/术后语音恢复音素信号（交叉到说话人/领域才是主要差距）。定位为可复用的关节与临床语音学测量工具。",
+      "tags": ["Articulatory", "MRI", "Speech Production", "Self-Supervised"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.09757"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.09757"}
+      ]
+    },
+    {
+      "title": "Beyond Accuracy: ARIA-Rubrics for Evaluating Audio Reasoning in Large Audio Language Models",
+      "url": "https://arxiv.org/abs/2609.09681",
+      "date": "2026-09-09",
+      "authors": "Yupei Li, Qiyang Sun, Mohamed Mady, Björn Schuller, et al.",
+      "abstract": "轻量、免标注、自动透明的 LALM 音频推理评估框架 ARIA-Rubrics，六个互补指标评估感知接地、推理连贯性与答案一致性。用 CoT 提示使推理过程可观测，9 个模型、2 个基准上识别出当前 LALM 的三种推理模式，与人工判断高度相关，弥补准确率无法区分真推理与模式匹配的缺陷。代码开源。",
+      "tags": ["Audio LLM", "Evaluation", "Reasoning", "Benchmark"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.09681"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.09681"}
+      ]
+    },
+    {
+      "title": "Voice or Stereotype? Disentangling Acoustic and Content-Based Gender in Speech-to-Speech Models",
+      "url": "https://arxiv.org/abs/2609.09263",
+      "date": "2026-09-08",
+      "authors": "Xiaoqun Liu, Tanu Mitra, Harshit Rajgarhia, Abhishek Mukherji",
+      "abstract": "研究 S2S 模型的性别偏见。用受控实验交叉男女声音与不同性别刻板内容（英/西/中三种语言、五个开源/闭源模型），发现输出声音无刻板漂移，但所有模型都从「内容」而非「声音」判断说话者性别：内容越女性化，「判定为女」概率放大 1.7-24 倍；当内容与声音冲突时最差模型 90% 误判性别。揭示偏见藏在性别归因中——固定输出声音的评估无法察觉，审计必须转向这一环节。",
+      "tags": ["Speech-to-Speech", "Bias", "Gender", "Auditing"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.09263"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.09263"}
+      ]
+    },
+    {
+      "title": "AV-STE: Noise Adaptive Streaming Audio-Visual Speech Token Enhancement for Full-Duplex Dialogue",
+      "url": "https://arxiv.org/abs/2609.08390",
+      "date": "2026-09-08",
+      "authors": "Bella Godiva, Yeonju Kim, Yong Man Ro",
+      "abstract": "全双工口语对话在背景噪声与重叠语音下音频感知易失败。AV-STE 是模块化流式音视频前端，在语音 token 进入语音 LLM 前从噪声音频+唇部视频修复受损语义 token，下游对话模型保持冻结。集成进冻结 Moshi 后，同数据集说话人干扰下 GPT-4o 评分响应连贯性从 1.42 提升到 1.91，并迁移到域外 Seamless Interaction。",
+      "tags": ["Full-Duplex", "Speech LLM", "Audio-Visual", "Noise Robust"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.08390"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.08390"}
+      ]
+    },
+    {
+      "title": "Over-Tightening-Aware Pseudo-Labeling for Tight-Boundary Speaker Diarization",
+      "url": "https://arxiv.org/abs/2609.09965",
+      "date": "2026-09-09",
+      "authors": "Shota Horiguchi, Takanori Ashihara, Marc Delcroix, et al.",
+      "abstract": "解决说话人分割伪标签「过度收紧」导致的漏检问题。分析其成因并提出三招：去除填充而非 padding 的停顿、引入 burn-in 缓解因果/反因果预测开头的漏检、让基于伪标签的协同训练感知最终推理的非因果模型。实验降低由过度收紧引起的漏检，同时提升分割精度与下游多人 ASR 性能。",
+      "tags": ["Speaker Diarization", "Pseudo-Labeling", "Boundary"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.09965"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.09965"}
+      ]
+    },
+    {
+      "title": "Instruct-TTS Stabilization via Controllable Diversification and Drift Filtering",
+      "url": "https://arxiv.org/abs/2609.08204",
+      "date": "2026-09-08",
+      "authors": "Yizhong Geng, Kecan Mao, Cong Wang, Ya Li, et al.",
+      "abstract": "发现 Instruct-TTS 中超过 40% 的无约束 LLM 改写存在语义漂移、破坏监督。提出数据为中心的稳定化配方：可控指令多样化、LLM 漂移过滤、属性对齐监督（用声学扰动接地韵律控制）。InstructTTSEval 中文集上指令跟随从 34.5%（无微调）提升到 56.4%，漂移从 40.4% 降到 15.4%。",
+      "tags": ["Instruct-TTS", "Data Curation", "LLM", "Generalization"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.08204"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.08204"}
+      ]
+    },
+    {
+      "title": "Robust Speech Emotion Recognition under Tone-Word Conflict: A Benchmark and Framework",
+      "url": "https://arxiv.org/abs/2609.04236",
+      "date": "2026-09-07",
+      "authors": "Xiaojiang Peng, Dawei Huang, Yujie Lv, Ruijie Xiong, et al.",
+      "abstract": "（补录）针对声调与词汇语义冲突（情绪与字面义矛盾）的真实场景。引入 TWIN-SER 基准评估声学-语义不一致下的 SER 表现，发现 SOTA 模型严重退化。提出 DAS 框架显式解耦声学与语义通路、选择高能 embedding、轻量查询注意力自适应融合。代码与数据开源。",
+      "tags": ["Speech Emotion Recognition", "SER", "Disentanglement", "Benchmark"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.04236"},
+        {"label": "GitHub", "url": "https://github.com/24DavidHuang/FAS"}
+      ]
+    },
+    {
+      "title": "Grounded Decoding for Autoregressive Speech Enhancement via Adaptive Code-Space Grounding and Local LLM Refinement",
+      "url": "https://arxiv.org/abs/2609.04245",
+      "date": "2026-09-07",
+      "authors": "Hao Shi, et al.",
+      "abstract": "（补录，昨日早报已收录）基于 LLM 的自回归语音增强证据接地框架。用确定性估计作不完美证据，经 Whisper 引导 DPRNN 增强后 token 化，自回归干净语音 generator 以证据为条件，解码时通过 Code-Space Grounding（CSG）复用证据；SNR-CSG 自适应接地强度，GNR-LLM 局部近邻精修。低 SNR 下感知质量显著提升而不损内容保真。",
+      "tags": ["Speech Enhancement", "Autoregressive", "LLM", "Generative"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.04245"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.04245"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "Meta Superintelligence Labs 发布实时语音转写模型 Muse Voice Transcribe，瞄准 AI 眼镜",
+      "url": "https://news.qq.com/rain/a/20260908A0895C00",
+      "summary": "近日 Meta Superintelligence Labs 发布首款面向实时音频感知的大模型 Muse Voice Transcribe，主打低延迟流式语音转写，目标场景是 AI 眼镜等全天候个人智能硬件。模型把音频切割为 80ms 片段，靠强化学习训练的策略动态调整输出节奏——简单词汇快速输出、复杂表述适当延长监听窗口，兼顾识别精度与响应速度，并支持 20+ 说话人识别。"
+    }
+  ]
+}
