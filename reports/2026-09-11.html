@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-09-11</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-09-11</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年9月11日 (周五) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">12</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.11642" target="_blank">ZipCodec: Ultra-Low-Frame-Rate Streaming Speech Coding</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-10</span><span>👥 Luca Della Libera, Cem Subakan, Mirco Ravanelli</span></div>
+      <div class="abstract">神经音频编解码器是现代语音生成系统的核心组件。尽管近年编解码器码率不断降低，降低帧率仍具挑战，因为每个 token 需保留更多信息。本文提出 ZipCodec，一个 6.25 Hz、0.80 kbps、理论延迟 160 ms 的流式神经语音编解码器，结合大规模 WavLM 蒸馏、重构 Transformer 架构、标量球面量化器和延迟感知流式解码器。实验显示 ZipCodec 在相同码率下显著优于现有流式编解码器，且以更低帧率运行；尽管有 842M 参数，仍能在消费级 CPU 上实时单流推理。代码、checkpoint 和 demo 已开源。</div>
+      <div class="tags"><span class="tag">Neural Audio Codec</span><span class="tag">Streaming</span><span class="tag">Low Bitrate</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.11642" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.11642" target="_blank">🔗 PDF</a> <a href="https://lucadellalib.github.io/zipcodec-web/" target="_blank">🔗 Demo</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.11523" target="_blank">Post-Training Zero-Shot TTS for Fine-Grained Emotion and Duration Control via Natural Language</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-10</span><span>👥 Lianru Gao, Yujie Guo, Yong Qin</span></div>
+      <div class="abstract">有声书、对话代理和配音需要语音在单个 utterance 内传达变化的情感并调整节奏，但现有 TTS 系统多依赖 utterance 级风格条件，难以实现细粒度控制。受大语言模型后训练启发，本文提出统一后训练框架，使预训练 TTS 模型具备对段落级情感和时长的自然语言控制能力。监督微调建立指令条件语音生成，强化学习（group relative policy optimization）结合情感与时长的 reward 及内容/说话人保留目标精调控制精度。该方法复用预训练架构，无需额外推理控制模块，在保持可懂度和说话人身份的同时大幅提升细粒度可控性。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Emotion Control</span><span class="tag">Post-Training</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.11523" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.11523" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.11274" target="_blank">Xiaomi-CocktailASR-1 Technical Report</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-10</span><span>👥 Yiru Zhang, Hang Su, Lichun Fan, et al.</span></div>
+      <div class="abstract">小米发布 CocktailASR-1 技术报告，介绍其基于大语言模型的 ASR 模型。报告详细阐述了模型架构、训练数据与多语言语音识别能力，展示了在复杂声学场景和多语言识别上的最新进展。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">LLM-based ASR</span><span class="tag">Technical Report</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.11274" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.11274" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.10765" target="_blank">From Metrics to Natural Dialogue: French Full-Duplex Benchmark for Spoken Dialogue Models</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-09</span><span>👥 Hamid Soltani, Gilles Boulianne</span></div>
+      <div class="abstract">提出法语全双工语音对话模型基准，从传统指标转向自然对话评测。该基准面向全双工语音对话系统，评测其在真实对话场景中的打断处理、轮次转换和自然交互能力，填补了全双工语音模型评测在非英语语种上的空白。</div>
+      <div class="tags"><span class="tag">Full-Duplex</span><span class="tag">Spoken Dialogue</span><span class="tag">Benchmark</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.10765" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.10765" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.11545" target="_blank">Complex-Text Robustness Evaluation and Failure Diagnosis for Low-Resource Multilingual Text-to-Speech</a></h4>
+      <div class="meta"><span>📅 2026-09-10</span><span>👥 Tianlun Zuo, Ziyu Zhang, Tingzhi Mao, Zhonghua Fu, Lei Xie</span></div>
+      <div class="abstract">低资源多语言 TTS 系统虽扩展了语言覆盖，但在复杂文本输入下的鲁棒性诊断不足。现有评测聚焦自然度、说话人相似度，难以揭示系统在处理数字、日期、命名实体、长句、语码切换和标点结构时的失败模式。本文提出复杂文本鲁棒性诊断框架，从内容一致性、语言一致性和生成稳定性三个维度评测，覆盖泰语、越南语、斯瓦希里语、印尼语，并引入字符错误率、语言识别准确率、时长异常率等自动诊断指标，以及无需标注训练的轻量 Text Risk Score（TRS）。在 OmniVoice、VoxCPM2、MMS-TTS 上的实验揭示了不同系统的系统性失败模式。</div>
+      <div class="tags"><span class="tag">Multilingual TTS</span><span class="tag">Robustness</span><span class="tag">Evaluation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.11545" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.11545" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.11412" target="_blank">X-AuT: Progressive Audio-Encoder Compression for Speech LLMs with Cross-Scale Distillation</a></h4>
+      <div class="meta"><span>📅 2026-09-10</span><span>👥 Haojun Zhang, Yi Zou, Min Chen, Qize Yu, et al.</span></div>
+      <div class="abstract">降低音频编码器深度可降低语音大模型推理成本，但直接删除完整模块会扰动编码嵌入并导致删除错误和过早结束。本文提出 X-AuT 渐进式框架，通过短行为探针选择层组合，并用表示对齐、跨尺度蒸馏、调度学生策略监督和 LoRA 微调恢复剪枝模型。语言模型骨干保持冻结，仅注意力 LoRA 适配器和绑定输出嵌入参与蒸馏。在 10 个中英公开基准上，将 Qwen3-ASR-0.6B 从 18 层压至 16 层，宏观平均误差从 5.61% 降至 5.27%；14 层模型以 20.7% 更少音频塔参数达 5.75%。</div>
+      <div class="tags"><span class="tag">Speech LLM</span><span class="tag">ASR</span><span class="tag">Model Compression</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.11412" target="_blank">🔗 arXiv</a> <a href="https://xpeng-ai.github.io/x-aut" target="_blank">🔗 Project</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.11252" target="_blank">AudioICL-Bench: A Benchmark for Large Audio Language Model In-Context Learning</a></h4>
+      <div class="meta"><span>📅 2026-09-10</span><span>👥 Jia-Hung Chen, Yi-Cheng Lin, Kai-Wei Chang</span></div>
+      <div class="abstract">提出 AudioICL-Bench，一个面向大型音频语言模型上下文学习（In-Context Learning）能力的基准。系统性评测音频大模型利用上下文示例进行音频理解和推理的能力，为音频语言模型的少样本与上下文学习研究提供标准评测平台。</div>
+      <div class="tags"><span class="tag">Audio Language Model</span><span class="tag">Benchmark</span><span class="tag">In-Context Learning</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.11252" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.11252" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.11342" target="_blank">EConv-TasNet: Efficient Conv-TasNet for Effective Speech Separation</a></h4>
+      <div class="meta"><span>📅 2026-09-10</span><span>👥 Pei-Chun Chang, Chuan-Yi Liu</span></div>
+      <div class="abstract">Conv-TasNet 曾是时域语音分离的强基线，但双路径网络、U-Net、注意力等扩展带来高计算成本。本文提出 eConv-TasNet，通过分组早拆分（GES）模块和多组特征聚合（MGFA）模块，在无需资源密集模块的前提下提升效果与效率。在三个公开基准上，模型大小减少 22.4%，推理提速 18.9%，SI-SNRi 提升 14.0%-28.0%，为边缘部署提供了良好的效率-效果权衡。</div>
+      <div class="tags"><span class="tag">Speech Separation</span><span class="tag">Efficiency</span><span class="tag">Edge Deployment</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.11342" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.11342" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.09866" target="_blank">UniStream: Multi-Expert Residual Vector Quantization for 48 kHz Causal Streaming Audio Coding</a></h4>
+      <div class="meta"><span>📅 2026-09-09</span><span>👥 Mingyu Zhao, Zhiyong Wu</span></div>
+      <div class="abstract">提出 UniStream，面向 48 kHz 因果流式音频编码的多专家残差向量量化方法。通过多专家设计和残差量化，在保证高采样率流式编码质量的同时提升编码效率，适用于实时音频传输与生成场景。</div>
+      <div class="tags"><span class="tag">Audio Codec</span><span class="tag">Vector Quantization</span><span class="tag">Streaming</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.09866" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.09866" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.09719" target="_blank">StreamAlign: Streaming Text-Aligned Speech Tokenization</a></h4>
+      <div class="meta"><span>📅 2026-09-09</span><span>👥 Kang-wook Kim, Jinyoung Park, Jinsoo Kim</span></div>
+      <div class="abstract">提出 StreamAlign，一种流式文本对齐语音分词方法，实现语音 token 与文本的实时对齐，为流式语音理解和生成任务提供更高效、低延迟的语音 token 化方案。</div>
+      <div class="tags"><span class="tag">Speech Tokenization</span><span class="tag">Streaming</span><span class="tag">Text-Aligned</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.09719" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.09719" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.09903" target="_blank">SphereVAE: Hyperspherical Latent Autoencoders for Robust Autoregressive Speech Representation Modeling</a></h4>
+      <div class="meta"><span>📅 2026-09-09</span><span>👥 Haoyu Zhang, Jingbin Hu, Hanke Xie, et al.</span></div>
+      <div class="abstract">提出 SphereVAE，面向鲁棒自回归语音表示建模的超球面潜变量自编码器。通过在超球面潜空间建模，提升自回归语音表示的鲁棒性和稳定性，为语音生成与理解任务提供更可靠的离散表示。</div>
+      <div class="tags"><span class="tag">Speech Representation</span><span class="tag">Autoencoder</span><span class="tag">Autoregressive</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.09903" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.09903" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.11260" target="_blank">Preference Optimization with LALM Feedback for Continuous Autoregressive Non-Verbal Vocalization Generation</a></h4>
+      <div class="meta"><span>📅 2026-09-10</span><span>👥 Jingbin Hu, Qirui Zhan, Yuang Cao</span></div>
+      <div class="abstract">研究连续自回归非语言发声（Non-Verbal Vocalization）生成，采用 LALM 反馈的偏好优化方法。非语言发声（如笑声、叹息、语气词）是人声表现力的关键，本文通过偏好优化提升其在自回归生成中的自然度和可控性。</div>
+      <div class="tags"><span class="tag">Non-Verbal Vocalization</span><span class="tag">Preference Optimization</span><span class="tag">Speech Generation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.11260" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.11260" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>OpenAI 将 GPT-Live-1 引入 API：全双工语音对话 + 电话支持</h4>
+      <p>OpenAI 于 9 月 11 日正式将 GPT-Live-1 引入 API，开发者可据此构建实时语音交互应用。该模型支持全双工对话，可同时收听和输出语音，并在对话过程中处理打断、停顿和背景噪声；同时支持电话场景（预订餐厅、客服等全双工语音智能体）。据称 GPT-Live-1 在 Full Duplex Bench 上较 GPT-Realtime-2.1 提高 30 个百分点，支持自定义音色与更强指令遵循，并可连接 Codex 等工具。 <a href="https://www.ithome.com/1/001/091.htm" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>GPT-Live-1 正式登陆语音 API：从轮流说转向同时听说的全双工交互</h4>
+      <p>GPT-Live-1 进入 API 标志着 OpenAI 语音能力从 Realtime 轮流说话管线转向独立的前端语音层全双工交互。该模型作为前端语音层负责同时听说，复杂推理委托后端前沿大模型，语言学习平台 Speak 早期测试反馈积极。 <a href="https://aidaily.wiki/2026-09-11/openai-gpt-live-1-api/" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-09-11') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

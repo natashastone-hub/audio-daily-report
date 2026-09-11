@@ -1,0 +1,173 @@
+{
+  "papers": [
+    {
+      "title": "ZipCodec: Ultra-Low-Frame-Rate Streaming Speech Coding",
+      "url": "https://arxiv.org/abs/2609.11642",
+      "date": "2026-09-10",
+      "authors": "Luca Della Libera, Cem Subakan, Mirco Ravanelli",
+      "abstract": "神经音频编解码器是现代语音生成系统的核心组件。尽管近年编解码器码率不断降低，降低帧率仍具挑战，因为每个 token 需保留更多信息。本文提出 ZipCodec，一个 6.25 Hz、0.80 kbps、理论延迟 160 ms 的流式神经语音编解码器，结合大规模 WavLM 蒸馏、重构 Transformer 架构、标量球面量化器和延迟感知流式解码器。实验显示 ZipCodec 在相同码率下显著优于现有流式编解码器，且以更低帧率运行；尽管有 842M 参数，仍能在消费级 CPU 上实时单流推理。代码、checkpoint 和 demo 已开源。",
+      "tags": ["Neural Audio Codec", "Streaming", "Low Bitrate"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.11642"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.11642"},
+        {"label": "Demo", "url": "https://lucadellalib.github.io/zipcodec-web/"}
+      ]
+    },
+    {
+      "title": "Post-Training Zero-Shot TTS for Fine-Grained Emotion and Duration Control via Natural Language",
+      "url": "https://arxiv.org/abs/2609.11523",
+      "date": "2026-09-10",
+      "authors": "Lianru Gao, Yujie Guo, Yong Qin",
+      "abstract": "有声书、对话代理和配音需要语音在单个 utterance 内传达变化的情感并调整节奏，但现有 TTS 系统多依赖 utterance 级风格条件，难以实现细粒度控制。受大语言模型后训练启发，本文提出统一后训练框架，使预训练 TTS 模型具备对段落级情感和时长的自然语言控制能力。监督微调建立指令条件语音生成，强化学习（group relative policy optimization）结合情感与时长的 reward 及内容/说话人保留目标精调控制精度。该方法复用预训练架构，无需额外推理控制模块，在保持可懂度和说话人身份的同时大幅提升细粒度可控性。",
+      "tags": ["TTS", "Emotion Control", "Post-Training"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.11523"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.11523"}
+      ]
+    },
+    {
+      "title": "Complex-Text Robustness Evaluation and Failure Diagnosis for Low-Resource Multilingual Text-to-Speech",
+      "url": "https://arxiv.org/abs/2609.11545",
+      "date": "2026-09-10",
+      "authors": "Tianlun Zuo, Ziyu Zhang, Tingzhi Mao, Zhonghua Fu, Lei Xie",
+      "abstract": "低资源多语言 TTS 系统虽扩展了语言覆盖，但在复杂文本输入下的鲁棒性诊断不足。现有评测聚焦自然度、说话人相似度，难以揭示系统在处理数字、日期、命名实体、长句、语码切换和标点结构时的失败模式。本文提出复杂文本鲁棒性诊断框架，从内容一致性、语言一致性和生成稳定性三个维度评测，覆盖泰语、越南语、斯瓦希里语、印尼语，并引入字符错误率、语言识别准确率、时长异常率等自动诊断指标，以及无需标注训练的轻量 Text Risk Score（TRS）。在 OmniVoice、VoxCPM2、MMS-TTS 上的实验揭示了不同系统的系统性失败模式。",
+      "tags": ["Multilingual TTS", "Robustness", "Evaluation"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.11545"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.11545"}
+      ]
+    },
+    {
+      "title": "X-AuT: Progressive Audio-Encoder Compression for Speech LLMs with Cross-Scale Distillation",
+      "url": "https://arxiv.org/abs/2609.11412",
+      "date": "2026-09-10",
+      "authors": "Haojun Zhang, Yi Zou, Min Chen, Qize Yu, et al.",
+      "abstract": "降低音频编码器深度可降低语音大模型推理成本，但直接删除完整模块会扰动编码嵌入并导致删除错误和过早结束。本文提出 X-AuT 渐进式框架，通过短行为探针选择层组合，并用表示对齐、跨尺度蒸馏、调度学生策略监督和 LoRA 微调恢复剪枝模型。语言模型骨干保持冻结，仅注意力 LoRA 适配器和绑定输出嵌入参与蒸馏。在 10 个中英公开基准上，将 Qwen3-ASR-0.6B 从 18 层压至 16 层，宏观平均误差从 5.61% 降至 5.27%；14 层模型以 20.7% 更少音频塔参数达 5.75%。",
+      "tags": ["Speech LLM", "ASR", "Model Compression"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.11412"},
+        {"label": "Project", "url": "https://xpeng-ai.github.io/x-aut"}
+      ]
+    },
+    {
+      "title": "Xiaomi-CocktailASR-1 Technical Report",
+      "url": "https://arxiv.org/abs/2609.11274",
+      "date": "2026-09-10",
+      "authors": "Yiru Zhang, Hang Su, Lichun Fan, et al.",
+      "abstract": "小米发布 CocktailASR-1 技术报告，介绍其基于大语言模型的 ASR 模型。报告详细阐述了模型架构、训练数据与多语言语音识别能力，展示了在复杂声学场景和多语言识别上的最新进展。",
+      "tags": ["ASR", "LLM-based ASR", "Technical Report"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.11274"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.11274"}
+      ]
+    },
+    {
+      "title": "AudioICL-Bench: A Benchmark for Large Audio Language Model In-Context Learning",
+      "url": "https://arxiv.org/abs/2609.11252",
+      "date": "2026-09-10",
+      "authors": "Jia-Hung Chen, Yi-Cheng Lin, Kai-Wei Chang",
+      "abstract": "提出 AudioICL-Bench，一个面向大型音频语言模型上下文学习（In-Context Learning）能力的基准。系统性评测音频大模型利用上下文示例进行音频理解和推理的能力，为音频语言模型的少样本与上下文学习研究提供标准评测平台。",
+      "tags": ["Audio Language Model", "Benchmark", "In-Context Learning"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.11252"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.11252"}
+      ]
+    },
+    {
+      "title": "EConv-TasNet: Efficient Conv-TasNet for Effective Speech Separation",
+      "url": "https://arxiv.org/abs/2609.11342",
+      "date": "2026-09-10",
+      "authors": "Pei-Chun Chang, Chuan-Yi Liu",
+      "abstract": "Conv-TasNet 曾是时域语音分离的强基线，但双路径网络、U-Net、注意力等扩展带来高计算成本。本文提出 eConv-TasNet，通过分组早拆分（GES）模块和多组特征聚合（MGFA）模块，在无需资源密集模块的前提下提升效果与效率。在三个公开基准上，模型大小减少 22.4%，推理提速 18.9%，SI-SNRi 提升 14.0%-28.0%，为边缘部署提供了良好的效率-效果权衡。",
+      "tags": ["Speech Separation", "Efficiency", "Edge Deployment"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.11342"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.11342"}
+      ]
+    },
+    {
+      "title": "UniStream: Multi-Expert Residual Vector Quantization for 48 kHz Causal Streaming Audio Coding",
+      "url": "https://arxiv.org/abs/2609.09866",
+      "date": "2026-09-09",
+      "authors": "Mingyu Zhao, Zhiyong Wu",
+      "abstract": "提出 UniStream，面向 48 kHz 因果流式音频编码的多专家残差向量量化方法。通过多专家设计和残差量化，在保证高采样率流式编码质量的同时提升编码效率，适用于实时音频传输与生成场景。",
+      "tags": ["Audio Codec", "Vector Quantization", "Streaming"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.09866"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.09866"}
+      ]
+    },
+    {
+      "title": "StreamAlign: Streaming Text-Aligned Speech Tokenization",
+      "url": "https://arxiv.org/abs/2609.09719",
+      "date": "2026-09-09",
+      "authors": "Kang-wook Kim, Jinyoung Park, Jinsoo Kim",
+      "abstract": "提出 StreamAlign，一种流式文本对齐语音分词方法，实现语音 token 与文本的实时对齐，为流式语音理解和生成任务提供更高效、低延迟的语音 token 化方案。",
+      "tags": ["Speech Tokenization", "Streaming", "Text-Aligned"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.09719"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.09719"}
+      ]
+    },
+    {
+      "title": "SphereVAE: Hyperspherical Latent Autoencoders for Robust Autoregressive Speech Representation Modeling",
+      "url": "https://arxiv.org/abs/2609.09903",
+      "date": "2026-09-09",
+      "authors": "Haoyu Zhang, Jingbin Hu, Hanke Xie, et al.",
+      "abstract": "提出 SphereVAE，面向鲁棒自回归语音表示建模的超球面潜变量自编码器。通过在超球面潜空间建模，提升自回归语音表示的鲁棒性和稳定性，为语音生成与理解任务提供更可靠的离散表示。",
+      "tags": ["Speech Representation", "Autoencoder", "Autoregressive"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.09903"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.09903"}
+      ]
+    },
+    {
+      "title": "Preference Optimization with LALM Feedback for Continuous Autoregressive Non-Verbal Vocalization Generation",
+      "url": "https://arxiv.org/abs/2609.11260",
+      "date": "2026-09-10",
+      "authors": "Jingbin Hu, Qirui Zhan, Yuang Cao",
+      "abstract": "研究连续自回归非语言发声（Non-Verbal Vocalization）生成，采用 LALM 反馈的偏好优化方法。非语言发声（如笑声、叹息、语气词）是人声表现力的关键，本文通过偏好优化提升其在自回归生成中的自然度和可控性。",
+      "tags": ["Non-Verbal Vocalization", "Preference Optimization", "Speech Generation"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.11260"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.11260"}
+      ]
+    },
+    {
+      "title": "From Metrics to Natural Dialogue: French Full-Duplex Benchmark for Spoken Dialogue Models",
+      "url": "https://arxiv.org/abs/2609.10765",
+      "date": "2026-09-09",
+      "authors": "Hamid Soltani, Gilles Boulianne",
+      "abstract": "提出法语全双工语音对话模型基准，从传统指标转向自然对话评测。该基准面向全双工语音对话系统，评测其在真实对话场景中的打断处理、轮次转换和自然交互能力，填补了全双工语音模型评测在非英语语种上的空白。",
+      "tags": ["Full-Duplex", "Spoken Dialogue", "Benchmark"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.10765"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.10765"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "OpenAI 将 GPT-Live-1 引入 API：全双工语音对话 + 电话支持",
+      "url": "https://www.ithome.com/1/001/091.htm",
+      "summary": "OpenAI 于 9 月 11 日正式将 GPT-Live-1 引入 API，开发者可据此构建实时语音交互应用。该模型支持全双工对话，可同时收听和输出语音，并在对话过程中处理打断、停顿和背景噪声；同时支持电话场景（预订餐厅、客服等全双工语音智能体）。据称 GPT-Live-1 在 Full Duplex Bench 上较 GPT-Realtime-2.1 提高 30 个百分点，支持自定义音色与更强指令遵循，并可连接 Codex 等工具。"
+    },
+    {
+      "title": "GPT-Live-1 正式登陆语音 API：从轮流说转向同时听说的全双工交互",
+      "url": "https://aidaily.wiki/2026-09-11/openai-gpt-live-1-api/",
+      "summary": "GPT-Live-1 进入 API 标志着 OpenAI 语音能力从 Realtime 轮流说话管线转向独立的前端语音层全双工交互。该模型作为前端语音层负责同时听说，复杂推理委托后端前沿大模型，语言学习平台 Speak 早期测试反馈积极。"
+    }
+  ]
+}
