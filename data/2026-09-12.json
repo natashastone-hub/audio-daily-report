@@ -1,0 +1,173 @@
+{
+  "papers": [
+    {
+      "title": "RetroThinker: Enabling Retrospective Thinking in Speech LLMs",
+      "url": "https://arxiv.org/abs/2609.11864",
+      "date": "2026-09-11",
+      "authors": "Puyuan Peng, Abdelrahman Mohamed, David Harwath",
+      "abstract": "语音大模型（SpeechLLM）相比级联 ASR+文本 LLM 降低了延迟并保留副语言信息，但在复杂推理任务上仍落后于纯文本 LLM，而实时口语交互又施加严格延迟约束。本文提出 RetroThinker，一个多阶段后训练框架，使 Moshi 模型在推理时能够自我验证并实时前向修正思维链（CoT）步骤。RetroThinker 结合面向回溯思考数据的监督微调（SFT）与基于长度的直接偏好优化（DPO），在用户说话的同时同步推理。在 GSM8K 基准上，RetroThinker 在相近延迟下相对非回溯基线实现 11% 的绝对准确率提升，显著改善了准确率-延迟权衡。",
+      "tags": ["Speech LLM", "Chain-of-Thought", "Full-Duplex", "Post-Training"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.11864"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.11864"}
+      ]
+    },
+    {
+      "title": "Continuous-Time Acoustic Modelling with Neural Controlled Differential Equations",
+      "url": "https://arxiv.org/abs/2609.11725",
+      "date": "2026-09-11",
+      "authors": "Authors (cs.SD)",
+      "abstract": "TTS 模型通常通过预测时长将音素级编码器状态扩展到帧级解码器输入，但时长通常只改变潜在状态出现的时机与频次，而非状态本身的值。本文提出一种基于神经控制微分方程（NCDE）的连续时间时长感知声学建模机制：将音素表示形式化为时间参数化控制路径，用神经声学向量场产生连续时间隐藏状态，其值随语音内容和时长推导的时间信息共同演化。主观实验表明，基于 CDE 的模型在逐步评估音素时能提升合成语音与参考情绪强度之间的排序一致性，同时保持与强基线相当的情绪表达质量，为连续时间、时长感知的风格敏感 TTS 提供新设计空间。",
+      "tags": ["TTS", "Neural CDE", "Continuous-Time", "Emotion"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.11725"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.11725"}
+      ]
+    },
+    {
+      "title": "Less can be More: What Aspects of Speech Drive End-of-Turn Detection",
+      "url": "https://arxiv.org/abs/2609.11066",
+      "date": "2026-09-11",
+      "authors": "Manickavela A, Kadri Hacioglu, Andreas Stolcke",
+      "abstract": "在对话式 AI 中，检测说话人是否已说完对自然轮次转换至关重要。本文对声学、韵律和语义信号进行受控消融，使用轻量三模态分类器做流式话轮结束检测。在相同训练条件下，声学+韵律组合在准确率与延迟之间取得最佳平衡（utterance F1 达 0.93，400ms 中位延迟下误报率 7.8%）；加入文本反而增加过早检测且不提升性能。特征空间分析显示韵律特征具有最强的类别可分性，而文本表示重叠较大。这表明话轮转换主要由语调与静默模式驱动，而非语义完整性，无需昂贵文本推理即可实现更快更可靠的系统。",
+      "tags": ["Turn-Taking", "End-of-Turn Detection", "Streaming", "Dialogue"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.11066"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.11066"}
+      ]
+    },
+    {
+      "title": "Not All Attacks Are Learned Equally in Speech Deepfake Detection",
+      "url": "https://arxiv.org/abs/2609.11763",
+      "date": "2026-09-11",
+      "authors": "Avantika Singh, Aurosweta Mahapatra, Ismail Rasim Ulgen, Nicholas Andrews, Kong Aik Lee, Berrak Sisman",
+      "abstract": "语音深度伪造检测（SDD）模型在多攻击数据集（TTS、语音转换 VC）上训练时，标准分类器将所有攻击视为同一欺骗类并仅报告整体 EER，掩盖了各攻击对学习与泛化的不同影响。本文提出攻击级分析方法，通过样本与攻击省略平衡 TTS/VC 暴露，测量攻击级 EER 并分析训练损失与预测熵，识别出对决策边界有强影响的高影响攻击。为缓解跨攻击泛化不均，提出基于 replay 正则化、按攻击影响逐步提升暴露的课程学习策略。在 ASVspoof 2019/2021/ASVspoof 5 与 Fake-or-Real 上的实验表明，整体鲁棒性提升且攻击间不平衡降低。",
+      "tags": ["Speech Deepfake Detection", "Spoofing", "Anti-Spoofing"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.11763"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.11763"}
+      ]
+    },
+    {
+      "title": "Low-Latency State Space Voice Activity Detection with Robust Onset Time Evaluation",
+      "url": "https://arxiv.org/abs/2609.11110",
+      "date": "2026-09-11",
+      "authors": "Elad Cohen, Arnon Netzer, Hai Victor Habi",
+      "abstract": "VAD 系统常用 AUROC 等指标评测，但不考虑时间响应性；对低延迟应用，准确测量语音 onset 延迟至关重要，却受噪声与标注时间戳系统错位影响。本文引入基于噪声时间标签的 VAD onset 概率评测框架，并推出首个基于状态空间模型（SSM）的 VAD 架构 S4VAD，支持高效流式推理并直接控制历史声学证据衰减，实现快速响应的语音 onset 检测。在 CNN、Transformer、RNN 等低延迟架构上的对比显示，S4VAD 在保持有竞争力 AUROC 的同时取得最低延迟。",
+      "tags": ["VAD", "State Space Model", "Low-Latency"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.11110"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.11110"}
+      ]
+    },
+    {
+      "title": "Downstream-Task-Aware Unified Source Separation",
+      "url": "https://arxiv.org/abs/2609.11092",
+      "date": "2026-09-11",
+      "authors": "Yoshiki Mitsui, Ryo Aihara, Tatsuhiko Saito, Yoshiki Masuyama, Christoph Boeddeker, Julius Richter, Gordon Wichern, Jonathan Le Roux",
+      "abstract": "任务感知统一语音分离（TUSS）可让单一模型通过输入提示处理多种分离任务，但未考虑下游需求（供人听还是供 ASR）。本文提出提示扩展框架，将下游任务信息注入输入提示并在训练时按提示切换损失函数，使推理时输出不同信号特性。具体引入 ASR 专用提示配以减少语音伪影的正则化损失，标准提示配常规 SNR 损失。在 LibriSpeech 和 JNAS 上的实验表明，联合训练方案让单一模型在选 ASR 提示时于宽 SNR 范围提升 ASR 表现，同时用标准提示时保持通用语音增强质量。",
+      "tags": ["Source Separation", "ASR", "Multi-Task"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.11092"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.11092"}
+      ]
+    },
+    {
+      "title": "Whisper-Based Speech Transcription from Videos Across Multiple Languages for Cross-Cultural Understanding",
+      "url": "https://arxiv.org/abs/2609.11772",
+      "date": "2026-09-11",
+      "authors": "Michael Picheny",
+      "abstract": "跨文化理解在高度互联世界中日益重要。本文展示利用 YouTube 公开视频与 Whisper 工具改进多语言视频语音转录的技术，供跨文化工具构建者（无需深入语音处理专长）使用。在七种语言（西、日、韩、中文、土耳其、俄、希伯来语）上，平均转录错误率约 30%，经少量微调数据可降至 20%，使输出更适合下游处理。相关语音与元数据已公开，供社区进一步精化实验。",
+      "tags": ["ASR", "Whisper", "Multilingual", "Cross-Cultural"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.11772"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.11772"}
+      ]
+    },
+    {
+      "title": "Investigating catastrophic forgetting in sound event classification",
+      "url": "https://arxiv.org/abs/2609.11447",
+      "date": "2026-09-11",
+      "authors": "Riccardo Casciotti, Annamaria Mesaros",
+      "abstract": "本文研究声音事件分类任务中类别增量学习场景下防止灾难性遗忘的多种方法，在 FSD50K 和 AudioSet 数据集上使用架构与正则化方法分析。研究设计了增量阶段及选择性保护网络核免受权重更新影响的方案，以及每学新任务即扩展的动态 head 方案。结果表明灾难性遗忘主要发生在更深层，尤其是分类器 head；对域内声音分类问题，冻结特征提取器并微调动态 head 分类器最能缓解遗忘，兼具良好训练稳定性与记忆-学习塑性平衡。",
+      "tags": ["Sound Event Classification", "Continual Learning", "Catastrophic Forgetting"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.11447"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.11447"}
+      ]
+    },
+    {
+      "title": "Domain-Incremental Learning for Multi-Channel Replay Speech Detection",
+      "url": "https://arxiv.org/abs/2609.11194",
+      "date": "2026-09-11",
+      "authors": "Michael Neri",
+      "abstract": "重放攻击是语音控制系统最易接触的威胁，其声学线索受部署环境影响强烈。部署后的检测器需随时间吸收新声学条件，理想情况下不回访旧录音。本文将问题框架化为声学环境的域增量学习（DIL），呈现首个多通道重放语音检测的持续学习基准，在 ReMASC 语料 24 种环境顺序上以五个种子评估最优波束成形检测器。顺序微调遗忘严重（旧环境错误率上升 18.8 点）；弹性权重巩固（EWC）减半遗忘但损失可塑性；梯度投影记忆（GPM）与朴素微调无统计差异；提出的任务特定波束成形器（每环境一个空间前端）显著提升最终与增量准确率。代码已开源。",
+      "tags": ["Replay Attack Detection", "Continual Learning", "Security"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.11194"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.11194"},
+        {"label": "Code", "url": "https://github.com/michaelneri/replay-speech-continual"}
+      ]
+    },
+    {
+      "title": "Exploring Second-Order Pattern Recognition in Speaker Recognition",
+      "url": "https://arxiv.org/abs/2609.11182",
+      "date": "2026-09-11",
+      "authors": "Yanze Xu, Wenwu Wang, Mark D. Plumbley",
+      "abstract": "经典模式识别中网络被训练识别人为定义的输入模式。本文提出发现网络识别输入背后的其他潜在模式（称为二阶模式）。作者用层次聚类分析说话人识别网络从 utterance 学到的表示是否自然形成层次簇，每个簇表征网络识别某些已知 utterance 为说话人身份的二阶模式，并用现有 HCCM 方法语义解释。进一步提出新任务——二阶模式识别，并设计层次簇导航与分配（HCNA）方法。实验表明 HCNA 引入的外推机制显著提升二阶模式识别任务性能。",
+      "tags": ["Speaker Recognition", "Explainable AI", "Pattern Recognition"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.11182"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.11182"}
+      ]
+    },
+    {
+      "title": "Diarization Error Decomposition Under Pause Annotation Ambiguity",
+      "url": "https://arxiv.org/abs/2609.11007",
+      "date": "2026-09-11",
+      "authors": "Marc Delcroix, Naohiro Tawara, Alexis Plaquet",
+      "abstract": "说话人日志化（Diarization）评估对停顿标注的模糊性敏感，可能抬高 DER 或掩盖真实模型错误。作者指出用于停顿容错评估的形态学闭运算会丢弃分段级区分。提出的精确、重叠感知的 DER 分解将其分为可归因于停顿填充的部分与反映内在日志化错误的残差核心部分。该分解不改变 DER，而停顿可归因与核心分量随停顿阈值单调变化并最终饱和。涵盖合成变换、标注错配、跨域评估与紧边界日志化的实验显示，该分解揭示了标准 DER 无法显现的错误来源。",
+      "tags": ["Speaker Diarization", "Evaluation", "DER"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.11007"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.11007"}
+      ]
+    },
+    {
+      "title": "Sparse Weight and Edge Circuit Discovery in Transformer-based Acoustic Models",
+      "url": "https://arxiv.org/abs/2609.10645",
+      "date": "2026-09-11",
+      "authors": "Jiankun Wei, Ewan Dunbar, Gerald Penn",
+      "abstract": "Transformer 基础模型强大但不透明，可解释性方法通过识别负责特定任务的小计算子图来揭示黑盒。DiscoGP 是原为文本解码器设计的联合权重-边电路发现框架。本文将 DiscoGP 扩展到语音编码器，呈现首个现代语音基础模型的电路发现研究。在 HuBERT 与 Wav2Vec 2.0 的多个语音分类任务上，发现的电路极其紧凑，却常匹配甚至超过完整预训练编码器（配相同下游 head）的性能。消融表明这些电路反映预训练计算而非随机结构。还引入内存高效的 DiscoGP 变体，将边电路发现运行时 GPU 内存成本从四次方降至三次方。",
+      "tags": ["Mechanistic Interpretability", "Speech Encoder", "Circuit Discovery"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.10645"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.10645"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "OpenAI 正式开放 GPT-Live-1 API：全双工语音模型，语音层每分钟 0.05 美元",
+      "url": "https://www.unite.ai/openais-gpt-live-1-arrives-in-the-api-at-0-05-per-minute/",
+      "summary": "OpenAI 于 9 月 10 日将 GPT-Live-1 正式开放给第三方开发者。该全双工（full-duplex）语音模型可同时监听和输出语音，处理打断、停顿及背景噪声，支持电话场景（预订餐厅、客服等全双工语音智能体）。其双模块架构将实时语音前端层（每分钟 0.05 美元）与后台复杂推理模型分离，开发者可灵活组合不同后台模型，并支持工具调用（连接 Codex 等）。"
+    },
+    {
+      "title": "GPT-Live-1 上线 API：OpenAI 实时语音范式从「轮流说」转向「边听边说边改」",
+      "url": "https://www.openai-hub.com/news/1973/",
+      "summary": "GPT-Live-1 接入 API 标志着 OpenAI 语音能力从 Realtime 轮流说话管线转向独立前端语音层的全双工交互。模型支持自然停顿、实时打断、工具调用与电话任务，让 AI 首次拥有接近人类「边听、边想、边说、边改」的对话节奏。语音层作为前端负责同时听说，复杂推理委托后台前沿大模型，被业界视为 2026 实时语音交互的标志性产品发布。"
+    }
+  ]
+}
