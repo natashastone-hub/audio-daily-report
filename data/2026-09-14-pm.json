@@ -1,0 +1,115 @@
+{
+  "papers": [
+    {
+      "title": "StepAudio 3 Gen Technical Report",
+      "url": "https://arxiv.org/abs/2609.12945",
+      "date": "2026-09-14",
+      "authors": "Bin Lin, Bo Zhao, Boyang Wang, et al. (StepFun team)",
+      "abstract": "阶跃星辰发布 StepAudio 3 Gen 技术报告，介绍新一代音频生成模型。该模型面向语音合成、音频生成等任务，覆盖大规模语音与音频生成能力，是阶跃 Audio 系列的重要技术迭代。",
+      "tags": ["Audio Generation", "TTS", "Technical Report", "Foundation Model"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.12945"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.12945"}]
+    },
+    {
+      "title": "Preference-Gated Alignment for Reducing Hallucination in Decoder-Only TTS",
+      "url": "https://arxiv.org/abs/2609.12855",
+      "date": "2026-09-14",
+      "authors": "Authors",
+      "abstract": "Decoder-only TTS 模型虽可扩展，但自回归生成时文本-语音对齐弱导致内容幻觉。本文发现鲁棒性与对齐注意力头的锐度呈非单调关系，提出 AlignDPO，将轻量 CTC 对齐项折叠进 DPO 后训练，仅作用于 chosen 样本，无需改架构。在 Seed-TTS-Eval 英文集上，重度内容幻觉率从 4.4% 降至约 0.6%，词错率显著下降，听感自然度也获偏好。",
+      "tags": ["TTS", "Hallucination", "DPO", "Speech Alignment"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.12855"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.12855"}]
+    },
+    {
+      "title": "X-Pred MeanFlow for Streaming Token-to-Mel Speech Decoding",
+      "url": "https://arxiv.org/abs/2609.12728",
+      "date": "2026-09-14",
+      "authors": "Hanke Xie, Xiaming Ren, Qirui Zhan, et al.",
+      "abstract": "流式与对话场景下，离散 token 到声学波形的低延迟合成至关重要。提出 X-Pred MeanFlow，一种少步流式 token-to-mel 解码器，通过 mel 预测对 MeanFlow 重参数化，在极低采样步数下保持高声学质量，面向实时语音合成。",
+      "tags": ["Streaming TTS", "Flow Matching", "Low Latency", "Token-to-Mel"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.12728"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.12728"}]
+    },
+    {
+      "title": "Evaluating Voice Agents as a Multiparty Conversation Participant",
+      "url": "https://arxiv.org/abs/2609.13076",
+      "date": "2026-09-14",
+      "authors": "Authors",
+      "abstract": "现有语音 Agent 评测多聚焦二人交互与被动音频理解，忽略了多人对话这一真实场景。本文提出首个专门评估语音系统作为多方对话参与者的基准 MP-Bench，从话轮意识与回应恰当性两维度评估。对 12 个语音 Agent 评测发现，实时语音 Agent 在多方理解上不超过 22%，话轮接近随机，暴露多方场景的开放挑战。",
+      "tags": ["Voice Agent", "Multiparty", "Benchmark", "Turn-Taking"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.13076"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.13076"}]
+    },
+    {
+      "title": "Speech Enhancement with Generative Drifting",
+      "url": "https://arxiv.org/abs/2609.12252",
+      "date": "2026-09-14",
+      "authors": "Authors",
+      "abstract": "提出 DriftSE，一种单步生成式语音增强框架，将增强建模为潜分布均衡问题。引入双潜在漂移（语义+声学）同时保语音可懂度与声学保真度，支持完全非配对训练。在加性去噪与卷积去混响上，以仅 1 NFE 在四个数据集上取得 SOTA 词错率，支持离线与实时因果设定。",
+      "tags": ["Speech Enhancement", "Generative", "One-Step", "Denoising"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.12252"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.12252"}]
+    },
+    {
+      "title": "A Step Toward Interoperable Speech Token Translation",
+      "url": "https://arxiv.org/abs/2609.12563",
+      "date": "2026-09-14",
+      "authors": "Authors",
+      "abstract": "神经音频编解码器将语音离散化为 token，但不同模型 token 空间异构，难以互通。提出 TokenMapper，在离散域实现异构语音分词器之间的直接 token-to-token 翻译，支持单码本与多码本结构。在 GLM-4-Voice、MiMi、DualCodec 上，端到端延迟相对波形桥接降低 4.8%-94.5%，迈向跨模型语音 token 互操作。",
+      "tags": ["Speech Token", "Interoperability", "Audio Codec", "S2ST"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.12563"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.12563"}]
+    },
+    {
+      "title": "Location-based Training with Complementary Folded Linear Orderings for Multichannel Speech Separation",
+      "url": "https://arxiv.org/abs/2609.12629",
+      "date": "2026-09-14",
+      "authors": "Kaixuan Yang, et al.",
+      "abstract": "针对多通道语音分离的排列问题，提出基于折叠线性排序的位置训练 LBT-FLOs，将环形方位折叠为受控线性排序，并利用互补性构建集成式框架，通过方位引导打分选择多个 LBT-FLO。实验在多种阵列几何与混响条件下较环形排序 LBT 取得稳定提升，且对方位估计误差鲁棒。",
+      "tags": ["Speech Separation", "Multichannel", "Location-based Training"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.12629"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.12629"}]
+    },
+    {
+      "title": "Overview and Meta-Analysis of DCASE 2026 Challenge Task 6: Audio Moment Retrieval from Long Audio",
+      "url": "https://arxiv.org/abs/2609.12484",
+      "date": "2026-09-14",
+      "authors": "Authors",
+      "abstract": "DCASE 2026 挑战赛 Task 6 概述，聚焦长音频中的音频时刻检索（AMR）：给定数分钟音频与自由文本查询，检索匹配的时间片段。任务需有效跨模态对齐与长程时域建模，基线结合 MS-CLAP 特征与 DETR 时刻检测网络。共 21 支队伍提交 59 个系统，前三名 Recall1@0.7 达 48.59%，约为基线 3.5 倍。",
+      "tags": ["Audio Retrieval", "Long Audio", "Cross-Modal", "DCASE 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.12484"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.12484"}]
+    },
+    {
+      "title": "Distributable Speaker-Anonymized Synthetic Speech Corpora and Their Analysis",
+      "url": "https://arxiv.org/abs/2609.12432",
+      "date": "2026-09-14",
+      "authors": "Authors",
+      "abstract": "发布 VoxTubeS，一类可再分发的说话人匿名化合成语音语料库，基于 VoxTube 的 129 万条英语语音，方法涵盖语音转换、潜空间匿名化与可控 TTS。系统评估发现身份抑制与效用/多样性之间的复杂权衡，无单一方法占优，语料库构建实为隐私、效用、多样性与公平性之间的权衡选择。",
+      "tags": ["Voice Privacy", "Speaker Anonymization", "Synthetic Speech", "Corpus"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.12432"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.12432"}]
+    },
+    {
+      "title": "Objective Intelligibility Prediction Using Distance Metrics on Speech Foundation Model Representations",
+      "url": "https://arxiv.org/abs/2609.13046",
+      "date": "2026-09-14",
+      "authors": "Authors",
+      "abstract": "研究无需微调即可用预训练语音基础模型的表示预测语音可懂度。对多个语音基础模型做逐层分析，将嵌入距离与主观可懂度分数相关。发现 Whisper 编码器/解码器末端层结合 Fréchet Audio Distance 相关度最佳，优于经典可懂度指标，且对词错率更鲁棒。",
+      "tags": ["Speech Quality", "Intelligibility", "Foundation Model"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.13046"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.13046"}]
+    },
+    {
+      "title": "A Device to Control and Manipulate Occlusion Effects for Own Voice Perception Studies",
+      "url": "https://arxiv.org/abs/2609.12845",
+      "date": "2026-09-14",
+      "authors": "Authors",
+      "abstract": "耳道堵塞效应（OE）会改变鼓膜声压，包括插入损耗与堵塞增益，但其个体差异大，阻碍可重复的感知实验。提出基于改装商用耳罩的装置，集成阻抗测量并推导数字滤波器，可模拟任意 OE 曲线。客观评估显示在关注频段内 OE 模拟准确，为自身语音感知研究提供了可控工具。",
+      "tags": ["Voice Perception", "Occlusion Effect", "Hardware"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.12845"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.12845"}]
+    }
+  ],
+  "news": []
+}

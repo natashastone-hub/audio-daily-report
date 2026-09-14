@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-09-14-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-09-14-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年9月14日 (周一) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">11</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.12945" target="_blank">StepAudio 3 Gen Technical Report</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-14</span><span>👥 Bin Lin, Bo Zhao, Boyang Wang, et al. (StepFun team)</span></div>
+      <div class="abstract">阶跃星辰发布 StepAudio 3 Gen 技术报告，介绍新一代音频生成模型。该模型面向语音合成、音频生成等任务，覆盖大规模语音与音频生成能力，是阶跃 Audio 系列的重要技术迭代。</div>
+      <div class="tags"><span class="tag">Audio Generation</span><span class="tag">TTS</span><span class="tag">Technical Report</span><span class="tag">Foundation Model</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.12945" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.12945" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.12855" target="_blank">Preference-Gated Alignment for Reducing Hallucination in Decoder-Only TTS</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-14</span><span>👥 Authors</span></div>
+      <div class="abstract">Decoder-only TTS 模型虽可扩展，但自回归生成时文本-语音对齐弱导致内容幻觉。本文发现鲁棒性与对齐注意力头的锐度呈非单调关系，提出 AlignDPO，将轻量 CTC 对齐项折叠进 DPO 后训练，仅作用于 chosen 样本，无需改架构。在 Seed-TTS-Eval 英文集上，重度内容幻觉率从 4.4% 降至约 0.6%，词错率显著下降，听感自然度也获偏好。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Hallucination</span><span class="tag">DPO</span><span class="tag">Speech Alignment</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.12855" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.12855" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.12728" target="_blank">X-Pred MeanFlow for Streaming Token-to-Mel Speech Decoding</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-14</span><span>👥 Hanke Xie, Xiaming Ren, Qirui Zhan, et al.</span></div>
+      <div class="abstract">流式与对话场景下，离散 token 到声学波形的低延迟合成至关重要。提出 X-Pred MeanFlow，一种少步流式 token-to-mel 解码器，通过 mel 预测对 MeanFlow 重参数化，在极低采样步数下保持高声学质量，面向实时语音合成。</div>
+      <div class="tags"><span class="tag">Streaming TTS</span><span class="tag">Flow Matching</span><span class="tag">Low Latency</span><span class="tag">Token-to-Mel</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.12728" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.12728" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.13076" target="_blank">Evaluating Voice Agents as a Multiparty Conversation Participant</a></h4>
+      <div class="meta"><span>📅 2026-09-14</span><span>👥 Authors</span></div>
+      <div class="abstract">现有语音 Agent 评测多聚焦二人交互与被动音频理解，忽略了多人对话这一真实场景。本文提出首个专门评估语音系统作为多方对话参与者的基准 MP-Bench，从话轮意识与回应恰当性两维度评估。对 12 个语音 Agent 评测发现，实时语音 Agent 在多方理解上不超过 22%，话轮接近随机，暴露多方场景的开放挑战。</div>
+      <div class="tags"><span class="tag">Voice Agent</span><span class="tag">Multiparty</span><span class="tag">Benchmark</span><span class="tag">Turn-Taking</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.13076" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.13076" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.12252" target="_blank">Speech Enhancement with Generative Drifting</a></h4>
+      <div class="meta"><span>📅 2026-09-14</span><span>👥 Authors</span></div>
+      <div class="abstract">提出 DriftSE，一种单步生成式语音增强框架，将增强建模为潜分布均衡问题。引入双潜在漂移（语义+声学）同时保语音可懂度与声学保真度，支持完全非配对训练。在加性去噪与卷积去混响上，以仅 1 NFE 在四个数据集上取得 SOTA 词错率，支持离线与实时因果设定。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Generative</span><span class="tag">One-Step</span><span class="tag">Denoising</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.12252" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.12252" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.12563" target="_blank">A Step Toward Interoperable Speech Token Translation</a></h4>
+      <div class="meta"><span>📅 2026-09-14</span><span>👥 Authors</span></div>
+      <div class="abstract">神经音频编解码器将语音离散化为 token，但不同模型 token 空间异构，难以互通。提出 TokenMapper，在离散域实现异构语音分词器之间的直接 token-to-token 翻译，支持单码本与多码本结构。在 GLM-4-Voice、MiMi、DualCodec 上，端到端延迟相对波形桥接降低 4.8%-94.5%，迈向跨模型语音 token 互操作。</div>
+      <div class="tags"><span class="tag">Speech Token</span><span class="tag">Interoperability</span><span class="tag">Audio Codec</span><span class="tag">S2ST</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.12563" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.12563" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.12629" target="_blank">Location-based Training with Complementary Folded Linear Orderings for Multichannel Speech Separation</a></h4>
+      <div class="meta"><span>📅 2026-09-14</span><span>👥 Kaixuan Yang, et al.</span></div>
+      <div class="abstract">针对多通道语音分离的排列问题，提出基于折叠线性排序的位置训练 LBT-FLOs，将环形方位折叠为受控线性排序，并利用互补性构建集成式框架，通过方位引导打分选择多个 LBT-FLO。实验在多种阵列几何与混响条件下较环形排序 LBT 取得稳定提升，且对方位估计误差鲁棒。</div>
+      <div class="tags"><span class="tag">Speech Separation</span><span class="tag">Multichannel</span><span class="tag">Location-based Training</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.12629" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.12629" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.12484" target="_blank">Overview and Meta-Analysis of DCASE 2026 Challenge Task 6: Audio Moment Retrieval from Long Audio</a></h4>
+      <div class="meta"><span>📅 2026-09-14</span><span>👥 Authors</span></div>
+      <div class="abstract">DCASE 2026 挑战赛 Task 6 概述，聚焦长音频中的音频时刻检索（AMR）：给定数分钟音频与自由文本查询，检索匹配的时间片段。任务需有效跨模态对齐与长程时域建模，基线结合 MS-CLAP 特征与 DETR 时刻检测网络。共 21 支队伍提交 59 个系统，前三名 Recall1@0.7 达 48.59%，约为基线 3.5 倍。</div>
+      <div class="tags"><span class="tag">Audio Retrieval</span><span class="tag">Long Audio</span><span class="tag">Cross-Modal</span><span class="tag">DCASE 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.12484" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.12484" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.12432" target="_blank">Distributable Speaker-Anonymized Synthetic Speech Corpora and Their Analysis</a></h4>
+      <div class="meta"><span>📅 2026-09-14</span><span>👥 Authors</span></div>
+      <div class="abstract">发布 VoxTubeS，一类可再分发的说话人匿名化合成语音语料库，基于 VoxTube 的 129 万条英语语音，方法涵盖语音转换、潜空间匿名化与可控 TTS。系统评估发现身份抑制与效用/多样性之间的复杂权衡，无单一方法占优，语料库构建实为隐私、效用、多样性与公平性之间的权衡选择。</div>
+      <div class="tags"><span class="tag">Voice Privacy</span><span class="tag">Speaker Anonymization</span><span class="tag">Synthetic Speech</span><span class="tag">Corpus</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.12432" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.12432" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.13046" target="_blank">Objective Intelligibility Prediction Using Distance Metrics on Speech Foundation Model Representations</a></h4>
+      <div class="meta"><span>📅 2026-09-14</span><span>👥 Authors</span></div>
+      <div class="abstract">研究无需微调即可用预训练语音基础模型的表示预测语音可懂度。对多个语音基础模型做逐层分析，将嵌入距离与主观可懂度分数相关。发现 Whisper 编码器/解码器末端层结合 Fréchet Audio Distance 相关度最佳，优于经典可懂度指标，且对词错率更鲁棒。</div>
+      <div class="tags"><span class="tag">Speech Quality</span><span class="tag">Intelligibility</span><span class="tag">Foundation Model</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.13046" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.13046" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.12845" target="_blank">A Device to Control and Manipulate Occlusion Effects for Own Voice Perception Studies</a></h4>
+      <div class="meta"><span>📅 2026-09-14</span><span>👥 Authors</span></div>
+      <div class="abstract">耳道堵塞效应（OE）会改变鼓膜声压，包括插入损耗与堵塞增益，但其个体差异大，阻碍可重复的感知实验。提出基于改装商用耳罩的装置，集成阻抗测量并推导数字滤波器，可模拟任意 OE 曲线。客观评估显示在关注频段内 OE 模拟准确，为自身语音感知研究提供了可控工具。</div>
+      <div class="tags"><span class="tag">Voice Perception</span><span class="tag">Occlusion Effect</span><span class="tag">Hardware</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.12845" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.12845" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-09-14-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
