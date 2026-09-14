@@ -1,0 +1,15 @@
+{
+  "papers": [],
+  "news": [
+    {
+      "title": "环球音乐集团（UMG）与 ElevenLabs 联合推出 AI 音乐创作平台",
+      "url": "https://www.semafor.com/article/09/11/2026/umg-and-voice-ai-giant-elevenlabs-launch-ai-powered-music-platform",
+      "summary": "环球音乐集团与语音 AI 公司 ElevenLabs 于 9 月 11 日宣布联合推出 AI 音乐创作平台。关键在于授权模式：这笔合作让一家语音 AI 公司成为音乐曲库的付费客户，为「AI 生成音乐 + 正版授权」的商业化路径提供了标志性样本，被视为版权方与 AI 语音/音频公司合作的里程碑事件。"
+    },
+    {
+      "title": "Xactly 推出 Penny：用语音教练辅导管理者进行困难对话",
+      "url": "https://www.cnbc.com/2026/09/12/ai-manager-coaching-employee-feedback-performanc-review.html",
+      "summary": "9 月 12 日，Xactly 发布 AI 语音教练工具 Penny，通过量身定制的脚本和角色扮演中对语气的实时反馈，帮助管理者练习绩效评估和薪酬等困难对话。这是语音 AI 在企业人力资源培训场景的落地新案例，展示了合成语音在「教练式反馈」中的实时交互应用。"
+    }
+  ]
+}
