@@ -1,0 +1,200 @@
+{
+  "papers": [
+    {
+      "title": "StepAudio 3 Realtime Technical Report",
+      "url": "https://arxiv.org/abs/2609.14005",
+      "date": "2026-09-15",
+      "authors": "Bin Lin, Bo Zhao, Boyang Zhang, Haoyang Zhang, et al. (StepFun)",
+      "abstract": "实时语音交互需要深度推理、即时响应和流畅的轮流发言。本文提出 StepAudio 3 Realtime，一个围绕「持续听-说-思考-行动」循环组织的音频语言基础模型。Deep Perception 捕捉丰富声学线索来理解用户意图；Seamless Duplex 建模同步音频流，自然处理停顿、backchannel 与打断；核心创新 Think-While-Speaking 在语音输出的同时并行执行私有推理，化解了深度思考与低延迟之间的矛盾。该模型在 MMSU 达 90.6、Artificial Analysis Full-Duplex Bench Overall 98.9、τ-Voice 任务成功率 56.0%，实现顶级全双工语音能力。",
+      "tags": ["Full-Duplex", "Speech LLM", "Real-Time", "Voice Agent"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.14005"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.14005"}
+      ]
+    },
+    {
+      "title": "DiTAR+: Dual Optimization for Robust Autoregressive Diffusion Speech Synthesis",
+      "url": "https://arxiv.org/abs/2609.13909",
+      "date": "2026-09-15",
+      "authors": "Ziyu Zhang, et al.",
+      "abstract": "连续潜变量自回归扩散 Transformer（AR-DiT）在零样本语音生成中潜力巨大，但在长句和复杂语言结构上仍存在解码不稳定问题。本文提出 DiTAR+ 双优化框架：Dilated Context Sampling 扩展宏观历史感受野防止累积误差传播；Hierarchical Acoustic Masking 阻止浅层关注声学前文，显式解耦语义对齐与声学细节重建。在 ZH-Hard 上 WER 从 12.478% 降到 9.893%，长句说话人相似度从 0.741 提升到 0.759，优于离散 token 与纯流匹配基线。",
+      "tags": ["TTS", "Speech Synthesis", "AR-DiT", "Diffusion"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.13909"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.13909"}
+      ]
+    },
+    {
+      "title": "Bridging Data, Reasoning, and Alignment: A Unified Framework for Context-Aware Instruction-Following TTS",
+      "url": "https://arxiv.org/abs/2609.14740",
+      "date": "2026-09-15",
+      "authors": "Jingbin Hu, et al.",
+      "abstract": "ISCSLP 2026 CoT-TTS Challenge 要求 TTS 系统先从对话历史生成思维链（CoT）推理再合成语境得当的语音。本文提出系统性优化管线：用 FullSubNet 降噪、Qwen3-ASR 重转录构建数据，蒸馏 545K 高质量指令样本；提出 Context-Aware Direct Preference Optimization（CA-DPO），通过级联过滤获得高置信偏好对，大幅提升「Context→CoT→Speech」一致性。系统在所有主客观指标上显著优于官方基线。",
+      "tags": ["TTS", "Instruction-Following", "CoT", "DPO", "ISCSLP 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.14740"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.14740"}
+      ]
+    },
+    {
+      "title": "Modeling, Scaling, and Decoding: Optimizing Controllable Speech Generation with Nonverbal Vocalizations",
+      "url": "https://arxiv.org/abs/2609.14231",
+      "date": "2026-09-15",
+      "authors": "Ziyu Zhang, et al.",
+      "abstract": "非言语发声（NVV，如笑、叹气）对自然富有表现力的语音至关重要，但因其声学多样性与语料分布不均而极具挑战。本文开发 NVV-aware DiTAR 系统，将 16 类目标 NVV 编码为专用 token，并改进停止预测以区分句中发声与句边界。通过大规模双语预训练、定向合成增强与频率感知再平衡，配合 Best-of-N 采样，最终在 ISCSLP 2026 NVVSpeech Challenge Track 2 取得官方双语加权分数 62.786，普通话第一、英语第二、总排名第一。",
+      "tags": ["TTS", "Controllable", "Nonverbal Vocalization", "ISCSLP 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.14231"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.14231"}
+      ]
+    },
+    {
+      "title": "Reducing the Output-Mode Gap in Speech Language Models via Joint-Output On-Policy Distillation",
+      "url": "https://arxiv.org/abs/2609.15313",
+      "date": "2026-09-15",
+      "authors": "Daxin Tan, et al.",
+      "abstract": "自回归交错生成文本与声学 token 是语音大模型口语响应的常见方案，但生成声学 token 会成为后续文本预测的上下文，导致同一语音输入下语音到文本再到语音（S2TS）模式的内部文本准确率显著低于纯语音到文本（S2T）。本文称这一差异为「输出模式差距」（OMG），并提出 Joint-Output On-Policy Distillation（JO-OPD），将更强的 S2T 策略蒸馏到联合生成中。在 Step-Audio-2-mini 上，JO-OPD 将 Spoken-MQA 的 OMG 从 42.87 降到 16.26 个百分点。",
+      "tags": ["Speech LLM", "S2TS", "Distillation", "Output-Mode Gap"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.15313"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.15313"}
+      ]
+    },
+    {
+      "title": "OLAC: An Overlapped Lossless Audio Codec in the Time-Domain with MDCT Compatibility",
+      "url": "https://arxiv.org/abs/2609.15616",
+      "date": "2026-09-15",
+      "authors": "Jean-Marc Valin",
+      "abstract": "无损音频编码已高度成熟，纯压缩性能提升空间有限。然而新兴实时无线应用需要根据网络容量在无损与有损编码之间动态切换。本文（Opus 作者 Jean-Marc Valin）提出基于时域混叠消除（TDAC）的无损编解码器，可与 Opus 的 CELT 模式重叠匹配，实现无损与有损编码之间无间断、无冗余信息的切换，同时在压缩率上仍保持最先进水平。",
+      "tags": ["Audio Codec", "Lossless", "Opus", "Real-Time"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.15616"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.15616"}
+      ]
+    },
+    {
+      "title": "The VoiceMOS Challenge 2026: Evaluating Speech Enhancement, Emotional TTS and Accented TTS Systems",
+      "url": "https://arxiv.org/abs/2609.13792",
+      "date": "2026-09-15",
+      "authors": "Wen-Chin Huang, et al.",
+      "abstract": "VoiceMOS Challenge 2026 是主观语音评测自动预测挑战的第五届，重新聚焦语音并组织三个赛道：增强语音的绝对与比较类别评分预测、情感 TTS 的自然度与情感相关任务预测、基于编解码器语音合成系统的说话人与口音相似度预测。挑战吸引全球 18 支队伍，多数成功超越基线。本文总结挑战结果、代表性顶级系统、参与者反馈与未来方向。",
+      "tags": ["Speech Quality", "MOS", "Evaluation", "TTS"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.13792"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.13792"}
+      ]
+    },
+    {
+      "title": "CRAF: Cross-View Residual-Aware Fusion for Deepfake Speech Detection",
+      "url": "https://arxiv.org/abs/2609.13842",
+      "date": "2026-09-15",
+      "authors": "Minh-Xuan Phan, et al.",
+      "abstract": "语音合成与语音转换使深度伪造语音日益逼真，对未见欺骗攻击的泛化成为关键挑战。自监督学习（SSL）模型捕捉细粒度底层声学特征，听觉大语言模型（ALLM）提供高层上下文表示，两者互补。本文提出 CRAF 跨视图残差感知融合框架，用 ALLM 引导的跨视图注意力丰富 SSL 表示，显式解耦共享信息与视图特定互补信息。在 ASVspoof 5 上，CRAF 配合 Kimi-Audio 取得 5.96% EER 与 0.1192 minDCF，展现对未见攻击的鲁棒性。",
+      "tags": ["Deepfake Detection", "Anti-Spoofing", "SSL", "ALLM"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.13842"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.13842"}
+      ]
+    },
+    {
+      "title": "AURA: Unified Multimodal Framework for Conversational Music Editing",
+      "url": "https://arxiv.org/abs/2609.14344",
+      "date": "2026-09-15",
+      "authors": "Quoc-Huy Trinh, et al.",
+      "abstract": "指令引导的音乐编辑通常独立处理每个请求，难以支持用户逐步精修曲目的工作流。本文提出 AURA，一个统一多模态对话式音乐编辑框架，用多模态大模型理解完整对话历史、可选图像与参考音频，将编辑意图提炼为紧凑概念 token，再注入冻结的 MusicGen 骨干。仅优化 91M 参数（冻结 1.9B），在 Slakh2100 与 MoisesDB 上编辑正确性与内容保留显著提升，域外增删的 FAD 降低 4-5 倍。",
+      "tags": ["Music Editing", "Multimodal", "Music Generation"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.14344"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.14344"}
+      ]
+    },
+    {
+      "title": "Building a Production Greek-English Speech Recognizer",
+      "url": "https://arxiv.org/abs/2609.13498",
+      "date": "2026-09-15",
+      "authors": "Christos Petrocheilos, et al.",
+      "abstract": "报告构建生产级双语（希腊语-英语）ASR 系统 Sophea 的数月工程实践。核心发现：在特定模型规模下，单一模型无法同时满足全部九项生产指标——希腊语嘈杂环境门控需约 1500 步密集领域暴露，而英语语言识别仅容忍约 250 步，构成「测得的不可行性」前沿。通过三模型 ROVER 集成将门控覆盖从 4-7/9 提升到 9/9，重叠语音 WER 从 53.35% 降至 37.87%。逐片段仲裁者 sophea/asr-k1 在 Open ASR Leaderboard 八集平均 WER 4.26%。",
+      "tags": ["ASR", "Multilingual", "Production", "Code-switching"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.13498"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.13498"}
+      ]
+    },
+    {
+      "title": "Word Timestamps and Speaker Attribution with a Non-Autoregressive LLM",
+      "url": "https://arxiv.org/abs/2609.15218",
+      "date": "2026-09-15",
+      "authors": "Zvi Kons, et al.",
+      "abstract": "时间戳与说话人归属是语音识别的重要补充，可形成丰富的文本转写。本文基于非自回归 LLM 架构的模型，为给定转写添加时间戳与说话人信息。相比类似组件构建的自回归模型，该模型更准确，标注速度快一到两个数量级；相比其他模型，取得最先进的时间戳准确率与最佳说话人归属 cpWER。",
+      "tags": ["ASR", "Diarization", "Timestamp", "Non-Autoregressive"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.15218"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.15218"}
+      ]
+    },
+    {
+      "title": "DualSpecSE: A Dual-Path Speech Enhancement Network Integrating Mel and Complex Spectrograms",
+      "url": "https://arxiv.org/abs/2609.13911",
+      "date": "2026-09-15",
+      "authors": "Xingchen Li, et al.",
+      "abstract": "提出 DualSpecSE 语音增强框架，在双路径架构中联合建模 Mel 频谱与复数频谱：Mel 分支学习粗粒度声学表示并输出增强 Mel 频谱供 ASR 直接使用，复数分支精化细粒度频谱细节用于高保真波形重建。基于 CleanMel 的跨带与窄带模块，引入交互与融合模块实现分支间信息交换，无需预训练声码器即可同时输出增强 Mel 与复数频谱，在保真度、感知质量与 ASR 性能上持续提升。",
+      "tags": ["Speech Enhancement", "ASR", "Dual-Path"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.13911"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.13911"}
+      ]
+    },
+    {
+      "title": "HARP: Agentic Hybrid Retrieval and Analysis for Long-Form Audio",
+      "url": "https://arxiv.org/abs/2609.14116",
+      "date": "2026-09-15",
+      "authors": "Chin-Jou Li, et al.",
+      "abstract": "长音频分析需要定位并整合分散在长录音中的证据。本文提出 HARP（混合音频检索管线），一个用于系统研究长音频分析中检索与证据表示的智能体框架与基准。结合关键词与向量搜索的混合检索表现最稳健；同时结合元数据与检索音频作为证据时，平均答案准确率提升约 10%、理由准确率提升约 6%。细粒度评估显示仅靠答案准确率会高估系统能力。",
+      "tags": ["Long-Form Audio", "Retrieval", "Agentic", "Audio Understanding"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.14116"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.14116"}
+      ]
+    },
+    {
+      "title": "Subphonetic Acoustic Modeling via Optimal Transport for Pronunciation Assessment",
+      "url": "https://arxiv.org/abs/2609.13694",
+      "date": "2026-09-15",
+      "authors": "Haopeng Geng, et al.",
+      "abstract": "发音评估需要时空精确、诊断有意义且忠于学习者实际发音的声学证据。本文提出拓扑感知的逐帧声学模型，通过将有序亚音素状态与最优时间传输分类（OTTC）结合，恢复神经声学模型中的音素内部状态结构，鼓励稠密单调的帧级状态判别同时保持音素识别能力。在朗读、自发与二语语音上分割优于神经基线，下游误读检测与自动发音评估均获提升。",
+      "tags": ["Pronunciation Assessment", "Acoustic Modeling", "Optimal Transport"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.13694"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.13694"}
+      ]
+    },
+    {
+      "title": "OpenEnded: An Open-Response Speech Corpus for Speaking Proficiency Assessment",
+      "url": "https://arxiv.org/abs/2609.15666",
+      "date": "2026-09-15",
+      "authors": "Yu-Wen Chen, et al.",
+      "abstract": "自动口语评估（ASA）的发展受限于公开数据集稀缺，多数工作依赖朗读语音。本文提出 OpenEnded，一个普通话说话者开放回答任务的英语练习语音语料，提供话语级的准确度、流利度与韵律评估。约 1 万句话语，其中 1000 句由多评分者人工标注形成高质量测试集，其余由音频语言模型（ALM）伪标注用于训练。评估显示 ALM 伪标签可提升训练，引入的 VoxPA 基线表现最佳。",
+      "tags": ["Speaking Assessment", "Dataset", "Prosody", "ALM"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.15666"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.15666"}
+      ]
+    }
+  ],
+  "news": []
+}
