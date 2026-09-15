@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-09-15</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-09-15</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年9月15日 (周二) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">8</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.13045" target="_blank">Kraken: LLM-based Speech-to-Speech Translation via Low-bitrate VQ and Dual-path Source Conditioning</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-15</span><span>👥 Hayato Futami, Hassan Shahmohammadi, Tushar Dhyani, Alkis Koudounas, Raphaël Lafargue, Yosuke Kashiwagi, Quentin Jodelet, Eileen Long</span></div>
+      <div class="abstract">语音到语音翻译（S2ST）借助语音大模型取得长足进展，可联合优化并保留非语言信息，但现有模型在预测高码率码本时的 token 生成效率与说话人一致性上存在瓶颈。本文提出 Kraken，一种基于 LLM 的 S2ST 方案：用低比特率单码本 VQ 表示目标语音，配合双路径源条件（声学特征 + 语义 token）注入源信息，兼顾翻译质量与说话人/副语言信息保留。相比多码本方法，Kraken 显著降低了需要生成的高码率 token 数量，在 CVSS 等基准上实现竞争力的翻译质量与更高效的推理，为实时同声传译提供新路径。</div>
+      <div class="tags"><span class="tag">S2ST</span><span class="tag">Speech LLM</span><span class="tag">VQ</span><span class="tag">Speech Translation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.13045" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.13045" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.13117" target="_blank">Continue, Adapt, or Yield: In-Turn Adaptation to Overlapping Speech in Full-Duplex Agents</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-15</span><span>👥 Yunqi Lu, Tyler Baumgartner, Nikhil Johri, Brandon Tai, Candice Fan, Luc Debaupte, Ruben Aguilar, Bill Wang, Yi Zhong</span></div>
+      <div class="abstract">全双工语音智能体评测通常只关注「继续说话还是停住」这一二元判断，却遗漏了人类日常常用的第三种反应：在继续说话的同时，实时吸收对方刚插话的内容。本文系统研究了全双工智能体在重叠语音中的话中自适应（in-turn adaptation）能力，区分「继续」「自适应」「让渡」三类响应，并分析不同架构如何实现基于对方插话内容的即时调整。工作揭示了现有实时语音系统在话中理解与自适应上的关键短板，为全双工对话建模与评测提供了新的维度和基准参考。</div>
+      <div class="tags"><span class="tag">Full-Duplex</span><span class="tag">Voice Agent</span><span class="tag">Overlapping Speech</span><span class="tag">Turn-Taking</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.13117" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.13117" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.12918" target="_blank">PhaseGAN: High-Fidelity Vocoder via Decoupled Amplitude and GAN-Driven Phase Reconstruction</a></h4>
+      <div class="meta"><span>📅 2026-09-15</span><span>👥 Wenzheng Zhang, Xueliang Zhang, Shulin He, Fei Zhao, Xin Liu, Pengjie Shen, Zhenlong Guo, Zixuan Xue, Hongtao Bao, Zixuan Chen</span></div>
+      <div class="abstract">声码器是现代 TTS 系统的关键组件，尽管神经声码器进展显著，相位重建仍是限制音质与自然度的核心难点（大多数模型只预测幅度谱，重建相位常被忽略或近似）。本文提出 PhaseGAN，将幅度与相位解耦，用 GAN 驱动的判别器监督高保真相位重建。通过解耦幅度谱预测与 GAN 相位生成，PhaseGAN 在保持幅度谱精度的同时显著提升相位一致性，在多项客观/主观指标上优于主流神经声码器，为高保真 TTS 与语音合成的波形重建提供新方案。</div>
+      <div class="tags"><span class="tag">Vocoder</span><span class="tag">TTS</span><span class="tag">Phase Reconstruction</span><span class="tag">GAN</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.12918" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.12918" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.12774" target="_blank">DiffSynth-Music: Audio-Conditioned KV-Cache Adapters for Controllable Music Generation</a></h4>
+      <div class="meta"><span>📅 2026-09-15</span><span>👥 Zhongjie Duan, Shengchuan Gao, Hong Zhang, Yingda Chen</span></div>
+      <div class="abstract">文本与歌词只能指定大致的音乐特征与演唱内容，对音乐的时值、旋律走向与参考风格的可控性有限。本文提出 DiffSynth-Music，一个在音乐大模型上增加音频条件 KV-Cache 适配器（adapter）的框架，可将参考音频的风格、旋律与时序信息注入扩散/自回归解码过程，实现更精细的可控音乐生成。该方法无需重新训练基座模型，通过轻量适配器即可支持参考音频驱动的音乐生成，在风格保真度与可控性上取得良好平衡，并开源了实现。</div>
+      <div class="tags"><span class="tag">Music Generation</span><span class="tag">KV-Cache</span><span class="tag">Controllable</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.12774" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.12774" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.12663" target="_blank">What Did the MLLM Hear? Token-Level Spectro-Temporal Grounding for Audio MLLM Explainability</a></h4>
+      <div class="meta"><span>📅 2026-09-15</span><span>👥 Lucia Cascone, Valeria Fraenza, Michele Nappi, Fabio Narducci, Benedetto Simone</span></div>
+      <div class="abstract">音频多模态大模型（Audio MLLM）能生成对复杂声学场景的详细自然语言描述，但至今仍不清楚输入音频的哪一部分支撑了每个生成的 token，即可解释性缺失。本文提出 token 级的时频（spectro-temporal）溯源/定位方法，将 MLLM 生成的每个 token 回溯到输入音频的具体时间-频率区域，实现音频理解模型的可解释分析。通过这种方法，可以揭示模型「听到了什么」并定位错误归因，为音频 MLLM 的调试、可信度评估与偏差分析提供工具。</div>
+      <div class="tags"><span class="tag">Audio MLLM</span><span class="tag">Explainability</span><span class="tag">Grounding</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.12663" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.12663" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.12154" target="_blank">Neural Multichannel Distant Speaker Diarization with Heavy-tailed Source Separation Model</a></h4>
+      <div class="meta"><span>📅 2026-09-15</span><span>👥 Sicheng Mao, Baihan Li, Mathieu Fontaine, Anthony Larcher, Roland Badeau</span></div>
+      <div class="abstract">远场说话人分离（distant speaker diarization）因声学环境复杂、说话人数可变及语音重叠而极具挑战。模型驱动方法利用多通道语音源特征，但现有源分离模型多为轻尾分布模型。本文提出基于重尾（heavy-tailed）源分离模型驱动的神经多通道远场说话人分离框架，将重尾先验引入源建模以更好地刻画语音源的统计特性，并在多阵列几何与混响条件下验证其鲁棒性。该方法已被 IEEE SLT 2026 接收，为远场多说话人场景提供了更稳健的分离与归因方案。</div>
+      <div class="tags"><span class="tag">Speaker Diarization</span><span class="tag">Multichannel</span><span class="tag">Source Separation</span><span class="tag">Distant Speech</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.12154" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.12154" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.12607" target="_blank">Direct Preference Density Alignment for Conversational Audio Equalization</a></h4>
+      <div class="meta"><span>📅 2026-09-15</span><span>👥 Ioannis Stylianou, Sven Ewan Shepstone, Jon Francombe, Pablo Martinez Nuevo, Zheng-Hua Tan</span></div>
+      <div class="abstract">LLM 对齐通常依赖学习到的代理奖励模型，训练期内存开销大且易出现不稳定与 reward hacking。本文针对对话语音的音频均衡（audio equalization）任务，提出直接偏好密度对齐（Direct Preference Density Alignment）方法，无需显式奖励模型，直接从人类偏好数据学习音频均衡策略的密度分布。该工作将 RLHF 的 direct preference 思想迁移到音频信号处理领域，为个性化语音增强与对话音频优化提供了参数高效且稳定的对齐路径。</div>
+      <div class="tags"><span class="tag">Audio Equalization</span><span class="tag">Preference Alignment</span><span class="tag">Speech Enhancement</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.12607" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.12607" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.12201" target="_blank">Real-Time Music Source Separation on a Low-Power Audio DSP</a></h4>
+      <div class="meta"><span>📅 2026-09-15</span><span>👥 Jianan Li, Li Liu, Ken Malsky, Gabby Yi</span></div>
+      <div class="abstract">实时音乐源分离此前主要在桌面 CPU/GPU 上验证，但能否真正部署到嵌入式音频硬件（商业音频 DSP，如 2MB SRAM、2.07 GMAC/s 算力）一直悬而未决。本文证明在这样资源受限的低功耗音频 DSP 上实现实时音乐源分离是可行的，通过模型压缩、量化与算子优化，在严格的内存与算力预算下达到实时且可用的分离质量。工作为音乐源分离从云端走向终端设备（耳机、助听器等）提供了实用化路径，已投稿 ICASSP 2027。</div>
+      <div class="tags"><span class="tag">Music Source Separation</span><span class="tag">Embedded</span><span class="tag">Streaming</span><span class="tag">DSP</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.12201" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.12201" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-09-15') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
