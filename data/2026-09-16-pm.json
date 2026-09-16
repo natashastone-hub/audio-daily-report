@@ -1,0 +1,10 @@
+{
+  "papers": [],
+  "news": [
+    {
+      "title": "Google 发布原生端到端语音大模型 Gemini 3.8 Live 与 Gemini 3.8 Live Extended Thinking",
+      "url": "https://deepmind.google/models/gemini-audio/",
+      "summary": "谷歌宣布推出迄今最先进的实时对话模型 Gemini 3.8 Live 与 Gemini 3.8 Live Extended Thinking。两款模型均基于原生 Audio-to-Audio（音频到音频）端到端架构，主打语音智能体能力：Gemini 3.8 Live 面向规模化部署与成本优化，兼顾对话智能与流畅交流；Extended Thinking 版本首次在低延迟语音流中引入「边推理边对话」（Think-While-Speaking）能力，在语音输出的同时并行执行深层多步推理，化解深度思考与低延迟之间的矛盾。这是继 OpenAI GPT-Live 之后，全双工实时语音交互赛道又一大厂重磅发布。"
+    }
+  ]
+}
