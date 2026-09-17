@@ -1,0 +1,131 @@
+{
+  "papers": [
+    {
+      "title": "Look Less, Hear Better: Jointly Rewarded GRPO for Streaming ASR",
+      "url": "https://arxiv.org/abs/2609.18333",
+      "date": "2026-09-16",
+      "authors": "Xiuwen Zheng",
+      "abstract": "流式自动语音识别（ASR）需要同时权衡转写质量与逐词延迟。延迟流建模（DSM）已成为流式大语音模型的主流范式，其结构性延迟 τ 界定了解码器的前瞻上限。作者指出 τ 并非用户感知延迟的良好代理，DSM 的对齐监督在延迟上「留有余地」——同一强制对齐转写对所有 τ 复用，迫使模型延迟本可提前输出的词。本文提出词级发射延迟指标 AWED（相对每个词的声学终点定义），并用 GRPO 在同一奖励下联合评分转写准确率与实测延迟来后训练 DSM 识别器。在单一工作点（τ=6 帧）训练后，模型在所有前瞻预算上均优于有监督微调初始化与 Voxtral Realtime 骨干：80ms 结构延迟下 WER 相对降低 30.8%，480ms 下降低 5.7%，同时将中位 AWED 从 1.17s 降至 1.04s。该方法无需改动架构即可推进流式 ASR 的准确率-延迟帕累托前沿。",
+      "tags": ["Streaming ASR", "GRPO", "Low-Latency", "Speech LLM"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.18333"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.18333"}]
+    },
+    {
+      "title": "VoiceTrace: A Benchmark and Retrieval Framework for Who-Said-What Speech Retrieval",
+      "url": "https://arxiv.org/abs/2609.18521",
+      "date": "2026-09-16",
+      "authors": "Aaron Yee, Fengjie Lu, Jiarui Hai, Chenang Jiang, Helin Wang, Siwei Tu, Weitao You, Lingyun Sun",
+      "abstract": "随着会议、讲座、播客等口语内容持续增长，语音检索愈发重要，但现有基准与模型多聚焦「说了什么」而忽略「谁说的」。现实中用户常需结合语义内容与目标说话人（可通过参考语音自然指定）进行检索。本文提出 VoiceTrace-Bench，一个混合语音检索基准，每个查询同时结合文本（检索内容）与参考语音（检索说话人）。基于音频语言模型（ALM）的联合音频-文本建模能力，作者提出 VoiceTrace 两阶段检索框架：VoiceTrace-Emb 学习统一表征用于大规模高效检索，VoiceTrace-Reranker 联合考察每个查询-候选对进行细粒度相关性估计。实验显示 VoiceTrace 在既有语义语音检索基准上取得 SOTA，并在 VoiceTrace-Bench 上大幅超越级联方法。",
+      "tags": ["Speech Retrieval", "Speaker", "Audio-Language Model", "Benchmark"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.18521"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.18521"}]
+    },
+    {
+      "title": "Encoder Awakening via Adapters: Effective Domain-Adaptive Fine-tuning of Speech-LLMs",
+      "url": "https://arxiv.org/abs/2609.17981",
+      "date": "2026-09-16",
+      "authors": "Mohan Shi, Zilai Wang, Natarajan Balaji Shankar, Kaiyuan Zhang, Eray Eren",
+      "abstract": "语音大模型（Speech-LLMs）通常由预训练语音编码器、模态投影器与用 LoRA 微调的 LLM 组成，在通用域 ASR 上表现强劲，但在儿童语音、方言等域偏移语音上，因目标域数据有限且交叉熵损失仅作用于 LLM 输出，语音编码器难以充分适应新声学条件。本文提出 Encoder Awakening via Adapters（EAVA）——一种简单高效的 Speech-LLM ASR 域自适应微调方法：先在每个编码器层插入轻量适配器并单独训练，将目标域声学知识注入编码器同时保留预训练知识；再用 LoRA 对 LLM 联合微调全模型。在三个域偏移 ASR 数据集（含儿童与方言）上，EAVA 持续优于普通微调与其他基线，取得新 SOTA。",
+      "tags": ["Speech-LLM", "ASR", "Domain Adaptation", "Adapter"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.17981"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.17981"}]
+    },
+    {
+      "title": "G-Mamba: Sparse Graph-Guided Mamba for Audio-Visual Speech Enhancement",
+      "url": "https://arxiv.org/abs/2609.18009",
+      "date": "2026-09-16",
+      "authors": "Guo-Ruei Tseng, Hung-Shin Lee, Hsin-Min Wang, Berlin Chen",
+      "abstract": "轻量级音视频语音增强（AVSE）模型面临计算效率与跨模态对齐精度的关键权衡：简单拼接缺乏关系表达力，而稠密交叉注意力计算开销大且强声学干扰下易产生不可靠的跨模态对应。本文提出 Sparse Graph-Guided Mamba（SG-Mamba），将稀疏异构图与线性复杂度 Mamba 骨干集成：图显式通过内容自适应注意力和跨帧音视频连接建模模态固有关系，Mamba 捕捉长程时序上下文；同时引入音频跳跃连接以保护频谱细节。在 LRS3 上，SG-Mamba 达到与强轻量级基线相当或更优的性能，噪声条件下达 13.091 dB SI-SDR，成本仅 3.45 G MACs；在 VoxCeleb2 上进一步验证了显式结构先验对鲁棒性与泛化能力的提升。",
+      "tags": ["AVSE", "Mamba", "Audio-Visual", "Speech Enhancement"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.18009"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.18009"}]
+    },
+    {
+      "title": "Correlation-Guided Encoder Selection for Multi-Encoder Large Audio-Language Models",
+      "url": "https://arxiv.org/abs/2609.18041",
+      "date": "2026-09-16",
+      "authors": "Pei-Jun Liao, Hung-Shin Lee, Wenze Ren, Kuo-Hsuan Hung, Hung-yi Lee, Hsin-Min Wang",
+      "abstract": "多编码器融合将大音频语言模型（LALMs）扩展至语音识别之外，但凭直觉或穷举选择编码器常引入冗余表征并加剧本已受限的计算预算。本文提出 CUES（Correlation-gUided Encoder Selection），通过编码器性能画像之间的任务级与类别级皮尔逊相关性估计互补性，仅凭单编码器评估即可打分候选组合，无需在选型阶段进行融合训练。在 XARES-LLM 基准（冻结 SmolLM2-135M 骨干 + LoRA）上，CUES 仅用留出开发集即可稳定选出各赛道同一配置。Track A 选出跨族三编码器（Whisper-medium、mHuBERT-147、Dasheng-base）相对 Whisper-medium 提升 4.3%；Track B 文本生成则聚焦语音专属对（mHuBERT-147、WavLM-base-plus）并主动放弃添加发散编码器，相对 mHuBERT-147 提升 6.3%。",
+      "tags": ["Audio-Language Model", "Encoder Selection", "Multi-Encoder", "SLT 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.18041"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.18041"}]
+    },
+    {
+      "title": "TTM-Bench: A Framework for Text-to-Music System Performance Benchmarking",
+      "url": "https://arxiv.org/abs/2609.18585",
+      "date": "2026-09-16",
+      "authors": "Giorgia Adorni, Michela Papandrea, Battista Rimoldi, Tiziano Leidi",
+      "abstract": "文生音乐（TTM）系统越来越多地用自然语言生成音乐音频，可靠的评估至关重要，但因系统架构、条件信息支持与访问模式差异，以及异构碎片化的指标无法统一应用，性能比较一直困难。本文提出 TTM-Bench，为当代 TTM 系统定义统一协议以进行系统化、可复现的性能基准测试。它沿两个维度评估：音乐内容对齐（语义、流派、音乐描述一致性与聚合分数）与计算效率（生成延迟、实时因子、本地模型资源占用与托管服务成本）。通过初步对比案例研究发现，更高的内容对齐并不系统性地伴随更低计算需求，凸显了以可解释的分维指标而非单一还原性指标评估 TTM 性能的重要性。",
+      "tags": ["Text-to-Music", "Benchmark", "Music Generation", "Evaluation"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.18585"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.18585"}]
+    },
+    {
+      "title": "CPR: Combining global composing, local performing and full-sequence refining in piano rendering with continuous autoregressive modelling",
+      "url": "https://arxiv.org/abs/2609.18216",
+      "date": "2026-09-16",
+      "authors": "Chong Jing, Junan Zhang, Zhizheng Wu",
+      "abstract": "提示条件的钢琴 MIDI-to-Music 渲染旨在忠实渲染目标音符并复现参考录音的音色。现有方法分两类：离散 codec 自回归（AR）提供因果时序建模但量化可能丢失声学细节；流匹配（或扩散）能更好保留声学结构但以全序列注意力成本和较差语义结构为代价。连续自回归模型直接作用于连续表征，兼具 AR 的条件跟随能力与流匹配的分布建模能力，并以更低计算成本绕过量化瓶颈。据此提出 Composer-Performer-Refiner（CPR）框架：Composer 自回归预测连续隐状态，Performer 通过局部流匹配生成 24kHz 声学潜在，Refiner 上采样波形至 48kHz。另引入 Bottlenecked Representation Alignment（BREPA）与 Modality-Time RoPE（MT-RoPE）增强音乐语义结构与跨模态时序对齐。代码开源。",
+      "tags": ["Piano Rendering", "Autoregressive", "Music Generation", "Open Source"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.18216"}, {"label": "GitHub", "url": "https://github.com/FEAfeatherTHER/CPR_official"}]
+    },
+    {
+      "title": "Mask-Based Speech Enhancement for Spatial Audio: A Comparison of Ambisonics, Beamforming, and Microphone Channels",
+      "url": "https://arxiv.org/abs/2609.18532",
+      "date": "2026-09-16",
+      "authors": "Sheli Hendel, Boaz Rafaely, Dorothea Kolossa",
+      "abstract": "基于掩码的语音增强广泛用于抑制噪声与干扰，但其在多通道输出的空间音频算法中的表现研究不足。在此类场景下，语音增强须在提升语音质量的同时保留对定位、空间感知与空间掩蔽释放至关重要的空间线索。本文系统比较了应用于三种信号表示的时频掩码：麦克风信号、波束形成器输出与 Ambisonics 信号。结果表明增强与空间保真之间存在明确权衡：波束形成域掩码取得最高语音增强分数，而 Ambisonics 域掩码更能保留残余干扰的空间属性；所有方法均保留目标的定位线索。",
+      "tags": ["Speech Enhancement", "Spatial Audio", "Ambisonics", "Beamforming"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.18532"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.18532"}]
+    },
+    {
+      "title": "Task-oriented neural FOA encoding for SELD from irregular microphone arrays",
+      "url": "https://arxiv.org/abs/2609.18040",
+      "date": "2026-09-16",
+      "authors": "Jiachen Liu, Yin Cao, Ming Wu, Jun Yang",
+      "abstract": "声事件定位与检测（SELD）系统常依赖一阶 Ambisonics（FOA）输入，而从不规则麦克风阵列获取有用的 FOA 表征仍具挑战。本文提出两阶段 SELD 框架，从麦克风阵列信号学习面向任务的、FOA 兼容的表征：神经残差编码器先通过信号相关校正精化传统 FOA 编码，再由教师引导的……（摘要截断，详见论文页）",
+      "tags": ["SELD", "FOA Encoding", "Microphone Array"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.18040"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.18040"}]
+    },
+    {
+      "title": "Reviving Etter method for autoregressive inpainting: Generalization, evaluation, implementation",
+      "url": "https://arxiv.org/abs/2609.18401",
+      "date": "2026-09-16",
+      "authors": "Ondřej Mokrý, Matěj Hrdlička, Pavel Rajmic",
+      "abstract": "音频修复（inpainting）旨在恢复音频波形中的缺失片段，如丢包与误码。本文重新审视 Etter 提出的自回归（AR）插值方法——通过结构化线性系统组合前向与后向 AR 预测，但此前缺乏广泛使用的完整音频实现。作者提供开源实现并提出两个实用扩展：间隙长度短于模型阶数时允许高阶 AR 模型的公式，以及面向丢包隐藏的因果变体。在间隙达 80ms 的乐句上评估，Etter 修复性能与多数 AR 与稀疏基线相当，仅逊于迭代的 gap-wise Janssen 方法。",
+      "tags": ["Audio Inpainting", "Autoregressive", "Packet Loss"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.18401"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.18401"}]
+    },
+    {
+      "title": "Encypher: Shared Agency and Social Presence in Collaborative Music Generation for Dance Cyphers",
+      "url": "https://arxiv.org/abs/2609.18062",
+      "date": "2026-09-16",
+      "authors": "Zhixing Chen, Cheng-Zhi Anna Huang",
+      "abstract": "音乐与舞蹈是表达与连接的社会实践，但人机共创领域多数 HCI 工作聚焦独奏表演者。随着生成音乐成熟，作者追问 AI 不仅能作曲，还能组织什么样的社会互动。本文提出 Encypher，一个协作生成音乐系统，将集体动作特质转化为文本提示，条件化舞蹈 cypher 场景下的实时音乐生成。通过五周与本地舞者的协同设计、陌生参与者的用户研究、公共博物馆活动与现场表演，发现用户发展了共享能动性，将音乐感知为对房间能量的回应。研究将社会性作为设计关注点而非下游效应，为人机协作具身表达提供了框架与设计启示。",
+      "tags": ["Music Generation", "HCI", "Human-AI Co-creation"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.18062"}, {"label": "Project", "url": "https://encypher-chi.github.io/"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "阶跃星辰发布 StepAudio 3 系列语音大模型：五款模型全线登顶 Artificial Analysis 全球榜单",
+      "url": "https://www.sohu.com/a/1076375279_122066679",
+      "summary": "9 月 15 日，阶跃星辰（StepFun）正式发布 StepAudio 3 系列语音大模型「全家桶」：StepAudio 3 Realtime（实时语音交互）、ASR（语音识别）、TTS（真人级语音生成）、Gen（音频生成）与 Music（音乐创作）五款模型，一次性覆盖语音 AI 全栈场景。多款模型在权威第三方评测机构 Artificial Analysis 榜单中位列全球第一，标志着国产语音大模型在实时交互与语音生成领域进入全球第一梯队。五款模型已在阶跃星辰开放平台上线。"
+    },
+    {
+      "title": "Artificial Analysis 发布 Speech-to-Speech Index：GPT-Live-1 以 81.5 分登顶",
+      "url": "https://x.com/ArtificialAnlys/status/2099698254414029207",
+      "summary": "Artificial Analysis 发布语音到语音（Speech-to-Speech）评测榜单，OpenAI 的 GPT-Live-1 以 81.5 分（Astra 后端、medium 推理强度）排名第一，力压 Grok Voice Think Fast 2.0 High 的 81.3 分；Sol 后端配置以 80.1 分排第三。该榜单进一步确立了全双工实时语音模型间的横向对比基线，与当日阶跃 StepAudio 3 系列同步上榜形成「中美同榜竞技」格局。"
+    },
+    {
+      "title": "Google DeepMind 发布 Gemini 3.8 Live 与 Extended Thinking：原生端到端实时语音对话",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+      "summary": "Google 推出迄今最先进的实时对话模型 Gemini 3.8 Live 与 Gemini 3.8 Live Extended Thinking，均基于原生 Audio-to-Audio 端到端架构。Gemini 3.8 Live 主打规模化部署与成本优化；Extended Thinking 版本首次在低延迟语音流中引入「边推理边对话」（Think-While-Speaking）能力，在语音输出同时并行执行深层多步推理，化解深度思考与低延迟的矛盾。这是继 OpenAI GPT-Live 之后，全双工实时语音交互赛道又一重磅发布（注：已在前一日报中记录，此处补全官方来源链接）。"
+    }
+  ]
+}
