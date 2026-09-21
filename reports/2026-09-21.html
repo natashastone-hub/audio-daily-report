@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-09-21</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-09-21</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年9月21日 (周一) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">21</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">7</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.21666" target="_blank">Samsone: A Family of Open Small Audio Language Models for On-Device Inference</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-18</span><span>👥 Piotr Masztalski, Michał K. Grzeszczyk, Olaf Sikorski</span></div>
+      <div class="abstract">The success of Large Audio Language Models has driven the development of massive multimodal networks exceeding billions of parameters. However, the demand for privacy-preserving, low-latency processing has shifted focus toward Small Audio Language Models (SALMs) capable of on-device execution. The authors introduce Samsone, a family of SALMs designed for edge computing. The core model, Samsone-134M, establishes a new state-of-the-art for its size class across multiple benchmarks. Scaling laws are explored via Samsone-99M and Samsone-356M. Despite their compact footprint, the Samsone family delivers performance competitive with models orders of magnitude larger. Trained on publicly available data, with training code, weights, mobile-optimized checkpoints, and an open-source Android app for real-time on-device inference released.</div>
+      <div class="tags"><span class="tag">Audio Language Model</span><span class="tag">On-Device</span><span class="tag">Edge AI</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.21666" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.21666" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.21240" target="_blank">Rethinking Music Tokenization: A Semantic Codec toward High-Fidelity LLM Music Generation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-18</span><span>👥 Huakang Chen, Guobin Ma, Yuepeng Jiang, Dake Guo, Jingbin Hu, Hanke Xie, Wenhao Li, Lingxin Xiong, Jian Zhao, Zhonglin Jiang, Yong Chen, Lei Xie, Pengcheng Zhu</span></div>
+      <div class="abstract">Discrete audio tokenization has become the critical interface between raw waveforms and autoregressive modeling in recent music generation. Existing reconstruction-oriented tokenizers often mix musical structure with fine acoustic details, producing high-entropy tokens that are hard to model, while semantics-guided alternatives designed for speech do not fit music well. The authors rethink music tokenization around a measurable notion of music semantic content grounded in Music Information Retrieval tasks, and propose MuSeC, a music semantic codec that factorizes semantic and acoustic content directly from mixed signals without source separation. MuSeC preserves information required for high-fidelity reconstruction while producing more LM-friendly discrete units, improving reconstruction quality and yielding more predictable token sequences. Demos at https://longwaytog0.github.io/MuSeC/.</div>
+      <div class="tags"><span class="tag">Music Generation</span><span class="tag">Audio Tokenization</span><span class="tag">Codec</span><span class="tag">LLM</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.21240" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.21240" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.21683" target="_blank">Listen Before You Speak: Response Planning from Listener Facial Reactions for Conversational Speech Generation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-18</span><span>👥 Yunji Chu</span></div>
+      <div class="abstract">Conversational speech depends on dialogue context and the listener's immediately preceding behavior. The authors propose ReACT-TTS, a two-stage framework that uses a one-second pre-response listener facial sequence to plan the next utterance's emotion and prosody before speech realization. On a strict dyadic MELD protocol, temporal conditioning yields higher mean macro-F1 and VAD concordance than text-only across ten seeds. Ablations show temporal modeling performs best among visual variants. In a contextual-appropriateness study with 20 speech researchers, 76% of judgments prefer Temporal. The predicted response style is connected to a Grad-TTS backbone for end-to-end speech realization. Source code at https://github.com/CYJ1/ReACT-TTS_public.</div>
+      <div class="tags"><span class="tag">Conversational TTS</span><span class="tag">Multimodal</span><span class="tag">Speech Generation</span><span class="tag">Prosody</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.21683" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.21683" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.21581" target="_blank">Towards Zero-Shot Attribution of Synthetic Speech via Audio-Text Contrastive Retrieval</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-18</span><span>👥 Cristian-Teodor Neamtu, Serban Mihalache, Stefan Smeu, Dan Oneata, Horia Cucu, Dragos Burileanu</span></div>
+      <div class="abstract">Audio deepfake forensics is moving beyond a simple real-or-fake verdict toward attribution: which system generated the audio clip? Most source-attribution methods are closed-set classification, unable to name generators absent from training. The authors instead frame attribution as cross-modal retrieval: each generator is described in natural language, and a clip is attributed by retrieving the closest description in a shared audio-text embedding space. A frozen Wav2Vec2-BERT audio encoder is coupled with a frozen E5 text encoder aligned through small trainable projection heads. On MLAAD v9 (140 TTS models, 51 languages) under leave-models-out cross-validation, it reaches a model-level MRR of 58.4% for unseen generators, and even on failure often matches systems sharing the true generator's vocoder or architecture.</div>
+      <div class="tags"><span class="tag">Audio Deepfake</span><span class="tag">Attribution</span><span class="tag">Contrastive Retrieval</span><span class="tag">Forensics</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.21581" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.21581" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.21465" target="_blank">OmniVChat: Synthesizing, Benchmarking, and Training for Native Audio-Visual Dialogue</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-18</span><span>👥 Haolin He, Yunfei Chu, Qi Chen, Wen Huang, Yuan Feng, Muzhi Zhu, Zheqi Dai, Haoning Xu, Dongchao Yang, Chunyat Wu, Zining Liang, Zhengxi Liu, Xiquan Li, Xie Chen, Xize Cheng, Qize Yang, Jin Xu, Qiuqiang Kong</span></div>
+      <div class="abstract">Defines OmniVChat (Omni Video Chat) as native audio-visual dialogue where omni models directly and simultaneously receive audio and video and return text, without separate text question, captioning, or speech recognition. The authors present OmniVChat-Studio, a multi-agent data engine for synthesizing single- and multi-turn audio-visual dialogues, used to build OmniVChat-Bench (five ability categories) and OmniVChat-RL (a reinforcement learning reward design targeting reply correctness, efficiency, and style). Training Qwen3-Omni-Instruct with OmniVChat-RL improves performance on both synthetic and human-recorded benchmarks, validating transfer to real-world dialogues.</div>
+      <div class="tags"><span class="tag">Audio-Visual Dialogue</span><span class="tag">Omni Model</span><span class="tag">Multimodal</span><span class="tag">RL</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.21465" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.21465" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.21171" target="_blank">HAMMER: Harmonic-Aware Parallel Context Modeling and Discriminator-Free Perceptual Optimization for Speech Enhancement</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-18</span><span>👥 Shang-Fu Chen, Szu-Wei Fu, Sung-Feng Huang, Rong Chao, Wen-Huang Cheng, Yu Tsao</span></div>
+      <div class="abstract">Recent speech enhancement systems combine self-attention and Mamba but usually treat them as sequence mixers without explicitly exploiting harmonic periodicity, a strong cue for preserving voiced speech under noise. The authors propose a harmonic-aware, discriminator-free speech enhancer with (i) a Time-Frequency Harmonic-aware Attention-Mamba (TF-HAM) block running self-attention and bidirectional Mamba in parallel along both spectrogram axes plus a speech-adapted autocorrelation feed-forward network, and (ii) Metric-explicit perceptual refinement (MEPR) combining differentiable PESQ and log-likelihood-ratio losses. On VoiceBank+DEMAND it achieves 3.69 PESQ and 4.41 COVL with only 2.39M parameters, matching or beating discriminator-based systems; inference-time perceptual contrast stretching further raises PESQ to 3.79 without retraining.</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Mamba</span><span class="tag">Harmonic</span><span class="tag">Perceptual Optimization</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.21171" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.21171" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.20995" target="_blank">Voice-Light: A Full-Duplex Cascaded Voice Agent with Causal Turn-Taking and Speculative Generation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-17</span><span>👥 Bertil Braun</span></div>
+      <div class="abstract">Presents Voice-Light, a full-duplex cascaded voice agent featuring causal turn-taking and speculative generation, aiming to enable natural real-time spoken interaction. The work addresses the latency and overlap challenges of conversational voice agents by combining causal turn-taking decisions with speculative generation to reduce perceived latency and improve responsiveness.</div>
+      <div class="tags"><span class="tag">Full-Duplex</span><span class="tag">Voice Agent</span><span class="tag">Turn-Taking</span><span class="tag">Real-Time</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.20995" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.20995" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.21738" target="_blank">GenTraceBench: A Benchmark for Tracing Audio Deepfakes Across Pre- and Post-training Stages</a></h4>
+      <div class="meta"><span>📅 2026-09-18</span><span>👥 Li Wang, Kunyu Feng, Wan Lin, Dekun Chen, Qinke Ni, Xueyao Zhang, Lei Wang, Jie Shi, Haizhou Li, Zhizheng Wu</span></div>
+      <div class="abstract">Modern TTS systems are rarely deployed unchanged; they are adapted through supervised fine-tuning (SFT) or preference optimization (DPO/GRPO). The authors present GenTraceBench, spanning five TTS architectures, 16 pre-/post-training variants, and 49,728 utterances, to study whether fingerprints learned from a foundation generator remain valid after adaptation. Under a train-on-foundation, test-on-adapted protocol, DPO and GRPO generally preserve fingerprints, while some SFT and pre-training-data changes cause substantial drift, with effect sizes varying across three forensic backbones. In W2V-BERT verification, multi-shot enrollment reduces EER for the SFT condition from 44.4% to 11.0%.</div>
+      <div class="tags"><span class="tag">Audio Deepfake</span><span class="tag">Forensics</span><span class="tag">TTS</span><span class="tag">Benchmark</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.21738" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.21738" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.21183" target="_blank">I'll Keep an Ear Out: Teaching AudioLLMs Proactive Audio Assistance</a></h4>
+      <div class="meta"><span>📅 2026-09-18</span><span>👥 Amit Kumar Singh Yadav, Ritvik Shrivastava, Xuan Zhang, Seungwhan Moon, Shashank Jain, Pinar Donmez, Babak Damavandi</span></div>
+      <div class="abstract">AudioLLMs operate reactively, responding only when queried. The authors introduce proactive audio assistance, where an AudioLLM monitors an audio stream and autonomously decides when to alert the user from a single natural-language intent, motivated by wearable applications for Deaf and Hard of Hearing users. They propose Interrupt and Silent Modeling (ISM), embedding proactive decisions into LLM decoding via two special tokens capturing onset detection, sustained-relevance triggering, irrelevance suppression, and de-duplication. Applied to Qwen2-Audio-7B, ISM achieves 99.6% interrupt F1 and perfect de-duplication on ESC-50, with streaming evaluation confirming real-time viability at 3.5-second average latency.</div>
+      <div class="tags"><span class="tag">AudioLLM</span><span class="tag">Proactive Assistance</span><span class="tag">Wearable</span><span class="tag">Real-Time</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.21183" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.21183" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.21898" target="_blank">BLINC: Blind Calibration For Training-Free Speech Enhancement Adaptation</a></h4>
+      <div class="meta"><span>📅 2026-09-18</span><span>👥 Tobias Raichle, Ekaterina Gavrilko, Bin Yang</span></div>
+      <div class="abstract">Speech enhancement models degrade under domain shifts. Most test-time adaptation methods adapt weights via self-supervised loss, requiring backpropagation and permanently altering the model. The authors instead recalibrate the prediction via BLINC, a training-free method that remaps the predicted time-frequency mask onto a bimodal target distribution by histogram matching, parameterized from blind features of the noisy recording. BLINC improves overall quality on almost every target condition and matches or exceeds loss-based TTA baselines at minimal overhead.</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Test-Time Adaptation</span><span class="tag">Training-Free</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.21898" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.21898" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.21336" target="_blank">CGaLore: Curvature-Guided GaLore for Memory-Efficient Continual Adaptation of ASR Foundation Models</a></h4>
+      <div class="meta"><span>📅 2026-09-18</span><span>👥 Steven Vander Eeckt, Hugo Van hamme</span></div>
+      <div class="abstract">ASR models suffer from catastrophic forgetting when adapted to new domains. Gradient Low-Rank Projection (GaLore) is memory-efficient but does not account for forgetting. The authors propose Curvature-Guided GaLore (CGaLore), which incorporates old-task curvature information when selecting low-rank projection bases, filtering current-task gradients using Kronecker-factored approximate curvature from previous tasks. Experiments show CGaLore enables effective adaptation while alleviating forgetting, outperforming state-of-the-art continual learning baselines.</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Continual Learning</span><span class="tag">Low-Rank</span><span class="tag">Memory-Efficient</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.21336" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.21336" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.22031" target="_blank">Partial Accent-Control Editing in Frozen Speech Representations for Accent Conversion</a></h4>
+      <div class="meta"><span>📅 2026-09-18</span><span>👥 Yangyang Qu, Michele Panariello, Massimiliano Todisco, Nicholas Evans</span></div>
+      <div class="abstract">Accent conversion modifies speech to sound closer to a target accent while preserving linguistic content and speaker characteristics. The authors propose Partial Accent-Control Editing (PACE), editing frozen WavLM representations without training an accent-conditioned generator. A constrained edit is applied to source WavLM features, fused with target-accent reference features from non-parallel examples, with fusion weights controlling the trade-off between conversion strength and source-attribute degradation. Across five metrics, PACE is substantially superior to competitive baselines in both accent conversion and source preservation.</div>
+      <div class="tags"><span class="tag">Accent Conversion</span><span class="tag">Speech Editing</span><span class="tag">WavLM</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.22031" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.22031" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.21911" target="_blank">Training Music Sample Identification Models on Real Sample Pairs</a></h4>
+      <div class="meta"><span>📅 2026-09-18</span><span>👥 R. Oguz Araz, Joan Serrà, Xavier Lizarraga-Seijas, Emilio Molina, Xavier Serra, Yuki Mitsufuji, Dmitry Bogdanov</span></div>
+      <div class="abstract">Sample identification (SI) matches pairs of tracks where one is created by musically transforming an element of the other. The authors present SI Embeddings (SIE), an SI model achieving state-of-the-art results on three benchmarks including a large-scale test set. They show previous SOTA trained on artificial pairs generalizes only partially to real pairs, and provide the first fully supervised training recipe for real-world SI.</div>
+      <div class="tags"><span class="tag">Music</span><span class="tag">Sample Identification</span><span class="tag">Embedding</span><span class="tag">SOTA</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.21911" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.21911" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.21676" target="_blank">The Spoken Wikipedia Presentation Corpus</a></h4>
+      <div class="meta"><span>📅 2026-09-18</span><span>👥 Thomas Ranzenberger, Steffen Freisinger, Tobias Bocklet, Korbinian Riedhammer</span></div>
+      <div class="abstract">Presents the Spoken Wikipedia Presentation Corpus, an extension of the Spoken Wikipedia Corpora featuring LLM-generated slide decks for multimodal ASR. Slides are created from LLM-segmented sections via a hybrid pipeline combining LLM content planning with rule-based design. The best model achieves an average micro-WER of 10.23% and micro-CER of 6.48% on audio-only inputs, with English the lowest-error language. Multimodal zero-shot prompting of omni models remains challenging, but aligned slide/text/audio data shows strong potential to improve recognition through cross-modal context.</div>
+      <div class="tags"><span class="tag">Dataset</span><span class="tag">Multimodal ASR</span><span class="tag">Corpus</span><span class="tag">ASR</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.21676" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.21676" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.21392" target="_blank">Omni Demand Understanding: A Benchmark for Contextual User-Intent Inference in Multimodal Interaction</a></h4>
+      <div class="meta"><span>📅 2026-09-18</span><span>👥 Qi Chen, Yunfei Chu, Haolin He, Yifan Yang, Zihan Liu, Yuxuan Wang, Ziyang Ma, Ruiyang Xu, Meng Gao, Yinsong Yan, Ling Wang, Hui Wang, Wen Huang, Yiheng Chen, Guanrou Yang, Qiuqiang Kong, Jin Xu, Xie Chen</span></div>
+      <div class="abstract">Establishes Omni Demand Understanding (ODU) as a multimodal contextual inference problem: given an interaction stream, a model must detect whether a user demand is present and infer intent from multimodal and conversational context. Constructs ODU-Bench via challenge-driven taxonomy and agentic video generation with human verification, evaluating 14 native MLLMs. Even the strongest, Gemini 3.1 Pro, recovers only 44.7% of key contextual information, and 11 of 14 models show false-trigger rates above 50% on non-demand scenarios, revealing a systematic capability gap.</div>
+      <div class="tags"><span class="tag">Multimodal</span><span class="tag">Benchmark</span><span class="tag">Intent Inference</span><span class="tag">MLLM</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.21392" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.21392" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.20463" target="_blank">Beyond the Stability--Plasticity Frontier in Streaming Target Speaker Extraction</a></h4>
+      <div class="meta"><span>📅 2026-09-17</span><span>👥 Yuesheng Ma, Linyang He, Nima Mesgarani</span></div>
+      <div class="abstract">Investigates the stability-plasticity trade-off in streaming target speaker extraction, addressing how models can continuously adapt to new speakers without forgetting previously learned ones. The work advances continual learning for speaker extraction in streaming scenarios.</div>
+      <div class="tags"><span class="tag">Target Speaker Extraction</span><span class="tag">Streaming</span><span class="tag">Continual Learning</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.20463" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.20463" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.20121" target="_blank">Alignment-Path Distillation from Non-streaming ASR-LLMs for Streaming Speech Recognition</a></h4>
+      <div class="meta"><span>📅 2026-09-17</span><span>👥 Yan Jia, Kai Huang, Junjie Chen, Feng-Long Xie, Xu Tang, Yao Hu</span></div>
+      <div class="abstract">Proposes alignment-path distillation from non-streaming ASR-LLMs to enable streaming speech recognition, transferring the quality of large non-streaming ASR-LLMs into streaming settings while maintaining low-latency operation.</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Streaming</span><span class="tag">Knowledge Distillation</span><span class="tag">LLM</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.20121" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.20121" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.20124" target="_blank">Multi-Dimensional Prosody Judgment For Live Streaming Speech Synthesis</a></h4>
+      <div class="meta"><span>📅 2026-09-17</span><span>👥 Zifan Guan, Longyu Lu, Junan Zhang, Zhizheng Wu, Meiguang Jin, Junfeng Ma</span></div>
+      <div class="abstract">Addresses prosody judgment across multiple dimensions for live streaming speech synthesis, improving naturalness and expressiveness of real-time TTS output in live-streaming scenarios.</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Prosody</span><span class="tag">Streaming</span><span class="tag">Speech Synthesis</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.20124" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.20124" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.19856" target="_blank">Foreground Voice Activity Detection: Learning Speaker Selectivity from Supervision</a></h4>
+      <div class="meta"><span>📅 2026-09-17</span><span>👥 Guangzhao Yang, Muhammad Huzaifah, Yu Pan, Jinya Sakurai, Ningjie Bai</span></div>
+      <div class="abstract">Proposes foreground voice activity detection (VAD) that learns speaker selectivity from supervision, distinguishing target-speaker activity from background speech and noise for improved voice interface robustness.</div>
+      <div class="tags"><span class="tag">VAD</span><span class="tag">Voice Activity Detection</span><span class="tag">Speaker Selectivity</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.19856" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.19856" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.19818" target="_blank">CoReLoop: Parameter-Efficient Controlled Recurrent Refinement for Audio Deepfake Detection</a></h4>
+      <div class="meta"><span>📅 2026-09-17</span><span>👥 Kunyu Feng, Yuxiang Wang, Li Wang, Wan Lin, Zhizheng Wu</span></div>
+      <div class="abstract">Proposes CoReLoop, a parameter-efficient controlled recurrent refinement method for audio deepfake detection, enabling iterative refinement with minimal additional parameters to improve detection robustness across diverse spoofing attacks.</div>
+      <div class="tags"><span class="tag">Audio Deepfake</span><span class="tag">Detection</span><span class="tag">Parameter-Efficient</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.19818" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.19818" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.18856" target="_blank">GrainSpeech: Less Context, More Detail for Compact Speech Synthesis</a></h4>
+      <div class="meta"><span>📅 2026-09-16</span><span>👥 Authors</span></div>
+      <div class="abstract">Proposes GrainSpeech, a compact speech synthesis approach that trades long context for fine-grained detail, improving detail reproduction in compact TTS models.</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Compact Model</span><span class="tag">Speech Synthesis</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.18856" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.18856" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>Google 发布 Gemini 3.8 Audio（Live / Live Extended Thinking）语音模型</h4>
+      <p>Google 面向开发者发布新一代 Gemini 3.8 Audio 系列（Live、Live Extended Thinking），通过 Gemini API 和 AI Studio 提供近乎实时的语音推理与对话能力，并发布模型卡；主打解决语音 AI 智能体长延迟问题，支持实时语音交互应用构建（发布时间约 2026-09-15，最近一周内）。 <a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>阶跃星辰发布 StepAudio 3 系列语音大模型（Realtime/ASR/TTS/Gen/Music）</h4>
+      <p>阶跃星辰发布 StepAudio 3 系列，一次推出 Realtime、ASR、TTS、Gen、Music 五款模型，覆盖实时语音交互、语音识别、真人级语音生成与音乐创作。StepAudio 3 Realtime 在 Artificial Analysis Conversational Dynamics 榜单以 98.9% 综合得分排名全球第一（发布时间 2026-09-15）。 <a href="https://www.ithome.com/1/002/602.htm" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>科大讯飞发布 Spark-Audio-1.0-Preview 全国产语音基座大模型</h4>
+      <p>科大讯飞基于全国产化算力发布语音基座大模型 Spark-Audio-1.0-Preview，支持文本与语音双模态输入，覆盖语音转写、多语言翻译、多方言识别、环境音识别、说话人识别、情感分析与音频问答，实现从「听清」到「听懂」的跃升（发布时间 2026-09-16）。 <a href="https://finance.sina.com.cn/tech/roll/2026-09-16/doc-inirzmzc0516800.shtml" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-09-21') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
