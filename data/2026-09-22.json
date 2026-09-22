@@ -1,0 +1,112 @@
+{
+  "papers": [
+    {
+      "title": "COT-TTS: Audio Context-Aware Text-to-Speech with Chain-of-Thought Reasoning",
+      "url": "https://arxiv.org/abs/2609.22697",
+      "date": "2026-09-19",
+      "authors": "Weizhen Bian, Sitong Cheng, Rongxiu Zhong, Jiahao Pan, Liumeng Xue, Boyi Kang, Shilei Zhang, Jinglei Liu, Yue Wang, Junlan Feng, Bei Liu, Wei Xue",
+      "abstract": "提出 COT-TTS，一个上下文感知、基于推理的语音合成任务：给定历史对话音频、目标文本与参考语音，系统先理解对话上下文、推断出显式的中间推理（带情绪标签的转写与可编辑的语音风格推断），再合成指定音色的目标语音，使说话风格从对话前文自然推演而来而非依赖明确指令。作者构建了含 900 万训练样本的大规模双语对话语音数据集（含 100 万高质量子集）与 800 条人工校验的来源不重叠评测集，开发了 0.6B/1.7B 参数的端到端自回归模型，在时长一致性与情绪一致性上表现优异，以远少参数达到与大规模基线相当的性能，并将开源数据构建管线、数据集与模型。",
+      "tags": ["TTS", "Context-Aware", "Chain-of-Thought", "Conversational"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.22697"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.22697"}, {"label": "Demo", "url": "https://luckybian.github.io/COT-TTS"}]
+    },
+    {
+      "title": "ParA-LLM: A Unified Approach to Paralinguistic and Acoustic Speech Understanding",
+      "url": "https://arxiv.org/abs/2609.22771",
+      "date": "2026-09-19",
+      "authors": "Nishit Anand, Jiaqi Su, Ke Chen, Yunyun Wang, Dinesh Manocha, Ramani Duraiswami, Rithesh Kumar, Zeyu Jin",
+      "abstract": "现有 Audio LLM 已实现人类级语音识别，却难以捕捉副语言（说话人特征、表达变化、环境声学条件）。作者设计 22 项副语言特征框架，构建超 120 万条 Audio-QA 数据，提出 ParA-LLM，采用两阶段课程训练（先单属性问题、再多属性联合推理），并发布 6000 道多选评测集 ParA-Bench（前沿模型 GPT-4o-Audio 仅 36% 准确率）。ParA-LLM 在 ParA-Bench 上超越 GPT-4o-Audio 达 7.5%，在 MMAU-Pro Speech 与 MMAR Speech 上分别再提升 1.13% 与 7.49%。",
+      "tags": ["Paralinguistic", "Audio LLM", "Benchmark", "Speech Understanding"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.22771"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.22771"}]
+    },
+    {
+      "title": "Discrete vs. Continuous: A Comprehensive Study of Unified Audio Understanding in LALMs",
+      "url": "https://arxiv.org/abs/2609.22851",
+      "date": "2026-09-19",
+      "authors": "Jing Peng, Zichao Nie, Zhisheng Zhang, Jingran Xie, Zhiyong Wu",
+      "abstract": "大型音频语言模型（LALM）采用连续特征或离散 token，哪种表征对通用音频理解更优尚无定论。作者借助 UniARC 框架、在 SmolLM2-135M 到 Llama-3-8B 多尺度模型上系统评估连续与离散表征在语音、声音、音乐上的表现。结果表明：tokenization 中的语义约束对音频理解起关键作用，扩大骨干模型无法弥补音频表征的信息损失（尤其在数据受限任务中），为未来 LALM 平衡语义密度、保真度与效率提供实用指导。",
+      "tags": ["Audio Language Model", "Representation", "Tokenization", "INTERSPEECH 2026"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.22851"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.22851"}]
+    },
+    {
+      "title": "Speech Language Models for Full-Meeting Speaker Diarization: Capabilities and Limitations",
+      "url": "https://arxiv.org/abs/2609.23114",
+      "date": "2026-09-19",
+      "authors": "Jialu Li, Jinchuan Tian, Shinji Watanabe",
+      "abstract": "现有 SpeechLM 说话人日志（SD）方法与 ASR 强耦合、用词级指标评估，难以独立审视 SD 能力。作者以 ESPnet-SpeechLM 为 token 骨干，将 SD 建模为基于声学输入的结构化 token 自回归生成，系统比较事件式（显式建模说话人起止时间戳）与帧式表征，并引入语音活动检测、重叠语音检测、说话人轮次计数等辅助任务。实验发现事件式表征输出更稳定一致；SpeechLM 能编码有用的时序结构，但整场会议 SD 仍受限于记录级说话人追踪与重叠遗漏，显式说话人链接后处理可显著降低混淆（已接收 IEEE SLT 2026）。",
+      "tags": ["Speaker Diarization", "SpeechLM", "SLT 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.23114"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.23114"}]
+    },
+    {
+      "title": "Adaptive Depth and Expert Refinement for Efficient Speech Enhancement",
+      "url": "https://arxiv.org/abs/2609.22824",
+      "date": "2026-09-19",
+      "authors": "Xikun Lu, Yujian Ma, Yunda Chen, Xianquan Jiang, Jinqiu Sang",
+      "abstract": "多数神经语音增强系统对所有输入采用固定处理深度，引入不必要计算。作者提出 ADER，一个参数共享、按输入动态计算的渐进式增强框架，结合自适应深度控制器（ADC，硬提前终止）、条件专家路由器（CER，每次迭代选一个轻量残差适配器）与退出感知中间监督（EIS）。在 VCTK-DEMAND 上，ADER 使 MP-SENet 参数量与平均计算量分别降低 70.4% 与 51.3%，仍达 3.37 WB-PESQ。",
+      "tags": ["Speech Enhancement", "Efficient", "Adaptive Computation"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.22824"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.22824"}]
+    },
+    {
+      "title": "Bearings: Self-Supervised Soundfield Embeddings from First-Order Ambisonics",
+      "url": "https://arxiv.org/abs/2609.23152",
+      "date": "2026-09-19",
+      "authors": "Goksenin Yuksel, Marcel van Gerven, Kiki van der Heijden",
+      "abstract": "现有自监督音频编码器学到强大的通用声场景表征，却缺乏空间信息。作者提出 Bearings，从无标签一阶 Ambisonics 中学习声场嵌入的自监督框架，通过掩码自编码器配合以冻结单通道声学嵌入为条件的解码器预训练。所得声场嵌入可作为可复用流，用轻量可训练融合头接入冻结的声学编码器。在声音事件定位与检测上，拼接声场嵌入与声学表征可提供缺失的空间信息、实现联合检测与定位，使 TAU-NIGENS 2021 的定位相关 F-score 从不足 4 提升至 50、STARSS23 达 39，是首个无需重训即可嵌入冻结声学编码器的自监督声场编码器。",
+      "tags": ["Soundfield", "Self-Supervised", "Ambisonics", "SELD"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.23152"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.23152"}]
+    },
+    {
+      "title": "EquiSELD: Efficient training of equivariant sound event localization and detection networks",
+      "url": "https://arxiv.org/abs/2609.23156",
+      "date": "2026-09-19",
+      "authors": "Goksenin Yuksel, Marcel van Gerven, Kiki van der Heijden",
+      "abstract": "一阶 Ambisonics（FOA）信号具备精确 O(3) 对称性，但现有 SELD 系统要么仅通过旋转增强近似该对称性、要么用高开销方法集成等变性，且过去只关注 SO(3) 等变。作者开发 EquiSELD，一个等变注意力网络，将 FOA 处理为 O(3) 不变标量与等变强度向量的配对流，输出不变活动幅值与等变 DOA（Multi-ACCDOA）。EquiSELD 在训练成本大幅降低的前提下，于模拟（实测 RIR）与真实声场景上同时超越既有等变网络与非等变网络。",
+      "tags": ["SELD", "Equivariance", "Ambisonics"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.23156"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.23156"}]
+    },
+    {
+      "title": "If You Hear It, Help Find It: Orthogonal Knowledge Distillation for Open-Vocabulary Audio-Visual Event Localization",
+      "url": "https://arxiv.org/abs/2609.23376",
+      "date": "2026-09-20",
+      "authors": "Yi Xu, Cheng Chen, Wenzhuo Lei",
+      "abstract": "开放词汇音视频事件定位（OV-AVEL）根据文本查询在时间上定位视频、音频与语言中的事件。不同监督源的时序边界可靠性不同（在 OV-AVEBench 上视觉教师比音频教师提供更可靠的边界线索）。作者把该挑战建模为「监督放置」问题，提出 OV-OrthKD 可靠性感知非对称蒸馏框架：视觉特征迁移塑造决策对齐表征，音频特征迁移丰富互补辅助子空间，文本原型锚定见未见类别语义，正交损失限制两个教师投影间方向重叠。在 OV-AVEBench 上达 0.816 segment AP，F1@0.5 较官方微调基线整体提升 2.7 点、未见类别提升 3.4 点（ACMM 2026）。",
+      "tags": ["Audio-Visual", "Event Localization", "Knowledge Distillation"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.23376"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.23376"}]
+    },
+    {
+      "title": "Low-Rank Frequency Convolution and Noise-Range Augmentation for Real-Time Pitch Estimation on Edge Devices",
+      "url": "https://arxiv.org/abs/2609.23340",
+      "date": "2026-09-20",
+      "authors": "Venkat Suprabath Bitra, Homayoon Beigi",
+      "abstract": "边缘设备上的音高估计同时受三重约束：模型要小、噪声下要准、单帧须在帧周期内产出。作者将早期工作的频率卷积网络（FrCN）分解为低秩形式，参数量从 17,787 降至 11,397（降 35.9%）且精度不降；训练噪声范围对严重干扰下的行为影响远大于架构变化。并部署一个仅 83 kB 磁盘、仅依赖 libc/libm 的 C 内核，在四款 CPU 上均快于 OpenBLAS、比 ONNX Runtime 快 3.8 倍、比 PyTorch 快 13 倍，输出与 PyTorch 在 271,893 帧验证结果完全一致。",
+      "tags": ["Pitch Estimation", "Edge AI", "Low-Rank", "Real-Time"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.23340"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.23340"}]
+    },
+    {
+      "title": "Signal-Informed Temporal Routing for Vinyl Defect Regime Detection",
+      "url": "https://arxiv.org/abs/2609.23164",
+      "date": "2026-09-19",
+      "authors": "Yi-Hung Kan, Homayoon Beigi",
+      "abstract": "黑胶修复系统须在修复前区分孤立喀哒声、短促爆点、密集噼啪与重叠损伤。作者提出轻量两级检测器，由信号引导的稀疏/突发/密集专家生成互补缺陷证据，时序后端将其转化为稳定修复区间，采用分层五类决策与验证选定的转移惩罚。在 597 段 15s 合成基准上达 0.730 五类宏 F1，相较逐帧路由基线提升 0.043（配对 bootstrap p=0.001）。",
+      "tags": ["Audio Restoration", "Vinyl", "Detection"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2609.23164"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2609.23164"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "阿里千问发布同声传译大模型 Qwen3.8-LiveTranslate：字均延迟降至 2.3 秒",
+      "url": "https://www.sohu.com/a/1078216740_122066679",
+      "summary": "2026-09-19，千问发布全球首个面向专业会议场景重构的同声传译大模型 Qwen3.8-LiveTranslate，采用 Interleave（交织式）架构，将语音识别、语义理解、跨语言生成、韵律控制四大模块在毫秒级动态协同，字均延迟（LAAL）从上一代 2.8 秒压至 2.3 秒。联合国大会中文场次口语化转译准确率达 94.7%（行业平均 86.2%），填充语过滤率 99.3%，并强调 AI 与人类译员协同而非替代。"
+    }
+  ],
+  "note": "当前日期 2026-09-22（周二）。严格 24 小时窗口（09-21 09:30 至今）内 arXiv 无新的 eess.AS/cs.SD 提交（周日/周一为提交低谷），故本期按补录规则收录上一份报告（09-21，覆盖 09-18）遗漏的 09-19（周五）与 09-20（周六）批次论文共 10 篇。新闻方面最近 24 小时无重大音频 AI 产品发布，收录 09-19 发布的千问同声传译大模型 Qwen3.8-LiveTranslate 作为近期（约 3 天前）最值得关注的语音产品动态，特此标注。"
+}
