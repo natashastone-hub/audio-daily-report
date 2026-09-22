@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-09-22-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-09-22-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年9月22日 (周二) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">14</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.24771" target="_blank">CycleSpeech: Reciprocal Alignment for Instruction-Controlled Speech Synthesis and Paralinginguistic Understanding</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-21</span><span>👥 Huan Liao, Haonan Han, Xingwen Han, Dekun Chen, Yuancheng Wang, Zhizheng Wu</span></div>
+      <div class="abstract">指令控制的语音合成与副语言理解通常独立训练，双向反馈被忽视。本文提出 CycleSpeech，通过共享的结构化语音画像（voice profile）将生成与理解连接起来：前向循环评估合成语音是否表达了目标属性（对比恢复画像与目标画像），后向循环评估从真实语音推断的画像能否引导重建源说话风格。作者构建了 20,046 条配对指令-目标语音-说话人参考-结构化画像的双语数据集，并设计 CycleGRPO 交替策略更新，用画像一致性与说话风格重建的互惠奖励替代人类偏好标注。在 Step-Audio-2-mini 基础上，中英文指令匹配准确率分别提升 4.50 与 10.06 个百分点，同时保持合成质量。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Instruction-Following</span><span class="tag">Paralinguistic</span><span class="tag">RL</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.24771" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.24771" target="_blank">🔗 PDF</a> <a href="https://cyclespeech.github.io" target="_blank">🔗 Demo</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.24163" target="_blank">Listen, Critique, and Refine: RL-Based Self-Refinement for Instruction-Following Speech Synthesis</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-21</span><span>👥 Chee-En Yu, Yi-Cheng Lin, Sung-Feng Huang, Yun-Shao Tsai, Ho-Lam Chung, Xuanjun Chen, et al.</span></div>
+      <div class="abstract">大型音频语言模型（LALM）能遵循多样指令合成指定风格语音，但要求同时控制音高动态、语速与情绪语调的复杂指令往往超出单次生成的忠实实现能力。近期的推理模型虽已证明中间「思考」token 能提升输出质量，但该范式一直局限于文本模态。本文首次将推理延展到音频 token 空间：用强化学习训练 LALM 对其自身语音输出进行推理，实现「先听、再批评、后精炼」的自我修正机制，显著提升复杂指令下的语音合成质量。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">LALM</span><span class="tag">Reinforcement Learning</span><span class="tag">Self-Refinement</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.24163" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.24163" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.24267" target="_blank">StreamTN: A Low-Latency Streaming Chinese Text Normalization Model for Streaming TTS in Dialogue Systems</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-21</span><span>👥 Wenhao Li, Jinrui Liang, Haoyu Zhang, Jingbin Hu, Xiaming Ren, Hanke Xie, et al.</span></div>
+      <div class="abstract">以 LLM 为核心的口语对话系统中，TTS 前的文本规范化（TN）必须在实时场景维持极低延迟。现有 TN 方案多为规则驱动、依赖手工工程、泛化差，而用 LLM 通过 prompt 做 TN 又面临非流式首 token 延迟高、幻觉风险等问题。作者提出 StreamTN，一个基于 Qwen3-0.6B 的轻量中文流式 TN 模型，采用双轨流式框架并行处理输入与输出 token，实现低延迟实时推理，且任务特化微调带来优于规则系统与通用 LLM 的准确率与更低幻觉。同时引入覆盖多样文本场景的 TN 基准（IEEE SLT 2026）。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Text Normalization</span><span class="tag">Streaming</span><span class="tag">Dialogue System</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.24267" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.24267" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.24310" target="_blank">Morpho-VITS: Variational Inference with Morphological Modeling for End-to-End Speech Synthesis of a Tonal Bantu Language</a></h4>
+      <div class="meta"><span>📅 2026-09-21</span><span>👥 Antoine Nzeyimana</span></div>
+      <div class="abstract">班图语系声调语言的 TTS 面临声调同时根植于词汇（词干、词缀）与语法（形态句法）的双重挑战，且书写系统常省略声调标记与时长信息。作者提出端到端 TTS 模型，用形态句法先验增强文本编码：将 VITS 中的音素编码器替换为「词素序列编码器 + 音素到词素注意力网络」。实验在声调复杂、形态丰富的 Kinyarwanda（卢旺达语）上进行，显示该形态建模显著提升合成语音的自然度、语调与可懂度。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Morphology</span><span class="tag">Tonal Language</span><span class="tag">Low-Resource</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.24310" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.24310" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.23979" target="_blank">AURA: Uncertainty-Routed Activation Editing for Acoustic Grounding in Speech Foundation Models</a></h4>
+      <div class="meta"><span>📅 2026-09-21</span><span>👥 Natarajan Balaji Shankar, Zilai Wang, Zihan Wang, Mohan Shi, Kaiyuan Zhang, Abeer Alwan</span></div>
+      <div class="abstract">注意力编码器-解码器（AED）语音基础模型在无语音输入、弱声学证据或不可靠转写时，可能生成声学上无依据的文本（幻觉）。作者提出 AURA：一种不确定度路由的激活编辑方法，冻结预训练模型、对解码器交叉注意力头施加稀疏的 scale-and-shift 编辑，并利用交叉注意力不确定度特征（捕捉注意力过度集中、扩散与帧突变）动态路由编辑，实现超高效率的声学接地校正，抑制幻觉。</div>
+      <div class="tags"><span class="tag">Speech Foundation Model</span><span class="tag">Hallucination</span><span class="tag">ASR</span><span class="tag">Activation Editing</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.23979" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.23979" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.24138" target="_blank">P2Flow: Phoneme-aware Progressive Flow Matching for Extreme Speech Super-Resolution</a></h4>
+      <div class="meta"><span>📅 2026-09-21</span><span>👥 Ningyuan Yang, Yize Li, Pu Zhao, Diego A. Cuji, Kanad Sarkar, Ryan M. Corey</span></div>
+      <div class="abstract">语音超分辨率（SSR）的生成模型研究多集中于标准配置，极端谱输入受限的场景仍待探索且现有方法性能显著下降。作者提出 P2Flow，一个音素感知的渐进流匹配（Flow Matching）框架，专为极端 SSR 设计，利用音素信息引导高频细节重建，在频谱严重受限的输入下仍能恢复清晰语音，填补该子领域的空白。</div>
+      <div class="tags"><span class="tag">Speech Super-Resolution</span><span class="tag">Flow Matching</span><span class="tag">Phoneme-aware</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.24138" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.24138" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.24688" target="_blank">Understanding Hyperspherical Geometry of ECAPA-TDNN Embedding and Its Impact on Zero-Shot Voice Conversion</a></h4>
+      <div class="meta"><span>📅 2026-09-21</span><span>👥 Mathilde Abrassart, Nicolas Obin, Axel Roebel</span></div>
+      <div class="abstract">角度间隔说话人编码器广泛用于声音转换，但其分类器原型在单位超球面上的几何结构尚不清楚。作者将 ECAPA-TDNN 分类器原型视作超球面上的点，用旋转不变角度统计与全局/局部有效维度度量分析其组织，发现标准训练会导致角度集中与有效维度大幅下降。作者提出两种几何正则化策略（hinged Riesz log-energy 与有效维度最大化）促进更均匀的超球覆盖，得到的原型集有效维度更高、各向同性更好。当对应模型作为 Fast-VGAN 的说话人编码器时，正则化系统在零样本声音转换中表现出更强鲁棒性，尤其是对未见说话人。</div>
+      <div class="tags"><span class="tag">Voice Conversion</span><span class="tag">Speaker Embedding</span><span class="tag">ECAPA-TDNN</span><span class="tag">Geometry</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.24688" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.24688" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.24770" target="_blank">XSQ-AST: An Explainable Audio Spectrogram Transformer Framework for Localising Synthetic Speech Artifacts</a></h4>
+      <div class="meta"><span>📅 2026-09-21</span><span>👥 Ben Heritage, Luca Resti, Mónica Villanueva Aylagas, Timothy Mehlenbacher, Konrad Tollmar, James Alfred Walker</span></div>
+      <div class="abstract">定位合成语音中的伪影仍具挑战，多数评估方法只给出全局质量分。本文提出 XSQ-AST 框架，将 SQ-AST 语音质量模型、WhisperX 音素对齐与多种显著性方法相结合，无需重训即可生成时间定位的伪影诊断。显著性图通过核密度估计投影到连续分布、通过音素离散化映射到音素边界。40 人听测在五个感知维度上验证了框架，注意力 Rollout、Attention Flow 与改良 GradCAM 生成的时间分布与听众高亮相关，AUC-ROC 分析确认判别力高于随机（投稿 ICASSP 2027）。</div>
+      <div class="tags"><span class="tag">Synthetic Speech</span><span class="tag">Artifact Localization</span><span class="tag">Explainability</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.24770" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.24770" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.24061" target="_blank">MECT: Mixture of Experts with CNN-Transformer Network for Speaker Verification</a></h4>
+      <div class="meta"><span>📅 2026-09-21</span><span>👥 Yu Zheng, Jinghan Peng, ChangHao Zhang, Jian Liu, Weiqiang Wang</span></div>
+      <div class="abstract">作者提出 MECT，一个将混合专家（MoE）机制集成到 CNN-Transformer 骨干的说话人验证模型，优化了块结构与堆叠方案。系统研究四种 MoE 变体，覆盖话语级与帧级粒度、稠密与稀疏路由。MoE 机制仅以少量参数增加即超越无 MoE 基线，并可扩展为系列模型尺寸，其中 MECT-B2 在保持紧凑参数与低计算复杂度的同时取得有竞争力的性能。</div>
+      <div class="tags"><span class="tag">Speaker Verification</span><span class="tag">Mixture of Experts</span><span class="tag">CNN-Transformer</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.24061" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.24061" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.24046" target="_blank">ART-NAD: An Articulatory Inversion-based Neural Acoustic Distance for Pathological Speech Intelligibility Assessment</a></h4>
+      <div class="meta"><span>📅 2026-09-21</span><span>👥 Bence Mark Halpern, Thomas Tienkamp, Defne Abur, Tomoki Toda</span></div>
+      <div class="abstract">面向言语病理的评测工具须准确且可解释。现有参考音频度量（如神经声学距离 NAD）在说话人级别与听者可懂度分数高度相关，但基于自监督特征、仅提供帧级解释、难以解读。作者提出 ART-NAD，用由声学逆推预测的声道收缩变量（tract variables, TVs）替代 NAD 中的 wav2vec2 特征，得到更可解释、面向临床的可懂度自动评估指标。</div>
+      <div class="tags"><span class="tag">Pathological Speech</span><span class="tag">Intelligibility</span><span class="tag">Articulatory Inversion</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.24046" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.24046" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.24818" target="_blank">Automated Assessment of L2 Speech Rhythm Using Low-Frequency Amplitude Modulations</a></h4>
+      <div class="meta"><span>📅 2026-09-21</span><span>👥 João Lima, Lucas Ueda, Paula Costa</span></div>
+      <div class="abstract">非母语语音的自动口语评估须有效评价韵律（含语音节奏）。常用节奏度量依赖音段时长、需额外对齐步骤，在含不流利与错读的非母语语音中易出错。作者提出基于声学的评估方法，用卷积神经网络直接从语音幅度包络提取节奏特征（低频调制与节奏感知相关），在 speechocean762 上以熟练度回归任务训练。结果显示，使用幅度包络一阶导数的模型在流利度与韵律维度上与人工评分相关度最高，尤其在不太流利的说话人中误差显著低于基于时长的模型（IEEE SLT 2026）。</div>
+      <div class="tags"><span class="tag">Speaking Assessment</span><span class="tag">Prosody</span><span class="tag">Rhythm</span><span class="tag">SLT 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.24818" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.24818" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.24218" target="_blank">Audio-based UAV Localization with Adaptive Temporal Correspondence via Reinforcement Learning</a></h4>
+      <div class="meta"><span>📅 2026-09-21</span><span>👥 Haoxiang Lei, Mingzheng Feng, Daotong Wang, Shenghai Yuan</span></div>
+      <div class="abstract">基于音频的定位为反无人机预警提供低成本、不依赖光照的感知方案，但现有方法依赖预设固定音频段长度，限制时间对应、在充分声学证据与及时定位间权衡。作者提出自适应时间对应的音频定位框架：先用探针段提取紧凑声学状态表征观测可靠性，再由强化学习控制器动态决定每一定位决策所需音频窗口，随后用带自适应时间特征调制的 Mamba 网络估计 3D 位置，在显著降低时间对应延迟的同时保持有竞争力的精度，且跨场景泛化强。</div>
+      <div class="tags"><span class="tag">Audio Localization</span><span class="tag">UAV</span><span class="tag">Reinforcement Learning</span><span class="tag">Mamba</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.24218" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.24218" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.24809" target="_blank">Fast Time-Varying Exponentiated Convolution Methods for Generative Direction Dependent Reverberation</a></h4>
+      <div class="meta"><span>📅 2026-09-21</span><span>👥 Yuancheng Luo</span></div>
+      <div class="abstract">球谐编码声场可捕捉房间脉冲响应的方向特性，利于精确空间音频再现，但多麦克风测量与数值仿真的高成本催生了数据集增强与合成数据生成方法。本文引入时变指数卷积方法，将高斯噪声与脉冲响应分别转化为混响与改进的频谱衰减场，并推导两种递归快速卷积算法扩展到球谐域，以非平稳高斯过程建模平滑混响时间分布，实现最优滤波器设计（AES Convention Nashville 2027）。</div>
+      <div class="tags"><span class="tag">Spatial Audio</span><span class="tag">Reverberation</span><span class="tag">Ambisonics</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.24809" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.24809" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.24073" target="_blank">The design of an optomechanical microphone using a photonic waveguide interferometer</a></h4>
+      <div class="meta"><span>📅 2026-09-21</span><span>👥 Xiaoyu Niu, Yuqi Meng, Zihuan Liu, Ehsan Vatankhah, Neal Hall</span></div>
+      <div class="abstract">作者提出一种基于振膜集成光子波导马赫-曾德尔干涉仪的光机械麦克风。声压使 MEMS 振膜形变、在传感波导中引入应变并改变其光程。作者解析评估光学与机械换能机制及信噪比、动态范围、声学过载压力、最小可检测压力等关键指标，考虑 MEMS 麦克风与测量麦克风两种设计，结果表明性能有竞争力。</div>
+      <div class="tags"><span class="tag">Microphone</span><span class="tag">Optomechanical</span><span class="tag">MEMS</span><span class="tag">Acoustic Sensing</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.24073" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.24073" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>阿里云栖大会发布 Qwen-Audio-3.1 语音模型家族升级：ASR-Next / TTS-Next / Realtime 三系列亮相，同传模型 Qwen3.8-LiveTranslate 首次现身</h4>
+      <p>2026-09-22 上午，阿里巴巴在云栖大会上宣布语音模型家族 Qwen-Audio-3.1 全新升级，涵盖语音转写（ASR）、语音合成（TTS）与实时语音交互（Realtime）三大系列。基于下代架构的音频理解模型 Qwen-Audio-3.1-ASR-Next 全新发布，能理解人物情绪、音乐、环境声与机械声，完成声音描述、事件定位、音频问答与推理；音频创作模型 Qwen-Audio-3.1-TTS-Next 采用全新架构，可根据一段脚本直接生成融合对白与环境声的完整音频，提升有声书、影视剧与播客创作效率；Qwen-Audio-3.1-Realtime 实现边听、边想、边说，增强多语言交互、角色扮演与共情能力。同声传译模型 Qwen3.8-LiveTranslate 首次现身，将时延压缩至不到 2.5 秒（人类同传平均 4 秒以上），已接入千问 AI 眼镜、QwenNote A2、钉钉耳机等 AI 硬件。 <a href="https://www.toutiao.com/article/7688205938251072015/" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-09-22-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+{
+  "papers": [
+    {
+      "title": "CycleSpeech: Reciprocal Alignment for Instruction-Controlled Speech Synthesis and Paralinginguistic Understanding",
+      "url": "https://arxiv.org/abs/2609.24771",
+      "date": "2026-09-21",
+      "authors": "Huan Liao, Haonan Han, Xingwen Han, Dekun Chen, Yuancheng Wang, Zhizheng Wu",
+      "abstract": "指令控制的语音合成与副语言理解通常独立训练，双向反馈被忽视。本文提出 CycleSpeech，通过共享的结构化语音画像（voice profile）将生成与理解连接起来：前向循环评估合成语音是否表达了目标属性（对比恢复画像与目标画像），后向循环评估从真实语音推断的画像能否引导重建源说话风格。作者构建了 20,046 条配对指令-目标语音-说话人参考-结构化画像的双语数据集，并设计 CycleGRPO 交替策略更新，用画像一致性与说话风格重建的互惠奖励替代人类偏好标注。在 Step-Audio-2-mini 基础上，中英文指令匹配准确率分别提升 4.50 与 10.06 个百分点，同时保持合成质量。",
+      "tags": ["TTS", "Instruction-Following", "Paralinguistic", "RL"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.24771"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.24771"},
+        {"label": "Demo", "url": "https://cyclespeech.github.io"}
+      ]
+    },
+    {
+      "title": "Listen, Critique, and Refine: RL-Based Self-Refinement for Instruction-Following Speech Synthesis",
+      "url": "https://arxiv.org/abs/2609.24163",
+      "date": "2026-09-21",
+      "authors": "Chee-En Yu, Yi-Cheng Lin, Sung-Feng Huang, Yun-Shao Tsai, Ho-Lam Chung, Xuanjun Chen, et al.",
+      "abstract": "大型音频语言模型（LALM）能遵循多样指令合成指定风格语音，但要求同时控制音高动态、语速与情绪语调的复杂指令往往超出单次生成的忠实实现能力。近期的推理模型虽已证明中间「思考」token 能提升输出质量，但该范式一直局限于文本模态。本文首次将推理延展到音频 token 空间：用强化学习训练 LALM 对其自身语音输出进行推理，实现「先听、再批评、后精炼」的自我修正机制，显著提升复杂指令下的语音合成质量。",
+      "tags": ["TTS", "LALM", "Reinforcement Learning", "Self-Refinement"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.24163"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.24163"}
+      ]
+    },
+    {
+      "title": "StreamTN: A Low-Latency Streaming Chinese Text Normalization Model for Streaming TTS in Dialogue Systems",
+      "url": "https://arxiv.org/abs/2609.24267",
+      "date": "2026-09-21",
+      "authors": "Wenhao Li, Jinrui Liang, Haoyu Zhang, Jingbin Hu, Xiaming Ren, Hanke Xie, et al.",
+      "abstract": "以 LLM 为核心的口语对话系统中，TTS 前的文本规范化（TN）必须在实时场景维持极低延迟。现有 TN 方案多为规则驱动、依赖手工工程、泛化差，而用 LLM 通过 prompt 做 TN 又面临非流式首 token 延迟高、幻觉风险等问题。作者提出 StreamTN，一个基于 Qwen3-0.6B 的轻量中文流式 TN 模型，采用双轨流式框架并行处理输入与输出 token，实现低延迟实时推理，且任务特化微调带来优于规则系统与通用 LLM 的准确率与更低幻觉。同时引入覆盖多样文本场景的 TN 基准（IEEE SLT 2026）。",
+      "tags": ["TTS", "Text Normalization", "Streaming", "Dialogue System"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.24267"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.24267"}
+      ]
+    },
+    {
+      "title": "Morpho-VITS: Variational Inference with Morphological Modeling for End-to-End Speech Synthesis of a Tonal Bantu Language",
+      "url": "https://arxiv.org/abs/2609.24310",
+      "date": "2026-09-21",
+      "authors": "Antoine Nzeyimana",
+      "abstract": "班图语系声调语言的 TTS 面临声调同时根植于词汇（词干、词缀）与语法（形态句法）的双重挑战，且书写系统常省略声调标记与时长信息。作者提出端到端 TTS 模型，用形态句法先验增强文本编码：将 VITS 中的音素编码器替换为「词素序列编码器 + 音素到词素注意力网络」。实验在声调复杂、形态丰富的 Kinyarwanda（卢旺达语）上进行，显示该形态建模显著提升合成语音的自然度、语调与可懂度。",
+      "tags": ["TTS", "Morphology", "Tonal Language", "Low-Resource"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.24310"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.24310"}
+      ]
+    },
+    {
+      "title": "AURA: Uncertainty-Routed Activation Editing for Acoustic Grounding in Speech Foundation Models",
+      "url": "https://arxiv.org/abs/2609.23979",
+      "date": "2026-09-21",
+      "authors": "Natarajan Balaji Shankar, Zilai Wang, Zihan Wang, Mohan Shi, Kaiyuan Zhang, Abeer Alwan",
+      "abstract": "注意力编码器-解码器（AED）语音基础模型在无语音输入、弱声学证据或不可靠转写时，可能生成声学上无依据的文本（幻觉）。作者提出 AURA：一种不确定度路由的激活编辑方法，冻结预训练模型、对解码器交叉注意力头施加稀疏的 scale-and-shift 编辑，并利用交叉注意力不确定度特征（捕捉注意力过度集中、扩散与帧突变）动态路由编辑，实现超高效率的声学接地校正，抑制幻觉。",
+      "tags": ["Speech Foundation Model", "Hallucination", "ASR", "Activation Editing"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.23979"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.23979"}
+      ]
+    },
+    {
+      "title": "P2Flow: Phoneme-aware Progressive Flow Matching for Extreme Speech Super-Resolution",
+      "url": "https://arxiv.org/abs/2609.24138",
+      "date": "2026-09-21",
+      "authors": "Ningyuan Yang, Yize Li, Pu Zhao, Diego A. Cuji, Kanad Sarkar, Ryan M. Corey",
+      "abstract": "语音超分辨率（SSR）的生成模型研究多集中于标准配置，极端谱输入受限的场景仍待探索且现有方法性能显著下降。作者提出 P2Flow，一个音素感知的渐进流匹配（Flow Matching）框架，专为极端 SSR 设计，利用音素信息引导高频细节重建，在频谱严重受限的输入下仍能恢复清晰语音，填补该子领域的空白。",
+      "tags": ["Speech Super-Resolution", "Flow Matching", "Phoneme-aware"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.24138"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.24138"}
+      ]
+    },
+    {
+      "title": "Understanding Hyperspherical Geometry of ECAPA-TDNN Embedding and Its Impact on Zero-Shot Voice Conversion",
+      "url": "https://arxiv.org/abs/2609.24688",
+      "date": "2026-09-21",
+      "authors": "Mathilde Abrassart, Nicolas Obin, Axel Roebel",
+      "abstract": "角度间隔说话人编码器广泛用于声音转换，但其分类器原型在单位超球面上的几何结构尚不清楚。作者将 ECAPA-TDNN 分类器原型视作超球面上的点，用旋转不变角度统计与全局/局部有效维度度量分析其组织，发现标准训练会导致角度集中与有效维度大幅下降。作者提出两种几何正则化策略（hinged Riesz log-energy 与有效维度最大化）促进更均匀的超球覆盖，得到的原型集有效维度更高、各向同性更好。当对应模型作为 Fast-VGAN 的说话人编码器时，正则化系统在零样本声音转换中表现出更强鲁棒性，尤其是对未见说话人。",
+      "tags": ["Voice Conversion", "Speaker Embedding", "ECAPA-TDNN", "Geometry"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.24688"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.24688"}
+      ]
+    },
+    {
+      "title": "XSQ-AST: An Explainable Audio Spectrogram Transformer Framework for Localising Synthetic Speech Artifacts",
+      "url": "https://arxiv.org/abs/2609.24770",
+      "date": "2026-09-21",
+      "authors": "Ben Heritage, Luca Resti, Mónica Villanueva Aylagas, Timothy Mehlenbacher, Konrad Tollmar, James Alfred Walker",
+      "abstract": "定位合成语音中的伪影仍具挑战，多数评估方法只给出全局质量分。本文提出 XSQ-AST 框架，将 SQ-AST 语音质量模型、WhisperX 音素对齐与多种显著性方法相结合，无需重训即可生成时间定位的伪影诊断。显著性图通过核密度估计投影到连续分布、通过音素离散化映射到音素边界。40 人听测在五个感知维度上验证了框架，注意力 Rollout、Attention Flow 与改良 GradCAM 生成的时间分布与听众高亮相关，AUC-ROC 分析确认判别力高于随机（投稿 ICASSP 2027）。",
+      "tags": ["Synthetic Speech", "Artifact Localization", "Explainability"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.24770"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.24770"}
+      ]
+    },
+    {
+      "title": "MECT: Mixture of Experts with CNN-Transformer Network for Speaker Verification",
+      "url": "https://arxiv.org/abs/2609.24061",
+      "date": "2026-09-21",
+      "authors": "Yu Zheng, Jinghan Peng, ChangHao Zhang, Jian Liu, Weiqiang Wang",
+      "abstract": "作者提出 MECT，一个将混合专家（MoE）机制集成到 CNN-Transformer 骨干的说话人验证模型，优化了块结构与堆叠方案。系统研究四种 MoE 变体，覆盖话语级与帧级粒度、稠密与稀疏路由。MoE 机制仅以少量参数增加即超越无 MoE 基线，并可扩展为系列模型尺寸，其中 MECT-B2 在保持紧凑参数与低计算复杂度的同时取得有竞争力的性能。",
+      "tags": ["Speaker Verification", "Mixture of Experts", "CNN-Transformer"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.24061"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.24061"}
+      ]
+    },
+    {
+      "title": "ART-NAD: An Articulatory Inversion-based Neural Acoustic Distance for Pathological Speech Intelligibility Assessment",
+      "url": "https://arxiv.org/abs/2609.24046",
+      "date": "2026-09-21",
+      "authors": "Bence Mark Halpern, Thomas Tienkamp, Defne Abur, Tomoki Toda",
+      "abstract": "面向言语病理的评测工具须准确且可解释。现有参考音频度量（如神经声学距离 NAD）在说话人级别与听者可懂度分数高度相关，但基于自监督特征、仅提供帧级解释、难以解读。作者提出 ART-NAD，用由声学逆推预测的声道收缩变量（tract variables, TVs）替代 NAD 中的 wav2vec2 特征，得到更可解释、面向临床的可懂度自动评估指标。",
+      "tags": ["Pathological Speech", "Intelligibility", "Articulatory Inversion"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.24046"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.24046"}
+      ]
+    },
+    {
+      "title": "Automated Assessment of L2 Speech Rhythm Using Low-Frequency Amplitude Modulations",
+      "url": "https://arxiv.org/abs/2609.24818",
+      "date": "2026-09-21",
+      "authors": "João Lima, Lucas Ueda, Paula Costa",
+      "abstract": "非母语语音的自动口语评估须有效评价韵律（含语音节奏）。常用节奏度量依赖音段时长、需额外对齐步骤，在含不流利与错读的非母语语音中易出错。作者提出基于声学的评估方法，用卷积神经网络直接从语音幅度包络提取节奏特征（低频调制与节奏感知相关），在 speechocean762 上以熟练度回归任务训练。结果显示，使用幅度包络一阶导数的模型在流利度与韵律维度上与人工评分相关度最高，尤其在不太流利的说话人中误差显著低于基于时长的模型（IEEE SLT 2026）。",
+      "tags": ["Speaking Assessment", "Prosody", "Rhythm", "SLT 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.24818"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.24818"}
+      ]
+    },
+    {
+      "title": "Audio-based UAV Localization with Adaptive Temporal Correspondence via Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2609.24218",
+      "date": "2026-09-21",
+      "authors": "Haoxiang Lei, Mingzheng Feng, Daotong Wang, Shenghai Yuan",
+      "abstract": "基于音频的定位为反无人机预警提供低成本、不依赖光照的感知方案，但现有方法依赖预设固定音频段长度，限制时间对应、在充分声学证据与及时定位间权衡。作者提出自适应时间对应的音频定位框架：先用探针段提取紧凑声学状态表征观测可靠性，再由强化学习控制器动态决定每一定位决策所需音频窗口，随后用带自适应时间特征调制的 Mamba 网络估计 3D 位置，在显著降低时间对应延迟的同时保持有竞争力的精度，且跨场景泛化强。",
+      "tags": ["Audio Localization", "UAV", "Reinforcement Learning", "Mamba"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.24218"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.24218"}
+      ]
+    },
+    {
+      "title": "Fast Time-Varying Exponentiated Convolution Methods for Generative Direction Dependent Reverberation",
+      "url": "https://arxiv.org/abs/2609.24809",
+      "date": "2026-09-21",
+      "authors": "Yuancheng Luo",
+      "abstract": "球谐编码声场可捕捉房间脉冲响应的方向特性，利于精确空间音频再现，但多麦克风测量与数值仿真的高成本催生了数据集增强与合成数据生成方法。本文引入时变指数卷积方法，将高斯噪声与脉冲响应分别转化为混响与改进的频谱衰减场，并推导两种递归快速卷积算法扩展到球谐域，以非平稳高斯过程建模平滑混响时间分布，实现最优滤波器设计（AES Convention Nashville 2027）。",
+      "tags": ["Spatial Audio", "Reverberation", "Ambisonics"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.24809"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.24809"}
+      ]
+    },
+    {
+      "title": "The design of an optomechanical microphone using a photonic waveguide interferometer",
+      "url": "https://arxiv.org/abs/2609.24073",
+      "date": "2026-09-21",
+      "authors": "Xiaoyu Niu, Yuqi Meng, Zihuan Liu, Ehsan Vatankhah, Neal Hall",
+      "abstract": "作者提出一种基于振膜集成光子波导马赫-曾德尔干涉仪的光机械麦克风。声压使 MEMS 振膜形变、在传感波导中引入应变并改变其光程。作者解析评估光学与机械换能机制及信噪比、动态范围、声学过载压力、最小可检测压力等关键指标，考虑 MEMS 麦克风与测量麦克风两种设计，结果表明性能有竞争力。",
+      "tags": ["Microphone", "Optomechanical", "MEMS", "Acoustic Sensing"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.24073"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.24073"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "阿里云栖大会发布 Qwen-Audio-3.1 语音模型家族升级：ASR-Next / TTS-Next / Realtime 三系列亮相，同传模型 Qwen3.8-LiveTranslate 首次现身",
+      "url": "https://www.toutiao.com/article/7688205938251072015/",
+      "summary": "2026-09-22 上午，阿里巴巴在云栖大会上宣布语音模型家族 Qwen-Audio-3.1 全新升级，涵盖语音转写（ASR）、语音合成（TTS）与实时语音交互（Realtime）三大系列。基于下代架构的音频理解模型 Qwen-Audio-3.1-ASR-Next 全新发布，能理解人物情绪、音乐、环境声与机械声，完成声音描述、事件定位、音频问答与推理；音频创作模型 Qwen-Audio-3.1-TTS-Next 采用全新架构，可根据一段脚本直接生成融合对白与环境声的完整音频，提升有声书、影视剧与播客创作效率；Qwen-Audio-3.1-Realtime 实现边听、边想、边说，增强多语言交互、角色扮演与共情能力。同声传译模型 Qwen3.8-LiveTranslate 首次现身，将时延压缩至不到 2.5 秒（人类同传平均 4 秒以上），已接入千问 AI 眼镜、QwenNote A2、钉钉耳机等 AI 硬件。"
+    }
+  ],
+  "note": "当前日期 2026-09-22（周二）。严格「最近 6 小时」窗口（09-22 08:00–14:00 CST）内 arXiv 无新的 eess.AS/cs.SD 提交（今日首批提交尚未放出，最新提交为 09-22 00:07 CST，属昨晚批次）。故本期按补录规则收录早间报告（覆盖至 09-20）遗漏的 09-21（周一）批次论文共 14 篇，其中 TTS/语音合成相关 6 篇为重点。新闻方面，09-22 上午阿里云栖大会重磅发布 Qwen-Audio-3.1 语音模型家族升级与同传模型 Qwen3.8-LiveTranslate，为今日（6 小时内）唯一重大语音产品动态，作为头条收录。"
+}
