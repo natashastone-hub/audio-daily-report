@@ -1,0 +1,194 @@
+{
+  "papers": [
+    {
+      "title": "TTS-Guard: Black-Box Ownership Verification of Text-to-Speech Models via Adaptive Adversarial Speaker-Pair Fingerprints",
+      "url": "https://arxiv.org/abs/2609.23729",
+      "date": "2026-09-22",
+      "authors": "Xubin Yue, Zhenhua Xu, Zhebo Wang, Mengting Li, Zijie Zhou, Wenpeng Xing, et al.",
+      "abstract": "零样本 TTS 的成熟使高质量声音克隆变得普及，引发了对专有语音模型被未授权复制、微调和转售的担忧。但 TTS 的所有权验证仍是空白：语音是连续波形，其扰动容易被常规信号处理破坏，而人类听觉带来的感知预算远小于视觉。本文提出 TTS-Guard，一个基于对抗性说话人对指纹的黑盒 TTS 所有权验证框架：(i) 在对偶嵌入空间选取关键说话人对实现架构无关的隐蔽性；(ii) 通过覆盖微调、剪枝、量化和蒸馏的自适应课程优化扰动；(iii) 以紧凑可比较方式验证所有权。",
+      "tags": ["TTS", "Ownership Verification", "Watermark", "Security"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.23729"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.23729"}
+      ]
+    },
+    {
+      "title": "Listen Then Reason: Perception-Grounded Test-Time Reinforcement Learning for Large Audio-Language Models",
+      "url": "https://arxiv.org/abs/2609.23589",
+      "date": "2026-09-22",
+      "authors": "Jiaheng Dong, Xiaofeng Yu, Jean Honorio, Abhirup Ghosh, Hong Jia, Ting Dang",
+      "abstract": "大型音频语言模型（LALM）被用于越来越广泛的音频推理任务，近期测试时强化学习（TTRL）进一步提升了 LLM 推理能力，但 LALM 的感知能力——推理过程中整合与依赖多少声学证据、如何贡献于最终性能——仍被忽视。本文首先逐层量化 LALM 的感知依赖，发现更强的声学依赖提升性能，随后提出感知接地（perception-grounded）的测试时强化学习方法，在推理中显式融入声学证据，弥合音频推理后训练方法的缺口。",
+      "tags": ["Audio LLM", "Test-Time RL", "Audio Reasoning", "Perception"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.23589"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.23589"}
+      ]
+    },
+    {
+      "title": "MuLA-Bench: A Multilingual Long-Form Audio Understanding Benchmark via Multi-Tier Auditing",
+      "url": "https://arxiv.org/abs/2609.23453",
+      "date": "2026-09-22",
+      "authors": "Zeyu Yang, Xinyu Zhang, Zibo Bi, Pei Zhang, Xize Cheng, Jin Xu, Baosong Yang, et al.",
+      "abstract": "长音频性能常被压缩为上下文长度和聚合准确率，掩盖了语言、证据与任务如何共同塑造难度。作者提出 MuLA-Bench：5038 道开放式问题、覆盖 1769 段真实录音、共 1377.9 小时，涵盖 16 种语言与 8 个领域。平衡的 Language×Domain 语义轨支持可控对比，互补的声学轨保留自然非语音证据。评测 10 个音频语言模型发现：不同领域与任务下语言排名变化，声学-语义性能差距随请求操作变化，时序错误可持续存在。",
+      "tags": ["Benchmark", "Long-Form Audio", "Multilingual", "Audio Understanding"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.23453"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.23453"}
+      ]
+    },
+    {
+      "title": "LiteCASS: A Lightweight End-to-End Network for Real-Time Stereo Cinematic Audio Source Separation",
+      "url": "https://arxiv.org/abs/2609.23525",
+      "date": "2026-09-22",
+      "authors": "Yuanxin Guo, Qiang Ji, Mengmei Liu, Yuhan Lv, Ningning Pan, Gongping Huang",
+      "abstract": "影视音频源分离（CASS）将音轨分解为对白、音乐与音效（SFX）stem，但现有方法依赖大参数架构与 GPU 级硬件，且几乎都面向单声道。作者提出 LiteCASS，据称是首个面向实时立体声 CASS 的轻量端到端网络：将确定性 STFT 子带重排与两个联合训练的紧凑 U-Net 结合（首个提取对白，第二个从非语音成分中分离音乐与 SFX），以多任务波形域 L1 损失监督所有 stem。在 DnR v3 立体声扩展上，LiteCASS-K8 仅用 1.06M 参数即取得有竞争力性能。",
+      "tags": ["Audio Source Separation", "Real-Time", "Stereo", "Lightweight"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.23525"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.23525"}
+      ]
+    },
+    {
+      "title": "Beyond Encoder Fusion: Multi-View Discrete Token Augmentation for LLM-Based ASR",
+      "url": "https://arxiv.org/abs/2604.16254",
+      "date": "2026-09-22",
+      "authors": "Paul Moïse Gangbadja, Mickael Rouvier, Fabrice Lefèvre",
+      "abstract": "离散语音 token 为语音编码器与 LLM 之间提供紧凑接口用于 ASR，但单 tokenization 系统对所选编码器敏感。作者提出多视图离散 token 增强策略：用固定的 SSL 编码器（HuBERT、WavLM、MMS-300M）为每条训练话语生成多套 token 序列，作为共享 LLM 解码器的互补训练视图，无需多编码器推理即可接触更丰富的离散表征。在 LibriSpeech 上一致提升所有编码器，WavLM 达 test-clean 3.30% WER、test-other 8.13%；预算匹配对照表明增益来自编码器多样性而非单纯增大 token 流。",
+      "tags": ["ASR", "LLM", "Discrete Token", "Multi-View"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2604.16254"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2604.16254"}
+      ]
+    },
+    {
+      "title": "Which Constraints Are Missing? Ask the Verifier: Graded Rewards for Constraint-Following Music Generation",
+      "url": "https://arxiv.org/abs/2609.23665",
+      "date": "2026-09-22",
+      "authors": "Haoyue Liu, Ye Chen, Zhichao Wang, Xiaoyu Ma, Haoran Shou, Xiaoying Tang, et al.",
+      "abstract": "约束遵循音乐生成要求一个乐谱同时满足多个可程序化校验的属性（调性、拍号、长度、音域、结束音、节奏、运动与曲式），但缺少隔离该能力的基准。作者构建 MusicConstraintBench（2180 条、8 类约束族），现有模型在约束叠加时即失败。自然的补救是以这些校验器为奖励做强化学习，但只在整个属性全满足时给奖励会导致大多数训练组无学习信号（前 50 步更新中 55% 的 rollout 组完全相同、无梯度）。作者提出分级奖励方案，让「接近正确」的乐谱获得可区分的梯度信号。",
+      "tags": ["Music Generation", "Constraint-Following", "RL", "Benchmark"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.23665"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.23665"}
+      ]
+    },
+    {
+      "title": "ArtifactBench: Lineage-Aware Evaluation of AI-Generated Music Detectors under Distribution Shift",
+      "url": "https://arxiv.org/abs/2609.23550",
+      "date": "2026-09-22",
+      "authors": "Heewon Oh",
+      "abstract": "AI 生成音乐检测器的对比常依赖聚合分数，但训练重叠、生成器谱系、来源与音频变换历史仅部分可观测。作者提出 ArtifactBench，一个谱系感知的评测套件，跨生成器家族与版本、真实音乐域、采集批次偏移与推理覆盖率衡量检测器行为。基准按内容身份分组源录音及其衍生变体，将校准与最终测试分离、独立记录推理失败与分类错误，除聚合指标外还报告带不确定性的源级性能，并在固定版本协议下评测多个公开检测器。",
+      "tags": ["AI Music Detection", "Benchmark", "Deepfake"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.23550"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.23550"}
+      ]
+    },
+    {
+      "title": "OmniEcho: Spatial Audio Understanding for Embodied Agents",
+      "url": "https://arxiv.org/abs/2609.23411",
+      "date": "2026-09-22",
+      "authors": "Ruixun Liu, Yuxuan Wang, Jiacheng Xie, Yuhuan You, Donghua Cai, Junming Lin, et al.",
+      "abstract": "面向具身智能的空间音频理解：作者提出 OmniEcho，让具身智能体利用空间声学线索（声源方位、距离、混响等信息）进行环境感知与交互，将空间音频理解能力引入具身场景，弥补现有具身模型多依赖视觉而忽视听觉空间信息的不足。",
+      "tags": ["Spatial Audio", "Embodied AI", "Audio Understanding"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.23411"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.23411"}
+      ]
+    },
+    {
+      "title": "Misrecognition or Abstraction? Rethinking Outputs of Sound Event Recognition",
+      "url": "https://arxiv.org/abs/2609.23416",
+      "date": "2026-09-22",
+      "authors": "Naoya Tomida, Yuki Okamoto, Keisuke Imoto",
+      "abstract": "传统通用声音识别系统输出确定性声音事件标签，暗含目标声音类别一定能被正确识别的假设。但真实听场景下事件类别并不总是清晰可辨，人类却能从不明确的声音中理解周遭而不必识别其确切类别。本文提出一种融合「事件类别 + 置信分数 + 拟声描述」的输出表征，在保留传统类别识别的同时，为声学事件提供额外的拟声描述，重新审视不确定条件下的声音识别输出设计。",
+      "tags": ["Sound Event Recognition", "Abstention", "Onomatopoeia"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.23416"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.23416"}
+      ]
+    },
+    {
+      "title": "Generative Learning for Ambisonic Upscaling",
+      "url": "https://arxiv.org/abs/2609.22395",
+      "date": "2026-09-22",
+      "authors": "Amit Milstein, Nir Shlezinger, Boaz Rafaely",
+      "abstract": "Ambisonics 升采样（AU）旨在从低阶观测估计高阶 Ambisonics（HOA）分量以提升声场空间分辨率。深度学习方法与基于模型的方法在现实混响场景下均显著退化，因为混响声场违反了判别式映射依赖的方向稀疏性。作者将 AU 视作生成任务而非确定性重建，拓展生成建模专门针对混响语音中的空间信息恢复，研究两种连续时间生成范式（Score-based Generative Model 与 Flow Matching），并在多场景下与 SOTA 基线做数值对比。",
+      "tags": ["Spatial Audio", "Ambisonics", "Generative Model", "Audio Upscaling"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.22395"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.22395"}
+      ]
+    },
+    {
+      "title": "HaikuS2S: A Cascaded System For Responding In Verse",
+      "url": "https://arxiv.org/abs/2609.23951",
+      "date": "2026-09-22",
+      "authors": "Devangi Sharma, Sophia Judicke, Glenda Tan, Conrad Schaumburg, Shinji Watanabe",
+      "abstract": "表现力语音合成通过韵律建模取得进展，但生成结构化诗歌语音（如俳句）仍具挑战。既有韵律迁移提升表现力、微调诗歌 TTS 捕捉诗句语调，但均未建模俳句 5-7-5 音节结构与句末停顿。作者提出级联系统 HaikuS2S，组合 ASR、LLM 生成俳句与在散文及自定义俳句数据上微调的 TTS，围绕情绪相似度、语音质量与韵律对齐评估，微调系统显著提升韵律与音调对齐。",
+      "tags": ["TTS", "Speech-to-Speech", "Poetic Speech", "Cascaded"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.23951"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.23951"}
+      ]
+    },
+    {
+      "title": "Reducing Speaker Residual by Considering Pinhole Effect in Voice Anonymization",
+      "url": "https://arxiv.org/abs/2609.23433",
+      "date": "2026-09-22",
+      "authors": "Zeyan Liu, Weili Jiang, Liping Chen, Kong Aik Lee, Boyu Zhao, Kai Gao, Zhe Li",
+      "abstract": "语音匿名化旨在抑制说话人身份同时保留语言内容与韵律，但非身份表征中残留的说话人属性仍会增加可链接性、削弱隐私保护。受「针孔效应」启发，作者提出面向已训练语音匿名化框架的针孔损失微调策略：针孔损失度量同一源说话人匿名化语音的可链接性，最小化该损失以降低可链接性、提升隐私保护。在多个匿名化框架、伪说话人生成方法与数据集上的实验显示隐私保护提升且效用得以保持。",
+      "tags": ["Voice Anonymization", "Privacy", "Speaker Residual"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.23433"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.23433"}
+      ]
+    },
+    {
+      "title": "Entropy-aware logistic regression for fusion of large-scale speaker recognition systems",
+      "url": "https://arxiv.org/abs/2609.23727",
+      "date": "2026-09-22",
+      "authors": "Pierre-Michel Bousquet, Mickael Rouvier",
+      "abstract": "基于逻辑回归的分数级融合广泛用于说话人识别以组合互补系统，但传统方法分配固定的系统相关系数，未显式考虑单条注册与测试语音可靠性的变化。借鉴近期深度学习说话人识别模型的熵研究，作者在融合过程中引入不确定性分量，同时利用系统级互补性与语音级不确定度，在大规模、语音特征高度可变的说话人识别任务上取得鲁棒性能，表明模型熵信息在大规模场景下是宝贵互补线索。",
+      "tags": ["Speaker Recognition", "Score Fusion", "Uncertainty"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.23727"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.23727"}
+      ]
+    },
+    {
+      "title": "SEABED: SouthEast Asian Benchmark for Evaluating Audio Reasoning",
+      "url": "https://arxiv.org/abs/2609.22586",
+      "date": "2026-09-22",
+      "authors": "Harshit Rajgarhia, Asif Shaik, Rachuri Lokesh, Sushanta Kumar Pani, Abhishek et al.",
+      "abstract": "现代音频语言模型的评判已从「能转写什么词」转向「能否对听到的内容进行推理」：从音调与韵律中恢复意义、区分方言与地区语言、消解文字形式遗留的歧义。但此类推理基准几乎全部面向英语与通用域音频。东南亚（SEA）却沿用英语任务分类学（识别、翻译、副语言分类），测的是「模型能否听懂 SEA 语音」而非「能否基于它推理」。作者提出 SEABED，一个音频优先的问答数据集，包含六类完全基于东南亚语音构建的音频推理任务。",
+      "tags": ["Audio Reasoning", "Benchmark", "Multilingual", "Southeast Asian"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.22586"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.22586"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "阿里云栖大会：Qwen-Audio-3.1 语音模型家族升级，同传模型 Qwen3.8-LiveTranslate 首次现身",
+      "url": "https://www.toutiao.com/article/7688205938251072015/",
+      "summary": "2026-09-22 阿里云栖大会发布 Qwen-Audio-3.1 语音模型家族升级，涵盖 ASR-Next、TTS-Next 与 Realtime 三大系列，同传模型 Qwen3.8-LiveTranslate 将时延压缩至 2.5 秒以内，已接入千问 AI 眼镜等硬件。（注：此动态已于 09-22 午报收录，最近 24 小时暂无其他重大音频产品发布，故此处仅作完整记录。）"
+    }
+  ],
+  "note": "当前日期 2026-09-23（周三）。严格 24 小时窗口（09-22 09:30 至今）内，arXiv 新增 eess.AS/cs.SD 提交为 09-22（周二）批次（cs.SD 38 篇 + eess.AS 25 篇，去重后约 60 篇）。本期收录其中尚未被 09-22 午报覆盖的核心论文 14 篇，聚焦 TTS 安全、音频 LLM 推理、长音频基准、实时源分离等方向。由于 arxiv export API（export.arxiv.org）返回 429 限流，本文通过 arxiv.org/list 近期列表页 + 逐篇 abs 页面获取标题、作者与摘要，标题均以页面完整标题为准。新闻方面，最近 24 小时无新的重大音频 AI 产品发布（GPT-Live-1 为 09-11、Gemini 3.8 Live 为 09-15、Qwen3.8-LiveTranslate 为 09-19，均已逾 24h），故如实标注。"
+}

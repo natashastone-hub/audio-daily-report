@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-09-23</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-09-23</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年9月23日 (周三) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">14</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.23729" target="_blank">TTS-Guard: Black-Box Ownership Verification of Text-to-Speech Models via Adaptive Adversarial Speaker-Pair Fingerprints</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-22</span><span>👥 Xubin Yue, Zhenhua Xu, Zhebo Wang, Mengting Li, Zijie Zhou, Wenpeng Xing, et al.</span></div>
+      <div class="abstract">零样本 TTS 的成熟使高质量声音克隆变得普及，引发了对专有语音模型被未授权复制、微调和转售的担忧。但 TTS 的所有权验证仍是空白：语音是连续波形，其扰动容易被常规信号处理破坏，而人类听觉带来的感知预算远小于视觉。本文提出 TTS-Guard，一个基于对抗性说话人对指纹的黑盒 TTS 所有权验证框架：(i) 在对偶嵌入空间选取关键说话人对实现架构无关的隐蔽性；(ii) 通过覆盖微调、剪枝、量化和蒸馏的自适应课程优化扰动；(iii) 以紧凑可比较方式验证所有权。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Ownership Verification</span><span class="tag">Watermark</span><span class="tag">Security</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.23729" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.23729" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.23589" target="_blank">Listen Then Reason: Perception-Grounded Test-Time Reinforcement Learning for Large Audio-Language Models</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-22</span><span>👥 Jiaheng Dong, Xiaofeng Yu, Jean Honorio, Abhirup Ghosh, Hong Jia, Ting Dang</span></div>
+      <div class="abstract">大型音频语言模型（LALM）被用于越来越广泛的音频推理任务，近期测试时强化学习（TTRL）进一步提升了 LLM 推理能力，但 LALM 的感知能力——推理过程中整合与依赖多少声学证据、如何贡献于最终性能——仍被忽视。本文首先逐层量化 LALM 的感知依赖，发现更强的声学依赖提升性能，随后提出感知接地（perception-grounded）的测试时强化学习方法，在推理中显式融入声学证据，弥合音频推理后训练方法的缺口。</div>
+      <div class="tags"><span class="tag">Audio LLM</span><span class="tag">Test-Time RL</span><span class="tag">Audio Reasoning</span><span class="tag">Perception</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.23589" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.23589" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.23453" target="_blank">MuLA-Bench: A Multilingual Long-Form Audio Understanding Benchmark via Multi-Tier Auditing</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-22</span><span>👥 Zeyu Yang, Xinyu Zhang, Zibo Bi, Pei Zhang, Xize Cheng, Jin Xu, Baosong Yang, et al.</span></div>
+      <div class="abstract">长音频性能常被压缩为上下文长度和聚合准确率，掩盖了语言、证据与任务如何共同塑造难度。作者提出 MuLA-Bench：5038 道开放式问题、覆盖 1769 段真实录音、共 1377.9 小时，涵盖 16 种语言与 8 个领域。平衡的 Language×Domain 语义轨支持可控对比，互补的声学轨保留自然非语音证据。评测 10 个音频语言模型发现：不同领域与任务下语言排名变化，声学-语义性能差距随请求操作变化，时序错误可持续存在。</div>
+      <div class="tags"><span class="tag">Benchmark</span><span class="tag">Long-Form Audio</span><span class="tag">Multilingual</span><span class="tag">Audio Understanding</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.23453" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.23453" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.23525" target="_blank">LiteCASS: A Lightweight End-to-End Network for Real-Time Stereo Cinematic Audio Source Separation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-22</span><span>👥 Yuanxin Guo, Qiang Ji, Mengmei Liu, Yuhan Lv, Ningning Pan, Gongping Huang</span></div>
+      <div class="abstract">影视音频源分离（CASS）将音轨分解为对白、音乐与音效（SFX）stem，但现有方法依赖大参数架构与 GPU 级硬件，且几乎都面向单声道。作者提出 LiteCASS，据称是首个面向实时立体声 CASS 的轻量端到端网络：将确定性 STFT 子带重排与两个联合训练的紧凑 U-Net 结合（首个提取对白，第二个从非语音成分中分离音乐与 SFX），以多任务波形域 L1 损失监督所有 stem。在 DnR v3 立体声扩展上，LiteCASS-K8 仅用 1.06M 参数即取得有竞争力性能。</div>
+      <div class="tags"><span class="tag">Audio Source Separation</span><span class="tag">Real-Time</span><span class="tag">Stereo</span><span class="tag">Lightweight</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.23525" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.23525" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2604.16254" target="_blank">Beyond Encoder Fusion: Multi-View Discrete Token Augmentation for LLM-Based ASR</a></h4>
+      <div class="meta"><span>📅 2026-09-22</span><span>👥 Paul Moïse Gangbadja, Mickael Rouvier, Fabrice Lefèvre</span></div>
+      <div class="abstract">离散语音 token 为语音编码器与 LLM 之间提供紧凑接口用于 ASR，但单 tokenization 系统对所选编码器敏感。作者提出多视图离散 token 增强策略：用固定的 SSL 编码器（HuBERT、WavLM、MMS-300M）为每条训练话语生成多套 token 序列，作为共享 LLM 解码器的互补训练视图，无需多编码器推理即可接触更丰富的离散表征。在 LibriSpeech 上一致提升所有编码器，WavLM 达 test-clean 3.30% WER、test-other 8.13%；预算匹配对照表明增益来自编码器多样性而非单纯增大 token 流。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">LLM</span><span class="tag">Discrete Token</span><span class="tag">Multi-View</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2604.16254" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2604.16254" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.23665" target="_blank">Which Constraints Are Missing? Ask the Verifier: Graded Rewards for Constraint-Following Music Generation</a></h4>
+      <div class="meta"><span>📅 2026-09-22</span><span>👥 Haoyue Liu, Ye Chen, Zhichao Wang, Xiaoyu Ma, Haoran Shou, Xiaoying Tang, et al.</span></div>
+      <div class="abstract">约束遵循音乐生成要求一个乐谱同时满足多个可程序化校验的属性（调性、拍号、长度、音域、结束音、节奏、运动与曲式），但缺少隔离该能力的基准。作者构建 MusicConstraintBench（2180 条、8 类约束族），现有模型在约束叠加时即失败。自然的补救是以这些校验器为奖励做强化学习，但只在整个属性全满足时给奖励会导致大多数训练组无学习信号（前 50 步更新中 55% 的 rollout 组完全相同、无梯度）。作者提出分级奖励方案，让「接近正确」的乐谱获得可区分的梯度信号。</div>
+      <div class="tags"><span class="tag">Music Generation</span><span class="tag">Constraint-Following</span><span class="tag">RL</span><span class="tag">Benchmark</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.23665" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.23665" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.23550" target="_blank">ArtifactBench: Lineage-Aware Evaluation of AI-Generated Music Detectors under Distribution Shift</a></h4>
+      <div class="meta"><span>📅 2026-09-22</span><span>👥 Heewon Oh</span></div>
+      <div class="abstract">AI 生成音乐检测器的对比常依赖聚合分数，但训练重叠、生成器谱系、来源与音频变换历史仅部分可观测。作者提出 ArtifactBench，一个谱系感知的评测套件，跨生成器家族与版本、真实音乐域、采集批次偏移与推理覆盖率衡量检测器行为。基准按内容身份分组源录音及其衍生变体，将校准与最终测试分离、独立记录推理失败与分类错误，除聚合指标外还报告带不确定性的源级性能，并在固定版本协议下评测多个公开检测器。</div>
+      <div class="tags"><span class="tag">AI Music Detection</span><span class="tag">Benchmark</span><span class="tag">Deepfake</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.23550" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.23550" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.23411" target="_blank">OmniEcho: Spatial Audio Understanding for Embodied Agents</a></h4>
+      <div class="meta"><span>📅 2026-09-22</span><span>👥 Ruixun Liu, Yuxuan Wang, Jiacheng Xie, Yuhuan You, Donghua Cai, Junming Lin, et al.</span></div>
+      <div class="abstract">面向具身智能的空间音频理解：作者提出 OmniEcho，让具身智能体利用空间声学线索（声源方位、距离、混响等信息）进行环境感知与交互，将空间音频理解能力引入具身场景，弥补现有具身模型多依赖视觉而忽视听觉空间信息的不足。</div>
+      <div class="tags"><span class="tag">Spatial Audio</span><span class="tag">Embodied AI</span><span class="tag">Audio Understanding</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.23411" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.23411" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.23416" target="_blank">Misrecognition or Abstraction? Rethinking Outputs of Sound Event Recognition</a></h4>
+      <div class="meta"><span>📅 2026-09-22</span><span>👥 Naoya Tomida, Yuki Okamoto, Keisuke Imoto</span></div>
+      <div class="abstract">传统通用声音识别系统输出确定性声音事件标签，暗含目标声音类别一定能被正确识别的假设。但真实听场景下事件类别并不总是清晰可辨，人类却能从不明确的声音中理解周遭而不必识别其确切类别。本文提出一种融合「事件类别 + 置信分数 + 拟声描述」的输出表征，在保留传统类别识别的同时，为声学事件提供额外的拟声描述，重新审视不确定条件下的声音识别输出设计。</div>
+      <div class="tags"><span class="tag">Sound Event Recognition</span><span class="tag">Abstention</span><span class="tag">Onomatopoeia</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.23416" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.23416" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.22395" target="_blank">Generative Learning for Ambisonic Upscaling</a></h4>
+      <div class="meta"><span>📅 2026-09-22</span><span>👥 Amit Milstein, Nir Shlezinger, Boaz Rafaely</span></div>
+      <div class="abstract">Ambisonics 升采样（AU）旨在从低阶观测估计高阶 Ambisonics（HOA）分量以提升声场空间分辨率。深度学习方法与基于模型的方法在现实混响场景下均显著退化，因为混响声场违反了判别式映射依赖的方向稀疏性。作者将 AU 视作生成任务而非确定性重建，拓展生成建模专门针对混响语音中的空间信息恢复，研究两种连续时间生成范式（Score-based Generative Model 与 Flow Matching），并在多场景下与 SOTA 基线做数值对比。</div>
+      <div class="tags"><span class="tag">Spatial Audio</span><span class="tag">Ambisonics</span><span class="tag">Generative Model</span><span class="tag">Audio Upscaling</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.22395" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.22395" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.23951" target="_blank">HaikuS2S: A Cascaded System For Responding In Verse</a></h4>
+      <div class="meta"><span>📅 2026-09-22</span><span>👥 Devangi Sharma, Sophia Judicke, Glenda Tan, Conrad Schaumburg, Shinji Watanabe</span></div>
+      <div class="abstract">表现力语音合成通过韵律建模取得进展，但生成结构化诗歌语音（如俳句）仍具挑战。既有韵律迁移提升表现力、微调诗歌 TTS 捕捉诗句语调，但均未建模俳句 5-7-5 音节结构与句末停顿。作者提出级联系统 HaikuS2S，组合 ASR、LLM 生成俳句与在散文及自定义俳句数据上微调的 TTS，围绕情绪相似度、语音质量与韵律对齐评估，微调系统显著提升韵律与音调对齐。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Speech-to-Speech</span><span class="tag">Poetic Speech</span><span class="tag">Cascaded</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.23951" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.23951" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.23433" target="_blank">Reducing Speaker Residual by Considering Pinhole Effect in Voice Anonymization</a></h4>
+      <div class="meta"><span>📅 2026-09-22</span><span>👥 Zeyan Liu, Weili Jiang, Liping Chen, Kong Aik Lee, Boyu Zhao, Kai Gao, Zhe Li</span></div>
+      <div class="abstract">语音匿名化旨在抑制说话人身份同时保留语言内容与韵律，但非身份表征中残留的说话人属性仍会增加可链接性、削弱隐私保护。受「针孔效应」启发，作者提出面向已训练语音匿名化框架的针孔损失微调策略：针孔损失度量同一源说话人匿名化语音的可链接性，最小化该损失以降低可链接性、提升隐私保护。在多个匿名化框架、伪说话人生成方法与数据集上的实验显示隐私保护提升且效用得以保持。</div>
+      <div class="tags"><span class="tag">Voice Anonymization</span><span class="tag">Privacy</span><span class="tag">Speaker Residual</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.23433" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.23433" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.23727" target="_blank">Entropy-aware logistic regression for fusion of large-scale speaker recognition systems</a></h4>
+      <div class="meta"><span>📅 2026-09-22</span><span>👥 Pierre-Michel Bousquet, Mickael Rouvier</span></div>
+      <div class="abstract">基于逻辑回归的分数级融合广泛用于说话人识别以组合互补系统，但传统方法分配固定的系统相关系数，未显式考虑单条注册与测试语音可靠性的变化。借鉴近期深度学习说话人识别模型的熵研究，作者在融合过程中引入不确定性分量，同时利用系统级互补性与语音级不确定度，在大规模、语音特征高度可变的说话人识别任务上取得鲁棒性能，表明模型熵信息在大规模场景下是宝贵互补线索。</div>
+      <div class="tags"><span class="tag">Speaker Recognition</span><span class="tag">Score Fusion</span><span class="tag">Uncertainty</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.23727" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.23727" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.22586" target="_blank">SEABED: SouthEast Asian Benchmark for Evaluating Audio Reasoning</a></h4>
+      <div class="meta"><span>📅 2026-09-22</span><span>👥 Harshit Rajgarhia, Asif Shaik, Rachuri Lokesh, Sushanta Kumar Pani, Abhishek et al.</span></div>
+      <div class="abstract">现代音频语言模型的评判已从「能转写什么词」转向「能否对听到的内容进行推理」：从音调与韵律中恢复意义、区分方言与地区语言、消解文字形式遗留的歧义。但此类推理基准几乎全部面向英语与通用域音频。东南亚（SEA）却沿用英语任务分类学（识别、翻译、副语言分类），测的是「模型能否听懂 SEA 语音」而非「能否基于它推理」。作者提出 SEABED，一个音频优先的问答数据集，包含六类完全基于东南亚语音构建的音频推理任务。</div>
+      <div class="tags"><span class="tag">Audio Reasoning</span><span class="tag">Benchmark</span><span class="tag">Multilingual</span><span class="tag">Southeast Asian</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.22586" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.22586" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>阿里云栖大会：Qwen-Audio-3.1 语音模型家族升级，同传模型 Qwen3.8-LiveTranslate 首次现身</h4>
+      <p>2026-09-22 阿里云栖大会发布 Qwen-Audio-3.1 语音模型家族升级，涵盖 ASR-Next、TTS-Next 与 Realtime 三大系列，同传模型 Qwen3.8-LiveTranslate 将时延压缩至 2.5 秒以内，已接入千问 AI 眼镜等硬件。（注：此动态已于 09-22 午报收录，最近 24 小时暂无其他重大音频产品发布，故此处仅作完整记录。） <a href="https://www.toutiao.com/article/7688205938251072015/" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-09-23') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
