@@ -1,0 +1,251 @@
+{
+  "papers": [
+    {
+      "title": "EmphTTS: an emphasis-control TTS with reinforcement learning",
+      "url": "https://arxiv.org/abs/2609.27599",
+      "date": "2026-09-23",
+      "authors": "Zirui Li, Rech Silas, Lauri Juvela, Tom Backstrom, Mikko Kurimo",
+      "abstract": "生成可控且类人的重音（emphasis）仍是 TTS 的开放难题，即便文本已给出显式重音控制信号，也常难以落地到自然口语。作者提出 EmphTTS，一个非自回归 TTS 系统，将 Group Relative Policy Optimization（GRPO）应用到时长预测器，并配以重音定位奖励，直接优化词级重音。评测显示 EmphTTS 取得最佳重音可控性与客观指标，主观偏好测试中显著优于合成 groundtruth 与多数基线；消融表明 GRPO 超越仅靠监督微调的时长建模与简单语速调整，并缓解了独立训练时长预测器与 TTS 模型间的失配。",
+      "tags": ["TTS", "Reinforcement Learning", "Emphasis Control", "Prosody"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.27599"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.27599"}
+      ]
+    },
+    {
+      "title": "DriftAudio: Marginal Drifting for Distributional Post-Training of One-Step Text-to-Audio Generators",
+      "url": "https://arxiv.org/abs/2609.27598",
+      "date": "2026-09-23",
+      "authors": "Xingyu Chen, Fei Ma, Sipei Zhao",
+      "abstract": "一步式文本到音频（TTA）模型大幅降低推理成本，但其生成分布仍可借助后训练优化。作者提出 DriftAudio，将 Drifting 适配到预训练一步 TTA 生成器：因自由文本条件下特定条件往往仅有一到几个真实样本，DriftAudio 改为在边际音频分布上执行 Drifting，同时保留文本条件生成。漂移场在冻结的音频特征空间中估计，仅更新生成器、保持原一步推理流程。在 AudioCaps 上，从 MeanAudio 起步，DriftAudio 将 FAD 与 FD 分别降低 33.9% 与 17.6%，并改善 KL 与 CLAP。",
+      "tags": ["Text-to-Audio", "Audio Generation", "Post-Training", "Distributional"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.27598"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.27598"}
+      ]
+    },
+    {
+      "title": "Forget who you Forgot: Speaker Unlearning to Prevent Re-Identification in Zero-Shot Text-to-Speech",
+      "url": "https://arxiv.org/abs/2609.27399",
+      "date": "2026-09-23",
+      "authors": "Hyoeun Kim, Yujun Lee, Kyuhong Shim",
+      "abstract": "零样本 TTS 仅需数秒参考语音即可高保真复现说话人声音，引发未授权声音克隆与冒充的担忧。作者提出 GUARD，一个轻量说话人身份遗忘框架，在冻结 TTS 骨架上组合可学习说话人门控与说话人不相关激活引导。引导向量以群体相对奖励优化，把遗忘说话人的输出推向群体级冒充者相似度，同时保留可懂度与自然度。在 CosyVoice2 上，GUARD 将遗忘说话人相似度从 0.541 降到 0.103，150 人检索库中的重识别准确率从 73.5% 降至 0.5%，同时保留 retain 说话人复现，凸显重识别应作为身份遗忘的关键评估准则。",
+      "tags": ["TTS", "Speaker Unlearning", "Privacy", "Voice Cloning"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.27399"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.27399"}
+      ]
+    },
+    {
+      "title": "EvoAudio: Recursive Self-Improvement for Audio Understanding",
+      "url": "https://arxiv.org/abs/2609.27389",
+      "date": "2026-09-23",
+      "authors": "Yuxiang Wang, Shengbo Cai, Yingda Shen, Ming-Hao Hsu, Qinke Ni, Liqiang Zhang, et al.",
+      "abstract": "音频语言模型「听懂说了什么」远好于「听懂怎么说的」，缩小这一差距需要更多数据之外的东西。作者提出 EvoAudio，一个音频理解递归自改系统，据称是首个在单一闭环中同时演化模型、波形、问题与难度的系统：用当前模型表现设定下一轮训练数据的焦点与难度，用音频工具库构造可从音频生成方式反推答案的问题，无需新增人工标注即获得可验证监督，再以强化学习更新模型。跨 13 轮，EvoAudio 在 MMSU、MMAU-Pro、MMAR 上提升五种不同编码器/语言骨干的模型，整体性能最多提升 6.3 分。",
+      "tags": ["Audio LLM", "Self-Improvement", "Audio Understanding", "RL"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.27389"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.27389"}
+      ]
+    },
+    {
+      "title": "JASPER: Joint Audio and Speech Pre-trained Encoder Representations",
+      "url": "https://arxiv.org/abs/2609.27260",
+      "date": "2026-09-23",
+      "authors": "Geeth George, Ameenudeen P E, Hrishikesh H Pillai, Sriram Ganapathy",
+      "abstract": "语音与音频的自监督学习长期分轨发展：语音模型偏时域预测，音频表征偏时频模式，造成跨域泛化的兼容性鸿沟。作者提出 JASPER，在语音预训练模型上叠加时频目标，对长音频片段执行时间与频谱目标的掩码预测，实现语音与音频的「谱-时」联合表征学习。该方法在多样的语音、音频与音乐任务上一致超越多个基线及现有语音/音频编码器，验证了统一谱时建模的有效性。",
+      "tags": ["Self-Supervised Learning", "Audio Encoder", "Speech Encoder", "Pretraining"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.27260"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.27260"}
+      ]
+    },
+    {
+      "title": "Spoken Language Models that Think Aloud",
+      "url": "https://arxiv.org/abs/2609.26488",
+      "date": "2026-09-22",
+      "authors": "Junyi Ao, Kainan Peng, Mingbo Ma, Shun Zhang, Zhenyu Tang, Xutai Ma, et al.",
+      "abstract": "把 CoT 推理直接套用到口语语言模型（SLM）会在串行「先想后说」范式下引入长时间静默，破坏实时口语交互。作者提出基于 Thinker-Talker 架构的异步 think-aloud 框架：主推理流负责逻辑推理，轻量 think-aloud 流根据用户输入与演进的推理状态生成简短、任务接地的进度语音，运行时由动态平衡策略协调双流，避免静默空档并在最终回答就绪时取消挂起语音。实验表明该方法在保持与串行「先想后说」基线相当的回答准确率的同时，大幅减少用户可感知的静默。",
+      "tags": ["Spoken Language Model", "Chain-of-Thought", "Real-Time", "S2S"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.26488"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.26488"}
+      ]
+    },
+    {
+      "title": "Qwen-Audio-Agent Technical Report",
+      "url": "https://arxiv.org/abs/2609.25195",
+      "date": "2026-09-21",
+      "authors": "Chong Deng, Yunjie Ji, Yuxiang Kong, Xiangang Li, Xu Li, Binbin Zhang, Haina Zhu, Jianheng Zhuo",
+      "abstract": "阿里提出 Qwen-Audio-Agent，一个将全双工语音交互与异步任务执行结合的前后台架构：Frontend Agent 管理对话并在直接调用工具与委派之间选择，Backend Agent 在独立上下文中执行委派任务，Orchestration Runtime 维护任务状态、协调用户输入与授权，并将「语音打断」与「任务取消」、「执行完成」与「结果回传」分离，让对话可在委派任务进行时继续。在 134 例座舱基准上，混合执行达 91.04% 任务成功率，相对直接执行与全委派分别提升约 19 与 10 个百分点，平均任务执行延迟分别降低 26.73% 与 30.91%。",
+      "tags": ["Audio Agent", "Full-Duplex", "Voice Assistant", "Qwen"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.25195"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.25195"}
+      ]
+    },
+    {
+      "title": "Interactive TTS: Dynamic Speaking Style Adaptation for Expressive Speech Synthesis",
+      "url": "https://arxiv.org/abs/2609.25707",
+      "date": "2026-09-22",
+      "authors": "Wenjie Tian, Kangxiang Xia, Jingbin Hu, Xinfa Zhu, HangRui Hu, Ziyue Jiang, et al.",
+      "abstract": "多轮多模态交互中的动态说话风格适配仍是 TTS 的难题。现有上下文感知 TTS 以端到端方式把对话上下文映射到语音，风格决策难以监督，风格/音色/内容纠缠导致指令跟随弱、跨轮音色漂移严重。作者提出 Interactive TTS，将上下文风格决策显式建模为可执行指令，并引入 Iterative Rejection Sampling Fine-Tuning 与 Context-Aware DPO，显著增强指令跟随与上下文的对话对齐。实验在 VStyle 与 SpeechParaling-Bench 上超越 SOTA。",
+      "tags": ["TTS", "Context-Aware", "Expressive Speech", "Multi-Turn"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.25707"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.25707"}
+      ]
+    },
+    {
+      "title": "CycleSpeech: Reciprocal Alignment for Instruction-Controlled Speech Synthesis and Paralinguistic Understanding",
+      "url": "https://arxiv.org/abs/2609.24771",
+      "date": "2026-09-21",
+      "authors": "Huan Liao, Haonan Han, Xingwen Han, Dekun Chen, Yuancheng Wang, Zhizheng Wu",
+      "abstract": "指令控制的语音合成与副语言理解通常独立训练，二者间的互馈未被充分挖掘。作者提出 CycleSpeech，通过共享的结构化声音画像连接生成与理解：前向循环检验合成语音是否表达了目标属性，后向循环检验从真实语音推断的画像能否引导重建源说话风格。在联合 SFT 基础上，CycleGRPO 交替更新策略，使用基于画像一致性与说话风格重建的互惠奖励，无需人工偏好标注或偏好奖励模型。中英文基准上指令遵循与画像恢复均有提升，且保持合成质量。",
+      "tags": ["Speech Synthesis", "Paralinguistic", "Voice Conversion", "Reciprocal"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.24771"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.24771"}
+      ]
+    },
+    {
+      "title": "MIDIBack: Harmony-Aware Singing Pitch Correction via Joint Vocal-Accompaniment Symbolic Modeling",
+      "url": "https://arxiv.org/abs/2609.28008",
+      "date": "2026-09-23",
+      "authors": "Joaquim Cavalcante, Yicheng Gu, Adriel Trajano, Yuri de Malheiros, Thais Gaudencio",
+      "abstract": "自动音高纠正需区分无意音准误差与表现性音高变化。作者提出 MIDIBack，一个音高级自动音高纠正框架，在共享 OctupleMIDI 序列中联合建模人声与伴奏事件。在 6 种音符损坏机制下评测，模型达 78.6% 整体 raw pitch accuracy（RPA），组合偏移与学习去谐下为 81.5%；移除伴奏条件后 RPA 从 81.5% 骤降至 35.8%，验证伴奏上下文的关键作用。",
+      "tags": ["Singing", "Pitch Correction", "Symbolic Music", "Harmony"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.28008"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.28008"}
+      ]
+    },
+    {
+      "title": "BiCFlow-MER: Orchestrating Discriminative and Generative Multimodal Emotion Recognition via Conditional Transport",
+      "url": "https://arxiv.org/abs/2609.27615",
+      "date": "2026-09-23",
+      "authors": "Yanbing Wang, Shenyue Wang, Chunyang Yu",
+      "abstract": "音频-文本多模态情感识别中，情感线索常与说话风格、词汇内容纠缠，跨模态分歧进一步复杂化证据整合。作者提出 BiCFlow-MER，把音频-文本 MER 形式化为结构化情感空间内的生成式证据传输：从说话风格与词汇内容中解耦情感导向证据以构造冲突感知情感条件，经双向 rectified flow 将每条话语传输到显式情感空间端点，通过自适应原型云评分与后向类别-条件一致性联合验证。在 IEMOCAP、MELD 与零样本 CASE 基准上超越全部对比方法。",
+      "tags": ["Emotion Recognition", "Multimodal", "Flow Matching", "Audio-Text"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.27615"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.27615"}
+      ]
+    },
+    {
+      "title": "The Second MLC-SLM Challenge: Multilingual Conversational Speech Diarization, Recognition, and Understanding",
+      "url": "https://arxiv.org/abs/2609.27514",
+      "date": "2026-09-23",
+      "authors": "Bingshen Mu, Mingchen Shao, Zhennan Lin, Liumeng Xue, Hexin Liu, Lei Xie, et al.",
+      "abstract": "总结 Interspeech 2026 第二届多语言会话语音语言模型（MLC-SLM）挑战赛：涵盖多语言会话语音分离与识别、多语言会话语音理解两项任务，发布真实会话语音数据集、评测协议与基线系统。挑战赛吸引全球 91 支队伍，产生 704 条有效榜单结果与 14 篇技术报告。论文提炼代表性方法，为多语言会话语音识别与理解沉淀实践洞见。",
+      "tags": ["Challenge", "Multilingual", "Speech SLM", "Diarization"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.27514"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.27514"}
+      ]
+    },
+    {
+      "title": "When Entanglement Lower-Bounds Disparity: Auditing and Repairing Demographic Fairness in Audio Understanding Models",
+      "url": "https://arxiv.org/abs/2609.27382",
+      "date": "2026-09-23",
+      "authors": "Kian Shamsaie, Iman Modarressi",
+      "abstract": "语音技术对部分声音存在系统性偏差：黑人说话人识别错误率近乎翻倍，二语口音与老年说话人准确率下降。作者提出 TRIAD 审计网格，跨越 120 条文本、24 个渲染人口学声音画像（性别、年龄段、口音）与十种表现风格，用可控 TTS 隔离感知人口学属性与内容/情感。对十个开源编码器定义轴保真函子、轴子空间主角度泄漏与群条件差距，并证明平均探针差距随语音-语义泄漏量 Λ 增长（Pearson r=0.93）。ORCA 适配器（轴特定对比头 + 正交惩罚 + 群平衡采样）将泄漏降低 72%、差距约减半。",
+      "tags": ["Fairness", "Audio Understanding", "Bias", "Audit"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.27382"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.27382"}
+      ]
+    },
+    {
+      "title": "Psychoacoustically Aligned Latent Smoothing for Adversarial Robustness of Full-Duplex Speech-to-Speech Dialogue Models",
+      "url": "https://arxiv.org/abs/2609.27378",
+      "date": "2026-09-23",
+      "authors": "Kian Shamsaie, Iman Modarressi",
+      "abstract": "端到端语音到语音对话模型同步听与说，连续开放的声学通道暴露于对抗操纵。作者将全双工智能体的不可感知攻击形式化为限制在载波语音心理声学掩蔽阈值之下的加性扰动优化，目标包括语义劫持、响应抑制与策略越狱。针对未设防的 Moshi 风格智能体，白盒攻击成功率最高达 91.7%。作者提出心理声学对齐的潜变量平滑（PALS），在 RVQ 潜变量接口注入由局部码本协方差塑形的各向异性高斯噪声，推理零成本地将劫持降至 8.3%、静音 11.2%、越狱 9.1%。",
+      "tags": ["Full-Duplex", "Adversarial Robustness", "Speech-to-Speech", "Security"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.27378"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.27378"}
+      ]
+    },
+    {
+      "title": "Neither Silence nor Overlap Is Failure: Intent-Conditioned Evaluation of Turn-Taking in Full-Duplex Spoken Dialogue Models",
+      "url": "https://arxiv.org/abs/2609.27372",
+      "date": "2026-09-23",
+      "authors": "Kian Shamsaie, Iman Modarressi",
+      "abstract": "现有全双工口语对话模型基准以二元固定窗口规则给轮流发言打分。作者指出响应偏移（延迟静默或抢先重叠）的恰当性取决于说话人潜在意图，并提出 TACT 基准（9728 个片段、73.2 小时，来自五个二元对话语料），每个片段携带对话历史、逐说话人记忆画像与六类意图的后验标注。评分用意图条件时序核拟合人类话轮转移偏移分布，替换二元窗口。11 个系统中最佳模型达 0.47（人类上限 0.86），与人类判断 Spearman 相关 0.81，远高于二元指标的 0.46。",
+      "tags": ["Full-Duplex", "Turn-Taking", "Benchmark", "Dialogue"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.27372"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.27372"}
+      ]
+    },
+    {
+      "title": "Beyond DER: Speaker Counting in Crowded End-to-End Diarization",
+      "url": "https://arxiv.org/abs/2609.27315",
+      "date": "2026-09-23",
+      "authors": "Lahiru Samarakoon, Hongxu Zhu",
+      "abstract": "说话人分离需同时解决「数出有多少说话人」与「把语音分配给每个人」，在五人以上拥挤会话中更难。作者发现端到端神经分离模型在拥挤录音中存在系统性少计数，而标准 DER 因时长加权几乎不惩罚被丢弃的低活跃说话人。作者同时报告 Jaccard 错误率与显式计数指标，并提出把说话人存在与帧活动耦合的门控损失，以说话人加权变体作为正则项，将 JER 相对降低约 6%、DER 相对降低约 9%。",
+      "tags": ["Diarization", "Speaker Counting", "Evaluation"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.27315"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.27315"}
+      ]
+    },
+    {
+      "title": "One-Step Voice Conversion by Learning kNN Transport in WavLM Space",
+      "url": "https://arxiv.org/abs/2609.27230",
+      "date": "2026-09-23",
+      "authors": "Anton Selitskiy, David Millard",
+      "abstract": "作者提出 kNN-FM-VC，一个单一条件流匹配网络，学习近似 WavLM 嵌入分布间 kNN-VC 映射的神经回归器，以交叉注意力与 FiLM 条件化目标说话人，在三种高斯条件路径（Schrödinger bridge、直线、常方差高斯管）下训练，支持少步甚至单步采样。该 13M 参数模型以单个网络完成转换，单步 Gaussian Bridge 在 LibriSpeech 上取得比 FreeVC 与 Phoneme Hallucinator 更低的 WER 与更高估计语音质量。",
+      "tags": ["Voice Conversion", "Flow Matching", "One-Step", "kNN"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.27230"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.27230"}
+      ]
+    },
+    {
+      "title": "Quieter Than the Room: Representation Drift and Task Robustness in Speech Encoders",
+      "url": "https://arxiv.org/abs/2609.27195",
+      "date": "2026-09-23",
+      "authors": "Vsevolod Kovalev, Pranay Manocha",
+      "abstract": "非语音干扰可在不造成同等任务失真的情况下改变语音表征。作者对八个冻结编码器在四个任务上加入非语音声音，发现全录音干扰下嵌入漂移与任务损失相关（平均 Spearman 0.81–0.88），但把同一声音在语音与停顿间移动会改变该模式：安静到中等强度下，停顿干扰产生更大漂移，而语音干扰通常在意图识别、说话人验证与识别上造成更大损失。即使低于估计录音底噪，干扰也能像重复语音一样改变嵌入。",
+      "tags": ["Speech Encoder", "Robustness", "Representation", "Interference"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.27195"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.27195"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "阿里千问正式发布 Qwen-Audio-3.1 系列语音大模型：覆盖理解/生成/交互/创作全家桶，全线降价最高 95%",
+      "url": "https://news.qq.com/rain/a/20260923A08NP100",
+      "summary": "2026-09-23 千问正式发布 Qwen-Audio-3.1 系列语音大模型，对 ASR、TTS、实时语音交互三大核心模型全面进化，并重磅推出音频创作模型 Qwen-Audio-3.1-TTS-Next 与音频理解模型，覆盖理解、生成、交互、创作完整音频能力栈，同时宣布全线降价，部分模型降幅高达 95%。"
+    },
+    {
+      "title": "科大讯飞发布新一代语音识别大模型 Spark-ASR-2.0，9 月 24 日起分批推送",
+      "url": "https://www.36kr.com/newsflashes/3995823126892418",
+      "summary": "2026-09-23 科大讯飞发布最新一代语音识别大模型 Spark-ASR-2.0，延续并深化 Spark-Audio-1.0-Preview 语音基座能力，通过非自回归与 LLM 增强自回归协同、中英文混合文本与声学联合增强、动态上下文注入等关键技术大幅提升识别效果，推理成本仅较前代增加 10%；将于 9 月 24 日起在讯飞输入法分批推送，并同步开放给开发者与企业客户。"
+    }
+  ],
+  "note": "当前日期 2026-09-24（周四）。严格 24 小时窗口（09-23 09:30 至 09-24 09:34）内，arXiv 新增 eess.AS/cs.SD 提交为 09-23（周三）批次，本批以「全双工口语对话 / 语音与音频联合预训练 / TTS 后训练强化学习 / 说话人身份遗忘」为主线，同时补录 09-22 批次中被前日报遗漏的若干高价值论文（Spoken Language Models that Think Aloud、Interactive TTS、Qwen-Audio-Agent、CycleSpeech 等）。新闻方面，最近 24 小时有两条重大国内语音模型发布：阿里 Qwen-Audio-3.1 系列（09-23 正式发布 + 全线降价）与科大讯飞 Spark-ASR-2.0（09-23 发布、09-24 起推送）；海外 OpenAI GPT-Live-1（09-11）、Gemini 3.8 Live（09-16）等均逾 24 小时，未作为本期头条收录。"
+}
