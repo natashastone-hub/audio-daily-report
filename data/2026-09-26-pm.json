@@ -1,0 +1,5 @@
+{
+  "papers": [],
+  "news": [],
+  "note": "当前日期 2026-09-26（周六）。严格「最近 6 小时」窗口（09-26 09:30–14:00 CST）内，arXiv eess.AS/cs.SD 无新提交：最新论文 2609.30227 发布于 09-24T17:50:40Z（北京时间 09-25 01:50），属 09-24 批次，早班报告（2026-09-26.json）已完整覆盖（VeriSpeak / COSED / EditVoice / TEMA / VietPrism / ARIS / 等 9 篇）。export.arxiv.org API 本轮正常返回（max_results=50，totalResults=26323），排序后最新仍为 09-24 批次；交叉搜索（web_search arxiv 及 HuggingFace Daily Papers）亦未发现 6 小时内新增音频论文。新闻方面，最近 6 小时无重大语音/Audio 产品发布——GPT-Live-1 API（09-11）、Gemini 3.8 Live（09-15/16）、Qwen3.8-LiveTranslate（09-19）、Qwen-Audio-3.1（09-22）均已逾 6 小时且早班/历史日报已收录。故本期无新增内容，如实标注，不重复早班内容。"
+}
