@@ -1,0 +1,123 @@
+{
+  "papers": [
+    {
+      "title": "To Trust or Not to Trust: Retrieval-Augmented Fact Checking in Speech",
+      "url": "https://arxiv.org/abs/2609.30227",
+      "date": "2026-09-24",
+      "authors": "Debajyoti Mazumder, Mamta, Abhirama Subramanyam Penamakuri",
+      "abstract": "虚假信息越来越多以口语形式（新闻片段、播客、访谈、政治演讲、社媒视频）传播，亟需能直接从语音验证声明的系统。作者提出 VeriSpeak，一个研究大音频语言模型（LALM）语音事实核查的探测基准，含 3879 条涵盖时间、地理、关系事实的口语声明，真假标签均衡。实验揭示一贯的文本-语音模态落差：能可靠验证书面声明的 LALM 在相同声明的口语版本上常失败；单纯检索仅带来有限增益，因为模型常混淆检索证据与口语声明。检索结合显式推理可改善声明-证据比对，经 thinking 微调的 LALM 达 86.1% 准确率。数据集已开源（HuggingFace）。",
+      "tags": ["Fact Checking", "Audio LLM", "Retrieval-Augmented", "Misinformation"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.30227"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.30227"}
+      ]
+    },
+    {
+      "title": "COSED: Setting the Bar for Open-Vocabulary Sound Event Detection",
+      "url": "https://arxiv.org/abs/2609.30083",
+      "date": "2026-09-24",
+      "authors": "Florian Schmid, Sanjeel Parekh, Chi Ian Tang, Juan Azcarreta, Yijun Qian, Arnoldas Jasonas, Andrew Frederick Francl, Çağdaş Bilen",
+      "abstract": "开放词汇声音事件检测（OV-SED）需检测并按任意文本查询时域定位声学事件。作者建立覆盖六个时域标注任务的综合基准（四个固定类别词汇 + 两个自由文本 grounding），在相同数据与指标下以标签空间零样本准则评测五种近期方法，发现无一方法跨全部任务具备竞争力。作者提出的 COSED 在六项任务中五项超先前工作、一项持平，其中三项有 12-33% 的显著优势，是唯一跨所有任务都具竞争力的系统。消融定位收益来源：负样本限定来源语料（25.8%）、封闭+开放世界监督结合（16.8%）、改进时序处理（16.4%）。",
+      "tags": ["Sound Event Detection", "Open-Vocabulary", "Benchmark", "Zero-Shot"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.30083"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.30083"}
+      ]
+    },
+    {
+      "title": "EditVoice: Variable-Length Non-Autoregressive Zero-Shot TTS and Speech Editing with Edit Flows",
+      "url": "https://arxiv.org/abs/2609.29889",
+      "date": "2026-09-24",
+      "authors": "Authors",
+      "abstract": "近期非自回归（NAR）零样本文本转语音（TTS）模型可并行生成，但通常需在生成前指定目标序列长度。作者提出 EditVoice，据称是首个变长 NAR 零样本 TTS 模型，使用 Edit Flows 联合更新语音序列的长度与内容，同时支持语音编辑，无需预先固定长度约束，为并行 TTS 与语音编辑提供了更灵活的方案。",
+      "tags": ["TTS", "Non-Autoregressive", "Zero-Shot", "Speech Editing"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.29889"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.29889"}
+      ]
+    },
+    {
+      "title": "TEMA: Evidence-Grounded Temporal Question Answering in Multi-Turn Multi-Audio Dialogs",
+      "url": "https://arxiv.org/abs/2609.30029",
+      "date": "2026-09-24",
+      "authors": "Kaidi Yang, Hualei Wang, Zhaohui Wang, Chenxuan Wang, Hong Liu, Xiangdong Wang",
+      "abstract": "多轮多音频时序问答要求模型跨追问、录音切换、历史引用追踪目标事件并恢复完整实例边界以做时序计算与比较。作者提出 TEMA，通过 Route（指定音频范围）与 Span（以条件音频字幕描述相关区间）连接事件感知与基于证据的回答；构建含 40704 段对话的 TEMA-Dialog 与 TEMA-Bench。在 Qwen2.5-Omni 与 AF-Next 上的实验显示时序问答（尤其事件定位与跨音频比较）显著提升，仅对证据施加强化学习进一步改善区间恢复与回答准确率。",
+      "tags": ["Audio QA", "Temporal Reasoning", "Multi-Turn", "Evidence-Grounded"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.30029"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.30029"}
+      ]
+    },
+    {
+      "title": "VietPrism: A large-scale Vietnamese speech and deepfake corpus with diverse dialects and code-switching",
+      "url": "https://arxiv.org/abs/2609.30005",
+      "date": "2026-09-24",
+      "authors": "Minh Hoang, Thai Le",
+      "abstract": "越南语语音研究受限于将 ASR 与说话人、方言、语码切换、深度伪造分析割裂的资源。作者提出 VietPrism，一个大规模开放多域语料：993.4 小时、403941 条真实话语、1262 位验证说话人、8388 段真实视频，首次联合提供转录、一致说话人身份、五大方言群与自然发生的越英语码切换（近半时长）。另生成 3.1K+ 小时欺骗语音，每条以验证说话人参考为条件并与真实话语配对。零样本评测五个预训练多语检测器揭示显著脆弱性：EER 因检测器-生成器配对而异，DFA-1B 随说话人相似度升高从 16.3% 恶化到 33.6%。",
+      "tags": ["Deepfake Detection", "Vietnamese", "Corpus", "Code-Switching"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.30005"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.30005"}
+      ]
+    },
+    {
+      "title": "ARIS: Low-Resource Glass-Box Neural Source-Filter Synthesis for Phonetic Stimulus Manipulation",
+      "url": "https://arxiv.org/abs/2609.29923",
+      "date": "2026-09-24",
+      "authors": "Yiran Ding, Wenwei Xu",
+      "abstract": "语音学家常需构造精确操纵特定声学线索、同时保持语音质量的刺激。作者提出 ARIS，一个神经源-滤波器模型，将神经参数估计与确定性 DSP 合成配对：每个控制项都是合成器系数，F0、共振峰与声门源可直接编辑。在三种语言五个小规模单说话人语料上，ARIS 的重合成质量与 WORLD 相当，单参数编辑精度优于 Praat KlattGrid，线索间串扰可忽略；重合成保真度与操控精度优于在大语料预训练的 HiFi-Glot。含演示音频样例。",
+      "tags": ["Speech Synthesis", "Source-Filter", "Interpretable", "Low-Resource"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.29923"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.29923"}
+      ]
+    },
+    {
+      "title": "Do Audio Language Models Hear and Read Distinctive Features Alike?",
+      "url": "https://arxiv.org/abs/2609.30167",
+      "date": "2026-09-24",
+      "authors": "Yuanhao Chen, Peter Chin",
+      "abstract": "音频语言模型将语音与文本通过单一解码器处理。作者探究当音素被「听到」与「读到」时，解码器是否以相同方向表征同一区别性特征。对仅差一个特征的最小音素对，取两者均值表示的偏移，平均得到每个流的特征方向并度量其余弦相似度。跨 6 个模型、7 个特征、11 语系 15 种语言的分析显示：多重检验校正后仅两个 Qwen2.5-Omni 模型的浊音特征超过随机配对参考；决定哪个流表征某特征的是模型家族而非模型规模。",
+      "tags": ["Audio LLM", "Phonology", "Interpretability", "Multilingual"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.30167"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.30167"}
+      ]
+    },
+    {
+      "title": "A Training Criterion with Token-Level Tolerance to Transcription Ambiguity for Automatic Speech Recognition",
+      "url": "https://arxiv.org/abs/2609.30160",
+      "date": "2026-09-24",
+      "authors": "Saurabh Kumar, Diptiman Mohanta, Prasanta Kumar Ghosh",
+      "abstract": "ASR 通常假设参考转录是唯一合法标注，但即便是逐字转录也含声学无法唯一确定的局部差异。作者将 Omni-temporal Classification（OTC）的通配弧从词级下放到 token 级，使不支持 token 可被绕过而词内其余部分仍受监督，并与词级弧结合作为互补逃逸路径。跨 19 种语言、三个语料，token 级 OTC 在全部 25 项任务上优于 CTC，平均相对 WER 降低 9.45%。",
+      "tags": ["ASR", "Training Criterion", "CTC", "Token-Level"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.30160"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.30160"}
+      ]
+    },
+    {
+      "title": "A Native-Reference Phone-Class Geometry for Second-Language Pronunciation Analysis",
+      "url": "https://arxiv.org/abs/2609.30075",
+      "date": "2026-09-24",
+      "authors": "Tina Raissi, Nhan Phan, Chenxiao Wang, Mikko Kurimo",
+      "abstract": "自动口语评估系统能给出整体水平分，但常缺乏可解释的发音质量度量。作者提出基于母语参考音素类几何度量二语发音偏差的方法，无需发音标注、朗读提示或母语/二语配对录音：对母语语料平均帧级自监督表示，用 SVD 得到紧凑母语参考坐标系，将二语话语投影其中，匹配音素类坐标距离与整体口语水平（Spearman ρ=-0.53）及发音质量（ρ=-0.34）呈一致负相关。",
+      "tags": ["Pronunciation", "L2 Assessment", "Self-Supervised", "Interpretable"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.30075"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.30075"}
+      ]
+    }
+  ],
+  "news": [],
+  "note": "当前日期 2026-09-26（周六）。严格 24 小时窗口（09-25 09:30 至 09-26 09:34）内，arXiv 新增 eess.AS/cs.SD 提交为 09-25（周五）批次。本批以「语音事实核查基准 VeriSpeak / 开放词汇声音事件检测 COSED / 变长非自回归 TTS EditVoice / 深度伪造检测语料 VietPrism」为主线，另含多音频时序问答 TEMA、可解释源-滤波器合成 ARIS、音频语言模型音素表征分析、ASR token 级训练准则、二语发音几何度量等。此前一日（09-25）无早报数据文件，故本批周五论文此前未被收录，本期完整补录。新闻方面：最近 24 小时内音频/语音领域无重大产品发布（Gemini 3.8 Flash TTS 于 09-22 GA、Qwen-Audio-3.1 于 09-22 发布、StepAudio 3 于 09-15 发布、GPT-Live-1 API 于 09-11 发布，均逾 24 小时），故本期新闻条目为空，如实标注。"
+}

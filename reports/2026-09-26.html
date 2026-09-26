@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-09-26</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-09-26</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年9月26日 (周六) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">9</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.30227" target="_blank">To Trust or Not to Trust: Retrieval-Augmented Fact Checking in Speech</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-24</span><span>👥 Debajyoti Mazumder, Mamta, Abhirama Subramanyam Penamakuri</span></div>
+      <div class="abstract">虚假信息越来越多以口语形式（新闻片段、播客、访谈、政治演讲、社媒视频）传播，亟需能直接从语音验证声明的系统。作者提出 VeriSpeak，一个研究大音频语言模型（LALM）语音事实核查的探测基准，含 3879 条涵盖时间、地理、关系事实的口语声明，真假标签均衡。实验揭示一贯的文本-语音模态落差：能可靠验证书面声明的 LALM 在相同声明的口语版本上常失败；单纯检索仅带来有限增益，因为模型常混淆检索证据与口语声明。检索结合显式推理可改善声明-证据比对，经 thinking 微调的 LALM 达 86.1% 准确率。数据集已开源（HuggingFace）。</div>
+      <div class="tags"><span class="tag">Fact Checking</span><span class="tag">Audio LLM</span><span class="tag">Retrieval-Augmented</span><span class="tag">Misinformation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.30227" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.30227" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.30083" target="_blank">COSED: Setting the Bar for Open-Vocabulary Sound Event Detection</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-24</span><span>👥 Florian Schmid, Sanjeel Parekh, Chi Ian Tang, Juan Azcarreta, Yijun Qian, Arnoldas Jasonas, Andrew Frederick Francl, Çağdaş Bilen</span></div>
+      <div class="abstract">开放词汇声音事件检测（OV-SED）需检测并按任意文本查询时域定位声学事件。作者建立覆盖六个时域标注任务的综合基准（四个固定类别词汇 + 两个自由文本 grounding），在相同数据与指标下以标签空间零样本准则评测五种近期方法，发现无一方法跨全部任务具备竞争力。作者提出的 COSED 在六项任务中五项超先前工作、一项持平，其中三项有 12-33% 的显著优势，是唯一跨所有任务都具竞争力的系统。消融定位收益来源：负样本限定来源语料（25.8%）、封闭+开放世界监督结合（16.8%）、改进时序处理（16.4%）。</div>
+      <div class="tags"><span class="tag">Sound Event Detection</span><span class="tag">Open-Vocabulary</span><span class="tag">Benchmark</span><span class="tag">Zero-Shot</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.30083" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.30083" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.29889" target="_blank">EditVoice: Variable-Length Non-Autoregressive Zero-Shot TTS and Speech Editing with Edit Flows</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-24</span><span>👥 Authors</span></div>
+      <div class="abstract">近期非自回归（NAR）零样本文本转语音（TTS）模型可并行生成，但通常需在生成前指定目标序列长度。作者提出 EditVoice，据称是首个变长 NAR 零样本 TTS 模型，使用 Edit Flows 联合更新语音序列的长度与内容，同时支持语音编辑，无需预先固定长度约束，为并行 TTS 与语音编辑提供了更灵活的方案。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Non-Autoregressive</span><span class="tag">Zero-Shot</span><span class="tag">Speech Editing</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.29889" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.29889" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.30029" target="_blank">TEMA: Evidence-Grounded Temporal Question Answering in Multi-Turn Multi-Audio Dialogs</a></h4>
+      <div class="meta"><span>📅 2026-09-24</span><span>👥 Kaidi Yang, Hualei Wang, Zhaohui Wang, Chenxuan Wang, Hong Liu, Xiangdong Wang</span></div>
+      <div class="abstract">多轮多音频时序问答要求模型跨追问、录音切换、历史引用追踪目标事件并恢复完整实例边界以做时序计算与比较。作者提出 TEMA，通过 Route（指定音频范围）与 Span（以条件音频字幕描述相关区间）连接事件感知与基于证据的回答；构建含 40704 段对话的 TEMA-Dialog 与 TEMA-Bench。在 Qwen2.5-Omni 与 AF-Next 上的实验显示时序问答（尤其事件定位与跨音频比较）显著提升，仅对证据施加强化学习进一步改善区间恢复与回答准确率。</div>
+      <div class="tags"><span class="tag">Audio QA</span><span class="tag">Temporal Reasoning</span><span class="tag">Multi-Turn</span><span class="tag">Evidence-Grounded</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.30029" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.30029" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.30005" target="_blank">VietPrism: A large-scale Vietnamese speech and deepfake corpus with diverse dialects and code-switching</a></h4>
+      <div class="meta"><span>📅 2026-09-24</span><span>👥 Minh Hoang, Thai Le</span></div>
+      <div class="abstract">越南语语音研究受限于将 ASR 与说话人、方言、语码切换、深度伪造分析割裂的资源。作者提出 VietPrism，一个大规模开放多域语料：993.4 小时、403941 条真实话语、1262 位验证说话人、8388 段真实视频，首次联合提供转录、一致说话人身份、五大方言群与自然发生的越英语码切换（近半时长）。另生成 3.1K+ 小时欺骗语音，每条以验证说话人参考为条件并与真实话语配对。零样本评测五个预训练多语检测器揭示显著脆弱性：EER 因检测器-生成器配对而异，DFA-1B 随说话人相似度升高从 16.3% 恶化到 33.6%。</div>
+      <div class="tags"><span class="tag">Deepfake Detection</span><span class="tag">Vietnamese</span><span class="tag">Corpus</span><span class="tag">Code-Switching</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.30005" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.30005" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.29923" target="_blank">ARIS: Low-Resource Glass-Box Neural Source-Filter Synthesis for Phonetic Stimulus Manipulation</a></h4>
+      <div class="meta"><span>📅 2026-09-24</span><span>👥 Yiran Ding, Wenwei Xu</span></div>
+      <div class="abstract">语音学家常需构造精确操纵特定声学线索、同时保持语音质量的刺激。作者提出 ARIS，一个神经源-滤波器模型，将神经参数估计与确定性 DSP 合成配对：每个控制项都是合成器系数，F0、共振峰与声门源可直接编辑。在三种语言五个小规模单说话人语料上，ARIS 的重合成质量与 WORLD 相当，单参数编辑精度优于 Praat KlattGrid，线索间串扰可忽略；重合成保真度与操控精度优于在大语料预训练的 HiFi-Glot。含演示音频样例。</div>
+      <div class="tags"><span class="tag">Speech Synthesis</span><span class="tag">Source-Filter</span><span class="tag">Interpretable</span><span class="tag">Low-Resource</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.29923" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.29923" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.30167" target="_blank">Do Audio Language Models Hear and Read Distinctive Features Alike?</a></h4>
+      <div class="meta"><span>📅 2026-09-24</span><span>👥 Yuanhao Chen, Peter Chin</span></div>
+      <div class="abstract">音频语言模型将语音与文本通过单一解码器处理。作者探究当音素被「听到」与「读到」时，解码器是否以相同方向表征同一区别性特征。对仅差一个特征的最小音素对，取两者均值表示的偏移，平均得到每个流的特征方向并度量其余弦相似度。跨 6 个模型、7 个特征、11 语系 15 种语言的分析显示：多重检验校正后仅两个 Qwen2.5-Omni 模型的浊音特征超过随机配对参考；决定哪个流表征某特征的是模型家族而非模型规模。</div>
+      <div class="tags"><span class="tag">Audio LLM</span><span class="tag">Phonology</span><span class="tag">Interpretability</span><span class="tag">Multilingual</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.30167" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.30167" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.30160" target="_blank">A Training Criterion with Token-Level Tolerance to Transcription Ambiguity for Automatic Speech Recognition</a></h4>
+      <div class="meta"><span>📅 2026-09-24</span><span>👥 Saurabh Kumar, Diptiman Mohanta, Prasanta Kumar Ghosh</span></div>
+      <div class="abstract">ASR 通常假设参考转录是唯一合法标注，但即便是逐字转录也含声学无法唯一确定的局部差异。作者将 Omni-temporal Classification（OTC）的通配弧从词级下放到 token 级，使不支持 token 可被绕过而词内其余部分仍受监督，并与词级弧结合作为互补逃逸路径。跨 19 种语言、三个语料，token 级 OTC 在全部 25 项任务上优于 CTC，平均相对 WER 降低 9.45%。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Training Criterion</span><span class="tag">CTC</span><span class="tag">Token-Level</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.30160" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.30160" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.30075" target="_blank">A Native-Reference Phone-Class Geometry for Second-Language Pronunciation Analysis</a></h4>
+      <div class="meta"><span>📅 2026-09-24</span><span>👥 Tina Raissi, Nhan Phan, Chenxiao Wang, Mikko Kurimo</span></div>
+      <div class="abstract">自动口语评估系统能给出整体水平分，但常缺乏可解释的发音质量度量。作者提出基于母语参考音素类几何度量二语发音偏差的方法，无需发音标注、朗读提示或母语/二语配对录音：对母语语料平均帧级自监督表示，用 SVD 得到紧凑母语参考坐标系，将二语话语投影其中，匹配音素类坐标距离与整体口语水平（Spearman ρ=-0.53）及发音质量（ρ=-0.34）呈一致负相关。</div>
+      <div class="tags"><span class="tag">Pronunciation</span><span class="tag">L2 Assessment</span><span class="tag">Self-Supervised</span><span class="tag">Interpretable</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.30075" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.30075" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-09-26') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
