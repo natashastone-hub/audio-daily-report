@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-09-27</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-09-27</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年9月27日 (周日) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">10</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.29805" target="_blank">STAM-ASR: Speaker-Temporal Anchoring with Memory for Multi-Speaker ASR</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-24</span><span>👥 Syeda Faiza Ahmed Sara et al.</span></div>
+      <div class="abstract">自然对话中说话人轮流、重叠并随时间重现，使 ASR 的识别与说话人归属双重困难。作者提出 STAM-ASR，一个轻量框架，在已预训练的 AudioLLM 上扩展多说话人 ASR：不依赖外部说话人分离系统，直接从中间特征学习说话人活动与说话人感知表示，提供显式的『谁+何时』线索调制语义表征；并维护固定大小的说话人与对话记忆跨轮传递上下文。在 AMI、ICSI、LibriCSS、NOTSOFAR-1 上覆盖近讲、远场、重叠与跨域条件，验证说话人-时序条件与记忆的互补增益，并指出稳健说话人追踪仍是关键挑战。</div>
+      <div class="tags"><span class="tag">Multi-Speaker ASR</span><span class="tag">AudioLLM</span><span class="tag">Speaker Diarization</span><span class="tag">Memory</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.29805" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.29805" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.29238" target="_blank">TSE-Omni: Exploring a Single Autoregressive LLM for Unified Target Speech Extraction across Synchronous and Asynchronous Cues</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-24</span><span>👥 Wenxuan Wu et al.</span></div>
+      <div class="abstract">目标语音提取（TSE）通常为每种线索单独训练提取器。作者证明单一自回归 LLM 骨干 TSE-Omni 可同时处理时间同步线索（唇动、共手势）与异步线索（注册音频、文本）。其由 next-token prediction 驱动，逐步从自身历史输出预测目标语音语义 token（即『自注册』），形成以注册线索初始化的连续目标语音上下文，实现声视觉互补：视觉完整时用同步视觉、视觉帧缺失时用 token 历史。干净视觉下与强判别/生成基线相当（VoxCeleb2 SpeechBERTScore 0.81、LRS3 零样本 0.89）且 DNSMOS 更高；移除后段视觉帧后仍保持 0.81，支持流式推理。含项目主页。</div>
+      <div class="tags"><span class="tag">Target Speech Extraction</span><span class="tag">AudioLLM</span><span class="tag">Audio-Visual</span><span class="tag">Streaming</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.29238" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.29238" target="_blank">🔗 PDF</a> <a href="https://alexwxwu.github.io/tseomni-main/" target="_blank">🔗 项目主页</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.29746" target="_blank">Relative Mismatch: Local-Reference Calibration of Feature-Space Flows for Anomalous Sound Detection</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-24</span><span>👥 Anbai Jiang et al.</span></div>
+      <div class="abstract">异常声音检测（ASD）长期由 kNN 检测器主导。作者探索生成模型能否更好胜任，提出基于 flow matching 的生成式后端 Relative Mismatch：学习将高斯噪声输运到正常特征空间的速度场，推理时度量预测路径与 oracle 的速度失配并两级聚合。为缓解域偏移引入的固有失配，每个查询用其局部正常参考的失配校准，仅暴露超出正常态的偏差。在 DCASE 2020–2025 上以最高分 71.01 超越 SOTA 后端，鲁棒性与训练稳定性均强。</div>
+      <div class="tags"><span class="tag">Anomalous Sound Detection</span><span class="tag">Flow Matching</span><span class="tag">Generative</span><span class="tag">SOTA</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.29746" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.29746" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.29287" target="_blank">AEGIS: Audio Endogenous Guarding via Internal Signals Against Large Audio-Language Model Jailbreaks</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-24</span><span>👥 Yu-Ling Liao et al.</span></div>
+      <div class="abstract">大音频语言模型（LALM）扩大了语言模型对音频的处理能力，却也暴露于异构音频越狱。层间探测发现：风险信息在中间表示中可解码，但内部风险信号在后期层未能转化为拒绝（即『风险-拒绝落差』）。据此提出 AEGIS，一个 detect-then-intervene 防御，其中层风险门选择性激活下游安全适配器。跨 6 个 LALM 与 3 个异构音频越狱基准，将平均不安全率从 17.9% 降至 0.4%，良性输入上的过度拒绝仅略微上升。代码开源。</div>
+      <div class="tags"><span class="tag">Audio LLM</span><span class="tag">Jailbreak Defense</span><span class="tag">Safety</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.29287" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.29287" target="_blank">🔗 PDF</a> <a href="https://github.com/azzzzliao/aegis-audio-defense" target="_blank">🔗 GitHub</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.29372" target="_blank">Topology-Preserving Wavelet Scattering Front-End for Speech Deepfake Detection</a></h4>
+      <div class="meta"><span>📅 2026-09-24</span><span>👥 Kwok-Ho Ng et al.</span></div>
+      <div class="abstract">声学前端决定语音深度伪造检测器可利用哪些取证线索。作者提出 WST-Graph，将小波散射变换（WST）的路径重构为稀疏调制-载波网格作为 AASIST 图后端，调制级归一化与长度感知自适应局部注意力池化产生固定相对时间表示。这是一个波形到图的接口，采用固定、无参数的 WST。其配置以约少 60% 的可训练参数与 AASIST 竞争，并在部分域外基准上明显提升，凸显在载体-调制拓扑中保留父子关系对紧凑、物理基础的图式深度伪造检测的价值。代码将开源。</div>
+      <div class="tags"><span class="tag">Deepfake Detection</span><span class="tag">Wavelet Scattering</span><span class="tag">Graph</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.29372" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.29372" target="_blank">🔗 PDF</a> <a href="https://github.com/saki-ciallo/wst-graph" target="_blank">🔗 GitHub</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.29464" target="_blank">TS-OPD: Reconciling ASR and QA in Speech Language Models via Task-Specific On-Policy Distillation</a></h4>
+      <div class="meta"><span>📅 2026-09-24</span><span>👥 Yujie Guo et al.</span></div>
+      <div class="abstract">语音语言模型（SLM）继承了预训练语言模型的强指令遵循能力，但 ASR 专业化会损害其 QA。针对 ASR-QA 权衡，作者提出任务特定在线策略蒸馏 TS-OPD，将 ASR 专业化前后的模型分别作为互补的 QA 与 ASR 教师，学生为 ASR 与 QA 生成分离的任务条件轨迹，各自由对应教师监督，减少两个监督信号的直接竞争。在基础 ASR、上下文 ASR 与 QA 上，TS-OPD 在保持 QA 能力的同时提升识别，并跨平衡系数稳健、随蒸馏数据增长持续受益。</div>
+      <div class="tags"><span class="tag">Speech LLM</span><span class="tag">ASR</span><span class="tag">Distillation</span><span class="tag">Multi-Task</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.29464" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.29464" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.29343" target="_blank">Speech Block Influence: Component-Specific Layer Scoring for Pruning Speech LLMs</a></h4>
+      <div class="meta"><span>📅 2026-09-24</span><span>👥 Siyu Yao et al.</span></div>
+      <div class="abstract">语音 LLM 部署成本高，层剪枝可降本，但现有评分度量迁移到语音 LLM 效果差（它们假设 decoder-only 且同质 token，而语音 LLM 含编码器与适配器、处理多模态序列）。作者提出首个面向语音 LLM 剪枝的层重要性评分框架 SBI：SBI-Enc 在适配器输出处度量编码器层移除的影响以更好反映下游影响；SBI-Dec 仅在文本 token 位置度量层间输入输出相似度以避免音频 token 主导。跨三个语音 LLM 提升剪枝稳健性，并发现纯文本校准即可得到与语音-文本校准高度相关的解码器排序。</div>
+      <div class="tags"><span class="tag">Speech LLM</span><span class="tag">Pruning</span><span class="tag">Compression</span><span class="tag">Inference</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.29343" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.29343" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.29737" target="_blank">No Time to Collapse: Unlocking Robustness and Multiplexed Capacity in Frozen Audio Watermarkers</a></h4>
+      <div class="meta"><span>📅 2026-09-24</span><span>👥 Linxi Li et al.</span></div>
+      <div class="abstract">现代神经音频水印通常跨时间重复嵌入信息，再将时序证据折叠为单一载荷。作者论证这种时间折叠限制了鲁棒性与多载荷恢复，且无需重训底层水印器即可缓解：冻结预训练水印器的编码器与检测器，只训练低延迟 Conformer 解码器，消费检测器的时序软输出并预测嵌入信息。在 AURA、AudioSeal、WavMark 三个冻结水印器上，学到的解码器改善受攻击消息恢复并提升检测 AUROC；在多路复用下，双交替载荷的联合精确恢复提升 6.9–48.0 个百分点。</div>
+      <div class="tags"><span class="tag">Audio Watermarking</span><span class="tag">Robustness</span><span class="tag">Conformer</span><span class="tag">Multiplexing</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.29737" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.29737" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.29866" target="_blank">Beyond Model Size: Redesigning LiSenNet for embedded speech enhancement</a></h4>
+      <div class="meta"><span>📅 2026-09-24</span><span>👥 Clément Laroche et al.</span></div>
+      <div class="abstract">在资源受限设备上部署实时语音增强需满足严格时延/内存/能耗约束，微控制器 NPU 可加速推理但仅通过受限算子的静态 int8 量化图。作者将 37k 参数的子带双路径模型 LiSenNet 重新设计以适配 STM32N6570 的 Neural-ART 加速器：用卷积频/时混合器替换循环瓶颈、把不支持操作重构为静态 int8 兼容原语、用有界解码器激活保持量化后质量。最终 NPU 兼容模型在 VoiceBank-DEMAND 上 PESQ 达 FP32 3.08（基线 3.01）、int8 3.01（2.93），微控制器上 RTF 0.30。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">On-Device</span><span class="tag">NPU</span><span class="tag">Quantization</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.29866" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.29866" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.29867" target="_blank">Does per-frame early exit pay? A compute-matched study of dynamic depth for on-device speech enhancement</a></h4>
+      <div class="meta"><span>📅 2026-09-24</span><span>👥 Clément Laroche et al.</span></div>
+      <div class="abstract">基于深度学习的语音增强日益部署到助听器、耳机等端侧，多数设备只能加速静态 int8 图。作者监督一个因果模型的每个中间深度并微调其输出头，保证更深输出不劣于浅层，从而导出比同预算从头训练更 Pareto 高效的静态模型族：等算力下 PESQ 高 0.11，或在省 30% 算力下达到最佳 PESQ。int8 量化后在 STM32N6 上测时延-质量前沿，动态增强器落在与静态模型相同的前沿而非牺牲质量；配套 Cortex-M55 上策略每帧仅 26μs，拆分 NPU 图仅增 2.2% 时延。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">On-Device</span><span class="tag">Early Exit</span><span class="tag">NPU</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.29867" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.29867" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-09-27') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
