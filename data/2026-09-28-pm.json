@@ -1,0 +1,5 @@
+{
+  "papers": [],
+  "news": [],
+  "note": "当前日期 2026-09-28（周一）14:00。下午版严格 6 小时窗口（09-28 09:30 至 14:00 CST，即 01:30 至 06:00 UTC）内，arXiv 的 eess.AS / cs.SD 无任何新提交：按 submittedDate 降序检索，最新一条仍为 09-25（周五）17:43 UTC 提交的 2609.31588（RePlay），距当前已逾 3 天。周一（09-28）的 arXiv 公告批次实为周五晚间提交、周一早晨才 announcement 的论文，其 submittedDate 仍落在 09-25，不属于本 6 小时窗口，且其中 ID ≤ 2609.30227 部分已被 09-26 早报完整收录。故下午版无新增论文可录。HuggingFace Daily Papers 音频合集同步停留在 09-25 批次。新闻方面：已逐条执行重磅关键词检索（GPT-Live 全双工 / OpenAI voice / Gemini voice / full-duplex / 语音模型发布 / real-time voice AI），最近 6 小时内音频/语音领域无重大产品发布（Qwen-Audio-3.1 为 09-23、Gemini 3.8 Flash TTS 为 09-23、Gemini 3.8 Live 为 09-15、GPT-Live-1 API 为 09-11，均远逾 6 小时），故本期论文与新闻均为空，如实标注，不重复旧内容。"
+}
