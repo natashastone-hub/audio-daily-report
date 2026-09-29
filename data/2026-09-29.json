@@ -1,0 +1,211 @@
+{
+  "papers": [
+    {
+      "title": "SAGE: Semantic Audio Generative Encoder",
+      "url": "https://arxiv.org/abs/2609.32755",
+      "date": "2026-09-26",
+      "authors": "Francesco Brigante, Luca Cerovaz, Davide Marincione, Giorgio Strano, Luca Zhou, Emanuele Rodolà, Michele Mancusi",
+      "abstract": "音频自编码器在重建质量、潜在空间语义结构与推理速度之间存在三重权衡。本文提出 SAGE，一个仅用公开音乐训练的紧凑变分自编码器，通过蒸馏预训练音频-文本模型的嵌入来塑造潜在空间。105M 参数的 SAGE 以 Stable Audio Open 的推理成本，达到 8 倍更大、4 倍更慢的 SAME-L 的听感质量，并在 19 项潜在语义探测任务上取得 SOTA。代码与权重开源。",
+      "tags": ["Audio Autoencoder", "Semantic Latent", "Music", "Open Source"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.32755"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.32755"},
+        {"label": "GitHub", "url": "https://github.com/francescobrigante/SAGE"}
+      ]
+    },
+    {
+      "title": "DEFINE: Exemplar-Guided Accent Control for Zero-Shot TTS",
+      "url": "https://arxiv.org/abs/2609.32777",
+      "date": "2026-09-26",
+      "authors": "Ambuj Mehrish, Abhinaba Roy, Alex Ivanov, Tawsif Ahmed, Dorien Herremans",
+      "abstract": "零样本 TTS 能复现未见说话人，但通常把说话人身份与口音纠缠在同一个参考音频里。作者提出 DEFINE，解耦二者：分别用独立音频样例条件化说话人身份与目标口音，单个推理时引导权重即可连续控制口音强度而无须重训。基于 F5-TTS + LoRA，单一模型可泛化到训练集之外的口音，说话人相似度更高。",
+      "tags": ["Zero-Shot TTS", "Accent Control", "Disentanglement", "F5-TTS"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.32777"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.32777"}
+      ]
+    },
+    {
+      "title": "VoiceNet: Fine-Grained Voice Understanding Beyond Emotion at Scale",
+      "url": "https://arxiv.org/abs/2609.32016",
+      "date": "2026-09-25",
+      "authors": "Christoph Schuhmann, Robert Kaczmarczyk, Gollam Rabby, Felix Friedrich, Maurice Kraus, Gijs Wijngaard, Kourosh Nadi, Huu Nguyen, Kristian Kersting, Sören Auer",
+      "abstract": "富有表现力的语音合成已超越语音感知，现有基准仍停留在 6-9 类基本情绪。作者提出 VoiceNet，一个面向野外语音的人声表现理解基准：VoiceNet-Emo 采用 40 类情绪分类、每条三项专家评分，VoiceNet-Ext 覆盖 57 种说话风格属性（语速、声带张力、气声、音域等）。同时开源 Emolia 语料及 110M/7B 两档 VoiceCLAP 基线，显著超越现有 CLAP。",
+      "tags": ["Voice Understanding", "Emotion", "Benchmark", "Open Data"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.32016"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.32016"}
+      ]
+    },
+    {
+      "title": "TinyAudio: Compact and Efficient Text-to-Audio Generation for Low-Resource Deployment",
+      "url": "https://arxiv.org/abs/2609.31525",
+      "date": "2026-09-25",
+      "authors": "Junxi Liu, Xiquan Li, Wenhao Guan, Yifan Duan, Zhikang Niu, Yanru Huo, Ziyang Ma, Xie Chen",
+      "abstract": "文本到音频生成主流系统动辄十亿参数，难以部署到资源受限设备。作者提出 TinyAudio，总参数仅 87M（比十亿级管线少 90%+），峰值显存 0.48GB：核心为 35M 单流流匹配 Transformer TA-DiT、32M 文本编码器 TA-CLAP 与 20M 解码器 TA-VAE。另推出 MeanFlow 加速版 TinyAudio-MF，可在四核 CPU 上实时生成。",
+      "tags": ["Text-to-Audio", "Flow Matching", "Compact", "On-Device"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.31525"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.31525"}
+      ]
+    },
+    {
+      "title": "I-Parakeet: Integer-Only Conformer ASR on Mobile NPU",
+      "url": "https://arxiv.org/abs/2609.30846",
+      "date": "2026-09-25",
+      "authors": "Taichi Nishimura",
+      "abstract": "现代 Conformer ASR 因规模大难以在端侧部署，量化模型仍会回退浮点计算。作者提出 I-Parakeet，NVIDIA Parakeet-CTC（0.6B）的纯整数实现，可在手机 NPU 上运行、无任何浮点算子或 CPU 回退：整数化相对位置自注意力、极小化误差的 Swish 逼近、层间激活范围分析。LibriSpeech test-other WER 4.97%，高通 NPU 上 RTF 0.048，比 CPU 基线快 7.5 倍。",
+      "tags": ["ASR", "Integer-Only", "On-Device", "NPU"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.30846"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.30846"}
+      ]
+    },
+    {
+      "title": "CORD-KWS: Calibrated, Order-Aware Detection for Open-Vocabulary Keyword Spotting",
+      "url": "https://arxiv.org/abs/2609.31869",
+      "date": "2026-09-25",
+      "authors": "Ramesh Gundluru, Adarsh Arigala, Sri Rama Murty Kodukula",
+      "abstract": "开放词汇关键词检测中，嵌入模型虽省算力但在困难基准上落后于交叉注意力模型。作者证明这一差距主要源于训练而非容量：对比学习未显式校准绝对相似度分数。提出 CORD-KWS，加入校准检测头与帧级 CTC 目标以保留音素顺序，保持 O(1) 关键词注册，在 LibriPhrase-hard 上取得 9.64% EER，超越现有嵌入与交叉注意力模型。",
+      "tags": ["Keyword Spotting", "Open-Vocabulary", "Calibration", "SOTA"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.31869"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.31869"}
+      ]
+    },
+    {
+      "title": "VoxMem: Benchmarking Multimodal Memory in Large Audio Language Models",
+      "url": "https://arxiv.org/abs/2609.32607",
+      "date": "2026-09-26",
+      "authors": "Yang Xiao, Vidhyasaharan Sethu, Eun-Jung Holden, Ting Dang",
+      "abstract": "口语对话系统需从历史交互恢复信息，而语音中的记忆远超文本——谁说的、怎么说、听到了什么。作者提出 VoxMem，沿「声学证据 × 记忆操作」双轴建立分类，含 3196 个评测实例、34743 个口语会话（177 小时），覆盖说话人身份、副语言线索、环境声等四类声学证据。评估 15 个 LALM，32K 上下文下无一超过 40%，模型对「说了什么」的记忆远好于「谁说的/怎么说的」。",
+      "tags": ["Audio LLM", "Memory", "Benchmark", "Multi-Session"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.32607"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.32607"}
+      ]
+    },
+    {
+      "title": "Beyond Dyadic Memory: Interaction-Aware Multimodal Memory with Adaptive Agentic Retrieval for Multi-Party Spoken Conversations",
+      "url": "https://arxiv.org/abs/2609.32522",
+      "date": "2026-09-26",
+      "authors": "Wenxu Jia, Xize Cheng, Zihan Zhang, Dongjie Fu, Linjun Li, Wenshi Chen, Yangyang Wu, Tao Jin",
+      "abstract": "多说话人口语对话的长期记忆长期被忽视。作者提出 VoxPolyMem，一个交互感知的多模态记忆框架，结合增量式说话人识别与「交互记忆/事实记忆/参与者档案」层级记忆，将检索建模为序贯决策，并引入 Evidence-Gain GRPO。在 VoxPolyBench 上得 85.0 分，超越最强基线 23.6 分。代码与数据开源。",
+      "tags": ["Audio LLM", "Memory", "Multi-Party", "Agentic Retrieval"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.32522"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.32522"},
+        {"label": "项目主页", "url": "https://voxpolymem.github.io/VoxPolyBench/demo/"}
+      ]
+    },
+    {
+      "title": "Acoustic-to-Text KV Compression for Full-Duplex Speech Models",
+      "url": "https://arxiv.org/abs/2609.31224",
+      "date": "2026-09-25",
+      "authors": "Yejin Lee, Seungbeom Kim, Yongha Lee, Kyuhong Shim",
+      "abstract": "全双工语音语言模型持续累积声学 KV 状态，长会话内存开销大。作者提出 acoustic-to-text KV 压缩：利用「听」的间隔引入语音转写侧通道，将输入语音转成紧凑文本记忆，推理时淘汰旧声学状态、保留转写与近期声学上下文。在 10 分钟 LongSpeech 会话上，MiniCPM-o 4.5 峰值流式 KV 缓存降低 64.6%，且转写、时序问答与摘要均有提升。",
+      "tags": ["Full-Duplex", "Speech LLM", "KV Cache", "Compression"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.31224"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.31224"}
+      ]
+    },
+    {
+      "title": "SAID: Semantic Acoustic Imaging Detector for Sound Event Localization and Detection",
+      "url": "https://arxiv.org/abs/2609.31492",
+      "date": "2026-09-25",
+      "authors": "Runbang Wang, Zining Liang, Yin Cao, Qiuqiang Kong",
+      "abstract": "语义声学成像要求为每个声源预测带标签的声学地图（方向区域+能量+类别），比单一定位更难。作者提出 SAID，用 Audio2Sph 先无标签预训练声学编码器，再联合预测声源区域/能量/类别。在 DCASE2026 Task 3 Track A 官方评测集上以 0.1080 Macro mAP 排名第一。代码与演示开源。",
+      "tags": ["Sound Event Detection", "Semantic Acoustic Imaging", "DCASE", "SOTA"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.31492"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.31492"},
+        {"label": "GitHub", "url": "https://github.com/IN03X/SAID"}
+      ]
+    },
+    {
+      "title": "WhisperVC-AV: Audio-Visual Content Restoration for Noise-Robust Whisper-to-Normal Voice Conversion",
+      "url": "https://arxiv.org/abs/2609.32843",
+      "date": "2026-09-26",
+      "authors": "Ziyue Yin, Dong Liu, Ming Li",
+      "abstract": "环境噪声遮蔽「耳语转正常语音」所需的内容线索。作者提出 WhisperVC-AV，通过上下文引导修复模块结合时序声学上下文与同步唇部特征，在不改动原 WhisperVC 模块的前提下恢复内容特征。在 AISHELL6-Whisper 上，跨三个 ASR 系统 CER 更低，0 dB SNR 下 Qwen3-ASR CER 从 36.29% 降至 28.88%，且无需重训即可泛化到未见背景噪声。",
+      "tags": ["Voice Conversion", "Audio-Visual", "Noise Robust", "Whisper"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.32843"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.32843"}
+      ]
+    },
+    {
+      "title": "Do Audio LLMs Listen Before They Act? Diagnosing Acoustic-Context Gating in Voice Agents",
+      "url": "https://arxiv.org/abs/2609.32536",
+      "date": "2026-09-26",
+      "authors": "Yanjie Zhang, Nanchen Hu, Yushi Sun",
+      "abstract": "音频语言模型能识别口令并调用工具，但智能体必须先判断声学与对话上下文是否值得行动。作者提出 VGBench（1018 项）诊断「动作级可寻址性」，覆盖旁人说话、自言自语、说话人切换场景。6 个原始 Audio LLM 常识别到目标工具却很少在切换时抑制动作（最高切换静默率仅 14%）。以 VoxGate 后训练为例，监督训练可静默 91.3% 的切换指令。",
+      "tags": ["Audio LLM", "Voice Agent", "Benchmark", "Context Gating"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.32536"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.32536"}
+      ]
+    },
+    {
+      "title": "RePlay: Retrieval-Based Voice Playback for Multi-Turn spoken dialogue",
+      "url": "https://arxiv.org/abs/2609.31588",
+      "date": "2026-09-25",
+      "authors": "Sathvik Udupa, Naveen Kumar, Ryan Folmsbee",
+      "abstract": "许多语音交互应用需同时精确控制回复内容与呈现方式（使用预录音）。全双工模型低延迟但无法保证精确内容，级联系统可限定回复但引入延迟。作者提出 RePlay，从 PersonaPlex 改编，通过探测识别「即将回复可恢复」的层与帧，将其隐藏状态作为检索查询，替换文本/语音生成为轻量轮次与检索头。模拟多轮访谈中位延迟 383ms，比同质量 ASR-LLM 级联低 3-7 倍。",
+      "tags": ["Spoken Dialogue", "Retrieval", "Low Latency", "Full-Duplex"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.31588"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.31588"}
+      ]
+    },
+    {
+      "title": "NVAlign: Direct-Gradient Optimization for Non-Verbal Control in Continuous Autoregressive Flow Matching Text-to-Speech",
+      "url": "https://arxiv.org/abs/2609.31892",
+      "date": "2026-09-25",
+      "authors": "Qiaolin Wang, Pedro Sandoval-Segura, Anunaya Joshi, Edvardas Jurkonis, Jake Downie",
+      "abstract": "现代 TTS 已支持内联非言语发声（NVV）标签，但对其精确控制仍困难。作者提出 NVAlign，面向连续自回归流匹配 TTS 的直接梯度后训练框架：以冻结的 NVV-aware ASR 作奖励模型，通过两步梯度代理高效反向传播，在 NVV-SuperBench 与人工听感上均优于 SFT 与 Flow-GRPO。",
+      "tags": ["TTS", "Non-Verbal Control", "Flow Matching", "Reinforcement Learning"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.31892"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.31892"},
+        {"label": "Demo", "url": "https://nvalign.github.io/"}
+      ]
+    },
+    {
+      "title": "Training-Free Pronunciation Transcription via Text-Constrained Acoustic Rescoring",
+      "url": "https://arxiv.org/abs/2609.30924",
+      "date": "2026-09-25",
+      "authors": "Hikaru Asano, Yotaro Kubo, So Kuroki",
+      "abstract": "准确发音转写对规模化 TTS 数据准备至关重要。作者提出免训练 ST2P 流水线：词法资源与 G2P 生成文本约束候选，用冻结 S2P 模型的全序列负对数似然做从左到右贪心搜索。三个日语语料上 CER 从 0.60–1.40% 降至 0.04–0.17%（带参考转录），超越含训练 ST2P 模型与商用多模态 LLM，效率也更高。",
+      "tags": ["Pronunciation", "G2P", "Training-Free", "TTS Data"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.30924"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.30924"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "阿里 Qwen-Audio-3.1-TTS 登顶 Artificial Analysis 语音排行榜（Controlled Voice Arena）全球第一",
+      "url": "https://finance.sina.com.cn/roll/2026-09-28/doc-initktnz9677712.shtml",
+      "summary": "9 月 28 日，全球权威 AI 评测平台 Artificial Analysis 的语音排行榜（Controlled Voice Arena）上，阿里最新语音大模型 Qwen-Audio-3.1-TTS 以 1177 的 Elo 评分位列全球第一。该模型支持多语种及方言合成，能让同一音色在不同语言间自然迁移，标志着国产语音合成模型在国际权威评测中取得领先。"
+    }
+  ],
+  "note": "当前日期 2026-09-29（周二）。最新 arXiv eess.AS/cs.SD 批次为 09-26（周五）提交（ID 上限 2609.32843）及 09-25 批次未被早前报告收录的论文（ID 区间约 2609.30694–2609.32050）。09-27 早报补录至 2609.29867、09-26 早报补录至 2609.30227，本批论文此前均未收录，本期补录 15 篇亮点论文（语义音频编码器 SAGE、口音控制 TTS DEFINE、细粒度人声理解 VoiceNet、紧凑文本到音频 TinyAudio、纯整数移动端 ASR I-Parakeet、开放词汇 KWS CORD-KWS、VoxMem/VoxPolyMem 多模态记忆、全双工 KV 压缩、DCASE 排名第一的 SAID 等）。新闻方面：最近 24 小时内命中 1 条重磅动态——阿里 Qwen-Audio-3.1-TTS 于 09-28 登顶 Artificial Analysis 语音排行榜（Elo 1177 全球第一）；其余产品动态（Gemini 3.8 Live 为 09-15、GPT-Live-1 API 为 09-11、阿里云百炼 TTS 降价为 09-22）均逾 24 小时，不再收录。"
+}
