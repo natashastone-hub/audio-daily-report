@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-09-30-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-09-30-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年9月30日 (周三) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">9</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.38157" target="_blank">EmoRES-TTS: Residual-Enhanced Vector Steering for Emotional Speech Generation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Kuan-Po Huang, Haohe Liu, Puyuan Peng, Haibin Wu, Zhaoheng Ni, Hung-yi Lee, Jinwon Lee, Neha Chachra</span></div>
+      <div class="abstract">情绪条件 TTS 模型可能无法可靠表达指定情绪，而靠追加训练提升可控性成本高昂。团队研究向量引导（vector steering）这一免训练方法：发现情绪向量可分解为「远离中性表达的共享分量」与「指向目标情绪的残差分量」。据此提出 EmoRES，无需重训主干即可分别控制两个分量。在 IEMOCAP 上，EmoRES 在 IndexTTS-2 与 CosyVoice2 两大主干上四项客观情绪指标全面超越 CoCoEmo，秩相关平均相对提升最高 118.8%，情绪命中率平均相对提升最高 20.1%；人评中主导情绪识别率相对提升最高 35.0%。代码开源（Meta）。</div>
+      <div class="tags"><span class="tag">Emotional TTS</span><span class="tag">Vector Steering</span><span class="tag">Training-Free</span><span class="tag">Open Source</span><span class="tag">Meta</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.38157" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.38157" target="_blank">🔗 PDF</a> <a href="https://github.com/facebookresearch/EmoRES-TTS" target="_blank">🔗 GitHub</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.37798" target="_blank">GLaS-JEPA: Gaussian-Regularized Speech SSL without Engineered Prediction Targets</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Gaspard Botté, Séverin Baroudi, Samir Sadok, Francesco Paissan, Thomas Hueber, Xavier Alameda-Pineda, Ricard Marxer, Mirco Ravanelli</span></div>
+      <div class="abstract">语音自监督学习（SSL）依赖复杂的、精心设计的预测目标。团队质疑其必要性，提出 GLaS-JEPA：直接预测当前编码器在掩码位置的连续表示，无需对比学习、离散目标或独立的 EMA 目标编码器；用 SIGReg 表示空间正则化防止坍缩。仅用 960 小时 LibriSpeech 预训练，57M 参数模型在冻结编码器的 SUPERB ASR 上达 6.89% WER、槽填充 CER 25.87%，分别以 43.1%、22.0% 显著超越最佳非蒸馏 sub-90M 基线，证明极简训练配方也能产出一流语音表示。</div>
+      <div class="tags"><span class="tag">Speech SSL</span><span class="tag">Self-Supervised</span><span class="tag">JEPA</span><span class="tag">Representation Learning</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.37798" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.37798" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.37601" target="_blank">SENSE: Semantic Neural Speech Synthesis from Brain Dynamics via Spatial Graph Encoding</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Jisoo Park, Seonghak Lee, Hyojin Park, Junseok Kwon</span></div>
+      <div class="abstract">从非侵入式脑信号重建语音，为认知完好但无法说话者恢复沟通能力提供希望。既有 EEG-to-speech 方法将任务建模为声学重建，忽略了生成语音是否保留高层语义。团队提出 SENSE：结合基于电极几何的图编码器与 EEG 语义条件化（ESC），仅用一致试次将 EEG 对齐到预训练语义空间。在 N400 数据集上，SENSE 在声学与语义双重指标持续超越先前方法；未见过对象设定下，仅用 2 个受试者训练即已在词错误率上超过全部 18 个受试者训练的最强基线。NeurIPS 2026。</div>
+      <div class="tags"><span class="tag">Speech Synthesis</span><span class="tag">Brain-Computer Interface</span><span class="tag">EEG</span><span class="tag">NeurIPS 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.37601" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.37601" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.37611" target="_blank">Selective Lookahead for Attention-Based Streaming ASR</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Authors</span></div>
+      <div class="abstract">端到端注意力 ASR 离线精度高但难以流式化：输出可能依赖未来音频，且每层一点未来上下文会让 lookahead 随层数累积。团队用两个机制解决：有界 lookahead 的 chunk 编码器通过一个跨层共享的 age-selection 规则，把每个 chunk 的未来感受野固定在常数个 chunk（与层数无关）；动态未来 chunk 解码让逐 token 触发器决定提交或等待重解码，提出可学习触发器，并以简单置信度阈值作为有效兜底。在 LibriSpeech test-clean 上，动态系统以 306ms 中位延迟达到 6.5% WER（静态 one-chunk lookahead 为 860ms）。</div>
+      <div class="tags"><span class="tag">Streaming ASR</span><span class="tag">Attention</span><span class="tag">Low Latency</span><span class="tag">Lookahead</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.37611" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.37611" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.38000" target="_blank">QK-GCC: Learnable Query-Key Spectral Matching for Robust Time Delay Estimation</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Jinkai Zhang, Weiye Chen, Yue Huang, Xiaotong Tu, Xinghao Ding</span></div>
+      <div class="abstract">时延估计（TDE）是麦克风阵列声源定位的基础。广义互相关（GCC）高效可解释，但手工设计的谱匹配与固定频率加权对噪声混响脆弱；现有神经 GCC 变体主要靠增强输入或建模 GCC 响应改进鲁棒性，跨通道谱匹配步骤本身仍是手工的。团队提出 QK-GCC，用 Query-Key 匹配取代手工加权谱匹配：双麦信号编码为幅相频率 token，映射到 Query/Key 表示，实现频率可靠性学习与局部谱证据聚合。在多样化 SNR/混响的模拟混响室实验中，QK-GCC 在保持轻量、泛化到未见声源类型的同时超越 GCC-PHAT 与基于学习的 GCC 变体。ICASSP 2027。</div>
+      <div class="tags"><span class="tag">Microphone Array</span><span class="tag">Source Localization</span><span class="tag">Time Delay</span><span class="tag">ICASSP 2027</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.38000" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.38000" target="_blank">🔗 PDF</a> <a href="https://github.com/zhangjinkai33-ui/QK-GCC" target="_blank">🔗 GitHub</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.36979" target="_blank">Louder, Longer, Livelier: Acoustic Shortcuts and Underspecified Rationales in Speech LLM Judges</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Mingyue Huo, Shivam Mehta, Bhavin Jawade, Yinghong Lan, Haoqi Li, et al.</span></div>
+      <div class="abstract">LLM-as-a-judge 广泛用于文本评测，扩展到语音时需同时解读声学与语言证据，引入「声学捷径」风险：评判模型可能把感知显著但无关的线索误当作质量证据。团队审计 6 个语音 LLM 评判器，系统操控响度、内容丰富度与情感表达。发现评判器一致奖励更响的音频、比人类更偏内容丰富的语音、并把情感表达映射为质量偏好；这些效应在成对比较中最明显，逐点打分常掩盖之。更令人担忧的是，其理由几乎从不指出改变判断的声学线索，反复依赖有限词汇，声学上欠定义。团队开源 SpeechJudgeAudit。</div>
+      <div class="tags"><span class="tag">Speech Evaluation</span><span class="tag">LLM-as-Judge</span><span class="tag">Acoustic Shortcut</span><span class="tag">Benchmark</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.36979" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.36979" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.38106" target="_blank">Pruning for Efficiency, Paying in Fairness: Demographic Disparities in Pruned Speech-LLMs</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Ganesh Pavan Kartikeya Bharadwaj Kolluri, Michael Kampouridis, Ravi Shekhar</span></div>
+      <div class="abstract">Speech-LLM 运行昂贵，压缩对现实部署很重要，但压缩模型通常按聚合 WER 选择，可能掩盖剪枝对不同人群的影响。团队系统研究音频编码器剪枝对 SLAM-ASR 各人口群体的影响：在 Fair-Speech 与 Common Voice 上发现剪枝并非公平作用于所有群体，最好与最差群体间差距成倍拉大；该差异在三种编码器尺度均出现，只有最大模型最初把它们隐藏在聚合 WER 之后。LoRA 适配改善所有群体，但更利于本就表现好的群体。研究建议剪枝模型的部署决策应纳入分组 WER、以最差群体错误率为显式标准。EMNLP'26 IMPACT-SPEECH。</div>
+      <div class="tags"><span class="tag">Speech-LLM</span><span class="tag">Fairness</span><span class="tag">Pruning</span><span class="tag">ASR</span><span class="tag">EMNLP 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.38106" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.38106" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.36287" target="_blank">InstCharVoice: Grounding Natural-Language Instructions for Character-Level Control in Text-to-Speech</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Sihang Nie, Xueru Li, Xiaofen Xing, Deyi Tuo, Cheng-Bin Jin, Jingyuan Xing, Jinxin Ji</span></div>
+      <div class="abstract">指令式 TTS（ITTS）支持自然语言控制表现力语音生成，但对单个文本单元的细粒度控制透明度有限；字符级可控 TTS 提供显式声学控制却依赖用户指定声学属性。团队提出 InstCharVoice，把自然语言指令落地到字符级声学控制：用 Qwen3-Omni 在 WordVoice-5A-zh 语料构建接地指令标注，训练自回归模型识别指令相关字符并预测其声学属性再生成语音 token，关键词预测与接地感知损失加权让模型聚焦指令相关字符。实验显示指令跟随与关键词级声学控制优于代表性 ITTS 系统，自然度有竞争力。ICASSP 2027。</div>
+      <div class="tags"><span class="tag">Instruction TTS</span><span class="tag">Character-Level Control</span><span class="tag">Controllable TTS</span><span class="tag">ICASSP 2027</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.36287" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.36287" target="_blank">🔗 PDF</a> <a href="https://xxh333.github.io/instcharvoice-demo/" target="_blank">🔗 Demo</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.36295" target="_blank">Enabling Immersive Audio-Visual Experience from Any Video</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Zitong Lan, Mutian Tong, Jiatao Gu, Mingmin Zhao</span></div>
+      <div class="abstract">多数视频视野窄、无空间音频，沉浸感有限。近期视频生成模型能把透视视频扩展为全景，却不提供对应空间声景。团队提出 OmniDream：免训练框架，把静音单目视频转化为沉浸式视听体验，观众可自由环视而声音保持与视觉场景空间对齐。核心是对象中心音频表示，解耦每个声源的内在音频内容与其场景相关声学效应，支持独立音频生成、基于物理的传播效应模拟与灵活空间音频渲染。实验显示音视对齐、空间正确性与感知沉浸感优于基线。</div>
+      <div class="tags"><span class="tag">Spatial Audio</span><span class="tag">Audio-Visual</span><span class="tag">Immersive</span><span class="tag">Training-Free</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.36295" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.36295" target="_blank">🔗 PDF</a> <a href="https://huggingface.co/spaces/CuriousAlien000/spatial-audio-360-demo" target="_blank">🔗 Demo</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-09-30-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

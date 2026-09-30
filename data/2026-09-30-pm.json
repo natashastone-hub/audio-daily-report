@@ -1,0 +1,127 @@
+{
+  "papers": [
+    {
+      "title": "EmoRES-TTS: Residual-Enhanced Vector Steering for Emotional Speech Generation",
+      "url": "https://arxiv.org/abs/2609.38157",
+      "date": "2026-09-30",
+      "authors": "Kuan-Po Huang, Haohe Liu, Puyuan Peng, Haibin Wu, Zhaoheng Ni, Hung-yi Lee, Jinwon Lee, Neha Chachra",
+      "abstract": "情绪条件 TTS 模型可能无法可靠表达指定情绪，而靠追加训练提升可控性成本高昂。团队研究向量引导（vector steering）这一免训练方法：发现情绪向量可分解为「远离中性表达的共享分量」与「指向目标情绪的残差分量」。据此提出 EmoRES，无需重训主干即可分别控制两个分量。在 IEMOCAP 上，EmoRES 在 IndexTTS-2 与 CosyVoice2 两大主干上四项客观情绪指标全面超越 CoCoEmo，秩相关平均相对提升最高 118.8%，情绪命中率平均相对提升最高 20.1%；人评中主导情绪识别率相对提升最高 35.0%。代码开源（Meta）。",
+      "tags": ["Emotional TTS", "Vector Steering", "Training-Free", "Open Source", "Meta"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.38157"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.38157"},
+        {"label": "GitHub", "url": "https://github.com/facebookresearch/EmoRES-TTS"}
+      ]
+    },
+    {
+      "title": "GLaS-JEPA: Gaussian-Regularized Speech SSL without Engineered Prediction Targets",
+      "url": "https://arxiv.org/abs/2609.37798",
+      "date": "2026-09-30",
+      "authors": "Gaspard Botté, Séverin Baroudi, Samir Sadok, Francesco Paissan, Thomas Hueber, Xavier Alameda-Pineda, Ricard Marxer, Mirco Ravanelli",
+      "abstract": "语音自监督学习（SSL）依赖复杂的、精心设计的预测目标。团队质疑其必要性，提出 GLaS-JEPA：直接预测当前编码器在掩码位置的连续表示，无需对比学习、离散目标或独立的 EMA 目标编码器；用 SIGReg 表示空间正则化防止坍缩。仅用 960 小时 LibriSpeech 预训练，57M 参数模型在冻结编码器的 SUPERB ASR 上达 6.89% WER、槽填充 CER 25.87%，分别以 43.1%、22.0% 显著超越最佳非蒸馏 sub-90M 基线，证明极简训练配方也能产出一流语音表示。",
+      "tags": ["Speech SSL", "Self-Supervised", "JEPA", "Representation Learning"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.37798"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.37798"}
+      ]
+    },
+    {
+      "title": "SENSE: Semantic Neural Speech Synthesis from Brain Dynamics via Spatial Graph Encoding",
+      "url": "https://arxiv.org/abs/2609.37601",
+      "date": "2026-09-30",
+      "authors": "Jisoo Park, Seonghak Lee, Hyojin Park, Junseok Kwon",
+      "abstract": "从非侵入式脑信号重建语音，为认知完好但无法说话者恢复沟通能力提供希望。既有 EEG-to-speech 方法将任务建模为声学重建，忽略了生成语音是否保留高层语义。团队提出 SENSE：结合基于电极几何的图编码器与 EEG 语义条件化（ESC），仅用一致试次将 EEG 对齐到预训练语义空间。在 N400 数据集上，SENSE 在声学与语义双重指标持续超越先前方法；未见过对象设定下，仅用 2 个受试者训练即已在词错误率上超过全部 18 个受试者训练的最强基线。NeurIPS 2026。",
+      "tags": ["Speech Synthesis", "Brain-Computer Interface", "EEG", "NeurIPS 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.37601"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.37601"}
+      ]
+    },
+    {
+      "title": "Selective Lookahead for Attention-Based Streaming ASR",
+      "url": "https://arxiv.org/abs/2609.37611",
+      "date": "2026-09-30",
+      "authors": "Authors",
+      "abstract": "端到端注意力 ASR 离线精度高但难以流式化：输出可能依赖未来音频，且每层一点未来上下文会让 lookahead 随层数累积。团队用两个机制解决：有界 lookahead 的 chunk 编码器通过一个跨层共享的 age-selection 规则，把每个 chunk 的未来感受野固定在常数个 chunk（与层数无关）；动态未来 chunk 解码让逐 token 触发器决定提交或等待重解码，提出可学习触发器，并以简单置信度阈值作为有效兜底。在 LibriSpeech test-clean 上，动态系统以 306ms 中位延迟达到 6.5% WER（静态 one-chunk lookahead 为 860ms）。",
+      "tags": ["Streaming ASR", "Attention", "Low Latency", "Lookahead"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.37611"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.37611"}
+      ]
+    },
+    {
+      "title": "QK-GCC: Learnable Query-Key Spectral Matching for Robust Time Delay Estimation",
+      "url": "https://arxiv.org/abs/2609.38000",
+      "date": "2026-09-30",
+      "authors": "Jinkai Zhang, Weiye Chen, Yue Huang, Xiaotong Tu, Xinghao Ding",
+      "abstract": "时延估计（TDE）是麦克风阵列声源定位的基础。广义互相关（GCC）高效可解释，但手工设计的谱匹配与固定频率加权对噪声混响脆弱；现有神经 GCC 变体主要靠增强输入或建模 GCC 响应改进鲁棒性，跨通道谱匹配步骤本身仍是手工的。团队提出 QK-GCC，用 Query-Key 匹配取代手工加权谱匹配：双麦信号编码为幅相频率 token，映射到 Query/Key 表示，实现频率可靠性学习与局部谱证据聚合。在多样化 SNR/混响的模拟混响室实验中，QK-GCC 在保持轻量、泛化到未见声源类型的同时超越 GCC-PHAT 与基于学习的 GCC 变体。ICASSP 2027。",
+      "tags": ["Microphone Array", "Source Localization", "Time Delay", "ICASSP 2027"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.38000"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.38000"},
+        {"label": "GitHub", "url": "https://github.com/zhangjinkai33-ui/QK-GCC"}
+      ]
+    },
+    {
+      "title": "Louder, Longer, Livelier: Acoustic Shortcuts and Underspecified Rationales in Speech LLM Judges",
+      "url": "https://arxiv.org/abs/2609.36979",
+      "date": "2026-09-30",
+      "authors": "Mingyue Huo, Shivam Mehta, Bhavin Jawade, Yinghong Lan, Haoqi Li, et al.",
+      "abstract": "LLM-as-a-judge 广泛用于文本评测，扩展到语音时需同时解读声学与语言证据，引入「声学捷径」风险：评判模型可能把感知显著但无关的线索误当作质量证据。团队审计 6 个语音 LLM 评判器，系统操控响度、内容丰富度与情感表达。发现评判器一致奖励更响的音频、比人类更偏内容丰富的语音、并把情感表达映射为质量偏好；这些效应在成对比较中最明显，逐点打分常掩盖之。更令人担忧的是，其理由几乎从不指出改变判断的声学线索，反复依赖有限词汇，声学上欠定义。团队开源 SpeechJudgeAudit。",
+      "tags": ["Speech Evaluation", "LLM-as-Judge", "Acoustic Shortcut", "Benchmark"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.36979"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.36979"}
+      ]
+    },
+    {
+      "title": "Pruning for Efficiency, Paying in Fairness: Demographic Disparities in Pruned Speech-LLMs",
+      "url": "https://arxiv.org/abs/2609.38106",
+      "date": "2026-09-30",
+      "authors": "Ganesh Pavan Kartikeya Bharadwaj Kolluri, Michael Kampouridis, Ravi Shekhar",
+      "abstract": "Speech-LLM 运行昂贵，压缩对现实部署很重要，但压缩模型通常按聚合 WER 选择，可能掩盖剪枝对不同人群的影响。团队系统研究音频编码器剪枝对 SLAM-ASR 各人口群体的影响：在 Fair-Speech 与 Common Voice 上发现剪枝并非公平作用于所有群体，最好与最差群体间差距成倍拉大；该差异在三种编码器尺度均出现，只有最大模型最初把它们隐藏在聚合 WER 之后。LoRA 适配改善所有群体，但更利于本就表现好的群体。研究建议剪枝模型的部署决策应纳入分组 WER、以最差群体错误率为显式标准。EMNLP'26 IMPACT-SPEECH。",
+      "tags": ["Speech-LLM", "Fairness", "Pruning", "ASR", "EMNLP 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.38106"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.38106"}
+      ]
+    },
+    {
+      "title": "InstCharVoice: Grounding Natural-Language Instructions for Character-Level Control in Text-to-Speech",
+      "url": "https://arxiv.org/abs/2609.36287",
+      "date": "2026-09-30",
+      "authors": "Sihang Nie, Xueru Li, Xiaofen Xing, Deyi Tuo, Cheng-Bin Jin, Jingyuan Xing, Jinxin Ji",
+      "abstract": "指令式 TTS（ITTS）支持自然语言控制表现力语音生成，但对单个文本单元的细粒度控制透明度有限；字符级可控 TTS 提供显式声学控制却依赖用户指定声学属性。团队提出 InstCharVoice，把自然语言指令落地到字符级声学控制：用 Qwen3-Omni 在 WordVoice-5A-zh 语料构建接地指令标注，训练自回归模型识别指令相关字符并预测其声学属性再生成语音 token，关键词预测与接地感知损失加权让模型聚焦指令相关字符。实验显示指令跟随与关键词级声学控制优于代表性 ITTS 系统，自然度有竞争力。ICASSP 2027。",
+      "tags": ["Instruction TTS", "Character-Level Control", "Controllable TTS", "ICASSP 2027"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.36287"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.36287"},
+        {"label": "Demo", "url": "https://xxh333.github.io/instcharvoice-demo/"}
+      ]
+    },
+    {
+      "title": "Enabling Immersive Audio-Visual Experience from Any Video",
+      "url": "https://arxiv.org/abs/2609.36295",
+      "date": "2026-09-30",
+      "authors": "Zitong Lan, Mutian Tong, Jiatao Gu, Mingmin Zhao",
+      "abstract": "多数视频视野窄、无空间音频，沉浸感有限。近期视频生成模型能把透视视频扩展为全景，却不提供对应空间声景。团队提出 OmniDream：免训练框架，把静音单目视频转化为沉浸式视听体验，观众可自由环视而声音保持与视觉场景空间对齐。核心是对象中心音频表示，解耦每个声源的内在音频内容与其场景相关声学效应，支持独立音频生成、基于物理的传播效应模拟与灵活空间音频渲染。实验显示音视对齐、空间正确性与感知沉浸感优于基线。",
+      "tags": ["Spatial Audio", "Audio-Visual", "Immersive", "Training-Free"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.36295"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.36295"},
+        {"label": "Demo", "url": "https://huggingface.co/spaces/CuriousAlien000/spatial-audio-360-demo"}
+      ]
+    }
+  ],
+  "news": [],
+  "note": "当前日期 2026-09-30（周三）14:00。下午版约束窗口为今日 09:30–14:00（北京时间，约 UTC 01:30–06:00）。经核对，arXiv eess.AS/cs.SD 的「Wed 30 Sep」批次（ID 区间约 2609.35820–2609.38157）的实际提交时间戳均在 09-28 至 09-29（UTC），即北京时间 09-30 凌晨 02:00 之前，早于窗口起点——严格意义上 6 小时窗口内无新增发布。但因早间版仅覆盖 ID 2609.36500–2609.36951 的子集，本下午版补充收录同日「Wed 30 Sep」批次中早间版未覆盖的 9 篇论文（EmoRES-TTS、GLaS-JEPA、SENSE、Selective Lookahead ASR、QK-GCC、Speech LLM Judges、Pruning Fairness、InstCharVoice、OmniDream），作为对早间版的补漏。新闻方面：最近 6 小时未命中符合窗口的重磅产品发布——GPT-Live-1（07-08/API 09-11）、Gemini 3.8 Flash TTS（09-23）、Qwen-Audio-3.1（09-22/23）、Qwen-Audio-3.1-TTS 登顶 Artificial Analysis（09-28，昨日已收录）、ElevenLabs v4（09-28）均逾窗口，故本期新闻为空，诚实标注。"
+}
