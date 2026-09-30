@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-09-30</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-09-30</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年9月30日 (周三) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">8</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.36903" target="_blank">MultiTalk: Scaling Full-Duplex Speech Models to Long, Multi-Party, Bilingual Conversation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-29</span><span>👥 Ke Wang, Houxing Ren, Zimu Lu, Yunqiao Yang, Zhuofan Zong, Mingjie Zhan, Hongsheng Li</span></div>
+      <div class="abstract">全双工语音模型让开源机器对话更接近人类，但仍受限于长上下文鲁棒性与多方交互两大维度。真实场景（会议、小组课、社交机器人接待）要求单一模型在长时间内跟踪并回应多个说话人。团队沿 Moshi 范式同时拓展长时程与多方轴：开源 57.6k 小时合成训练数据（MultiTalkPT/FT）与基于真实录音的 MultiTalkBench（平均对话 32.6 分钟，含长程实体跟踪、主题连贯、说话人选择探针），并训练双语 Moshi 式模型，在 MultiTalkBench 上大幅超越 Moshi、MiniCPM-o-4.5、Qwen3-Omni-30B-A3B-Instruct 等开源基线。</div>
+      <div class="tags"><span class="tag">Full-Duplex</span><span class="tag">Speech LLM</span><span class="tag">Multi-Party</span><span class="tag">Open Data</span><span class="tag">NeurIPS 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.36903" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.36903" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.36737" target="_blank">Reconstructing the Vocal Tract with Differentiable Acoustic Simulation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-29</span><span>👥 Eric Ming Chen, Jin Woo Lee, Vincent Sitzmann</span></div>
+      <div class="abstract">声道是人体过滤声音以产生语音的结构。团队提出可微、GPU 加速的声道声学模拟器：通过声道声学管模型中传播声音合成语音，并借助梯度求解逆问题——仅凭语音重建声道形状。三大技术贡献：(1) 频域流体动力学公式，比时域有限差分快 70 倍；(2) 可微湍流模型合成辅音；(3) 用神经网络参数化几何以加速收敛并逃离离散表示的局部极小。演示了 11 种语言的声道形状自监督自编码，并将模拟器与生成式 MRI 模型耦合，仅凭说话人语音即可重建其动态声道，无需配对数据。</div>
+      <div class="tags"><span class="tag">Vocal Tract</span><span class="tag">Differentiable Simulation</span><span class="tag">Speech Synthesis</span><span class="tag">NeurIPS 2026 Spotlight</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.36737" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.36737" target="_blank">🔗 PDF</a> <a href="https://people.csail.mit.edu/echen/vocal_recon/" target="_blank">🔗 补充材料</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.36834" target="_blank">WenetSpeech-Min: A Large-Scale Minnan Speech Corpus with Dual Transcriptions for Dialectal Speech Processing</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-29</span><span>👥 Haoyu Zhang, Chunjiang He, Hongtao Li, Zeyu Zhu, Qituan Shangguan, et al.</span></div>
+      <div class="abstract">方言语音技术受制于大规模真实语料稀缺。团队开源 WenetSpeech-Min，约 10,000 小时闽南语语音，采集自多元在线媒体，每条语音均配闽南语与普通话双重转写。同时建立覆盖双转写的 ASR 基准与基于闽南语转写的 TTS 基准（评测集均人工校验）。在语料上训练的 ASR/TTS 模型在多数指标上超越评估的开源模型，并达到商用系统的竞争力水平。语料、基准与模型即将开放。</div>
+      <div class="tags"><span class="tag">Speech Corpus</span><span class="tag">Dialect</span><span class="tag">ASR</span><span class="tag">TTS</span><span class="tag">Open Data</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.36834" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.36834" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.36577" target="_blank">Long-Term Memory-Guided Enhancement for Target Perception in Audio-Language Models</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-29</span><span>👥 Zhenhong Zhou, Xuanyue Zhao, Youji Liu, Yuanhe Zhang, Xiaoyu Ma, Lianyu Hu, Yang Liu</span></div>
+      <div class="abstract">音频大语言模型能在录音内容上推理，但在背景噪声与竞争声源混合的现实中能力常崩溃。受人类听觉长期记忆启发，团队提出 LTM-AE，在无需训练的情况下精化 ALLM 的音频表示以改善选择性目标感知：从各类别的干净参考录音隐状态提取长期记忆，沿用户指定倾听目标引导增强，并在语言骨干解码前将重建的音频 token 与原始 token 插值。20 个声音类别、3 个 ALLM 上，目标分类准确率较原始混合提升 29.53–46.15 个百分点；在语音内容恢复上，附加可学习 token 级门控后 Qwen2-Audio 的 WER 从 23.07% 降至 14.77%。</div>
+      <div class="tags"><span class="tag">Audio LLM</span><span class="tag">Memory</span><span class="tag">Target Perception</span><span class="tag">Speech Enhancement</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.36577" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.36577" target="_blank">🔗 PDF</a> <a href="https://github.com/aynlp/ltm-audio-code" target="_blank">🔗 GitHub</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.36921" target="_blank">When Capabilities Fail to Compose: Diagnosing the Compositionality Gap in Large Audio-Language Models</a></h4>
+      <div class="meta"><span>📅 2026-09-29</span><span>👥 Chien-Feng Liu, Chih-Kai Yang, Bo-Han Feng, Yu-Hsuan Li Liang, Hung-yi Lee, Cheng-Fu Chou</span></div>
+      <div class="abstract">音频大语言模型在单一音频任务上表现强劲，但这些能力能否可靠组合仍未被充分探索。团队对 LALM 的能力组合开展受控诊断研究：要求模型整合音频属性识别、线索条件片段选择与下游 ASR/问答，构建带不同声学线索的双语音输入，在环境声、性别、情绪线索下评估。四个开源 LALM 中，组合问答准确率在 40 个模型-任务-线索设定中 39 个下降，平均降 26.7 个百分点；ASR 的 WER 在 39/40 设定中上升，平均升 28.5 个百分点。研究揭示了个体音频能力与可靠组合之间的系统性鸿沟。</div>
+      <div class="tags"><span class="tag">Audio LLM</span><span class="tag">Compositionality</span><span class="tag">Diagnostic</span><span class="tag">ICASSP 2027</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.36921" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.36921" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.36951" target="_blank">Interpreting and Evaluating Dynamic-Rate Speech Codec Boundaries</a></h4>
+      <div class="meta"><span>📅 2026-09-29</span><span>👥 Han Wang, Jiaqi Li, Yingda Shen, Yuxiang Wang, Zhizheng Wu</span></div>
+      <div class="abstract">动态帧率神经语音编解码器用变时长 token 取代均匀帧网格，使边界划分成为表示本身的一部分，但这些边界编码了什么、可解释边界是否有助于重建仍不清楚。团队将边界解释与受控重建分析结合，比较预测边界与语言学/声学参照。研究发现边界含义取决于底层语音表示：对面向 ASR 的 SenseVoice/Whisper 编码器，浅层强调音素、浊音与声学转变，深层则转向音节与子词结构。在六种动态帧率算法与均匀基线对比中，更高层的语言对齐与更低的池化失真及更好的语义 token 重建相关联；音节衍生的划分优于均匀与相似度划分，而音素衍生划分未优于均匀。</div>
+      <div class="tags"><span class="tag">Neural Codec</span><span class="tag">Dynamic Frame Rate</span><span class="tag">Representation Analysis</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.36951" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.36951" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.36754" target="_blank">Does a prosody-trained representation help beyond trainable fusion? A parameter-matched study with frozen HuBERT</a></h4>
+      <div class="meta"><span>📅 2026-09-29</span><span>👥 Ki Woong Moon, Daniel Brenner</span></div>
+      <div class="abstract">显式韵律线索可能有助于自发语音的 ASR，但辅助表示通常需额外可训练组件，使得收益究竟来自辅助信息还是融合机制难以判断。团队用冻结的 HuBERT 骨干与 64 维表示（预测 log F0、浊音、Δlog F0、能量、频谱倾斜）进行参数匹配研究，比较三种设定（基线 / 零辅助输入的融合 / 带所学表示的融合）。Buckeye、Switchboard、AMI IHM 上，零辅助融合较基线降 WER 0.71–1.45 点，而带所学表示与零辅助几乎无差异，说明所学表示并未带来可测量的增量收益。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Prosody</span><span class="tag">HuBERT</span><span class="tag">ICASSP 2027</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.36754" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.36754" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.36500" target="_blank">InterBias-SV: Compound Conditions in Speaker Verification</a></h4>
+      <div class="meta"><span>📅 2026-09-29</span><span>👥 Authors</span></div>
+      <div class="abstract">说话人验证系统会遇到噪声、信道失真与语音变化等条件的组合，而单独评估每种条件无法确定其效应是否叠加。InterBias-SV 以「联合误差、两个边际误差与一个公共参照」的四项对比来组织这一问题，其结果工件包含 17 个实验、12 个编码器标签、6 个语音语料的 4068 条评分记录，总计 1200 万次试验评估，系统化度量复合条件下的偏差叠加。</div>
+      <div class="tags"><span class="tag">Speaker Verification</span><span class="tag">Bias</span><span class="tag">Benchmark</span><span class="tag">Evaluation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.36500" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.36500" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-09-30') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

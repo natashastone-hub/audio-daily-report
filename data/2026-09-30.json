@@ -1,0 +1,112 @@
+{
+  "papers": [
+    {
+      "title": "MultiTalk: Scaling Full-Duplex Speech Models to Long, Multi-Party, Bilingual Conversation",
+      "url": "https://arxiv.org/abs/2609.36903",
+      "date": "2026-09-29",
+      "authors": "Ke Wang, Houxing Ren, Zimu Lu, Yunqiao Yang, Zhuofan Zong, Mingjie Zhan, Hongsheng Li",
+      "abstract": "全双工语音模型让开源机器对话更接近人类，但仍受限于长上下文鲁棒性与多方交互两大维度。真实场景（会议、小组课、社交机器人接待）要求单一模型在长时间内跟踪并回应多个说话人。团队沿 Moshi 范式同时拓展长时程与多方轴：开源 57.6k 小时合成训练数据（MultiTalkPT/FT）与基于真实录音的 MultiTalkBench（平均对话 32.6 分钟，含长程实体跟踪、主题连贯、说话人选择探针），并训练双语 Moshi 式模型，在 MultiTalkBench 上大幅超越 Moshi、MiniCPM-o-4.5、Qwen3-Omni-30B-A3B-Instruct 等开源基线。",
+      "tags": ["Full-Duplex", "Speech LLM", "Multi-Party", "Open Data", "NeurIPS 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.36903"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.36903"}
+      ]
+    },
+    {
+      "title": "Reconstructing the Vocal Tract with Differentiable Acoustic Simulation",
+      "url": "https://arxiv.org/abs/2609.36737",
+      "date": "2026-09-29",
+      "authors": "Eric Ming Chen, Jin Woo Lee, Vincent Sitzmann",
+      "abstract": "声道是人体过滤声音以产生语音的结构。团队提出可微、GPU 加速的声道声学模拟器：通过声道声学管模型中传播声音合成语音，并借助梯度求解逆问题——仅凭语音重建声道形状。三大技术贡献：(1) 频域流体动力学公式，比时域有限差分快 70 倍；(2) 可微湍流模型合成辅音；(3) 用神经网络参数化几何以加速收敛并逃离离散表示的局部极小。演示了 11 种语言的声道形状自监督自编码，并将模拟器与生成式 MRI 模型耦合，仅凭说话人语音即可重建其动态声道，无需配对数据。",
+      "tags": ["Vocal Tract", "Differentiable Simulation", "Speech Synthesis", "NeurIPS 2026 Spotlight"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.36737"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.36737"},
+        {"label": "补充材料", "url": "https://people.csail.mit.edu/echen/vocal_recon/"}
+      ]
+    },
+    {
+      "title": "WenetSpeech-Min: A Large-Scale Minnan Speech Corpus with Dual Transcriptions for Dialectal Speech Processing",
+      "url": "https://arxiv.org/abs/2609.36834",
+      "date": "2026-09-29",
+      "authors": "Haoyu Zhang, Chunjiang He, Hongtao Li, Zeyu Zhu, Qituan Shangguan, et al.",
+      "abstract": "方言语音技术受制于大规模真实语料稀缺。团队开源 WenetSpeech-Min，约 10,000 小时闽南语语音，采集自多元在线媒体，每条语音均配闽南语与普通话双重转写。同时建立覆盖双转写的 ASR 基准与基于闽南语转写的 TTS 基准（评测集均人工校验）。在语料上训练的 ASR/TTS 模型在多数指标上超越评估的开源模型，并达到商用系统的竞争力水平。语料、基准与模型即将开放。",
+      "tags": ["Speech Corpus", "Dialect", "ASR", "TTS", "Open Data"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.36834"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.36834"}
+      ]
+    },
+    {
+      "title": "Long-Term Memory-Guided Enhancement for Target Perception in Audio-Language Models",
+      "url": "https://arxiv.org/abs/2609.36577",
+      "date": "2026-09-29",
+      "authors": "Zhenhong Zhou, Xuanyue Zhao, Youji Liu, Yuanhe Zhang, Xiaoyu Ma, Lianyu Hu, Yang Liu",
+      "abstract": "音频大语言模型能在录音内容上推理，但在背景噪声与竞争声源混合的现实中能力常崩溃。受人类听觉长期记忆启发，团队提出 LTM-AE，在无需训练的情况下精化 ALLM 的音频表示以改善选择性目标感知：从各类别的干净参考录音隐状态提取长期记忆，沿用户指定倾听目标引导增强，并在语言骨干解码前将重建的音频 token 与原始 token 插值。20 个声音类别、3 个 ALLM 上，目标分类准确率较原始混合提升 29.53–46.15 个百分点；在语音内容恢复上，附加可学习 token 级门控后 Qwen2-Audio 的 WER 从 23.07% 降至 14.77%。",
+      "tags": ["Audio LLM", "Memory", "Target Perception", "Speech Enhancement", "Open Source"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.36577"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.36577"},
+        {"label": "GitHub", "url": "https://github.com/aynlp/ltm-audio-code"}
+      ]
+    },
+    {
+      "title": "When Capabilities Fail to Compose: Diagnosing the Compositionality Gap in Large Audio-Language Models",
+      "url": "https://arxiv.org/abs/2609.36921",
+      "date": "2026-09-29",
+      "authors": "Chien-Feng Liu, Chih-Kai Yang, Bo-Han Feng, Yu-Hsuan Li Liang, Hung-yi Lee, Cheng-Fu Chou",
+      "abstract": "音频大语言模型在单一音频任务上表现强劲，但这些能力能否可靠组合仍未被充分探索。团队对 LALM 的能力组合开展受控诊断研究：要求模型整合音频属性识别、线索条件片段选择与下游 ASR/问答，构建带不同声学线索的双语音输入，在环境声、性别、情绪线索下评估。四个开源 LALM 中，组合问答准确率在 40 个模型-任务-线索设定中 39 个下降，平均降 26.7 个百分点；ASR 的 WER 在 39/40 设定中上升，平均升 28.5 个百分点。研究揭示了个体音频能力与可靠组合之间的系统性鸿沟。",
+      "tags": ["Audio LLM", "Compositionality", "Diagnostic", "ICASSP 2027"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.36921"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.36921"}
+      ]
+    },
+    {
+      "title": "Interpreting and Evaluating Dynamic-Rate Speech Codec Boundaries",
+      "url": "https://arxiv.org/abs/2609.36951",
+      "date": "2026-09-29",
+      "authors": "Han Wang, Jiaqi Li, Yingda Shen, Yuxiang Wang, Zhizheng Wu",
+      "abstract": "动态帧率神经语音编解码器用变时长 token 取代均匀帧网格，使边界划分成为表示本身的一部分，但这些边界编码了什么、可解释边界是否有助于重建仍不清楚。团队将边界解释与受控重建分析结合，比较预测边界与语言学/声学参照。研究发现边界含义取决于底层语音表示：对面向 ASR 的 SenseVoice/Whisper 编码器，浅层强调音素、浊音与声学转变，深层则转向音节与子词结构。在六种动态帧率算法与均匀基线对比中，更高层的语言对齐与更低的池化失真及更好的语义 token 重建相关联；音节衍生的划分优于均匀与相似度划分，而音素衍生划分未优于均匀。",
+      "tags": ["Neural Codec", "Dynamic Frame Rate", "Representation Analysis"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.36951"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.36951"}
+      ]
+    },
+    {
+      "title": "Does a prosody-trained representation help beyond trainable fusion? A parameter-matched study with frozen HuBERT",
+      "url": "https://arxiv.org/abs/2609.36754",
+      "date": "2026-09-29",
+      "authors": "Ki Woong Moon, Daniel Brenner",
+      "abstract": "显式韵律线索可能有助于自发语音的 ASR，但辅助表示通常需额外可训练组件，使得收益究竟来自辅助信息还是融合机制难以判断。团队用冻结的 HuBERT 骨干与 64 维表示（预测 log F0、浊音、Δlog F0、能量、频谱倾斜）进行参数匹配研究，比较三种设定（基线 / 零辅助输入的融合 / 带所学表示的融合）。Buckeye、Switchboard、AMI IHM 上，零辅助融合较基线降 WER 0.71–1.45 点，而带所学表示与零辅助几乎无差异，说明所学表示并未带来可测量的增量收益。",
+      "tags": ["ASR", "Prosody", "HuBERT", "ICASSP 2027"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.36754"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.36754"}
+      ]
+    },
+    {
+      "title": "InterBias-SV: Compound Conditions in Speaker Verification",
+      "url": "https://arxiv.org/abs/2609.36500",
+      "date": "2026-09-29",
+      "authors": "Authors",
+      "abstract": "说话人验证系统会遇到噪声、信道失真与语音变化等条件的组合，而单独评估每种条件无法确定其效应是否叠加。InterBias-SV 以「联合误差、两个边际误差与一个公共参照」的四项对比来组织这一问题，其结果工件包含 17 个实验、12 个编码器标签、6 个语音语料的 4068 条评分记录，总计 1200 万次试验评估，系统化度量复合条件下的偏差叠加。",
+      "tags": ["Speaker Verification", "Bias", "Benchmark", "Evaluation"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.36500"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.36500"}
+      ]
+    }
+  ],
+  "news": [],
+  "note": "当前日期 2026-09-30（周三）。arXiv eess.AS/cs.SD 最新批次为 09-29（周一）提交（ID 区间约 2609.36500–2609.36951），本期收录 8 篇亮点论文：全双工多方双语模型 MultiTalk（NeurIPS 2026）、可微声道重建（NeurIPS 2026 Spotlight）、闽南语 10k 小时语料 WenetSpeech-Min、开放源代码的长期记忆引导音频增强 LTM-AE 等。新闻方面：最近 24 小时内未命中符合窗口（09-29 09:30 起）的重磅产品发布——GPT-Live-1 API（09-11）、Gemini 3.8 Live（09-15）、Gemini 3.8 Flash TTS（09-23）、阿里云百炼 TTS 降价（09-22）、Qwen-Audio-3.1-TTS 登顶 Artificial Analysis（09-28，已于昨日收录）均逾 24 小时，故本期新闻为空，诚实标注。"
+}
