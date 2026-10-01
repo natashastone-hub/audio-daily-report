@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-10-01</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-10-01</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年10月1日 (周四) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">21</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.38658" target="_blank">Tacit-TTS: From Autoregressive Decoding to Masked Prediction for Efficient Transcript-Free Voice Cloning</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Jian Chen, You Zhang, Mark Vinton</span></div>
+      <div class="abstract">自回归语义建模 TTS 具备强大的零样本声音克隆与表现力，但顺序解码带来显著延迟；非自回归方案更快却常依赖参考语音的转写。团队提出 Tacit-TTS，一个从 IndexTTS2 蒸馏的高效免转写零样本声音克隆系统：用掩码非自回归生成替代自回归文本-语义解码，引入免训练声学时长估计，并通过 ReFlow 蒸馏加速流匹配渲染器。在两个英文、两个中文数据集上，Tacit-TTS 在长于 5 秒的语音上生成速度快 IndexTTS2 10 倍以上，零样本质量仍具竞争力。其免转写条件化进一步支持跨语言与非词汇参考（8 种语言、婴儿咿呀声、合成乱码），这些场景下依赖转写的系统常因 ASR 转写不可靠而退化或失败。</div>
+      <div class="tags"><span class="tag">Voice Cloning</span><span class="tag">TTS</span><span class="tag">Non-Autoregressive</span><span class="tag">Efficient</span><span class="tag">Zero-Shot</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.38658" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.38658" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.39199" target="_blank">UniAE-MoE: A Unified Audio Encoder via Mixture of Experts</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Shengbo Cai, Zhisheng Zhang, Zichao Nie, Jing Peng, Jingran Xie, Zhiyong Wu</span></div>
+      <div class="abstract">大型音频语言模型依赖高效的音频编码器实现多任务性能。团队提出 UniAE-MoE，一个通过混合专家（MoE）架构建模跨域音频表示的统一音频编码器：整合 Qwen2-Audio 与 Audio-Flamingo 3 中表现优异的编码器，用 SwiGLU 共享专家解耦编码网络，并引入两阶段指令微调与任务特定数据缩放（TSDS）。在 XARES-LLM 基准上取得 0.802 的 SOTA 分数，并在 Interspeech 2026 音频编码器能力挑战赛中名列前茅，验证其在语音、音乐与通用音频理解上的鲁棒泛化。</div>
+      <div class="tags"><span class="tag">Audio Encoder</span><span class="tag">MoE</span><span class="tag">Audio LLM</span><span class="tag">Speech Understanding</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.39199" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.39199" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.38501" target="_blank">Voices as Handles: Reasoning about Speaker Identity with Frozen Text LLMs</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Runqiu Xu, Zhisheng Zheng, David Harwath</span></div>
+      <div class="abstract">多用户语音 Agent 需在跨会话中追踪「谁说了什么」，而纯文本 LLM 骨干无法从转写中暴露声学说话人身份。团队提出 Speaker Handles，以软 token 表示将声学说话人身份暴露给冻结文本 LLM，实现跨会话说话人相关推理：三阶段课程训练一个轻量投影器（参数不足骨干 0.1%）把说话人嵌入映射为 handles。为检验其真实推理能力，构建受控共享 Agent 基准 SpeakerBind。Speaker Handles 在 VoxCeleb1 上达 97.40–98.36% 准确率，SpeakerBind 上 70.40%，接近 71.88% 的 topline，为把声学身份高效融入冻结文本 LLM 提供新路径。</div>
+      <div class="tags"><span class="tag">Speaker Identity</span><span class="tag">LLM</span><span class="tag">Voice Agent</span><span class="tag">Cross-Session</span><span class="tag">Soft Token</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.38501" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.38501" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.38878" target="_blank">Audio Token Attention Is Predictable Before the Language Model Runs</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Kyoungjun Park, Yunzhe Li, Lili Qiu</span></div>
+      <div class="abstract">大型音频语言模型将一分钟语音变为 750–1500 个 token 并逐一预填充，而音频 token 在语言模型首层即吸引大量注意力，其排序远未定型。团队发现：音频 token 在语言模型中受到的总注意力，早在语言模型运行前即可由其编码器输出线性预测——一个无需标签的闭式线性映射在 13 个 LALM 中的 11 个上预测全层注意力排序相关 ρ≥0.69。据此提出 Triage，按此预测裁剪音频 token，并在多选题场景于第 2 层二次裁剪以观测注意力校正。在两个预算约束下无标签地设定压缩：保守预算下 WER 与准确率保持在满音频 0.04 内，激进预算下全面超越所有基线；2.2–5 倍压缩下多选题平均准确率超最强基线 DART 0.043；还能把 Qwen2.5-Omni-3B 上下文窗口内的音频从 21.8 分钟扩展到约 62 分钟。</div>
+      <div class="tags"><span class="tag">Audio LLM</span><span class="tag">Token Pruning</span><span class="tag">Attention</span><span class="tag">Efficiency</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.38878" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.38878" target="_blank">🔗 PDF</a> <a href="https://audio-triage.github.io" target="_blank">🔗 Project</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.39088" target="_blank">SCIC: Scope- and Codebook-Aware Instruction Conditioning for Speaker-Adapted Expressive TTS</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Longyu Lu, Zongwei Du, Mengtao Xing, Zhuoqun Liu, Zifan Guan, Meiguang Jin, Junfeng Ma</span></div>
+      <div class="abstract">长篇幅直播类 TTS 需要上下文相关韵律与段落级连贯。现有指令式 TTS 多用全局或统一条件，对小句级相对韵律变化控制有限。团队提出 Speaker-Relative Inline Prosody Control，让每个 Pitch/Energy/Speed 指令针对同说话人前一子句的相对变化；通过分析 Qwen3-TTS RVQ 码本发现 Energy 集中于浅层残差码本、Pitch 累积于更深前缀，据此设计 Scope- and Codebook-Aware Instruction Conditioning（SCIC），结合时间指令路由器与标签特定码本加权，并辅以多奖励 GDPO 后训练，在控制精度、CER 与说话人相似度间取得更好平衡，长文合成产生更清晰的段落级表达层次。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Instruction Control</span><span class="tag">Prosody</span><span class="tag">Codec</span><span class="tag">Long-form</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.39088" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.39088" target="_blank">🔗 PDF</a> <a href="https://taoliveaigc.github.io/SCIC/" target="_blank">🔗 Demo</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.38867" target="_blank">Talk2Agent: Benchmarking Voice Interfaces for Text Agents</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Terumi Chiba, Guangzhi Sun, Zheqi Yuan, Chao Zhang</span></div>
+      <div class="abstract">LLM 计算机使用 Agent 通常用干净的书面指令评测，而语音正成为越来越主流的交互方式，但语音输入引入了额外的失败点：转写错误可能在 Agent 推理前就改变任务关键实体、约束或目标，传统 ASR 指标无法直接衡量执行所需信息是否被保留。团队提出 Talk2Agent，从 WildClawBench 与 OSWorld 构建人类口语版本任务，评测专用 ASR、音频 LLM、上下文偏置与 LLM 本体修复等多种语音接口；并提出免执行、任务条件的评估框架，将原始任务评分器投影到可寻址意图上。在 32 小时真实人声上，其免执行投影的 Pearson 相关较 WER/CER 提升 0.246。</div>
+      <div class="tags"><span class="tag">Voice Interface</span><span class="tag">Agent</span><span class="tag">ASR</span><span class="tag">Benchmark</span><span class="tag">Evaluation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.38867" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.38867" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.39216" target="_blank">PG-SELD: Physics-Guided Sound Event Localization and Detection</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Elad Cohen, Elad Dror Cohen, Arnon Netzer, Hai Victor Habi</span></div>
+      <div class="abstract">声事件定位与检测（SELD）需联合识别声音事件并估计其到达方向，但深度学习方法的跨声学环境泛化受限，因房间混响会把环境特异性注入表示。团队以物理自由场模型作为房间无关参照，提出 PG-SELD：结合自由场与物理引导知识蒸馏的训练框架，将混响信号提取的中间表示与匹配声场景下自由场教师产生的表示对齐，促使模型保留事件与定位相关信息同时降低对房间特性的敏感度。在 STARSS23 基准上，PG-SELD 持续改善多个基线 SELD 架构的泛化性能。</div>
+      <div class="tags"><span class="tag">Sound Event</span><span class="tag">Localization</span><span class="tag">Knowledge Distillation</span><span class="tag">Physics</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.39216" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.39216" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.38897" target="_blank">FFASR: Benchmarking Far-Field Automatic Speech Recognition using High-Fidelity Simulated RIRs</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Shivam Saini, Eric Bezzam, Georg Götz, Alessia Milo, et al.</span></div>
+      <div class="abstract">远场 ASR 在混响、噪声与说话人移动下退化，但驱动模型选择的基准却偏重近场麦克风语音。团队发布 FFASR，一个包含 15,637 条语料的留出语料库与开放排行榜，覆盖九个单一声学因子变化的条件（消声近场、实测 vs 仿真办公-实验室对、高/中/低 SNR 静态远场混合、匹配 SNR 的移动说话人变体）。15 位说话人的干声与 14 间家具房间的混合波/几何声学房间冲激响应卷积，因语音全新录制且测试波形从不公开，语料可抵抗训练数据污染。跨当代系统，平均 WER 从近场 4.4% 升至静态低 SNR 条件的 41.3%，移动说话人在匹配 SNR 下引入小而一致的惩罚。</div>
+      <div class="tags"><span class="tag">Far-Field ASR</span><span class="tag">Benchmark</span><span class="tag">RIR</span><span class="tag">Speech Recognition</span><span class="tag">Leaderboard</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.38897" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.38897" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.39030" target="_blank">SURE-EVAL: A Systematic and Unified Agentic Framework for Reproducible Evaluation</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Jing Peng, Junhao Du, Yixuan Wang, Bowen Wang, et al.</span></div>
+      <div class="abstract">音频与语音模型发布迅速，但报告的分数常把模型能力与部署、评测选择混为一谈——同一 checkpoint 在不同运行时、硬件、解码设置或兜底策略下产生不同预测，相同预测在不同归一化与指标实现下得到不同分数。团队提出 SURE-EVAL，一个系统化、统一的 Agent 框架用于音频与语音系统的可复现评测：Tool Agent 工作流把模型发布转换为隔离、可验证的可调用工具，Main Agent 工作流提交任务特定推理与评分协议并委托给版本化确定性程序。在 18 个公开模型（ASR、TTS、声音转换、说话人日志等）上，Codex-only 基线仅一次完成 12 个，而 SURE-EVAL 工作流完成全部 18 个；三种 TTS 系统的统一评测与论文报告分数存在 0.02–0.52 点的绝对差异。</div>
+      <div class="tags"><span class="tag">Evaluation</span><span class="tag">Reproducibility</span><span class="tag">Agent</span><span class="tag">Benchmark</span><span class="tag">Tooling</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.39030" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.39030" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.39032" target="_blank">How Reliable Are Predicted MOS for Reproducing Human System-Level Preferences in Speech Enhancement?</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Nahomi Kusunoki, Tsubasa Ochiai, Naohiro Tawara, Marc Delcroix, et al.</span></div>
+      <div class="abstract">预测 MOS 广泛用于替代主观听音测试来评估与排名语音增强系统，但其性能常以与人类 MOS 的相关性衡量，并不保证在「哪个系统更好」上达成一致。团队引入系统级偏好准确率（SPA），直接评估预测 MOS 与人类 MOS 是否给出相同系统偏好。系统评估单模型、集成与域自适应三种设置：SPA 在单一预测模型间从 9.4% 到 76.8% 大幅波动，即使最好模型仍有约 23% 的系统比较与人类判断不一致；集成提升有限，域自适应在封闭条件大幅改善 SPA、但更实际的开放条件仅带来温和收益。结果显示预测 MOS 单独用于实际 SE 系统比较时可能导致不可靠结论。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">MOS</span><span class="tag">Evaluation</span><span class="tag">Reliability</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.39032" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.39032" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.39028" target="_blank">Improving Predicted MOS Scores, Not Perceived Quality: Multi-Predictor Test-Time Optimization of Enhanced Speech</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Tsubasa Ochiai, Marc Delcroix, Nahomi Kusunoki, Rintaro Ikeshita, et al.</span></div>
+      <div class="abstract">无参考 MOS 预测器广泛用于替代主观听音测试来评估语音增强系统，但若其准确反映感知质量，则提升其分数应带来更高质量语音。团队对 SE 任务做首个测试时优化（test-time optimization）全面分析，直接修改增强信号以提高多个 MOS 预测器平均分。在 URGENT 2026 挑战赛的 7 个系统上发现：所有优化后的预测分数上升而参考指标几乎不变，未优化的预测分数不上升，且 MUSHRA 听音测试显示感知质量无改善。这揭示此类优化可能扭曲评测（如偏置 SE 系统比较），建议用于优化的预测器不应再用于评测，挑战赛应保密用于排名的预测器。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">MOS</span><span class="tag">Test-Time Optimization</span><span class="tag">Evaluation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.39028" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.39028" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.38887" target="_blank">VOSSA: Voiceprint Optimization for Streaming Speech Architectures</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Mu-Ruei Tseng, Waris Quamer, Ghady Nasrallah, Ricardo Gutierrez-Osuna</span></div>
+      <div class="abstract">实时声音转换系统常用 ASV 预训练说话人嵌入，但这类嵌入训练为在说话人内部的语音、韵律变化下保持稳定，可能与流式约束下的帧级声学生成相冲突。团队提出 VOSSA，一个说话人表示框架，从中间内容编码器层提取说话人信息并用注意力统计池化聚合，嵌入与 VC 目标联合训练，无需独立说话人编码器。在六个数据集上，VOSSA 提升 F0 动态与元音分辨声学线索，同时维持相近的 NISQA-MOS、WER 与说话人相似度；感知测试进一步表明自然度、说话人相似度、可懂度与活力的改善。</div>
+      <div class="tags"><span class="tag">Voice Conversion</span><span class="tag">Speaker Embedding</span><span class="tag">Streaming</span><span class="tag">Real-Time</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.38887" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.38887" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.39162" target="_blank">Training-Free Affinity Fusion of Neural and Embedding-Based Speaker Diarization</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Yehoshua Dissen, Joseph Keshet, Eduard Golshtein</span></div>
+      <div class="abstract">基于说话人嵌入与神经日志的系统利用互补的说话人信息，但中间表示不能直接兼容。团队提出免训练亲和融合（TFAF），把神经日志器推断的说话人结构集成进基于嵌入的日志系统：用神经说话人划分条件化局部说话人表示，构造连续亲和矩阵并与基于嵌入的声学亲和结合，再做单次全局聚类。方法无需额外训练、共享嵌入空间、说话人标签对齐或硬传递神经日志器的说话人数目。在 AMI 与 CALLHOME 上取得一致的 DER 改善，AMI 上还改善说话人属性转写；消融显示神经划分贡献了大部分增益。</div>
+      <div class="tags"><span class="tag">Speaker Diarization</span><span class="tag">Fusion</span><span class="tag">Training-Free</span><span class="tag">Clustering</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.39162" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.39162" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.39150" target="_blank">OP-CAD: On-Policy Clean-Audio Distillation for Robust Audio-Visual Reasoning</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Xingming Shui, Dapeng Chen, Bowei Liu, Jingqi Tian, et al.</span></div>
+      <div class="abstract">全模态大模型部署于真实环境会遭遇干扰感知与理解的外部噪声。团队研究其在视听理解中的鲁棒性，聚焦环境噪声与竞争语音下的问答。提出 OP-CAD，一个基于课程的特权自蒸馏框架：训练从轻度到重度环境噪声与竞争语音推进，每阶段选择性 token 级监督。学生从受损视听输入生成响应，冻结教师用干净音频与已验证答案监督相同响应前缀，通过比较干净、受损与仅视觉上下文下的教师预测来分配监督，突出对声学敏感的位置。OP-CAD 在所有评测噪声条件下超越对比方法，强干扰下保留干净正确回答且无总体干净准确率惩罚。</div>
+      <div class="tags"><span class="tag">Audio-Visual</span><span class="tag">Robustness</span><span class="tag">Distillation</span><span class="tag">Multimodal</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.39150" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.39150" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.38444" target="_blank">Audible World Models: Spatially Aware Sound Generation for 3D Worlds</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Duowen Chen, Jinjin He, Gouthaman KV, Sandeep Bangalore Venkatesh, Bo Zhu</span></div>
+      <div class="abstract">文本/图像条件的世界生成器可创建视觉丰富的 3D 环境，但往往静默或仅靠纯文本/渲染视频合成的音轨，缺乏声源位置的显式表示。团队提出 Audible World Models，一个免训练框架，把声音融入生成的世界状态：从文本提示构建全景 3D 代理，分离为语义层，识别发声前景物体与环境背景区域，为每个声音标签合成干声，锚定到重建几何并用几何声学传播渲染听者相关的空间音频。通过显式链接语义、几何与声音传播，框架在听者视点与运动变化时保持声源位置并自适应音频。在 80 个生成场景上，空间一致性较文本/视频/全景条件基线大幅提升。</div>
+      <div class="tags"><span class="tag">Spatial Audio</span><span class="tag">3D World</span><span class="tag">Sound Generation</span><span class="tag">Audio-Visual</span><span class="tag">Training-Free</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.38444" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.38444" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.38440" target="_blank">Monotonicity-Guided Semantic Alignment for Zero-shot Multispeaker Image-to-Speech Synthesis</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Lijun Wang, Yixian Lu, Shogo Okada</span></div>
+      <div class="abstract">直接图像到语音（Img2Sp）在将视觉内容映射到有序语音序列时面临对齐挑战，因图像允许多种口语描述且与语音序列缺乏单调对应。团队提出单调性引导语义对齐（MGSA），据其所知是首个零样本多说话人 Img2Sp 合成框架：用语义语音单元提供跨说话人共享的内容目标，参考语音用于说话人条件化；query aligner 通过软单调先验将视觉内容学到的语义记忆映射到语音单元位置；块状掩码扩散生成器据此生成语音单元。在 Flickr8k-Audio 上取得与单说话人基线有竞争力的字幕性能，LibriTTS-R 参考下支持未见说话人的零样本合成。</div>
+      <div class="tags"><span class="tag">Image-to-Speech</span><span class="tag">Zero-Shot</span><span class="tag">Multispeaker</span><span class="tag">Alignment</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.38440" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.38440" target="_blank">🔗 PDF</a> <a href="https://alizeded.github.io/mgsa-demo" target="_blank">🔗 Demo</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.38502" target="_blank">Multi-Rate Bandwidth Extension by Token Completion in Neural Audio Codecs</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Benoît Ginies, Olivier Fercoq, Gaël Richard</span></div>
+      <div class="abstract">带宽扩展（从低通信号重建高频分量）是音频处理的长期难题。团队将其框架化为音频 token 预测问题：在解耦神经音频编解码器的离散表示上训练基于 Transformer 的语言模型，解耦由输入的 Harmonic-Percussive 分解引导，突出对带宽扩展特别相关的谱结构。方法引入显式考虑下游 token 预测任务的新颖编解码器设计，实现编解码结构与 Transformer 建模的更有效耦合，在客观指标与主观评测上均取得高质量重建，凸显了将编解码器解耦与表示学习对齐到生成建模阶段的价值。</div>
+      <div class="tags"><span class="tag">Audio Codec</span><span class="tag">Bandwidth Extension</span><span class="tag">Token Prediction</span><span class="tag">Transformer</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.38502" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.38502" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.39044" target="_blank">Game Sound-Effect Completion with Event-Level Transformation Hints</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Xinrui Jiang, Heng Yu</span></div>
+      <div class="abstract">为新游戏角色皮肤创建音效需要在保留玩法事件角色的同时获得独特声学身份。团队将其形式化为在基础皮肤音频、已完成目标资产与文本设计描述条件下的补全任务，开发流水线收集、处理并对齐《英雄联盟》皮肤间的对应事件。基于 Stable Audio 3 预训练音频先验，微调一个潜在补画模型联合补全缺失事件；带符号软保留掩码编码可用音频与每个缺失事件的可调变换提示，指定保留与重设计之间的平衡。在留出皮肤上，重建效果优于通用音频编辑器，目标派生的提示进一步提升配对相似度。</div>
+      <div class="tags"><span class="tag">Sound Effects</span><span class="tag">Audio Inpainting</span><span class="tag">Game Audio</span><span class="tag">Generation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.39044" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.39044" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.38491" target="_blank">Role-guided Speaker Deletion Verification in Clinical Psychiatry Speech Recordings with Audio Language Models</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Joseph T Colonel, Daniel Katzman, Kelsey Kirker, Adam N Davidson, et al.</span></div>
+      <div class="abstract">精神病学临床研究日益依赖大规模口语数据收集以识别声学与语言生物标志物，但变化的知情同意与协议要求可能需要从多说话人录音中移除指定说话人，并在超出人工审查的规模上验证移除。团队研究角色驱动的二元临床对话验证问题，用两条并行对称流水线分别确认临床医生与患者语音已被移除。在 48 条精神病学设置录音上，以仅推理设置测试四个开权重模型（Gemma-4-12B/31B、Nemotron-3-Nano、Nemotron-3-Nano-Omni），十四个模型-视图配置的析取 OR 集成取得组合 F1 0.478（精度 0.330，召回 0.870），召回增益指向模型与上下文视图间的显著互补。</div>
+      <div class="tags"><span class="tag">Audio LLM</span><span class="tag">Speaker Deletion</span><span class="tag">Clinical</span><span class="tag">Speech Privacy</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.38491" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.38491" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.38780" target="_blank">RAST: Resolution-Aware Privileged Structure Transfer for Low-Resolution Audio Activity Recognition</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Ji Hwan Park, Gautham Krishna Gudur, Yufei Shen, Dawei Liang, Edison Thomaz</span></div>
+      <div class="abstract">音频日益用于人体活动识别，但高分辨率音频带来能量与存储成本、还可能暴露敏感语音内容，低分辨率音频更保护隐私却会移除识别关键声学线索。团队将训练-部署不匹配形式化为传感器分辨率特权学习（训练用 HR、推理仅用 LR），提出 RAST，一个分辨率感知迁移框架：压缩 HR 教师表示以保留 token 级信息与邻域结构，再做局部 HR-LR 对齐。在 SAMoSA 与 AudioIMU 数据集上，RAST 持续优于仅 LR 训练与直接教师迁移基线，仅 LR 识别最多提升约 7.8%，推理时仅需 LR 音频。</div>
+      <div class="tags"><span class="tag">Activity Recognition</span><span class="tag">Low-Resolution</span><span class="tag">Knowledge Distillation</span><span class="tag">Privacy</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.38780" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.38780" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.38794" target="_blank">A barrier or a booster? Familiarity effects on Mandarin emotion prosody recognition using AI-powered voice cloning</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Feng Xu, Gaoyuan Zhang, Shanshan Xue, Yixiang Chen, et al.</span></div>
+      <div class="abstract">情绪韵律感知需同时处理声学线索与说话人身份，AI 合成语音因微妙的声学非典型性引入了认知复杂性。研究探讨语音来源（人类 vs AI）与说话人熟悉度如何影响情绪识别准确率与认知负荷：对普通话成人做组内实验，评估行为（准确率、反应时）与生理数据（心率变异性 HRV）。结果显示人类语音比 AI 语音产生显著更高的准确率与更快处理速度，而 HRV 未显著区分条件。这些发现表明合成语音的解码受自上而下社会认知的约束，凸显当前 AI 合成技术的局限。</div>
+      <div class="tags"><span class="tag">Emotion Prosody</span><span class="tag">Voice Cloning</span><span class="tag">Perception</span><span class="tag">Cognitive Load</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.38794" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.38794" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-10-01') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
