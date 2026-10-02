@@ -1,0 +1,200 @@
+{
+  "papers": [
+    {
+      "title": "Soundwich: Video Generation with Layered and Controllable Audio",
+      "url": "https://arxiv.org/abs/2610.00691",
+      "date": "2026-09-30",
+      "authors": "Zhuo Ning, AmirHossein Naghi Razlighi, Sagi Polaczek, Daniel Cohen-Or, Ali Mahdavi-Amiri",
+      "abstract": "现有联合音视频生成模型能合成同步声音的视频，但通常只输出一条混合音轨，限制了源级控制，也不符合语音/音乐/音效/环境声分层可编辑的真实工作流。团队提出 Soundwich，一个无需训练（training-free）的框架，可将现有联合模型转化为能生成分层、可独立编辑音轨的视频生成器，为后期制作提供更灵活的音频控制。",
+      "tags": ["Audio Generation", "Video-to-Audio", "Training-Free", "Sound Separation"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.00691"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.00691"}
+      ]
+    },
+    {
+      "title": "Articulatory Source-Filter TTS: Physically Grounded Control through Vocal Tract Kinematics",
+      "url": "https://arxiv.org/abs/2610.00735",
+      "date": "2026-09-30",
+      "authors": "Jesuraj Bandekar, Shinji Watanabe, Prasanta Kumar Ghosh",
+      "abstract": "现代神经 TTS 系统声学保真度极高却是黑盒，几乎无法对声道滤波器做可解释控制。团队提出基于发音运动学（articulatory kinematics）的可控源-滤波器 TTS 架构：通过大规模预训练表征增强的 Acoustic-to-Articulatory Inversion (AAI) 模型生成运动学伪轨迹，实现物理可解释的声道控制。",
+      "tags": ["TTS", "Source-Filter", "Articulatory", "Interpretability"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.00735"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.00735"}
+      ]
+    },
+    {
+      "title": "MeanVoiceFlow2: Joint Optimization of Mean Flow and Content Encoder for Fast One-Step Zero-Shot Voice Conversion",
+      "url": "https://arxiv.org/abs/2609.40087",
+      "date": "2026-09-30",
+      "authors": "Takuhiro Kaneko, Hirokazu Kameoka, Kou Tanaka, Yuto Kondo",
+      "abstract": "基于流匹配的语音转换（VC）因高音质和强说话人相似度备受关注。一步式模型（如 MeanVoiceFlow）推理高效，但依赖计算量大的内容编码器。团队提出 MeanVoiceFlow2，联合优化均值流与内容编码器，在保持一步式零样本高质量语音转换的同时降低内容编码成本（NTT 团队）。",
+      "tags": ["Voice Conversion", "Flow Matching", "Zero-Shot", "One-Step"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.40087"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.40087"}
+      ]
+    },
+    {
+      "title": "ProxyMOS: Label-Free Speech Quality Assessment by Multi-Teacher Distillation with Adaptive Routing",
+      "url": "https://arxiv.org/abs/2610.00419",
+      "date": "2026-09-30",
+      "authors": "Maxim Trokunov, Kirill Borodin, Nikita Vasiliev, Grach Mkrtchian",
+      "abstract": "人工 MOS 标注昂贵，无参考 MOS 预测器在训练域外性能锐减。ProxyMOS 将一组公开的 MOS 预测器蒸馏为单一更强模型，无需新增人工标签：8 个预测器先对标人工评分，最优 5 个进入子集搜索（均匀/相关加权/误差加权/MSE 最优），再经自适应路由蒸馏，提升跨域泛化能力。",
+      "tags": ["Speech Quality", "MOS Prediction", "Distillation", "Label-Free"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.00419"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.00419"}
+      ]
+    },
+    {
+      "title": "UniAE-MoE: A Unified Audio Encoder via Mixture of Experts",
+      "url": "https://arxiv.org/abs/2609.39199",
+      "date": "2026-09-30",
+      "authors": "Shengbo Cai, Zhisheng Zhang, Zichao Nie, Jing Peng, Jingran Xie, Zhiyong Wu",
+      "abstract": "音频大语言模型（LALM）依赖高效音频编码器实现多任务。团队提出 UniAE-MoE，一个基于 Mixture-of-Experts (MoE) 的统一音频编码器，探索主流音频编码器并整合 Qwen2-Audio 与 Audio Flamingo 等架构，实现对跨领域音频表示的建模，显著提升下游理解任务表现。",
+      "tags": ["Audio Encoder", "MoE", "Audio LLM", "Unified Representation"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.39199"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.39199"}
+      ]
+    },
+    {
+      "title": "AnchorPrompt: Self-Distilled Soft Prompts for Robust Audio-Language Models",
+      "url": "https://arxiv.org/abs/2610.00706",
+      "date": "2026-09-30",
+      "authors": "Pooneh Mousavi, Amir Ivry, Mirco Ravanelli, Cem Subakan",
+      "abstract": "大型音频语言模型（LALM）对噪声、波形损坏和对抗注入等输入扰动敏感。AnchorPrompt 是一种高效适配方法，冻结主模型，仅在解码器输入（音频与问题嵌入之间）插入一组提示向量，并通过多样化扰动上的自蒸馏训练这些向量，增强模型鲁棒性。",
+      "tags": ["Audio LLM", "Robustness", "Prompt Tuning", "Self-Distillation"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.00706"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.00706"}
+      ]
+    },
+    {
+      "title": "SCB: SpeechConversationBench for Evaluating Multi-Turn Reasoning in Speech-to-Speech Models",
+      "url": "https://arxiv.org/abs/2609.40198",
+      "date": "2026-09-30",
+      "authors": "Kanpat Vesessook, Saksorn Ruangtanusak",
+      "abstract": "语音到语音系统需在跨轮对话中完成任务。团队引入 SpeechConversationBench (SCB)，基于 103 个分片 GSM8K 数学问题，评估语音到语音模型在多轮口语数学推理中的表现，对比单轮完整呈现、拼接分片与增量口语披露三种设置，揭示多轮推理能力短板。",
+      "tags": ["Speech-to-Speech", "Benchmark", "Multi-Turn", "Reasoning"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.40198"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.40198"}
+      ]
+    },
+    {
+      "title": "Watch Your Speech: Text-aware Video-to-Speech Synthesis with Textual Conditioning",
+      "url": "https://arxiv.org/abs/2610.01012",
+      "date": "2026-10-01",
+      "authors": "Gunwoo Lee, Yoori Oh, Yoseob Han",
+      "abstract": "视频到语音合成从静音说话人脸视频生成自然语音，面临一对多的固有映射难题。团队提出 Watch Your Speech (WYS)，在视频到语音合成中引入文本条件，利用文本信息约束音素准确性，缓解纯视觉动态信息不足的问题。",
+      "tags": ["Video-to-Speech", "Talking Face", "Multimodal", "Synthesis"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.01012"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.01012"}
+      ]
+    },
+    {
+      "title": "Balalaika-Longform: A Russian Speech Corpus for Continuous Long-Form Text-to-Speech",
+      "url": "https://arxiv.org/abs/2610.00658",
+      "date": "2026-09-30",
+      "authors": "Nikita Vasiliev, Kirill Borodin, Vasilii Kudryavtsev, Maxim Maslov, Grach Mkrtchian",
+      "abstract": "长文本 TTS 需在长时生成中保留指定词，但句级训练与评测会掩盖遗漏和过早终止。团队开源 Balalaika-Longform，一个 189 小时俄语长文语料，以 30 秒至 15 分钟连续单元组织，长单元与匹配短窗口支持同一源录音上的微调对比，并配套评测。",
+      "tags": ["TTS", "Long-Form", "Speech Corpus", "Open Data", "Russian"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.00658"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.00658"}
+      ]
+    },
+    {
+      "title": "PLACE: Positional Latent Adaptation via Conditioned Embeddings for Binaural Audio Generation",
+      "url": "https://arxiv.org/abs/2610.00630",
+      "date": "2026-09-30",
+      "authors": "Tiernon Riesenmy, You Zhang, Gautam Bhattacharya, Andrea Fanelli",
+      "abstract": "团队提出 PLACE，在预训练 any-to-audio 模型 AudioX 基础上扩展双耳（binaural）生成，支持文本、视频与可选音频提示的任意组合。PLACE 用 Perception Encoder Core 特征增强视频条件，对齐文本与视频表示提取空间线索，并对生成隐向量施加条件依赖的低秩变换。",
+      "tags": ["Binaural Audio", "Spatial Audio", "Audio Generation", "AudioX"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.00630"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.00630"}
+      ]
+    },
+    {
+      "title": "AudioJev: Direct Audio Decisions with Order-Calibrated Probabilities",
+      "url": "https://arxiv.org/abs/2610.01293",
+      "date": "2026-10-01",
+      "authors": "Sihan Lv, Zhen Li, Zhiqi Cao, Jinshan Zhang, Ying Li, Meng Xi",
+      "abstract": "音频决策往往依赖转写无法保留的证据，其概率估计又受选项顺序影响。AudioJev 用一个共享的全参数模型，将波形、问题与给定选项直接映射为候选分布，并定义 order calibration 以在保持语义不变的选项置换下保持答案概率，实现音频直接决策。",
+      "tags": ["Audio Understanding", "Audio QA", "Calibration", "Direct Decision"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.01293"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.01293"}
+      ]
+    },
+    {
+      "title": "Audio Token Attention Is Predictable Before the Language Model Runs",
+      "url": "https://arxiv.org/abs/2609.38878",
+      "date": "2026-09-30",
+      "authors": "Kyoungjun Park, Yunzhe Li, Lili Qiu",
+      "abstract": "大型音频语言模型把一分钟语音转成 750-1500 个 token 并全部预填充。与图像 token（首层注意力低可早剪枝）不同，音频 token 在首层即吸引大量注意力且排名尚未收敛。团队发现音频 token 的注意力在语言模型运行前即可预测，为音频 token 提前剪枝、加速推理提供新思路。",
+      "tags": ["Audio LLM", "Token Pruning", "Inference", "Efficiency"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.38878"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.38878"}
+      ]
+    },
+    {
+      "title": "Toward Elastic Speech Inference: Training-Free Wake-Word Detection from Pretrained ASR",
+      "url": "https://arxiv.org/abs/2610.01182",
+      "date": "2026-10-01",
+      "authors": "Hwayeon Kim, Youngwon Choi, Hyeonyu Kim",
+      "abstract": "现有方法通常需额外训练或任务专用模块，将预训练 ASR 适配到唤醒词（WuW）检测。团队探索用共享预训练 ASR 骨干实现无需梯度训练（training-free）的唤醒词检测，实现弹性语音推理，降低设备端部署成本。",
+      "tags": ["ASR", "Wake-Word", "Training-Free", "Edge"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.01182"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.01182"}
+      ]
+    },
+    {
+      "title": "Silence-the-Mimic: Accelerating Imperceptible Perturbation Generation Against Voice Cloning",
+      "url": "https://arxiv.org/abs/2610.00662",
+      "date": "2026-09-30",
+      "authors": "Runqiu Xu",
+      "abstract": "深度语音转换（VC）与 TTS 模型使极少量数据即可克隆人声，引发身份盗用与隐私安全担忧。现有不可感知对抗保护方法依赖对质量控制损失高度敏感的迭代优化。团队提出 Silence-the-Mimic，加速抗语音克隆的不可感知扰动生成，为声音版权保护提供更高效方案。",
+      "tags": ["Voice Cloning", "Adversarial", "Security", "Privacy"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.00662"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.00662"}
+      ]
+    },
+    {
+      "title": "RMS-AQA: A Two-Stage Spatial Audio Question Answering Benchmark for Real-World Domestic Environments",
+      "url": "https://arxiv.org/abs/2610.00935",
+      "date": "2026-10-01",
+      "authors": "Peihao Chen, Qing Wang, Lichun Fan, Yufeng Hao, Zhifeng Kong, Mengyao Zhu",
+      "abstract": "家庭环境中的具身助手需推断发生了什么、在何时何地发生并作出响应。团队提出 RMS-AQA，一个面向真实家庭环境的空间音频问答（SAQA）基准，采用两阶段问答形式，全面评估音频语言模型先定位后推理的能力。",
+      "tags": ["Spatial Audio", "QA", "Benchmark", "Audio LLM"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.00935"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.00935"}
+      ]
+    }
+  ],
+  "news": []
+}
