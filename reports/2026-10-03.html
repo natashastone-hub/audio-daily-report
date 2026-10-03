@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-10-03</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-10-03</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年10月3日 (周六) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">18</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">5</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.01961" target="_blank">Multi-sample Synthetic Supervision for Accent Conversion</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Yangyang Qu, Michele Panariello, Massimiliano Todisco, Nicholas Evans</span></div>
+      <div class="abstract">口音转换（Accent Conversion）需在保留说话人身份与语言内容的同时改变口音，但平行录音稀缺。语音合成可提供替代监督来源，但生成的转换目标在口音实现与源保留上参差。团队提出多样本合成监督框架，为每个源-口音条件联合评估候选波形质量以构建转换目标，被选候选提供离散语音码（表征语言内容、韵律与说话风格）作为口音条件自回归适配的目标。相比每个训练样本仅用一个生成目标，该方法将目标口音分类准确率提升 2.49 个百分点，说话人相似度基本不变，WER 仅增 0.29 个百分点；在六个目标口音上达 7.81% WER 及最高平均听感评分（EURECOM/Inria 团队）。</div>
+      <div class="tags"><span class="tag">Accent Conversion</span><span class="tag">Voice Conversion</span><span class="tag">Synthetic Supervision</span><span class="tag">Speech Synthesis</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.01961" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.01961" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.01952" target="_blank">Shared-State Local Translations for Training-Free Voice Conversion</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Yangyang Qu, Michele Panariello, Massimiliano Todisco, Nicholas Evans</span></div>
+      <div class="abstract">一次性免训练语音转换（VC）中，源与参考语音可能含不同语言内容，无法假设可靠的帧级对应。团队提出 StateVC，从源与参考语音的池化帧级 WavLM 表示中联合定义一组公共局部区域（称为 states），通过对池化表示拟合 pair 特定的高斯混合模型获得共享状态，无需显式源-参考帧匹配。在每个状态内 StateVC 估计 WavLM 空间中源到参考的均值偏移，源帧后验概率组合各状态偏移以实现不同帧的差异化局部更新。在 LibriSpeech one-shot 协议上，StateVC 取得最低 WER/CER（8.01%/3.22%），说话人相似度 SIM 0.9512，并在免训练系统中获最高主观说话人相似度与自然度。</div>
+      <div class="tags"><span class="tag">Voice Conversion</span><span class="tag">Training-Free</span><span class="tag">WavLM</span><span class="tag">One-Shot</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.01952" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.01952" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.01926" target="_blank">LAST: Looped Audio Spectrogram Transformer</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Haider Al-Tahan, Sean O'Brien, Anastasia Razdaibiedina, N. Apurva Ratan Murty</span></div>
+      <div class="abstract">加深 Transformer 能提升识别性能却代价高昂。团队提出 Looped Audio Spectrogram Transformer（LAST）：先处理全部 token，再复用相同 block 仅细化固定音频特征上的 class token，使后续轮次变得廉价。在 AudioSet 上，十轮 LAST 达 0.345 mAP，以 49.4% 更少参数、42% 更少乘加运算、9.8% 更高实测吞吐超越十二层顺序 Transformer（相对提升 2.1%）。轮数从 2 增到 10 仅增加 1.2% 计算量，同时提升准确率；对时间掩蔽及其它听觉增强表现出更强鲁棒性，在音乐、环境与事件声音分类任务上泛化更好。</div>
+      <div class="tags"><span class="tag">Audio Classification</span><span class="tag">Transformer</span><span class="tag">Efficiency</span><span class="tag">AudioSet</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.01926" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.01926" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.01560" target="_blank">AURAL: Adaptive Latent Reasoning with Joint Chunk for Speech Language Models</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Yuxiang Wang, Kunyu Feng, Yuancheng Wang, Zihang Liu, Shengbo Cai, et al.</span></div>
+      <div class="abstract">智能与快速响应共同决定语音语言模型的交互体验，却很难兼得。显式思维链（CoT）提升推理与音频理解，但生成中间推理 token 会延迟响应。团队提出 AURAL，在隐空间建模多个合理推理延续的分布，并联合预测未来状态块以降低顺序前向步数与推理延迟。为提供初始监督，构建 AuralReason-683K（68.3 万条双语语音、约 1000 小时，覆盖情绪识别、共情对话与通用推理的简洁 CoT）；AURAL-RL 进一步探索这些轨迹之外，奖励能产出高质量答案且针对问题难度自适应的简洁推理。在两个骨干上，AURAL-RL 性能与 CoT-RL 相当，多数指标相比监督 checkpoint 增益更大；在 Qwen2.5-Omni 上首个答案 token 时间由 1.22s 降至 0.10s（11.8 倍提速）。</div>
+      <div class="tags"><span class="tag">Speech LLM</span><span class="tag">Latent Reasoning</span><span class="tag">Chain-of-Thought</span><span class="tag">Efficiency</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.01560" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.01560" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.01492" target="_blank">Q-SPT: Learnable Query-Based Compression for Low-Frame-Rate Speech Tokenization</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Jeeyoung Yun, Seohwan Yun, Sungwoong Kim</span></div>
+      <div class="abstract">神经语音编解码器日益用作语音语言模型（SLM）的分词器，降低帧率可减计算与内存开销，却难以同时保留语言信息与声学细节。团队提出 Q-SPT，一个低帧率双流语音分词器，为语义与声学表示分别配备上下文感知、可学习的基于查询的压缩器：固定速率的 query 分别以语义流与声学流作为独立 key-value 源进行注意力聚合，实现流特定、上下文感知的聚合；并通过自回归文本损失显式监督语义压缩器保留语言信息。Q-SPT 在相同帧率下取得最佳重建，在下游 SLM 中语音识别准确率与 TTS 感知质量最优，可懂度也具竞争力。</div>
+      <div class="tags"><span class="tag">Speech Tokenization</span><span class="tag">Audio Codec</span><span class="tag">Speech LLM</span><span class="tag">Compression</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.01492" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.01492" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.01695" target="_blank">Teaching LLMs to Hear Who Spoke What: Metadata-Supervised Pretraining for Encoder-Free Speech-LLMs</a></h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Mohan Shi, Ruchao Fan, Sunit Sivasankaran, Keqi Deng, Jinyu Li</span></div>
+      <div class="abstract">基于编码器的语音大模型（Speech-LLM）常用偏重语言内容、可能丢弃细粒度声学线索的预训练语音编码器。免编码器 Speech-LLM 通过轻量嵌入层将 Mel-spectrogram 特征直接映射进 LLM 输入空间，让 LLM 从低层声学特征学习，但其系统预训练策略探索不足。团队提出元数据监督预训练（MSP），利用说话人身份与情绪等语音属性培养说话人判别与副语言能力；进一步提出说话人感知语料组合（SAUC）强化说话人判别，并用随机 span 掩码正则化预训练。在匹配训练数据下，免编码器模型优于随机初始化的编码器基线；在有限元数据标注下与使用更大语料预训练编码器的模型相当、多个场景反超，展示了免编码器架构构建原生多模态 LLM 的潜力（Microsoft）。</div>
+      <div class="tags"><span class="tag">Speech LLM</span><span class="tag">Speaker Diarization</span><span class="tag">Encoder-Free</span><span class="tag">ASR</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.01695" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.01695" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.01864" target="_blank">From Isolated Feature to Orbits: Discovering Music Concepts via Multi-SAE Alignment</a></h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Liwei Lin, Gus Xia</span></div>
+      <div class="abstract">如何理解音乐基础模型内部学到了什么？多数可解释性方法（probe、稀疏自编码器 SAE）聚焦于识别个别特征，但许多概念（如和弦、调性）其实是结构化关系而非孤立特征——它们天然表现为音高与时间空间中的有序集合。团队从「特征识别」转向「结构分析」，利用音高移调作为归纳偏置，通过多视图 SAE 对齐诱导有序轨道（orbits）：生成音高移调的输入对并对齐其 SAE 表示，发现与音高相关的结构化特征组。实验在两个 SOTA 音乐基础模型上恢复了对应和弦、调性与旋律模式的轨道结构，仅需少量锚点样本即可解释整类概念族（NYU/中央音乐学院）。</div>
+      <div class="tags"><span class="tag">Music</span><span class="tag">Interpretability</span><span class="tag">SAE</span><span class="tag">Foundation Model</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.01864" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.01864" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.01861" target="_blank">AVSD-Scenes: A Dataset for Audio-Visual Description of Urban Scenes</a></h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Dhanunjaya Varma Devalraju, Arshdeep Singh, Mark D. Plumbley</span></div>
+      <div class="abstract">自然语言描述能为视听城市场景提供丰富语义表示，但联合描述听觉与视觉信息的数据集仍稀缺。团队提出 AVSD-Scenes，一个城市环境配对视听场景描述数据集，基于 TAU 城市视听场景数据集生成 12291 条描述：先用 Qwen2-Audio-7B 与 Qwen2.5-VL-7B 分别生成音频/视觉描述，再用 Qwen3-14B、Mistral-Small-3.2-24B、Gemma-3-27B 等 LLM 融合为多模态描述。多模态描述较单模态在语义对齐与跨模态检索上更优，城市场景分类准确率最高 94.5%（融合多模态嵌入达 95.4%），且描述蕴含的是从视听内容中习得的语义信息而非标签泄露。</div>
+      <div class="tags"><span class="tag">Audio-Visual</span><span class="tag">Dataset</span><span class="tag">Scene Description</span><span class="tag">Multimodal</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.01861" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.01861" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.01846" target="_blank">Beyond Decodability: Do Acoustic Factors Drive Predictions in Speech-Based Alzheimer's Assessment?</a></h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Serli Kopar, Alkis Koudounas, Roshan P. Rane, Sam Gijsen, Paula A. Perez-Toro, Kerstin Ritter</span></div>
+      <div class="abstract">基于语音的阿尔茨海默病（AD）评估日益依赖从原始音频学习声学表征的自监督预训练模型，这使模型暴露于录音因子。团队探究这些因子是仅被编码进 SSL 表征、还是能系统性改变预测。在 ADReSSo 与三个大型 SSL 骨干上，对仅含说话人语音、非语音与完整录音的音频施加受控噪声与混响干预，结合逐层线性解码、输入/表示空间干预与几何对齐分析区分「声学可解码性」与「对 AD 预测的影响」。结果显示受控声学干预会改变三个骨干的 AD 预测，噪声（虽在原数据中无显著诊断组差异）产生最强干预效应，且该效应相对分类器决策方向系统结构化、在留出测试集复现、随表示空间干预方向反转而反转——说明高预测性能与无显著组差异不足以保证鲁棒性，干预式鲁棒性测试应成为可信临床语音模型的标准。</div>
+      <div class="tags"><span class="tag">Clinical Speech</span><span class="tag">Alzheimer's</span><span class="tag">SSL</span><span class="tag">Robustness</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.01846" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.01846" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.01619" target="_blank">Exposing the Cost of Deep Learning Audio Development</a></h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Constance Douwes, Paul Magron, Romain Serizel</span></div>
+      <div class="abstract">深度学习的能耗与碳排放研究多聚焦训练与推理，忽视能耗密集的开发阶段（架构原型与密集实验）。团队基于 LORIA 实验室所用 Grid5000 共享计算平台的活动日志提出估算方法，以 Multispeech 团队四个音频项目为案例评估整体能耗，并与训练最佳模型成本对比。结果显示开发阶段能耗是训练最佳模型单独所需能耗的 3 到 256 倍，呼吁在深度学习音频项目全生命周期中更系统地报告能耗。</div>
+      <div class="tags"><span class="tag">Energy</span><span class="tag">Environmental Impact</span><span class="tag">Audio Deep Learning</span><span class="tag">Sustainability</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.01619" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.01619" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.01488" target="_blank">Multi-Party Backchannel Prediction: a Diagnosis, a Benchmark, and a Ceiling</a></h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Mohammed Hafsati, Ahmed Loughzali</span></div>
+      <div class="abstract">回馈（backchannel）预测几乎只在二人对话中研究。团队基于 AMI 语料提出多说话人基准，含 682 个 masked-listener 视图、171 场会议、190 位说话人与 18697 个回馈事件，采用 person-disjoint 留出划分。SOTA 二人模型零样本用于会议音频时性能接近随机（AUROC 0.499），但其冻结声学特征仍具信息量（线性 probe 达 0.704，重训预测器提升至 0.751）。重训揭示第二局限：听者条件化对训练见过的听者有效、对未见听者无效，且容量缩减、听者对抗训练、逐听者自适应与 oracle 词法条件化均无法消除该差距，揭示身份信息与回馈有用线索纠缠。基准与评测工具已开源（github.com/HafsatiMohammed/bc_multiparty_release）。</div>
+      <div class="tags"><span class="tag">Backchannel</span><span class="tag">Multiparty</span><span class="tag">Benchmark</span><span class="tag">Speaking Behavior</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.01488" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.01488" target="_blank">🔗 PDF</a> <a href="https://github.com/HafsatiMohammed/bc_multiparty_release" target="_blank">🔗 Code</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.01450" target="_blank">Code-Switching Spoken Language Identification as Multi-Label Set Prediction</a></h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Shunsuke Mitsumori, Matthew Wiesner, Shigeo Morishima, Shinji Watanabe</span></div>
+      <div class="abstract">语码转换（code-switched，CS）语音会穿透用于整理大规模语音语料的单语语言识别（LID）过滤器，需要 CS 感知的 LID（CS-LID）。团队将语段级 CS-LID 形式化为多标签语言集合预测，提出直接输出语段内语言的集合生成器，与原子对、基于分数的分类基线对比。Oracle Top-k 是最强基线，但因没有单一阈值能区分 CS 与单语语音而阈值法失效；集合生成器在未见语言对上预测正确的语言数量（无需假设语言数），但在精确集合准确率上不及 Oracle Top-k。分析指出 CS-LID 的核心障碍：oracle 基数、阈值不稳定、CS 训练数据的语言偏置与合成到真实的差距。</div>
+      <div class="tags"><span class="tag">Language Identification</span><span class="tag">Code-Switching</span><span class="tag">Multilingual</span><span class="tag">Set Prediction</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.01450" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.01450" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.01405" target="_blank">PADP: Perceptual Audio Data Perturbation for Probing Perception Awareness in Audio Quality Models</a></h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Guanxin Jiang, Andreas Brendel, Pablo M. Delgado, Jürgen Herre</span></div>
+      <div class="abstract">团队提出一套引入感知无关失真的音频变换集合，用作音频质量模型的「感知压力测试」，称为感知音频数据扰动（PADP）。PADP 利用人耳对某些细粒度信号变化的敏感性缺失，大幅改变波形却保持感知质量与内容不变；其可听性与参数选择经受控听音测试验证，保证变换对关键与非关键项均接近透明。对 SOTA 感知驱动客观音频质量模型与基础模型的鲁棒性进行探测，结果显示模型响应与人类听觉感知存在错位，揭示这些模型对部分变换的感知意识有限（Fraunhofer IIS）。</div>
+      <div class="tags"><span class="tag">Audio Quality</span><span class="tag">Perceptual</span><span class="tag">Perturbation</span><span class="tag">Evaluation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.01405" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.01405" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.01388" target="_blank">Supervising Sound Localization by In-the-wild Egomotion</a></h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Anna Min, Ziyang Chen, Hang Zhao, Andrew Owens</span></div>
+      <div class="abstract">团队提出利用「自运动」（egomotion）作为监督信号学习双耳声源定位的方法。视频过程中相机到声源的方向会随相机移动而变化，训练音频模型预测与视觉相机运动估计（由多视图几何传统方法获得）一致的声音方向，提供弱但充足的监督，并与传统双耳线索结合。为评估，提出一个含自运动的真实世界视听视频数据集，模型能从真实数据成功学习并在声源定位任务上表现良好（UMich/MIT/上海AI Lab）。</div>
+      <div class="tags"><span class="tag">Sound Localization</span><span class="tag">Binaural</span><span class="tag">Self-Supervised</span><span class="tag">Audio-Visual</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.01388" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.01388" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.01259" target="_blank">A Federated Deepfake Speech Detection Method Based on Layer-Wise Center-Guided Weighting Aggregation</a></h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Yingjian Yu, Haiyan Guo, Tianshun Wang, Zirui Ge, Chi Liu</span></div>
+      <div class="abstract">深度学习语音合成使深度伪造语音愈发多样，威胁声纹认证。集中式训练能有效做深度伪造语音检测（DSD）却需大量算力并带来隐私问题。团队提出联邦 DSD（FedDSD）方法，在分散语音数据集上协作训练且不共享原始音频：各客户端用 FedProx 算法训练本地模型（缓解数据异质性）并上传参数；进一步提出逐层中心引导加权聚合（L-CGWA）策略，按各客户端与参考中心的距离逐层调整其贡献，捕捉跨客户端与跨层差异、增强聚合鲁棒性。实验表明 FedDSD 训练模型的 EER 与集中式联合训练相当，显著优于单语料训练模型，且跨域泛化鲁棒。</div>
+      <div class="tags"><span class="tag">Deepfake Detection</span><span class="tag">Federated Learning</span><span class="tag">Anti-Spoofing</span><span class="tag">Privacy</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.01259" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.01259" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.01242" target="_blank">FedCFM: Federated Continual Domain Generalization for Fake Speech Detection via Conditional Flow Matching</a></h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Yingjian Yu, Haiyan Guo, Tianshun Wang, Xinzhou Xu, Zirui Ge, Chi Liu, Ziheng Liu</span></div>
+      <div class="abstract">伪造语音检测（FSD）模型的泛化能力对真实部署至关重要。现有多数据集联合训练依赖固定训练集、无法适应新出现的欺骗类型；持续学习虽有探索，但多忽略设备端数据存储受限。团队提出 FedCFM，一个基于条件流匹配（CFM）的联邦持续域泛化框架，在面临多样且不断演化的欺骗攻击的分散客户端间无需共享原始语音即可协作：各客户端训练 CFM 生成器建模欺骗类型特定嵌入分布，跨客户端生成器交换可合成未见欺骗类型嵌入，通过生成式重放与知识蒸馏持续更新分类器。相同训练集下 FedCFM 的 EER 低于集中式与联邦域泛化基线，跨域泛化强（代码将开源 github.com/jspycpp/FedCFM）。</div>
+      <div class="tags"><span class="tag">Fake Speech Detection</span><span class="tag">Federated Learning</span><span class="tag">Continual Learning</span><span class="tag">Flow Matching</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.01242" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.01242" target="_blank">🔗 PDF</a> <a href="https://github.com/jspycpp/FedCFM" target="_blank">🔗 Code</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.01103" target="_blank">ParaCalib: Semantically Calibrated Paralinguistic Modeling for Depression Detection</a></h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Yuxin Li, Yifei Li, Yi-Wen Chao, Xiangyu Zhang, Eng Siong Chng, Cuntai Guan</span></div>
+      <div class="abstract">语音行为为基于语音的抑郁检测提供重要信号，但其解释常依赖说了什么及其语境功能；现有方法却把声学线索当作上下文无关标记，难以区分语音形式与其语境依赖的交际功能。团队提出 ParaCalib，通过相对语段级语义语境与推断的交际功能来解释语音模式，并用可比较的状态空间表示，实现副语言行为的语义校准：用音频语言模型（ALM）生成语境化语音描述，用基于 LLM 的副语言状态提取器（PSE）映射为结构化语义校准副语言（SC-Para）表示。ParaCalib 在 DAIC-WOZ 上达 71.9%、MODMA 上 90.5% 的最高平均 Macro-F1；控制实验直接验证 PSE 阶段的语义校准——固定声学描述下改变语义语境会改变推断的抑郁相关副语言证据（NTU）。</div>
+      <div class="tags"><span class="tag">Depression Detection</span><span class="tag">Paralinguistic</span><span class="tag">Audio LLM</span><span class="tag">Health</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.01103" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.01103" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.00852" target="_blank">Child-Adapted Structured Phonological Representations for Interpretable Speech Sound Analysis</a></h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Abner Hernandez, Tomás Arias Vergara, Andreas Maier, Paula Andrea Pérez-Toro</span></div>
+      <div class="abstract">结构化音系表示提供了可解释的通用语音嵌入替代方案，但现有模型多基于成人语音训练。团队将 PhonoQ-2.0 适配到儿童语音，使用 CHILDES-Aligned 数据，在两种初始化策略（成人 PhonoQ 与随机）下比较三种对齐监督条件（成人 / 成人+儿童 / 仅儿童），并对儿童语音人工标注评估泛化。在 58 名正常发育儿童的 1352 个辅音目标上，儿童语音适配在所有监督条件下提升浊音识别（成人 PhonoQ 的 0.922 macro-F1 升至 0.972–0.987）；发音方式对对齐监督更敏感（成人+儿童 MFA 达 0.804/0.796，成人 MFA 约 0.70）；纵向 UltraPhonix 分析进一步揭示说话人特定的软腭与齿龈后音变化，与所报告的临床进展大体一致。</div>
+      <div class="tags"><span class="tag">Child Speech</span><span class="tag">Phonology</span><span class="tag">Interpretable</span><span class="tag">Speech Analysis</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.00852" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.00852" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-10-03') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
