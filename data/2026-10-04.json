@@ -1,0 +1,5 @@
+{
+  "papers": [],
+  "news": [],
+  "note": "当前日期 2026-10-04（周日）。经分级兜底检索（arXiv eess.AS/cs.SD max_results=50 → 25，并按 submittedDate 降序），最新批次仍为「Thu 01 Oct」提交的论文，最新一篇为 2610.01961（Multi-sample Synthetic Supervision for Accent Conversion，2026-10-01 提交）；这批 18 篇论文已全部被昨日 10-03 日报收录，过去 24 小时（10-03 09:30 起）内 arXiv 无新论文提交。新闻方面：必搜重磅关键词（OpenAI GPT-Live full-duplex、OpenAI voice model release、Google Gemini voice、full-duplex speech model、语音模型发布、real-time voice AI）均未命中 24 小时内的新发布——GPT-Live-1 API（09-11）、Gemini 3.8 Flash TTS（09-23）、Qwen-Audio-3.1（09-23）等均逾 24 小时窗口。HuggingFace Daily Papers 亦无 24 小时内新 audio 论文。故本期论文与新闻均为空，诚实标注，不填充旧内容。"
+}
