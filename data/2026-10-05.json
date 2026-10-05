@@ -1,0 +1,158 @@
+{
+  "papers": [
+    {
+      "title": "ParaGeo: Decomposing Paralinguistic Variation into a Shared Latent Geometry",
+      "url": "https://arxiv.org/abs/2610.03125",
+      "date": "2026-10-02",
+      "authors": "Yuhan Liu, Yuxuan Ou, Ruoxi Su, Mohamed Ahmed Zaki, Yunbo Long",
+      "abstract": "语音表达同时受请求的副语言属性与语言内容影响。团队提出 ParaGeo，在冻结的语音语言模型中对副语言变异做内容匹配分解：合成音频 token 用固定 listening prompt 回放，池化后的 key/value 表征被中心化并投影到共享低维空间。GLM-4-Voice 探针跨越 12 个基准族的 80 个请求控制、8 个句子。用全局拟合的校准基，留出内容的质心准确率达 9.49%（排列基线 1.25%），同标签跨内容余弦相似度 0.285 vs 0.017，两个条件排列检验 p=0.001；静态、加性与时序干预产生属性/层/调度依赖的响应谱。为测量副语言结构提供了共享坐标表示，代码已开源。",
+      "tags": ["Paralinguistic", "Speech LLM", "Interpretability", "Latent Control"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.03125"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.03125"},
+        {"label": "Code", "url": "https://github.com/yuhanlydia/ParaGeo"}
+      ]
+    },
+    {
+      "title": "Unsupervised Instantaneous Phase and Frequency Tracking by Inverse Voice Synthesis",
+      "url": "https://arxiv.org/abs/2610.03058",
+      "date": "2026-10-02",
+      "authors": "Chin-Yun Yu, György Fazekas",
+      "abstract": "知识驱动的神经声码器难以端到端学出可靠基频，因频谱目标对周期结构监督弱且缺相位信息。团队提出源-滤波器模型，其无混叠加性源使声门周期瞬时相位显式化，微分即得瞬时频率与 F0，无需外部 tracker。在 M4Singer 与 LM-SSD 上重建相位对齐，信噪比重建误差比达 8.1 dB（神经基线为负）；LM-SSD 上恢复的 F0 在包括有监督神经 pitch tracker 在内的所有方法中准确率最高，声门闭合点距 REAPER 识别率仅 0.53 个点，且无需任何 F0 标签（提交 ICASSP 2027）。",
+      "tags": ["Vocoder", "Pitch Tracking", "Fundamental Frequency", "Source-Filter"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.03058"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.03058"}
+      ]
+    },
+    {
+      "title": "Personalized Automatic Speech Recognition for a Dysarthric and Tracheostomic Speaker using Artificial Conversations",
+      "url": "https://arxiv.org/abs/2610.03017",
+      "date": "2026-10-02",
+      "authors": "David Nadrchal, Monorama Swain, Florian Schmid, Gerhard Widmer, Paul Primus",
+      "abstract": "为一名带永久性气管造口与重度构音障碍（语音难以被未受训者听懂）的捷克说话人构建个性化 ASR。发布含 33 个标注小时、通过新型「人工对话」协议采集的公开数据集。提出基于 Whisper Base 的多阶段训练管线（标准捷克语微调 + 声学模拟气管造口语音 + 说话人本人数据）。在三个近实时场景（脚本对话、问答、自发对话）评测，相比 Whisper Base 实现 50% 字符错误率相对下降，超越其助手的孤立词识别均值，证明即使重度障碍语音也能构建有用 ASR（IEEE SLT 2026）。",
+      "tags": ["ASR", "Dysarthria", "Assistive", "Whisper"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.03017"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.03017"}
+      ]
+    },
+    {
+      "title": "FASTDIAR: Frame-level speaker encoder for Streaming Diarization",
+      "url": "https://arxiv.org/abs/2610.02941",
+      "date": "2026-10-02",
+      "authors": "Nikita Torgashov, Okan Köpüklü",
+      "abstract": "实时对话智能体需要能在 CPU 上流式运行的说话人分离。团队将 SOTA 说话人识别架构改造为因果帧级编码器，一次读取流，每 80ms 从有界两秒窗口历史音频输出一个嵌入，配以基于流自相似性门控每次更新的在线聚类。仅通过有监督 utterance 级教师的蒸馏训练。在低重叠基准上成为亚秒延迟下最准确的流式分离器，随说话人数增加退化远小于缓存式系统，单 CPU 线程运行速度达实时的 5 倍（提交 ICASSP 2027）。",
+      "tags": ["Speaker Diarization", "Streaming", "Speaker Encoder", "Low-Latency"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.02941"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.02941"}
+      ]
+    },
+    {
+      "title": "Learning Jazz Pianist Style with Cross-Attention Conditioning",
+      "url": "https://arxiv.org/abs/2610.02918",
+      "date": "2026-10-02",
+      "authors": "Drew Edwards, Akira Maezawa, Simon Dixon",
+      "abstract": "爵士钢琴家发展出专业听众几秒内即可识别的独特风格，却难被形式化描述。团队通过预训练符号音乐 Transformer 研究爵士钢琴家风格，发现其表征已编码身份到两个基准可高准确度分类。进而用学到的钢琴家身份嵌入做交叉注意力条件化，使模型按特定艺术家风格生成音乐。两个评测协议确认生成器捕捉到风格结构：滑窗分类器一致将条件化续写归因到正确艺术家；完全在合成生成上训练的分类器在 12 类真实钢琴家上达 87% chunk 级、95% song 级准确率（ISMIR 2026）。",
+      "tags": ["Music Generation", "Style Transfer", "Symbolic Music", "Cross-Attention"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.02918"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.02918"},
+        {"label": "Demo", "url": "https://almostimplemented.github.io/jazz-pianist-style"}
+      ]
+    },
+    {
+      "title": "How Far Back Should a Transformer Look? Repetition and Copying in Music Sequence Models",
+      "url": "https://arxiv.org/abs/2610.02837",
+      "date": "2026-10-02",
+      "authors": "Amir Fathi",
+      "abstract": "探讨自回归符号音乐模型的预测性能如何依赖最大可用上下文。在上下文长度 {6,18,48,96,192,336} 各自训练小因果 Transformer。Nottingham 民谣上 token 预测器测试 NLL 在 6 到 336 间下降 71%（0.986 bits/token）。大部分长上下文增益由精确复制解释：当目标 16-token 历史的早先出现进入可用上下文时增益出现，覆写该出现则增益消失，简单复制基线可恢复 94% 的下降。在 MAESTRO 与 MusicNet 上精确重复少得多，下降更小（9%/18%）。团队审计早前报道 16 token 饱和的草稿，识别出 split 泄漏等，作为上下文长度测量方法学检查。",
+      "tags": ["Music Sequence Modeling", "Transformer", "Long Context", "Analysis"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.02837"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.02837"}
+      ]
+    },
+    {
+      "title": "Correlation-Based Distillation Yields More Mergeable Speech-Music Encoders",
+      "url": "https://arxiv.org/abs/2610.02836",
+      "date": "2026-10-02",
+      "authors": "Fabian Ritter-Gutierrez",
+      "abstract": "单一紧凑编码器同时处理语音与音乐可避免每域单独维护模型。将 DistilHuBERT 损失替换为基于相关的损失后，在权重插值合并下学生在 18 个比较中的 17 个更接近自身更优端点、在每个插值权重上语音任务领先；在激活置换合并下需要重排的通道更少、匹配通道相关性更强。两种无共享机制的合并算法在同一损失替换下都改进，说明增益源于该损失产生的表征本身（APSIPA ASC 2026）。",
+      "tags": ["Distillation", "Speech", "Music", "Model Merging"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.02836"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.02836"}
+      ]
+    },
+    {
+      "title": "What Actually Makes Correlation-Based SSL Distillation Noise-Robust? A Mechanistic Correction",
+      "url": "https://arxiv.org/abs/2610.02823",
+      "date": "2026-10-02",
+      "authors": "Fabian Ritter-Gutierrez, Nancy F. Chen, Eng Siong Chng",
+      "abstract": "SSL 语音模型准确但庞大，知识蒸馏压缩后学生丢失噪声鲁棒性。基于相关的蒸馏含两项：交叉相关（对齐师生表征）与自相关（去相关学生特征）。原方法及 DeHuBERT 将功劳归于自相关项而未隔离。团队证明相反：在 LibriSpeech-100 蒸馏 + CHiME-3 10dB 噪声下，是无偏全维探针、Pearson 方差分解等识别的交叉相关对角项鼓励噪声不变性，将噪声分类准确率从 76.98% 降至 55.02%；自相关项则重组特征空间、提升干净下游任务准确率但几乎不除噪。据此提出蒸馏设计规则（APSIPA ASC 2026）。",
+      "tags": ["SSL", "Distillation", "Noise Robustness", "Speech-Music"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.02823"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.02823"}
+      ]
+    },
+    {
+      "title": "GAANet: Global-guided Asymmetric Attention Network for Audio-Visual Speech Separation",
+      "url": "https://arxiv.org/abs/2610.02752",
+      "date": "2026-10-02",
+      "authors": "Zhiyuan Zhang, Jingyuan Xu, Yiming Tang, Liu Liu, Dan Guo",
+      "abstract": "多尺度设计对高效视听语音分离至关重要。团队提出 GAANet，引入两大创新：一是不对称多尺度融合框架，让音频与视觉流在各自最优时序分辨率提取并交互特征，去除对称时序下采样需求；二是全局引导注意力机制，把每模态压成时序维度为 1 的紧凑全局 token，为跨尺度模态内外融合提供高层语义线索。在 LRS2 与 VoxCeleb2 取得 SOTA（SI-SNRi 16.5 dB / 14.0 dB），仅 3.3M 参数、19.8G MACs。代码开源（ICME 2026）。",
+      "tags": ["Speech Separation", "Audio-Visual", "Attention", "Efficiency"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.02752"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.02752"},
+        {"label": "Code", "url": "https://github.com/redizzy/GAANet"}
+      ]
+    },
+    {
+      "title": "Acoustic gap placement in second-language read speech production",
+      "url": "https://arxiv.org/abs/2610.02582",
+      "date": "2026-10-01",
+      "authors": "Peyman Jahanbin",
+      "abstract": "说话人不仅产出的静音量不同，停顿出现的位置也不同，这是全局停顿计数掩盖的信息。团队分析 115 段 Speech Accent Archive 同一朗读段落录音（57 名母语普通话/中国大陆出生 + 58 名母语美式英语/美国中西出生）。在 250ms 阈值下，标点标记位置的间隙两组相近（5.56 vs 5.47），而无标点位置的间隙普通话组显著更多（3.67 vs 0.43，调整后比率 11.98）。交叉效应逻辑模型证实差异不成比例集中在无标点位置（交互 OR 9.44），近半普通话组的无标点间隙落在短语内部。声学间隙相对文本/句法结构的分布比标点停顿更能区分两组，支持位置敏感测量作为流利度的一个可复现维度。",
+      "tags": ["Second-Language", "Speech Fluency", "Acoustic Gap", "Phonetics"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.02582"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.02582"}
+      ]
+    },
+    {
+      "title": "Effects of interpulse-interval variation on deep-learning classification of bat vocalizations",
+      "url": "https://arxiv.org/abs/2610.02284",
+      "date": "2026-10-01",
+      "authors": "Welmoed R. Eversteijn, Burooj Ghani, A. Leonie Baier, Dan Stowell",
+      "abstract": "探究脉冲间间隔（IPI，相邻叫声起始点间时间）变异是否为蝙蝠物种分类提供辨别信息，以及 Transformer 模型是否比 CNN 更敏感。构建自然 IPI 与归一化 IPI（50ms 等距）两匹配数据集。全内条件评测中 PaSST 准确率两条件接近（71% vs 70%），而 EfficientNet 从 47% 升至 57%；跨条件评测显示用自然 IPI 训练的模型在自然 IPI 测试集上更优（EfficientNet 54%→50%，PaSST 65%→57%）。总体对「自然 IPI 变异显著助分类」「Transformer 更善于利用」的支持有限，但跨条件性能下降说明归一化条件下的结果未必能迁移到自然录音。",
+      "tags": ["Bioacoustics", "Classification", "CNN vs Transformer", "Bat"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.02284"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.02284"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "微软发布首个流式转录模型 MAI-Transcribe-2-Streaming，及两款 MAI-Voice TTS",
+      "url": "https://microsoft.ai/news/our-first-streaming-transcription-model/",
+      "summary": "10 月 1 日，微软 AI 推出 MAI-Transcribe-2-Streaming（其首个流式转录模型）以及两款新 TTS 模型 MAI-Voice-2.1 与 MAI-Voice-2.1-Flash，均经 Microsoft Foundry 提供。流式转录模型支持 60 种语言、自动连续语言检测，在 Artificial Analysis 基准上最终/部分转录准确率均列第一，最终词错误率 2.5%、首次部分 2.8%、到最终转录仅 0.13 秒；收到音频仅 100 多毫秒即产出首个 partial，实现语音智能体边听边推理/调工具。两款 Voice 模型支持 23 种语言、跨语言同一声线保持说话人身份，且支持秒级参考音频的声音克隆（带同意护栏）；MAI-Voice-2.1-Flash 端到端延迟 150ms 生成最长 45 秒音频。4000 人图灵测试中 50.3% 听众认为 MAI-Voice 与真人录音相当或更似人。"
+    }
+  ],
+  "note": "当前日期 2026-10-05（周一，国庆假期）。经 arXiv eess.AS/cs.SD max_results=50 检索，最新批次为「Fri 02 Oct」提交的 9 篇论文（ParaGeo、Inverse Voice Synthesis F0跟踪、FASTDIAR 流式说话人分离、GAANet 视听语音分离等）——这批上周五（10-02）提交、但恰逢周末未被收录；另补齐两篇 10-01 晚提交但被 10-02 早报遗漏的论文（2610.02582 Acoustic gap placement、2610.02284 蝙蝠声波分类），合计 11 篇。新闻方面：唯一命中 24 小时补录窗口内（10-01 发布、周末未录）的重磅动态为微软 MAI-Transcribe-2-Streaming + MAI-Voice-2.1/2.1-Flash 发布；必搜关键词（OpenAI GPT-Live、Google Gemini voice、语音模型发布、real-time voice AI 等）其余命中（GPT-Live-1、Gemini 3.8、Qwen3.8-LiveTranslate 等）均逾 24 小时窗口，故仅收录微软 MAI 一条新闻。"
+}

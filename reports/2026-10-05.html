@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-10-05</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-10-05</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年10月5日 (周一) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">11</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">5</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.03125" target="_blank">ParaGeo: Decomposing Paralinguistic Variation into a Shared Latent Geometry</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-02</span><span>👥 Yuhan Liu, Yuxuan Ou, Ruoxi Su, Mohamed Ahmed Zaki, Yunbo Long</span></div>
+      <div class="abstract">语音表达同时受请求的副语言属性与语言内容影响。团队提出 ParaGeo，在冻结的语音语言模型中对副语言变异做内容匹配分解：合成音频 token 用固定 listening prompt 回放，池化后的 key/value 表征被中心化并投影到共享低维空间。GLM-4-Voice 探针跨越 12 个基准族的 80 个请求控制、8 个句子。用全局拟合的校准基，留出内容的质心准确率达 9.49%（排列基线 1.25%），同标签跨内容余弦相似度 0.285 vs 0.017，两个条件排列检验 p=0.001；静态、加性与时序干预产生属性/层/调度依赖的响应谱。为测量副语言结构提供了共享坐标表示，代码已开源。</div>
+      <div class="tags"><span class="tag">Paralinguistic</span><span class="tag">Speech LLM</span><span class="tag">Interpretability</span><span class="tag">Latent Control</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.03125" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.03125" target="_blank">🔗 PDF</a> <a href="https://github.com/yuhanlydia/ParaGeo" target="_blank">🔗 Code</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.03058" target="_blank">Unsupervised Instantaneous Phase and Frequency Tracking by Inverse Voice Synthesis</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-02</span><span>👥 Chin-Yun Yu, György Fazekas</span></div>
+      <div class="abstract">知识驱动的神经声码器难以端到端学出可靠基频，因频谱目标对周期结构监督弱且缺相位信息。团队提出源-滤波器模型，其无混叠加性源使声门周期瞬时相位显式化，微分即得瞬时频率与 F0，无需外部 tracker。在 M4Singer 与 LM-SSD 上重建相位对齐，信噪比重建误差比达 8.1 dB（神经基线为负）；LM-SSD 上恢复的 F0 在包括有监督神经 pitch tracker 在内的所有方法中准确率最高，声门闭合点距 REAPER 识别率仅 0.53 个点，且无需任何 F0 标签（提交 ICASSP 2027）。</div>
+      <div class="tags"><span class="tag">Vocoder</span><span class="tag">Pitch Tracking</span><span class="tag">Fundamental Frequency</span><span class="tag">Source-Filter</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.03058" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.03058" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.03017" target="_blank">Personalized Automatic Speech Recognition for a Dysarthric and Tracheostomic Speaker using Artificial Conversations</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-02</span><span>👥 David Nadrchal, Monorama Swain, Florian Schmid, Gerhard Widmer, Paul Primus</span></div>
+      <div class="abstract">为一名带永久性气管造口与重度构音障碍（语音难以被未受训者听懂）的捷克说话人构建个性化 ASR。发布含 33 个标注小时、通过新型「人工对话」协议采集的公开数据集。提出基于 Whisper Base 的多阶段训练管线（标准捷克语微调 + 声学模拟气管造口语音 + 说话人本人数据）。在三个近实时场景（脚本对话、问答、自发对话）评测，相比 Whisper Base 实现 50% 字符错误率相对下降，超越其助手的孤立词识别均值，证明即使重度障碍语音也能构建有用 ASR（IEEE SLT 2026）。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Dysarthria</span><span class="tag">Assistive</span><span class="tag">Whisper</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.03017" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.03017" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.02941" target="_blank">FASTDIAR: Frame-level speaker encoder for Streaming Diarization</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-02</span><span>👥 Nikita Torgashov, Okan Köpüklü</span></div>
+      <div class="abstract">实时对话智能体需要能在 CPU 上流式运行的说话人分离。团队将 SOTA 说话人识别架构改造为因果帧级编码器，一次读取流，每 80ms 从有界两秒窗口历史音频输出一个嵌入，配以基于流自相似性门控每次更新的在线聚类。仅通过有监督 utterance 级教师的蒸馏训练。在低重叠基准上成为亚秒延迟下最准确的流式分离器，随说话人数增加退化远小于缓存式系统，单 CPU 线程运行速度达实时的 5 倍（提交 ICASSP 2027）。</div>
+      <div class="tags"><span class="tag">Speaker Diarization</span><span class="tag">Streaming</span><span class="tag">Speaker Encoder</span><span class="tag">Low-Latency</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.02941" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.02941" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.02752" target="_blank">GAANet: Global-guided Asymmetric Attention Network for Audio-Visual Speech Separation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-02</span><span>👥 Zhiyuan Zhang, Jingyuan Xu, Yiming Tang, Liu Liu, Dan Guo</span></div>
+      <div class="abstract">多尺度设计对高效视听语音分离至关重要。团队提出 GAANet，引入两大创新：一是不对称多尺度融合框架，让音频与视觉流在各自最优时序分辨率提取并交互特征，去除对称时序下采样需求；二是全局引导注意力机制，把每模态压成时序维度为 1 的紧凑全局 token，为跨尺度模态内外融合提供高层语义线索。在 LRS2 与 VoxCeleb2 取得 SOTA（SI-SNRi 16.5 dB / 14.0 dB），仅 3.3M 参数、19.8G MACs。代码开源（ICME 2026）。</div>
+      <div class="tags"><span class="tag">Speech Separation</span><span class="tag">Audio-Visual</span><span class="tag">Attention</span><span class="tag">Efficiency</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.02752" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.02752" target="_blank">🔗 PDF</a> <a href="https://github.com/redizzy/GAANet" target="_blank">🔗 Code</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.02918" target="_blank">Learning Jazz Pianist Style with Cross-Attention Conditioning</a></h4>
+      <div class="meta"><span>📅 2026-10-02</span><span>👥 Drew Edwards, Akira Maezawa, Simon Dixon</span></div>
+      <div class="abstract">爵士钢琴家发展出专业听众几秒内即可识别的独特风格，却难被形式化描述。团队通过预训练符号音乐 Transformer 研究爵士钢琴家风格，发现其表征已编码身份到两个基准可高准确度分类。进而用学到的钢琴家身份嵌入做交叉注意力条件化，使模型按特定艺术家风格生成音乐。两个评测协议确认生成器捕捉到风格结构：滑窗分类器一致将条件化续写归因到正确艺术家；完全在合成生成上训练的分类器在 12 类真实钢琴家上达 87% chunk 级、95% song 级准确率（ISMIR 2026）。</div>
+      <div class="tags"><span class="tag">Music Generation</span><span class="tag">Style Transfer</span><span class="tag">Symbolic Music</span><span class="tag">Cross-Attention</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.02918" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.02918" target="_blank">🔗 PDF</a> <a href="https://almostimplemented.github.io/jazz-pianist-style" target="_blank">🔗 Demo</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.02837" target="_blank">How Far Back Should a Transformer Look? Repetition and Copying in Music Sequence Models</a></h4>
+      <div class="meta"><span>📅 2026-10-02</span><span>👥 Amir Fathi</span></div>
+      <div class="abstract">探讨自回归符号音乐模型的预测性能如何依赖最大可用上下文。在上下文长度 {6,18,48,96,192,336} 各自训练小因果 Transformer。Nottingham 民谣上 token 预测器测试 NLL 在 6 到 336 间下降 71%（0.986 bits/token）。大部分长上下文增益由精确复制解释：当目标 16-token 历史的早先出现进入可用上下文时增益出现，覆写该出现则增益消失，简单复制基线可恢复 94% 的下降。在 MAESTRO 与 MusicNet 上精确重复少得多，下降更小（9%/18%）。团队审计早前报道 16 token 饱和的草稿，识别出 split 泄漏等，作为上下文长度测量方法学检查。</div>
+      <div class="tags"><span class="tag">Music Sequence Modeling</span><span class="tag">Transformer</span><span class="tag">Long Context</span><span class="tag">Analysis</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.02837" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.02837" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.02836" target="_blank">Correlation-Based Distillation Yields More Mergeable Speech-Music Encoders</a></h4>
+      <div class="meta"><span>📅 2026-10-02</span><span>👥 Fabian Ritter-Gutierrez</span></div>
+      <div class="abstract">单一紧凑编码器同时处理语音与音乐可避免每域单独维护模型。将 DistilHuBERT 损失替换为基于相关的损失后，在权重插值合并下学生在 18 个比较中的 17 个更接近自身更优端点、在每个插值权重上语音任务领先；在激活置换合并下需要重排的通道更少、匹配通道相关性更强。两种无共享机制的合并算法在同一损失替换下都改进，说明增益源于该损失产生的表征本身（APSIPA ASC 2026）。</div>
+      <div class="tags"><span class="tag">Distillation</span><span class="tag">Speech</span><span class="tag">Music</span><span class="tag">Model Merging</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.02836" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.02836" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.02823" target="_blank">What Actually Makes Correlation-Based SSL Distillation Noise-Robust? A Mechanistic Correction</a></h4>
+      <div class="meta"><span>📅 2026-10-02</span><span>👥 Fabian Ritter-Gutierrez, Nancy F. Chen, Eng Siong Chng</span></div>
+      <div class="abstract">SSL 语音模型准确但庞大，知识蒸馏压缩后学生丢失噪声鲁棒性。基于相关的蒸馏含两项：交叉相关（对齐师生表征）与自相关（去相关学生特征）。原方法及 DeHuBERT 将功劳归于自相关项而未隔离。团队证明相反：在 LibriSpeech-100 蒸馏 + CHiME-3 10dB 噪声下，是无偏全维探针、Pearson 方差分解等识别的交叉相关对角项鼓励噪声不变性，将噪声分类准确率从 76.98% 降至 55.02%；自相关项则重组特征空间、提升干净下游任务准确率但几乎不除噪。据此提出蒸馏设计规则（APSIPA ASC 2026）。</div>
+      <div class="tags"><span class="tag">SSL</span><span class="tag">Distillation</span><span class="tag">Noise Robustness</span><span class="tag">Speech-Music</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.02823" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.02823" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.02582" target="_blank">Acoustic gap placement in second-language read speech production</a></h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Peyman Jahanbin</span></div>
+      <div class="abstract">说话人不仅产出的静音量不同，停顿出现的位置也不同，这是全局停顿计数掩盖的信息。团队分析 115 段 Speech Accent Archive 同一朗读段落录音（57 名母语普通话/中国大陆出生 + 58 名母语美式英语/美国中西出生）。在 250ms 阈值下，标点标记位置的间隙两组相近（5.56 vs 5.47），而无标点位置的间隙普通话组显著更多（3.67 vs 0.43，调整后比率 11.98）。交叉效应逻辑模型证实差异不成比例集中在无标点位置（交互 OR 9.44），近半普通话组的无标点间隙落在短语内部。声学间隙相对文本/句法结构的分布比标点停顿更能区分两组，支持位置敏感测量作为流利度的一个可复现维度。</div>
+      <div class="tags"><span class="tag">Second-Language</span><span class="tag">Speech Fluency</span><span class="tag">Acoustic Gap</span><span class="tag">Phonetics</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.02582" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.02582" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.02284" target="_blank">Effects of interpulse-interval variation on deep-learning classification of bat vocalizations</a></h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Welmoed R. Eversteijn, Burooj Ghani, A. Leonie Baier, Dan Stowell</span></div>
+      <div class="abstract">探究脉冲间间隔（IPI，相邻叫声起始点间时间）变异是否为蝙蝠物种分类提供辨别信息，以及 Transformer 模型是否比 CNN 更敏感。构建自然 IPI 与归一化 IPI（50ms 等距）两匹配数据集。全内条件评测中 PaSST 准确率两条件接近（71% vs 70%），而 EfficientNet 从 47% 升至 57%；跨条件评测显示用自然 IPI 训练的模型在自然 IPI 测试集上更优（EfficientNet 54%→50%，PaSST 65%→57%）。总体对「自然 IPI 变异显著助分类」「Transformer 更善于利用」的支持有限，但跨条件性能下降说明归一化条件下的结果未必能迁移到自然录音。</div>
+      <div class="tags"><span class="tag">Bioacoustics</span><span class="tag">Classification</span><span class="tag">CNN vs Transformer</span><span class="tag">Bat</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.02284" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.02284" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>微软发布首个流式转录模型 MAI-Transcribe-2-Streaming，及两款 MAI-Voice TTS</h4>
+      <p>10 月 1 日，微软 AI 推出 MAI-Transcribe-2-Streaming（其首个流式转录模型）以及两款新 TTS 模型 MAI-Voice-2.1 与 MAI-Voice-2.1-Flash，均经 Microsoft Foundry 提供。流式转录模型支持 60 种语言、自动连续语言检测，在 Artificial Analysis 基准上最终/部分转录准确率均列第一，最终词错误率 2.5%、首次部分 2.8%、到最终转录仅 0.13 秒；收到音频仅 100 多毫秒即产出首个 partial，实现语音智能体边听边推理/调工具。两款 Voice 模型支持 23 种语言、跨语言同一声线保持说话人身份，且支持秒级参考音频的声音克隆（带同意护栏）；MAI-Voice-2.1-Flash 端到端延迟 150ms 生成最长 45 秒音频。4000 人图灵测试中 50.3% 听众认为 MAI-Voice 与真人录音相当或更似人。 <a href="https://microsoft.ai/news/our-first-streaming-transcription-model/" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-10-05') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
