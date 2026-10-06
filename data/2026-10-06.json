@@ -1,0 +1,164 @@
+{
+  "papers": [
+    {
+      "title": "Q-SPT: Learnable Query-Based Compression for Low-Frame-Rate Speech Tokenization",
+      "url": "https://arxiv.org/abs/2610.01492",
+      "date": "2026-10-01",
+      "authors": "Jeeyoung Yun et al.",
+      "abstract": "神经语音编解码器日益作为语音语言模型（SLM）的分词器使用，降低帧率能大幅提升 SLM 效率。Q-SPT 提出一种低帧率双流语音分词器，用可学习的查询压缩替代基于规则的时序压缩，通过流特定的可学习压缩器在语言与声学信息间取得平衡，从而在更低帧率下保持语音重建与下游任务质量。",
+      "tags": ["Speech Tokenization", "Speech LLM", "Audio Codec", "Low-Frame-Rate"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.01492"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.01492"}
+      ]
+    },
+    {
+      "title": "Articulatory Source-Filter TTS: Physically Grounded Control through Vocal Tract Kinematics",
+      "url": "https://arxiv.org/abs/2610.00735",
+      "date": "2026-09-30",
+      "authors": "Jesuraj Bandekar, Shinji Watanabe, Prasanta Kumar Ghosh",
+      "abstract": "现代神经 TTS 系统声学保真度极高却如黑箱，几乎无法做物理层面控制。该工作提出可控的源-滤波器 TTS 架构，滤波器由预测的声道运动学轨迹条件化，声源与滤波器独立建模，从而为语音合成引入物理可解释的发声控制（声道运动学）能力。",
+      "tags": ["TTS", "Source-Filter", "Articulatory", "Controllable"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.00735"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.00735"}
+      ]
+    },
+    {
+      "title": "Multi-sample Synthetic Supervision for Accent Conversion",
+      "url": "https://arxiv.org/abs/2610.01961",
+      "date": "2026-10-01",
+      "authors": "Yangyang Qu et al.",
+      "abstract": "口音转换（Accent Conversion）要求在保持说话人身份与语言内容的同时改变口音，但缺少平行数据是长期瓶颈。该工作提出多样本合成监督框架，为每个源-目标口音条件联合评估并构建多个转换目标（每个条件生成 8 个候选），从而在没有平行语料的情况下更稳健地训练口音转换模型。",
+      "tags": ["Accent Conversion", "Voice Conversion", "Synthetic Supervision"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.01961"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.01961"}
+      ]
+    },
+    {
+      "title": "Silence-the-Mimic: Accelerating Imperceptible Perturbation Generation Against Voice Cloning",
+      "url": "https://arxiv.org/abs/2610.00662",
+      "date": "2026-09-30",
+      "authors": "Runqiu Xu et al.",
+      "abstract": "面向声音克隆的防御，Silence-the-Mimic（STM）利用心理声学掩蔽约束频域扰动，生成人耳几乎无法察觉、却能干扰语音转换/克隆模型的对抗扰动，且大幅加速了扰动生成速度，为保护个人声音免遭未经授权克隆提供了实用范式。已开源（IEEE SLT 2026）。",
+      "tags": ["Voice Cloning Defense", "Adversarial", "Privacy", "Open Source"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.00662"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.00662"},
+        {"label": "Code", "url": "https://github.com/redstonewhite/silence-the-mimic-release"}
+      ]
+    },
+    {
+      "title": "Balalaika-Longform: A Russian Speech Corpus for Continuous Long-Form Text-to-Speech",
+      "url": "https://arxiv.org/abs/2610.00658",
+      "date": "2026-09-30",
+      "authors": "Nikita Vasiliev et al.",
+      "abstract": "长文本 TTS 需要在长时间生成中保持所请求内容，但句级训练难以覆盖长程连贯性。Balalaika-Longform 发布了一个 189 小时的公开俄语语料，以 30 秒到 15 分钟的连续单元组织，用于研究长文本语音合成；并在 CosyVoice3、Qwen3-TTS、VoxCPM2 与 F5-TTS 上验证了长片段训练带来的改进。",
+      "tags": ["Long-form TTS", "Russian", "Dataset", "Open Source"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.00658"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.00658"},
+        {"label": "Code", "url": "https://github.com/lab260ru/balalaika-longform"}
+      ]
+    },
+    {
+      "title": "PADP: Perceptual Audio Data Perturbation for Probing Perception in Audio Quality Models",
+      "url": "https://arxiv.org/abs/2610.01405",
+      "date": "2026-10-01",
+      "authors": "Authors",
+      "abstract": "提出一组引入感知无关失真的音频变换集合 PADP，用于探查音频质量模型是否真正具备感知意识。将 PADP 应用于客观音频质量指标与基础模型时揭示出它们对这些不可察觉扰动的易感性，说明现有评估/模型对感知相关与无关变化的分辨能力存疑。",
+      "tags": ["Audio Quality Assessment", "Perception", "Evaluation"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.01405"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.01405"}
+      ]
+    },
+    {
+      "title": "How Robust Are Neural Audio Codecs for African Speech? A Multi-Task Benchmark and the Limits of Perceptual Quality",
+      "url": "https://arxiv.org/abs/2610.00154",
+      "date": "2026-10-01",
+      "authors": "Authors",
+      "abstract": "神经音频编解码器实现了低比特率语音压缩与分词，但它们在带口音与多语言语音上的鲁棒性尚不明确。该工作构建多任务基准，在非洲语音数据集上评估 7 种神经音频编解码器的下游 ASR 与说话人验证（ASV）表现，揭示了现有编解码器在非洲语音上的鲁棒性边界与感知质量的局限。",
+      "tags": ["Neural Audio Codec", "African Speech", "ASR", "Benchmark"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.00154"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.00154"}
+      ]
+    },
+    {
+      "title": "Watch Your Speech: Text-aware Video-to-Speech Synthesis with Textual Conditioning",
+      "url": "https://arxiv.org/abs/2610.01012",
+      "date": "2026-10-01",
+      "authors": "Gunwoo Lee et al.",
+      "abstract": "视频到语音合成（从无声视频的唇动重建语音）引入文本条件化，利用文本信息作为额外监督信号指导语音生成，在唇读与说话人信息基础上提升重建语音的清晰度与可懂度。",
+      "tags": ["Video-to-Speech", "Lip Reading", "Speech Synthesis"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.01012"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.01012"}
+      ]
+    },
+    {
+      "title": "A Federated Deepfake Speech Detection Method Based on Layer-Wise Center-Guided Weighting Aggregation",
+      "url": "https://arxiv.org/abs/2610.01259",
+      "date": "2026-10-01",
+      "authors": "Yingjian Yu et al.",
+      "abstract": "面向语音深度伪造检测的联邦学习方法，提出基于逐层中心引导的加权聚合策略，在保护各参与方数据隐私的前提下聚合本地检测模型，缓解 Non-IID 数据带来的联邦训练漂移问题，提升跨客户端深度伪造语音检测的鲁棒性。",
+      "tags": ["Deepfake Detection", "Federated Learning", "Speech Security"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.01259"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.01259"}
+      ]
+    },
+    {
+      "title": "End-to-End Historical Music Restoration in Latent Space",
+      "url": "https://arxiv.org/abs/2610.00607",
+      "date": "2026-09-30",
+      "authors": "Steven Cho, Junghyun Koo, Raphael Lafargue, Tushar Dhyani, Eloi Moliner, Yuki Mitsufuji",
+      "abstract": "历史音乐录音常受噪声、失真与带宽限制困扰。该工作提出在潜空间中端到端进行历史音乐修复的方法，直接在潜在表征上做去噪与重建，比在时频域逐级处理更高效，代码与音频示例已开源（提交 ICASSP 2027）。",
+      "tags": ["Music Restoration", "Latent Space", "Audio Enhancement", "ICASSP 2027"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.00607"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.00607"}
+      ]
+    },
+    {
+      "title": "Frequency-Weighted Soft-Constrained Spatially Selective Active Noise Control for Open-Fitting Hearables",
+      "url": "https://arxiv.org/abs/2610.00721",
+      "date": "2026-09-30",
+      "authors": "Tong Xiao, Reinhild Roden, Matthias Blau, Simon Doclo",
+      "abstract": "面向开放式助听/穿戴设备的空间选择性主动噪声控制（ANC），提出频率加权的软约束方法，在目标区域内选择性降噪同时避免在其它区域引入额外噪声，改善开放式佩戴场景下的降噪体验（提交 ICASSP 2027）。",
+      "tags": ["Active Noise Control", "Hearables", "Spatial Audio"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.00721"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.00721"}
+      ]
+    },
+    {
+      "title": "Index-Translate: A Multilingual Translation Model Family — Text, Speech, Controlled Dubbing, and Long-Document Translation",
+      "url": "https://arxiv.org/abs/2609.40181",
+      "date": "2026-09-30",
+      "authors": "Tianjiao Li et al.",
+      "abstract": "推出 Index-Translate 多语言翻译模型族，覆盖文本翻译、语音翻译、可控配音与长文档翻译等多种任务，在一个统一框架下处理从文本到语音的多模态翻译需求，面向同声传译与配音等应用。",
+      "tags": ["Speech Translation", "Dubbing", "Multilingual", "S2ST"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.40181"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.40181"}
+      ]
+    }
+  ],
+  "news": [],
+  "note": "当前日期 2026-10-06（周二，国庆假期后）。经 arXiv eess.AS/cs.SD 检索，10-03（周六）、10-04（周日）无新批次公告，最新工作日批次仍为 10-02（周五）公告（对应提交日期 09-30/10-01）。上一份日报（10-05）仅收录了 2610.02284~2610.03125 区间及少数补录篇目，遗漏了同一批次编号更靠前（2610.00xxx~2610.02xxx）的多篇音频/语音论文，本期全部补录，共 12 篇（Q-SPT 语音分词、Articulatory 源-滤波器 TTS、Silence-the-Mimic 声音克隆防御、Balalaika-Longform 俄语长文本 TTS 语料等）。新闻方面：必搜重磅关键词（OpenAI GPT-Live、OpenAI voice model、Google Gemini voice、full-duplex、语音模型发布、real-time voice AI）及常规新闻检索均无 24 小时内新发布（GPT-Live 发布 7/8、Gemini 3.8 Live 发布 9/15、Gemini 3.8 Flash TTS 发布 9/27、微软 MAI 系列发布 10/01 均逾 24 小时窗口），故本期无新闻收录。"
+}

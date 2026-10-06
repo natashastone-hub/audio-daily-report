@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-10-06</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-10-06</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年10月6日 (周二) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">12</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.01492" target="_blank">Q-SPT: Learnable Query-Based Compression for Low-Frame-Rate Speech Tokenization</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Jeeyoung Yun et al.</span></div>
+      <div class="abstract">神经语音编解码器日益作为语音语言模型（SLM）的分词器使用，降低帧率能大幅提升 SLM 效率。Q-SPT 提出一种低帧率双流语音分词器，用可学习的查询压缩替代基于规则的时序压缩，通过流特定的可学习压缩器在语言与声学信息间取得平衡，从而在更低帧率下保持语音重建与下游任务质量。</div>
+      <div class="tags"><span class="tag">Speech Tokenization</span><span class="tag">Speech LLM</span><span class="tag">Audio Codec</span><span class="tag">Low-Frame-Rate</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.01492" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.01492" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.00735" target="_blank">Articulatory Source-Filter TTS: Physically Grounded Control through Vocal Tract Kinematics</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Jesuraj Bandekar, Shinji Watanabe, Prasanta Kumar Ghosh</span></div>
+      <div class="abstract">现代神经 TTS 系统声学保真度极高却如黑箱，几乎无法做物理层面控制。该工作提出可控的源-滤波器 TTS 架构，滤波器由预测的声道运动学轨迹条件化，声源与滤波器独立建模，从而为语音合成引入物理可解释的发声控制（声道运动学）能力。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Source-Filter</span><span class="tag">Articulatory</span><span class="tag">Controllable</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.00735" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.00735" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.00662" target="_blank">Silence-the-Mimic: Accelerating Imperceptible Perturbation Generation Against Voice Cloning</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Runqiu Xu et al.</span></div>
+      <div class="abstract">面向声音克隆的防御，Silence-the-Mimic（STM）利用心理声学掩蔽约束频域扰动，生成人耳几乎无法察觉、却能干扰语音转换/克隆模型的对抗扰动，且大幅加速了扰动生成速度，为保护个人声音免遭未经授权克隆提供了实用范式。已开源（IEEE SLT 2026）。</div>
+      <div class="tags"><span class="tag">Voice Cloning Defense</span><span class="tag">Adversarial</span><span class="tag">Privacy</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.00662" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.00662" target="_blank">🔗 PDF</a> <a href="https://github.com/redstonewhite/silence-the-mimic-release" target="_blank">🔗 Code</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.01961" target="_blank">Multi-sample Synthetic Supervision for Accent Conversion</a></h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Yangyang Qu et al.</span></div>
+      <div class="abstract">口音转换（Accent Conversion）要求在保持说话人身份与语言内容的同时改变口音，但缺少平行数据是长期瓶颈。该工作提出多样本合成监督框架，为每个源-目标口音条件联合评估并构建多个转换目标（每个条件生成 8 个候选），从而在没有平行语料的情况下更稳健地训练口音转换模型。</div>
+      <div class="tags"><span class="tag">Accent Conversion</span><span class="tag">Voice Conversion</span><span class="tag">Synthetic Supervision</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.01961" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.01961" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.00658" target="_blank">Balalaika-Longform: A Russian Speech Corpus for Continuous Long-Form Text-to-Speech</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Nikita Vasiliev et al.</span></div>
+      <div class="abstract">长文本 TTS 需要在长时间生成中保持所请求内容，但句级训练难以覆盖长程连贯性。Balalaika-Longform 发布了一个 189 小时的公开俄语语料，以 30 秒到 15 分钟的连续单元组织，用于研究长文本语音合成；并在 CosyVoice3、Qwen3-TTS、VoxCPM2 与 F5-TTS 上验证了长片段训练带来的改进。</div>
+      <div class="tags"><span class="tag">Long-form TTS</span><span class="tag">Russian</span><span class="tag">Dataset</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.00658" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.00658" target="_blank">🔗 PDF</a> <a href="https://github.com/lab260ru/balalaika-longform" target="_blank">🔗 Code</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.01405" target="_blank">PADP: Perceptual Audio Data Perturbation for Probing Perception in Audio Quality Models</a></h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Authors</span></div>
+      <div class="abstract">提出一组引入感知无关失真的音频变换集合 PADP，用于探查音频质量模型是否真正具备感知意识。将 PADP 应用于客观音频质量指标与基础模型时揭示出它们对这些不可察觉扰动的易感性，说明现有评估/模型对感知相关与无关变化的分辨能力存疑。</div>
+      <div class="tags"><span class="tag">Audio Quality Assessment</span><span class="tag">Perception</span><span class="tag">Evaluation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.01405" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.01405" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.00154" target="_blank">How Robust Are Neural Audio Codecs for African Speech? A Multi-Task Benchmark and the Limits of Perceptual Quality</a></h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Authors</span></div>
+      <div class="abstract">神经音频编解码器实现了低比特率语音压缩与分词，但它们在带口音与多语言语音上的鲁棒性尚不明确。该工作构建多任务基准，在非洲语音数据集上评估 7 种神经音频编解码器的下游 ASR 与说话人验证（ASV）表现，揭示了现有编解码器在非洲语音上的鲁棒性边界与感知质量的局限。</div>
+      <div class="tags"><span class="tag">Neural Audio Codec</span><span class="tag">African Speech</span><span class="tag">ASR</span><span class="tag">Benchmark</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.00154" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.00154" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.01012" target="_blank">Watch Your Speech: Text-aware Video-to-Speech Synthesis with Textual Conditioning</a></h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Gunwoo Lee et al.</span></div>
+      <div class="abstract">视频到语音合成（从无声视频的唇动重建语音）引入文本条件化，利用文本信息作为额外监督信号指导语音生成，在唇读与说话人信息基础上提升重建语音的清晰度与可懂度。</div>
+      <div class="tags"><span class="tag">Video-to-Speech</span><span class="tag">Lip Reading</span><span class="tag">Speech Synthesis</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.01012" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.01012" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.01259" target="_blank">A Federated Deepfake Speech Detection Method Based on Layer-Wise Center-Guided Weighting Aggregation</a></h4>
+      <div class="meta"><span>📅 2026-10-01</span><span>👥 Yingjian Yu et al.</span></div>
+      <div class="abstract">面向语音深度伪造检测的联邦学习方法，提出基于逐层中心引导的加权聚合策略，在保护各参与方数据隐私的前提下聚合本地检测模型，缓解 Non-IID 数据带来的联邦训练漂移问题，提升跨客户端深度伪造语音检测的鲁棒性。</div>
+      <div class="tags"><span class="tag">Deepfake Detection</span><span class="tag">Federated Learning</span><span class="tag">Speech Security</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.01259" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.01259" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.00607" target="_blank">End-to-End Historical Music Restoration in Latent Space</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Steven Cho, Junghyun Koo, Raphael Lafargue, Tushar Dhyani, Eloi Moliner, Yuki Mitsufuji</span></div>
+      <div class="abstract">历史音乐录音常受噪声、失真与带宽限制困扰。该工作提出在潜空间中端到端进行历史音乐修复的方法，直接在潜在表征上做去噪与重建，比在时频域逐级处理更高效，代码与音频示例已开源（提交 ICASSP 2027）。</div>
+      <div class="tags"><span class="tag">Music Restoration</span><span class="tag">Latent Space</span><span class="tag">Audio Enhancement</span><span class="tag">ICASSP 2027</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.00607" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.00607" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.00721" target="_blank">Frequency-Weighted Soft-Constrained Spatially Selective Active Noise Control for Open-Fitting Hearables</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Tong Xiao, Reinhild Roden, Matthias Blau, Simon Doclo</span></div>
+      <div class="abstract">面向开放式助听/穿戴设备的空间选择性主动噪声控制（ANC），提出频率加权的软约束方法，在目标区域内选择性降噪同时避免在其它区域引入额外噪声，改善开放式佩戴场景下的降噪体验（提交 ICASSP 2027）。</div>
+      <div class="tags"><span class="tag">Active Noise Control</span><span class="tag">Hearables</span><span class="tag">Spatial Audio</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.00721" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.00721" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2609.40181" target="_blank">Index-Translate: A Multilingual Translation Model Family — Text, Speech, Controlled Dubbing, and Long-Document Translation</a></h4>
+      <div class="meta"><span>📅 2026-09-30</span><span>👥 Tianjiao Li et al.</span></div>
+      <div class="abstract">推出 Index-Translate 多语言翻译模型族，覆盖文本翻译、语音翻译、可控配音与长文档翻译等多种任务，在一个统一框架下处理从文本到语音的多模态翻译需求，面向同声传译与配音等应用。</div>
+      <div class="tags"><span class="tag">Speech Translation</span><span class="tag">Dubbing</span><span class="tag">Multilingual</span><span class="tag">S2ST</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2609.40181" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2609.40181" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-10-06') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
