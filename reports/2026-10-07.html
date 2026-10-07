@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-10-07</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-10-07</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年10月7日 (周三) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">14</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">5</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.04651" target="_blank">GS-Codec: A Gaussian-Splatting Bottleneck for Neural Audio Coding</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-06</span><span>👥 Ron Aluf, Alon Canfi, Eliya Nachmani</span></div>
+      <div class="abstract">神经音频编解码器几乎都遵循 VQ-VAE 模板，通过码本或标量网格划分编码器潜空间。GS-Codec 质疑这种划分的必要性：将 3D 场景重建中的高斯泼溅（Gaussian Splatting）思想迁移到一维潜空间，用参数化信号分解替代量化器作为瓶颈。内层优化循环把每个编码段拟合为一维高斯原语的加权和，解码器从渲染结果重建波形；推理时用轻量 GS Predictor 单次前向回归原语参数，训练全程无量化器。单个 checkpoint 即可通过改变原语数量和参数位深进行训练后码率控制，无需重训，在 SIM/STOI/UTMOS 上匹配或超越 EnCodec、DAC 等开源编解码器。已开源代码与音频样本（NeurIPS 2026）。</div>
+      <div class="tags"><span class="tag">Neural Audio Codec</span><span class="tag">Gaussian Splatting</span><span class="tag">Audio Generation</span><span class="tag">NeurIPS 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.04651" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.04651" target="_blank">🔗 PDF</a> <a href="https://ronaluf.github.io/gs-codec" target="_blank">🔗 Code</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.06817" target="_blank">Paradee: Distilling Kokoro-82M into an 8M-Parameter Single-Voice Text-to-Speech Model</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-06</span><span>👥 Sahil Mahendrakar</span></div>
+      <div class="abstract">将拥有 54 个音色的开源 TTS 模型 Kokoro-82M 蒸馏为仅 8.07M 参数、只讲单一音色的 Paradee。保留 Kokoro 架构但大量收窄层宽，两部分分别针对冻结教师独立训练：先用教师合成语料并保留时长/音高/能量/音素特征，再训一个小文本端预测这些值、一个小解码器把教师保存的值还原为音频（先谱损失后对抗）。最后拼接两半并 int8 量化，全程无需对齐学习或联合训练。int8 下仅 8.5MB，单 CPU 线程 25 倍实时速度，UTMOS 4.41 vs 教师 4.52。针对 2-8kHz 浊音相位残留的 buzz，用无训练相锁滤波消除。代码与模型已开源。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Model Distillation</span><span class="tag">Efficient</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.06817" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.06817" target="_blank">🔗 PDF</a> <a href="https://github.com/sahilmahendrakar/paradee" target="_blank">🔗 Code</a> <a href="https://huggingface.co/sahilmahendrakar/Paradee-8M-v1.0" target="_blank">🔗 Model</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.04690" target="_blank">SepRQ: Self-Supervised Speech Mixture Representation Learning via Mask-Free, Multi-Scale Source Separation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-06</span><span>👥 Séverin Baroudi, Hervé Bredin, Ricard Marxer</span></div>
+      <div class="abstract">主流自监督语音表示模型围绕单说话人音频设计，难以处理多人场景。SepRQ 提出开源 SSL 框架，用伪源分离目标替代掩码预测，基于冻结的随机投影码本，以无掩码多分辨率方式在说话人分离（Speaker Diarization）与语音分离超级基准 SUPERB 上达到 SOTA，在 Base/Large 规模上超越 WavLM 和其他鸡尾酒会 SSL，仅需 85.68M 推理参数。在需要注册的目标说话人任务（如 Target-Speaker ASR）和 DIHARD 3 上也表现优异，并首次在三说话人混合（WSJ0-3Mix）上报告强分离能力。代码开源。</div>
+      <div class="tags"><span class="tag">Speaker Diarization</span><span class="tag">Speech Separation</span><span class="tag">Self-Supervised</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.04690" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.04690" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.04488" target="_blank">Can LLM Agents Automate Reinforcement Learning for Text-to-Speech?</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-06</span><span>👥 Xuanjun Chen, Zixiong Su, Hao Shi, Chang Zeng, Kai Li, Jyh-Shing Roger Jang, Hung-yi Lee</span></div>
+      <div class="abstract">RL 后训练能修复零样本 TTS 的局部片段错误，但得到可用配方仍依赖繁琐人工调参。该工作研究 LLM Agent 能否接管这一研究流程，提出 AgenticTTS-Forge 协作工作流，将人类引导与智能体执行围绕共享工作区组织，应用于 CosyVoice2-0.5B。结果显示 Agent 能恢复被低估的配方、改进它，并在收益停滞时主动检索文献、从 LM carrier 切换到 flow carrier，将 Bad case 减半。但其自主性也暴露了数据/代理/算法三个轴上的陷阱：held-out 集通过契约未读取的通道泄漏、自塑奖励在评分处抬高代理指标、分别调优的策略无法可加地组合。结论是约束在「测量」而非「推理」。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">LLM Agent</span><span class="tag">Reinforcement Learning</span><span class="tag">AutoML</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.04488" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.04488" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.04826" target="_blank">EchoChat: Structured Cognitive Reasoning in Empathetic Spoken Dialogue</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-06</span><span>👥 Dingdong Wang, Shujie Liu, Yayue Deng, Yuxuan Hu, Yunrui Cai, Jincenzi Wu, Jianwei Yu, Jinyu Li, Helen Meng</span></div>
+      <div class="abstract">现有 SpeechLLM 常把共情当作直接输入到响应的映射，导致「表面温暖但情感空洞」。EchoChat 把共情式语音对话重构为整合感知、心理状态推理与响应生成的结构化认知推理过程，构建了声学丰富的 EchoDialogue-400K 多阶段监督数据集，SFT 阶段用声学锚定注意力（AAA）增强声学 grounding，RL 阶段引入阶段感知优化与步骤分解信用分配（SDCA）定位推理错误、缓解级联误差传播。还提出专家标注的 EchoEval 基准，在感知、推理、响应对齐上达到 SOTA（NeurIPS 2026，开源）。</div>
+      <div class="tags"><span class="tag">Spoken Dialogue</span><span class="tag">Empathetic AI</span><span class="tag">SpeechLLM</span><span class="tag">NeurIPS 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.04826" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.04826" target="_blank">🔗 PDF</a> <a href="https://github.com/dingdongwang/EchoChat" target="_blank">🔗 Code</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.04333" target="_blank">Factorized Delayed Streams Modeling for LLM-based Streaming ASR</a></h4>
+      <div class="meta"><span>📅 2026-10-06</span><span>👥 Tatsunari Takagi, Kai Washizaki, Atsushi Kojima, Lianbo Liu, Koki Nikaido, Yui Sudo</span></div>
+      <div class="abstract">延迟流建模（DSM）通过在同一时间轴上对齐声学与文本流实现 LLM 流式 ASR，但需加入 <p> 填充 token 和 <w> 词首 token。本文先证明 <w> 可移除而不损失识别性能，进而提出 Factorized DSM（F-DSM），把 <p> 的等待概率与原始 LLM 词表分布分离，去除了 ASR 专用 token 对文本预测空间的污染，并允许在等待步跳过大规模词表 softmax。在日语自发语音语料与 LibriSpeech 上，F-DSM 识别性能优于 DSM，同时大幅降低 GPU 显存、小幅提升推理速度、缓解 DSM 对纯文本困惑度的损害（ICASSP 2027 投稿）。</div>
+      <div class="tags"><span class="tag">Streaming ASR</span><span class="tag">SpeechLLM</span><span class="tag">LLM-based ASR</span><span class="tag">Efficient</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.04333" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.04333" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.05610" target="_blank">SEA-LM: Egocentric Spatial Audio Understanding for Wearable Microphone Arrays</a></h4>
+      <div class="meta"><span>📅 2026-10-06</span><span>👥 Sonal Kumar, Sinan Hersek, Artem Dementyev, Mengzhen Pan, Ishan Chatterjee, Anurag Kumar, Ramani Duraiswami, Dinesh Manocha, Andrea Colaco</span></div>
+      <div class="abstract">具身智能需要理解复杂环境中的空间音频，但大型音频语言模型擅长单声道推理、缺乏空间感知。SEA-LM 首先提出 FOACODER，一个布局灵活的空间音频编码器，基于源定位与自我中心 VAD 目标训练，通过波束成形将可变数量/位置智能眼镜阵列派生的 First Order Ambisonics 编码；再用两阶段课程训练多模态大语言模型理解这些空间音频嵌入，涵盖声源定位与空间选择性转录等六项任务，并引入时空加权交叉熵损失避免转录输出主导方向预测。在 1211 种 4-9 麦克风阵列配置上保持鲁棒。</div>
+      <div class="tags"><span class="tag">Spatial Audio</span><span class="tag">Audio-Language Model</span><span class="tag">Wearable</span><span class="tag">Multi-Modal</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.05610" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.05610" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.06478" target="_blank">Smorph: Playable Sound Morphing with Diffusion Models</a></h4>
+      <div class="meta"><span>📅 2026-10-06</span><span>👥 Annie Chu, Hugo Flores García, Johannes Imort, Oriol Nieto, Bryan Pardo, Jordan Rudess, Prem Seetharaman, Justin Salamon</span></div>
+      <div class="abstract">声音 morphing（生成从一个声音身份过渡到另一个的中间声音）对音乐音色设计很强大，但现有扩散方法把时间结构与音色身份纠缠在一起，无法固定一方变换另一方。smorph 提出无训练引导框架，在保持声音随时间「如何变化」的同时变换「声音是什么」，例如在固定音高下从铜管过渡到弦乐。支持 prompt-to-prompt、audio-to-prompt、audio-to-audio 三种 morph 模式，在多个数据集上显著改善时间结构与源保持（ISMIR 2026，含演示页）。</div>
+      <div class="tags"><span class="tag">Sound Morphing</span><span class="tag">Diffusion</span><span class="tag">Music</span><span class="tag">ISMIR 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.06478" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.06478" target="_blank">🔗 PDF</a> <a href="https://smorphspace.github.io/" target="_blank">🔗 Demo</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.06632" target="_blank">AuraSE: Low-Hallucination Generative Speech Enhancement via Multimodal Flow Matching and Inference Policy Optimization</a></h4>
+      <div class="meta"><span>📅 2026-10-06</span><span>👥 Yingda Shen, Yao Qian, Yuxuan Hu, Junan Zhang, Yuxiang Wang, Hardik Hansrajbhai Chauhan, Yudong Li, Yufei Xia, Yufei Liu, Zhizheng Wu</span></div>
+      <div class="abstract">生成式语音增强模型能产生更干净自然的语音，但即使有转写条件化也可能「幻觉」出改变语音内容或说话人身份的结果。AuraSE 提出流匹配框架：双流转单流的多模态扩散 Transformer（MMDiT）让转写与声学表示交互，同时为退化输入保留专用通路。此外发现最佳解码配置（引导尺度、采样温度、步数）随语句显著变化，由此提出推理策略优化（IPO）——在线、on-policy 偏好优化，用多目标奖励排序多候选。AuraSE-IPO 在合成测试集 12 项指标中 11 项第一，并在真实 DNS 盲测集上获得最高 DNSMOS 与盲听评分。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Flow Matching</span><span class="tag">Anti-Hallucination</span><span class="tag">Generative</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.06632" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.06632" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.04757" target="_blank">Prompt-Consistency Inference for Zero-Shot Flow-Matching Text-to-Speech Models</a></h4>
+      <div class="meta"><span>📅 2026-10-06</span><span>👥 Vasily Zadorozhnyy, Can Goksen, Kazuhito Koishida, Dung Tran</span></div>
+      <div class="abstract">流匹配模型在零样本 TTS 上取得显著提升，推理时求解器同时演化「prompt」与「待生成」区域的状态，但只有生成区域被保留，被丢弃的 prompt 状态却通过耦合两组区域的 velocity field 影响后续生成，随采样推进可能偏离规定条件路径。Prompt-Consistency Inference（PCI）是一种无训练规则，在每次 velocity 评估前把 prompt 块恢复为其解析值（可从参考音频与初始噪声闭式得到），生成块保持不变。在多个流匹配 TTS 骨干上提升说话人相似度与可懂度，且无需额外网络评估。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Flow Matching</span><span class="tag">Zero-Shot</span><span class="tag">Training-Free</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.04757" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.04757" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.05080" target="_blank">Tracing a Sparse Emotion-Control Circuit in LLM-Based Text-to-Speech</a></h4>
+      <div class="meta"><span>📅 2026-10-06</span><span>👥 Hongfei Du, Jiacheng Shi, Yanfu Zhang, Ye Gao</span></div>
+      <div class="abstract">LLM 基 TTS 能生成情绪化语音，但参考情绪如何流经模型并在解码语音中实现仍不清楚。作者提出两个情绪敏感指标（codec 轨迹分数、后期残差方向分数），并用激活补丁干预定位出一个稀疏的「源到读出」组件级回路：每种情绪约 23-27 个注意力头与 MLP，约占被考虑组件的 5%，可在 held-out 用例上恢复/抑制 74-88% 的后期情绪读出移动。回路包含共享组件骨干与情绪特异组件；在解码语音中，同一干预在 24 个匹配对上产生一致的音高、能量与频谱亮度变化（EMNLP 2026）。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Interpretability</span><span class="tag">Emotion Control</span><span class="tag">EMNLP 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.05080" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.05080" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.04004" target="_blank">Hallucination Reduction for LLM-Based Audio Understanding via Multimodal Direct Preference Optimization</a></h4>
+      <div class="meta"><span>📅 2026-10-06</span><span>👥 Bebe Cosgrove, Aaron Isidore Grace, Weiran Wang</span></div>
+      <div class="abstract">大型音频语言模型（LALM）在同时接收音频与文本输入时容易幻觉并过度依赖文本先验。作者提出用多模态直接偏好优化（mDPO）目标减轻幻觉，通过对比完好与失真音频对照样本，迫使模型把生成 grounded 在声学输入上，并将该偏好学习框架扩展到音频域（多种声学扰动）。在 Qwen2-Audio 骨干上评估于 DCASE 2025 与 AH Existence 数据集，显著增强时序推理：DCASE 2025 绝对准确率提升 14.0%，AH Existence 提升 27.4%。时间反转、频率掩蔽与随机噪声是最有效扰动。</div>
+      <div class="tags"><span class="tag">Audio Understanding</span><span class="tag">LALM</span><span class="tag">Anti-Hallucination</span><span class="tag">DPO</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.04004" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.04004" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.04180" target="_blank">MOV-AAD: A Large-Scale Multimodal Dataset for Auditory Attention Decoding During Moving Conversations</a></h4>
+      <div class="meta"><span>📅 2026-10-06</span><span>👥 Xiaomin He, Vishal Choudhari, Tristan J. Spratt, Aarya Raghavan, Richard T. Lee, Nima Mesgarani</span></div>
+      <div class="abstract">听觉注意力解码（AAD）常在静态简化语音场景下评估，与日常聆听脱节。MOV-AAD 引入大规模数据集，研究移动、自然对话场景下的听觉注意力，结合 64 通道 EEG 与同步生理记录（眼动、呼吸、皮电、心率、血氧饱和度、体温、体动、光电容积脉搏波），实现跨模态神经与生理注意力/聆听努力标记分析。采用动态移动对话语音源与注意力投入行为测量的更生态有效的聆听范式（Interspeech 2026，最佳学生论文奖）。</div>
+      <div class="tags"><span class="tag">Auditory Attention</span><span class="tag">EEG</span><span class="tag">Dataset</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.04180" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.04180" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.05691" target="_blank">AudioGAR: Bridging Reconstruction and Generation in Latent Audio Generative Models</a></h4>
+      <div class="meta"><span>📅 2026-10-06</span><span>👥 Xianghong Fang, Geeyang Tay, Wentao Ma, Tim G. J. Rudner, Dehan Kong</span></div>
+      <div class="abstract">潜空间音频生成模型通常两阶段训练：先学音频编解码器，再学潜生成模型，导致解码器「训练-生成不匹配」——编解码器解码器在编码器诱导的潜上训练、却在生成器产生的潜上部署。作者观察到 FD/FAD 下明显的重建-生成差距。提出 AudioGAR：通过扰动编码器潜并用冻结的潜扩散模型去噪构造中间潜，形成从重建到生成的轨迹，其中低噪声潜保留源对应关系以支持成对解码器微调。仅微调编解码器解码器、冻结其余部分，应用于 AudioX 仅需原训练音频 1.5% 与 0.26% 的训练成本即显著提升生成性能。</div>
+      <div class="tags"><span class="tag">Audio Generation</span><span class="tag">Latent Model</span><span class="tag">Codec</span><span class="tag">Efficient Fine-Tuning</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.05691" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.05691" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-10-07') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
