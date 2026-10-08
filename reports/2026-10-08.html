@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-10-08</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-10-08</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年10月8日 (周四) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">4</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.08683" target="_blank">Coupled but Late: Turn-Taking Between Full-Duplex Speech Models in Unscripted Dialogue</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-07</span><span>👥 Lichen Zhu, Yueqian Lin, Yiheng Wang, Hai "Helen" Li, Yiran Chen</span></div>
+      <div class="abstract">全双工语音模型被训练来与人对话，但如今越来越多地被拿来「彼此对话」——用于 self-play 数据生成、智能体社会与基于模型的评测。在这种闭环里没有人类来吸收时序误差：每个模型的 turn-taking 都是对方的输入。研究者探究这一闭环会收敛到怎样的时序。两个 PersonaPlex-7B 实例在共享时钟上以非脚本对话交换音频 token，并将同一 floor-transfer 规则应用到它们与 Switchboard 上。结果显示它们的时序是「耦合」的：跨对话重新配对说话人会破坏这种耦合；但话语权交接明显偏晚——中位数 400-560ms，而人类仅 137ms；partner 话轮最后 120ms（人类预计有十分之一的交接发生于此）只占到它们交接的 1%。单向延迟信道会使响应一对一地后移，且其前的准备期为空，说明模型是「感知到话轮结束后再反应式等待」，而非人类时序所需的「话轮结束预测」。</div>
+      <div class="tags"><span class="tag">Full-Duplex</span><span class="tag">Speech Model</span><span class="tag">Turn-Taking</span><span class="tag">Dialogue</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.08683" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.08683" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.08085" target="_blank">DirectSpeech2LLM: A Simple End-to-End Framework to Mitigate Prompt Overfitting in Speech-LLMs</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-07</span><span>👥 Hemant Yadav, Sunayana Sitaram, Roger Zimmermann, Rajiv Ratn Shah</span></div>
+      <div class="abstract">Speech-LLM 常出现「prompt 过拟合」：仅在 ASR 指令上训练的模型难以泛化到语音翻译等新指令，仍主要表现得像 ASR 系统。DirectSpeech2LLM 提出一个简单的端到端框架，在语音条件化下保留 LLM 遵循未见任务指令的能力。它在冻结的 LLM 嵌入矩阵上计算基于距离的 CTC 损失，并用贪心 CTC 标签分别导出几何与时间对齐的语音嵌入作为 LLM 输入。仅用 960 小时 LibriSpeech ASR 数据训练，DirectSpeech2LLM 在 ASR（已见任务）上超越级联系统，并零样本泛化到语音翻译与情绪识别（两个未见任务），即便训练时两种都没见过也几乎追平级联系统上界。作者还发现几何对齐强度的作用小于此前假设，修改后的 CTC 损失已提供充分的隐式几何 grounding，无需显式回归损失。结果跨两个 LLM 家族一致，并随训练数据与模型容量扩展。</div>
+      <div class="tags"><span class="tag">Speech-LLM</span><span class="tag">ASR</span><span class="tag">Zero-Shot</span><span class="tag">Instruction Following</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.08085" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.08085" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.07647" target="_blank">Loud and Clear: Dynamic Activation Steering for Improving Speech Intelligibility in Noise</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-07</span><span>👥 Anonymous</span></div>
+      <div class="abstract">人类身处嘈杂环境时会不自觉地提高嗓音、放慢语速、放大元音——即「Lombard 效应」，从而让语音更容易被听清。受此启发，该工作提出在神经 TTS 合成中通过「动态激活引导（Dynamic Activation Steering）」对模型内部激活进行推理期引导，以提升嘈杂环境下的语音可懂度（intelligibility）。方法无需额外训练，可即插即用地让语音在噪声背景下更「响亮清晰」，为面向真实环境的语音合成与语音增强提供了一种可控、低成本的增强思路。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Speech Intelligibility</span><span class="tag">Lombard Effect</span><span class="tag">Activation Steering</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.07647" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.07647" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.08063" target="_blank">HINTT Submission to the 2nd MLC-SLM Challenge: Comparing Cascaded and End-to-End Approaches for Multilingual Conversational Speech Language Models</a></h4>
+      <div class="meta"><span>📅 2026-10-07</span><span>👥 HINTT Team</span></div>
+      <div class="abstract">提交至第二屈 MLC-SLM（Multilingual Conversational Speech Language Model）挑战与 workshop 的 HINTT 系统技术报告。该挑战聚焦多语言对话式语音语言模型（Interspeech 2026）。针对「组合说话人日志 + 语音识别」的级联流水线与端到端方法两条建模路线，报告对比了它们在多语言对话语音上的表现，涉及说话人交替检测（turn-taking）与多说话人转写，为该挑战设定提供系统的 baseline 分析与方法选型参考。</div>
+      <div class="tags"><span class="tag">MLC-SLM</span><span class="tag">Multilingual</span><span class="tag">Speaker Diarization</span><span class="tag">Interspeech 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.08063" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.08063" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-10-08') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

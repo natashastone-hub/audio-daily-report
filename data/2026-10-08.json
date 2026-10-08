@@ -1,0 +1,58 @@
+{
+  "papers": [
+    {
+      "title": "Coupled but Late: Turn-Taking Between Full-Duplex Speech Models in Unscripted Dialogue",
+      "url": "https://arxiv.org/abs/2610.08683",
+      "date": "2026-10-07",
+      "authors": "Lichen Zhu, Yueqian Lin, Yiheng Wang, Hai \"Helen\" Li, Yiran Chen",
+      "abstract": "全双工语音模型被训练来与人对话，但如今越来越多地被拿来「彼此对话」——用于 self-play 数据生成、智能体社会与基于模型的评测。在这种闭环里没有人类来吸收时序误差：每个模型的 turn-taking 都是对方的输入。研究者探究这一闭环会收敛到怎样的时序。两个 PersonaPlex-7B 实例在共享时钟上以非脚本对话交换音频 token，并将同一 floor-transfer 规则应用到它们与 Switchboard 上。结果显示它们的时序是「耦合」的：跨对话重新配对说话人会破坏这种耦合；但话语权交接明显偏晚——中位数 400-560ms，而人类仅 137ms；partner 话轮最后 120ms（人类预计有十分之一的交接发生于此）只占到它们交接的 1%。单向延迟信道会使响应一对一地后移，且其前的准备期为空，说明模型是「感知到话轮结束后再反应式等待」，而非人类时序所需的「话轮结束预测」。",
+      "tags": ["Full-Duplex", "Speech Model", "Turn-Taking", "Dialogue"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.08683"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.08683"}
+      ]
+    },
+    {
+      "title": "DirectSpeech2LLM: A Simple End-to-End Framework to Mitigate Prompt Overfitting in Speech-LLMs",
+      "url": "https://arxiv.org/abs/2610.08085",
+      "date": "2026-10-07",
+      "authors": "Hemant Yadav, Sunayana Sitaram, Roger Zimmermann, Rajiv Ratn Shah",
+      "abstract": "Speech-LLM 常出现「prompt 过拟合」：仅在 ASR 指令上训练的模型难以泛化到语音翻译等新指令，仍主要表现得像 ASR 系统。DirectSpeech2LLM 提出一个简单的端到端框架，在语音条件化下保留 LLM 遵循未见任务指令的能力。它在冻结的 LLM 嵌入矩阵上计算基于距离的 CTC 损失，并用贪心 CTC 标签分别导出几何与时间对齐的语音嵌入作为 LLM 输入。仅用 960 小时 LibriSpeech ASR 数据训练，DirectSpeech2LLM 在 ASR（已见任务）上超越级联系统，并零样本泛化到语音翻译与情绪识别（两个未见任务），即便训练时两种都没见过也几乎追平级联系统上界。作者还发现几何对齐强度的作用小于此前假设，修改后的 CTC 损失已提供充分的隐式几何 grounding，无需显式回归损失。结果跨两个 LLM 家族一致，并随训练数据与模型容量扩展。",
+      "tags": ["Speech-LLM", "ASR", "Zero-Shot", "Instruction Following"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.08085"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.08085"}
+      ]
+    },
+    {
+      "title": "HINTT Submission to the 2nd MLC-SLM Challenge: Comparing Cascaded and End-to-End Approaches for Multilingual Conversational Speech Language Models",
+      "url": "https://arxiv.org/abs/2610.08063",
+      "date": "2026-10-07",
+      "authors": "HINTT Team",
+      "abstract": "提交至第二屈 MLC-SLM（Multilingual Conversational Speech Language Model）挑战与 workshop 的 HINTT 系统技术报告。该挑战聚焦多语言对话式语音语言模型（Interspeech 2026）。针对「组合说话人日志 + 语音识别」的级联流水线与端到端方法两条建模路线，报告对比了它们在多语言对话语音上的表现，涉及说话人交替检测（turn-taking）与多说话人转写，为该挑战设定提供系统的 baseline 分析与方法选型参考。",
+      "tags": ["MLC-SLM", "Multilingual", "Speaker Diarization", "Interspeech 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.08063"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.08063"}
+      ]
+    },
+    {
+      "title": "Loud and Clear: Dynamic Activation Steering for Improving Speech Intelligibility in Noise",
+      "url": "https://arxiv.org/abs/2610.07647",
+      "date": "2026-10-07",
+      "authors": "Anonymous",
+      "abstract": "人类身处嘈杂环境时会不自觉地提高嗓音、放慢语速、放大元音——即「Lombard 效应」，从而让语音更容易被听清。受此启发，该工作提出在神经 TTS 合成中通过「动态激活引导（Dynamic Activation Steering）」对模型内部激活进行推理期引导，以提升嘈杂环境下的语音可懂度（intelligibility）。方法无需额外训练，可即插即用地让语音在噪声背景下更「响亮清晰」，为面向真实环境的语音合成与语音增强提供了一种可控、低成本的增强思路。",
+      "tags": ["TTS", "Speech Intelligibility", "Lombard Effect", "Activation Steering"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.07647"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.07647"}
+      ]
+    }
+  ],
+  "news": [],
+  "note": "当前日期 2026-10-08（周四）。经 arXiv eess.AS/cs.SD 检索，最新公告批次为 10-07（周三），落在 24 小时窗口内（昨日 9:30 ~ 今日）。本期精选 4 篇：全双工语音模型话轮交接「Coupled but Late」、Speech-LLM 零样本泛化「DirectSpeech2LLM」、多语言对话语音语言模型「HINTT MLC-SLM」、Lombard 效应可懂度 TTS「Loud and Clear」。说明：本批次 eess.AS/cs.SD 新论文相对较少（多篇标注「submitted to IEEE」，主体音频工作集中于 10-01 批已在上期覆盖）；直接 arXiv API/网页抓取在本环境被网络策略阻断，以上论文经搜索引擎交叉验证确认标题与 ID。必搜重磅新闻关键词（OpenAI GPT-Live、OpenAI voice model、Google Gemini voice、full-duplex speech model、语音模型发布、real-time voice AI）命中的最新条目均为历史发布（GPT-Live 7/8、Gemini 3.8 Live 9/15、Qwen-Audio-3.1 9/23 等），均超出 24 小时窗口，故本期无 24 小时内新闻收录。"
+}
