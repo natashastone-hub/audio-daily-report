@@ -1,0 +1,162 @@
+{
+  "papers": [
+    {
+      "title": "JoyAI-Voice 2.0: A Full-Continuous Autoregressive Speech Generation Model with Semantic-Acoustic Joint Representation",
+      "url": "https://arxiv.org/abs/2610.08834",
+      "date": "2026-10-08",
+      "authors": "Yafeng Chen, Boya Dong, Yankun Huang, et al.",
+      "abstract": "JoyAI-Voice 2.0 是字节跳动推出的端到端拟人语音生成模型，采用全连续双编码器架构：原始语音编码为连续潜变量并切分为 patch，每个 patch 经语义-声学双编码器分解为语义纯净表示与声学表示，融合后送入因果自回归 Transformer 做规划，再由局部扩散 Transformer 渲染完整潜变量实现 48kHz 合成。训练采用流匹配 + 停止预测联合目标，并辅以 SFT 与 DiffusionNFT 强化学习。在 Seed-TTS 上取得 2.51% 的平均词错率（较最强基线相对下降 14.9%），在 InstructTTSEval 中英文属性保真均达 SOTA，MDVD-Eval 综合得分 0.893 领先。",
+      "tags": ["Speech Generation", "TTS", "Autoregressive + Diffusion", "Zero-Shot"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.08834"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.08834"}
+      ]
+    },
+    {
+      "title": "BanglaBox: A Phonetically-Balanced Corpus and Data-Efficient Foundation-Model Adaptation for Bangla Text-to-Speech with Zero-Shot Voice Cloning",
+      "url": "https://arxiv.org/abs/2610.09211",
+      "date": "2026-10-08",
+      "authors": "Emtiaz Uddin Ahmed, Araf Mahmud, Sajib Hossain, et al.",
+      "abstract": "面向孟加拉语（孟加拉国语域）的低资源 TTS 适配方案：贡献一个音素与性别平衡、双层结构、经 Jensen-Shannon 散度目标在连音簇（juktakkhor）上平衡的孟加拉语语料库，并配合三项微调改进——merge-consistent 分词器扩展、孟加拉语文本规范化、prompt-masked 双损失目标，从而在语言切换中保留零样本克隆能力。在仅使用约 1/7 孟加拉语微调音频的情况下，自然度、说话人相似度与清晰度均接近或超越商业与开源基线，且全部语料、权重、代码开源。",
+      "tags": ["TTS", "Zero-Shot Voice Cloning", "Low-Resource", "Multilingual"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.09211"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.09211"}
+      ]
+    },
+    {
+      "title": "SteerSpeech: Activation Steering For Emotion Control In Generated Speech",
+      "url": "https://arxiv.org/abs/2610.10415",
+      "date": "2026-10-08",
+      "authors": "Afsara Benazir, Darius Pétermann, Felix Xiaozhu Lin, Salar Rahili",
+      "abstract": "提出 SteerSpeech，一个轻量级激活引导框架，通过向隐藏激活注入 steering 向量来控制情感，而无需重训或专用条件模块。针对每种目标情感训练低秩变换，采用多专家目标鼓励情感单调可控的同时保持说话人身份与语义内容，并以双阶段「生成-重放」流水线 + 直通估计器对离散语音 token 反向传播专家监督。在 Qwen3-TTS 上，对已见/未见/带口音说话人均实现更强连续情感控制（目标情感得分 1.08x–7.12x），高强度引导下说话人身份保留 1.43x–1.46x。",
+      "tags": ["TTS", "Emotion Control", "Activation Steering", "Controllable"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.10415"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.10415"}
+      ]
+    },
+    {
+      "title": "Beyond Token Revision: Investigating Mask-and-Replace Diffusion for Zero-Shot Text-to-Speech",
+      "url": "https://arxiv.org/abs/2610.09448",
+      "date": "2026-10-08",
+      "authors": "Hounsu Kim, Joonyong Park, Yuki Saito, Satoru Fukayama, Juhan Nam",
+      "abstract": "针对零样本 TTS 的离散扩散模型，研究 mask-and-replace 训练带来的增益到底来自「推理期 token 修正」还是「训练期噪声上下文增强」。采用 DeMaR 组合 mask-and-replace 训练与置信度排序的 mask-only 采样，在保持总训练腐蚀概率不变的前提下，即便每个 token 一旦 unmask 后不再修改，仍取得低于自回归与纯 mask 扩散基线的 WER。跨两个异构语音分词器的匹配训练表明：噪声上下文增强与替换监督在训练侧本身即带来增益，无需依赖推理期 token 修正。",
+      "tags": ["TTS", "Zero-Shot", "Diffusion", "DeMaR"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.09448"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.09448"}
+      ]
+    },
+    {
+      "title": "Training-Free Instruction TTS Gender Bias Calibration Using Model-Adaptive Steering",
+      "url": "https://arxiv.org/abs/2610.09831",
+      "date": "2026-10-08",
+      "authors": "Kuan-Yu Chen, Yi-Cheng Lin, Jeng-Lin Li, Jian-Jiun Ding",
+      "abstract": "指令式 TTS（ITTS）系统会从风格提示（如职业、人设）中系统性编码声学性别偏斜。本文提出 model-adaptive steering 免训练校准方法，用群体偏差向量引导编码器后的条件表示，并配以粗到细强度搜索；确定性词法门在检测到显式性别关键词时绕过干预以保留语义。在四个 ITTS 模型跨架构的 12,800 条提示基准上，将校准误差从 11.5–28.1 个百分点降至 0.8–5.9 个百分点，同时几乎不损失自然度（UTMOS 最多 -0.08）与 WER。",
+      "tags": ["TTS", "Bias Calibration", "Training-Free", "Fairness"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.09831"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.09831"}
+      ]
+    },
+    {
+      "title": "Phoneme-Guided Initialization for LLM-based Speech Recognition",
+      "url": "https://arxiv.org/abs/2610.08994",
+      "date": "2026-10-08",
+      "authors": "Ryo Magoshi, Shinsuke Sakai, Tatsuya Kawahara",
+      "abstract": "面向低资源场景的 LLM 语音识别：语音 LLM 在配对语音-文本数据稀缺时表现下降，而「语音到音素（S2P）+ 音素到字素（P2G）」级联在低资源下反而更优。作者提出音素引导初始化——在端到端框架内用该洞察：先用 S2P 预训练音频编码器、P2G 预训练 LLM，再连接后在目标 ASR 任务上端到端微调。在日语 CSJ、中文 AISHELL-1 及 Common Voice 25.0 的鞑靼语、乌尔都语上，匹配或超越级联 S2P-P2G 基线与无 P2G 初始化的端到端模型。",
+      "tags": ["ASR", "Speech-LLM", "Low-Resource", "SLT 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.08994"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.08994"}
+      ]
+    },
+    {
+      "title": "Boundary-Free Contextual Biasing: Depth-Adaptive Gating and Reading-Space Matching for Unsegmented Languages",
+      "url": "https://arxiv.org/abs/2610.09467",
+      "date": "2026-10-08",
+      "authors": "Muhammad Huzaifah, Yu Pan, Zachary Yeo, et al.",
+      "abstract": "面向日语、中文等无词边界语言的上下文偏置（contextual biasing）ASR：现有方法依赖词边界。作者提出面向冻结 CTC 模型的免训练、单遍无边界偏置解码器，基于字符级 Aho-Corasick 自动机，用「深度自适应门控」决定推进强度、用「阅读空间匹配」处理音频对但字符错的情形。在 Aishell-1 NE 困难 R1 子集召回 66.5%（超越训练过的 CLAS 基线 64%），并发布首个开源日语上下文偏置基准，罕见词召回提升 25 个点且精确率>97%。",
+      "tags": ["ASR", "Contextual Biasing", "CTC", "Low-Resource"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.09467"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.09467"}
+      ]
+    },
+    {
+      "title": "LIFT-SE: Linguistic Inference Followed by Flow Transformation for Generative Speech Enhancement",
+      "url": "https://arxiv.org/abs/2610.09963",
+      "date": "2026-10-08",
+      "authors": "Haoyin Yan, Chengwei Liu, Zheng Xue, et al.",
+      "abstract": "生成式语音增强在严重噪声/混响下易产生语言幻觉，而离散 codec token 方法受量化误差上限约束。LIFT-SE 提出两阶段框架，在 QRes-Codec 内解耦语言推理与声学合成：第一阶段自回归预测干净 codec token（条件于面向干净语音蒸馏的自监督前端帧对齐特征），第二阶段用条件流匹配将高斯噪声传输到连续潜变量，再由冻结解码器重建波形。离散生成提供自然度、连续精化恢复信号保真，在 DNS1 与 URGENT 基准上取得良好语言一致性与感知质量。",
+      "tags": ["Speech Enhancement", "Generative", "Flow Matching", "Codec"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.09963"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.09963"}
+      ]
+    },
+    {
+      "title": "Indic-CLAP: Text-Audio Understanding in Indic Languages via Cross-Lingual Distillation",
+      "url": "https://arxiv.org/abs/2610.08846",
+      "date": "2026-10-08",
+      "authors": "Sanat Kumar Agrawal, Srikanth Raj Chetupalli",
+      "abstract": "CLAP 学习联合文本-音频表示以实现零样本音频理解，但其仅英文的文本编码器限制了非英语任务。Indic-CLAP 通过对九种印度语言（覆盖超十亿人口）的跨语言蒸馏扩展 CLAP：冻结音频编码器，仅用机器翻译的 AudioCaps 描述训练印度语文本编码器。比较从文本编码器、音频编码器及混合目标的蒸馏，跨模态检索与零样本分类结果表明其继承了 CLAP 教师的跨模态对齐，并以模态间隙分析解释性能趋势。",
+      "tags": ["Audio Understanding", "CLAP", "Multilingual", "Distillation"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.08846"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.08846"}
+      ]
+    },
+    {
+      "title": "CrossEdit: Cross-Modal Training Enables Rich Audio-Visual Editing",
+      "url": "https://arxiv.org/abs/2610.10264",
+      "date": "2026-10-08",
+      "authors": "William Chen, Prem Seetharaman, Ke Chen, Oriol Nieto, et al.",
+      "abstract": "多模态编辑要求生成模型理解复杂组合指令并仅修改目标元素——现有系统多限于单模态简单属性编辑。CrossEdit 是一个统一的图像/音频/视频 omni-modal 编辑模型，通过跨模态迁移零样本完成视听（AV）电影场景编辑。核心观察：复杂指令遵循能力一旦在任一模态习得即可泛化到其它模态。利用声学信号可加性程序化生成大规模带组合指令的音频编辑对，结合自监督 AV 掩码重建与精选跨模态任务微调，实现零样本泛化。同步发布 CrossEditBench 人工标注基准与 AV-FES 联合评分指标。",
+      "tags": ["Audio-Visual Editing", "Multi-Modal", "Zero-Shot", "Audio Generation"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.10264"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.10264"}
+      ]
+    },
+    {
+      "title": "DuRe-ST: Dual-Relation Spectro-Temporal Modeling for Speech Deepfake Detection",
+      "url": "https://arxiv.org/abs/2610.10121",
+      "date": "2026-10-08",
+      "authors": "Shaole Li, Siqing Qin, Youzhi Tu, Kong Aik Lee",
+      "abstract": "现有语音深度伪造检测器可通过图注意力自适应捕获谱-时依赖，但大多忽视频谱与时序表示之间的协变。作者从联合协方差构建归一化亲和图，并应用多项式图滤波捕获高阶协方差诱导依赖。DuRe-ST 联合利用协方差诱导与图注意力诱导的关系，捕获互补的二阶协变与自适应谱-时依赖。在 ASVspoof 基准上相对 XLSR-AASIST 平均 EER 下降 25.9%，跨数据集下降 28.4%，且仅需 4–8k 额外可训练后端参数。",
+      "tags": ["Deepfake Detection", "Anti-Spoofing", "Graph Attention", "Security"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.10121"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.10121"}
+      ]
+    },
+    {
+      "title": "SwinDS-BWE: A Parameter-Efficient Swin-1D Lattice Generator with Decision-Science Discriminators for Speech Bandwidth Extension",
+      "url": "https://arxiv.org/abs/2610.09189",
+      "date": "2026-10-08",
+      "authors": "Tarikul Islam Tamiti, Sajid Fardin Dipto, Luke Baja-Ricketts, et al.",
+      "abstract": "带宽扩展（BWE）模型：SwinDS-BWE 结合两项贡献——(1) 带 lattice 式跨流交互的 Swin Transformer 实现局部感知建模、每窗口线性注意力开销，使生成器从 33M 降至 17M；(2) 三个决策科学启发的轻量判别器（CVaR、Chance-Constraint、Multi-Criteria Utility）增强高频监督。相较 AP-BWE 用 30 倍更小的判别器（42.3M vs 1.36M），在英法语数据集上取得更高保真。",
+      "tags": ["Bandwidth Extension", "Swin Transformer", "Parameter-Efficient"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.09189"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.09189"}
+      ]
+    }
+  ],
+  "news": [],
+  "note": "当前日期 2026-10-08（周四）下午。经 arXiv eess.AS（39 条）与 cs.SD（43 条）今日新批次检索，本期精选 12 篇当日发布论文，覆盖 TTS/语音生成、零样本声音克隆、情感可控 TTS、ASR、上下文偏置、语音增强、音频理解、AV 编辑、语音深伪检测等方向。重点推荐：字节跳动 JoyAI-Voice 2.0（全连续自回归+扩散、Seed-TTS WER 2.51%）、BanglaBox（低资源孟加拉语零样本克隆）、SteerSpeech（免训练情感引导）。说明：本环境直接 arXiv API 与 export 站点被网络策略阻断（curl SSL/连接错误），改经 edge-browser 网页抓取 arxiv.org/list 页面完成交叉验证，标题与 ID 均已确认完整。必搜重磅新闻关键词（OpenAI GPT-Live、OpenAI voice model、Google Gemini voice、full-duplex speech model、语音模型发布、real-time voice AI）命中的最新条目均为历史发布（GPT-Live-1 API 9/10、Gemini 3.8 Live 9/15 等），超出 6 小时窗口，故本期无 6 小时内新闻收录。"
+}

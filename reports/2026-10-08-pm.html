@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-10-08-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-10-08-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年10月8日 (周四) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">12</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.08834" target="_blank">JoyAI-Voice 2.0: A Full-Continuous Autoregressive Speech Generation Model with Semantic-Acoustic Joint Representation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-08</span><span>👥 Yafeng Chen, Boya Dong, Yankun Huang, et al.</span></div>
+      <div class="abstract">JoyAI-Voice 2.0 是字节跳动推出的端到端拟人语音生成模型，采用全连续双编码器架构：原始语音编码为连续潜变量并切分为 patch，每个 patch 经语义-声学双编码器分解为语义纯净表示与声学表示，融合后送入因果自回归 Transformer 做规划，再由局部扩散 Transformer 渲染完整潜变量实现 48kHz 合成。训练采用流匹配 + 停止预测联合目标，并辅以 SFT 与 DiffusionNFT 强化学习。在 Seed-TTS 上取得 2.51% 的平均词错率（较最强基线相对下降 14.9%），在 InstructTTSEval 中英文属性保真均达 SOTA，MDVD-Eval 综合得分 0.893 领先。</div>
+      <div class="tags"><span class="tag">Speech Generation</span><span class="tag">TTS</span><span class="tag">Autoregressive + Diffusion</span><span class="tag">Zero-Shot</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.08834" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.08834" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.09211" target="_blank">BanglaBox: A Phonetically-Balanced Corpus and Data-Efficient Foundation-Model Adaptation for Bangla Text-to-Speech with Zero-Shot Voice Cloning</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-08</span><span>👥 Emtiaz Uddin Ahmed, Araf Mahmud, Sajib Hossain, et al.</span></div>
+      <div class="abstract">面向孟加拉语（孟加拉国语域）的低资源 TTS 适配方案：贡献一个音素与性别平衡、双层结构、经 Jensen-Shannon 散度目标在连音簇（juktakkhor）上平衡的孟加拉语语料库，并配合三项微调改进——merge-consistent 分词器扩展、孟加拉语文本规范化、prompt-masked 双损失目标，从而在语言切换中保留零样本克隆能力。在仅使用约 1/7 孟加拉语微调音频的情况下，自然度、说话人相似度与清晰度均接近或超越商业与开源基线，且全部语料、权重、代码开源。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Zero-Shot Voice Cloning</span><span class="tag">Low-Resource</span><span class="tag">Multilingual</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.09211" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.09211" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.10415" target="_blank">SteerSpeech: Activation Steering For Emotion Control In Generated Speech</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-08</span><span>👥 Afsara Benazir, Darius Pétermann, Felix Xiaozhu Lin, Salar Rahili</span></div>
+      <div class="abstract">提出 SteerSpeech，一个轻量级激活引导框架，通过向隐藏激活注入 steering 向量来控制情感，而无需重训或专用条件模块。针对每种目标情感训练低秩变换，采用多专家目标鼓励情感单调可控的同时保持说话人身份与语义内容，并以双阶段「生成-重放」流水线 + 直通估计器对离散语音 token 反向传播专家监督。在 Qwen3-TTS 上，对已见/未见/带口音说话人均实现更强连续情感控制（目标情感得分 1.08x–7.12x），高强度引导下说话人身份保留 1.43x–1.46x。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Emotion Control</span><span class="tag">Activation Steering</span><span class="tag">Controllable</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.10415" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.10415" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.09448" target="_blank">Beyond Token Revision: Investigating Mask-and-Replace Diffusion for Zero-Shot Text-to-Speech</a></h4>
+      <div class="meta"><span>📅 2026-10-08</span><span>👥 Hounsu Kim, Joonyong Park, Yuki Saito, Satoru Fukayama, Juhan Nam</span></div>
+      <div class="abstract">针对零样本 TTS 的离散扩散模型，研究 mask-and-replace 训练带来的增益到底来自「推理期 token 修正」还是「训练期噪声上下文增强」。采用 DeMaR 组合 mask-and-replace 训练与置信度排序的 mask-only 采样，在保持总训练腐蚀概率不变的前提下，即便每个 token 一旦 unmask 后不再修改，仍取得低于自回归与纯 mask 扩散基线的 WER。跨两个异构语音分词器的匹配训练表明：噪声上下文增强与替换监督在训练侧本身即带来增益，无需依赖推理期 token 修正。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Zero-Shot</span><span class="tag">Diffusion</span><span class="tag">DeMaR</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.09448" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.09448" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.09831" target="_blank">Training-Free Instruction TTS Gender Bias Calibration Using Model-Adaptive Steering</a></h4>
+      <div class="meta"><span>📅 2026-10-08</span><span>👥 Kuan-Yu Chen, Yi-Cheng Lin, Jeng-Lin Li, Jian-Jiun Ding</span></div>
+      <div class="abstract">指令式 TTS（ITTS）系统会从风格提示（如职业、人设）中系统性编码声学性别偏斜。本文提出 model-adaptive steering 免训练校准方法，用群体偏差向量引导编码器后的条件表示，并配以粗到细强度搜索；确定性词法门在检测到显式性别关键词时绕过干预以保留语义。在四个 ITTS 模型跨架构的 12,800 条提示基准上，将校准误差从 11.5–28.1 个百分点降至 0.8–5.9 个百分点，同时几乎不损失自然度（UTMOS 最多 -0.08）与 WER。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Bias Calibration</span><span class="tag">Training-Free</span><span class="tag">Fairness</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.09831" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.09831" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.08994" target="_blank">Phoneme-Guided Initialization for LLM-based Speech Recognition</a></h4>
+      <div class="meta"><span>📅 2026-10-08</span><span>👥 Ryo Magoshi, Shinsuke Sakai, Tatsuya Kawahara</span></div>
+      <div class="abstract">面向低资源场景的 LLM 语音识别：语音 LLM 在配对语音-文本数据稀缺时表现下降，而「语音到音素（S2P）+ 音素到字素（P2G）」级联在低资源下反而更优。作者提出音素引导初始化——在端到端框架内用该洞察：先用 S2P 预训练音频编码器、P2G 预训练 LLM，再连接后在目标 ASR 任务上端到端微调。在日语 CSJ、中文 AISHELL-1 及 Common Voice 25.0 的鞑靼语、乌尔都语上，匹配或超越级联 S2P-P2G 基线与无 P2G 初始化的端到端模型。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Speech-LLM</span><span class="tag">Low-Resource</span><span class="tag">SLT 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.08994" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.08994" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.09467" target="_blank">Boundary-Free Contextual Biasing: Depth-Adaptive Gating and Reading-Space Matching for Unsegmented Languages</a></h4>
+      <div class="meta"><span>📅 2026-10-08</span><span>👥 Muhammad Huzaifah, Yu Pan, Zachary Yeo, et al.</span></div>
+      <div class="abstract">面向日语、中文等无词边界语言的上下文偏置（contextual biasing）ASR：现有方法依赖词边界。作者提出面向冻结 CTC 模型的免训练、单遍无边界偏置解码器，基于字符级 Aho-Corasick 自动机，用「深度自适应门控」决定推进强度、用「阅读空间匹配」处理音频对但字符错的情形。在 Aishell-1 NE 困难 R1 子集召回 66.5%（超越训练过的 CLAS 基线 64%），并发布首个开源日语上下文偏置基准，罕见词召回提升 25 个点且精确率>97%。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Contextual Biasing</span><span class="tag">CTC</span><span class="tag">Low-Resource</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.09467" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.09467" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.09963" target="_blank">LIFT-SE: Linguistic Inference Followed by Flow Transformation for Generative Speech Enhancement</a></h4>
+      <div class="meta"><span>📅 2026-10-08</span><span>👥 Haoyin Yan, Chengwei Liu, Zheng Xue, et al.</span></div>
+      <div class="abstract">生成式语音增强在严重噪声/混响下易产生语言幻觉，而离散 codec token 方法受量化误差上限约束。LIFT-SE 提出两阶段框架，在 QRes-Codec 内解耦语言推理与声学合成：第一阶段自回归预测干净 codec token（条件于面向干净语音蒸馏的自监督前端帧对齐特征），第二阶段用条件流匹配将高斯噪声传输到连续潜变量，再由冻结解码器重建波形。离散生成提供自然度、连续精化恢复信号保真，在 DNS1 与 URGENT 基准上取得良好语言一致性与感知质量。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Generative</span><span class="tag">Flow Matching</span><span class="tag">Codec</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.09963" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.09963" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.08846" target="_blank">Indic-CLAP: Text-Audio Understanding in Indic Languages via Cross-Lingual Distillation</a></h4>
+      <div class="meta"><span>📅 2026-10-08</span><span>👥 Sanat Kumar Agrawal, Srikanth Raj Chetupalli</span></div>
+      <div class="abstract">CLAP 学习联合文本-音频表示以实现零样本音频理解，但其仅英文的文本编码器限制了非英语任务。Indic-CLAP 通过对九种印度语言（覆盖超十亿人口）的跨语言蒸馏扩展 CLAP：冻结音频编码器，仅用机器翻译的 AudioCaps 描述训练印度语文本编码器。比较从文本编码器、音频编码器及混合目标的蒸馏，跨模态检索与零样本分类结果表明其继承了 CLAP 教师的跨模态对齐，并以模态间隙分析解释性能趋势。</div>
+      <div class="tags"><span class="tag">Audio Understanding</span><span class="tag">CLAP</span><span class="tag">Multilingual</span><span class="tag">Distillation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.08846" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.08846" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.10264" target="_blank">CrossEdit: Cross-Modal Training Enables Rich Audio-Visual Editing</a></h4>
+      <div class="meta"><span>📅 2026-10-08</span><span>👥 William Chen, Prem Seetharaman, Ke Chen, Oriol Nieto, et al.</span></div>
+      <div class="abstract">多模态编辑要求生成模型理解复杂组合指令并仅修改目标元素——现有系统多限于单模态简单属性编辑。CrossEdit 是一个统一的图像/音频/视频 omni-modal 编辑模型，通过跨模态迁移零样本完成视听（AV）电影场景编辑。核心观察：复杂指令遵循能力一旦在任一模态习得即可泛化到其它模态。利用声学信号可加性程序化生成大规模带组合指令的音频编辑对，结合自监督 AV 掩码重建与精选跨模态任务微调，实现零样本泛化。同步发布 CrossEditBench 人工标注基准与 AV-FES 联合评分指标。</div>
+      <div class="tags"><span class="tag">Audio-Visual Editing</span><span class="tag">Multi-Modal</span><span class="tag">Zero-Shot</span><span class="tag">Audio Generation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.10264" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.10264" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.10121" target="_blank">DuRe-ST: Dual-Relation Spectro-Temporal Modeling for Speech Deepfake Detection</a></h4>
+      <div class="meta"><span>📅 2026-10-08</span><span>👥 Shaole Li, Siqing Qin, Youzhi Tu, Kong Aik Lee</span></div>
+      <div class="abstract">现有语音深度伪造检测器可通过图注意力自适应捕获谱-时依赖，但大多忽视频谱与时序表示之间的协变。作者从联合协方差构建归一化亲和图，并应用多项式图滤波捕获高阶协方差诱导依赖。DuRe-ST 联合利用协方差诱导与图注意力诱导的关系，捕获互补的二阶协变与自适应谱-时依赖。在 ASVspoof 基准上相对 XLSR-AASIST 平均 EER 下降 25.9%，跨数据集下降 28.4%，且仅需 4–8k 额外可训练后端参数。</div>
+      <div class="tags"><span class="tag">Deepfake Detection</span><span class="tag">Anti-Spoofing</span><span class="tag">Graph Attention</span><span class="tag">Security</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.10121" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.10121" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.09189" target="_blank">SwinDS-BWE: A Parameter-Efficient Swin-1D Lattice Generator with Decision-Science Discriminators for Speech Bandwidth Extension</a></h4>
+      <div class="meta"><span>📅 2026-10-08</span><span>👥 Tarikul Islam Tamiti, Sajid Fardin Dipto, Luke Baja-Ricketts, et al.</span></div>
+      <div class="abstract">带宽扩展（BWE）模型：SwinDS-BWE 结合两项贡献——(1) 带 lattice 式跨流交互的 Swin Transformer 实现局部感知建模、每窗口线性注意力开销，使生成器从 33M 降至 17M；(2) 三个决策科学启发的轻量判别器（CVaR、Chance-Constraint、Multi-Criteria Utility）增强高频监督。相较 AP-BWE 用 30 倍更小的判别器（42.3M vs 1.36M），在英法语数据集上取得更高保真。</div>
+      <div class="tags"><span class="tag">Bandwidth Extension</span><span class="tag">Swin Transformer</span><span class="tag">Parameter-Efficient</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.09189" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.09189" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-10-08-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
