@@ -1,0 +1,5 @@
+{
+  "papers": [],
+  "news": [],
+  "note": "当前时间 2026-10-09（周五）14:01 Asia/Shanghai，下午版检索窗口为今日 09:30–14:00（最近 6 小时）。经分级检索核实：① arXiv eess.AS / cs.SD 今日（10-09）新批次尚未发布——arxiv 最新可见公告批次仍为 'Thu, 8 Oct 2026'（arxiv 每日约北京时间 20:00 左右发布当日批次，当前尚未到点），因此 6 小时窗口内无新增论文；本环境直连 export.arxiv.org 与 arxiv.org 均被网络策略阻断（SSL/连接关闭），已改经 edge-browser 网页检索交叉验证。② 必搜重磅新闻关键词（OpenAI GPT-Live full-duplex、OpenAI voice model release、Google Gemini voice、full-duplex speech model、语音模型发布、real-time voice AI）命中的最新条目均为历史发布（GPT-Live-1 API 9/11、Gemini 3.8 Live 9/16、微软 MAI-Voice 10/1、ElevenLabs v4 9/28、Qwen-Audio-3.1-TTS 9/28 等），均超出 6 小时窗口。③ HuggingFace Daily Papers 无今日音频标签新论文。综上：下午时段暂无新内容，遂如实标注，不重复早间版本内容与历史条目。"
+}
