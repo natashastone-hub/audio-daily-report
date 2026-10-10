@@ -1,0 +1,33 @@
+{
+  "papers": [
+    {
+      "title": "SmoothConv and DuplexConv: Complementary Mandarin Multi-Party Conversational Speech Corpora for Speech Language Models",
+      "url": "https://arxiv.org/abs/2610.11150",
+      "date": "2026-10-09",
+      "authors": "Qualia Labs AI et al.",
+      "abstract": "面向中文多说话人口语对话场景，发布 SmoothConv 与 DuplexConv 两个互补的中文多方会话语音语料库，合计约 2,100 小时，覆盖真实交互动态（重叠、打断、话轮切换）与丰富的副语言标签，并配套 GitHub 与 Hugging Face 开源下载，填补了中文多方语音轨道数据稀缺的空白，为语音语言模型（LALM）、说话人日志与全双工对话系统的训练与评测提供统一资源。",
+      "tags": ["Speech Corpus", "Multi-Party", "Mandarin", "LALM", "Open Source"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.11150"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.11150"},
+        {"label": "GitHub", "url": "https://github.com/qualialabsAI/SmoothConv-DuplexConv"}
+      ]
+    },
+    {
+      "title": "Is Word Error Rate Enough? Rethinking Privacy Evaluation in Speech with Entity-Aware Metrics",
+      "url": "https://arxiv.org/abs/2610.08831",
+      "date": "2026-10-09",
+      "authors": "Authors (Under review at IEEE ICASSP 2027)",
+      "abstract": "随着智能设备对敏感语音内容的采集增加，语音隐私风险日益受关注。本文指出传统的词错误率（WER）不足以评估语音中的隐私泄露，提出实体感知（Entity-Aware）评估指标，专门追踪隐私实体（如人名、地点、号码等）是否被正确转写/保护，从而更准确地衡量语音混淆与隐私保护技术的真实效果。",
+      "tags": ["Speech Privacy", "Evaluation Metric", "ASR", "ICASSP 2027"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.08831"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.08831"}
+      ]
+    }
+  ],
+  "news": [],
+  "note": "当前时间 2026-10-10（周六）09:34 Asia/Shanghai，检索窗口为昨日 09:30 至今日（最近 24 小时）。arXiv 昨日（10-09）批次于昨日下午~晚间发布，本环境直连 export.arxiv.org / arxiv.org 均被网络策略阻断（SSL/连接关闭），已改经 edge-browser 网页检索交叉验证，捕获到 10-09 批次中 2610.1xxxx 段的中文多方会话语料 SmoothConv/DuplexConv（约 22 小时前提交，已开源）与语音隐私评估 Entity-Aware 论文等新内容。必搜重磅新闻关键词（OpenAI GPT-Live full-duplex / OpenAI voice model release / Google Gemini voice / full-duplex speech model / 语音模型发布 / real-time voice AI）命中的最新条目均为历史发布（GPT-Live-1 API 9/11、Gemini 3.8 Live 9/16、微软 MAI-Voice-2.1 10/1、Qwen-Audio-3.1 9/23 等），24 小时内无重大语音产品发布，故新闻板块如实标空。"
+}
