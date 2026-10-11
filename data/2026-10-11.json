@@ -1,0 +1,149 @@
+{
+  "papers": [
+    {
+      "title": "SteerablePlex: Can We Steer Full-Duplex Models?",
+      "url": "https://arxiv.org/abs/2610.12201",
+      "date": "2026-10-09",
+      "authors": "Haolong Zheng, Maike Züfle, Dominik Macháček, Peter Polák, Xulin Fan, Xavier Sumba, Siyin Wang, Ondřej Klejch, Mark Hasegawa-Johnson",
+      "abstract": "全双工语音模型能在边说边听的同时实时处理语音交互，但其生成风格与行为往往难以在推理阶段显式控制。本文提出 SteerablePlex，探索能否像操控 LLM 一样对全双工模型施加 steer（导向/控制），通过可解释的引导信号调控模型的说话内容、韵律与交互策略，为全双工语音模型的可用性与可控性提供新思路。",
+      "tags": ["Full-Duplex", "Speech Model", "Controllability", "Steering"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.12201"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.12201"}
+      ]
+    },
+    {
+      "title": "Conversational Voice Aesthetic Model with Reinforcement Learning from Human Listeners",
+      "url": "https://arxiv.org/abs/2610.10868",
+      "date": "2026-10-09",
+      "authors": "Xilin Jiang, Shun Zhang, Tejas Jayashankar, Yinghao Aaron Li, Osama Hanna",
+      "abstract": "现有语音合成模型多以客观声学指标（频谱失真、MOS）做监督，却难以捕捉人类对声音'美感'的主观偏好。本文提出一个'会话语音美学模型'，用来自人类听众的强化学习信号（RLHF）训练语音模型，使生成语音在自然度、表现力与美学层面更贴合真实人类偏好，跨越由纯客观评价主导的 TTS 优化范式。",
+      "tags": ["TTS", "RLHF", "Speech Aesthetics", "Voice Model"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.10868"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.10868"}
+      ]
+    },
+    {
+      "title": "MiDashengLM-Spatial: Unifying General Audio Understanding and Spatial Awareness",
+      "url": "https://arxiv.org/abs/2610.11156",
+      "date": "2026-10-09",
+      "authors": "Jinbo Hu, Hang Su, Lichun Fan, Heinrich Dinkel, Gang Li, Zhanchen Dai, Yiru Zhang, Chang Liu, Peng Wang, Junnan Wu, Jian Luan, Cong Zou, Heng Qu",
+      "abstract": "现有音频语言大模型多聚焦于语义理解，而对声音的'空间方位'感知（声源定位、空间声场）关注不足。本文提出 MiDashengLM-Spatial，将通用音频理解与空间感知统一到一个模型框架中，使模型不仅能听懂'是什么声音'，还能回答'声音从哪来'，为空间音频问答与沉浸式交互场景奠定基础。",
+      "tags": ["Audio LALM", "Spatial Audio", "Audio Understanding", "Multi-Modal"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.11156"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.11156"}
+      ]
+    },
+    {
+      "title": "Listen-to-Reason: Listen with Experts, Retrieve over a Graph, Reason with LLMs",
+      "url": "https://arxiv.org/abs/2610.10749",
+      "date": "2026-10-09",
+      "authors": "Pooneh Mousavi, Mirco Ravanelli, Cem Subakan",
+      "abstract": "面向复杂音频理解任务，本文提出'Listen-to-Reason'框架：先用多个专家音频模型（ASR、声音事件检测、情感识别等）并行'倾听'输入，再将结果组织成知识图谱做检索，最后交由 LLM 进行跨模态推理。通过'专家倾听 + 图检索 + LLM 推理'的组合，显著提升音频问答与推理的准确性和可解释性。",
+      "tags": ["Audio Reasoning", "Audio-LLM", "Multi-Expert", "Graph RAG"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.10749"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.10749"}
+      ]
+    },
+    {
+      "title": "AutoSynth: Learning to Generate Editable Synthesizer Programs from Audio and Text",
+      "url": "https://arxiv.org/abs/2610.10774",
+      "date": "2026-10-09",
+      "authors": "Tristan Wu, Daniel Chin, Liwei Lin, Junan Zhang, Gus Xia",
+      "abstract": "从音频（或文本描述）反向生成'可编辑的合成器程序'，是音乐生成中的一个长期难题。本文提出 AutoSynth，将逆合成问题建模为序列到序列任务，直接从输入音频/文本学习生成合成器参数与连线配置，产出可由用户继续编辑、参数化可控的合成器音色，相比纯黑盒音频生成提供了更高的可解释性与可编辑性。",
+      "tags": ["Music Generation", "Synthesizer", "Audio Synthesis", "Program Synthesis"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.10774"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.10774"}
+      ]
+    },
+    {
+      "title": "Cross-Lingual Speaker Verification with Self-Supervised Pre-Trained Models",
+      "url": "https://arxiv.org/abs/2610.11099",
+      "date": "2026-10-09",
+      "authors": "Jinghan Peng, Yu Zheng, Weiqiang Wang, Jian Liu",
+      "abstract": "本文系统研究自监督预训练语音表示（SSL）模型在跨语言说话人验证任务上的表现。通过在多种语言对与低资源场景下的评测，揭示 SSL 表示在跨语种说话人身份保持上的优势与局限，并给出改进的微调与迁移策略，为多语言声纹识别系统的构建提供实证指导。",
+      "tags": ["Speaker Verification", "Cross-Lingual", "Self-Supervised", "INTERSPEECH 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.11099"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.11099"}
+      ]
+    },
+    {
+      "title": "Monaural Continuous-Radius Regional Speech Extraction with Cross-Radius Consistency Learning",
+      "url": "https://arxiv.org/abs/2610.11507",
+      "date": "2026-10-09",
+      "authors": "Biao Dong, Jie Chen, Jianwei Fang, Wei Xiao, Jiqing Han, Yongjun He",
+      "abstract": "区域语音提取（按空间位置从单通道录音中分离目标说话人）受制于固定的目标半径定义。本文提出一种'连续半径'区域语音提取方法，通过跨半径一致性学习，使模型能灵活处理任意目标区域大小，在单通道（Monaural）条件下实现更通用、更鲁棒的空间选择性语音分离，并提交至 ICASSP 2027。",
+      "tags": ["Speech Extraction", "Target Speech", "Monaural", "ICASSP 2027"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.11507"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.11507"}
+      ]
+    },
+    {
+      "title": "Toward Accurate Speaker Inventories for Online Speaker Diarization",
+      "url": "https://arxiv.org/abs/2610.11278",
+      "date": "2026-10-09",
+      "authors": "Youngki Kwon, Hee-Soo Heo, Minjae Lee, Bong-Jin Lee",
+      "abstract": "在线说话人日志（diarization）需要实时维护准确的'说话人清单'，但流式场景下说话人身份切换频繁、重叠严重，清单维护极易出错。本文聚焦在线说话人日志中的说话人清单准确性，提出改进的增量式说话人登记与合并策略，降低误合并/误分裂，为流式实时会议转写提供更可靠的说话人追踪。",
+      "tags": ["Speaker Diarization", "Online", "Streaming", "ICASSP 2027"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.11278"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.11278"}
+      ]
+    },
+    {
+      "title": "EgoVoice: Proactive Spoken Assistance from Egocentric Multimodal Streams",
+      "url": "https://arxiv.org/abs/2610.12248",
+      "date": "2026-10-09",
+      "authors": "Heeseung Kim",
+      "abstract": "本文提出 EgoVoice，将'自我中心'多模态流（可穿戴设备的视觉+音频）引入主动式语音助手。系统不等待用户明确提问，而是基于对佩戴者当前情境的多模态理解，主动产生语音提示与语音辅助，落地'前瞻式口语助手'这一研究方向，被 EMNLP 2026 主会接收。",
+      "tags": ["Spoken Assistant", "Egocentric", "Multimodal", "EMNLP 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.12248"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.12248"}
+      ]
+    },
+    {
+      "title": "DuplexAgent-RSI: Recursive Harness Improvement for Full-Duplex Voice Agent Collaboration",
+      "url": "https://arxiv.org/abs/2610.11299",
+      "date": "2026-10-09",
+      "authors": "Yingda Shen, Yuxiang Wang, Kunyu Feng, Qinke Ni, Jiaqi Li, Minghao Hsu, Junan Zhang, Dekun Chen, Yutong Bian, Zhizheng Wu",
+      "abstract": "面向全双工语音智能体的多智能体协作，本文提出 DuplexAgent-RSI，通过'递归式 harness 改进'让一个全双工语音智能体能持续优化对工具与其它智能体的调用方式。该方法在真实语音交互中边听边说、动态纠偏，提升全双工语音 Agent 在复杂任务协作中的稳定性与成功率。",
+      "tags": ["Full-Duplex", "Voice Agent", "Multi-Agent", "Collaboration"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.11299"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.11299"}
+      ]
+    },
+    {
+      "title": "Towards Automated Clinical Behavioral Coding with Large Language Models: A Case Study Using BOSCC Recordings of Children",
+      "url": "https://arxiv.org/abs/2610.11106",
+      "date": "2026-10-09",
+      "authors": "Jordan Prescott, Aditya Kommineni, Tiantian Feng, Megan Micheletti, Alyssa Viggiano, Luis Angeles, Anfeng Xu, Lynn Perry, Catherine Lord, Daniel Messinger, Shrikanth Narayanan",
+      "abstract": "临床行为编码（如对自闭症儿童的 BOSCC 录像进行行为维度人工标注）费时费力。本文探索用大语言模型 + 语音信号自动完成儿童临床行为的量化编码，以 BOSCC 录像为案例，评估 LLM 自动化行为编码与人工标注的一致性，为语音/AI 在临床心理评估中的落地提供证据。",
+      "tags": ["Clinical Audio", "Behavioral Coding", "LLM", "Speech Analysis"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.11106"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.11106"}
+      ]
+    }
+  ],
+  "news": [],
+  "note": "当前时间 2026-10-11（周日）09:34 Asia/Shanghai，检索窗口为昨日 09:30 至今日（最近 24 小时）。arXiv eess.AS/cs.SD 每日批次仅于工作日（美东周一至周五）发布，最新可见批次为 Fri 09 Oct 2026（eess.AS 17 篇 + cs.SD 15 篇）；Sat 10 Oct 批次尚未发布（周六无批次）。故今日无 24 小时内新批次，本报告补录昨日（10-09 批次）中 10-10 早报未能覆盖的论文：SteerablePlex、Conversational Voice Aesthetic Model、MiDashengLM-Spatial、Listen-to-Reason、AutoSynth 等（10-10 早报仅收录 SmoothConv/DuplexConv 与 Entity-Aware 两篇，存在大量遗漏）。本环境直连 export.arxiv.org / arxiv.org 及镜像站点均被网络策略阻断（SSL/连接关闭），已改经 edge-browser 网页检索捕获 arxiv listing 完整条目。必搜重磅新闻关键词（OpenAI GPT-Live full-duplex / OpenAI voice model release / Google Gemini voice / full-duplex speech model / 语音模型发布 / real-time voice AI）命中的最新条目均为历史发布（GPT-Live 7/8、GPT-Live-1 API 9/11、Gemini 3.8 Live 9/15、微软 MAI-Voice/Transcribe 10/1、ElevenLabs v4 9/29 等），24 小时内无重大语音产品发布，故新闻板块如实标空。"
+}
