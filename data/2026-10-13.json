@@ -1,0 +1,19 @@
+{
+  "papers": [
+    {
+      "title": "Frontend-Assisted Large Audio-Language Models for SLT2026 Speaker-Attributed ASR",
+      "url": "https://arxiv.org/abs/2610.13282",
+      "date": "2026-10-12",
+      "authors": "SLT 2026 Track-1 team (multi-institutional)",
+      "abstract": "面向 SLT 2026 Track 1（带时间戳的说话人归属 ASR）任务的系统报告。论文提出前端辅助的大音频语言模型（LALM）方案，将传统说话人分离/说话人日志前端与大音频语言模型相结合，在一个统一框架内输出带说话人标签和时间戳的转写结果，验证了「前端特征增强 + LALM 解码」在多说话人远场场景下的有效性。",
+      "tags": ["Speaker-Attributed ASR", "Audio LLM", "Diarization", "SLT 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.13282"},
+        {"label": "HTML", "url": "https://arxiv.org/html/2610.13282v1"}
+      ]
+    }
+  ],
+  "news": [],
+  "note": "当前时间 2026-10-13（周二）09:34 Asia/Shanghai。本轮 arXiv eess.AS/cs.SD 检索窗口为过去 24 小时（10-12 09:30 至 10-13 09:30）。本环境直连 export.arxiv.org / arxiv.org 已被网络策略阻断（curl 返回 HTTP_CODE:000、web_fetch fetch failed），改经 web_search（edge-browser + isearch 双通道）交叉验证。10-13 为周二，上一工作批次为美东周五（10-09/10-10），周一（10-12）批次预计美东周一 20:00（约北京时间周二凌晨）方才发布，搜索引擎索引尚不稳定，故近 24 小时内仅检索到 1 篇确认新论文（Frontend-Assisted LALM，2610.13282，约 23 小时前提交）。必搜重磅新闻关键词（OpenAI GPT-Live full-duplex voice model / OpenAI voice model release / Google Gemini voice / full-duplex speech model / 语音模型发布 / real-time voice AI）逐一执行后，命中均为历史发布（GPT-Live 7/8、GPT-Live-1 API 9/11、Gemini 3.8 Live 9/15 等），24 小时内无重大语音产品发布，新闻板块如实标空。"
+}
