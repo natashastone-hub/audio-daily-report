@@ -1,0 +1,101 @@
+{
+  "papers": [
+    {
+      "title": "Training a Compact, Strong, and Realistic Text-to-Speech Model (Audio8-TTS)",
+      "url": "https://arxiv.org/abs/2610.14776",
+      "date": "2026-10-10",
+      "authors": "Runyuan Cai, Yu Lin, Yiming Wang, Xiaodong Zeng",
+      "abstract": "针对传统 TTS 只优化可懂度和说话人相似度、而忽略韵律细节导致的「真实感鸿沟」，提出 Audio8-TTS——一个仅 0.6B 参数的零样本声音克隆模型，在可懂度与说话人相似度上达到 SOTA，感知自然度尤其突出。作者从开源 TTS 系统构建质量阶梯，训练一个「真实感判官」（realism critic）评估合成语音与真人录音的差距，并用身份擦除目标防止判官依赖生成器指纹；三阶段训练（多语种 SFT → WER/SIM 奖励的 GRPO → 真实感判官引导的 GRPO）最终同时提升韵律自然度与说话人相似度，且不损失 WER。",
+      "tags": ["TTS", "Zero-Shot Voice Cloning", "GRPO", "Compact Model"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.14776"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2610.14776"}]
+    },
+    {
+      "title": "DiffuPlex: Accelerating Full-Duplex Spoken Dialog Models via Rolling Masked Diffusion",
+      "url": "https://arxiv.org/abs/2610.12214",
+      "date": "2026-10-09",
+      "authors": "Heeseung Kim",
+      "abstract": "提出 DiffuPlex，通过「滚动掩码扩散」（rolling masked diffusion）加速全双工口语对话模型的推理。针对全双工语音模型需要边听边说、实时交互的特性，方法在保持生成质量的同时显著降低计算开销，为实时语音 Agent 的高效部署提供了新思路。",
+      "tags": ["Full-Duplex", "Spoken Dialog", "Diffusion", "Real-Time"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.12214"}]
+    },
+    {
+      "title": "Edit Who Speaks, Control How They Speak: Global Timbre Editing and Local Instruction Control for TTS (EDICT)",
+      "url": "https://arxiv.org/abs/2610.11437",
+      "date": "2026-10-08",
+      "authors": "Junchuan Zhao, Chenglin Xu, Wei Zeng, Haoyang Li, Yiwen Guo, Ye Wang",
+      "abstract": "提出 EDICT 框架，统一「全局音色编辑」与「局部表达控制」。指令式 TTS 现有接口要么克隆参考音色、要么按文本描述生成新音色，却无法直接修改给定参考的音色。EDICT 结合参考音频与结构化音色编辑，在 codec-token 空间生成编辑后的参考，作为冻结 TTS 骨干的共享音色锚点；在每个分段边界重建 KV cache，在保持先前生成语音的声学连续性的同时刷新指令条件。在自建 TimbreEdit-Bench 与 IntraTTS-Bench 上验证了更优的音色编辑与局部指令遵循、说话人一致性、转场质量的平衡。",
+      "tags": ["TTS", "Timbre Editing", "Instruction Control", "Voice Design"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.11437"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2610.11437"}]
+    },
+    {
+      "title": "Cross-Lingual TTS for Indian Languages: A Benchmark and Inference-Time Duration Estimation Strategies",
+      "url": "https://arxiv.org/abs/2610.14826",
+      "date": "2026-10-10",
+      "authors": "Adarsh Arigala, Arjun Gangwar, Srinivasan Umesh",
+      "abstract": "针对免对齐（alignment-free）TTS 在跨语言场景下因字符时长差异导致的时长失配与音质下降问题，构建了覆盖英语与九种印度语言的跨语言评测基准，并提出一种语言感知的推理期时长估计策略，无需重训练或改架构即可融合语言特定的每字符时长统计。在双/多语种 A-DMA 模型上的实验显示自然度、可懂度与说话人相似度均提升，时长失配降低。",
+      "tags": ["Cross-Lingual TTS", "Benchmark", "Duration Estimation", "Indian Languages"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.14826"}]
+    },
+    {
+      "title": "SteerSpeech: Activation Steering For Emotion Control In Generated Speech",
+      "url": "https://arxiv.org/abs/2610.10415",
+      "date": "2026-10-07",
+      "authors": "Afsara Benazir, Darius Pétermann, Felix Xiaozhu Lin, Salar Rahili",
+      "abstract": "提出 SteerSpeech，一个轻量级激活引导（activation steering）框架，通过向隐藏激活注入 steering 向量来控制情感，无需重训练 TTS 骨干。对每种目标情感训练低秩变换，用多专家目标在实现单调情感控制的同时保留说话人身份与语言内容、约束 steering 漂移；并提出两遍生成-回放流水线配合直通估计器以优化离散语音 token。在 Qwen3-TTS 上的主客观评测显示，SteerSpeech 在见过/未见/带口音说话人上实现 1.08–7.12 倍的基线目标情感得分，高强度下仍保持 1.43–1.46 倍说话人身份保留。",
+      "tags": ["TTS", "Emotion Control", "Activation Steering", "Inference-Time"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.10415"}]
+    },
+    {
+      "title": "DuRe-ST: Dual-Relation Spectro-Temporal Modeling for Speech Deepfake Detection",
+      "url": "https://arxiv.org/abs/2610.10121",
+      "date": "2026-10-07",
+      "authors": "Shaole Li, Siqing Qin, Youzhi Tu, Kong Aik Lee",
+      "abstract": "针对现有语音深伪检测器主要依赖图注意力而忽视频谱-时频表示间协变关系的问题，从联合协方差构建归一化亲和图并施加多项式图滤波捕捉高阶协变依赖。提出 DuRe-ST 联合利用协变关系与图注意力关系，在 ASVspoof 基准上相对 XLSR-AASIST 平均 EER 降低 25.9%，跨数据集降低 28.4%，且仅需 4–8k 额外可训练后端参数。",
+      "tags": ["Speech Deepfake Detection", "Anti-Spoofing", "Graph Attention"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.10121"}]
+    },
+    {
+      "title": "MiDashengLM-Spatial: Unifying General Audio Understanding and Spatial Awareness",
+      "url": "https://arxiv.org/abs/2610.11156",
+      "date": "2026-10-09",
+      "authors": "Jinbo Hu, Hang Su, Lichun Fan, Heinrich Dinkel, Gang Li, et al.",
+      "abstract": "提出 MiDashengLM-Spatial，一个统一通用音频理解与空间感知能力的大型音频语言模型，将空间声学信息融入通用音频理解框架，拓展了音频大模型在下游空间相关任务中的应用边界。",
+      "tags": ["Audio LLM", "Spatial Awareness", "Audio Understanding"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.11156"}]
+    },
+    {
+      "title": "STEMMA: Song-to-Stem Multi-Audio Reasoning for Large Audio Language Models",
+      "url": "https://arxiv.org/abs/2610.11884",
+      "date": "2026-10-09",
+      "authors": "Hoyeol Sohn, Wonil Kim, Keunhyoung Kim, Sangeun Kum, et al.",
+      "abstract": "提出 STEMMA，面向大型音频语言模型的「歌曲到分轨」多音频推理任务与框架，使音频大模型能够对多轨音频进行结构化理解与推理，推动音乐理解能力的进一步提升。",
+      "tags": ["Audio LLM", "Music Understanding", "Multi-Track Reasoning"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.11884"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "Fish Audio 正式向 API 用户开放 Drama 3：自然语言导演语音、句中切换情绪",
+      "url": "https://runtimewire.com/article/fish-audio-drama-3-wider-launch",
+      "summary": "Fish Audio 于 10 月 13 日正式将新一代语音生成模型 Drama 3 开放给 API 用户。Drama 3 支持用自然语言指挥语音表现、在句子中间切换情绪，并可按片段重新生成而非整段重录，大幅缩小配音/有声书/游戏团队的返工循环。同步推出 API 30 天 8 折优惠，企业从其他语音供应商迁移可享前三个月免费。官方表示平台用户已超 1500 万。"
+    },
+    {
+      "title": "Mistral 发布开源语音合成模型 Voxtral TTS，重塑边缘端 TTS 格局",
+      "url": "https://techweekly.co.za/2026/03/26/mistral-unveils-new-open-source-speech-generation-model/",
+      "summary": "法国 AI 公司 Mistral 发布开源 TTS 模型 Voxtral TTS，支持英语、法语、德语、西班牙语等九种语言，基于 Ministral 3B 构建，可部署于手表/手机/笔记本等边缘设备。不到 5 秒样本即可克隆定制音色，首字延迟（TTFA）约 90ms，实时因子 6x（10 秒音频约 1.6 秒生成），直接对标 ElevenLabs、Deepgram 与 OpenAI，补齐其企业级语音产品矩阵。"
+    },
+    {
+      "title": "HeyGen Voice 登顶 Artificial Analysis TTS 盲测榜首",
+      "url": "https://agihunt.info/daily/latest",
+      "summary": "据 10 月 13 日 AI 资讯，HeyGen Voice 在 Artificial Analysis 的 TTS 盲测中位列第一；API 在 10 月 31 日前五折，每百万字符 15 美元（原价 30 美元）。此外一份开源中文语音数据集发布，含 218 位说话人、8 万余条语音，标注性别/年龄/口音，字音准确率超 98%，可作 F5、Spark、IndexTTS2 的零样本参考。"
+    }
+  ]
+}

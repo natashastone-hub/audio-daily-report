@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-10-14</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-10-14</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年10月14日 (周三) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">8</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.14776" target="_blank">Training a Compact, Strong, and Realistic Text-to-Speech Model (Audio8-TTS)</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-10</span><span>👥 Runyuan Cai, Yu Lin, Yiming Wang, Xiaodong Zeng</span></div>
+      <div class="abstract">针对传统 TTS 只优化可懂度和说话人相似度、而忽略韵律细节导致的「真实感鸿沟」，提出 Audio8-TTS——一个仅 0.6B 参数的零样本声音克隆模型，在可懂度与说话人相似度上达到 SOTA，感知自然度尤其突出。作者从开源 TTS 系统构建质量阶梯，训练一个「真实感判官」（realism critic）评估合成语音与真人录音的差距，并用身份擦除目标防止判官依赖生成器指纹；三阶段训练（多语种 SFT → WER/SIM 奖励的 GRPO → 真实感判官引导的 GRPO）最终同时提升韵律自然度与说话人相似度，且不损失 WER。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Zero-Shot Voice Cloning</span><span class="tag">GRPO</span><span class="tag">Compact Model</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.14776" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.14776" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.12214" target="_blank">DiffuPlex: Accelerating Full-Duplex Spoken Dialog Models via Rolling Masked Diffusion</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-09</span><span>👥 Heeseung Kim</span></div>
+      <div class="abstract">提出 DiffuPlex，通过「滚动掩码扩散」（rolling masked diffusion）加速全双工口语对话模型的推理。针对全双工语音模型需要边听边说、实时交互的特性，方法在保持生成质量的同时显著降低计算开销，为实时语音 Agent 的高效部署提供了新思路。</div>
+      <div class="tags"><span class="tag">Full-Duplex</span><span class="tag">Spoken Dialog</span><span class="tag">Diffusion</span><span class="tag">Real-Time</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.12214" target="_blank">🔗 arXiv</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.11437" target="_blank">Edit Who Speaks, Control How They Speak: Global Timbre Editing and Local Instruction Control for TTS (EDICT)</a></h4>
+      <div class="meta"><span>📅 2026-10-08</span><span>👥 Junchuan Zhao, Chenglin Xu, Wei Zeng, Haoyang Li, Yiwen Guo, Ye Wang</span></div>
+      <div class="abstract">提出 EDICT 框架，统一「全局音色编辑」与「局部表达控制」。指令式 TTS 现有接口要么克隆参考音色、要么按文本描述生成新音色，却无法直接修改给定参考的音色。EDICT 结合参考音频与结构化音色编辑，在 codec-token 空间生成编辑后的参考，作为冻结 TTS 骨干的共享音色锚点；在每个分段边界重建 KV cache，在保持先前生成语音的声学连续性的同时刷新指令条件。在自建 TimbreEdit-Bench 与 IntraTTS-Bench 上验证了更优的音色编辑与局部指令遵循、说话人一致性、转场质量的平衡。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Timbre Editing</span><span class="tag">Instruction Control</span><span class="tag">Voice Design</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.11437" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.11437" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.14826" target="_blank">Cross-Lingual TTS for Indian Languages: A Benchmark and Inference-Time Duration Estimation Strategies</a></h4>
+      <div class="meta"><span>📅 2026-10-10</span><span>👥 Adarsh Arigala, Arjun Gangwar, Srinivasan Umesh</span></div>
+      <div class="abstract">针对免对齐（alignment-free）TTS 在跨语言场景下因字符时长差异导致的时长失配与音质下降问题，构建了覆盖英语与九种印度语言的跨语言评测基准，并提出一种语言感知的推理期时长估计策略，无需重训练或改架构即可融合语言特定的每字符时长统计。在双/多语种 A-DMA 模型上的实验显示自然度、可懂度与说话人相似度均提升，时长失配降低。</div>
+      <div class="tags"><span class="tag">Cross-Lingual TTS</span><span class="tag">Benchmark</span><span class="tag">Duration Estimation</span><span class="tag">Indian Languages</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.14826" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.10415" target="_blank">SteerSpeech: Activation Steering For Emotion Control In Generated Speech</a></h4>
+      <div class="meta"><span>📅 2026-10-07</span><span>👥 Afsara Benazir, Darius Pétermann, Felix Xiaozhu Lin, Salar Rahili</span></div>
+      <div class="abstract">提出 SteerSpeech，一个轻量级激活引导（activation steering）框架，通过向隐藏激活注入 steering 向量来控制情感，无需重训练 TTS 骨干。对每种目标情感训练低秩变换，用多专家目标在实现单调情感控制的同时保留说话人身份与语言内容、约束 steering 漂移；并提出两遍生成-回放流水线配合直通估计器以优化离散语音 token。在 Qwen3-TTS 上的主客观评测显示，SteerSpeech 在见过/未见/带口音说话人上实现 1.08–7.12 倍的基线目标情感得分，高强度下仍保持 1.43–1.46 倍说话人身份保留。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Emotion Control</span><span class="tag">Activation Steering</span><span class="tag">Inference-Time</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.10415" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.10121" target="_blank">DuRe-ST: Dual-Relation Spectro-Temporal Modeling for Speech Deepfake Detection</a></h4>
+      <div class="meta"><span>📅 2026-10-07</span><span>👥 Shaole Li, Siqing Qin, Youzhi Tu, Kong Aik Lee</span></div>
+      <div class="abstract">针对现有语音深伪检测器主要依赖图注意力而忽视频谱-时频表示间协变关系的问题，从联合协方差构建归一化亲和图并施加多项式图滤波捕捉高阶协变依赖。提出 DuRe-ST 联合利用协变关系与图注意力关系，在 ASVspoof 基准上相对 XLSR-AASIST 平均 EER 降低 25.9%，跨数据集降低 28.4%，且仅需 4–8k 额外可训练后端参数。</div>
+      <div class="tags"><span class="tag">Speech Deepfake Detection</span><span class="tag">Anti-Spoofing</span><span class="tag">Graph Attention</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.10121" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.11156" target="_blank">MiDashengLM-Spatial: Unifying General Audio Understanding and Spatial Awareness</a></h4>
+      <div class="meta"><span>📅 2026-10-09</span><span>👥 Jinbo Hu, Hang Su, Lichun Fan, Heinrich Dinkel, Gang Li, et al.</span></div>
+      <div class="abstract">提出 MiDashengLM-Spatial，一个统一通用音频理解与空间感知能力的大型音频语言模型，将空间声学信息融入通用音频理解框架，拓展了音频大模型在下游空间相关任务中的应用边界。</div>
+      <div class="tags"><span class="tag">Audio LLM</span><span class="tag">Spatial Awareness</span><span class="tag">Audio Understanding</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.11156" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.11884" target="_blank">STEMMA: Song-to-Stem Multi-Audio Reasoning for Large Audio Language Models</a></h4>
+      <div class="meta"><span>📅 2026-10-09</span><span>👥 Hoyeol Sohn, Wonil Kim, Keunhyoung Kim, Sangeun Kum, et al.</span></div>
+      <div class="abstract">提出 STEMMA，面向大型音频语言模型的「歌曲到分轨」多音频推理任务与框架，使音频大模型能够对多轨音频进行结构化理解与推理，推动音乐理解能力的进一步提升。</div>
+      <div class="tags"><span class="tag">Audio LLM</span><span class="tag">Music Understanding</span><span class="tag">Multi-Track Reasoning</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.11884" target="_blank">🔗 arXiv</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>Fish Audio 正式向 API 用户开放 Drama 3：自然语言导演语音、句中切换情绪</h4>
+      <p>Fish Audio 于 10 月 13 日正式将新一代语音生成模型 Drama 3 开放给 API 用户。Drama 3 支持用自然语言指挥语音表现、在句子中间切换情绪，并可按片段重新生成而非整段重录，大幅缩小配音/有声书/游戏团队的返工循环。同步推出 API 30 天 8 折优惠，企业从其他语音供应商迁移可享前三个月免费。官方表示平台用户已超 1500 万。 <a href="https://runtimewire.com/article/fish-audio-drama-3-wider-launch" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Mistral 发布开源语音合成模型 Voxtral TTS，重塑边缘端 TTS 格局</h4>
+      <p>法国 AI 公司 Mistral 发布开源 TTS 模型 Voxtral TTS，支持英语、法语、德语、西班牙语等九种语言，基于 Ministral 3B 构建，可部署于手表/手机/笔记本等边缘设备。不到 5 秒样本即可克隆定制音色，首字延迟（TTFA）约 90ms，实时因子 6x（10 秒音频约 1.6 秒生成），直接对标 ElevenLabs、Deepgram 与 OpenAI，补齐其企业级语音产品矩阵。 <a href="https://techweekly.co.za/2026/03/26/mistral-unveils-new-open-source-speech-generation-model/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>HeyGen Voice 登顶 Artificial Analysis TTS 盲测榜首</h4>
+      <p>据 10 月 13 日 AI 资讯，HeyGen Voice 在 Artificial Analysis 的 TTS 盲测中位列第一；API 在 10 月 31 日前五折，每百万字符 15 美元（原价 30 美元）。此外一份开源中文语音数据集发布，含 218 位说话人、8 万余条语音，标注性别/年龄/口音，字音准确率超 98%，可作 F5、Spark、IndexTTS2 的零样本参考。 <a href="https://agihunt.info/daily/latest" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-10-14') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
