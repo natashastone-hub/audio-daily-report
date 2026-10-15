@@ -1,0 +1,5 @@
+{
+  "papers": [],
+  "news": [],
+  "note": "当前时间 2026-10-15（周四）14:01 Asia/Shanghai，下午版检索窗口为最近 6 小时（09:30 - 14:00）。数据采集受限：本环境直连 export.arxiv.org / arxiv.org 已被网络策略完全阻断（web_fetch 全部 fetch failed），仅 web_search（imate-search + edge-browser 双通道）可用。经按分级兜底策略逐级尝试 arxiv API(max_results=50/25)、以及 arxiv.org 列表页、arxivdaily.com、huggingface papers 均无法访问。web_search 交叉验证显示：arxiv eess.AS/cs.SD 当前可索引的最新条目为 2610.17838（10-14 提交 Beyond Fixed Targets: On-Policy One-Shot Speaker Personalization for AR TTS）、2610.14826（10-10 Cross-Lingual TTS）、2610.14776（Audio8-TTS）等，均早于今日 09:30 窗口，且大部分已被早间 10-14 版收录；必搜重磅新闻关键词（OpenAI GPT-Live full-duplex voice model / OpenAI voice model release / Google Gemini voice / full-duplex speech model / 语音模型发布 / real-time voice AI）逐一执行后，命中均为历史发布（GPT-Live 2026-07-08、GPT-Live-1 API 及 Gemini 语音更新等，最新为 9 月），6 小时内无重大语音/Audio 产品发布。下午时段确实无可收录的新论文与窗口内新新闻，如实标注为空，不重复早间内容。"
+}
