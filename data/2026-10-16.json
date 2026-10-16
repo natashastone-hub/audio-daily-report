@@ -1,0 +1,56 @@
+{
+  "papers": [
+    {
+      "title": "Long-Prompt Zero-Shot TTS: Benchmarking Prosody Reproduction Beyond Voice Cloning",
+      "url": "https://arxiv.org/abs/2610.19774",
+      "date": "2026-10-14",
+      "authors": "Dekun Chen, Renjie Xu, Yingda Shen, Qinke Ni, Zhizheng Wu",
+      "abstract": "零样本文本转语音（TTS）领域长期聚焦于音色克隆，却忽视了韵律复现能力。本文提出 LP-TTS-Bench，一个专门评估长提示（long-prompt）零样本 TTS 韵律复现能力的基准，把评测目标从「像谁的声音」拓展到「能否复现参考音频的语调、节奏与情感表达」。系统对比了主流零样本 TTS 模型在长参考提示下的韵律迁移能力，为超越单纯声音克隆的下一代 TTS 提供了新的评测维度与标尺。",
+      "tags": ["TTS", "Zero-Shot", "Prosody", "Benchmark"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.19774"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2610.19774"}]
+    },
+    {
+      "title": "Quantizer Redundancy and Exact Index Recoding in a Frozen Neural Audio Codec",
+      "url": "https://arxiv.org/abs/2610.20471",
+      "date": "2026-10-15",
+      "authors": "Youssef Hemimy",
+      "abstract": "针对冻结（frozen）神经音频编解码器中量化器冗余问题开展理论分析，提出一种精确的索引重编码（exact index recoding）方法，在不重新训练编解码器的情况下消除量化冗余、提升码本利用效率。论文指出残差矢量量化、标量量化等主流设计的码本中普遍存在冗余，通过索引空间的重编码可实现无损或近似无损的比特率优化，为神经音频编码的压缩效率提供了新的优化路径。",
+      "tags": ["Neural Audio Codec", "Quantization", "Compression"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.20471"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2610.20471"}]
+    },
+    {
+      "title": "SPARO: HRTF Upsampling and Personalization via Neural Operators",
+      "url": "https://arxiv.org/abs/2610.20400",
+      "date": "2026-10-15",
+      "authors": "Meenakshi Krishnan, You Zhang, Ramani Duraiswami, C. Phillip Brown",
+      "abstract": "头部相关传递函数（HRTF）是个性化空间音频的核心，但高密度 HRTF 测量成本高昂。杜比实验室团队提出 SPARO，利用神经算子（neural operators）将稀疏测量的 HRTF 上采样到任意空间方向，并支持个性化重构。相较传统插值与深度学习方法，神经算子天然适配连续空间函数学习，在跨测量配置泛化与个性化精度上表现更优，为经济高效的空间音频渲染提供了新方案。",
+      "tags": ["Spatial Audio", "HRTF", "Neural Operator", "Personalization"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.20400"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2610.20400"}]
+    },
+    {
+      "title": "PhonoVoxtLM: Exploring Single-Codebook Phonological Tokens for Speech Understanding and Generation",
+      "url": "https://arxiv.org/abs/2610.18469",
+      "date": "2026-10-14",
+      "authors": "Mingrui Liang, Kentaro Onda, Shinji Watanabe",
+      "abstract": "探索用单一码本（single-codebook）的音系学 token 来统一语音理解与生成任务。主流语音语言模型多采用多码本声学 token，导致序列冗长、训练与推理开销大。PhonoVoxtLM 提出用紧凑的音系学离散 token 表示语音，在语音理解与语音生成两大任务上验证了单一码本表示的可行性与效率优势，为更紧凑、更高效的语音大模型提供了新范式。",
+      "tags": ["Speech LLM", "Phonological Tokens", "Single-Codebook", "Understanding & Generation"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.18469"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2610.18469"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "Fish Audio 新一代语音生成模型 Drama 3 开源发布并开放 API：自然语言导演、句中切换情绪",
+      "url": "https://runtimewire.com/article/fish-audio-drama-3-wider-launch",
+      "summary": "Fish Audio 于 10 月 13 日正式发布 Drama 3，一个开源 35B 参数 MoE 语音生成模型，并同步开放 API。Drama 3 支持用自然语言指挥语音表现、在句子中间切换情绪、按片段重新生成，大幅缩小配音/有声书/游戏团队的返工循环。据 Artificial Analysis 评测，Drama 3 在发音鲁棒性（pronunciation robustness）上得分 93.2%，首次超越 ElevenLabs 登顶。官方表示平台用户已超 1500 万，被视为开源语音合成追赶闭源商业方案的标志性事件。"
+    },
+    {
+      "title": "全双工语音模型成为 2026 实时智能大会焦点，机器之心发布 iRTE 2026 议程",
+      "url": "https://blog.csdn.net/2203_75871132/article/details/167812126",
+      "summary": "机器之心于 10 月 13 日发布 iRTE 2026 实时智能大会议程，10 月 23 日下午的「对话式 AI 技术专场」以「互动即智能」为主题，聚焦全双工语音模型（full-duplex speech model）的边听边说、实时打断与多轮交互能力。行业共识认为，全双工能力已成为 2026 年实时语音 Agent 的「桌面赌注」，OpenAI GPT-Live、Google Gemini 3.8 Live、阿里 Qoder Voice（Qwen-Audio-3.0-Realtime）及字节 Seeduplex 等产品竞相落地。"
+    }
+  ]
+}

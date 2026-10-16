@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-10-16</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-10-16</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年10月16日 (周五) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">4</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.19774" target="_blank">Long-Prompt Zero-Shot TTS: Benchmarking Prosody Reproduction Beyond Voice Cloning</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-14</span><span>👥 Dekun Chen, Renjie Xu, Yingda Shen, Qinke Ni, Zhizheng Wu</span></div>
+      <div class="abstract">零样本文本转语音（TTS）领域长期聚焦于音色克隆，却忽视了韵律复现能力。本文提出 LP-TTS-Bench，一个专门评估长提示（long-prompt）零样本 TTS 韵律复现能力的基准，把评测目标从「像谁的声音」拓展到「能否复现参考音频的语调、节奏与情感表达」。系统对比了主流零样本 TTS 模型在长参考提示下的韵律迁移能力，为超越单纯声音克隆的下一代 TTS 提供了新的评测维度与标尺。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Zero-Shot</span><span class="tag">Prosody</span><span class="tag">Benchmark</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.19774" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.19774" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.18469" target="_blank">PhonoVoxtLM: Exploring Single-Codebook Phonological Tokens for Speech Understanding and Generation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-14</span><span>👥 Mingrui Liang, Kentaro Onda, Shinji Watanabe</span></div>
+      <div class="abstract">探索用单一码本（single-codebook）的音系学 token 来统一语音理解与生成任务。主流语音语言模型多采用多码本声学 token，导致序列冗长、训练与推理开销大。PhonoVoxtLM 提出用紧凑的音系学离散 token 表示语音，在语音理解与语音生成两大任务上验证了单一码本表示的可行性与效率优势，为更紧凑、更高效的语音大模型提供了新范式。</div>
+      <div class="tags"><span class="tag">Speech LLM</span><span class="tag">Phonological Tokens</span><span class="tag">Single-Codebook</span><span class="tag">Understanding & Generation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.18469" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.18469" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.20471" target="_blank">Quantizer Redundancy and Exact Index Recoding in a Frozen Neural Audio Codec</a></h4>
+      <div class="meta"><span>📅 2026-10-15</span><span>👥 Youssef Hemimy</span></div>
+      <div class="abstract">针对冻结（frozen）神经音频编解码器中量化器冗余问题开展理论分析，提出一种精确的索引重编码（exact index recoding）方法，在不重新训练编解码器的情况下消除量化冗余、提升码本利用效率。论文指出残差矢量量化、标量量化等主流设计的码本中普遍存在冗余，通过索引空间的重编码可实现无损或近似无损的比特率优化，为神经音频编码的压缩效率提供了新的优化路径。</div>
+      <div class="tags"><span class="tag">Neural Audio Codec</span><span class="tag">Quantization</span><span class="tag">Compression</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.20471" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.20471" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.20400" target="_blank">SPARO: HRTF Upsampling and Personalization via Neural Operators</a></h4>
+      <div class="meta"><span>📅 2026-10-15</span><span>👥 Meenakshi Krishnan, You Zhang, Ramani Duraiswami, C. Phillip Brown</span></div>
+      <div class="abstract">头部相关传递函数（HRTF）是个性化空间音频的核心，但高密度 HRTF 测量成本高昂。杜比实验室团队提出 SPARO，利用神经算子（neural operators）将稀疏测量的 HRTF 上采样到任意空间方向，并支持个性化重构。相较传统插值与深度学习方法，神经算子天然适配连续空间函数学习，在跨测量配置泛化与个性化精度上表现更优，为经济高效的空间音频渲染提供了新方案。</div>
+      <div class="tags"><span class="tag">Spatial Audio</span><span class="tag">HRTF</span><span class="tag">Neural Operator</span><span class="tag">Personalization</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.20400" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.20400" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>Fish Audio 新一代语音生成模型 Drama 3 开源发布并开放 API：自然语言导演、句中切换情绪</h4>
+      <p>Fish Audio 于 10 月 13 日正式发布 Drama 3，一个开源 35B 参数 MoE 语音生成模型，并同步开放 API。Drama 3 支持用自然语言指挥语音表现、在句子中间切换情绪、按片段重新生成，大幅缩小配音/有声书/游戏团队的返工循环。据 Artificial Analysis 评测，Drama 3 在发音鲁棒性（pronunciation robustness）上得分 93.2%，首次超越 ElevenLabs 登顶。官方表示平台用户已超 1500 万，被视为开源语音合成追赶闭源商业方案的标志性事件。 <a href="https://runtimewire.com/article/fish-audio-drama-3-wider-launch" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>全双工语音模型成为 2026 实时智能大会焦点，机器之心发布 iRTE 2026 议程</h4>
+      <p>机器之心于 10 月 13 日发布 iRTE 2026 实时智能大会议程，10 月 23 日下午的「对话式 AI 技术专场」以「互动即智能」为主题，聚焦全双工语音模型（full-duplex speech model）的边听边说、实时打断与多轮交互能力。行业共识认为，全双工能力已成为 2026 年实时语音 Agent 的「桌面赌注」，OpenAI GPT-Live、Google Gemini 3.8 Live、阿里 Qoder Voice（Qwen-Audio-3.0-Realtime）及字节 Seeduplex 等产品竞相落地。 <a href="https://blog.csdn.net/2203_75871132/article/details/167812126" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-10-16') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
