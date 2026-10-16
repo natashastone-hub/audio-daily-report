@@ -1,0 +1,25 @@
+{
+  "papers": [
+    {
+      "title": "CoSTA: Compressed Speech Token Adaptation for Efficient Speech Dialogue Models",
+      "url": "https://arxiv.org/abs/2610.21143",
+      "date": "2026-10-15",
+      "authors": "Authors",
+      "abstract": "面向高效语音对话模型的压缩语音 Token 适配方法（Compressed Speech Token Adaptation）。针对语音对话模型中声学 token 序列冗长、推理开销大的问题，CoSTA 通过压缩语音 token 表示，在保持音质与语义的前提下显著降低序列长度与计算成本，为资源受限场景下的实时语音对话模型落地提供了更高效的 token 表示方案。",
+      "tags": ["Speech Dialogue Model", "Token Compression", "Efficiency"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.21143"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2610.21143"}]
+    },
+    {
+      "title": "VoxTurn: Answering Several Turn-Taking Questions in One Pass with One Model",
+      "url": "https://arxiv.org/abs/2610.21150",
+      "date": "2026-10-15",
+      "authors": "Yang Xiao",
+      "abstract": "级联式语音 Agent 在每一段静音期间都需要做多个轮次判别决策——是否该说话、是否该结束、是否被打断等。VoxTurn 提出用单一模型在一次前向传播中同时回答多个轮次（turn-taking）相关问题，避免多模型/多阶段的串行推理开销与错误累积，为低延迟、更一致的全双工语音交互轮次管理提供了一种简洁高效的统一方案。",
+      "tags": ["Turn-Taking", "Full-Duplex", "Voice Agent"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.21150"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2610.21150"}]
+    }
+  ],
+  "news": []
+}
