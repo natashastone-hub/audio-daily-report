@@ -1,0 +1,21 @@
+{
+  "papers": [
+    {
+      "title": "Revise-TTS: A Non-Masking Refinement Framework for Masked Diffusion Models in Text-to-Speech",
+      "url": "https://arxiv.org/abs/2610.19499",
+      "date": "2026-10-15",
+      "authors": "Wanli Sun, Dan Su, Anton Ragni",
+      "abstract": "针对掩码扩散模型（masked diffusion model）TTS 中「中间预测一经确定便无法修改、误差逐级累积」的问题，提出 Revise-TTS 框架。该方法用一种非掩码的细化（refinement）机制替代传统掩码扩散，允许在生成过程中对中间预测进行可自校正的修正，用分层残差量化（HBQ）替换 FSQ 并引入门控残差归一化（GRN），实现可自校正的零样本语音合成。实验表明其在零样本 TTS 上性能具备竞争力，且具备良好的可扩展性。",
+      "tags": ["TTS", "Masked Diffusion", "Zero-Shot", "Refinement"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.19499"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2610.19499"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "xAI（SpaceXSI）发布全双工语音模型 Grok Voice 3.0，在 Speech-to-Speech 评测登顶",
+      "url": "https://m.caijing.com.cn/article/202610/448124",
+      "summary": "马斯克旗下 xAI（现 SpaceXSI）于美东时间 10 月 14 日发布语音转语音（speech-to-speech）模型 Grok Voice 3.0，并同步上线 Voice Agent API，定价每分钟 0.08 美元（与上一代持平）。据 Artificial Analysis 评测，Grok Voice 3.0 在 Speech-to-Speech Index 上以 86.9 分首秀登顶，超越 OpenAI GPT-Live-1（83.2）与 Google Gemini 3.8 Live（82.6），较上一代 Grok Voice 2.0 提升 5.6 分，并具备约 0.81 秒的低延迟开口能力。官方称该模型已用于特斯拉车载语音交互及星链客服中心（每日约 2 万通多语言来电，约 70% 无需人工介入）。"
+    }
+  ]
+}
