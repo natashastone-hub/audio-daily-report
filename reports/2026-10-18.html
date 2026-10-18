@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-10-18</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-10-18</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年10月18日 (周日) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">7</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.21467" target="_blank">Qwen-Audio-Jev: A Unified Interface for Audio Decisions</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-16</span><span>👥 Ying Fang, Zhifu Gao, Qing Gu, Jiajun He, Kangqi Jing, Xiangang Li, Yu Pu, Wupeng Wang</span></div>
+      <div class="abstract">针对大型音频语言模型在高吞吐量音频决策场景下延迟过高的问题，推出 Qwen-Audio-Jev 模型。通过三种决策原语（Decision Primitives）实现统一的音频决策接口，将推理速度提升约 20 倍，在多项音频决策基准任务上表现优异，为大规模音频 Agent 落地提供了高效方案。</div>
+      <div class="tags"><span class="tag">Audio LLM</span><span class="tag">Audio Decisions</span><span class="tag">Audio Understanding</span><span class="tag">Alibaba</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.21467" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.21467" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.21773" target="_blank">CF-AVSS: A Coarse-to-Fine Audio-Visual Speech Separation Framework with Target-Speaker Refinement and Post-Fusion for Real-World AVSE Challenge</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-16</span><span>👥 Tencent Corporation; University of Electronic Science and Technology of China</span></div>
+      <div class="abstract">提出含目标说话人细化（Target-Speaker Refinement）与后融合（Post-Fusion）的 CF-AVSS 由粗到精音视频语音增强框架。利用视觉线索在混响、噪声干扰下恢复目标语音，在 ISCSLP 2026 现实世界 AVSE 挑战赛中获 Track 1 OVRL 并列第一、Track 2 OVRL 第二，且两条赛道 CER 均最低。</div>
+      <div class="tags"><span class="tag">Audio-Visual Enhancement</span><span class="tag">Speech Separation</span><span class="tag">ISCSLP 2026</span><span class="tag">Tencent</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.21773" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.21773" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.19499" target="_blank">Revise-TTS: A Non-Masking Refinement Framework for Masked Diffusion Models in Text-to-Speech</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-15</span><span>👥 Wanli Sun, Dan Su, Anton Ragni</span></div>
+      <div class="abstract">针对掩码扩散模型 TTS 中中间预测无法修改导致误差累积的问题，提出 Revise-TTS 框架。用 HBQ 替换 FSQ 并引入 GRN 模块，实现可自校正的零样本语音合成，在不牺牲推理速度的前提下提升生成质量，性能具备竞争力且可扩展。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Masked Diffusion</span><span class="tag">Zero-Shot</span><span class="tag">Speech Synthesis</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.19499" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.19499" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.21150" target="_blank">VoxTurn: Answering Several Turn-Taking Questions in One Pass with One Model</a></h4>
+      <div class="meta"><span>📅 2026-10-16</span><span>👥 Yang Xiao</span></div>
+      <div class="abstract">针对全双工对话系统中「何时说话、何时停下、是否被打断」等多个话轮转换（Turn-Taking）问题，提出 VoxTurn，用一个模型单次前向即可同时回答多个话轮转换问题，为实时语音对话 Agent 的说话权控制提供了高效统一方案。</div>
+      <div class="tags"><span class="tag">Turn-Taking</span><span class="tag">Full-Duplex</span><span class="tag">Speech Dialogue</span><span class="tag">Real-Time</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.21150" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.21150" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.20863" target="_blank">SNOAR: Self-training with Noise filtering, Observation adding, and Remixing for Speech Denoising Without Clean References</a></h4>
+      <div class="meta"><span>📅 2026-10-16</span><span>👥 Samuele Cornell, Matthew Maciejewski</span></div>
+      <div class="abstract">提出 SNOAR 自训练框架，用于无干净参考的语音降噪。通过差分噪声过滤（DNF）修正教师估计中的泄漏噪声，并将部分带噪观测加回以恢复被过度抑制的语音、衰减伪影。相比 RemixIT 更稳定，在 WHAM! 上达到全监督基线 97% 的 SI-SDR 提升，在真实 CHiME-3 上全面提升三级教师模型各指标。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Self-training</span><span class="tag">Noise Reduction</span><span class="tag">ICASSP 2027</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.20863" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.20863" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.20955" target="_blank">Probing Neural Audio Codecs with Speaker Traits and Speech Characteristics</a></h4>
+      <div class="meta"><span>📅 2026-10-16</span><span>👥 Jihwan Lee, Tiantian Feng, Minu Kim, Junhyeok Lee, Sean Foley, Thanathai Lertpetchpun, Najim Dehak, Dani Byrd, Shrikanth Narayanan</span></div>
+      <div class="abstract">系统研究 17 种多码本神经音频编解码器在七类说话人/语音特征（性别、年龄、口音、音质、情绪、语流、非语言音）上的编码层级分布。发现码本层级是特征相关的、并非均匀的由粗到细结构：性别最浅、语流次之，音质与年龄需更深层级，为特征相关的编解码器设计与评估提供了依据。</div>
+      <div class="tags"><span class="tag">Audio Codec</span><span class="tag">Speech Tokenizer</span><span class="tag">Speaker Traits</span><span class="tag">Speech LM</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.20955" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.20955" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.21763" target="_blank">Bias Mitigation in Audio-Enabled LLMs through Adversarial Training and Distillation Methods</a></h4>
+      <div class="meta"><span>📅 2026-10-17</span><span>👥 Adnan Al Ali, Jindřich Libovický, Anne Lauscher</span></div>
+      <div class="abstract">针对音频驱动的 LLM 中存在的偏见问题，提出通过对抗训练与知识蒸馏方法缓解偏差。系统评估多模态语音语言模型在不同人口统计属性上的表现差异，为构建更公平的语音 AI 系统提供了可复现的方法论。</div>
+      <div class="tags"><span class="tag">Audio LLM</span><span class="tag">Fairness</span><span class="tag">Bias Mitigation</span><span class="tag">Adversarial Training</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.21763" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.21763" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>xAI 发布 Grok Voice 3.0：全双工语音模型登顶，0.81 秒首响、解决约七成星链客服来电</h4>
+      <p>马斯克旗下 xAI 于 10 月 14 日发布端到端 speech-to-speech 语音模型 Grok Voice 3.0，宣称是「全球最聪明的语音转语音模型」。在 Artificial Analysis 语音转语音综合指数测试中以 86.9 分登顶，平均首次音频响应时间仅 0.81 秒，97.0% 全双工得分。已落地特斯拉与星链客服场景，能无需人工介入解决约 70% 的星链客服来电，通过语音代理 API 开放，定价每分钟 0.08 美元。 <a href="https://finance.sina.com.cn/stock/t/2026-10-15/doc-inivhawt8185902.shtml" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>微软 MAI-Voice-2.1 语音模型发布：每百万字符 22 美元</h4>
+      <p>微软于 10 月 1 日发布新一代语音模型 MAI-Voice-2.1，定价为每 100 万字符 22 美元，可通过 Microsoft Foundry 获取，对标 OpenAI、Google 在企业级 TTS 市场的竞争。 <a href="https://baike.baidu.com/item/MAI-Voice-2.1/69245482" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>GitHub 热榜：VoiceStudio 本地 646 语言语音克隆/配音，单日新增 3,024 星</h4>
+      <p>开源项目 debpalash/VoiceStudio 在本地支持 646 种语言的语音克隆、视频配音与转录，登上 GitHub 日榜（2026-10-16），累计 69,101 星、单日新增 3,024 星，反映出本地化语音工具需求的快速增长。 <a href="https://segmentfault.com/a/1190000048356271" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>iRTE2026 实时智能大会开幕在即：聚焦语音 Agent 与实时多模态</h4>
+      <p>声网主办的第十二届 RTE 大会升级为 iRTE2026 实时智能大会，将于 10 月 23-24 日举行。大会聚焦实时互动与生成式 AI 融合，OpenAI 与 Thinking Machines 均押注的实时交互模型成为关注焦点，重点探讨语音 Agent 在客服、硬件、具身智能、社交、教育等场景的落地。 <a href="http://finance.sina.com.cn/stock/t/2026-10-15/doc-inivhawt8185902.shtml" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-10-18') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
