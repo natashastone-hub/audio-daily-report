@@ -1,0 +1,46 @@
+{
+  "papers": [
+    {
+      "title": "SLAM-ASR Trained Linear Projectors: Zero-Shot Spoken Language Understanding Emergence and Limits",
+      "url": "https://arxiv.org/abs/2610.20844",
+      "date": "2026-10-16",
+      "authors": "National Yang Ming Chiao Tung University; TransPerfect",
+      "abstract": "探究 SLAM-ASR 框架下单语言 ASR 训练的线性投影器能否赋予 LLM 零样本语音语言理解（SLU）能力。实验发现该投影器在「是否」类问题上 IFR 达 49.8%，数字主题问题达 81.3%，但 SLU 信息的传递仍存在明显不足，揭示了语音理解能力从 ASR 训练中自发涌现的边界。",
+      "tags": ["Audio LLM", "SLU", "Zero-Shot", "Speech Understanding"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.20844"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2610.20844"}]
+    },
+    {
+      "title": "Frame-Wise Streaming for Efficient Learned Speech Compression (StreamLSC)",
+      "url": "https://arxiv.org/abs/2610.19959",
+      "date": "2026-10-16",
+      "authors": "Authors",
+      "abstract": "针对现有学习型语音压缩模型缺乏流式支持的问题，提出 StreamLSC 模型，通过三大核心组件与可流式熵量化器实现帧级流式处理，性能与离线模型相当，获得最优率失真（RD）结果与主观评估提升，为低延迟语音编码部署提供了可行方案。",
+      "tags": ["Speech Compression", "Streaming", "Neural Codec", "Low Latency"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.19959"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2610.19959"}]
+    },
+    {
+      "title": "An Initial Study of Physiological Markers for Deepfake Speech Detection",
+      "url": "https://arxiv.org/abs/2610.19152",
+      "date": "2026-10-15",
+      "authors": "Authors",
+      "abstract": "针对传统 Deepfake 语音检测器在未知场景下性能下降的问题，提出用 36 个分属呼吸、发声、时间类别的手工生理标记物进行检测，实验验证其为 Deepfake 语音检测提供了有用的判别线索，为跨域鲁棒的伪造语音检测提供了新思路。",
+      "tags": ["Deepfake Detection", "Speaker Verification", "Physiological Markers"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.19152"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2610.19152"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "IEGG 开源多语言端到端语音同传大模型 iegg-streaming-si-0.6B：首播延迟低至 1.28 秒",
+      "url": "https://km.woa.com/articles/show/670419",
+      "summary": "腾讯 IEGG 开源司内首个多语言端到端语音同传大模型 iegg-streaming-si-0.6B，针对多人在线游戏与多语言会议的实时翻译场景，摆脱传统级联方案（ASR→MT→TTS）的延迟累积与错误传递问题，首播延迟低至 1.28 秒，翻译质量接近闭源系统。"
+    },
+    {
+      "title": "蚂蚁 AI 安全实验室联合清华开源 Realtime-Venus 全双工 Agent，GitHub 热榜持续升温",
+      "url": "https://realtime-venus.github.io/",
+      "summary": "蚂蚁 AI 安全实验室与清华大学人机交互实验室联合推出并开源 Realtime-Venus——9B 参数的全双工实时多模态交互系统，支持「边听边说」、实时打断、音视频感知与后台异步任务，采用双 Loop 架构，作为 OpenAI Realtime API 的开源替代方案持续受到开发者关注。"
+    }
+  ]
+}
