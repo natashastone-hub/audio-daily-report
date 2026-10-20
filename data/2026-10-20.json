@@ -1,0 +1,42 @@
+{
+  "papers": [
+    {
+      "title": "Advancing Sentence-Level Dysarthric Audio-Visual Speech Recognition via Test-Time Adaptation",
+      "url": "https://arxiv.org/abs/2610.23117",
+      "date": "2026-10-20",
+      "authors": "Shiyao Wang, Hui Wang, Jiaming Zhou, Shiwan Zhao, Yong Qin",
+      "abstract": "面向构音障碍（dysarthric）患者的音视频语音识别，提出在测试时适配（Test-Time Adaptation, TTA）框架，在句级粒度上自适应地校准模型以适应不同说话人的病理性发音差异，显著提升低资源、跨说话人场景下的识别鲁棒性。已被 NCMMSC 2026 收录为海报展示。",
+      "tags": ["AV-ASR", "Dysarthric Speech", "Test-Time Adaptation", "NCMMSC 2026"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.23117"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2610.23117"}]
+    },
+    {
+      "title": "From Individual Songs to Music Corpora: Evaluating Explainable Harmonic Decision-Making on HookTheory",
+      "url": "https://arxiv.org/abs/2610.22416",
+      "date": "2026-10-20",
+      "authors": "Josef Pavlíček, Martin Pelikán, et al.",
+      "abstract": "探究自动旋律和声化的可解释决策模型如何从单曲扩展到大规模音乐语料库，在 HookTheory 数据集上评估可解释的 harmonic 决策模型，为音乐信息检索（MIR）中的和声生成提供系统化评估基准。收录于 ISMIR 2026。",
+      "tags": ["Music", "Harmonization", "MIR", "ISMIR 2026"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.22416"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2610.22416"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "Fish Audio 开源 35B 参数 TTS 模型 Drama 3：发音稳健性 93.2% 首超 ElevenLabs",
+      "url": "https://baijiahao.baidu.com/s?id=1879066319713150796&wfr=spider&for=pc",
+      "summary": "Fish Audio 发布并开源新一代可导演 TTS 模型 Drama 3，总参数 350 亿（35B）、单 token 激活约 30 亿，采用 MoE 混合专家架构，支持 83 种语言、单文本最多 16 个角色，可通过自然语言指令逐行调度语调、节奏与角色特征。在 Artificial Analysis 发音稳健性榜单以 93.2% 登顶，首次超越闭源标杆 ElevenLabs v4（91.7%），权重、技术报告、推理代码同步开源至 HuggingFace。"
+    },
+    {
+      "title": "xAI 发布 Grok Voice 3.0：语音转语音综合榜第一，延迟低于 1 秒",
+      "url": "https://baijiahao.baidu.com/s?id=1879071057961768944&wfr=spider&for=pc",
+      "summary": "xAI 于 10 月 14 日推出 Grok Voice 3.0，官方称其为全球智能水平最高的语音转语音模型，在 Artificial Analysis 独立测试的语音转语音综合榜单中排名第一（86 分），延迟低于 1 秒，已通过语音 API 开放（每分钟 0.08 美元），并已用于特斯拉车载语音交互与 SpaceX 星链客服中心。"
+    },
+    {
+      "title": "网易有道两大开源语音项目亮相 FlagOS 技术大会",
+      "url": "http://finance.sina.com.cn/roll/2026-10-15/doc-iniviekn1446244.shtml",
+      "summary": "10 月 17-18 日人工智能开放计算大会暨众智 FlagOS 技术大会上，网易有道携两大全量开源项目亮相：Confucius4 系列语音大模型与桌面级 AI Agent LobsterAI，推动开源语音模型与异构算力生态融合。"
+    }
+  ],
+  "note": "当日 arXiv API（export.arxiv.org）与 huggingface.co 在本环境网络层被阻断，无法直接拉取完整最新论文列表；已通过 web_search（edge-browser 后端）交叉验证补录当前周（2610.22xx-2610.23xx）可见的音频/语音论文，并收录 Fish Audio Drama 3、xAI Grok Voice 3.0 等近一周重磅产品动态。若存在遗漏的 24h 内论文，将在后续午间版补齐。"
+}
