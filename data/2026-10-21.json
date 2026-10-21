@@ -1,0 +1,16 @@
+{
+  "papers": [
+    {
+      "title": "TTS-Q: Speaker-Aware Post-Training Quantization of Text-to-Speech Diffusion Transformers",
+      "url": "https://arxiv.org/abs/2610.12474",
+      "date": "2026-10-20",
+      "authors": "Xiaoqin Feng, Yuqi Li, Weilun Feng, Yi-Cheng Lin, Kai Li, Xianglong Wang, Kuo Yang, Chuanguang Yang, Yingli Tian, Wei Li, Zhongwei Cheng, Lin Chen",
+      "abstract": "针对零样本 TTS 依赖十亿参数级扩散 Transformer、难以在端侧/实时场景部署的问题，开展了首个面向 TTS 扩散 Transformer 的 4-bit 权重量化与激活量化（W4A4）研究（覆盖 1B 与 3.5B 两个规模）。发现 4-bit 量化后语音可懂度接近全精度，但会持续侵蚀说话人音色（timbre）；进一步分析表明音色损失同时来自权重与激活量化，且仅激活量化部分具备可利用时间步结构。据此提出 TTS-Q，通过任务匹配校准样本筛选难量化条目，并对高阶前馈激活采用预算平衡的混合精度调度，在两个规模上均能在不损失可懂度的前提下显著恢复音色；同时给出部署级 calibrated-W4A4 的 GPU 峰值内存降低结果，为资源受限 TTS 部署提供实用参考。",
+      "tags": ["TTS", "Post-Training Quantization", "Diffusion Transformer", "W4A4", "On-Device"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.12474"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2610.12474"}]
+    }
+  ],
+  "news": [],
+  "note": "本环境网络层阻断 export.arxiv.org 与 huggingface.co 的直接访问，已通过 web_search（edge-browser 后端）交叉验证最近 24h（2026-10-20 ~ 10-21）可见的音频/语音论文。当日 arXiv API 无法拉取完整最新列表，仅确认到 TTS-Q（2610.12474，10-20 提交、10-21 有 source 更新）一篇确定在 24h 窗口内的论文；昨日（10-20）已收录的 2610.23117 与 2610.22416 不再重复录入。必搜重磅新闻关键词（OpenAI GPT-Live / voice model release / Google Gemini voice / full-duplex / 语音模型发布 / real-time voice AI）均命中旧闻（7-8 月 GPT-Live、Gemini Omni 等），24h 内无新的重量级语音/Audio 产品发布。若存在遗漏的 24h 内论文，将在后续时段补齐。"
+}
