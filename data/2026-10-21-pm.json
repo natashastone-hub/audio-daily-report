@@ -1,0 +1,5 @@
+{
+  "papers": [],
+  "news": [],
+  "note": "下午时段（2026-10-21 09:30~14:00）暂无新内容。arxiv export API 与 arxiv.org 直连在本环境被网络层阻断，经 web_search 交叉验证：eess.AS/cs.SD 最新提交停留在 2610.26884/2610.26881（约 10-19），6 小时窗口内无新增论文；必搜重磅关键词（OpenAI GPT-Live / OpenAI voice model release / Google Gemini voice / full-duplex speech model / 语音模型发布 / real-time voice AI）均命中旧闻（7 月 GPT-Live、10-14/15 Grok Voice 3.0、9 月 Gemini 3.8 TTS 等），无 6 小时内新产品发布。早间版已收录 TTS-Q（2610.12474），不重复录入。"
+}
