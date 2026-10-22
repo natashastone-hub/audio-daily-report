@@ -1,0 +1,30 @@
+{
+  "papers": [
+    {
+      "title": "RVCBench: Benchmarking the Robustness of Voice Cloning Across Modern Audio Generation Models",
+      "url": "https://finance.sina.cn/2026-10-21/detail-inivziwc6040286.d.html",
+      "date": "2026-10-21",
+      "authors": "Ruinan Jin, Xinting Liao, Hanlin Yu, et al. (UBC & Vector Institute)",
+      "abstract": "由英属哥伦比亚大学（UBC）与 Vector Institute 团队提出的 RVCBench，将语音克隆（Voice Cloning）的鲁棒性系统拆解为输入、生成、输出和音频扰动四个环节，通过 18 项评测、10 类任务，系统检验 18 个代表性开源语音克隆模型。覆盖 RVC-LongContext（长参考音频/分钟级长文本）、RVC-Expression（情感与表达风格传递）、RVC-Multilingual（英/中/法及跨语言克隆）等维度，发现多数开源模型在噪声、对抗扰动与压缩下鲁棒性不足（如 POP 可使 FishSpeech 相似度 SIM 降至 0.01，Qwen3-TTS 相对最稳）。基准已升级为可直接 pip 安装的通用语音克隆评测工具包，工作被 NeurIPS 2026 接收。",
+      "tags": ["Voice Cloning", "Robustness Benchmark", "NeurIPS 2026", "Speech Security"],
+      "highlight": true,
+      "links": [
+        {"label": "报道原文", "url": "https://finance.sina.cn/2026-10-21/detail-inivziwc6040286.d.html"},
+        {"label": "百度学术", "url": "http://xueshu.baidu.com/s?wd=paperuri:(15380v70aq0m0mh0re7p0g50wm626285)"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "Mistral AI 发布 Voxtral 3 语音智能体模型家族：转写 + TTS + LiveKit SDK 全栈",
+      "url": "https://news.aibase.com/zh/news/31779",
+      "summary": "法国 Mistral AI 于 10 月 20/21 日推出面向实时语音智能体的 Voxtral 3 系列：Voxtral Small/Mini Transcribe 3、实时转录模型 Voxtral Mini Transcribe Realtime 3，以及文字转语音 Voxtral Speech 3（Mini TTS 3），并配套基于 LiveKit 的语音 Agent SDK。通过统一流式管线同步完成语音识别、逻辑推理、工具调用与语音输出；转录支持 50+ 语言，TTS 支持 35+ 语言、50+ 方言，支持说话人分离、声音克隆、函数调用，可部署于自有基础设施或欧盟托管 API（转录起步价 0.0035 美元/分钟）。"
+    },
+    {
+      "title": "科大讯飞 1024 开发者节今日启幕，发布星火 X2.6 与「云+端」协同方案",
+      "url": "http://ah.people.com.cn/n2/2026/1014/c227767-41721838.html",
+      "summary": "2026 科大讯飞全球 1024 开发者节于 10 月 22 日启幕（北京主论坛 + 合肥科博展双会场），主论坛将发布讯飞星火 X2.6 及全新「云+端」协同方案，该方案基于全国产算力，是语音与大模型「端云协同」落地的又一重要动态。"
+    }
+  ],
+  "note": "本环境网络层阻断 export.arxiv.org 与 huggingface.co 的直接访问，无法拉取完整最新论文列表；已通过 web_search（edge-browser 后端）交叉验证最近 24h（2026-10-21 09:30 ~ 10-22 09:30）可见的音频/语音内容。必搜重磅新闻关键词（OpenAI GPT-Live / voice model release / Google Gemini voice / full-duplex / 语音模型发布 / real-time voice AI）均命中 7-8 月旧闻，24h 内无 OpenAI/Gemini 级别新语音模型发布。已确认 24h 窗口内的重点：RVCBench（NeurIPS 2026 语音克隆鲁棒性基准，10-21 晚间报道）、Mistral Voxtral 3（10-20/21 发布）、科大讯飞 1024 开发者节（今日启幕）。若存在遗漏的 24h 内 arXiv 论文，将在后续午间版补齐。"
+}

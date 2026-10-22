@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-10-22</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-10-22</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年10月22日 (周四) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">1</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://finance.sina.cn/2026-10-21/detail-inivziwc6040286.d.html" target="_blank">RVCBench: Benchmarking the Robustness of Voice Cloning Across Modern Audio Generation Models</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-21</span><span>👥 Ruinan Jin, Xinting Liao, Hanlin Yu, et al. (UBC & Vector Institute)</span></div>
+      <div class="abstract">由英属哥伦比亚大学（UBC）与 Vector Institute 团队提出的 RVCBench，将语音克隆（Voice Cloning）的鲁棒性系统拆解为输入、生成、输出和音频扰动四个环节，通过 18 项评测、10 类任务，系统检验 18 个代表性开源语音克隆模型。覆盖 RVC-LongContext（长参考音频/分钟级长文本）、RVC-Expression（情感与表达风格传递）、RVC-Multilingual（英/中/法及跨语言克隆）等维度，发现多数开源模型在噪声、对抗扰动与压缩下鲁棒性不足（如 POP 可使 FishSpeech 相似度 SIM 降至 0.01，Qwen3-TTS 相对最稳）。基准已升级为可直接 pip 安装的通用语音克隆评测工具包，工作被 NeurIPS 2026 接收。</div>
+      <div class="tags"><span class="tag">Voice Cloning</span><span class="tag">Robustness Benchmark</span><span class="tag">NeurIPS 2026</span><span class="tag">Speech Security</span></div>
+      <div class="links"><a href="https://finance.sina.cn/2026-10-21/detail-inivziwc6040286.d.html" target="_blank">🔗 报道原文</a> <a href="http://xueshu.baidu.com/s?wd=paperuri:(15380v70aq0m0mh0re7p0g50wm626285)" target="_blank">🔗 百度学术</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>Mistral AI 发布 Voxtral 3 语音智能体模型家族：转写 + TTS + LiveKit SDK 全栈</h4>
+      <p>法国 Mistral AI 于 10 月 20/21 日推出面向实时语音智能体的 Voxtral 3 系列：Voxtral Small/Mini Transcribe 3、实时转录模型 Voxtral Mini Transcribe Realtime 3，以及文字转语音 Voxtral Speech 3（Mini TTS 3），并配套基于 LiveKit 的语音 Agent SDK。通过统一流式管线同步完成语音识别、逻辑推理、工具调用与语音输出；转录支持 50+ 语言，TTS 支持 35+ 语言、50+ 方言，支持说话人分离、声音克隆、函数调用，可部署于自有基础设施或欧盟托管 API（转录起步价 0.0035 美元/分钟）。 <a href="https://news.aibase.com/zh/news/31779" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>科大讯飞 1024 开发者节今日启幕，发布星火 X2.6 与「云+端」协同方案</h4>
+      <p>2026 科大讯飞全球 1024 开发者节于 10 月 22 日启幕（北京主论坛 + 合肥科博展双会场），主论坛将发布讯飞星火 X2.6 及全新「云+端」协同方案，该方案基于全国产算力，是语音与大模型「端云协同」落地的又一重要动态。 <a href="http://ah.people.com.cn/n2/2026/1014/c227767-41721838.html" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-10-22') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
