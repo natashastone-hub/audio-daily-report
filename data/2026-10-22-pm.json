@@ -1,0 +1,11 @@
+{
+  "papers": [],
+  "news": [
+    {
+      "title": "科大讯飞 1024 开发者节主论坛：星火 X2.6 正式发布，同步升级 Spark-Audio 语音基座",
+      "url": "https://baijiahao.baidu.com/s?id=1879723359706805881&wfr=spider&for=pc",
+      "summary": "今日下午科大讯飞 1024 开发者节主论坛正式发布讯飞星火 X2.6（全国产算力 + 端云协同），并同步升级全国产语音基座大模型 Spark-Audio。语音侧聚焦同声传译、实时语音交互与复杂音频理解三大能力的升级，补齐「声音与真实环境交互」这一环，推动语音 AI 从「聊天工具」走向操作系统级的产业底座。此次发布是继 9 月 16 日 Spark-Audio-1.0-Preview 之后的完整升级版本。"
+    }
+  ],
+  "note": "本环境网络层阻断 export.arxiv.org 与 huggingface.co 的直接访问。经 web_search 交叉验证：arxiv eess.AS/cs.SD 最新索引仍停留在 2026-10-21（如 arXiv:2610.28263 等），10-22 批次论文尚未出现在可搜索索引中，故下午时段暂无 6 小时内新 arXiv 论文。必搜重磅新闻关键词（OpenAI GPT-Live / voice model release / Google Gemini voice / full-duplex / 语音模型发布 / real-time voice AI）均命中 7-8 月旧闻，6 小时内无 OpenAI/Gemini 级别新语音模型发布。6 小时窗口内的唯一增量动态为科大讯飞 1024 开发者节下午正式发布星火 X2.6 + Spark-Audio 语音基座升级。"
+}
