@@ -1,0 +1,99 @@
+{
+  "papers": [
+    {
+      "title": "Qwen-Audio-3.1-ASR Technical Report",
+      "url": "https://arxiv.org/abs/2610.28711",
+      "date": "2026-10-21",
+      "authors": "Chuanmeng Bian, Daren Chen, Peixin Chen, et al. (Qwen Team / Alibaba)",
+      "abstract": "发布 Qwen-Audio-3.1-ASR 音频语言模型家族，在 Qwen-Audio-3.0-ASR 基础上显著提升语音识别精度，并扩展说话人分离转写（speaker-diarized ASR）与通用音频理解能力。模型保留 30 种语言与 16 种中文方言支持，具备指令控制的历史上下文条件化、层级热词定制与原生转录润色；说话人分离转写输出带说话人标签、时间戳与识别文本，可跨轮次保持说话人一致并处理重叠语音。通过 On-Policy Distillation 与异步强化学习的训练管线，家族提供异步文件转写、低延迟流式、交互式语音输入、非流式识别等多变体，覆盖多语种/方言 ASR、说话人分离与通用音频理解评测。",
+      "tags": ["ASR", "Speaker Diarization", "Audio-Language Model", "Multilingual", "RL"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.28711"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.28711"}
+      ]
+    },
+    {
+      "title": "Closed-Loop Dual-Reference Guidance for Accent Control in Cross-Lingual Voice Cloning",
+      "url": "https://arxiv.org/abs/2610.29351",
+      "date": "2026-10-21",
+      "authors": "Yuanzhong Zheng, Wei Huang, Ming Ma, Kailun Jin, Youhai Jiang",
+      "abstract": "零样本跨语言声音克隆常把参考说话人的口音带入目标语言。作者提出闭环双参考引导（closed-loop dual-reference guidance），将原始参考与一个由语音转换（VC）构建的可复用母语锚点配对。参考分别初始化独立的语言模型状态来引导共享声学轨迹，每个完成的 patch 再更新两个状态，使其生成历史与已发出语音对齐。锚点构建每说话人仅一次，在线合成使用冻结 TTS 模型、无需逐句 VC。在 20 名留出法语说话人上，固定设置 λ*=0.33 相比直接克隆将残留法语 LID 质量降低 73%，ECAPA 相似度代价仅 0.042；达到最低平均 WER（0.009）与最高平均 GOP（4.750），在线 RTF 比级联方案低约 26%。",
+      "tags": ["Voice Cloning", "Cross-Lingual", "Accent Control", "TTS"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.29351"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.29351"}
+      ]
+    },
+    {
+      "title": "XingChen-UniFE: A Unified Generative Speech Front-End via Complementary Acoustic-Semantic Modeling",
+      "url": "https://arxiv.org/abs/2610.29164",
+      "date": "2026-10-21",
+      "authors": "Kelan Kuang, Qihan Hu, Jian Kang, Jie Li, Yongxiang Li, Yi Liu",
+      "abstract": "提出 XingChen-UniFE，一个面向通用语音恢复（GSR）与目标说话人提取（TSE）的统一大型音频语言模型（LALM）。模型通过双流编码器利用互补的语义与声学表示：自监督学习模型提供层次化语义特征，可学习声学分支从复杂频谱中捕获细粒度结构，双向交叉注意力模块促进两表示间信息交互，融合表示条件化 LALM 进行带任务与说话人信息的离散语音 token 生成。实验在 GSR 与 TSE 上表现强劲，并对未见退化条件具备鲁棒泛化。",
+      "tags": ["Speech Restoration", "Target Speaker Extraction", "Audio-Language Model"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.29164"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.29164"}
+      ]
+    },
+    {
+      "title": "Where Does Timbre Hide? Localizing Speaker Information in Speech Signals",
+      "url": "https://arxiv.org/abs/2610.29150",
+      "date": "2026-10-21",
+      "authors": "Yiquan Zhou, Yixuan Wang, Xiaozhe Qi, Xin Gao, Shihao Li",
+      "abstract": "音色相似度是生成式语音系统（含语音转换、说话人克隆 TTS、零样本语音模型）的关键评估目标。作者以说话人身份为可测代理，系统探测频率带、相位/幅度结构、WORLD 源/滤波器分解、清/浊音区、SSL 层、EnCodec/HuBERT token，并在中英日多语言语音/歌声数据上开展 45 人主观听测。发现：1–8 kHz 幅度与声道谱包络结构主导感知，8 kHz 以上频带仍具机器可判别性，浅层 SSL 层暴露紧凑说话人信息，token 泄漏取决于分词器/层选择。为生成系统应在何处条件化或转换说话人信息、以及内容/编解码/token 流水线应在何处审查残留说话人泄漏提供了明确指引。",
+      "tags": ["Timbre", "Speaker Information", "Voice Cloning", "Speech Representation"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.29150"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.29150"}
+      ]
+    },
+    {
+      "title": "Character-Level Prosody Control for Mandarin Speech Synthesis: An Architecture-Preserving Approach",
+      "url": "https://arxiv.org/abs/2610.29123",
+      "date": "2026-10-22",
+      "authors": "Diankun An, Lu Ma, Yongliang Wang, Zhewen Su, Xin Tian",
+      "abstract": "面向普通话语音合成的字符级韵律控制问题，提出一个保持架构（architecture-preserving）的方法，在不改变主干 TTS 架构的前提下实现细粒度韵律调控，从而提升普通话语音合成中重音、语调和节奏的可控性与自然度。",
+      "tags": ["TTS", "Prosody Control", "Mandarin", "Speech Synthesis"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.29123"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.29123"}
+      ]
+    },
+    {
+      "title": "StyleStream 2.0: Streaming Voice Style Conversion with Unified Text-Conditioned Flow Matching",
+      "url": "https://arxiv.org/abs/2610.28540",
+      "date": "2026-10-21",
+      "authors": "Authors",
+      "abstract": "面向流式语音风格转换，训练少步像素 MeanFlow 模型并借鉴 Self Forcing 思想做自回归反馈微调，提升流式推理鲁棒性，将端到端延迟降至消费级 GPU 上约 520ms（较 StyleStream 1.0 提速 2 倍），同时保持转换质量。移除 mel 谱上下文、改由紧凑风格嵌入路由目标风格信息，并训练统一文本条件流匹配模型，同时支持文本语音设计（自然语言→声音风格）与指令式语音编辑（改目标属性保留其余）。在 VSC、语音设计与语音编辑上取得最强目标风格保真度。",
+      "tags": ["Voice Conversion", "Streaming", "Flow Matching", "Voice Design"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.28540"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "ElevenLabs 发布实时语音 Agent 系列 Eleven Realtime（v1 Mini / v1 Max），0.57 秒开口、支持 90+ 语言",
+      "url": "https://baijiahao.baidu.com/s?id=1879720961454031371&wfr=spider&for=pc",
+      "summary": "10 月 20 日，英伟达投资的 AI 语音独角兽 ElevenLabs 发布一体化语音到语音模型系列 Eleven Realtime：v1 Mini 主打低成本自然对话（AI 助手/在线教师/互动角色），v1 Max 面向客服、多步骤工作流任务（更强推理与工具调用）。两款均支持 90+ 语言、可调用 1.7 万个音色；官方数据显示 Max 在 Big Bench Audio 达 98.8% 口语推理准确率、语音响应仅 0.57 秒，并通过 ElevenAgents 平台与兼容 OpenAI 规范的 Realtime API 提供。是实时语音 Agent 赛道又一重磅落地。"
+    },
+    {
+      "title": "ElevenLabs 推出 Eleven Realtime Translation：实时通话语音翻译",
+      "url": "https://yunyi.99.com/web/eduction-topic/detail?id=654&labelId=6",
+      "summary": "ElevenLabs 跟进推出 Eleven Realtime Translation，一款面向实时通话场景的语音翻译模型，让不同语言的通话双方「直接听到对方用自己语言说话」，指向跨语言语音到语音同声传译的落地形态。"
+    },
+    {
+      "title": "iRTE 2026 实时智能大会今日北京启幕，设「音频 AI」「对话式 AI」专场",
+      "url": "https://blog.csdn.net/agora_cloud/article/details/167922122",
+      "summary": "10 月 23-24 日，声网（Agora）将第十二届 RTE 大会升级为「iRTE 2026 实时智能大会」，在北京悠唐皇冠假日酒店举行。设置 15+ 论坛、100+ 场演讲，聚焦语音 AI、Voice Agent、多模态模型与实时互动融合；「音频 AI 技术专场」围绕复杂声学环境下的语音识别与处理，邀请小米、清华、港中深、上海 AI Lab、声网、Qwen、蚂蚁百灵等一线研究者探讨真实世界实时语音工程。"
+    }
+  ],
+  "note": "本环境网络层阻断 export.arxiv.org / arxiv.org 的直接访问，无法通过 arxiv API 拉取完整列表；已通过 web_search（edge-browser 后端）交叉验证最近 24h（2026-10-22 09:30 ~ 10-23 09:30）可视的 cs.SD/eess.AS 论文，综合 arxiv 官方 recent+pstweek 列表页与 arxiv-troller、audio-ml-papers 等聚合源获取完整标题与摘要。必搜重磅新闻关键词（OpenAI GPT-Live / voice model release / Google Gemini voice / full-duplex / 语音模型发布 / real-time voice AI）：OpenAI GPT-Live（7 月）、Gemini 3.x Live（6-9 月）等均为旧闻，24h 内无 OpenAI/Gemini 级新的纯语音大模型发布；真正的 24h 增量头条是 ElevenLabs Eleven Realtime 系列（10/20 发布、10/22 广泛报道）。"
+}
