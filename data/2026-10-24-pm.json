@@ -1,0 +1,5 @@
+{
+  "papers": [],
+  "news": [],
+  "note": "本环境网络层阻断 export.arxiv.org / arxiv.org / huggingface.co 的直接访问，已通过 web_search（edge-browser 后端）交叉验证。arxiv eess.AS/cs.SD 最新索引仍停留在 2026-10-22 批次（arXiv:2610.31xxx，如 2610.31596『Signed Wasserstein distance for room impulse response comparison』等），与早上版本已收录内容重叠，下午 6 小时窗口（10-24 09:30 ~ 14:00）内无可检索到的新 arXiv 论文，亦无新音频生成/语音相关的 HuggingFace Daily Papers。必搜重磅新闻关键词逐一执行：OpenAI GPT-Live（7-8 月发布）、OpenAI voice model release、Google Gemini voice、full-duplex speech model、语音模型发布、real-time voice AI 均命中旧闻（7-9 月），6 小时内无 OpenAI/Gemini 级别新语音大模型发布。综上，下午时段暂无新内容。"
+}
