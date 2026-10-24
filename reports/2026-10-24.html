@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-10-24</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-10-24</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年10月24日 (周六) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">6</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.30470" target="_blank">HeyGen Voice: Scene-Aware Voice Cloning for Talking Videos</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-22</span><span>👥 Pavel Andreev, Andrei Gusev, Adithya Narayan, Yi Ren, Ivan Somov, Zijian Li, Sergey Demyanov, Viktor Goriachko, Alan Tan, Nik Nolte, Sam Prokopchuk, Andy Pan, David Chou, Kirill Leonov, Penghan Wang, Jiewei Yuan, Zhibin Hong, Rong Yan</span></div>
+      <div class="abstract">HeyGen 团队发布场景感知的声音克隆技术报告（30 页），面向数字人/说话视频场景，将声音克隆与画面场景信息结合，使克隆出的语音更具场景一致性与表现力，覆盖企业视频本地化、虚拟形象口播等商业应用。这是数字人头部公司首次系统公开其语音克隆技术细节，具有较强产业参考价值。</div>
+      <div class="tags"><span class="tag">Voice Cloning</span><span class="tag">Talking Video</span><span class="tag">Scene-Aware</span><span class="tag">Industry</span><span class="tag">TTS</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.30470" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.30470" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.30477" target="_blank">EmoFI-TTS: Face-Conditioned Expressive Voice Synthesis with Intensity Modulation</a></h4>
+      <div class="meta"><span>📅 2026-10-21</span><span>👥 Yejin Jeon, Luel Hagos Beyene, Marie Maltais, Hyounghun Kim, David Ifeoluwa Adelani</span></div>
+      <div class="abstract">提出 EmoFI-TTS，一个以人脸图像为条件的表现力语音合成框架：从单张人脸推导情绪类别与强度，同时从参考音频提取说话人特征；多模态表示融合后条件化预训练语音合成器，跨说话人训练促进情感与声学身份解耦。强度条件化精修模块增强 mel 谱，通过强度嵌入插值实现无需额外训练的连续强度控制。在说话人不重叠的 MEAD 评测上，客观/主观情绪强度准确率分别达 64.4%/75.2%，同时保持低词错率与高自然度。</div>
+      <div class="tags"><span class="tag">Expressive TTS</span><span class="tag">Face-Conditioned</span><span class="tag">Emotion Intensity</span><span class="tag">Speech Synthesis</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.30477" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.30477" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.30385" target="_blank">Text-Only LLM Correctors Break Correct Transcripts: A Repair-Damage Analysis of Audio Grounding in ASR Error Correction</a></h4>
+      <div class="meta"><span>📅 2026-10-22</span><span>👥 Vasiliy Kudryavtsev, Kirill Borodin, Nikita Vasiliev, Mikhail Gorodnichev, Grach Mkrtchian</span></div>
+      <div class="abstract">研究 ASR 纠错中仅文本 LLM 校正器的问题：当校正器缺乏音频接地（audio grounding）时，会把本已正确的转写文本改错。作者系统分析「修复-损坏」权衡，指出纯文本 LLM 后处理在缺乏原始音频信息时的风险，为 ASR 纠错 + LLM 融合的设计提供警示与实证依据（投 ICASSP 2027）。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Error Correction</span><span class="tag">LLM</span><span class="tag">Audio Grounding</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.30385" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.30385" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.20181" target="_blank">Noise-Aware Lombard Speech Synthesis via Flow-GRPO for Intelligibility Optimization</a></h4>
+      <div class="meta"><span>📅 2026-10-16</span><span>👥 Authors</span></div>
+      <div class="abstract">提出噪声感知的 Lombard 语音合成（NIL-TTS），基于 Flow-GRPO 后训练针对可懂度优化：模型能根据变化的噪声环境自主调整输出，重现人类 Lombard 效应的关键相关特征，提升嘈杂环境下的语音可懂度。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Lombard Speech</span><span class="tag">Noise-Aware</span><span class="tag">RL</span><span class="tag">Intelligibility</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.20181" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.20181" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.30783" target="_blank">MixJudge: Learning a Language-Queryable Critic for Vocal Mixing</a></h4>
+      <div class="meta"><span>📅 2026-10-22</span><span>👥 Kuan-Hsun Ho, Yuan-Chiao Cheng, Yen-Tung Yeh, Yi-Hsuan Yang</span></div>
+      <div class="abstract">提出 MixJudge，一个可语言查询的声乐混音评价器（critic），让模型能够按自然语言指令评估/评判人声混音质量，为音乐制作中人声混音的自动化评估与可解释反馈提供新路径（投 ICASSP 2027）。</div>
+      <div class="tags"><span class="tag">Audio</span><span class="tag">Vocal Mixing</span><span class="tag">Audio-Language Model</span><span class="tag">Music</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.30783" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.30783" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.30860" target="_blank">Synthetic-to-Real Code-Switched ASR: A Spontaneous Nepali-English Podcast Benchmark</a></h4>
+      <div class="meta"><span>📅 2026-10-22</span><span>👥 Firoj Paudel</span></div>
+      <div class="abstract">面向尼泊尔语-英语自发语码切换（code-switching）的 ASR 基准：从合成数据到真实播客的迁移评测，提供开源代码与数据集，填补低资源语码切换语音识别的评测空白。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Code-Switching</span><span class="tag">Low-Resource</span><span class="tag">Benchmark</span><span class="tag">Multilingual</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.30860" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.30860" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>科大讯飞发布星火语音基座大模型 SparkAudio 1.0（1024 开发者节）</h4>
+      <p>10 月 22 日，科大讯飞在 2026 全球 1024 开发者节上首发星火语音基座大模型 SparkAudio 1.0，将机器翻译、语音识别、语义理解融合进同一模型，宣称在实时说话人分离、环境理解、音频理解、情绪识别等方面表现卓越；同步发布星火具身多模交互技术，推动语音 AI 从屏幕走向物理世界（机器人、智能硬件）。 <a href="https://news.17173.com/content/10222026/160508720.shtml" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>MiniMax 将发布首个端到端实时语音对话 API（11 月）</h4>
+      <p>AI 独角兽 MiniMax 被曝将在 11 月发布首个端到端实时语音对话 API 产品，对标 GPT-4o 级实时多模态能力，提供更低延迟、更自然沉浸的实时语音对话，强化端到端实时多模态处理，补齐国产实时语音 Agent 能力版图。 <a href="https://www.tmtpost.com/7311267.html" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-10-24') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

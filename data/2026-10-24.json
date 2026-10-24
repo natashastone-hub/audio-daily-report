@@ -1,0 +1,95 @@
+{
+  "papers": [
+    {
+      "title": "HeyGen Voice: Scene-Aware Voice Cloning for Talking Videos",
+      "url": "https://arxiv.org/abs/2610.30470",
+      "date": "2026-10-22",
+      "authors": "Pavel Andreev, Andrei Gusev, Adithya Narayan, Yi Ren, Ivan Somov, Zijian Li, Sergey Demyanov, Viktor Goriachko, Alan Tan, Nik Nolte, Sam Prokopchuk, Andy Pan, David Chou, Kirill Leonov, Penghan Wang, Jiewei Yuan, Zhibin Hong, Rong Yan",
+      "abstract": "HeyGen 团队发布场景感知的声音克隆技术报告（30 页），面向数字人/说话视频场景，将声音克隆与画面场景信息结合，使克隆出的语音更具场景一致性与表现力，覆盖企业视频本地化、虚拟形象口播等商业应用。这是数字人头部公司首次系统公开其语音克隆技术细节，具有较强产业参考价值。",
+      "tags": ["Voice Cloning", "Talking Video", "Scene-Aware", "Industry", "TTS"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.30470"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.30470"}
+      ]
+    },
+    {
+      "title": "EmoFI-TTS: Face-Conditioned Expressive Voice Synthesis with Intensity Modulation",
+      "url": "https://arxiv.org/abs/2610.30477",
+      "date": "2026-10-21",
+      "authors": "Yejin Jeon, Luel Hagos Beyene, Marie Maltais, Hyounghun Kim, David Ifeoluwa Adelani",
+      "abstract": "提出 EmoFI-TTS，一个以人脸图像为条件的表现力语音合成框架：从单张人脸推导情绪类别与强度，同时从参考音频提取说话人特征；多模态表示融合后条件化预训练语音合成器，跨说话人训练促进情感与声学身份解耦。强度条件化精修模块增强 mel 谱，通过强度嵌入插值实现无需额外训练的连续强度控制。在说话人不重叠的 MEAD 评测上，客观/主观情绪强度准确率分别达 64.4%/75.2%，同时保持低词错率与高自然度。",
+      "tags": ["Expressive TTS", "Face-Conditioned", "Emotion Intensity", "Speech Synthesis"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.30477"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.30477"}
+      ]
+    },
+    {
+      "title": "Text-Only LLM Correctors Break Correct Transcripts: A Repair-Damage Analysis of Audio Grounding in ASR Error Correction",
+      "url": "https://arxiv.org/abs/2610.30385",
+      "date": "2026-10-22",
+      "authors": "Vasiliy Kudryavtsev, Kirill Borodin, Nikita Vasiliev, Mikhail Gorodnichev, Grach Mkrtchian",
+      "abstract": "研究 ASR 纠错中仅文本 LLM 校正器的问题：当校正器缺乏音频接地（audio grounding）时，会把本已正确的转写文本改错。作者系统分析「修复-损坏」权衡，指出纯文本 LLM 后处理在缺乏原始音频信息时的风险，为 ASR 纠错 + LLM 融合的设计提供警示与实证依据（投 ICASSP 2027）。",
+      "tags": ["ASR", "Error Correction", "LLM", "Audio Grounding"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.30385"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.30385"}
+      ]
+    },
+    {
+      "title": "Noise-Aware Lombard Speech Synthesis via Flow-GRPO for Intelligibility Optimization",
+      "url": "https://arxiv.org/abs/2610.20181",
+      "date": "2026-10-16",
+      "authors": "Authors",
+      "abstract": "提出噪声感知的 Lombard 语音合成（NIL-TTS），基于 Flow-GRPO 后训练针对可懂度优化：模型能根据变化的噪声环境自主调整输出，重现人类 Lombard 效应的关键相关特征，提升嘈杂环境下的语音可懂度。",
+      "tags": ["TTS", "Lombard Speech", "Noise-Aware", "RL", "Intelligibility"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.20181"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.20181"}
+      ]
+    },
+    {
+      "title": "MixJudge: Learning a Language-Queryable Critic for Vocal Mixing",
+      "url": "https://arxiv.org/abs/2610.30783",
+      "date": "2026-10-22",
+      "authors": "Kuan-Hsun Ho, Yuan-Chiao Cheng, Yen-Tung Yeh, Yi-Hsuan Yang",
+      "abstract": "提出 MixJudge，一个可语言查询的声乐混音评价器（critic），让模型能够按自然语言指令评估/评判人声混音质量，为音乐制作中人声混音的自动化评估与可解释反馈提供新路径（投 ICASSP 2027）。",
+      "tags": ["Audio", "Vocal Mixing", "Audio-Language Model", "Music"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.30783"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.30783"}
+      ]
+    },
+    {
+      "title": "Synthetic-to-Real Code-Switched ASR: A Spontaneous Nepali-English Podcast Benchmark",
+      "url": "https://arxiv.org/abs/2610.30860",
+      "date": "2026-10-22",
+      "authors": "Firoj Paudel",
+      "abstract": "面向尼泊尔语-英语自发语码切换（code-switching）的 ASR 基准：从合成数据到真实播客的迁移评测，提供开源代码与数据集，填补低资源语码切换语音识别的评测空白。",
+      "tags": ["ASR", "Code-Switching", "Low-Resource", "Benchmark", "Multilingual"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.30860"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.30860"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "科大讯飞发布星火语音基座大模型 SparkAudio 1.0（1024 开发者节）",
+      "url": "https://news.17173.com/content/10222026/160508720.shtml",
+      "summary": "10 月 22 日，科大讯飞在 2026 全球 1024 开发者节上首发星火语音基座大模型 SparkAudio 1.0，将机器翻译、语音识别、语义理解融合进同一模型，宣称在实时说话人分离、环境理解、音频理解、情绪识别等方面表现卓越；同步发布星火具身多模交互技术，推动语音 AI 从屏幕走向物理世界（机器人、智能硬件）。"
+    },
+    {
+      "title": "MiniMax 将发布首个端到端实时语音对话 API（11 月）",
+      "url": "https://www.tmtpost.com/7311267.html",
+      "summary": "AI 独角兽 MiniMax 被曝将在 11 月发布首个端到端实时语音对话 API 产品，对标 GPT-4o 级实时多模态能力，提供更低延迟、更自然沉浸的实时语音对话，强化端到端实时多模态处理，补齐国产实时语音 Agent 能力版图。"
+    }
+  ],
+  "note": "本环境网络层阻断 export.arxiv.org / arxiv.org 的直接访问，无法通过 arxiv API 拉取完整列表；已通过 web_search（edge-browser 后端）交叉验证最近 24h（2026-10-23 09:30 ~ 10-24 09:30）可视的 cs.SD/eess.AS 论文，综合 arxiv 官方 cs.SD/eess.AS recent 列表页与 arXiv.Science、scirate 等聚合源获取完整标题与摘要。必搜重磅新闻关键词：OpenAI GPT-Live（7 月发布）、Gemini 3.8 Live（9 月）、Grok Voice 3.0（10/14）等均为旧闻，24h 内无 OpenAI/Gemini 级新纯语音大模型发布；24h 内真正的头条是科大讯飞 SparkAudio 1.0（10/22 发布）。"
+}
