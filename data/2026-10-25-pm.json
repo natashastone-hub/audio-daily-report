@@ -1,0 +1,5 @@
+{
+  "papers": [],
+  "news": [],
+  "note": "2026-10-25 为周日，arXiv 周末不发布新论文（eess.AS/cs.SD 最新索引仍停留在 2026-10-23 周五批次，早上版本已覆盖）。下午 6 小时窗口（10-25 09:30 ~ 14:00）内无可检索到的新 arXiv 论文，HuggingFace Daily Papers 亦无新 audio 标签内容。本环境网络层阻断 export.arxiv.org / arxiv.org / huggingface.co / arxiv.npu-aslp.org 的直接访问（web_fetch 与 browser 均失败，curl 亦超时），已通过 web_search（edge-browser 后端）交叉验证。必搜重磅新闻关键词逐一独立执行：OpenAI GPT-Live full-duplex voice model（7 月 9 日发布）、OpenAI voice model release（旧闻）、Google Gemini voice（Gemini 3.5/3.8 Live 为 6 月/9 月）、full-duplex speech model（Soul App 7 月、Qwen-Audio-3.0-Realtime 等旧闻）、语音模型发布（StepAudio 2.5 4 月、Qwen-Audio-3.0-TTS 7 月）、real-time voice AI 均命中旧闻，6 小时内无 OpenAI/Gemini 级纯语音大模型重大发布，头条新闻空缺，诚实标注。"
+}
