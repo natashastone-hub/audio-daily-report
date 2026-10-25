@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-10-25</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-10-25</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年10月25日 (周日) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">3</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.30818" target="_blank">When Do Self-Supervised Representations Help Speech Restoration?</a></h4>
+      <div class="meta"><span>📅 2026-10-23</span><span>👥 Authors</span></div>
+      <div class="abstract">系统研究自监督学习（SSL）语音表征在语音恢复（speech restoration，含降噪、去混响、带宽扩展等）任务中的有效性边界：并非所有 SSL 特征都能一致提升恢复质量，其收益高度依赖于下游任务类型、信噪比环境与表征层级的选择。为语音增强/恢复社区何时、如何选用 SSL 表示提供了实证指引，是 SSL 与语音感知质量关系的一次系统性梳理。</div>
+      <div class="tags"><span class="tag">Speech Restoration</span><span class="tag">Self-Supervised Learning</span><span class="tag">Speech Enhancement</span><span class="tag">Representation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.30818" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.30818" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.31596" target="_blank">Signed Wasserstein Distance for Room Impulse Response Comparison</a></h4>
+      <div class="meta"><span>📅 2026-10-23</span><span>👥 Linda Fabiani, Sebastian J. Schlecht, Filip Elvander</span></div>
+      <div class="abstract">提出「带符号 Wasserstein 距离」用于房间冲激响应（RIR）的比较。传统距离度量难以刻画 RIR 信号固有的非负、稀疏与相位特性，作者引入符号敏感性，使度量不仅能比较 RIR 的幅度差异，还能反映其形状/相位结构差异，提升了声学建模与空间音频中 RIR 相似度评估的可解释性与判别力。</div>
+      <div class="tags"><span class="tag">Room Impulse Response</span><span class="tag">Audio DSP</span><span class="tag">Acoustics</span><span class="tag">Metric Learning</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.31596" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.31596" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.31434" target="_blank">PerMix: Anomalous Sound Detection by Predicting the Perturbation Ratio of Mixed Samples</a></h4>
+      <div class="meta"><span>📅 2026-10-23</span><span>👥 Jihoon Choi, Jung-Woo Choi</span></div>
+      <div class="abstract">提出 PerMix，一种异常声音检测（ASD）新方法：将样本与参考音频混合，并让模型预测混合样本中的「扰动比例」，从而以无监督方式判别异常。相比传统自编码器重构或分类范式，PerMix 将异常检测转化为可解释的混合比例回归任务，在机器异常音检测基准上取得竞争性结果（投 ICASSP 2027）。</div>
+      <div class="tags"><span class="tag">Anomalous Sound Detection</span><span class="tag">ASD</span><span class="tag">Acoustic</span><span class="tag">ICASSP 2027</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.31434" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.31434" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-10-25') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

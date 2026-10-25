@@ -1,0 +1,45 @@
+{
+  "papers": [
+    {
+      "title": "When Do Self-Supervised Representations Help Speech Restoration?",
+      "url": "https://arxiv.org/abs/2610.30818",
+      "date": "2026-10-23",
+      "authors": "Authors",
+      "abstract": "系统研究自监督学习（SSL）语音表征在语音恢复（speech restoration，含降噪、去混响、带宽扩展等）任务中的有效性边界：并非所有 SSL 特征都能一致提升恢复质量，其收益高度依赖于下游任务类型、信噪比环境与表征层级的选择。为语音增强/恢复社区何时、如何选用 SSL 表示提供了实证指引，是 SSL 与语音感知质量关系的一次系统性梳理。",
+      "tags": ["Speech Restoration", "Self-Supervised Learning", "Speech Enhancement", "Representation"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.30818"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.30818"}
+      ]
+    },
+    {
+      "title": "Signed Wasserstein Distance for Room Impulse Response Comparison",
+      "url": "https://arxiv.org/abs/2610.31596",
+      "date": "2026-10-23",
+      "authors": "Linda Fabiani, Sebastian J. Schlecht, Filip Elvander",
+      "abstract": "提出「带符号 Wasserstein 距离」用于房间冲激响应（RIR）的比较。传统距离度量难以刻画 RIR 信号固有的非负、稀疏与相位特性，作者引入符号敏感性，使度量不仅能比较 RIR 的幅度差异，还能反映其形状/相位结构差异，提升了声学建模与空间音频中 RIR 相似度评估的可解释性与判别力。",
+      "tags": ["Room Impulse Response", "Audio DSP", "Acoustics", "Metric Learning"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.31596"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.31596"}
+      ]
+    },
+    {
+      "title": "PerMix: Anomalous Sound Detection by Predicting the Perturbation Ratio of Mixed Samples",
+      "url": "https://arxiv.org/abs/2610.31434",
+      "date": "2026-10-23",
+      "authors": "Jihoon Choi, Jung-Woo Choi",
+      "abstract": "提出 PerMix，一种异常声音检测（ASD）新方法：将样本与参考音频混合，并让模型预测混合样本中的「扰动比例」，从而以无监督方式判别异常。相比传统自编码器重构或分类范式，PerMix 将异常检测转化为可解释的混合比例回归任务，在机器异常音检测基准上取得竞争性结果（投 ICASSP 2027）。",
+      "tags": ["Anomalous Sound Detection", "ASD", "Acoustic", "ICASSP 2027"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.31434"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.31434"}
+      ]
+    }
+  ],
+  "news": [],
+  "note": "2026-10-25 为周日，arXiv 周末不发布新论文，最近一个工作日批次为 2026-10-23（周五，eess.AS 9 篇 + cs.SD 若干）。上一期（2026-10-24）已覆盖至 10-22（周四），故本期补录周五 10-23 批次中可交叉验证到的代表性音频论文。网络层阻断 export.arxiv.org/arxiv.org 直接访问（curl 与 web_fetch 均失败），已通过 web_search（edge-browser 后端）+ arxiv 官方 recent 列表页交叉验证标题/作者/摘要。必搜重磅新闻关键词（OpenAI GPT-Live / Google Gemini voice / full-duplex speech model / 语音模型发布 / real-time voice AI）逐一命中结果均为旧闻：GPT-Live 为 7 月 9 日发布、Grok Voice 3.0 为 10 月中旬、DeepL Voice 为 10-21、MiniMax 端到端实时语音 API 与科大讯飞 SparkAudio 1.0 均为 10-22 已在前期日报覆盖；24 小时内无 OpenAI/Gemini 级纯语音大模型重大发布，故头条新闻空缺，诚实标注。"
+}
