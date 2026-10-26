@@ -1,0 +1,5 @@
+{
+  "papers": [],
+  "news": [],
+  "note": "2026-10-26 为周一（工作日）。下午 6 小时窗口（09:30 ~ 14:00）内未检索到可确认的新 arXiv 论文与前沿新闻。环境网络层阻断 export.arxiv.org / arxiv.org 的直接访问（web_fetch 返回 fetch failed，browser 打开 arxiv.org 报 ERR_CONNECTION_CLOSED），已通过 web_search（edge-browser 后端）交叉验证：搜索引擎缓存的 eess.AS/cs.SD 最新批次仍停留在 10-22（eess.AS recent）与 10-23（cs.SD pastweek，Fri 23 Oct 2026 showing 16 of 16 entries），未出现 10-26（Mon）的音频类论文批次，亦无 2610.32/2610.33 区间的语音音频论文可检索。HuggingFace Daily Papers 亦无 6 小时内新增 audio 标签内容。必搜重磅新闻关键词逐一独立执行：OpenAI GPT-Live full-duplex voice model（7-9 发布，旧闻）、OpenAI voice model release（GPT-Realtime 系列 5 月发布，旧闻）、Google Gemini voice（Gemini 3.8 TTS 9-23 发布，旧闻）、full-duplex speech model（Block Dessa 已于早报头条收录）、语音模型发布 / real-time voice AI（均命中旧闻）。6 小时内无 OpenAI/Gemini 级纯语音大模型重大发布，诚实标注为本时段无新增。"
+}
