@@ -1,0 +1,16 @@
+{
+  "papers": [],
+  "news": [
+    {
+      "title": "Block（Jack Dorsey）发布全双工语音模型 Dessa：纯语音训练、可本地运行的端到端语音对话模型",
+      "url": "https://www.unite.ai/block-unveils-dessa-a-full-duplex-speech-model-trained-on-conversation/",
+      "summary": "Twitter 联合创始人 Jack Dorsey 旗下的 Block 公司 AI 研究实验室发布全双工语音到语音模型 Dessa。与主流「ASR→LLM→TTS」级联方案不同，Dessa 不经过文本中转，直接在语音空间完成理解与生成，可边听边说、在对方未说完时自然插话，并能捕捉笑声、停顿、哽咽等情绪信号，听感高度拟人。训练仅使用纯人类对话语音数据，在单台 NVIDIA GPU 机架上完成，且已可在 MacBook Pro 等消费级硬件本地运行，目前尚未对外开放试用。这是继 OpenAI GPT-Live 之后全双工语音智能从云端下沉到端侧的重要节点。"
+    },
+    {
+      "title": "Block 推出 Dessa：全双工语音模型支持本地运行，情绪表达原生（IT之家 / 多家媒体报道）",
+      "url": "https://news.17173.com/content/10252026/120236952.shtml",
+      "summary": "据 IT之家等媒体报道，Block 推出的语音模型 Dessa 主打全双工交互与高度拟人听感，能模拟笑声、停顿、哽咽等情绪表达，训练仅用一组英伟达 GPU 机架、完全基于人类语音数据。行业分析指出，Dessa 一旦可端侧运行，将帮助 Square 等线下语音用例省去按分钟计费的云端 API 成本（对比 OpenAI 全双工语音约 0.05 美元/分钟），同时带来隐私与延迟双重优势；但以假乱真的声音也引发了对语音安全与身份认证的隐忧。"
+    }
+  ],
+  "note": "2026-10-26 为周日，arXiv 周末不发布新论文，最近一个工作日批次为 2026-10-23（周五），已于上一期（2026-10-25）补录。过去 24 小时内无新增 eess.AS/cs.SD 论文，故本期论文部分为空、诚实标注。重磅新闻关键词逐一命中：OpenAI GPT-Live（7 月 9 日发布，旧闻）、Google Gemini voice（无 24h 内重大发布）、full-duplex speech model（命中 Block Dessa，10-23/24 发布、10-25 集中报道，属过去 24 小时重大语音模型发布，作为头条收录）、real-time voice AI（无新增）。讯飞 SparkAudio 1.0 为 10-22 发布、DeepL Voice 获 Fast Company 荣誉为 10-6，均已在前期日报覆盖或超时窗。"
+}
