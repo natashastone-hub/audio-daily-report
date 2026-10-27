@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-10-27</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-10-27</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年10月27日 (周二) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">4</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.32572" target="_blank">Pseudo-Labels as Rewards, Not Targets: Group-Relative Policy Optimization for Semi-Supervised ASR</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-26</span><span>👥 Shashi Kumar, Yanis Labrak, Sergio Burdisso, Esaú Villatoro-Tello</span></div>
+      <div class="abstract">针对半监督语音识别（ASR）提出 Group-Relative Policy Optimization（GRPO）框架，将伪标签从「监督目标」重新定义为「奖励信号」，通过组内相对策略优化缓解伪标签噪声对训练的影响，在半监督 ASR 场景下提升鲁棒性与识别准确率，为少标注语音数据的模型训练提供了新范式。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Semi-Supervised Learning</span><span class="tag">Policy Optimization</span><span class="tag">Pseudo-Labels</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.32572" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.32572" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.32214" target="_blank">DIAL-S2ST: Learning Latency Control for Simultaneous Speech-to-Speech Translation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-26</span><span>👥 Jeongsoo Choi, Junseok Ahn, Joon Son Chung</span></div>
+      <div class="abstract">提出 DIAL-S2ST，针对同声传译（simultaneous S2ST）学习自适应的延迟控制策略，在翻译准确率与实时性之间动态权衡，使语音到语音翻译模型能够像真人译员一样自主决定「何时等待、何时输出」，降低同传延迟的同时保持翻译质量。</div>
+      <div class="tags"><span class="tag">S2ST</span><span class="tag">Speech Translation</span><span class="tag">Simultaneous Translation</span><span class="tag">Latency Control</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.32214" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.32214" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.32202" target="_blank">ICASSP 2026 Radar Acoustic Speech Enhancement (RASE) Challenge</a></h4>
+      <div class="meta"><span>📅 2026-10-26</span><span>👥 Zhi-Wei Tan, V. G. Reju, Ritesh C. Tewari, Ruotong Ding, Patrick A. Naylor, Andy W. H. Khong</span></div>
+      <div class="abstract">介绍 ICASSP 2026 雷达声学语音增强（RASE）挑战赛——首个专门针对基于雷达信号的语音增强基准评测社区挑战。雷达传感器不受光照与遮挡影响，可在嘈杂真实场景中辅助拾取语音，该挑战为这一新兴跨模态语音增强方向建立了统一评测基准与数据集。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Radar Acoustic</span><span class="tag">Challenge</span><span class="tag">ICASSP 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.32202" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.32202" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.32061" target="_blank">Concentrated Causal Influence, Distributed Diagnostic Information: Cognitive Impairment Decisions in Large Audio-Language Models</a></h4>
+      <div class="meta"><span>📅 2026-10-26</span><span>👥 Xiutian Zhao, Luqi Sun, Björn Schuller, Berrak Sisman</span></div>
+      <div class="abstract">从可解释性角度研究大音频语言模型（Large Audio-Language Model）在认知障碍诊断任务中的决策机制，发现其关键因果影响高度集中于少数音频/文本输入片段，而诊断信息在表征空间中呈分布式存储，为音频大模型在医疗健康场景下的可靠性与可解释性提供了实证分析。</div>
+      <div class="tags"><span class="tag">Audio Language Model</span><span class="tag">Audio Understanding</span><span class="tag">Interpretability</span><span class="tag">Healthcare</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.32061" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.32061" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>NVIDIA 发布 Nemotron 3 Diarization，登顶 VoiceArena 说话人分离榜（最多支持 8 说话人实时分离）</h4>
+      <p>NVIDIA 推出 Nemotron 3 Diarization，这是一款面向会议、通话与实时语音应用的说话人分离（diarization）模型，在 VoiceArena 榜单排名第一，最多支持 8 个说话人的实时区分。这是 NVIDIA Streaming Sortformer 之后在语音前端处理领域的最新迭代，进一步强化了其在会议转录与语音智能体（Voice Agent）实时说话人识别环节的布局。 <a href="https://developer.nvidia.com/blog/tag/speech-ai/" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-10-27') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-27",
+  "papers": [
+    {
+      "title": "Pseudo-Labels as Rewards, Not Targets: Group-Relative Policy Optimization for Semi-Supervised ASR",
+      "url": "https://arxiv.org/abs/2610.32572",
+      "date": "2026-10-26",
+      "authors": "Shashi Kumar, Yanis Labrak, Sergio Burdisso, Esaú Villatoro-Tello",
+      "abstract": "针对半监督语音识别（ASR）提出 Group-Relative Policy Optimization（GRPO）框架，将伪标签从「监督目标」重新定义为「奖励信号」，通过组内相对策略优化缓解伪标签噪声对训练的影响，在半监督 ASR 场景下提升鲁棒性与识别准确率，为少标注语音数据的模型训练提供了新范式。",
+      "tags": ["ASR", "Semi-Supervised Learning", "Policy Optimization", "Pseudo-Labels"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.32572"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.32572"}
+      ]
+    },
+    {
+      "title": "DIAL-S2ST: Learning Latency Control for Simultaneous Speech-to-Speech Translation",
+      "url": "https://arxiv.org/abs/2610.32214",
+      "date": "2026-10-26",
+      "authors": "Jeongsoo Choi, Junseok Ahn, Joon Son Chung",
+      "abstract": "提出 DIAL-S2ST，针对同声传译（simultaneous S2ST）学习自适应的延迟控制策略，在翻译准确率与实时性之间动态权衡，使语音到语音翻译模型能够像真人译员一样自主决定「何时等待、何时输出」，降低同传延迟的同时保持翻译质量。",
+      "tags": ["S2ST", "Speech Translation", "Simultaneous Translation", "Latency Control"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.32214"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.32214"}
+      ]
+    },
+    {
+      "title": "ICASSP 2026 Radar Acoustic Speech Enhancement (RASE) Challenge",
+      "url": "https://arxiv.org/abs/2610.32202",
+      "date": "2026-10-26",
+      "authors": "Zhi-Wei Tan, V. G. Reju, Ritesh C. Tewari, Ruotong Ding, Patrick A. Naylor, Andy W. H. Khong",
+      "abstract": "介绍 ICASSP 2026 雷达声学语音增强（RASE）挑战赛——首个专门针对基于雷达信号的语音增强基准评测社区挑战。雷达传感器不受光照与遮挡影响，可在嘈杂真实场景中辅助拾取语音，该挑战为这一新兴跨模态语音增强方向建立了统一评测基准与数据集。",
+      "tags": ["Speech Enhancement", "Radar Acoustic", "Challenge", "ICASSP 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.32202"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.32202"}
+      ]
+    },
+    {
+      "title": "Concentrated Causal Influence, Distributed Diagnostic Information: Cognitive Impairment Decisions in Large Audio-Language Models",
+      "url": "https://arxiv.org/abs/2610.32061",
+      "date": "2026-10-26",
+      "authors": "Xiutian Zhao, Luqi Sun, Björn Schuller, Berrak Sisman",
+      "abstract": "从可解释性角度研究大音频语言模型（Large Audio-Language Model）在认知障碍诊断任务中的决策机制，发现其关键因果影响高度集中于少数音频/文本输入片段，而诊断信息在表征空间中呈分布式存储，为音频大模型在医疗健康场景下的可靠性与可解释性提供了实证分析。",
+      "tags": ["Audio Language Model", "Audio Understanding", "Interpretability", "Healthcare"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.32061"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.32061"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "NVIDIA 发布 Nemotron 3 Diarization，登顶 VoiceArena 说话人分离榜（最多支持 8 说话人实时分离）",
+      "url": "https://developer.nvidia.com/blog/tag/speech-ai/",
+      "summary": "NVIDIA 推出 Nemotron 3 Diarization，这是一款面向会议、通话与实时语音应用的说话人分离（diarization）模型，在 VoiceArena 榜单排名第一，最多支持 8 个说话人的实时区分。这是 NVIDIA Streaming Sortformer 之后在语音前端处理领域的最新迭代，进一步强化了其在会议转录与语音智能体（Voice Agent）实时说话人识别环节的布局。"
+    }
+  ],
+  "note": "2026-10-27（周二）。过去 24 小时窗口（10-26 早至 10-27 早）内，arXiv eess.AS/cs.SD 出现 10-26（周一）提交的新批次，本期可交叉验证到 4 篇代表性音频/语音论文（ASR 半监督、同声传译 S2ST、雷达声学语音增强挑战、音频大模型可解释性）。环境网络层阻断 export.arxiv.org / arxiv.org 直连（web_fetch 全失败），已通过 web_search（edge-browser 后端）交叉验证标题/作者/分类。必搜重磅新闻关键词逐一执行：OpenAI GPT-Live（7-9 发布，旧闻）、OpenAI voice model release（5 月 GPT-Realtime 系列，旧闻）、Google Gemini voice（Gemini 3.5 Transcribe / 3.8 Live 为 9 月底，旧闻）、full-duplex speech model（Block Dessa 已于 10-26 早报头条收录）、语音模型发布 / real-time voice AI（无 24h 内新增重大发布）。新闻侧头条收录 NVIDIA Nemotron 3 Diarization（近期发布，语音分离榜单第一）。HuggingFace Daily Papers 未检索到 24h 内新增 audio 标签内容，诚实标注。"
+}
