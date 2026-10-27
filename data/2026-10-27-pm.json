@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-27-pm",
+  "papers": [
+    {
+      "title": "ImageTTS: Repurposing Pretrained Image Diffusion Transformers for Speech Synthesis",
+      "url": "https://arxiv.org/abs/2610.34807",
+      "date": "2026-10-26",
+      "authors": "Hanchen Pei, Shujie Liu, Yayue Deng, Fangyun Wei, Yanqing Liu, Jianwei Yu, Gongping Huang",
+      "abstract": "首次系统回答「预训练图像生成模型的表征与生成先验能否跨模态迁移到语音合成」这一开放问题。作者将 FLUX.2 图像扩散模型复用到 TTS：把伪 RGB 的 log-mel 声谱图经冻结的图像 VAE 编码，仅微调其预训练 DiT 做条件潜在流匹配。冻结的图像 VAE 已能保留 0.99 STOI 与 0.95 说话人相似度；图像预训练的 DiT 初始化则加速收敛并提升语言学精度，WER 从 4.2% 降至 2.7%。扩展到 100K 小时数据后，在 Seed-TTS test-en 上 WER 达 1.12%、CapSpeech Style-ACC 0.66，超越同数据规模下语音原生基线，证明图像模型可提供可复用的潜在表征与生成先验。",
+      "tags": ["TTS", "Speech Synthesis", "Image Diffusion", "Cross-Modal Transfer", "Flow Matching"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.34807"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.34807"}
+      ]
+    },
+    {
+      "title": "Heard Enough to Act: Early Tool Calling in Spoken Dialogue Systems",
+      "url": "https://arxiv.org/abs/2610.34653",
+      "date": "2026-10-26",
+      "authors": "Yizhou Peng, Chen Chen, Donghang Wu, Hexin Liu, Eng Siong Chng",
+      "abstract": "针对语音智能体的延迟痛点提出「最早可行动点」监督范式。作者构建合成语音对话管线，标注话语何时已足以支撑工具调用及其参数，生成覆盖 48 个领域、共 26694 个对话（786 小时）的语料，并额外渲染 τ2-bench 音频版用于外部评测。训练的全模态语言模型在 hold-out 对话与外部基准上分别取得 0.48/0.47 的 tool-state macro-F1；对正确调用，相较「等整句结束」的级联方案，域内平均领先 1.8-2.0 秒、τ2-bench 上领先 1.1 秒，为「边听边执行」的实时语音智能体提供了数据驱动路径（管线与训练脚本将开源）。",
+      "tags": ["Spoken Dialogue", "Tool Calling", "Voice Agent", "Latency", "Speech LLM"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.34653"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.34653"}
+      ]
+    },
+    {
+      "title": "From Speech Tokens to Stolen Voices: Attacker-Chosen-Text Speaker Impersonation via Representation Inversion",
+      "url": "https://arxiv.org/abs/2610.34688",
+      "date": "2026-10-26",
+      "authors": "Ye Lu, Shen Wang, Runze Liu, Zhitao Ou, Haonan Huang, Yihan Yan, Fanghui Sun, Zhaoyang Zhang",
+      "abstract": "揭示端到端语音大模型前端表征的隐私风险。端侧语音前端会向远端服务器发送语音表征而非原始音频，但这些表征仍可能泄露说话人身份。作者提出 Speech Token Inversion Attack（STIA），仅凭一次泄露的短表征即可用攻击者指定的文本生成受害者声音的语音，无需访问原始音频或转写。实验显示，仅泄露对应 3 秒语音的 Moshi 表征，即可达到平均 0.78 的 CAM++ 说话人余弦相似度、目标文本 WER 3.80%，证明语音前端表征可被复用窃取身份，为语音前端表征设计敲响隐私警钟。",
+      "tags": ["Voice Cloning", "Speaker Impersonation", "Privacy", "Security", "Speech LLM"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.34688"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.34688"}
+      ]
+    },
+    {
+      "title": "S2SND-v2: Unified Online and Offline Speaker Diarization with Speaker-Adapted w2v-BERT 2.0",
+      "url": "https://arxiv.org/abs/2610.34707",
+      "date": "2026-10-26",
+      "authors": "Jincheng Wang, Li Li, Weixin Zhu, Yannan Wang, Tao Yu, Juan Liu, Ming Li",
+      "abstract": "在 S2SND 基础上提出统一在线/离线说话人分离框架 S2SND-v2。声学特征侧引入说话人自适应的 w2v-BERT 2.0 前端，并对比全量构建与剪枝构建两条路线；使用表征时，重叠感知的活动查询掩码提升重叠语音下的说话人嵌入提取，同时 late-speaker 训练对齐未知说话人训练与在线推理条件。综合改进后，剪枝系统在 8 个测试集上取得 14.52%（在线）/12.03%（离线）的竞争性 diarization error rate。",
+      "tags": ["Speaker Diarization", "Speech Separation", "w2v-BERT", "Online/Offline"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.34707"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.34707"}
+      ]
+    }
+  ],
+  "news": [],
+  "note": "2026-10-27（周二）下午版。时间窗口为 9:30—14:00 之间。arXiv eess.AS/cs.SD 最新提交日为 10-26（周一），早版已收录 32572/32214/32202/32061 四篇代表性论文，本期下午增补早版遗漏、属同一 10-26 批次但编号更靠后（提交时间更晚）的 4 篇新论文：ImageTTS（图像扩散 DiT 复用 TTS）、Heard Enough to Act（语音智能体最早可行动点工具调用）、From Speech Tokens to Stolen Voices（语音表征反转说话人冒充攻击）、S2SND-v2（统一在线/离线说话人分离）。环境网络层阻断 export.arxiv.org / arxiv.org 直连（web_fetch 全失败），已通过 web_search（edge-browser 后端）交叉验证完整标题/作者/摘要。必搜重磅新闻关键词逐一执行，均无 6 小时内新增：OpenAI GPT-Live（7-8 发布旧闻）、OpenAI voice model release（GPT-Realtime 系列旧闻）、Google Gemini voice（Gemini 3.8 Live 为 9-15、Gemini 3.1 Flash Live 为 3 月旧闻）、full-duplex speech model（Block/Dessa、Seeduplex、ElevenLabs Realtime 均为数日到数周前旧闻）、语音模型发布 / real-time voice AI（无 6h 内重大发布）。HuggingFace Daily Papers 未检索到 6 小时内新增 audio 标签内容。新闻侧诚实标注「下午时段暂无新内容」。"
+}

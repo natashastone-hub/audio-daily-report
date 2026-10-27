@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-10-27-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-10-27-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年10月27日 (周二) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">4</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.34807" target="_blank">ImageTTS: Repurposing Pretrained Image Diffusion Transformers for Speech Synthesis</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-26</span><span>👥 Hanchen Pei, Shujie Liu, Yayue Deng, Fangyun Wei, Yanqing Liu, Jianwei Yu, Gongping Huang</span></div>
+      <div class="abstract">首次系统回答「预训练图像生成模型的表征与生成先验能否跨模态迁移到语音合成」这一开放问题。作者将 FLUX.2 图像扩散模型复用到 TTS：把伪 RGB 的 log-mel 声谱图经冻结的图像 VAE 编码，仅微调其预训练 DiT 做条件潜在流匹配。冻结的图像 VAE 已能保留 0.99 STOI 与 0.95 说话人相似度；图像预训练的 DiT 初始化则加速收敛并提升语言学精度，WER 从 4.2% 降至 2.7%。扩展到 100K 小时数据后，在 Seed-TTS test-en 上 WER 达 1.12%、CapSpeech Style-ACC 0.66，超越同数据规模下语音原生基线，证明图像模型可提供可复用的潜在表征与生成先验。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Speech Synthesis</span><span class="tag">Image Diffusion</span><span class="tag">Cross-Modal Transfer</span><span class="tag">Flow Matching</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.34807" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.34807" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.34653" target="_blank">Heard Enough to Act: Early Tool Calling in Spoken Dialogue Systems</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-26</span><span>👥 Yizhou Peng, Chen Chen, Donghang Wu, Hexin Liu, Eng Siong Chng</span></div>
+      <div class="abstract">针对语音智能体的延迟痛点提出「最早可行动点」监督范式。作者构建合成语音对话管线，标注话语何时已足以支撑工具调用及其参数，生成覆盖 48 个领域、共 26694 个对话（786 小时）的语料，并额外渲染 τ2-bench 音频版用于外部评测。训练的全模态语言模型在 hold-out 对话与外部基准上分别取得 0.48/0.47 的 tool-state macro-F1；对正确调用，相较「等整句结束」的级联方案，域内平均领先 1.8-2.0 秒、τ2-bench 上领先 1.1 秒，为「边听边执行」的实时语音智能体提供了数据驱动路径（管线与训练脚本将开源）。</div>
+      <div class="tags"><span class="tag">Spoken Dialogue</span><span class="tag">Tool Calling</span><span class="tag">Voice Agent</span><span class="tag">Latency</span><span class="tag">Speech LLM</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.34653" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.34653" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.34688" target="_blank">From Speech Tokens to Stolen Voices: Attacker-Chosen-Text Speaker Impersonation via Representation Inversion</a></h4>
+      <div class="meta"><span>📅 2026-10-26</span><span>👥 Ye Lu, Shen Wang, Runze Liu, Zhitao Ou, Haonan Huang, Yihan Yan, Fanghui Sun, Zhaoyang Zhang</span></div>
+      <div class="abstract">揭示端到端语音大模型前端表征的隐私风险。端侧语音前端会向远端服务器发送语音表征而非原始音频，但这些表征仍可能泄露说话人身份。作者提出 Speech Token Inversion Attack（STIA），仅凭一次泄露的短表征即可用攻击者指定的文本生成受害者声音的语音，无需访问原始音频或转写。实验显示，仅泄露对应 3 秒语音的 Moshi 表征，即可达到平均 0.78 的 CAM++ 说话人余弦相似度、目标文本 WER 3.80%，证明语音前端表征可被复用窃取身份，为语音前端表征设计敲响隐私警钟。</div>
+      <div class="tags"><span class="tag">Voice Cloning</span><span class="tag">Speaker Impersonation</span><span class="tag">Privacy</span><span class="tag">Security</span><span class="tag">Speech LLM</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.34688" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.34688" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.34707" target="_blank">S2SND-v2: Unified Online and Offline Speaker Diarization with Speaker-Adapted w2v-BERT 2.0</a></h4>
+      <div class="meta"><span>📅 2026-10-26</span><span>👥 Jincheng Wang, Li Li, Weixin Zhu, Yannan Wang, Tao Yu, Juan Liu, Ming Li</span></div>
+      <div class="abstract">在 S2SND 基础上提出统一在线/离线说话人分离框架 S2SND-v2。声学特征侧引入说话人自适应的 w2v-BERT 2.0 前端，并对比全量构建与剪枝构建两条路线；使用表征时，重叠感知的活动查询掩码提升重叠语音下的说话人嵌入提取，同时 late-speaker 训练对齐未知说话人训练与在线推理条件。综合改进后，剪枝系统在 8 个测试集上取得 14.52%（在线）/12.03%（离线）的竞争性 diarization error rate。</div>
+      <div class="tags"><span class="tag">Speaker Diarization</span><span class="tag">Speech Separation</span><span class="tag">w2v-BERT</span><span class="tag">Online/Offline</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.34707" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.34707" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-10-27-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
