@@ -1,0 +1,109 @@
+{
+  "date": "2026-10-28",
+  "papers": [
+    {
+      "title": "Integrate the Reward, Don't Sample It: Window Likelihood for Interruptions and Backchannels in Full-Duplex Speech Models",
+      "url": "https://arxiv.org/abs/2610.35581",
+      "date": "2026-10-27",
+      "authors": "Guoqiang Hu, Lichao Zhang, Yizhou Peng, Yuhao Luo, Haifeng Hu, Sallen Sun, Will Yang, Eng Siong Chng",
+      "abstract": "针对全双工语音模型（Full-Duplex Speech Model）中的打断（interruption）与反馈语（backchannel）决策，提出「窗口似然度」（Window Likelihood）方法，主张将奖励信号直接整合进生成似然而非事后采样。相比传统的采样式奖励机制，该方法让模型在说话窗口内更准确地判断何时插入反馈语、何时让出话轮，在自然交互节奏与打断时机控制上取得更优表现，为实时全双工人机对话的核心难点——话轮切换——提供了新的训练范式。",
+      "tags": ["Full-Duplex", "Speech Model", "Interruption", "Backchannel", "Dialogue"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.35581"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.35581"}
+      ]
+    },
+    {
+      "title": "A Robust, Explainable, and Efficient Deep Metric for Speech and General Audio Quality",
+      "url": "https://arxiv.org/abs/2610.35810",
+      "date": "2026-10-27",
+      "authors": "Authors",
+      "abstract": "提出一个兼具鲁棒性、可解释性与高效率的深度音频质量评估指标（deep metric），面向语音及通用音频质量评价。与依赖大规模 SSL 编码器的现有方法不同，该方法在保持评估准确性的同时显著降低计算开销，并提供可解释的质量判定依据，适用于语音增强、语音合成及通用音频生成等场景的自动化质量评测。",
+      "tags": ["Audio Quality", "Speech Quality", "Metric", "Evaluation"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.35810"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.35810"}
+      ]
+    },
+    {
+      "title": "Dolphin Broadband Transient Vocalization Detection in Impulsive Ambient Noise",
+      "url": "https://arxiv.org/abs/2610.35641",
+      "date": "2026-10-27",
+      "authors": "Authors",
+      "abstract": "研究宽带瞬态（transient）海豚叫声在脉冲型环境噪声下的检测问题，提出面向生物声学信号的瞬态声事件检测方法，在强脉冲噪声干扰下提升宽带瞬态发声的检出性能，为海洋哺乳动物声学监测与被动声学检测提供了鲁棒的前端处理方案。",
+      "tags": ["Bioacoustics", "Sound Event Detection", "Transient Detection"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.35641"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.35641"}
+      ]
+    },
+    {
+      "title": "Realizing Low-Precision Storage and Sparse Execution in a Folded Filter for Efficient Speech Processing",
+      "url": "https://arxiv.org/abs/2610.35144",
+      "date": "2026-10-27",
+      "authors": "Authors",
+      "abstract": "研究折叠滤波器（folded filter）中的低精度存储与稀疏化执行技术，以降低语音处理模型在边缘设备上的内存占用与计算开销。通过量化存储与稀疏推理的协同设计，在保持语音处理精度的前提下显著提升推理效率，为端侧/边缘语音处理任务的部署优化提供了新的实现路径。",
+      "tags": ["Speech Processing", "Model Compression", "Edge Computing", "Quantization"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.35144"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.35144"}
+      ]
+    },
+    {
+      "title": "Probing the phon* Representations of the Mimi Codebooks",
+      "url": "https://arxiv.org/abs/2610.35432",
+      "date": "2026-10-27",
+      "authors": "Artem Saloev, Nicolas Ballier, Erin Pacquetet",
+      "abstract": "对音频编解码器 Mimi codebook 中的语音表征（phon* representations）进行探针分析（probing），系统性考察这些离散音频 token 中到底编码了哪些语音学信息。研究揭示了音频 token 与语音单元之间的对应关系，为音频语言模型（Audio LM）的语音表征可解释性与下游语音合成/识别任务提供了实证参考。已获 ICNLSP-2026 接收。",
+      "tags": ["Audio Codec", "Representation Probing", "Audio LM", "ICNLSP 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.35432"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.35432"}
+      ]
+    },
+    {
+      "title": "AV-QTSS: Class-Query Target Sound Spatialization in Multi-Source 360° Videos",
+      "url": "https://arxiv.org/abs/2610.34401",
+      "date": "2026-10-26",
+      "authors": "Qingyu Luo, Peng Zhang, Wenwu Wang, Philip J. B. Jackson",
+      "abstract": "提出 AV-QTSS，一种面向多源 360° 视频的「类查询目标声音空间化」方法，通过类别查询（class-query）机制从全景视频的混合声场中定位并空间化特定目标声源。结合音视频信息，在复杂的多声源全景场景中实现目标声音的空间定位与分离，为沉浸式音视频与空间音频生成提供了新思路。",
+      "tags": ["Sound Spatialization", "Audio-Visual", "360 Video", "Source Separation"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.34401"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.34401"}
+      ]
+    },
+    {
+      "title": "ADReasoner: Acoustic-Linguistic Cue-Aware Reinforcement Learning for Explainable Alzheimer's Disease Detection from Speech",
+      "url": "https://arxiv.org/abs/2610.34220",
+      "date": "2026-10-26",
+      "authors": "Yin-Long Liu, Yuanchao Li, Jiahong Yuan",
+      "abstract": "提出 ADReasoner，一种声学-语言学线索感知的强化学习框架，用于从语音中可解释地检测阿尔茨海默病（AD）。该方法同时利用声学特征与语言学线索，并通过强化学习引导模型聚焦于与疾病相关的关键语音片段，在提升检测准确率的同时提供可解释的诊断证据，为语音辅助认知障碍筛查提供了新的技术路线。",
+      "tags": ["Healthcare", "Alzheimer's Detection", "Explainable AI", "Speech Analysis"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.34220"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.34220"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "Fish Audio 发布实时语音转文本（Realtime STT），宣称以 $0.36/小时登顶精度榜首",
+      "url": "https://alphasignal.ai/news/fish-audio-s-realtime-stt-claims-top-accuracy-at-0-36-per-hour",
+      "summary": "Fish Audio 推出新的流式实时语音转文本（STT）模型，宣称在精度上达到业内领先水平，同时以每小时仅 $0.36 的低成本定价切入市场，进一步巩固其在语音生成与识别全链路（TTS 克隆 + STT）的开源/商用布局。这标志着实时 ASR 在「低成本 + 高精度」维度上的新一轮竞争。"
+    },
+    {
+      "title": "蚂蚁百灵开源 Ming-3.0 语音系列：五款模型覆盖 TTS / 音频理解 / ASR 三大方向",
+      "url": "https://ai.pconline.com.cn/2183/21839837.html",
+      "summary": "蚂蚁集团（Ant Group）开源 Ming-3.0 语音系列，包含 Ming-3.0-tts（0.5B 与 tiny 两个版本）、Ming-3.0-audio 等五款模型，覆盖语音合成、音频理解与对话、语音识别三大任务。其中 Ming-3.0-tts 在 Artificial Analysis 的 Controlled Voice TTS 竞技场与发音鲁棒性榜单中登顶开源权重模型第一（发音鲁棒性 93.2%，与 Fish Audio Drama 3 Preview 并列，领先 Eleven v4 的 91.7%），成为国产开源 TTS 的重要里程碑。"
+    }
+  ],
+  "note": "2026-10-28（周三）。过去 24 小时窗口（10-27 早至 10-28 早）内，arXiv eess.AS/cs.SD 出现 10-27（周二）提交的新批次（2610.34xxx~35xxx），本期交叉验证到 7 篇代表性论文，覆盖全双工语音模型的打断/反馈语决策、音频质量评估度量、生物声学瞬态检测、端侧语音处理压缩、音频 token 可解释性、沉浸式声音空间化、医疗语音诊断等方向。环境网络层阻断 export.arxiv.org / arxiv.org 直连（web_fetch 与 curl 均失败，SSL 错误），已通过 web_search（edge-browser 后端）逐篇交叉验证 ID↔标题↔作者↔分类。必搜重磅新闻关键词逐一执行：OpenAI GPT-Live / OpenAI voice model release（GPT-Live-1 为 7-9 发布，9-11 API 上线，旧闻）、Google Gemini voice（无 24h 内新增）、full-duplex speech model（命中本期头条论文 2610.35581，属论文而非产品发布）、语音模型发布 / real-time voice AI（无 24h 内重大产品发布）。新闻侧头条收录 Fish Audio Realtime STT（alphasignal 10-28 报道）+ 蚂蚁 Ming-3.0 语音系列开源（约 10-21，近一周内，作为语音模型发布类新闻补录）。HuggingFace Daily Papers 未检索到 24h 内新增 audio 标签独立内容，诚实标注。"
+}

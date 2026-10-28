@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-10-28</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-10-28</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年10月28日 (周三) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">7</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.35581" target="_blank">Integrate the Reward, Don't Sample It: Window Likelihood for Interruptions and Backchannels in Full-Duplex Speech Models</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-27</span><span>👥 Guoqiang Hu, Lichao Zhang, Yizhou Peng, Yuhao Luo, Haifeng Hu, Sallen Sun, Will Yang, Eng Siong Chng</span></div>
+      <div class="abstract">针对全双工语音模型（Full-Duplex Speech Model）中的打断（interruption）与反馈语（backchannel）决策，提出「窗口似然度」（Window Likelihood）方法，主张将奖励信号直接整合进生成似然而非事后采样。相比传统的采样式奖励机制，该方法让模型在说话窗口内更准确地判断何时插入反馈语、何时让出话轮，在自然交互节奏与打断时机控制上取得更优表现，为实时全双工人机对话的核心难点——话轮切换——提供了新的训练范式。</div>
+      <div class="tags"><span class="tag">Full-Duplex</span><span class="tag">Speech Model</span><span class="tag">Interruption</span><span class="tag">Backchannel</span><span class="tag">Dialogue</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.35581" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.35581" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.35810" target="_blank">A Robust, Explainable, and Efficient Deep Metric for Speech and General Audio Quality</a></h4>
+      <div class="meta"><span>📅 2026-10-27</span><span>👥 Authors</span></div>
+      <div class="abstract">提出一个兼具鲁棒性、可解释性与高效率的深度音频质量评估指标（deep metric），面向语音及通用音频质量评价。与依赖大规模 SSL 编码器的现有方法不同，该方法在保持评估准确性的同时显著降低计算开销，并提供可解释的质量判定依据，适用于语音增强、语音合成及通用音频生成等场景的自动化质量评测。</div>
+      <div class="tags"><span class="tag">Audio Quality</span><span class="tag">Speech Quality</span><span class="tag">Metric</span><span class="tag">Evaluation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.35810" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.35810" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.35641" target="_blank">Dolphin Broadband Transient Vocalization Detection in Impulsive Ambient Noise</a></h4>
+      <div class="meta"><span>📅 2026-10-27</span><span>👥 Authors</span></div>
+      <div class="abstract">研究宽带瞬态（transient）海豚叫声在脉冲型环境噪声下的检测问题，提出面向生物声学信号的瞬态声事件检测方法，在强脉冲噪声干扰下提升宽带瞬态发声的检出性能，为海洋哺乳动物声学监测与被动声学检测提供了鲁棒的前端处理方案。</div>
+      <div class="tags"><span class="tag">Bioacoustics</span><span class="tag">Sound Event Detection</span><span class="tag">Transient Detection</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.35641" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.35641" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.35144" target="_blank">Realizing Low-Precision Storage and Sparse Execution in a Folded Filter for Efficient Speech Processing</a></h4>
+      <div class="meta"><span>📅 2026-10-27</span><span>👥 Authors</span></div>
+      <div class="abstract">研究折叠滤波器（folded filter）中的低精度存储与稀疏化执行技术，以降低语音处理模型在边缘设备上的内存占用与计算开销。通过量化存储与稀疏推理的协同设计，在保持语音处理精度的前提下显著提升推理效率，为端侧/边缘语音处理任务的部署优化提供了新的实现路径。</div>
+      <div class="tags"><span class="tag">Speech Processing</span><span class="tag">Model Compression</span><span class="tag">Edge Computing</span><span class="tag">Quantization</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.35144" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.35144" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.35432" target="_blank">Probing the phon* Representations of the Mimi Codebooks</a></h4>
+      <div class="meta"><span>📅 2026-10-27</span><span>👥 Artem Saloev, Nicolas Ballier, Erin Pacquetet</span></div>
+      <div class="abstract">对音频编解码器 Mimi codebook 中的语音表征（phon* representations）进行探针分析（probing），系统性考察这些离散音频 token 中到底编码了哪些语音学信息。研究揭示了音频 token 与语音单元之间的对应关系，为音频语言模型（Audio LM）的语音表征可解释性与下游语音合成/识别任务提供了实证参考。已获 ICNLSP-2026 接收。</div>
+      <div class="tags"><span class="tag">Audio Codec</span><span class="tag">Representation Probing</span><span class="tag">Audio LM</span><span class="tag">ICNLSP 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.35432" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.35432" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.34401" target="_blank">AV-QTSS: Class-Query Target Sound Spatialization in Multi-Source 360° Videos</a></h4>
+      <div class="meta"><span>📅 2026-10-26</span><span>👥 Qingyu Luo, Peng Zhang, Wenwu Wang, Philip J. B. Jackson</span></div>
+      <div class="abstract">提出 AV-QTSS，一种面向多源 360° 视频的「类查询目标声音空间化」方法，通过类别查询（class-query）机制从全景视频的混合声场中定位并空间化特定目标声源。结合音视频信息，在复杂的多声源全景场景中实现目标声音的空间定位与分离，为沉浸式音视频与空间音频生成提供了新思路。</div>
+      <div class="tags"><span class="tag">Sound Spatialization</span><span class="tag">Audio-Visual</span><span class="tag">360 Video</span><span class="tag">Source Separation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.34401" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.34401" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.34220" target="_blank">ADReasoner: Acoustic-Linguistic Cue-Aware Reinforcement Learning for Explainable Alzheimer's Disease Detection from Speech</a></h4>
+      <div class="meta"><span>📅 2026-10-26</span><span>👥 Yin-Long Liu, Yuanchao Li, Jiahong Yuan</span></div>
+      <div class="abstract">提出 ADReasoner，一种声学-语言学线索感知的强化学习框架，用于从语音中可解释地检测阿尔茨海默病（AD）。该方法同时利用声学特征与语言学线索，并通过强化学习引导模型聚焦于与疾病相关的关键语音片段，在提升检测准确率的同时提供可解释的诊断证据，为语音辅助认知障碍筛查提供了新的技术路线。</div>
+      <div class="tags"><span class="tag">Healthcare</span><span class="tag">Alzheimer's Detection</span><span class="tag">Explainable AI</span><span class="tag">Speech Analysis</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.34220" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.34220" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>Fish Audio 发布实时语音转文本（Realtime STT），宣称以 $0.36/小时登顶精度榜首</h4>
+      <p>Fish Audio 推出新的流式实时语音转文本（STT）模型，宣称在精度上达到业内领先水平，同时以每小时仅 $0.36 的低成本定价切入市场，进一步巩固其在语音生成与识别全链路（TTS 克隆 + STT）的开源/商用布局。这标志着实时 ASR 在「低成本 + 高精度」维度上的新一轮竞争。 <a href="https://alphasignal.ai/news/fish-audio-s-realtime-stt-claims-top-accuracy-at-0-36-per-hour" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>蚂蚁百灵开源 Ming-3.0 语音系列：五款模型覆盖 TTS / 音频理解 / ASR 三大方向</h4>
+      <p>蚂蚁集团（Ant Group）开源 Ming-3.0 语音系列，包含 Ming-3.0-tts（0.5B 与 tiny 两个版本）、Ming-3.0-audio 等五款模型，覆盖语音合成、音频理解与对话、语音识别三大任务。其中 Ming-3.0-tts 在 Artificial Analysis 的 Controlled Voice TTS 竞技场与发音鲁棒性榜单中登顶开源权重模型第一（发音鲁棒性 93.2%，与 Fish Audio Drama 3 Preview 并列，领先 Eleven v4 的 91.7%），成为国产开源 TTS 的重要里程碑。 <a href="https://ai.pconline.com.cn/2183/21839837.html" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-10-28') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
