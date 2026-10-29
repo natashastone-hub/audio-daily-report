@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-29",
+  "papers": [
+    {
+      "title": "StreamSE: Neural Audio Codec-based Streaming Speech Enhancement for On-device Inference",
+      "url": "https://arxiv.org/abs/2610.37024",
+      "date": "2026-10-28",
+      "authors": "Hyunjin Choi, Zinu Kim, Junwon Moon, Jeongyun Chae, Seungbeom Kim, Kyuhong Shim",
+      "abstract": "提出 StreamSE，一种基于神经音频编解码器（Neural Audio Codec）的流式语音增强方法，专为端侧（on-device）推理设计。该方法将语音增强与神经音频编解码器结合，在流式处理场景下实现低延迟、低开销的语音增强，同时保持与下游语音任务良好的兼容性，为移动端/边缘设备的实时语音增强提供了新方案。",
+      "tags": ["Speech Enhancement", "Neural Audio Codec", "Streaming", "On-device"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.37024"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.37024"}
+      ]
+    },
+    {
+      "title": "S3-S2ST: Semantically Supervised Streaming Speech-to-Speech Translation",
+      "url": "https://arxiv.org/abs/2610.36777",
+      "date": "2026-10-28",
+      "authors": "Yuxiang Zhao, Zhiyun Fan, Yu Pu, Yanjie An, Yushen Chen, Wenrui Li",
+      "abstract": "提出 S3-S2ST，一种语义监督的流式语音到语音翻译（Streaming S2ST）方法。通过引入语义级别的监督信号，在流式（边听边译）场景下提升翻译的语义一致性与翻译质量，解决传统级联式 S2ST 在流式场景中的语义漂移与延迟问题，为实时同声传译 / 语音翻译提供了新的训练范式。已提交 ICASSP 2027。",
+      "tags": ["Speech-to-Speech Translation", "Streaming S2ST", "Simultaneous", "Semantic Supervision"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.36777"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.36777"}
+      ]
+    },
+    {
+      "title": "A Lightweight Dual-Branch Visual Front-End for Efficient Audio-Visual Target Speaker Extraction",
+      "url": "https://arxiv.org/abs/2610.36834",
+      "date": "2026-10-28",
+      "authors": "Zhan et al.",
+      "abstract": "面向流式音视频目标说话人提取（AV-TSE）任务，提出一种轻量级双分支视觉前端（Dual-Branch Visual Front-End）。该方法利用目标说话人的面部信息实时从混合音频中提取其语音，通过在算力受限的端侧设备上降低视觉分支的计算与存储开销，兼顾提取精度与推理效率。已被 NeurIPS 2026 On-Device Intelligence Workshop 接收。",
+      "tags": ["Target Speaker Extraction", "Audio-Visual", "Lightweight", "On-device"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.36834"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.36834"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "声网 iRTE2026：赵斌提出「五级对话能力」框架，全双工语音交互成行业共识方向",
+      "url": "https://www.shengwang.cn/",
+      "summary": "声网（Agora）创始人兼 CEO 赵斌在 iRTE2026 实时智能大会上提出「五级对话能力」框架，认为对话式 AI 正从早期被动接续的交互向更主动、更自然的全双工对话演进。这一框架为实时语音 AI 与 Voice Agent 的能力分级提供了新的行业参照坐标，也从侧面印证了全双工（full-duplex）语音模型已成为 2026 年语音 AI 竞争的核心主线之一。"
+    },
+    {
+      "title": "Google 发布 Gemini 3.8 Flash 系列 TTS：Voice Arena 盲测多语言领先，支持 100+ 语言",
+      "url": "https://baijiahao.baidu.com/s?id=1877139214230961003",
+      "summary": "谷歌推出 Gemini 3.8 系列文本转语音模型（Flash 与 Flash-Lite TTS），在 Voice Arena 盲法人类偏好评估中，于日语、巴西葡萄牙语、越南语、阿拉伯语、墨西哥西班牙语、印地语等多语言上一路领先，并支持 100 多种语言，进一步强化其在全球多语言 TTS 领域的布局。"
+    }
+  ],
+  "note": "2026-10-29（周四）。过去 24 小时窗口（10-28 早至 10-29 早）内，arXiv eess.AS/cs.SD 出现 10-28（周三）新批次（2610.367xx~370xx）。本期交叉验证到 3 篇代表性论文，覆盖端侧流式语音增强、流式语音到语音翻译（同声传译）、音视频目标说话人提取等方向。环境网络层阻断 export.arxiv.org / arxiv.org 直连（web_fetch 与浏览器均 ERR_CONNECTION_CLOSED），已通过 web_search（edge-browser 后端）逐篇交叉验证 ID↔标题↔作者。必搜重磅新闻关键词逐一执行：OpenAI GPT-Live / OpenAI voice model release（GPT-Live 为 7-8 发布，旧闻）、Google Gemini voice（Gemini 3.8 TTS 为 9-23 发布，近一周补录）、full-duplex speech model（命中论文 S3-S2ST 与 StreamSE，属论文非产品发布）、语音模型发布 / real-time voice AI（声网 iRTE2026 全双工框架为 10 月业界动态，补录为新闻）。HuggingFace Daily Papers 未检索到 24h 内新增 audio 标签独立内容，诚实标注。"
+}

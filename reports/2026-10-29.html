@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-10-29</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-10-29</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年10月29日 (周四) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">3</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.37024" target="_blank">StreamSE: Neural Audio Codec-based Streaming Speech Enhancement for On-device Inference</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-28</span><span>👥 Hyunjin Choi, Zinu Kim, Junwon Moon, Jeongyun Chae, Seungbeom Kim, Kyuhong Shim</span></div>
+      <div class="abstract">提出 StreamSE，一种基于神经音频编解码器（Neural Audio Codec）的流式语音增强方法，专为端侧（on-device）推理设计。该方法将语音增强与神经音频编解码器结合，在流式处理场景下实现低延迟、低开销的语音增强，同时保持与下游语音任务良好的兼容性，为移动端/边缘设备的实时语音增强提供了新方案。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Neural Audio Codec</span><span class="tag">Streaming</span><span class="tag">On-device</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.37024" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.37024" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.36777" target="_blank">S3-S2ST: Semantically Supervised Streaming Speech-to-Speech Translation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-28</span><span>👥 Yuxiang Zhao, Zhiyun Fan, Yu Pu, Yanjie An, Yushen Chen, Wenrui Li</span></div>
+      <div class="abstract">提出 S3-S2ST，一种语义监督的流式语音到语音翻译（Streaming S2ST）方法。通过引入语义级别的监督信号，在流式（边听边译）场景下提升翻译的语义一致性与翻译质量，解决传统级联式 S2ST 在流式场景中的语义漂移与延迟问题，为实时同声传译 / 语音翻译提供了新的训练范式。已提交 ICASSP 2027。</div>
+      <div class="tags"><span class="tag">Speech-to-Speech Translation</span><span class="tag">Streaming S2ST</span><span class="tag">Simultaneous</span><span class="tag">Semantic Supervision</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.36777" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.36777" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.36834" target="_blank">A Lightweight Dual-Branch Visual Front-End for Efficient Audio-Visual Target Speaker Extraction</a></h4>
+      <div class="meta"><span>📅 2026-10-28</span><span>👥 Zhan et al.</span></div>
+      <div class="abstract">面向流式音视频目标说话人提取（AV-TSE）任务，提出一种轻量级双分支视觉前端（Dual-Branch Visual Front-End）。该方法利用目标说话人的面部信息实时从混合音频中提取其语音，通过在算力受限的端侧设备上降低视觉分支的计算与存储开销，兼顾提取精度与推理效率。已被 NeurIPS 2026 On-Device Intelligence Workshop 接收。</div>
+      <div class="tags"><span class="tag">Target Speaker Extraction</span><span class="tag">Audio-Visual</span><span class="tag">Lightweight</span><span class="tag">On-device</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.36834" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.36834" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>声网 iRTE2026：赵斌提出「五级对话能力」框架，全双工语音交互成行业共识方向</h4>
+      <p>声网（Agora）创始人兼 CEO 赵斌在 iRTE2026 实时智能大会上提出「五级对话能力」框架，认为对话式 AI 正从早期被动接续的交互向更主动、更自然的全双工对话演进。这一框架为实时语音 AI 与 Voice Agent 的能力分级提供了新的行业参照坐标，也从侧面印证了全双工（full-duplex）语音模型已成为 2026 年语音 AI 竞争的核心主线之一。 <a href="https://www.shengwang.cn/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Google 发布 Gemini 3.8 Flash 系列 TTS：Voice Arena 盲测多语言领先，支持 100+ 语言</h4>
+      <p>谷歌推出 Gemini 3.8 系列文本转语音模型（Flash 与 Flash-Lite TTS），在 Voice Arena 盲法人类偏好评估中，于日语、巴西葡萄牙语、越南语、阿拉伯语、墨西哥西班牙语、印地语等多语言上一路领先，并支持 100 多种语言，进一步强化其在全球多语言 TTS 领域的布局。 <a href="https://baijiahao.baidu.com/s?id=1877139214230961003" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-10-29') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
