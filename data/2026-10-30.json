@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-30",
+  "papers": [],
+  "news": [
+    {
+      "title": "Google DeepMind 发布前沿模型 Gemini 4 Carbon，登顶 Artificial Analysis 智能指数",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+      "summary": "Google DeepMind 于 10 月 28-29 日发布新一代前沿模型 Gemini 4 Carbon，在 Artificial Analysis Intelligence Index v5.0 上以 59 分登顶，主打网络安全与长周期（long-horizon）智能体工程能力，可连续数日处理大型代码库并交付高质量代码。作为 Gemini 多模态家族的延续，其原生音频/语音理解与生成能力（Gemini Live/Audio 体系）也同步受益，进一步强化 Google 在「语音即入口」的多模态实时交互布局，两周内两次刷新自建榜单（继 Gemini 4 Argon 之后）。"
+    }
+  ],
+  "note": "2026-10-30（周五）。过去 24 小时窗口（10-29 早至 10-30 早）内，未检索到 arXiv eess.AS / cs.SD 新增的（10-29 提交）论文批次——最新可索引条目仍停留在 10-27/10-28 批次（2610.34xxx~37xxx），该批次已在 10-28 与 10-29 两期日报中完整收录（如 S3-S2ST 流式语音翻译、StreamSE 端侧流式语音增强、全双工打断/反馈语决策等），故本期论文方向诚实标注为「无 24h 内新增内容」。环境网络层阻断 export.arxiv.org / arxiv.org 直连（web_fetch、curl、浏览器均 ERR_CONNECTION_CLOSED / SSL EOF），已通过 web_search（edge-browser 后端）交叉验证。必搜重磅新闻关键词逐一执行：OpenAI GPT-Live / OpenAI voice model release（GPT-Live-1 为 7-9 发布、9-11 API 上线，均为旧闻）；Google Gemini voice（命中 Gemini 4 Carbon，为通用前沿模型而非纯语音发布，仍作为 24h 内唯一的重大模型动态补录）；full-duplex speech model（命中 Block Dessa，10-23 发布，超出 24h 窗口，不纳入）；语音模型发布 / real-time voice AI（科大讯飞 SparkAudio 1.0 为 10-22 发布，亦超窗口）。HuggingFace Daily Papers 未检索到 24h 内新增 audio 标签独立内容，诚实标注。"
+}
