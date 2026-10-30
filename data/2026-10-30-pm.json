@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-30",
+  "papers": [],
+  "news": [
+    {
+      "title": "Anthropic 将 Claude 语音模式接入 Apple CarPlay，语音语种扩至 33 种",
+      "url": "https://baijiahao.baidu.com/s?id=1880444804136738115&wfr=spider&for=pc",
+      "summary": "Anthropic 于 10 月 29 日（美东）发布 Claude 移动应用全平台升级，其中最受关注的是 iPhone 版 Claude 语音模式正式接入 Apple CarPlay——驾驶者无需碰屏即可全程语音调用 AI。本次更新同步覆盖 iPhone、iPad、Android、Chromebook 及网页/桌面端，语音功能支持语种从 9 种扩至 33 种，并显著提升嘈杂环境下的语音识别准确率，另新增多账号切换等功能。这是继 OpenAI GPT-Live、Google Gemini Live 之后，头部模型厂商在「语音即入口」实时交互布局上的又一次重磅推进（Claude Duet 独立应用于 10-21 推出，本次为语音+车载场景的再升级）。"
+    }
+  ],
+  "note": "2026-10-30（周五）下午版。时间窗口（今日 09:30–14:00，约 6 小时）内，仅检索到 1 条语音/Audio 前沿动态：Anthropic Claude 语音模式接入 CarPlay（约 11:00 前后发布，命中窗口）。论文方向：环境网络层仍阻断 export.arxiv.org / arxiv.org 直连（HTTP/HTTPS 均 fetch failed），无法通过 API 拉取 eess.AS / cs.SD 最新批次；已按分级兜底策略执行 web_search 交叉验证（site:arxiv.org eess.AS cs.SD 2610、arxiv.org/abs/2610 audio speech TTS S2ST），均只命中 10-08 至 10-21 的旧批次（2610.11437 / 2610.19499 / 2610.29164 等，均已在此前日报收录），未检索到 6h 内新增论文，故论文方向诚实标注「下午时段暂无新内容」。必搜重磅新闻关键词逐一执行：OpenAI GPT-Live full-duplex voice model（GPT-Live 为 7-9 旧闻）、OpenAI voice model release（命中 GPT-Realtime-2/Translate/Whisper，为早期发布，非 6h 内）、Google Gemini voice（仅通用入口页，无 6h 新发布）、full-duplex speech model（Block Dessa 为 10-23，超出窗口）、语音模型发布（科大讯飞 SparkAudio 1.0 为 10-22 旧闻）、real-time voice AI（无 6h 内新品），除 Claude CarPlay 外均未命中 6h 窗口内的新动向。HuggingFace Daily Papers 未检索到 6h 内 audio 标签新增内容，诚实标注。"
+}
