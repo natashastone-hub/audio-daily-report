@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-31",
+  "papers": [],
+  "news": [],
+  "note": "2026-10-31（周六）下午版。时间窗口为今日 09:30 至 14:00（最近 6 小时）。① arXiv eess.AS / cs.SD 无新增：arxiv 周末不发布新论文批次，且环境网络层仍阻断 export.arxiv.org / arxiv.org 直连（curl schannel SSL/TLS handshake failed、web_fetch fetch failed、浏览器 ERR_CONNECTION_CLOSED），按分级兜底策略已执行 web_search 交叉验证（site:arxiv.org eess.AS cs.SD 2610、HuggingFace Daily Papers），最新可索引条目仍停留在 10-26~10-29 批次（如 2610.38656 Wav2Aug、2610.38316 DRC-TTS、2610.38619 MiDiff），均非 6 小时内新增。② 前沿新闻无 6 小时内新品：唯一命中一条标为『今日 12:07 的 qwen-audio-3.0-tts』实为 7 月 20 日发布的 Qwen-Audio-3.0-TTS 旧闻转载，非当日下午时段的新发布。必搜重磅新闻关键词逐一执行：OpenAI GPT-Live full-duplex voice model（7-9 旧闻）、OpenAI voice model release（旧闻）、Google Gemini voice（旧闻）、full-duplex speech model（旧闻）、语音模型发布（旧闻）、real-time voice AI（旧闻），均无 6 小时内命中。故本期论文 0 篇、新闻 0 条，诚实标注为下午时段空窗期，与早间版保持一致，不做内容重复填充。"
+}
