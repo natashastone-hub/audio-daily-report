@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-31",
+  "papers": [],
+  "news": [],
+  "note": "2026-10-31（周六）。过去 24 小时窗口（10-30 早 09:30 至 10-31 早 09:30）内，未检索到 arXiv eess.AS / cs.SD 新增的（10-30 提交）论文批次。环境网络层仍阻断 export.arxiv.org / arxiv.org 直连（web_fetch、curl 均 HTTPCODE:000 / fetch failed，浏览器 ERR_CONNECTION_CLOSED），已按分级兜底策略执行 web_search 交叉验证：site:arxiv.org eess.AS cs.SD 2610 及 arxiv.org/abs/2610 audio speech TTS S2ST，最新可索引条目仍停留在 10-22 前后批次（2610.39754 流式级联说话人匿名化系统等，以及 10-14 的 2610.19499、10-08 的 2610.11437），均已在早前日报完整收录，故本期论文方向诚实标注「无 24h 内新增内容」。必搜重磅新闻关键词逐一执行：OpenAI GPT-Live full-duplex voice model（GPT-Live 为 7-9 旧闻）、OpenAI voice model release（旧闻）、Google Gemini voice（Gemini 4 Carbon 为 10-28/29 发布，已收录于 10-30 日报，非纯语音发布）、full-duplex speech model（Block Dessa 10-23，超窗口）、语音模型发布（ElevenLabs Realtime v1 为 8 天前、科大讯飞 SparkAudio 1.0 为 10-22，均超窗口）、real-time voice AI（Wispr Flow 融资 10-12、无 24h 内新品）。HuggingFace Daily Papers 未检索到 24h 内新增 audio 标签独立内容。故本期论文 0 篇、新闻 0 条，诚实标注为空窗期。"
+}
