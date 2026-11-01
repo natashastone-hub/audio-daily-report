@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-01",
+  "papers": [],
+  "news": [],
+  "note": "2026-11-01（周日）下午版。时间窗口为今日 09:30 至 14:00（最近约 4.5 小时）。① arXiv eess.AS / cs.SD 无新增：今日为周日，arXiv 周末不发布新论文批次（与 10-31 周六同理），且环境网络层仍阻断 export.arxiv.org / arxiv.org 直连（web_fetch 均返回 fetch failed，与早间版一致）。已按分级兜底策略执行 max_results=15 及 web_search 交叉验证（site:arxiv.org eess.AS cs.SD 2611、HuggingFace audio 标签），最新可索引条目仍停留在 10 月下旬批次（eess.AS/recent 最新为『Discovering Interpretable Acoustic Features in Autoregressive Voice-Cloning TTS Models』等 10 月末条目），无 2611 新批次，非 6 小时内新增。② 前沿新闻无 6 小时内新品：必搜重磅关键词逐一执行——OpenAI GPT-Live full-duplex voice model（GPT-Live 为 2026-07-08 旧闻）、OpenAI voice model release（旧闻）、Google Gemini voice（Gemini 3.8 Flash TTS 为 09-24 发布，超窗口）、full-duplex speech model（JoyAI-Talker 为 08-15、D2/Instruct-FD 为 10 月中旬预印本，均超窗口）、语音模型发布（Grok Voice 3.0 为 10-15、StepAudio 2.5 TTS 为 04-16，超窗口）、real-time voice AI（无 24h 内新命中）。HuggingFace Daily Papers 未检索到 6 小时内新增 audio 标签独立内容。故本期论文 0 篇、新闻 0 条，诚实标注为下午时段空窗期，与早间版（同样 0 篇/0 条）保持一致，不做旧内容重复填充。"
+}
