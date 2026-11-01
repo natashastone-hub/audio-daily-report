@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-01",
+  "papers": [],
+  "news": [],
+  "note": "2026-11-01（周日）。时间窗口为昨日早 09:30 至今日早 09:30（最近 24 小时）。① arXiv eess.AS / cs.SD 无新增：11-01 为周日、10-31 为周六，arXiv 周末不发布新论文批次，且环境网络层仍阻断 export.arxiv.org / arxiv.org 直连（web_fetch 返回 fetch failed，与 10-31 日报一致）。已按分级兜底策略执行 web_search 交叉验证（site:arxiv.org eess.AS cs.SD 2611 及 arxiv.org/abs/2611 audio speech TTS S2ST），最新可索引条目仍停留在 10 月下旬批次（2610.3983、2610.11461 等），无 2611 新批次条目，均已在早前日报完整收录。② 前沿新闻无 24h 内新品：必搜重磅关键词逐一执行——OpenAI GPT-Live full-duplex voice model（GPT-Live 为 2026-07-08 旧闻）、OpenAI voice model release（旧闻）、Google Gemini voice（Gemini 3.8 Flash TTS 为 09-24 发布，超窗口）、full-duplex speech model（NVIDIA PersonaPlex 为 04-19、Soul 为 2025-07，均超窗口）、语音模型发布（Qwen-Audio-3.0-TTS 为 07-20、Seed Audio 1.0 为 07-20，超窗口）、real-time voice AI（无 24h 内新命中）。最新相关动态为 Ollama Mac 语音支持（10-24，8 天前，超窗口）。HuggingFace Daily Papers 未检索到 24h 内新增 audio 标签独立内容（网络层阻断直连，web_fetch fetch failed）。故本期论文 0 篇、新闻 0 条，诚实标注为空窗期，与 10-31 早间/下午版保持一致，不做旧内容重复填充。"
+}
