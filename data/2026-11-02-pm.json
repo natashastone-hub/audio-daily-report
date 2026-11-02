@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-02",
+  "papers": [],
+  "news": [],
+  "note": "2026-11-02（周一）下午版。时间窗口为今日 09:30 至 14:00（最近约 4.5 小时）。① arXiv eess.AS / cs.SD 无新增：环境网络层仍阻断 export.arxiv.org / arxiv.org 直连（web_fetch 返回 fetch failed，与早间版一致）。已按分级兜底策略执行 web_search 交叉验证（site:arxiv.org eess.AS cs.SD 2611、arxiv.org abs 2611 audio speech TTS S2ST），eess.AS/new 与 recent 最新可索引条目仍停留在 10-30 周五批次（AKDQ 2610.39885、Wav2Aug 2610.38656、ESP32-P4 流式 ASR 2610.38739、音乐生成教程 2610.38252，标注『4天前』），均已在本期早间版（2026-11-02.json）补录，非 6 小时内新增。② 前沿新闻无 6 小时内新品：必搜重磅关键词逐一执行——OpenAI GPT-Live full-duplex voice model（GPT-Live 为 2026-07-08 旧闻）、OpenAI voice model release（旧闻）、Google Gemini voice（旧闻）、full-duplex speech model（旧闻）、语音模型发布（英伟达 Nemotron 3.5 Transcribe 为 10-29、科大讯飞 SparkAudio 1.0 为 10-22，均超窗口）、real-time voice AI（无新命中）。早间版已收录的唯一 24h 内新品为 MiniMax 官宣 11 月推出端到端实时语音对话 API（钛媒体）。HuggingFace Daily Papers 因网络阻断无法直连，未检索到 6 小时内新增 audio 标签独立内容。故本期论文 0 篇、新闻 0 条，诚实标注为下午时段空窗期，与早间版保持一致，不做旧内容重复填充。"
+}
