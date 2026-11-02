@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-02",
+  "papers": [
+    {
+      "title": "AKDQ: Adaptive Key-Delta Quantization for Low-Bitrate RVQ-based Neural Speech Codecs",
+      "url": "https://arxiv.org/abs/2610.39885",
+      "date": "2026-10-30",
+      "authors": "Xiao-Hang Jiang, Yang Ai, Zhen-Hua Ling, Ji Wu",
+      "abstract": "针对基于残差向量量化（RVQ）的神经语音编解码器在低码率场景下的量化精度问题，提出 AKDQ（自适应键值-增量量化）方法。该方法自适应地将 RVQ 各层分为关键向量与增量向量，对关键向量分配更多比特、对增量向量做增量式量化，在同等码率下显著提升语音编解码的重建质量与感知指标，已被 IEEE Signal Processing Letters (SPL) 接收。",
+      "tags": ["Neural Speech Codec", "RVQ", "Quantization", "Low-Bitrate"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.39885"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.39885"}
+      ]
+    },
+    {
+      "title": "Wav2Aug: A Drop-In Speech Augmentation Policy",
+      "url": "https://arxiv.org/abs/2610.38656",
+      "date": "2026-10-30",
+      "authors": "Gianfranco Dumoulin Bertucci, Mirco Ravanelli",
+      "abstract": "SpecAugment 是当前主流的语音增强策略，但研究者长期以来对其变体研究不足、实现五花八门。本文提出 Wav2Aug，一个即插即用的统一语音增强策略框架，系统化地比较并整合多种时域/频域增强操作，实现在多个语音识别（ASR）基准上稳定且一致的字错误率（WER）下降，可作为 SpecAugment 的替代或叠加方案。",
+      "tags": ["Speech Augmentation", "ASR", "Speech Recognition"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.38656"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.38656"}
+      ]
+    },
+    {
+      "title": "Streaming Speech Recognition on a Microcontroller: a 65.7M-Parameter Transducer in 2 and 4 Bits on the ESP32-P4",
+      "url": "https://arxiv.org/abs/2610.38739",
+      "date": "2026-10-30",
+      "authors": "Billal Boumedine",
+      "abstract": "探索在资源极度受限的微控制器（MCU）上运行流式语音识别（ASR）的可行性。作者将一个 6570 万参数的流式 Transducer 模型量化为 2 比特和 4 比特，在 ESP32-P4 芯片上实现实时流式语音转写，展示了通过极致量化与高效推理调度，将大规模端到端语音识别模型部署到边缘低成本硬件的技术路径。",
+      "tags": ["Streaming ASR", "Edge AI", "Quantization", "Microcontroller"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.38739"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.38739"}
+      ]
+    },
+    {
+      "title": "A Tutorial on Generative Models for Music Audio",
+      "url": "https://arxiv.org/abs/2610.38252",
+      "date": "2026-10-30",
+      "authors": "Mateusz Modrzejewski, Joanna Kurkowska, Dorien Herremans",
+      "abstract": "一篇面向初学者与从业者的音乐音频生成模型教程，系统梳理了从自回归、扩散模型到流匹配（Flow Matching）等主流音乐生成范式，涵盖符号生成与波形生成两条路线、关键训练技巧与评估方法，为该领域研究者提供了一份从入门到进阶的清晰指南。",
+      "tags": ["Music Generation", "Tutorial", "Diffusion", "Flow Matching"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.38252"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.38252"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "MiniMax 将于 11 月发布端到端实时语音对话 API 产品",
+      "url": "https://www.tmtpost.com/7311267.html",
+      "summary": "钛媒体独家：AI 独角兽 MiniMax 计划在 11 月推出首个端到端实时语音对话 API 服务，能力对标 OpenAI 此前发布的 GPT-4o 语音模式。该产品主打更低延迟、更自然沉浸的实时语音交互，强化端到端多模态实时处理能力，进一步加剧中国大模型厂商在实时语音（full-duplex voice）赛道的竞争。"
+    }
+  ],
+  "note": "2026-11-02（周一）。时间窗口为昨日早 09:30 至今（最近 24 小时）。① 环境网络层仍阻断 export.arxiv.org / arxiv.org 直连（web_fetch、curl、浏览器均 ERR_CONNECTION_CLOSED / fetch failed），已按分级兜底策略执行 web_search 交叉验证。经检索 arXiv eess.AS / cs.SD 最新可索引条目，发现 10-30（周五）提交的一批论文（AKDQ 2610.39885、Wav2Aug 2610.38656、ESP32-P4 流式 ASR 2610.38739、音乐生成教程 2610.38252 等），此前 10-31/11-01 两期日报因网络阻断均只覆盖到 10-22 前后批次，本期予以补录。11-01（周日）arXiv 无新批次。② 前沿新闻：必搜重磅关键词逐一执行，OpenAI GPT-Live full-duplex voice model（GPT-Live 为 2026-07-08 旧闻）、OpenAI voice model release（旧闻）、Google Gemini voice（Gemini 3.8 Flash TTS 为 9 月末，超窗口）、full-duplex speech model（NVIDIA PersonaPlex 等均超窗口）、语音模型发布、real-time voice AI——24h 内唯一相关新品为 MiniMax 官宣 11 月推出端到端实时语音对话 API（钛媒体，本期收录）。HuggingFace Daily Papers 因网络阻断无法直连，未检索到 24h 内新增独立内容。"
+}

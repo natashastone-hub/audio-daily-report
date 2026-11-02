@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-11-02</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-11-02</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年11月2日 (周一) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">4</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.39885" target="_blank">AKDQ: Adaptive Key-Delta Quantization for Low-Bitrate RVQ-based Neural Speech Codecs</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-10-30</span><span>👥 Xiao-Hang Jiang, Yang Ai, Zhen-Hua Ling, Ji Wu</span></div>
+      <div class="abstract">针对基于残差向量量化（RVQ）的神经语音编解码器在低码率场景下的量化精度问题，提出 AKDQ（自适应键值-增量量化）方法。该方法自适应地将 RVQ 各层分为关键向量与增量向量，对关键向量分配更多比特、对增量向量做增量式量化，在同等码率下显著提升语音编解码的重建质量与感知指标，已被 IEEE Signal Processing Letters (SPL) 接收。</div>
+      <div class="tags"><span class="tag">Neural Speech Codec</span><span class="tag">RVQ</span><span class="tag">Quantization</span><span class="tag">Low-Bitrate</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.39885" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.39885" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.38656" target="_blank">Wav2Aug: A Drop-In Speech Augmentation Policy</a></h4>
+      <div class="meta"><span>📅 2026-10-30</span><span>👥 Gianfranco Dumoulin Bertucci, Mirco Ravanelli</span></div>
+      <div class="abstract">SpecAugment 是当前主流的语音增强策略，但研究者长期以来对其变体研究不足、实现五花八门。本文提出 Wav2Aug，一个即插即用的统一语音增强策略框架，系统化地比较并整合多种时域/频域增强操作，实现在多个语音识别（ASR）基准上稳定且一致的字错误率（WER）下降，可作为 SpecAugment 的替代或叠加方案。</div>
+      <div class="tags"><span class="tag">Speech Augmentation</span><span class="tag">ASR</span><span class="tag">Speech Recognition</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.38656" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.38656" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.38739" target="_blank">Streaming Speech Recognition on a Microcontroller: a 65.7M-Parameter Transducer in 2 and 4 Bits on the ESP32-P4</a></h4>
+      <div class="meta"><span>📅 2026-10-30</span><span>👥 Billal Boumedine</span></div>
+      <div class="abstract">探索在资源极度受限的微控制器（MCU）上运行流式语音识别（ASR）的可行性。作者将一个 6570 万参数的流式 Transducer 模型量化为 2 比特和 4 比特，在 ESP32-P4 芯片上实现实时流式语音转写，展示了通过极致量化与高效推理调度，将大规模端到端语音识别模型部署到边缘低成本硬件的技术路径。</div>
+      <div class="tags"><span class="tag">Streaming ASR</span><span class="tag">Edge AI</span><span class="tag">Quantization</span><span class="tag">Microcontroller</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.38739" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.38739" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.38252" target="_blank">A Tutorial on Generative Models for Music Audio</a></h4>
+      <div class="meta"><span>📅 2026-10-30</span><span>👥 Mateusz Modrzejewski, Joanna Kurkowska, Dorien Herremans</span></div>
+      <div class="abstract">一篇面向初学者与从业者的音乐音频生成模型教程，系统梳理了从自回归、扩散模型到流匹配（Flow Matching）等主流音乐生成范式，涵盖符号生成与波形生成两条路线、关键训练技巧与评估方法，为该领域研究者提供了一份从入门到进阶的清晰指南。</div>
+      <div class="tags"><span class="tag">Music Generation</span><span class="tag">Tutorial</span><span class="tag">Diffusion</span><span class="tag">Flow Matching</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.38252" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.38252" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>MiniMax 将于 11 月发布端到端实时语音对话 API 产品</h4>
+      <p>钛媒体独家：AI 独角兽 MiniMax 计划在 11 月推出首个端到端实时语音对话 API 服务，能力对标 OpenAI 此前发布的 GPT-4o 语音模式。该产品主打更低延迟、更自然沉浸的实时语音交互，强化端到端多模态实时处理能力，进一步加剧中国大模型厂商在实时语音（full-duplex voice）赛道的竞争。 <a href="https://www.tmtpost.com/7311267.html" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-11-02') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
