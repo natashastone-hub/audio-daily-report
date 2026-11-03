@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-03",
+  "papers": [],
+  "news": [],
+  "note": "2026-11-03（周二）。时间窗口为昨日早 09:30 至今（最近 24 小时，即 11-02 09:30 ~ 11-03 09:34）。① 环境网络层持续阻断 export.arxiv.org / arxiv.org 直连（web_fetch、curl 均 fetch failed / ERR_CONNECTION_CLOSED），已按分级兜底策略执行多轮 web_search 交叉验证（site:arxiv.org 2611、arxiv 2611.01/2611.02、arXiv eess.AS/cs.SD recent 等）。搜索引擎可索引的 arXiv 最新条目仍停留在 2610.XXXXX 批次（最新可见 arXiv:2610.41539「Scalable Audio-LLM System for Speech MOS Evaluation: A Diagnostic Case Study」，cs.SD cross-list），未检索到 2611.XXXXX 新批次的 eess.AS / cs.SD 论文。据此判断 24 小时内无可确认的 arXiv 新论文，避免用旧内容填充。② 前沿新闻：必搜重磅关键词逐一执行 —— OpenAI GPT-Live full-duplex voice model（GPT-Live 系 2026-07-08 旧闻，超窗口）、OpenAI voice model release（旧闻）、Google Gemini voice（Gemini 3.x Flash TTS 等均超窗口）、full-duplex speech model（NVIDIA PersonaPlex 等超窗口）、语音模型发布、real-time voice AI —— 24 小时内未命中新的语音/Audio 领域产品发布。③ HuggingFace Daily Papers 因网络阻断无法直连，未检索到 24 小时内新增独立内容。本期诚实标注：各项均无 24 小时内的新增可收录内容。"
+}
