@@ -1,0 +1,57 @@
+{
+  "papers": [
+    {
+      "title": "VIPBench: A Human-Aligned Benchmark for Voice Identity Perception in the Age of Voice Cloning",
+      "url": "https://arxiv.org/abs/2611.05638",
+      "date": "2026-11-05",
+      "authors": "Xudong Tang, Matthew Groh",
+      "abstract": "随着声音克隆技术的成熟，评估人类如何感知合成语音中的「声音身份」变得愈发重要。VIPBench 提出一个与人类感知对齐的声音身份评测基准，系统衡量人类在声音克隆时代对语音身份的感知能力，弥补了现有评测仅关注声学相似度而忽略主观身份感知的问题。该工作已被 NeurIPS 2026 Datasets and Benchmarks 赛道接收。",
+      "tags": ["Voice Cloning", "Voice Identity", "Benchmark", "NeurIPS 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.05638"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.05638"}
+      ]
+    },
+    {
+      "title": "CAST-Bench: Tracing Every Sound to Its Source in Multi-Shot Audio-Video Generation",
+      "url": "https://arxiv.org/abs/2611.05422",
+      "date": "2026-11-05",
+      "authors": "Yucong Liu, Qi Tian, Shuyuan Tu, Kaihang Pan, Weijie Kong, Chao Pan",
+      "abstract": "针对多镜头音视频生成中的声源归属难题，CAST-Bench 提出将每个声音追溯到其对应视觉来源的评测基准。在多镜头、多对象的音视频生成场景下，验证模型是否能为每个声音准确关联到正确的发声源，为可控音视频生成与声源一致性提供了新的评估手段。",
+      "tags": ["Audio-Video Generation", "Sound Attribution", "Benchmark"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.05422"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.05422"}
+      ]
+    },
+    {
+      "title": "LibriSpeech-Real-QA: A Benchmark for Streaming Question Answering",
+      "url": "https://arxiv.org/abs/2611.06496",
+      "date": "2026-11-05",
+      "authors": "Zewen Zhan, Hui Lu, Xueyuan Chen, Huimeng Wang, Yikai Huang, Xixin Wu, Shiyin Kang, Bin Xia",
+      "abstract": "面向流式语音问答场景，提出 LibriSpeech-Real-QA 基准，用于评测模型在实时流式语音输入条件下的问答能力。关注语音大模型在流式场景下如何边听边答、在信息尚未完整时进行增量理解与回答，为实时语音问答系统的评测提供了标准化基准。",
+      "tags": ["Streaming QA", "Speech Understanding", "Benchmark"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.06496"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.06496"}
+      ]
+    },
+    {
+      "title": "NepTTS-Bench: Native-Speaker Benchmarking and NepaliMOS for Nepali Text-to-Speech",
+      "url": "https://arxiv.org/abs/2611.03718",
+      "date": "2026-11-04",
+      "authors": "Ashish Thapa, Rupak Ghimire, Lekhnath Sharma Pathak",
+      "abstract": "针对尼泊尔语语音合成评测资源匮乏的问题，提出 NepTTS-Bench，一个以母语者为核心的尼泊尔语 TTS 评测基准，并贡献 NepaliMOS 主观评分数据集。通过母语者标注与系统化评测流程，为低资源语言的语音合成质量评估提供了可靠的工具与数据集。",
+      "tags": ["Low-Resource TTS", "Nepali", "Benchmark", "Multilingual"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.03718"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.03718"}
+      ]
+    }
+  ],
+  "news": []
+}
