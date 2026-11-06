@@ -1,0 +1,63 @@
+{
+  "papers": [
+    {
+      "title": "VeriSpoof: Beyond Real or Fake with One Audio LLM",
+      "url": "https://arxiv.org/abs/2611.04634",
+      "date": "2026-11-05",
+      "authors": "Yang Xiao, Ting Dang",
+      "abstract": "提出 VeriSpoof，一个统一的音频 LLM 用于语音深度伪造检测与取证。传统的语音深伪检测器只能判断一段录音是否为合成，而取证分析还需要回答更深层的问题：是哪个系统生成的、录音之间是否同源、以及支持这些结论的证据是什么。VeriSpoof 用单个音频大语言模型超越了简单的真/假二分类，能够同时输出归属判断、来源关联与可解释的证据，为语音深伪取证提供了一站式方案。",
+      "tags": ["Audio Deepfake Detection", "Audio LLM", "Forensics"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.04634"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.04634"}
+      ]
+    },
+    {
+      "title": "Cross-Codec Robustness in Speech Watermarking",
+      "url": "https://arxiv.org/abs/2611.04716",
+      "date": "2026-11-05",
+      "authors": "Olli-Pekka Pauna, Xin Wang, Lauri Juvela",
+      "abstract": "研究语音水印在跨编解码条件下的鲁棒性。语音水印是追踪 AIGC 语音来源、对抗伪造的关键技术，但现实中音频往往经过多次不同编解码器的转码，导致水印信息丢失。本文系统评估现有语音水印方法在不同神经音频编解码器之间的鲁棒性表现，并提出增强跨编解码鲁棒性的策略，已投稿 ICASSP 2027。",
+      "tags": ["Speech Watermarking", "Audio Codec", "Robustness", "ICASSP 2027"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.04716"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.04716"}
+      ]
+    },
+    {
+      "title": "Attendance-guided speaker enrollment across meetings",
+      "url": "https://arxiv.org/abs/2611.04394",
+      "date": "2026-11-05",
+      "authors": "Minjae Lee, Hee-Soo Heo, Youngki Kwon, Bong-Jin Lee",
+      "abstract": "提出一种面向跨会议场景的出席引导说话人注册方法。在会议说话人识别中，如何利用已知参会人员名单来辅助跨会议说话人注册是一项核心难题。本文利用会议出席信息作为先验，引导说话人嵌入的注册过程，从而提升跨会议说话人识别与日志的准确率，已投稿 ICASSP 2027。",
+      "tags": ["Speaker Recognition", "Speaker Diarization", "ICASSP 2027"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.04394"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.04394"}
+      ]
+    },
+    {
+      "title": "ResMamba: A Dual-Path Convolution-Mamba Model for Music Genre Classification",
+      "url": "https://arxiv.org/abs/2611.00746",
+      "date": "2026-11-02",
+      "authors": "Yingyu Zhang, Pu Qu",
+      "abstract": "提出 ResMamba，一种双路径卷积-Mamba 模型用于音乐流派分类。结合卷积的局部特征提取能力与 Mamba（状态空间模型）的线性复杂度长程建模优势，用双路径架构并行捕捉音乐信号的时频局部细节与全局时序依赖，在音乐流派分类任务上取得优于纯卷积与纯 Mamba 基线的表现。",
+      "tags": ["Music Classification", "Mamba", "Audio Recognition"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.00746"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.00746"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "腾讯 IEGG 开源多语言端到端语音同传大模型 iegg-streaming-si-0.6B",
+      "url": "https://km.woa.com/articles/show/670419",
+      "summary": "IEGG 开源司内首个多语言端到端语音同传大模型 iegg-streaming-si-0.6B，首播延迟低至 1.28 秒，翻译质量接近闭源系统。相比传统 ASR→MT→TTS 级联方案，端到端架构避免了延迟累积、错误传递与声音特征缺失等问题，面向多人在线游戏与多语言会议等实时跨语言场景。"
+    }
+  ]
+}
