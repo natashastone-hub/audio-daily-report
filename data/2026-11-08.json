@@ -1,0 +1,121 @@
+{
+  "papers": [
+    {
+      "title": "TTSonic: A Unified Framework for Composable and Controllable Speech Generation",
+      "url": "https://arxiv.org/abs/2611.04282",
+      "date": "2026-11-04",
+      "authors": "Zhedong Zhang, Kaiwen Zhou, Junyan Wu, Shengqiang Li, Xuran Chi, Xingui Zeng, Rui Yan, Xu Chen",
+      "abstract": "提出 TTSonic，一个统一的语音生成框架，支持可组合、可控的语音合成。通过统一的架构将声学建模、韵律控制与生成解耦为可组合模块，实现细粒度的语音属性控制，并附有演示页面。",
+      "tags": ["TTS", "Controllable Generation", "Unified Framework"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2611.04282"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2611.04282"}]
+    },
+    {
+      "title": "Route-DMD: Distribution Matching Distillation with Task-Routed Mechanism for Speech Foundation Models",
+      "url": "https://arxiv.org/abs/2611.08011",
+      "date": "2026-11-06",
+      "authors": "Yanru Huo, Zhikang Niu, Wenming Tu, Junxi Liu, Tian Tan, Shan Yang, Yipeng Kang, Ziyang Ma, Xie Chen, Zilong Zheng",
+      "abstract": "提出 Route-DMD，将分布匹配蒸馏（DMD）与任务路由机制结合，用于语音基础模型的加速。通过任务路由分配不同蒸馏路径，在多任务语音场景下高效地压缩大模型推理成本，同时保持生成质量。",
+      "tags": ["Speech Foundation Model", "Distillation", "Acceleration"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2611.08011"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2611.08011"}]
+    },
+    {
+      "title": "VoxCanvas-41M: A Large-Scale Bilingual Dataset for Instruction-Based Speech Editing and Its Learning Dynamics",
+      "url": "https://arxiv.org/abs/2611.08251",
+      "date": "2026-11-06",
+      "authors": "Zhikang Niu, Wenming Tu, Yalin Li, Yanru Huo, Junxi Liu, Tianrui Wang, Ruiqi Yan, Junxuan Liang, Ziyang Ma, Zilong Zheng, Xie Chen",
+      "abstract": "发布 VoxCanvas-41M，一个大规模双语（中英）指令式语音编辑数据集，并系统分析其学习动态。为指令驱动的语音编辑任务提供了高质量训练数据与 scaling/学习行为洞察，附项目页面。",
+      "tags": ["Speech Editing", "Dataset", "Bilingual"],
+      "highlight": true,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2611.08251"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2611.08251"}]
+    },
+    {
+      "title": "VeriSpoof: Beyond Real or Fake with One Audio LLM",
+      "url": "https://arxiv.org/abs/2611.04634",
+      "date": "2026-11-04",
+      "authors": "Yang Xiao, Ting Dang",
+      "abstract": "提出 VeriSpoof，基于单个音频大语言模型（Audio LLM）超越简单的\"真/假\"二分类，实现更深层次的语音伪造检测与归因。利用 LLM 的语义与声学联合理解能力，对音频真实性进行更细粒度的判定与分析。",
+      "tags": ["Audio LLM", "Spoof Detection", "Deepfake"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2611.04634"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2611.04634"}]
+    },
+    {
+      "title": "Detector-Guided Vocoder Training for Adversarial Text-to-Speech Synthesis",
+      "url": "https://arxiv.org/abs/2611.04511",
+      "date": "2026-11-03",
+      "authors": "Jiayan Cui, Davide Salvi, Paolo Bestagini, Stefano Tubaro",
+      "abstract": "提出一种面向语音 deepfake 检测系统的对抗性 TTS 框架，将检测器集成到 Vocoder 训练循环中，生成本质上具有对抗性的合成语音，无需后处理扰动即可降低检测器可靠性，同时主观听感测试显示合成质量反而有所提升。已被 WIFS 2026 接收。",
+      "tags": ["Adversarial TTS", "Deepfake", "Security", "Vocoder"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2611.04511"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2611.04511"}]
+    },
+    {
+      "title": "SciPhi-Chat: Training a Spatial Audio Agent for Question Answering, Dialogue, and Tool Use",
+      "url": "https://arxiv.org/abs/2611.04114",
+      "date": "2026-11-04",
+      "authors": "Gijs Wijngaard, Hannes Gamper, Sebastian Braun",
+      "abstract": "提出 SciPhi-Chat，训练一个面向空间音频的智能体，具备问答、对话与工具使用能力。将空间音频理解与 LLM 智能体结合，服务沉浸式音频与声学场景交互应用。",
+      "tags": ["Spatial Audio", "Audio Agent", "LLM"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2611.04114"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2611.04114"}]
+    },
+    {
+      "title": "Zero-Shot Voice Cloning for Synthetic Data Augmentation in Children's ASR",
+      "url": "https://arxiv.org/abs/2611.03050",
+      "date": "2026-11-02",
+      "authors": "Mohammad Mohsen Goodarzi, et al.",
+      "abstract": "研究零样本 TTS 语音克隆（OmniVoice）为儿童 ASR 合成数据增强。合成数据单独即可将 ENNI 上 WER 从 19.8% 降至 16.4%，合成+真实数据组合几乎等同纯真实数据微调效果。已被 IEEE MMSP 2026 接收。",
+      "tags": ["ASR", "Voice Cloning", "Data Augmentation", "Children's Speech"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2611.03050"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2611.03050"}]
+    },
+    {
+      "title": "SubRoformer: Subband Time-Domain Representation for Music Source Separation",
+      "url": "https://arxiv.org/abs/2611.08130",
+      "date": "2026-11-06",
+      "authors": "Chunyat Wu, Chuang Ding, Paris Smaragdis, Qiuqiang Kong",
+      "abstract": "提出 SubRoformer，基于子带时域表示的 Transformer 架构用于音乐源分离，在保留时域细节的同时降低计算成本，为音乐源分离任务提供了新的高效表示方案。",
+      "tags": ["Music Source Separation", "Transformer", "Subband"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2611.08130"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2611.08130"}]
+    },
+    {
+      "title": "ProCraft: Instruction-Driven Music Production from Free-Form Text",
+      "url": "https://arxiv.org/abs/2611.07423",
+      "date": "2026-11-06",
+      "authors": "Yuan-Chiao Cheng, Yi-Hsuan Yang, Vincent K.M. Cheung",
+      "abstract": "提出 ProCraft，从自由文本指令驱动音乐制作，将自然语言指令映射到结构化音乐编排与制作流程，推进指令式音乐生成与创作的可控性。",
+      "tags": ["Music Production", "Text-to-Music", "Instruction"],
+      "highlight": false,
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2611.07423"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2611.07423"}]
+    }
+  ],
+  "news": [
+    {
+      "title": "宇生月伴 Luna-TTS 登顶 Hugging Face TTS Arena 全球第一",
+      "url": "https://www.yuhang.gov.cn/col/col1532133/art/2026/art_5c76fc39c916405f86e618a55bbed385.html",
+      "summary": "余杭初创企业宇生月伴（VUI Labs）自研语音生成模型 Luna-TTS 在 Hugging Face TTS Arena 盲听竞技场登顶全球第一，超越 ElevenLabs、Cartesia、Hume 等主流模型；在 Artificial Analysis 榜单也位列全球第三。支持情绪化表达、多角色声线切换，并内置声音鉴伪模型防诈骗。"
+    },
+    {
+      "title": "NVIDIA Nemotron 3.5 Transcribe 发布：开源 40 语言多说话人转写模型",
+      "url": "https://www.artiverse.ca/open-audio-models-push-voice-cloning-and-transcription-forward",
+      "summary": "NVIDIA 发布开源 300 亿参数转写模型 Nemotron 3.5 Transcribe，支持最长 1 小时录音、最多 8 说话人分离、31 语言与英文互译，可在 Jetson AGX Thor 到 Blackwell 单芯片上运行（面向录音，非实时流）。"
+    },
+    {
+      "title": "Edge0 发布 Audio8-TTS-Realistic：6 亿参数零样本声音克隆开源模型",
+      "url": "https://www.artiverse.ca/open-audio-models-push-voice-cloning-and-transcription-forward",
+      "summary": "Edge0 发布 0.6B 参数开源 TTS 模型 Audio8-TTS-Realistic，支持 23 语言零样本声音克隆，基于 DualAR 双自回归架构（受 Fish Audio S2 Pro 启发），采用 GRPO + 真实度批评器训练，Apache 2.0 协议开源，可在 Apple M2 上 INT4 推理。"
+    },
+    {
+      "title": "NVIDIA NeMo 发布 T5-TTS：文本到语音新突破",
+      "url": "https://developer.nvidia.com/blog/tag/speech-ai/",
+      "summary": "NVIDIA NeMo 发布 T5-TTS 模型，将 T5 文本编码器引入语音合成管线，在自然度与可控性上实现显著提升，进一步丰富开源 TTS 生态。"
+    },
+    {
+      "title": "ollama v0.40.11 上线：macOS 原生语音生成",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzUzMTc3NzQzNA==&mid=2247506531&idx=1&sn=1fef198fab40a4e824fe7a0657a2cc69",
+      "summary": "ollama v0.40.11 发布，macOS 端上线原生语音生成能力，将本地语音输出引入开源大模型运行时生态，降低本地语音应用门槛。"
+    }
+  ]
+}
