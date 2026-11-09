@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-11-09</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-11-09</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年11月9日 (周一) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">6</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.08092" target="_blank">E-Gaborformer, a Strictly Causal Speech Recognizer with Gabor-Dictionary Convolutions and Delta-Rule Memory</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-05</span><span>👥 Nir Krakowski, Tamir Cohen, Ohad Zohar, Chen Zarfati</span></div>
+      <div class="abstract">提出 E-Gaborformer：严格因果（不看未来音频）的流式语音识别编码器，用门控 DeltaNet-2 循环层与滑窗注意力按 3:1 混合，所有时域卷积都由固定的因果 Gabor 原子字典构建。流式状态恒定（生产规模下约 19MB/通话，同尺寸因果注意力编码器十分钟后超 1GB）。LibriSpeech 受控实验中最快提前 18% 达到目标精度；生产环境 0.6B 希伯来语+英语流式 transducer 相比同尺寸 NVIDIA Nemotron 3.5 ASR Streaming 在英语语音智能体流量上 WER 低 28-31%，希伯来语 WER 相对旧生产系统低至多 20%，同一套权重可同时服务严格因果与 480ms 前瞻解码。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Streaming</span><span class="tag">Causal Encoder</span><span class="tag">Gated DeltaNet</span><span class="tag">Production</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.08092" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.08092" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.08695" target="_blank">FoleyForge: Free-form, Controllable, Rectified-flow Editing of Sound Effects</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-05</span><span>👥 Giovana Morais, Hugo Flores García, Prem Seetharaman, et al.</span></div>
+      <div class="abstract">提出 FoleyForge：面向音效（sound effects）的指令驱动编辑生成模型——给一段音频和一句自由文本指令，在保持原音频身份的前提下完成语义、风格或类 DSP 的修改，单一模型覆盖全部编辑类型。由于公开音频编辑数据缺失，作者用音频语言模型自动构造「DSP 声学编辑 + 相似性保持语义编辑」数据，再用其微调 rectified-flow 音频生成模型，并把响度变化、编辑强度、输入派生的轮廓包络做成可经 CFG 调节的属性控制。指令遵循度达 SOTA，音质与源保真度有竞争力。</div>
+      <div class="tags"><span class="tag">Audio Editing</span><span class="tag">Sound Effects</span><span class="tag">Rectified Flow</span><span class="tag">Instruction Following</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.08695" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.08695" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.08972" target="_blank">AccentCanvas: Activity-Guided Bidirectional Accent Conversion</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-06</span><span>👥 Jaehun Kim, Kang Zhang, Sung Woo Kim, et al.</span></div>
+      <div class="abstract">提出 AccentCanvas：一个共享的离散扩散模型，同时做「口音归一化」和「L1→L2 口音转换」，用于配音场景（要改发音但保留内容、音色与原始时间对齐）。训练数据为跨配对同 prompt 录音与合成配对；用帧级语音活动与保重复单元在合成过程中引导局部时长。两项任务上口音转换效果（Accent Arrival）与听感口音相似度均为最优，语音边界误差比最强基线低 73% 以上；代价是 L1→L2 的 WER 高于 TokAN / Vevo-Style，揭示了「口音相似度」与「可识别度」之间的取舍。</div>
+      <div class="tags"><span class="tag">Accent Conversion</span><span class="tag">Discrete Diffusion</span><span class="tag">Dubbing</span><span class="tag">Speech Editing</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.08972" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.08972" target="_blank">🔗 PDF</a> <a href="https://smokedindia.github.io/accentcanvas/" target="_blank">🔗 Demo</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.08758" target="_blank">Conflict-Aware Meta-Learning for Generalizable Speech Deepfake Detection</a></h4>
+      <div class="meta"><span>📅 2026-11-05</span><span>👥 Siqing Qin, Kong Aik Lee, Youzhi TU, et al.</span></div>
+      <div class="abstract">针对基于大自监督前端语音伪造检测器在域偏移（未见合成器、传输编解码、陌声声学环境）下退化的问题，提出冲突感知元学习框架 CAML：base-DGS 用非对称投影把 meta-train 梯度作为主锚点；EMA-DGS 用指数滑动平均的稳定锚点减少域偏移引发的梯度冲突；LW-DGS 把干预细化到逐层参数张量。在多个跨数据集基准与架构上多数设置 EER 优于基线，最大相对改善 45.2%。</div>
+      <div class="tags"><span class="tag">Deepfake Detection</span><span class="tag">Domain Generalization</span><span class="tag">Meta-Learning</span><span class="tag">Speech Security</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.08758" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.08758" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.08791" target="_blank">AircraftWitness: How Often Aircraft Can Locate Recordings</a></h4>
+      <div class="meta"><span>📅 2026-11-05</span><span>👥 Kris Atallah</span></div>
+      <div class="abstract">研究「头顶飞过的飞机能否定位录音地点」：螺旋桨/旋翼在音频中留下多普勒曲线，公开 ADS-B 档案记录装有设备的飞机。作者做了预注册、带时间戳盲测：24 个新地点、录音端自带时钟、300 秒容差、20km 见方区域内，三个定位器中最好的一个在 4 个地点把清晰掠过片段定位到 1km 内（随机猜期望 0.57，校正后 p=0.0065），时间错位或音频互换则全部失败。另在 1600 段随机公开录音上，定位器最多作答 20 次、最多命中 2 次。发布 AircraftWitness 基准与 1170 万条录音的通行标签，附带代码。</div>
+      <div class="tags"><span class="tag">Audio Forensics</span><span class="tag">Geo-localization</span><span class="tag">Benchmark</span><span class="tag">Privacy</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.08791" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.08791" target="_blank">🔗 PDF</a> <a href="https://github.com/nyu-kr/aircraftwitness" target="_blank">🔗 GitHub</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.08966" target="_blank">Concordance-Optimal Continuous Music Emotion Estimation: Variance Decomposition, Dual-Branch Temporal Fusion, and Conformal Prediction Intervals</a></h4>
+      <div class="meta"><span>📅 2026-11-06</span><span>👥 Mohammad Faraz Akhtar, Aditya Parashar, Ayush Jain, et al.</span></div>
+      <div class="abstract">指出连续音乐情绪识别（MER）常用指标「逐帧相关性池化」被曲间差异主导，无法区分「跟着情绪走」与「只会按歌曲平均排序」的模型。作者把标注方差分解为曲间/曲内两部分，用滑窗 Lin 一致性相关系数（CCC）对准曲内动态，并用单一权重 λ 控制取舍（DEAM 1764 首上 λ 从 0→1：池化 Arousal r 0.843→0.810，曲内平均 r 0.204→0.368）。据此提出开源模型 MMAS：冻结 MERT-v1-95M 嵌入 + 自动转谱得到的十维符号特征，双分支时序卷积 + 跨模态注意力，每 0.5s 预测 Arousal/Valence，支持 DEAM 与 PMEmo 联合训练，并给出 split-conformal 置信区间（93.7% / 90.0% 覆盖率）。</div>
+      <div class="tags"><span class="tag">Music Emotion Recognition</span><span class="tag">Evaluation Metric</span><span class="tag">Conformal Prediction</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.08966" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.08966" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>Shizuku AI 发布 Shizuku-Duplex：80ms 心跳的日文全双工语音模型，支持后台工具调用</h4>
+      <p>日本初创 Shizuku AI 于 11 月 8 日发布 Shizuku-Duplex，称其为除 OpenAI GPT-Live 之外首个具备智能对话能力的日文全双工模型。核心设计：80ms 一个 tick，每个 tick 同时听与说（用 TensorRT/Triton 优化保证单 tick <80ms 实时预算）；先以文本形式生成「内心独白」再合成语音，从而自行决定何时开口/何时沉默；交互模型 + 后台模型双脑结构，遇到搜索或重推理时输出 DELEGATE token 交给后台工具模型，前台继续对话（示例中 web 搜索耗时 7.1s 而对话未中断）；每约 5 分钟自动压缩上下文（auto-compaction），切换在单 tick 内完成。自建日文全双工评测集（内容打分由 Claude Opus 5.5 担任裁判）显示：六模型中对话自然度最高，六项轮次转换指标中五项为全双工模型最优，响应内容仅次于 GPT-Live；语音结束到回复中位延迟 0.57s（GPT-Live 0.53s、Gemini Live 1.27s、GPT-Realtime 1.61s）。注意均为厂商自评，权重未开源。 <a href="https://shizuku.ai/en/blog/1/" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-11-09') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
