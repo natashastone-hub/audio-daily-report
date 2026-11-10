@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-11-10</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-11-10</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年11月10日 (周二) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">14</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">5</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.09275" target="_blank">AudioSphere: Towards Self-Supervised Spatial Audio Representation Models</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-06</span><span>👥 Goksenin Yuksel, Marcel van Gerven, Kiki van der Heijden</span></div>
+      <div class="abstract">现有音频嵌入模型几乎只处理单声道信号，对空间结构「失明」；而空间音频模型虽能捕捉方向信息，却依赖片段级监督或对比目标，得到的表示无法用于声音事件检测与定位（SELD）等帧级任务。作者提出 AudioSphere，一个在 Ambisonics 录音上训练的多通道掩码自编码器，通过联合时空掩码策略同时掩蔽时频块与强度矢量，从而重建频谱内容与方向线索。模型同时支持帧级预测与片段级任务，是迈向通用空间音频自监督表示的一步。</div>
+      <div class="tags"><span class="tag">Spatial Audio</span><span class="tag">Self-Supervised Learning</span><span class="tag">NeurIPS 2026</span><span class="tag">SELD</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.09275" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.09275" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.09140" target="_blank">SPDMX: Large-Scale Open Stem Audio From Symbolic Music</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-06</span><span>👥 Phillip Long, Eduardo Escoto, Julian McAuley, Zachary Novack</span></div>
+      <div class="abstract">音乐领域长期缺少可自由分发的大规模训练音频：版权阻断原始音频共享，而多数任务需要分轨（stem）而非混音。作者提出 SPDMX，把公有领域的 PDMX 乐谱以「听感引导」方式渲染为开放许可的分轨语料，并开源完整渲染流水线：253,982 首歌曲、490,159 条单声道分轨、5,469 小时音频（44.1 kHz，CC BY 4.0），附带对齐 MIDI 与 PDMX 元数据标识，其中 88,403 首（34.8%，2,734 小时）具备多轨监督。这是目前最大的开放许可分轨数据集，为音乐分离、生成与 MIR 研究提供了合规底座。</div>
+      <div class="tags"><span class="tag">Music Dataset</span><span class="tag">Source Separation</span><span class="tag">Open Data</span><span class="tag">Audio Rendering</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.09140" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.09140" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.09057" target="_blank">Real-Time Short-Response Selection for Spoken Dialogue Systems</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-06</span><span>👥 Hien Ohnaka, Kazuyo Onishi, Koichiro Yoshino</span></div>
+      <div class="abstract">要让口语对话系统自然交互，不仅要预测合适的回应时机，还要「掩盖」语言生成与语音合成带来的延迟，让用户感知不到停顿。作者提出实时短回应选择任务，可与现有轮次转换（turn-taking）模型集成：当检测到轮次事件时，系统从预生成候选集中挑选一句短回应先播放，为主回应的生成争取时间。模型用对比学习学习对话上下文到短回应的映射。实验表明该方法能学到符合语境的回应选择，为低延迟自然对话提供了轻量方案。</div>
+      <div class="tags"><span class="tag">Spoken Dialogue</span><span class="tag">Turn-taking</span><span class="tag">Low Latency</span><span class="tag">Contrastive Learning</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.09057" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.09057" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.09351" target="_blank">AUTEUR: Acoustic Plan Learning for Red-Teaming Text-to-Audio Models</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-06</span><span>👥 Jiashu Zhang, Jiaming He, Zheming Zhang, Kaizheng Wang, Bing Li, Zhiyuan Zha, Yi Yu</span></div>
+      <div class="abstract">对文本到音频（T2A）模型做自动化红队测试，需要既能通过文本审核、又能诱出有害声音内容的测试提示。难点在于把目标模型实际产生的「声音」与可复用的测试生成、提示修订连接起来。作者提出声学计划学习（Acoustic Plan Learning）：把测试描述表示为组织前景声音、上下文与嗓音属性的结构化「声学计划」，再用波形反馈训练计划生成器（监督微调 + 强化学习），目标音频模型保持冻结。推理时同一模型生成初始计划并依据反馈修订上下文与嗓音属性、保留前景。在四个目标系统上攻击成功率达 TangoFlux 79.4%、Kling 95.6%，且提示可跨开源/闭源模型迁移，说明存在共通的声学脆弱性。</div>
+      <div class="tags"><span class="tag">Text-to-Audio</span><span class="tag">AI Safety</span><span class="tag">Red-Teaming</span><span class="tag">Reinforcement Learning</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.09351" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.09351" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.09368" target="_blank">AISHELL8-FISHEYE: A Fisheye Audio-Visual Dataset for Target Speaker Extraction with Distortion-Aware Baselines</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-06</span><span>👥 Peijun Yang, Zhan Jin, Juan Liu, Hui Bu, Xiaoyi Qin, Ruyi Gan, Hao Wang, Ming Li</span></div>
+      <div class="abstract">鱼眼相机视野广，但会使面部与唇形几何严重畸变，给音视频目标说话人提取带来新挑战。作者发布 AISHELL8-FISHEYE：47.03 小时语料、94 位普通话说话人，音频与鱼眼/普通相机双路视频同步采集，提供说话人不重叠划分与合成的双人混合，便于在匹配声学条件下可复现评测。基线把唇读编码器与从鱼眼头部姿态估计迁移来的冻结「畸变感知」分支结合：在鱼眼视频上，该分支使适配后的唇编码器 SI-SDRi 从 10.47 dB 提升到 11.84 dB；但若唇编码器保持冻结则无增益，说明视觉侧适配才是关键。与普通相机输入相比仍有明显差距。</div>
+      <div class="tags"><span class="tag">Target Speaker Extraction</span><span class="tag">Audio-Visual</span><span class="tag">Dataset</span><span class="tag">Mandarin</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.09368" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.09368" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.09358" target="_blank">GTCRN-SS: Lightweight Causal Speech Separation with Residual Allocation and Reconstruction Refinement</a></h4>
+      <div class="meta"><span>📅 2026-11-06</span><span>👥 Shao-Chun Hu, Zi-Xiang Lin, Hsin-Min Wang, Jeih-Weih Hung, Hung-Shin Lee</span></div>
+      <div class="abstract">低复杂度因果语音分离既要保留说话人信息，又要在不使用未来帧的前提下合理分配混合信号中的残余能量。作者提出 GTCRN-SS，把紧凑的 GTCRN 增强骨干改造为固定输出通道的分离器：复数掩码估计器将非目标内容导向一个不返回的残差分支，补偿后的语音估计再条件化第二阶段、其最终掩码锚定回原始混合；另用轻量低秩适配器在递归执行间传递因果循环状态，避免再引入一套循环记忆网络。神经图不使用未来帧，只保留中心化 STFT 的固定分析前瞻。在带噪 Libri2Mix 上以不到 1M 参数取得 10.1 dB SDRi / 9.5 dB SI-SNRi，在质量-效率上给出一个新的可用工作点。</div>
+      <div class="tags"><span class="tag">Speech Separation</span><span class="tag">Causal</span><span class="tag">Lightweight</span><span class="tag">ROCLING 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.09358" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.09358" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.09122" target="_blank">Improving Large Audio-Language Model Embedding Baselines for Instruction-Aware Speech Retrieval</a></h4>
+      <div class="meta"><span>📅 2026-11-06</span><span>👥 Chen-An Li, Cheng-Han Chiang, Hung-yi Lee</span></div>
+      <div class="abstract">语音检索要在给定语音查询时找出相关语音文档，但查询本身往往无法表达检索意图（是要找答案，还是匹配说话人）。指令感知检索用自然语言指令表达目标。作者分析发现，不同检索需求偏好大型音频语言模型（LALM）不同音频编码器层的隐状态，于是提出 IRIS-Embed：通过对比训练与指令感知的音频层加权，把 LALM 适配为嵌入模型，并构建约 90 万条真实与合成训练样本，指令覆盖单/多语音属性需求。在指令感知检索基准 INSPIRE 上，IRIS-Embed 稳定优于对应的 LALM 基线。</div>
+      <div class="tags"><span class="tag">Speech Retrieval</span><span class="tag">Audio-Language Model</span><span class="tag">Embedding</span><span class="tag">Contrastive Learning</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.09122" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.09122" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.09295" target="_blank">Bridging Spiking and Continuous Dynamics in Spiking Neural Networks: A Muscle-Inspired Model</a></h4>
+      <div class="meta"><span>📅 2026-11-06</span><span>👥 Maryam Soltani, Philip N. Garner</span></div>
+      <div class="abstract">把脉冲神经网络（SNN）产生的脉冲序列转成连续信号，在生成与回归任务中仍是开放问题。生物系统中类似转换发生在肌肉：肌肉整合神经脉冲产生平滑协调的动作。受此启发，作者提出「肌肉响应模型」——一个生物启发的动力学层，用二阶动力学建模脉冲活动的时间积分，把脉冲序列转换为连续表示。在文本到语音任务上，作者考察脉冲神经元数量与时间分辨率对生成信号质量的影响，发现提升表示容量比提升时间分辨率收益更大。对学到的动力学分析显示，在不显式约束响应类型时，多数神经元收敛到非振荡行为。</div>
+      <div class="tags"><span class="tag">Spiking Neural Network</span><span class="tag">TTS</span><span class="tag">Bio-inspired</span><span class="tag">Dynamics</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.09295" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.09295" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.09199" target="_blank">SAS: Scene-Annotated AudioSet Strong for Joint Scene-Event Analysis</a></h4>
+      <div class="meta"><span>📅 2026-11-06</span><span>👥 Michel Olvera, Paraskevas Stamatiadis, Romain Serizel, Slim Essid</span></div>
+      <div class="abstract">语境对人类听觉感知至关重要：听者会依据所处声环境解释声音以消解歧义，但同时标注「声音事件」与「声场景」的大规模数据集仍然稀缺。作者为 AudioSet Strong 增补了两套分类体系下的片段级场景标注，用于联合场景-事件建模。语料级分析表明，场景身份更多由该场景特有的标志性事件刻画，而非高频出现的事件；把事件共现按场景专属性重新加权后得到的表示更贴合人工构建的分类体系，同时暴露出声学视角与语义视角分歧的场景——这种几何分歧可预测分类错误。</div>
+      <div class="tags"><span class="tag">Audio Dataset</span><span class="tag">Scene Classification</span><span class="tag">Sound Event Detection</span><span class="tag">AudioSet</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.09199" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.09199" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.09279" target="_blank">AnomSep: Bridging Optimization-Based Separation and Deep Neural Refinement for Anomaly Detection with Listenable Explanations</a></h4>
+      <div class="meta"><span>📅 2026-11-06</span><span>👥 Koki Shoda, Jun Younes Louhi Kasahara, Qi An, Atsushi Yamashita</span></div>
+      <div class="abstract">异常声音检测不需要预定义异常类别，但安保人员需要知道「为什么判为异常」才能判断检测是否可信。端到端检测器精度高却只输出标量分数，已有的异常声分离方法能给出可听解释但检测精度有限。作者提出 AnomSep：先用目标环境正常声音学到的字典做优化式分离，得到正常声与异常声的初步估计；再用预训练音频潜空间中的深度神经网络精修这些估计。分离出的异常声即「可听解释」，其能量决定异常分数。在合成与真实混合数据上，分离质量优于基线分离器。</div>
+      <div class="tags"><span class="tag">Anomaly Detection</span><span class="tag">Sound Separation</span><span class="tag">Explainability</span><span class="tag">Acoustic Monitoring</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.09279" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.09279" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.08860" target="_blank">Mind the Divergence: Divergence-Guided Reliability-Aware Fusion and Adaptive LLM Prompting for Conversational Emotion Recognition</a></h4>
+      <div class="meta"><span>📅 2026-11-06</span><span>👥 Jingwen Wang, Jiao Li, Yuhang Qian, Yuyin Wang</span></div>
+      <div class="abstract">对话中的多模态情绪识别（MERC）融合文本、声学与视觉线索判断逐句情绪，但现有方法通常不针对模态间预测分歧的程度自适应处理。真实对话中语义不一致、情绪隐藏、观测噪声与歧义会以不同方式影响各模态证据，且各模态可靠性逐样本变化。作者不逐一识别不一致来源，而是把它们的共同后果建模为同一情绪标签集上各单模态情绪分布之间的预测分歧：分歧越大，无差别融合越容易传播不可靠证据。受 Brunswik 透镜模型启发，提出 MiD-ERC，做分歧引导的可靠性感知融合与自适应 LLM 提示。</div>
+      <div class="tags"><span class="tag">Emotion Recognition</span><span class="tag">Multimodal Fusion</span><span class="tag">Conversational AI</span><span class="tag">LLM Prompting</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.08860" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.08860" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.08818" target="_blank">Fuzzy-FedAvg: Server-Aware Client Selection for Federated Speech Emotion Recognition in Heterogeneous Environments</a></h4>
+      <div class="meta"><span>📅 2026-11-06</span><span>👥 Farrukh Pervez, Siddique Latif, Moid Sandhu, Raja Jurdak</span></div>
+      <div class="abstract">联邦语音情绪识别（SER）面临说话人相关、类别不均衡数据与异构客户端设备的双重挑战。作者提出 Fuzzy-FedAvg：服务器通过模糊 Q-learning 从全局模型反馈中学习「客户端选择权重」（CSW），同一组 CSW 同时用于客户端选择与聚合，对客户端准确率、训练时间与贡献度加权；另设专门的 PCAS 节点以「陈旧度折扣的延迟更新」处理落后节点。在 IEMOCAP 与 CREMA-D 上，严重非 IID 条件下所有配置的 UAR 均优于 FedAvg，并在 22/24 组参与度配置与 10/12 组训练时长配置上整体领先，同时优于 FedProx 与 Oort，并降低累计训练成本。</div>
+      <div class="tags"><span class="tag">Federated Learning</span><span class="tag">Speech Emotion Recognition</span><span class="tag">Client Selection</span><span class="tag">Non-IID</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.08818" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.08818" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.09313" target="_blank">Asymmetric Correspondence Learning for Lexical and Style Embeddings: Interpreting Latent Space via Acoustic Features</a></h4>
+      <div class="meta"><span>📅 2026-11-06</span><span>👥 Michael Whealing, Robert Gaizauskas, Thomas Hain</span></div>
+      <div class="abstract">自监督语音嵌入同时编码词法、说话人与韵律信息，难以做特征隔离。作者提出非对称对应学习（ACL），用「分裂潜变量对应瓶颈」把 HuBERT 特征蒸馏为相互分离的声学词嵌入（AWE）与声学风格嵌入（ASE）。单词语音上的探针与聚类实验显示：尽管线性探针显示信息已被剥离，两个潜空间里仍保留了大量外源方差。AWE 空间词法聚类紧密（AP≈0.90，Fisher≈6.28）；ASE 空间线性探针说话人准确率 97.9%、拓扑弥散（Fisher≈1.01），却仍保留显著的词法方差（Fisher≈0.86）且线性不可恢复（0.17%）。用 eGeMAPS 声学特征做群体级置换特征重要性可解释该现象：AWE 按声道滤波器划分、ASE 按 F0 动态划分。结论是标准诊断基准可能不足以验证特征隔离。</div>
+      <div class="tags"><span class="tag">Speech Representation</span><span class="tag">Self-Supervised</span><span class="tag">Interpretability</span><span class="tag">SLT 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.09313" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.09313" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.09642" target="_blank">NAVE: A Normalized, Adaptive Conformer for Antarctic Whale Vocalization Detection</a></h4>
+      <div class="meta"><span>📅 2026-11-06</span><span>👥 Matthias Nagl, Paul Primus, Gerhard Widmer</span></div>
+      <div class="abstract">南极鲸类发声检测需要在长时间水下录音中定位叫声边界并分类到预定义叫声类型，而被动声学监测数据中叫声稀疏多变、时变噪声会遮蔽叫声、站点特异的环境声又让模型难以泛化。作者提出 NAVE：输入表示用逐频点复数均值相减抑制恒定的站点环境声，并叠加一条可自适应噪声底时变特性的 PCEN 通道；频率动态 stem 用适配目标叫声特征频带的卷积处理这些「噪声感知」表示；Conformer 骨干的卷积核长度与目标叫声时长匹配，提供归纳偏置并改善时间定位。在 BioDCASE 2026 Task 2 上以留一站交叉验证评测，单模型配逐类阈值即超过 WhaleVAD-BPN 基线，且无需边界候选网络与后处理参数搜索；消融显示归一化前端与时长匹配卷积核各自对最难的 D downsweep 类贡献显著。</div>
+      <div class="tags"><span class="tag">Bioacoustics</span><span class="tag">Sound Event Detection</span><span class="tag">Conformer</span><span class="tag">DCASE 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.09642" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.09642" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>日本 Shizuku AI 发布全双工语音模型 Shizuku-Duplex：80ms 一帧，边聊边搜索</h4>
+      <p>11 月 8 日，日本 AI 角色公司 Shizuku AI 发布全双工语音对话模型 Shizuku-Duplex，面向日语 AI 角色的实时交流。模型每 80ms 接收一次音频特征并生成输出（相当每秒约 12.5 个交互步），由 LLM 驱动的交互模型判断何时发言、保持沉默或附和，可原生处理打断与 backchannel，不依赖静音检测；工程上借助 TensorRT + Triton 推理优化满足实时预算。架构上把「前台交互模型」与「后台推理模型」解耦：交互模型通过 DELEGATE token 把复杂请求交给后台模型，在搜索/推理期间继续与用户对话，结果返回后自然融入；系统同时输出音频、文本（模型独白）与 Action 信号驱动 Live2D 角色动作，并约每 5 分钟压缩一次对话历史以支撑长时陪伴。自建日语全双工评测中，用户说完后的响应中位延迟 0.57 秒（GPT-Live 为 0.53 秒），打断后 2 秒内停话比例 89%（GPT-Live 82%），在 6 项轮次转换指标中 5 项领先 J-Moshi-ext 与 LLM-jp-Moshi-v1，对话自然性为参测 6 模型最高、响应质量仅次于 GPT-Live。官方称其为继 GPT-Live 后第二个支持日语智能对话的全双工模型；目前未公开权重，视觉输入与多语言在规划中。 <a href="https://shizuku.ai/en/blog/1/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Adventists AI 开源 32B 全双工语音模型 Sophon-Realtime v1：可生成笑声与叹息，最快 0.31 秒出声</h4>
+      <p>Adventists AI 开源全双工语音模型系列 Sophon-Realtime v1，用一个共享的 32B 模型负责持续聆听、轮次判断与回复生成，再通过三种不同的语音输出架构适配不同场景。模型能从语音中理解犹豫、重音、讽刺等副语言信息，并在回答中生成笑声、叹息、呼吸等非语言声音；结合 DuplexJev 音频决策模块识别语气、情绪与打断信号，可在用户停顿时提前准备回复、用户继续说话时取消尚未播出的内容。三种版本为：Tag（带情绪标签的 TTS，表现力更强）、Flash（轻量语音模型，延迟更低）、E2E 研究预览（直接在 32B 模型内部生成连续语音表示，不依赖独立 TTS）。单张 H100 80GB 测试显示 Flash 首段语音延迟约 0.31 秒、可支持约 40 路并发，Tag 约 16 路；共享模型在 VoiceBench 得 82.8 分、Big Bench Audio 准确率 81.8%。Tag 与 Flash 支持 vLLM-Omni 单卡部署，提供 WebSocket 全双工接口与 OpenAI 兼容调用，支持 LoRA 微调，代码与权重以 Apache 2.0 开放。 <a href="https://github.com/adventists-ai/sophon-realtime" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Tazo Labs 联合 Bolna 发布语音决策基准 DECIDE：4867 道真实通话问题</h4>
+      <p>语音 AI 公司 Tazo Labs 与 Voice Agent 平台 Bolna 发布音频决策评测基准 DECIDE（Decision Evaluation in Calls: Intent, Dialogue and Emotion），评估语音 Agent 在真实客服通话中如何依据声音与对话上下文决定下一步行动。基准从 570 通生产环境电话中提取 1081 段音频（每段 3–25 秒），构建 4867 道决策问题，覆盖 32 项决策任务，归为业务意图、流程路由、工具选择、对话轮次、声音特征、语言切换六大类，考察 Agent 何时回应、是否转接、选哪个工具、如何判断用户情绪。评测同时支持「直接音频输入模型」与「STT + 文本模型」两类系统，在相同音频、历史上下文与候选决策条件下比较决策准确率，并记录推理延迟与成本，用以量化原始声音中的语气、停顿与打断信息对决策的价值。目前公开 20 道脱敏示例与评测工具，完整数据集由评测方保管，技术论文待发布。 <a href="https://benchmark.tazolabs.com/" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-11-10') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
