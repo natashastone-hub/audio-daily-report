@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-11-10-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-11-10-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年11月10日 (周二) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">9</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.11179" target="_blank">Guidance at Pure Noise Erodes Speaker Similarity in Few-Step Token-Conditioned Flow-Matching TTS</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-08</span><span>👥 Jaeho Lee, Han-Lim Choi</span></div>
+      <div class="abstract">LLM + flow-matching mel 解码器的 TTS 系统，现在常把解码步数从官方 10 步压到 2~4 步：两步时 WER 不变，但说话人相似度（SIM）掉 1~6 个点。本文定位到损失主要来自第一步的 classifier-free guidance——在纯噪声处网络只能输出条件均值，guidance 会把所有轨迹平移几乎相同的向量，后续步数消除不掉，且位移随第一步步长增大；10 步以上可忽略，2 步时却占了大头。据此提出两个免训练采样器：FSU（第一步不做 guidance）在 CosyVoice 2/3 上找回 84~91% 的两步 SIM 损失且 WER 无显著上升；FSU-Mid 用一次中点步替代两次 Euler 步，在 IndexTTS-2 上找回 77~85%，在 CosyVoice 2 与 GLM-TTS 上追平十步教师模型。两者只需 3 次网络前向，比官方两步采样器还少一次；在四款解码器、八种公开 guidance 规则的两步重跑对比中，FSU-Mid 平均恢复率最高。对低延迟流式 TTS 部署是可直接复用的免费收益。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Flow Matching</span><span class="tag">Few-Step Sampling</span><span class="tag">Speaker Similarity</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.11179" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.11179" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.11592" target="_blank">LAION-Audio-XL: A Web-Scale Corpus and Scaling Studies for Contrastive Language-Audio Pretraining</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-08</span><span>👥 Gijs Wijngaard, Felix Förster, Ross Wightman, Marianna Nezhurina, Christoph Schuhmann, Jenia Jitsev, A. Sophia Koepke</span></div>
+      <div class="abstract">对比式音频-语言模型的进展主要来自数据规模与质量。作者从学术数据集、互联网数据集、网页集合、Common Crawl 与 YouTube 收集 14.8 亿条音频样本，用多阶段流水线清洗，并为缺字幕的样本生成短/长两种 caption。基于音频编码器的 NaFlex 架构，系统研究对比式音频-语言模型的 scaling 行为，给出固定算力预算下模型规模与数据量之间的权衡曲线。产出的 CLAP2 在 MAEB 与 HEAR 两个基准上超过同尺寸的音频-文本模型，并开源数据集、caption、权重与代码。对音频理解/检索方向的训练配方选择有直接参考价值。</div>
+      <div class="tags"><span class="tag">Audio-Language</span><span class="tag">CLAP</span><span class="tag">Dataset</span><span class="tag">Scaling Law</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.11592" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.11592" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.11125" target="_blank">LongCap: Hour-Scale Timestamped Audio Captioning via Chunk-wise Processing</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-08</span><span>👥 Jinchuan Tian, Sen Chen, Wenbin Huang, Chao Weng, Zhengwei Huang, Jiatong Shi, Yichen Lu, Haoran Wang, Shinji Watanabe, Cong Zhou</span></div>
+      <div class="abstract">描述数小时音频既要求事件时间准确，也要求细节在整段录音中持续不掉线。作者提出 LongCap，面向带时间戳音频描述（TAC）的框架，配套人工标注的 LongCapBench 与三个借鉴说话人日志的指标：Timeline Error Rate（TER）、Granularity Error Rate（GER）、Caption Similarity（tcpCapSim）。LongCap 把音频分块与结构化事件描述交错排列，使用相对时间戳与保留上下文，在 100 万 token 推理窗口内实现长度外推；事件级重标注可恢复描述细节，并系统研究了模型规模、依赖监督与自蒸馏的影响。LongCap-Diar 在基准上表现强劲，且仅用不超过 40 分钟的录音训练，就能外推到 16 小时拼接音频；短片段上与 Qwen3.5-Omni-Plus 相当，在 LongCapBench-TAC-Long 的分段对比中描述相似度与时间轴准确率优于被测基线，可完整描述接近两小时的录音。9B 与 35B-A3B 性价比最优，122B-A10B 明显提升事件依赖关系恢复能力，为 always-on 语音助理的长时音频理解打底。</div>
+      <div class="tags"><span class="tag">Audio Captioning</span><span class="tag">Long Audio</span><span class="tag">Timestamp</span><span class="tag">Benchmark</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.11125" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.11125" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.10693" target="_blank">Machine Hearing: Can Audio LLMs Generalize Beyond Human Auditory Perception?</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-07</span><span>👥 Liwei Liu, Jun Tao, Xingyuan Li, Xuenan Xu, Chen Zhang, Junyi Wang, Boya Zhang, Xiaoyu Yang, Zhen-Hua Ling, Wen Wu, Chao Zhang</span></div>
+      <div class="abstract">多模态 LLM 的感知范围仍高度以人为中心，只覆盖人耳能直接听到的声音；而物理世界里遍布波、振动与振荡，其中可听部分只占极小比例。作者提出「机器听觉」方向并构建 Machine Hearing Benchmark（MHB）：6,128 个实例、13 项任务、7 个领域，采样率覆盖约 10^-5 至 10^6 Hz，序列长度从 10^1 到 10^6 采样点，含单通道与多通道输入。评测显示现有开源与闭源 Audio LLM 在机器听觉上零样本迁移能力有限；仅用机器听觉数据做监督适配也无法弥合差距，说明问题不只是数据曝光，而是既有音频前端与这类输入之间存在系统性错配。为此提出 MachEar——一个轻量编码器扩展，为预训练 Audio LLM 接上机器听觉输入，在显著增强机器听觉能力的同时基本保持原有音频理解性能。对把音频模型从「像人一样听」推向「超越人耳」的方向是一份有基准、有诊断、有轻量解法的完整工作。</div>
+      <div class="tags"><span class="tag">Audio LLM</span><span class="tag">Benchmark</span><span class="tag">Machine Hearing</span><span class="tag">Encoder</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.10693" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.10693" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.10659" target="_blank">Pandemonium: Longform Target-Speaker Speech Recognition with Cross-Speaker Interactions</a></h4>
+      <div class="meta"><span>📅 2026-11-07</span><span>👥 Alexander Polok, Dominik Klement, Ivan Medennikov, Antoine Laurent, Petr Pálka, Samuele Cornell, Shinji Watanabe, Sanjeev Khudanpur, Jagadeesh Balam, Jan Černocký, Lukáš Burget, Matthew Wiesner</span></div>
+      <div class="abstract">说话人日志条件化的目标说话人 ASR（TS-ASR，代表工作 DiCoW）精度高、数据效率好，但有三个结构性限制：逐说话人独立转写、只处理 30 秒短窗、日志与 TS-ASR 两个组件分开优化。本文解决前两个：把日志条件注入长音频 Parakeet 骨干（DiCoP），并加入跨说话人注意力，让模型在说话人维度上互相参考而非孤立解码；同时用 STNO mask refiner 重估日志导出的条件。由于真实多说话人交互数据稀缺，作者用伪标注流水线从 YODAS2 挖出 5,400 小时野外多说话人音频，配合合成与真实数据，在多个会议基准上取得 SOTA，并开源 DiCoP、Pandemonium 模型与伪标注数据。对长会议转写、多方对话理解是直接可用的进展。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Target-Speaker</span><span class="tag">Diarization</span><span class="tag">Longform</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.10659" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.10659" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.11777" target="_blank">Towards Trustworthy Mobile Speech Interaction: Ensuring Voice Authenticity and Transmission Integrity</a></h4>
+      <div class="meta"><span>📅 2026-11-09</span><span>👥 Guodong Liu, Lei Wang, Dongxu Liu, Qianran Qiao, Haipeng Dai, He Huang, Guihai Chen</span></div>
+      <div class="abstract">生成式语音让高保真声音克隆与编辑变得便宜、快速、易得，声纹认证在移动语音交互中的安全性被削弱。现有语音水印多针对离线场景或只给合成语音打标，无法验证「一句实时说出的话」在采集时刻是否来自真实说话人。作者提出 MoBiMark：在采集阶段就把超声发音器官特征与语音内容绑定并嵌入动态水印的实时移动端生物语音水印系统。手机发出多频超声探测信号，从声道回波提取特征，与内容相关的语音嵌入融合，形成「持久用户标识 UID + 逐句语音标识 SID」的双层动态水印，同时支持来源认证与传输期篡改检测。联合训练的嵌入器与检测器在保持听感与可懂度的前提下注入水印，配合 INT8 量化实现端侧轻量部署。在 4 款手机、50 名用户上，对来源与传输攻击平均准确率 99.79%，语音质量与可懂度几乎无损。</div>
+      <div class="tags"><span class="tag">Voice Anti-Spoofing</span><span class="tag">Watermarking</span><span class="tag">Mobile</span><span class="tag">Security</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.11777" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.11777" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.11465" target="_blank">When Normality Shifts: Multi-Level WavLM Modeling for Open-World Audio Deepfake Detection</a></h4>
+      <div class="meta"><span>📅 2026-11-08</span><span>👥 Daniel Niekurzak, Daniel Kozuch, Weronika Folwarska, Khan Muhammad, Rafał Scherer</span></div>
+      <div class="abstract">用已知合成攻击训练的音频深伪检测器容易学到与生成器绑定的捷径，合成系统与声学条件一变就失效。作者研究一条不依赖攻击样本的路线：只用真实语音训练「正常性模型」，以合成音频偏离真实表征的程度打分。方法 MLN-WavLM 对冻结的 WavLM Base+ 池化隐状态做 shrinkage-Mahalanobis 建模。在 ASVspoof 2019 LA 上，最佳无攻击训练变体 EER 为 8.45%，接近全监督的 WavLM-HM-Conformer 基线（7.86%）；但面对 ASVspoof 2021 DF 的域偏移，EER 掉到 22.12%，暴露了以真实语音校准的操作点的脆弱性。逐层分析显示 WavLM 早期表征在集成中占主导。模拟部署流时，用无标签阈值自适应：域内污染 10% 以内中位数/MAD 重校准可轻松应对，但在 2021 DF 偏移下重校准会让低 FPR 召回彻底崩溃。结论很清醒：冻结源域正常性可用于排序深伪，但给不出稳定的开放世界判决规则，下游阈值自适应救不了上游排序退化。</div>
+      <div class="tags"><span class="tag">Audio Deepfake</span><span class="tag">Anti-Spoofing</span><span class="tag">WavLM</span><span class="tag">Domain Shift</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.11465" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.11465" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.11989" target="_blank">MUTE: Multi-Level Alignment Uncoupling Against Talking-Head Exploitation for Voice Protection</a></h4>
+      <div class="meta"><span>📅 2026-11-09</span><span>👥 Donghyun Kim, Jin Hong, Seungmin Kim, Dain Kim, Junseok Kwon, Daeseon Choi</span></div>
+      <div class="abstract">talking-head 生成模型能从音频合成逼真面部动画，在多模态深伪场景中被滥用风险日益突出。这类模型本质上依赖精确的音视频对齐，而有效的音频侧防护方法研究不足。作者提出 MUTE 音频防护框架，用多层级策略解耦底层音视频对齐：(1) 对齐级破坏，直接扰动跨模态注意力以打断结构对齐；(2) 表征级退化，扰动时序音频嵌入以劣化其表征。为提升鲁棒性，扰动被约束在 STFT 域高能量区域，可抵抗后处理、降噪与自适应攻击；可选的说话人级目标进一步防止通过 TTS 重合成绕过。实验显示 MUTE 在白盒与黑盒 talking-head 模型上都能稳定降低唇音同步，同时保持听感质量，在真实变换下仍有效，并可和图像侧方法叠加形成更强的多模态防护。代码与项目页已公开。</div>
+      <div class="tags"><span class="tag">Voice Protection</span><span class="tag">Deepfake Defense</span><span class="tag">Talking-Head</span><span class="tag">Adversarial</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.11989" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.11989" target="_blank">🔗 PDF</a> <a href="https://github.com/jindl465/MUTE" target="_blank">🔗 GitHub</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.11327" target="_blank">DIY Customized Speech Recognition for a Person with Speech Disabilities</a></h4>
+      <div class="meta"><span>📅 2026-11-08</span><span>👥 Paulo A. Condado, Fernando G. Lobo</span></div>
+      <div class="abstract">通用 SOTA ASR 对中重度言语障碍者的识别会系统性失败。本文记录一位患有脑瘫与构音障碍的研究者（第一作者）为自己定制 ASR 的全过程：用消费级硬件录制本人语音，通过 LoRA 微调 Whisper medium 与 large-v3。在 100 句未见句子的留出测试集上，medium 的 WER 从 49% 降到 17%，large-v3 从 30% 降到 12%；CER 分别从 26% 降到 7%、从 16% 降到 5%，说明残余错误主要是轻微音素替换。基于这两个模型作者开发了移动应用 AVoz，作为实时「翻译器」把他的语音转成合成声音给听者，全部处理本地完成、音频不出设备。作者主张方法可复制，并开源完整 LoRA 配置、实现与逐步录制/训练协议，让其他言语障碍者或家属照护者用几小时标注音频与一两天 GPU 时间就能自建系统。工程门槛与人文价值兼具的一篇。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">LoRA</span><span class="tag">Accessibility</span><span class="tag">Whisper</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.11327" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.11327" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>Zyphra 开源 TTS 模型 ZONOS3-Mini：8 亿参数稀疏 MoE，手机浏览器端实时出声</h4>
+      <p>Zyphra 发布 ZONOS3-Mini，Apache 2.0 许可的零样本语音克隆 TTS 模型，采用稀疏 MoE 架构，总参数 8 亿、活跃参数 1 亿。端侧性能是重点：Pixel 9 浏览器端首包音频延迟低于 570ms，M3 MacBook Air 上低于 150ms，意味着纯前端就能跑实时克隆语音。这是 Zyphra Zonos 系列的第三代小尺寸版本——上一代 ZONOS2 把 8B MoE 与 600 万小时训练数据放在服务端，这次直接把可用质量压到手机浏览器。对端侧语音助手、离线有声内容与低延迟配音场景是个可直接试的选项。（发布时间为今日 06:20，早间版遗漏，本期补录） <a href="https://www.zyphra.com/our-work/zonos3-mini" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-11-10-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
