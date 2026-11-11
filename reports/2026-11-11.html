@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-11-11</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-11-11</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年11月11日 (周三) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">14</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">6</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.12527" target="_blank">WaveGen: Truly End-to-End Waveform Generation via Internal Spectral Trajectory Learning</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-09</span><span>👥 Sang-Hoon Lee, Ha-Yeong Choi</span></div>
+      <div class="abstract">提出真正端到端的扩散式 TTS：不依赖神经音频编解码器、Mel 声码器或 VAE 潜变量等中间表示，也不靠 BERT / Wav2Vec 2.0 自监督特征与语义蒸馏，而是用 Spectral Forcing 在单一模型内同时学习「内部频谱轨迹」与目标波形轨迹，直接文本到波形；文本-语音对齐也在模型内部完成，因此可以去掉时长预测器等外挂对齐模块。作者设计了解耦的扩散头与多尺度频谱 v-loss，并把模型从 0.1B 扩到 0.6B 验证端到端 TTS 的可扩展性——单一架构、开源数据、单阶段训练即在 Emilia 上达到 SOTA，Seed-en 上 WER 1.47、SIM 0.75，代码与权重已开源。NeurIPS 2026 接收。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">End-to-End</span><span class="tag">Diffusion</span><span class="tag">NeurIPS 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.12527" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.12527" target="_blank">🔗 PDF</a> <a href="https://github.com/sh-lee-prml/WaveGen" target="_blank">🔗 GitHub</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.12246" target="_blank">Nemotron 3 Diarization: Advancing the Accuracy-Efficiency Frontier in Streaming Speaker Diarization</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-09</span><span>👥 Ivan Medennikov, Taejin Park, Tatiana Timofeeva, He Huang, Alexander Polok, Sofia Kostandian et al.</span></div>
+      <div class="abstract">NVIDIA 把流式说话人日志（Streaming Sortformer 系列）的 4 人上限扩到 8 人：把原来的 FastConformer-Transformer 栈精简成纯 Transformer 编码器，再用可学习上采样层把 80ms 粗表征映射到 10ms 精细分辨率以做帧级预测；训练用大规模模拟混合数据，并在标准 Sortformer 目标上新增 activity loss 与 phantom-speaker loss。结果是说话人容量翻倍的同时训练显存降 2.8 倍、训练快 2.2 倍、推理吞吐最高提升 6.4 倍，在 DIHARD III 与 CALLHOME 上刷新 DER SOTA；作为 DiCoW 的条件输入时，在 AMI 与 NOTSOFAR-1 单麦条件下拿到 tcpWER SOTA。训练代码开源，权重以 OpenMDW-1.1 宽松许可发布。</div>
+      <div class="tags"><span class="tag">Speaker Diarization</span><span class="tag">Streaming</span><span class="tag">Open Weights</span><span class="tag">SOTA</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.12246" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.12246" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.12375" target="_blank">AudioCodex: Streaming Autoencoders for Live Audio</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-09</span><span>👥 Marco Pasini, Javier Nistal, Cyran Aouameur, Stefan Lattner, George Fazekas</span></div>
+      <div class="abstract">面向实时生成音频的全因果（strictly causal）自编码器：把立体声压成约 10 Hz 的紧凑连续隐序列。设计上组合了 Mean Flow 幅度自编码器、隐空间超球投影、有界噪声增广、表征对齐与对抗式相位恢复，使同一表征既利于下游生成又能高质量重建。大量消融显示其在「生成-重建」权衡上超过现有 SOTA，且编码与解码两端都严格因果——这是实时交互式、流式生成音频（如边生成边播放）的关键前提。ISMIR 2026 接收。</div>
+      <div class="tags"><span class="tag">Audio Codec</span><span class="tag">Streaming</span><span class="tag">Latent Representation</span><span class="tag">ISMIR 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.12375" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.12375" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.12406" target="_blank">REAL: Reward Modeling through Evidence-Linked Analysis of Lifelikeness in Generated Speech</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-09</span><span>👥 Yaodong Song, Jie Lian, Xusheng Yang, Genliang Zhao, Hongjie Chen, Jian Kang et al.</span></div>
+      <div class="abstract">TTS 越来越清晰自然之后，评测重心从「听得出的失败」转向「细微的不像真人」。作者提出 REAL 语音奖励模型框架：不只监督最终的成对偏好，还监督一份「证据链报告」——把局部音频片段与感知现象、受影响的维度、最终判断显式关联起来。REAL-Jury 通过时间戳对齐、多模型分析与争议导向讨论构造这类报告；REAL-Judge 学会从成对音频生成报告；REAL-Eval 分两级评测（显著感知差异 / 强系统间的细微差异）。以 MiMo-Audio 为底座，两级成对偏好准确率分别比底座提升 16.01 与 11.41 个百分点，并超过开源语音奖励模型 SpeechJudge 与 UniSRM。</div>
+      <div class="tags"><span class="tag">TTS Evaluation</span><span class="tag">Reward Model</span><span class="tag">Preference Learning</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.12406" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.12406" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.12061" target="_blank">BARS: Beat-Adaptive Rap Synthesis via Flow Matching</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-09</span><span>👥 Taemin Cho, Hector Martel, Enyan Koh</span></div>
+      <div class="abstract">非自回归说唱人声生成模型，基于 Flow Matching，条件为 beat 伴奏、歌词与一小段参考音色（零样本音色控制）。相较自回归方案里说唱速度与输出时长被 beat 严格决定，BARS 让说唱 tempo 可独立控制，支持不定长生成且不需要显式时长预测或音素级对齐；歌词用预训练 ByT5 编码器 + 轻量 Transformer adapter 联合训练，不依赖语音预训练文本编码器，从而能自然处理俚语、缩写、数字等非标准写法；针对强 beat 条件下易出现的跳词、重复等对齐不稳定问题做了专门设计。ISMIR 2026 最佳论文提名，附在线 demo。</div>
+      <div class="tags"><span class="tag">Music Generation</span><span class="tag">Rap Synthesis</span><span class="tag">Flow Matching</span><span class="tag">ISMIR 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.12061" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.12061" target="_blank">🔗 PDF</a> <a href="https://bars-ismir2026.github.io/bars/" target="_blank">🔗 Demo</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.10162" target="_blank">M5-TTS: A Mini-Scale Multilingual and Multi-Dialect Text-to-Speech Language Model with Multi-Token Prediction</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-06</span><span>👥 Wenhao Li, Jingbin Hu, Shengming Ling, Xiaming Ren, Haoyu Zhang, Jinrui Liang et al.</span></div>
+      <div class="abstract">超紧凑 TTS 系统，覆盖多语种与中文多方言合成、零样本音色克隆、说话人特定多语种生成以及 CPU 流式推理。语言模型仅 50M 参数（不含语音编解码器），用时间主干加一个局部多 token 预测模块在 16 个码本上并行预测；GRPO 后训练把全局说话人相似度与停顿反馈、以及 token 级 CER 过程优势结合，字符级错误对比提供局部反馈——负向信用在子句内回传并投影到音频 token 位置。Seed-ZH CER 1.37%、Seed-EN WER 2.91%，相对 MOSS-TTS-Nano 分别降低 62.2% 与 35.3%，而语言模型参数只有其一半；在评测的 6 个 MiniMax 语种中有 5 个内容错误率更低。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Multilingual</span><span class="tag">Zero-shot Cloning</span><span class="tag">Lightweight</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.10162" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.10162" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.12493" target="_blank">Textraction: Unified Text-Guided Speaker Extraction and Enhancement for Single- and Multi-Channel Audio</a></h4>
+      <div class="meta"><span>📅 2026-11-09</span><span>👥 Aviad Eisenberg, Sharon Gannot, Shlomo E. Chazan</span></div>
+      <div class="abstract">文本引导的目标说话人提取/增强统一框架：仅用自然语言描述就能从混合音频里挑出想要的说话人或噪声源。单一模型同时支持单通道与多通道输入，可条件于目标的语义文本描述或其空间描述；专用单/多通道编码器接入共享时频 Transformer 堆栈，每个 block 都通过 cross-attention 条件于 prompt 与录音配置，一次前向直接从混合信号估计目标，既不需要先分离也不需要选源阶段。支持提取任意子集（最多 2 个同时在说的说话人 + 2 个噪声源），并能解读「保留哪些 / 去掉哪些 / 两者兼有」的指令；用对比微调的紧凑文本检索模型替代昂贵 LLM 作为轻量任务适配文本编码器，对指令极性（keep vs remove）敏感且对改写鲁棒。在属性引导提取、空间引导提取与语音增强三类实验中匹配或超过专用基线。</div>
+      <div class="tags"><span class="tag">Target Speaker Extraction</span><span class="tag">Speech Enhancement</span><span class="tag">Text-Guided</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.12493" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.12493" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.12603" target="_blank">Direct Conditioning of Audio Diffusion Transformers on fMRI Reveals Cortical Contributions to Sound Reconstruction</a></h4>
+      <div class="meta"><span>📅 2026-11-09</span><span>👥 Matteo Ciferri, Tonio Weidler, Matteo Ferrante, Nicola Toschi, Elia Formisano</span></div>
+      <div class="abstract">把音频扩散 Transformer 直接条件在 fMRI 脑活动上做声音重建：MAAS（Multi-Area Auditory Synthesis）按 ROI 级 fMRI 响应端到端条件预训练音频扩散模型（Stable Audio），无需先监督一个解码器去预测某种外部刺激表征，而是用区域特定投影 + 可学习 brain token 经专用 cross-attention 通路注入。在 7T fMRI 数据集上，声学与语义两类指标均稳定优于两阶段 fMRI→latent 条件基线；同时提出一个基于听觉神经计算模型的保真度指标，用来量化各听觉皮层区域对重建音频表征的贡献。NeurIPS 2026 主会 poster。</div>
+      <div class="tags"><span class="tag">Brain-to-Audio</span><span class="tag">Diffusion</span><span class="tag">Neuroscience</span><span class="tag">NeurIPS 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.12603" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.12603" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.12124" target="_blank">SCLAP: Temporal structural alignment improves localization in long-form audio</a></h4>
+      <div class="meta"><span>📅 2026-11-09</span><span>👥 Yacouba Kaloga, Ina Kodrasi</span></div>
+      <div class="abstract">CLAP 类音频-文本模型通常把帧与 token 序列均匀池化成全局嵌入，丢掉时间结构，导致检索与定位（尤其是长录音中的短事件）双双受损。SCLAP 用单调一维最优传输做序列级对比对齐，仅凭片段级 caption 就能从学到的边缘分布与传输计划中获得细粒度时间监督。短音频（Clotho、TACOS，15-30s）上检索保持竞争力、零样本定位优于 CLAP 与 Text-aware Attention Pooling；长音频（CASTELLA，最长 300s）上检索提升，且事件/上下文比越低定位优势越大。推理阶段无需计算最优传输：检索用池化嵌入，定位用廉价的帧-文本余弦分数。</div>
+      <div class="tags"><span class="tag">Audio-Text</span><span class="tag">Localization</span><span class="tag">CLAP</span><span class="tag">Optimal Transport</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.12124" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.12124" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.11130" target="_blank">Virtual-Flow: Virtual Microphone-based Speech Enhancement via Semi-supervised Flow Matching</a></h4>
+      <div class="meta"><span>📅 2026-11-08</span><span>👥 Dongheon Lee, Ashutosh Pandey, Sanjeel Parekh, Zhaoheng Ni, Daniel Wong, Jacob Donley et al.</span></div>
+      <div class="abstract">神经虚拟麦克风估计（neural-VME）能从少量真实麦克风合成未观测空间位置的信号，用「虚拟大阵列」提升语音增强等空间处理能力；但现有方法需要虚拟位置的真值监督，数据成本随虚拟麦克风数量线性膨胀，大阵列配置怎么设也缺乏依据。Virtual-Flow 用 flow matching 隐式生成虚拟麦克风信号，不需要虚拟位置真值，并提出基于真实录音时延叠加构造伪虚拟目标（pseudo-VM）的半监督训练策略。实验显示其在虚拟麦克风估计与下游增强上取得明显提升。NeurIPS 2026 接收。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Virtual Microphone</span><span class="tag">Flow Matching</span><span class="tag">NeurIPS 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.11130" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.11130" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.11491" target="_blank">CallCleaner: Lightweight Bioacoustic Denoising from an Audio Foundation Model</a></h4>
+      <div class="meta"><span>📅 2026-11-08</span><span>👥 Michael Xie, Gašper Beguš, Morris Alper</span></div>
+      <div class="abstract">动物发声研究需要干净录音，但野外录音充满天气、车辆与其他动物的噪声，且干净训练数据稀缺、物种发声差异极大。经典谱减法会残留噪声（尤其缺少 VAD 时），而面向生物声学的无检测器神经降噪器去噪力度又不够。作者发现通用音源分离基础模型 SAM-Audio 在完全不训练、只用简单动物 VAD 给出时间段提示的情况下，去噪效果优于上述两类方法；随后把它蒸馏成 CallCleaner——19M 参数、无需检测器、在笔记本 CPU 上约 90 倍实时运行。项目主页已发布。</div>
+      <div class="tags"><span class="tag">Bioacoustics</span><span class="tag">Denoising</span><span class="tag">Distillation</span><span class="tag">Foundation Model</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.11491" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.11491" target="_blank">🔗 PDF</a> <a href="https://callcleaner.github.io" target="_blank">🔗 Project</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.10192" target="_blank">Lightweight Neural Prediction for MDCT-Based Perceptual Audio Coding</a></h4>
+      <div class="meta"><span>📅 2026-11-06</span><span>👥 Niccolo Abate, Gabriel Soule, Marina Bosi</span></div>
+      <div class="abstract">不做端到端重学整个编解码器，而是在传统感知音频编码器里插入一个小型确定性网络作为「即插即用」预测器：网络根据已重建块的短上下文估计下一个 MDCT 系数块，编码器只传输量化后的残差。作者比较了 MLP、CNN 与非预测基线、逐线 NLMS 线性预测器（类似 MPEG-2 AAC Main Profile 的预测器）：CNN 在 SNR、NMR 与 MUSHRA 上全面领先，使用 512 点分析窗时收益最明显。工作发表于 161st AES Convention（2026-10-30~11-01），样例与补充材料开源。</div>
+      <div class="tags"><span class="tag">Audio Coding</span><span class="tag">MDCT</span><span class="tag">Neural Prediction</span><span class="tag">AES</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.10192" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.10192" target="_blank">🔗 PDF</a> <a href="https://github.com/NiccoloAbate/neural-predictive-audio-coding" target="_blank">🔗 GitHub</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.10561" target="_blank">BAmbiDrop: Array-Agnostic Speech Enhancement with Zero-Shot Binaural Reproduction using Multi-center Ambisonics Encoding</a></h4>
+      <div class="meta"><span>📅 2026-11-07</span><span>👥 Michael Tatarjitzky, Vladimir Tourbabin, Boaz Rafaely</span></div>
+      <div class="abstract">阵列无关（array-agnostic）增强网络能跨不同麦克风几何泛化，但只输出单通道；双耳增强方法能保留双耳线索，却只适配一种固定设备几何。BAmbiDrop 无需重训就把阵列无关增强扩展到双耳重放：利用 Ambisonics 原点可任取这一性质，让冻结的单通道 AmbiDrop 网络在阵列的多个中心分别估计复数掩码，再以复数均值融合成共享掩码，作用于麦克风信号并由固定 BSM 滤波器渲染。在 21 种自由场与刚性球阵列上，融合掩码同时提升增强效果与双耳线索还原；而逐麦克风独立掩蔽会损害双耳线索且增强无稳定收益。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Binaural</span><span class="tag">Ambisonics</span><span class="tag">Array-Agnostic</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.10561" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.10561" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.11273" target="_blank">Task-adaptive anonymisation enables privacy-preserving sharing of clinical speech data</a></h4>
+      <div class="meta"><span>📅 2026-11-08</span><span>👥 Ziyun Cui, Haoyu Niu, Wen Wu, Hao Sun, Sihan Zhang, Chang Lei et al.</span></div>
+      <div class="abstract">临床语音越来越多用于疾病筛查与临床评估，但直接分发录音会同时泄露声纹与敏感语音内容。已有语音匿名化方法多为通用场景或单一任务设计，忽略了不同临床任务依赖不同的语音特征。作者提出 CASA——临床自适应语音匿名化 agent，把匿名化从固定处理流程变成任务引导的优化过程：根据具体任务的隐私与临床效用需求，动态调整声纹与内容的匿名化强度，并借助递归自我改进（RSI）反复迭代，在保护患者隐私的同时尽量保留临床可用信息。</div>
+      <div class="tags"><span class="tag">Speech Anonymisation</span><span class="tag">Privacy</span><span class="tag">Clinical Speech</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.11273" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.11273" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>Flock Speech 开源两枚「极小」TTS：44MB 的 Goldfinch 会笑会喘气，Junco 专读稿</h4>
+      <p>11 月 10 日，Flock Speech 在 Hugging Face 发布并开源两个端侧英文 TTS（Apache-2.0）。Goldfinch 是 11.4M 参数、44MB 的 flow-matching TTS，主打「对话感」：用 [laugh] 等标签在指定位置插入笑声、呼吸声，并保留「uh」「you know」等填充词与「我、我觉得」式自我修正，普通 CPU 上快于实时、无需 GPU / 网络 / PyTorch（ONNX Runtime），pip install flockspeech 即可用，面向聊天陪伴、游戏角色与语音助手。兄弟模型 Junco 是清晰中性的朗读音色。两者都基于 Vocos 声码器，属于「小模型+副语言细节」这条差异化路线。 <a href="https://huggingface.co/flockspeech/goldfinch" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Inflect 放出 v3 本地英文语音三件套（Mini / Micro / Atom），非商用早期访问</h4>
+      <p>11 月 10 日，Inflect 以「可用早期访问」名义放出 v3 系列的 Mini、Micro、Atom 三个本地英文 TTS 模型，许可为 inflect-preview-evaluation-1.0（仅限非商用评估，官方强调这不是正式发布）。Micro 定位「更小的神经内核」用于日常本地英文语音，提供 6 个固定音色，支持本地推理；仓库同时给出 GitHub 代码与 Discord 社区入口，旧 Preview 仓库保持不变。这延续了 Inflect「本地、离线、可跑在消费级硬件」的产品取向，也给端侧 TTS 选型再加一档。 <a href="https://huggingface.co/owensong/Inflect-Micro-v3" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Oomni 开源 Mithi v2 Flash：99M 参数覆盖 11 种印度语言的 TTS，Apache-2.0 可商用</h4>
+      <p>北京时间 11 月 11 日凌晨，Oomni 发布 Mithi v2 Flash——一个 99.1M 参数（199MB，bf16 safetensors）、24kHz 单声道输出的轻量 TTS，覆盖印地语、英语、孟加拉语、古吉拉特语、卡纳达语、马拉雅拉姆语、马拉地语、奥里亚语、旁遮普语、泰米尔语、泰卢固语共 11 种语言，内置 5 男 5 女共 10 个音色（Satvik、Anirban、Nakul 等）。模型完全基于开源组件搭建（Kokoro-82M、Maya2-native、indic-bert、misaki 等），以 Apache-2.0 发布、允许商用，明显是冲着印度语种的低成本本地部署场景去的。 <a href="https://huggingface.co/Oomni/mithi-v2-flash" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-11-11') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

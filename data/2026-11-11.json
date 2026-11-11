@@ -1,0 +1,208 @@
+{
+  "windowNote": "截至 11-11 09:30（CST），arXiv API 仍未索引到 11-10 提交的新一批（公告延迟），最新可见批次为 11-09 提交、11-10 公告的 30 篇；昨日早间版覆盖至 11-06、午间版只覆盖其中 9 篇，本期对该批次做补齐收录。",
+  "papers": [
+    {
+      "title": "WaveGen: Truly End-to-End Waveform Generation via Internal Spectral Trajectory Learning",
+      "url": "https://arxiv.org/abs/2611.12527",
+      "date": "2026-11-09",
+      "authors": "Sang-Hoon Lee, Ha-Yeong Choi",
+      "abstract": "提出真正端到端的扩散式 TTS：不依赖神经音频编解码器、Mel 声码器或 VAE 潜变量等中间表示，也不靠 BERT / Wav2Vec 2.0 自监督特征与语义蒸馏，而是用 Spectral Forcing 在单一模型内同时学习「内部频谱轨迹」与目标波形轨迹，直接文本到波形；文本-语音对齐也在模型内部完成，因此可以去掉时长预测器等外挂对齐模块。作者设计了解耦的扩散头与多尺度频谱 v-loss，并把模型从 0.1B 扩到 0.6B 验证端到端 TTS 的可扩展性——单一架构、开源数据、单阶段训练即在 Emilia 上达到 SOTA，Seed-en 上 WER 1.47、SIM 0.75，代码与权重已开源。NeurIPS 2026 接收。",
+      "tags": ["TTS", "End-to-End", "Diffusion", "NeurIPS 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.12527"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.12527"},
+        {"label": "GitHub", "url": "https://github.com/sh-lee-prml/WaveGen"}
+      ]
+    },
+    {
+      "title": "Nemotron 3 Diarization: Advancing the Accuracy-Efficiency Frontier in Streaming Speaker Diarization",
+      "url": "https://arxiv.org/abs/2611.12246",
+      "date": "2026-11-09",
+      "authors": "Ivan Medennikov, Taejin Park, Tatiana Timofeeva, He Huang, Alexander Polok, Sofia Kostandian et al.",
+      "abstract": "NVIDIA 把流式说话人日志（Streaming Sortformer 系列）的 4 人上限扩到 8 人：把原来的 FastConformer-Transformer 栈精简成纯 Transformer 编码器，再用可学习上采样层把 80ms 粗表征映射到 10ms 精细分辨率以做帧级预测；训练用大规模模拟混合数据，并在标准 Sortformer 目标上新增 activity loss 与 phantom-speaker loss。结果是说话人容量翻倍的同时训练显存降 2.8 倍、训练快 2.2 倍、推理吞吐最高提升 6.4 倍，在 DIHARD III 与 CALLHOME 上刷新 DER SOTA；作为 DiCoW 的条件输入时，在 AMI 与 NOTSOFAR-1 单麦条件下拿到 tcpWER SOTA。训练代码开源，权重以 OpenMDW-1.1 宽松许可发布。",
+      "tags": ["Speaker Diarization", "Streaming", "Open Weights", "SOTA"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.12246"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.12246"}
+      ]
+    },
+    {
+      "title": "AudioCodex: Streaming Autoencoders for Live Audio",
+      "url": "https://arxiv.org/abs/2611.12375",
+      "date": "2026-11-09",
+      "authors": "Marco Pasini, Javier Nistal, Cyran Aouameur, Stefan Lattner, George Fazekas",
+      "abstract": "面向实时生成音频的全因果（strictly causal）自编码器：把立体声压成约 10 Hz 的紧凑连续隐序列。设计上组合了 Mean Flow 幅度自编码器、隐空间超球投影、有界噪声增广、表征对齐与对抗式相位恢复，使同一表征既利于下游生成又能高质量重建。大量消融显示其在「生成-重建」权衡上超过现有 SOTA，且编码与解码两端都严格因果——这是实时交互式、流式生成音频（如边生成边播放）的关键前提。ISMIR 2026 接收。",
+      "tags": ["Audio Codec", "Streaming", "Latent Representation", "ISMIR 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.12375"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.12375"}
+      ]
+    },
+    {
+      "title": "REAL: Reward Modeling through Evidence-Linked Analysis of Lifelikeness in Generated Speech",
+      "url": "https://arxiv.org/abs/2611.12406",
+      "date": "2026-11-09",
+      "authors": "Yaodong Song, Jie Lian, Xusheng Yang, Genliang Zhao, Hongjie Chen, Jian Kang et al.",
+      "abstract": "TTS 越来越清晰自然之后，评测重心从「听得出的失败」转向「细微的不像真人」。作者提出 REAL 语音奖励模型框架：不只监督最终的成对偏好，还监督一份「证据链报告」——把局部音频片段与感知现象、受影响的维度、最终判断显式关联起来。REAL-Jury 通过时间戳对齐、多模型分析与争议导向讨论构造这类报告；REAL-Judge 学会从成对音频生成报告；REAL-Eval 分两级评测（显著感知差异 / 强系统间的细微差异）。以 MiMo-Audio 为底座，两级成对偏好准确率分别比底座提升 16.01 与 11.41 个百分点，并超过开源语音奖励模型 SpeechJudge 与 UniSRM。",
+      "tags": ["TTS Evaluation", "Reward Model", "Preference Learning"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.12406"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.12406"}
+      ]
+    },
+    {
+      "title": "BARS: Beat-Adaptive Rap Synthesis via Flow Matching",
+      "url": "https://arxiv.org/abs/2611.12061",
+      "date": "2026-11-09",
+      "authors": "Taemin Cho, Hector Martel, Enyan Koh",
+      "abstract": "非自回归说唱人声生成模型，基于 Flow Matching，条件为 beat 伴奏、歌词与一小段参考音色（零样本音色控制）。相较自回归方案里说唱速度与输出时长被 beat 严格决定，BARS 让说唱 tempo 可独立控制，支持不定长生成且不需要显式时长预测或音素级对齐；歌词用预训练 ByT5 编码器 + 轻量 Transformer adapter 联合训练，不依赖语音预训练文本编码器，从而能自然处理俚语、缩写、数字等非标准写法；针对强 beat 条件下易出现的跳词、重复等对齐不稳定问题做了专门设计。ISMIR 2026 最佳论文提名，附在线 demo。",
+      "tags": ["Music Generation", "Rap Synthesis", "Flow Matching", "ISMIR 2026"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.12061"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.12061"},
+        {"label": "Demo", "url": "https://bars-ismir2026.github.io/bars/"}
+      ]
+    },
+    {
+      "title": "M5-TTS: A Mini-Scale Multilingual and Multi-Dialect Text-to-Speech Language Model with Multi-Token Prediction",
+      "url": "https://arxiv.org/abs/2611.10162",
+      "date": "2026-11-06",
+      "authors": "Wenhao Li, Jingbin Hu, Shengming Ling, Xiaming Ren, Haoyu Zhang, Jinrui Liang et al.",
+      "abstract": "超紧凑 TTS 系统，覆盖多语种与中文多方言合成、零样本音色克隆、说话人特定多语种生成以及 CPU 流式推理。语言模型仅 50M 参数（不含语音编解码器），用时间主干加一个局部多 token 预测模块在 16 个码本上并行预测；GRPO 后训练把全局说话人相似度与停顿反馈、以及 token 级 CER 过程优势结合，字符级错误对比提供局部反馈——负向信用在子句内回传并投影到音频 token 位置。Seed-ZH CER 1.37%、Seed-EN WER 2.91%，相对 MOSS-TTS-Nano 分别降低 62.2% 与 35.3%，而语言模型参数只有其一半；在评测的 6 个 MiniMax 语种中有 5 个内容错误率更低。",
+      "tags": ["TTS", "Multilingual", "Zero-shot Cloning", "Lightweight"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.10162"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.10162"}
+      ]
+    },
+    {
+      "title": "Textraction: Unified Text-Guided Speaker Extraction and Enhancement for Single- and Multi-Channel Audio",
+      "url": "https://arxiv.org/abs/2611.12493",
+      "date": "2026-11-09",
+      "authors": "Aviad Eisenberg, Sharon Gannot, Shlomo E. Chazan",
+      "abstract": "文本引导的目标说话人提取/增强统一框架：仅用自然语言描述就能从混合音频里挑出想要的说话人或噪声源。单一模型同时支持单通道与多通道输入，可条件于目标的语义文本描述或其空间描述；专用单/多通道编码器接入共享时频 Transformer 堆栈，每个 block 都通过 cross-attention 条件于 prompt 与录音配置，一次前向直接从混合信号估计目标，既不需要先分离也不需要选源阶段。支持提取任意子集（最多 2 个同时在说的说话人 + 2 个噪声源），并能解读「保留哪些 / 去掉哪些 / 两者兼有」的指令；用对比微调的紧凑文本检索模型替代昂贵 LLM 作为轻量任务适配文本编码器，对指令极性（keep vs remove）敏感且对改写鲁棒。在属性引导提取、空间引导提取与语音增强三类实验中匹配或超过专用基线。",
+      "tags": ["Target Speaker Extraction", "Speech Enhancement", "Text-Guided"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.12493"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.12493"}
+      ]
+    },
+    {
+      "title": "Direct Conditioning of Audio Diffusion Transformers on fMRI Reveals Cortical Contributions to Sound Reconstruction",
+      "url": "https://arxiv.org/abs/2611.12603",
+      "date": "2026-11-09",
+      "authors": "Matteo Ciferri, Tonio Weidler, Matteo Ferrante, Nicola Toschi, Elia Formisano",
+      "abstract": "把音频扩散 Transformer 直接条件在 fMRI 脑活动上做声音重建：MAAS（Multi-Area Auditory Synthesis）按 ROI 级 fMRI 响应端到端条件预训练音频扩散模型（Stable Audio），无需先监督一个解码器去预测某种外部刺激表征，而是用区域特定投影 + 可学习 brain token 经专用 cross-attention 通路注入。在 7T fMRI 数据集上，声学与语义两类指标均稳定优于两阶段 fMRI→latent 条件基线；同时提出一个基于听觉神经计算模型的保真度指标，用来量化各听觉皮层区域对重建音频表征的贡献。NeurIPS 2026 主会 poster。",
+      "tags": ["Brain-to-Audio", "Diffusion", "Neuroscience", "NeurIPS 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.12603"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.12603"}
+      ]
+    },
+    {
+      "title": "SCLAP: Temporal structural alignment improves localization in long-form audio",
+      "url": "https://arxiv.org/abs/2611.12124",
+      "date": "2026-11-09",
+      "authors": "Yacouba Kaloga, Ina Kodrasi",
+      "abstract": "CLAP 类音频-文本模型通常把帧与 token 序列均匀池化成全局嵌入，丢掉时间结构，导致检索与定位（尤其是长录音中的短事件）双双受损。SCLAP 用单调一维最优传输做序列级对比对齐，仅凭片段级 caption 就能从学到的边缘分布与传输计划中获得细粒度时间监督。短音频（Clotho、TACOS，15-30s）上检索保持竞争力、零样本定位优于 CLAP 与 Text-aware Attention Pooling；长音频（CASTELLA，最长 300s）上检索提升，且事件/上下文比越低定位优势越大。推理阶段无需计算最优传输：检索用池化嵌入，定位用廉价的帧-文本余弦分数。",
+      "tags": ["Audio-Text", "Localization", "CLAP", "Optimal Transport"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.12124"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.12124"}
+      ]
+    },
+    {
+      "title": "Virtual-Flow: Virtual Microphone-based Speech Enhancement via Semi-supervised Flow Matching",
+      "url": "https://arxiv.org/abs/2611.11130",
+      "date": "2026-11-08",
+      "authors": "Dongheon Lee, Ashutosh Pandey, Sanjeel Parekh, Zhaoheng Ni, Daniel Wong, Jacob Donley et al.",
+      "abstract": "神经虚拟麦克风估计（neural-VME）能从少量真实麦克风合成未观测空间位置的信号，用「虚拟大阵列」提升语音增强等空间处理能力；但现有方法需要虚拟位置的真值监督，数据成本随虚拟麦克风数量线性膨胀，大阵列配置怎么设也缺乏依据。Virtual-Flow 用 flow matching 隐式生成虚拟麦克风信号，不需要虚拟位置真值，并提出基于真实录音时延叠加构造伪虚拟目标（pseudo-VM）的半监督训练策略。实验显示其在虚拟麦克风估计与下游增强上取得明显提升。NeurIPS 2026 接收。",
+      "tags": ["Speech Enhancement", "Virtual Microphone", "Flow Matching", "NeurIPS 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.11130"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.11130"}
+      ]
+    },
+    {
+      "title": "CallCleaner: Lightweight Bioacoustic Denoising from an Audio Foundation Model",
+      "url": "https://arxiv.org/abs/2611.11491",
+      "date": "2026-11-08",
+      "authors": "Michael Xie, Gašper Beguš, Morris Alper",
+      "abstract": "动物发声研究需要干净录音，但野外录音充满天气、车辆与其他动物的噪声，且干净训练数据稀缺、物种发声差异极大。经典谱减法会残留噪声（尤其缺少 VAD 时），而面向生物声学的无检测器神经降噪器去噪力度又不够。作者发现通用音源分离基础模型 SAM-Audio 在完全不训练、只用简单动物 VAD 给出时间段提示的情况下，去噪效果优于上述两类方法；随后把它蒸馏成 CallCleaner——19M 参数、无需检测器、在笔记本 CPU 上约 90 倍实时运行。项目主页已发布。",
+      "tags": ["Bioacoustics", "Denoising", "Distillation", "Foundation Model"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.11491"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.11491"},
+        {"label": "Project", "url": "https://callcleaner.github.io"}
+      ]
+    },
+    {
+      "title": "Lightweight Neural Prediction for MDCT-Based Perceptual Audio Coding",
+      "url": "https://arxiv.org/abs/2611.10192",
+      "date": "2026-11-06",
+      "authors": "Niccolo Abate, Gabriel Soule, Marina Bosi",
+      "abstract": "不做端到端重学整个编解码器，而是在传统感知音频编码器里插入一个小型确定性网络作为「即插即用」预测器：网络根据已重建块的短上下文估计下一个 MDCT 系数块，编码器只传输量化后的残差。作者比较了 MLP、CNN 与非预测基线、逐线 NLMS 线性预测器（类似 MPEG-2 AAC Main Profile 的预测器）：CNN 在 SNR、NMR 与 MUSHRA 上全面领先，使用 512 点分析窗时收益最明显。工作发表于 161st AES Convention（2026-10-30~11-01），样例与补充材料开源。",
+      "tags": ["Audio Coding", "MDCT", "Neural Prediction", "AES"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.10192"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.10192"},
+        {"label": "GitHub", "url": "https://github.com/NiccoloAbate/neural-predictive-audio-coding"}
+      ]
+    },
+    {
+      "title": "BAmbiDrop: Array-Agnostic Speech Enhancement with Zero-Shot Binaural Reproduction using Multi-center Ambisonics Encoding",
+      "url": "https://arxiv.org/abs/2611.10561",
+      "date": "2026-11-07",
+      "authors": "Michael Tatarjitzky, Vladimir Tourbabin, Boaz Rafaely",
+      "abstract": "阵列无关（array-agnostic）增强网络能跨不同麦克风几何泛化，但只输出单通道；双耳增强方法能保留双耳线索，却只适配一种固定设备几何。BAmbiDrop 无需重训就把阵列无关增强扩展到双耳重放：利用 Ambisonics 原点可任取这一性质，让冻结的单通道 AmbiDrop 网络在阵列的多个中心分别估计复数掩码，再以复数均值融合成共享掩码，作用于麦克风信号并由固定 BSM 滤波器渲染。在 21 种自由场与刚性球阵列上，融合掩码同时提升增强效果与双耳线索还原；而逐麦克风独立掩蔽会损害双耳线索且增强无稳定收益。",
+      "tags": ["Speech Enhancement", "Binaural", "Ambisonics", "Array-Agnostic"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.10561"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.10561"}
+      ]
+    },
+    {
+      "title": "Task-adaptive anonymisation enables privacy-preserving sharing of clinical speech data",
+      "url": "https://arxiv.org/abs/2611.11273",
+      "date": "2026-11-08",
+      "authors": "Ziyun Cui, Haoyu Niu, Wen Wu, Hao Sun, Sihan Zhang, Chang Lei et al.",
+      "abstract": "临床语音越来越多用于疾病筛查与临床评估，但直接分发录音会同时泄露声纹与敏感语音内容。已有语音匿名化方法多为通用场景或单一任务设计，忽略了不同临床任务依赖不同的语音特征。作者提出 CASA——临床自适应语音匿名化 agent，把匿名化从固定处理流程变成任务引导的优化过程：根据具体任务的隐私与临床效用需求，动态调整声纹与内容的匿名化强度，并借助递归自我改进（RSI）反复迭代，在保护患者隐私的同时尽量保留临床可用信息。",
+      "tags": ["Speech Anonymisation", "Privacy", "Clinical Speech"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.11273"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.11273"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "Flock Speech 开源两枚「极小」TTS：44MB 的 Goldfinch 会笑会喘气，Junco 专读稿",
+      "url": "https://huggingface.co/flockspeech/goldfinch",
+      "summary": "11 月 10 日，Flock Speech 在 Hugging Face 发布并开源两个端侧英文 TTS（Apache-2.0）。Goldfinch 是 11.4M 参数、44MB 的 flow-matching TTS，主打「对话感」：用 [laugh] 等标签在指定位置插入笑声、呼吸声，并保留「uh」「you know」等填充词与「我、我觉得」式自我修正，普通 CPU 上快于实时、无需 GPU / 网络 / PyTorch（ONNX Runtime），pip install flockspeech 即可用，面向聊天陪伴、游戏角色与语音助手。兄弟模型 Junco 是清晰中性的朗读音色。两者都基于 Vocos 声码器，属于「小模型+副语言细节」这条差异化路线。"
+    },
+    {
+      "title": "Inflect 放出 v3 本地英文语音三件套（Mini / Micro / Atom），非商用早期访问",
+      "url": "https://huggingface.co/owensong/Inflect-Micro-v3",
+      "summary": "11 月 10 日，Inflect 以「可用早期访问」名义放出 v3 系列的 Mini、Micro、Atom 三个本地英文 TTS 模型，许可为 inflect-preview-evaluation-1.0（仅限非商用评估，官方强调这不是正式发布）。Micro 定位「更小的神经内核」用于日常本地英文语音，提供 6 个固定音色，支持本地推理；仓库同时给出 GitHub 代码与 Discord 社区入口，旧 Preview 仓库保持不变。这延续了 Inflect「本地、离线、可跑在消费级硬件」的产品取向，也给端侧 TTS 选型再加一档。"
+    },
+    {
+      "title": "Oomni 开源 Mithi v2 Flash：99M 参数覆盖 11 种印度语言的 TTS，Apache-2.0 可商用",
+      "url": "https://huggingface.co/Oomni/mithi-v2-flash",
+      "summary": "北京时间 11 月 11 日凌晨，Oomni 发布 Mithi v2 Flash——一个 99.1M 参数（199MB，bf16 safetensors）、24kHz 单声道输出的轻量 TTS，覆盖印地语、英语、孟加拉语、古吉拉特语、卡纳达语、马拉雅拉姆语、马拉地语、奥里亚语、旁遮普语、泰米尔语、泰卢固语共 11 种语言，内置 5 男 5 女共 10 个音色（Satvik、Anirban、Nakul 等）。模型完全基于开源组件搭建（Kokoro-82M、Maya2-native、indic-bert、misaki 等），以 Apache-2.0 发布、允许商用，明显是冲着印度语种的低成本本地部署场景去的。"
+    }
+  ]
+}
