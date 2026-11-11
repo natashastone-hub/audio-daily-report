@@ -1,0 +1,218 @@
+{
+  "windowNote": "本期为 2026-11-11 午间版，时间窗口 09:30–14:00（CST）。arXiv API 在本窗口内正式索引出「11-10 提交、11-11 公告」的新一批（2611.13xxx / 2611.14xxx / 2611.132xx），共 21 篇（eess.AS 11 篇 + cs.SD 15 篇，去重后 21 篇）；这批论文在 09:30 早间版抓取时 API 尚未放出索引，因此全部属于本期新增，与早间版（覆盖 2611.12xxx 批次）无重复。为防 API 截断，已用 arxiv 官方 recent 列表（11 Nov 分节）交叉核对，确认无遗漏条目。Hugging Face Daily Papers 11-11 批次共 17 篇，audio 标签 0 篇。前沿新闻：6 个必搜关键词全部执行，6 小时内无新命中。",
+  "papers": [
+    {
+      "title": "Walrus Technical Report",
+      "url": "https://arxiv.org/abs/2611.13689",
+      "date": "2026-11-10",
+      "authors": "Alkis Koudounas, Osamu Take, Hayato Futami, Quentin Jodelet, Emiru Tsunoo 等",
+      "abstract": "统一的 8B 语音音频基座模型，用单个解码器骨干（由 Gemma 4 初始化）同时覆盖语音识别（含语码转换、多人混说）、语音转文本 / 语音转语音翻译、TTS、情感识别、音频描述与通用音频理解。作者强调贡献不在新架构而在「数据侧配方」：三阶段数据课程从广域多语种 → 多人 / 语码转换 → 领域专精，每一阶段用任务感知 + 数据集感知的加权来平衡 token 预算差异极大的任务并防止核心能力遗忘；累计 6 亿+ 样本、20+ 任务、100+ 语言。语音生成侧预测低比特率离散语音 token，再由轻量 token→波形解码器还原高保真音频。结果在多语种 / 多人 / 语码转换 ASR、语音翻译与音频理解基准上多数领先，既超过同尺寸开源语音 LM 与专用任务模型，多数基准上还追平或超过 4 倍大的 Qwen3-Omni——为「多任务语音质量主要由数据工程驱动」提供了有力证据。",
+      "tags": ["Speech LLM", "Multilingual", "Code-Switching", "Data-Centric", "S2ST"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.13689"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.13689"}
+      ]
+    },
+    {
+      "title": "Emilia2: A Large-Scale Dataset for Controllable Long-Form Speech Generation",
+      "url": "https://arxiv.org/abs/2611.13614",
+      "date": "2026-11-10",
+      "authors": "Qinke Ni, Dekun Chen, Junwen Qiu, Huan Liao, Xu Li, Zhizheng Wu 等",
+      "abstract": "面向长时语音生成的 22.9 万小时多语种数据集。从 in-the-wild 数据中构造出短句、单人长时语音、多人对话三类样本，保留转写、说话人身份、停顿与声学转换；单人长时中 50.0% 的小时数来自 5 分钟以上样本，对话中该比例为 66.8%。为支持表现力控制，提供 477 万条自然语言指令标注与 93.3 万条非语言发声（笑、叹气等）标签。同时发布 Emilia2-testset：23 小时双语、单段最长 30 分钟、最多 4 人，每位说话人配参考音频。作者在其上训练 AR 与 NAR 模型：0.6B 骨干的 NAR 在 TTSD-Eval 上拿到中文 CER 5.27% / 英文 WER 9.93% 的最优，AR 模型在 InstructTTSEval 上与 Qwen3-TTS-12Hz-VD 基本持平（zh/en 76.2/78.3 对 77.1/77.9）。长时一致性与分钟级表现力控制有了公开数据底座。",
+      "tags": ["Dataset", "Long-Form TTS", "Expressive", "Dialogue", "Open Data"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.13614"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.13614"},
+        {"label": "Demo", "url": "https://charlesnii.github.io/Emilia2-demo/"}
+      ]
+    },
+    {
+      "title": "Earlybird: Predictive Streaming Speech Recognition in 29M Parameters",
+      "url": "https://arxiv.org/abs/2611.14421",
+      "date": "2026-11-10",
+      "authors": "Sahil Mahendrakar",
+      "abstract": "把流式 ASR 的「先说完再出词」翻过来：29M 参数（4bit 量化后 16.8MB）的 Earlybird 用「随机截断音频」训练——常常一刀切在词中间——要求模型把此刻应该出现的词整词输出，并顺便猜出后两个词；原始 token 概率即为每个词（包括还在说的那个词）给出置信度。在干净有声书（LibriSpeech test-clean）上，中位词比说话人说完提前 90ms 就被正确预测，而已发布的流式模型要晚 90–400ms；六个测试集（有声书、TED、公开演讲、财报电话、合成语音）上它都是最早的，有声书上 69% 的词在说完前即被正确预测，其它模型只有 3–25%。对仍在发音的词，置信度也已校准（ECE 3.7–5.5）。英文 Open ASR Leaderboard 八个集上全面优于 Moonshine Tiny，与同尺寸 Whistle 大致持平。对语音 agent 的首包延迟是结构性收益。",
+      "tags": ["ASR", "Streaming", "Low Latency", "Tiny Model", "Predictive"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.14421"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.14421"},
+        {"label": "HuggingFace", "url": "https://huggingface.co/sahilmahendrakar/Earlybird-29M"}
+      ]
+    },
+    {
+      "title": "DialInstruct-TTS: Interactive Expressive Speech Generation via Multi-Turn Dialogue with Fine-Grained Temporal Control",
+      "url": "https://arxiv.org/abs/2611.13875",
+      "date": "2026-11-10",
+      "authors": "Wangzixi Zhou, Bagus Tris Atmaja, Sakriani Sakti",
+      "abstract": "把指令式 TTS 从「一句话定全局」改成多轮对话式打磨：每一轮由 Qwen 规划的 planner 融合对话历史与最新指令，产出完整的 TemporalPlan（时间化计划），再由时序声学控制模块对情绪、语速、音量、发声方式做细粒度控制；Reference-latent revision 机制让未触及的时间区间与属性在轮次间保持不变，用户只改想改的那一段，其余已满意的语音不必重新生成。主客观评测显示全局指令遵循、局部风格落实、非目标区域保持三项同时改进，且相比每次都要重述完整指令并整段重生的传统一次性交互，交互便利性与舒适度显著提升。对「边说边调」的创作型 TTS 工作流是关键能力。",
+      "tags": ["TTS", "Multi-Turn", "Controllable", "Expressive", "Instruct"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.13875"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.13875"},
+        {"label": "Demo", "url": "https://anonymous.4open.science/w/eacl-demo-17C5/"}
+      ]
+    },
+    {
+      "title": "Alania-2: Turkish text-to-speech with instant and fine-tuned voice cloning",
+      "url": "https://arxiv.org/abs/2611.13845",
+      "date": "2026-11-10",
+      "authors": "Sezgin Saygili, Emre Kaplaner, Oncel Ozgul, Fikri San Koktas",
+      "abstract": "488M 参数的土耳其语 TTS（VoxCPM 架构：LM 骨干 + 扩散头出连续音频潜变量），内置两个音色、支持文描述设计音色与两种克隆方式；从零训练于 18,195 小时土耳其语语音，其中 90% 是由更大教师模型生成并经自动过滤的合成数据。工程细节实用价值很高：文本规范化器把数字、缩写、外来专名改写成土耳其人真正会说的词，没有它时 96 条含数字测试句中「金额 / 日期等关键部分经合成+识别后完整保留」为 0 条，有了它是 86 条。公开基准 Freya-TR-Eval（495 句，ASR 打分）上 WER 1.44%，前代系统 5.99%；内置音色以不到 1/4 的体量把 CER 追到 2.3B 模型半分以内；同配方 7.6M 单音色小模型与最清晰系统持平，说明可懂度更吃数据而非参数。克隆侧结论：只把参考音频作为条件而非续写，可把漏词率从 21.9% 降到 1.7%；参考音频 20–30 秒最佳；约 2 分钟训出的 LoRA 可将说话人相似度显著抬到即时克隆之上。推理引擎优化把单流首包降到 32ms。",
+      "tags": ["TTS", "Voice Cloning", "Synthetic Data", "Low-Resource Language", "Engineering"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.13845"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.13845"}
+      ]
+    },
+    {
+      "title": "ESDCodec: Ultra-Low Bitrate Speech Codec with Enhanced Semantic Disentanglement and Subband Decoding",
+      "url": "https://arxiv.org/abs/2611.14043",
+      "date": "2026-11-10",
+      "authors": "Nan Xu, Kecan Mao, Xin Gu, Yi Zhao, Zhi Gong",
+      "abstract": "0.85kbps 超低码率神经语音编解码器。语义量化器改用「随机初始化 + 冻结码本」再经轻量投影层，把语义信息完全压进线性空间编码，同时提升码本利用率；解码器侧加条件网络，把先验子带知识显式注入上采样解码过程，由去量化特征预测子带信号，为波形重建提供细粒度引导。实验显示在 0.85kbps 下重建质量优于现有方案，在基于 LLM 的语音生成任务上也稳定超过同类编解码器——低码率 + 可直接喂给语音生成模型，是端到端语音 LM 的关键配件。",
+      "tags": ["Codec", "Ultra-Low Bitrate", "Speech Generation", "Quantization"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.14043"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.14043"}
+      ]
+    },
+    {
+      "title": "AURA: Auditory Spatial Intelligence via a Unified Representation from a General-Audio Encoder through Complete Alignment",
+      "url": "https://arxiv.org/abs/2611.13687",
+      "date": "2026-11-10",
+      "authors": "Boyan Han, Xiaoyan Wang, Zhe Sun, Ziqi Wang, Yujun Cai, Ming-Hsuan Yang 等",
+      "abstract": "空间音频问答既要知道「是什么声」又要知道「在哪」。作者先做逐层探针分析：完全无空间监督训练的通用音频编解码器，其冻结特征里其实保留了空间信息，左右线索主要藏在双耳通道差分里——但不可直接取用：双声源场景下用它训练出的模型左右判断等同随机，且把检出的方向「平均」分配给被问的声源和没问的声源。作者归因于音文信息不对称（音频含两个声源，答案只描述一个）。2×2 控制实验显示：补全场景描述、或显式暴露通道差分，都能把左右准确率抬到随机以上，而「把方向绑定到被问声源」两者都需要。据此 AURA 冻结 codec 与语言模型，仅在 SpatialSoundQA 上把双声源方向准确率超过最强专用系统 10.31 个点，可训练参数约为其 40%。",
+      "tags": ["Spatial Audio", "Audio-Language", "Frozen Encoder", "Benchmark"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.13687"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.13687"}
+      ]
+    },
+    {
+      "title": "Swanada: Split-Encoder Capability-Routed Conformer CTC and Sub-30 MB On-Device Speech Recognition Across Twelve Scripts",
+      "url": "https://arxiv.org/abs/2611.13814",
+      "date": "2026-11-10",
+      "authors": "Hemanth HM",
+      "abstract": "端侧（浏览器 / 移动 / Node）十二种文字系统的流式 ASR 系统，专治四个工程瓶颈：① 每语言一个 Conformer 要 177MiB、12 种合计 2.1GiB，撑爆 CacheStorage；② 静态相对位置编码表占 10–20MB FP32，1×1 Conv1d 在 WASM SIMD 上退化到 ConvInteger；③ 滑窗 CTC 边界 token 抖动；④ iOS WKWebView 下 44.1/48kHz 采样率不匹配与 AudioWorklet 静默卡死。方案是能力路由的共享 INT8 Conformer 编码器（桌面/服务器 177MiB 17 层 d=512；手机 25.35MiB 蒸馏 14 层 d=256）+ 12 个 515KiB 可热插拔原生文字系统线性 CTC 头，存储降到 183.4MiB / 31.39MiB（首载 25.85MiB）；运行期 protobuf 尾部裁剪 <2ms 暴露共享表征，配动态位置合成、MatMul 点卷积与 QInt8 头校准。480 条留出集 / 1280 条公开集上 Studio 档 CER 5.43% / 8.87%，RTF 0.0097–0.0264×，首 token 中位 30.6ms，已提交前缀 churn 0.00%。",
+      "tags": ["ASR", "On-Device", "WASM", "Quantization", "Multilingual"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.13814"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.13814"}
+      ]
+    },
+    {
+      "title": "GigaEdge Spench: An SDK for Practical Streaming Speech Enhancement",
+      "url": "https://arxiv.org/abs/2611.13243",
+      "date": "2026-11-09",
+      "authors": "Artem Sokolov, Artem Khaidarov, Yana Lysova, Alexander Gladkikh, Vitaliy Yulis",
+      "abstract": "开源流式语音增强 SDK，覆盖 CPU 服务器、移动端与浏览器：增强通道由神经降噪、归一化与动态处理、重采样以及（在支持的平台上）声学回声消除等模块自由组合，归一化也可脱离神经模型单独跑。发布一套 8kHz INT8 降噪模型与 48kHz FP32 判别式 / 混合模型；共享 C++ 内核经原生接口支持 ONNX Runtime 与 TensorFlow Lite，另有 Android / iOS SDK 与 WebAssembly 集成。多个 stream context 共享模型资源，同一流相邻帧可合并进单次推理。在 EARS-WHAM v2 上与 RNNoise、DPDFNet2 对比质量与开销：所有原生与 Web 配置均快于实时（块越大、攒输入越久）；并测了单模型在 CPU 上能并发多少路。价值在「可配置部署系统 + 模型选择/块长/运行环境如何影响可用性」的实测结论。",
+      "tags": ["Speech Enhancement", "Streaming", "AEC", "Cross-Platform SDK", "Open Source"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.13243"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.13243"}
+      ]
+    },
+    {
+      "title": "MusicFlux: Flexible Conditioning for Text-Guided Music Generation and Editing",
+      "url": "https://arxiv.org/abs/2611.13834",
+      "date": "2026-11-10",
+      "authors": "Teysir Baoueb, Leonardo Boulitreau de Menezes Martins Marques, Paraskevas Stamatiadis, Gaël Richard",
+      "abstract": "音乐编辑要在保留原曲属性的前提下改造录音。近期做法是把预训练文生音乐模型用上下文音频条件化，做补全、事件插入、修复；图像编辑里「把源图当 in-context 信息」的统一生成/编辑思路很诱人，但直接搬到音乐上因音频序列太长而算力爆炸。MusicFlux 建立在高效的流匹配文生音乐模型上，提出两种条件化方案，在编辑质量与计算效率之间取舍：一种编辑质量更好，另一种保持原曲长度且显著降低开销，均与强基线可比。对长音频编辑的实用化是一个务实折中。",
+      "tags": ["Music Generation", "Audio Editing", "Flow Matching", "Efficient"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.13834"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.13834"}
+      ]
+    },
+    {
+      "title": "Antalia-2 Mini: A 7.6-million-parameter Turkish text-to-speech model trained entirely on synthetic speech",
+      "url": "https://arxiv.org/abs/2611.13811",
+      "date": "2026-11-10",
+      "authors": "Sezgin Saygili, Emre Kaplaner, Oncel Ozgul, Fikri San Koktas",
+      "abstract": "762 万参数的土耳其语单音色 TTS，字符输入、48kHz 输出，在 Apple M5 笔记本 CPU（2 线程）上 41 倍实时。训练音频全部来自约 300 倍大的教师模型 VoxCPM2（克隆一段合成音频），自动筛选后保留约 1790 小时——典型的「纯合成数据蒸馏」。把声码器在声学模型自身 mel 上微调，使 Whisper 转写的 WER 从均值 3.89% 降到 1.75%。作者也诚实记录了教师缺陷被学生学走的现象（首词以 ö 开头时教师会把开头弄坏），以及用截断前缀掩盖的处理。Freya-TR-Eval（495 句）上 v1.0.1 达 WER 1.09% / CER 0.22%，与 8.6M 的 EMA Lightning 在配对 bootstrap 下不可区分，但后者全带 UTMOS（英语训练的质量代理）更高；无人工听测。权重、推理代码与评测框架 Apache-2.0 开源，训练代码与数据未发布。",
+      "tags": ["TTS", "Tiny Model", "Synthetic Data", "Distillation", "On-Device"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.13811"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.13811"}
+      ]
+    },
+    {
+      "title": "AVCC: Audio-Visual Conversation Corpus for Turn-Taking Prediction with a Human Benchmark",
+      "url": "https://arxiv.org/abs/2611.13957",
+      "date": "2026-11-10",
+      "authors": "Haotian Qi, Gabriel Skantze",
+      "abstract": "「下一个谁说、什么时候说」是对话 agent 与社交机器人不等静音就接话的前提。多人下一说话人预测（NSP）此前只在每说话人各带传感器的语料上研究，各家事件定义还互不相同；既没有覆盖机器人那套「单摄像头 + 单麦克风」的公开基准，也没有模型与人直接比较过。作者把 31 小时双人 / 三人线上对话的音视频语料 AVCC 改造成公开 NSP 基准：新增说话人不重叠的 7 段视频测试分区（在双方静音间隙标注 865 个 hold 与 865 个 shift 事件）、全语料词级强制对齐转写，并在同一批事件上采集人类参考结果。评测了纯音频的 RoleVAP 与多模态 MuVAP。标注、转写、逐响应人类数据与可复现脚本全部释放。",
+      "tags": ["Turn-Taking", "Multimodal", "Benchmark", "Dataset", "Conversational Agent"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.13957"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.13957"}
+      ]
+    },
+    {
+      "title": "Off-target posterior mass: A training-free diagnostic for fine-tuning spoken language diarization probes",
+      "url": "https://arxiv.org/abs/2611.13430",
+      "date": "2026-11-10",
+      "authors": "Zhuoyan Tao, Aditya Kommineni, Shrikanth Narayanan",
+      "abstract": "口语种日志（SLD）给出录音的帧级语种信息，流程是「预训练语音模型提特征 + 聚类」，微调预训练模型的增益高度依赖数据集。作者提出 Off-target Posterior Mass（OTPM）——由语种识别后验概率算出的诊断指标——来预判微调能带来多少增益：在未见过的合成双语数据上与探针增益正相关 0.56，在真实语料上 0.23。即「先花几分钟算个指标，再决定要不要微调」，对多语种语音系统的迭代成本是直接节省。",
+      "tags": ["Language Diarization", "Diagnostic", "Fine-Tuning", "Multilingual"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.13430"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.13430"}
+      ]
+    },
+    {
+      "title": "Which Acoustic Features Survive Compression? Tracker-Estimated First-Formant Statistics for Codec-Robust Audio Deepfake Detection",
+      "url": "https://arxiv.org/abs/2611.13258",
+      "date": "2026-11-09",
+      "authors": "Yash Sukhdeve, Aaron Storey, Masudul H. Imtiaz",
+      "abstract": "干净实验室录音上表现良好的音频深伪检测器，遇到电话或平台压缩常常崩掉。作者问一个具体问题：哪些低维声学描述子在编解码退化后仍然有判别力？在 ASVspoof 2019 上筛 36 个句级特征（共振峰、PNCC、LFCC、韵律），在 ASVspoof 2021 LA 官方集上跨 7 种编解码条件测试：33 个描述子统计显著，但只有 4 个具备大的实际区分度（|r|>0.5，bootstrap 95% CI），全部是第一共振峰（F1）类，且高度冗余（PC1 解释 79% 方差）。收益是稳定性：36 特征 SVM 在编解码失配下 EER 恶化 14 个点（9.5%→23.5%），四特征 RBF-SVM 只恶化 5.9 个点（17.0%→22.9%）；F1 子集跨条件波动 3.4 个点，全集 13.1 个点。控制说话人身份后 F1 差异仍显著（p>10^10，混合效应模型）。",
+      "tags": ["Audio Deepfake", "Anti-Spoofing", "Codec Robustness", "Interpretable"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.13258"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.13258"}
+      ]
+    },
+    {
+      "title": "Assessing Alignment in Automatic Piano Transcription Datasets: A Benchmark for Scoring Methods",
+      "url": "https://arxiv.org/abs/2611.14443",
+      "date": "2026-11-10",
+      "authors": "Lucas de Souza Brandão, Lucas Gris, Joaquim Cavalcante, Chukwuemeka Nkama, Andrea Poltronieri",
+      "abstract": "自动音乐转写（AMT）依赖成对的音频–MIDI 数据，隐含假设二者时间近乎完美对齐；但常用钢琴数据集已被发现存在对齐错误，会同时污染训练与评测。作者提出用受控的时间、音高、结构三类 MIDI 损坏来系统评测「对齐打分方法」的框架，并提出基于 AMT 模型的 STI 指标，与现有方法对比：STI 与基于 CENS、频谱图的方法整体最强，其中 STI 对细粒度时间错位（AMT 数据集里最主要的对齐错误）最敏感。随后把最优方法应用到主流钢琴 AMT 数据集，给出其相对对齐质量趋势——为数据集清洗、训练与评测提供可操作依据。",
+      "tags": ["Music Transcription", "Dataset Quality", "Evaluation", "AMT"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.14443"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.14443"}
+      ]
+    },
+    {
+      "title": "On the information rate of phones, syllables and words",
+      "url": "https://arxiv.org/abs/2611.13990",
+      "date": "2026-11-10",
+      "authors": "Herman Kamper",
+      "abstract": "编码语音内容用什么语言学单元最省比特：音素、音节、词、更大单元，还是介于其间？用 960 小时英文有声书转写语料，在有限建模预算下（n-gram 与 Transformer 语言模型）比较音素、音节、词、多词组合与中间粒度分词的信息率。结论：在完美语言模型下各单元等价，但现实中最低比特率由「词」达成，偶尔略长于词的单元最好；也就是说建模容量受限时，比音节大、比长短语小的单元是最高效的表征。对语音 tokenizer 粒度选择与语言处理理论都有直接含义。",
+      "tags": ["Speech Tokenization", "Information Theory", "Language Modeling"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.13990"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.13990"}
+      ]
+    }
+  ],
+  "news": [],
+  "note": "2026-11-11 午间版（窗口 09:30–14:00 CST）。论文：arXiv API 本窗口内放出「11-10 提交、11-11 公告」新批次，eess.AS 11 篇 + cs.SD 15 篇、去重 21 篇，本报告收录其中 16 篇与语音/音频直接相关的论文（其余 5 篇为扬声器辐射阻抗建模、车载麦克风阵列标定、音乐相似度解耦、流行音乐多维标注数据集、AI 反馈乐器的人机关系研究）。已用 arxiv recent 列表 11 Nov 分节交叉核对无遗漏。新闻：6 个必搜关键词（OpenAI GPT-Live full-duplex voice model / OpenAI voice model release / Google Gemini voice / full-duplex speech model / 语音模型发布 / real-time voice AI）逐一执行，命中均为窗口外旧闻——GPT-Live 首发为 2026-07-08；GPT-Live-1 开放出站 SIP 通话为 11-02 的 OpenAI API changelog、11-09 周报覆盖，超 6 小时窗口；Gemini 3.8 TTS 为 09-23，Gemini 3.8 Live 已入 10 月目录；full-duplex 侧最新公开条目为 11-09 的 fullduplex.ai 周报 W46（含 Sophon-Realtime v1、Awaken Full Duplex），同样超窗口。HuggingFace Daily Papers 11-11 批次 17 篇中无 audio 标签论文。故本期新闻 0 条，诚实标注空窗，不用旧闻充数。"
+}
