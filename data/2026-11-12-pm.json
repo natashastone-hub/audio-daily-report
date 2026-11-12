@@ -1,0 +1,6 @@
+{
+  "windowNote": "本期为 2026-11-12 午间版，时间窗口 09:30–14:00（CST，对应 UTC 01:30–06:00）。arXiv 在本窗口内没有放出任何新公告批次：rss.arxiv.org 的 Thu, 12 Nov 2026 05:00 UTC 构建结果中 eess.AS / cs.SD / cs.CL / eess.SP / cs.LG 全部为 0 条，recent 列表最新分节仍是「Wed, 11 Nov 2026」（eess.AS 11 篇 + cs.SD 15 篇，已于今早 09:30 早间版覆盖）。原因是 11 月 11 日（周三）为美国退伍军人节，arXiv 当日不处理投稿，因此 11-12 的公告批次为空，下一批预计 11-13 04:00 CST 放出。HuggingFace Daily Papers 11-12 批次仅 3 篇，无 audio 标签论文。前沿新闻：6 个必搜关键词逐一执行，窗口内无新命中。故本期 0 篇论文 + 0 条新闻，如实标注空窗，不用早间内容充数。",
+  "papers": [],
+  "news": [],
+  "note": "2026-11-12 午间版（窗口 09:30–14:00 CST）无新增内容。论文侧：arXiv 今日（11-12）公告批次为空——rss.arxiv.org 05:00 UTC 构建的 eess.AS、cs.SD、cs.CL、eess.SP、cs.LG 全部 0 条，且 arxiv.org/list 的 eess.AS/recent 与 cs.SD/recent 最新分节仍停留在 Wed, 11 Nov 2026（11 篇 + 15 篇，已在早间版收录），说明本窗口内没有任何新论文被索引；根因是 11-11 美国退伍军人节 arXiv 不处理投稿，下一批公告预计 11-13 04:00 CST。API 侧 export.arxiv.org 本机 IP 持续返回 429（第一级 max_results=50 与第二级 max_results=25 均失败），已改用官方 recent 列表 + rss.arxiv.org 双重交叉核对，确认无遗漏。HuggingFace Daily Papers 11-12 批次 3 篇（LLM RL、游戏 Agent 环境、LLM 推理路由），均无 audio 标签。新闻侧：6 个必搜关键词（OpenAI GPT-Live full-duplex voice model / OpenAI voice model release / Google Gemini voice / full-duplex speech model / 语音模型发布 / real-time voice AI）全部执行，命中最新条目仍为窗口外旧闻——GPT-Live 首发 2026-07-08、Gemini 3.8 Live 2026-11-04、Qwen-Audio-3.0-TTS 2026-07-20，均超 6 小时窗口，故新闻 0 条。"
+}
