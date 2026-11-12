@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-11-12</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-11-12</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年11月12日 (周四) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">9</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.29164" target="_blank">XingChen-UniFE: A Unified Generative Speech Front-End via Complementary Acoustic-Semantic Modeling</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-11</span><span>👥 Kelan Kuang, Qihan Hu, Jian Kang, Jie Li, Yongxiang Li, Yi Liu</span></div>
+      <div class="abstract">把「通用语音修复（GSR）」和「目标说话人提取（TSE）」统一进一个大型音频语言模型（LALM）的生成式语音前端。核心是互补的双流编码器：自监督语音模型提供层级语义特征，可学习的声学分支从复杂频谱中捕捉细粒度结构，再用双向交叉注意力让两路表征互相交换信息；融合表征作为条件驱动 LALM 生成离散语音 token，并把任务信息与说话人信息一并注入。实验显示在 GSR 与 TSE 两项任务上同时取得强性能，且对训练中未见的降质条件（噪声、混响、失真组合）具备稳健泛化能力——即一个前端模型替代了过去「修复一套、提取一套」的重复建设。（本次为 v2 更新版本，今日重新公告）</div>
+      <div class="tags"><span class="tag">Speech Front-End</span><span class="tag">Target Speaker Extraction</span><span class="tag">Speech Restoration</span><span class="tag">LALM</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.29164" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.29164" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.35581" target="_blank">Integrate the Reward, Don't Sample It: Window Likelihood for Interruptions and Backchannels in Full-Duplex Speech Models</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-11</span><span>👥 Guoqiang Hu, Lichao Zhang, Yizhou Peng, Yuhao Luo, Haifeng Hu, Zhongqian Sun, Wei Yang, Eng Siong Chng</span></div>
+      <div class="abstract">全双工语音模型最核心的一个决策是：用户在同说话时，该判为「打断（应停口）」还是「附和/嗯嗯（应继续说）」。作者发现用 GRPO 做后训练时，实际效果主要由「改变模型多容易停口」这一副作用主导，而非判别能力提升——没有任何配置能在多个模型上同时降低两类错误率，且两个已发布 checkpoint 的判别力并不优于其基座。根因在奖励估计方式：短窗口内停口概率本可由策略输出的少量 stop 概率解析算出，GRPO 却用采样估计——全对或全错的 rollout 组梯度为零（全错也没信号）、不确定处的推力最强（与对错无关）、整条 rollout 的信用会波及奖励根本没评判的决策。作者提出 Window Likelihood（WL）：对词采样、对停口决策解析积分，精确计算正确结果的概率，从而把信用严格限制在窗口内；在打断/附和判别上显著优于 GRPO 类方法。（v3 更新，今日重新公告）</div>
+      <div class="tags"><span class="tag">Full-Duplex</span><span class="tag">Speech LLM</span><span class="tag">Reinforcement Learning</span><span class="tag">Turn-Taking</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.35581" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2610.35581" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.10035" target="_blank">Ninada: Sub-Clause Split-Graph VITS Streaming and Capability-Routed 24 kHz Speech Synthesis Across Twelve Scripts</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-11</span><span>👥 Hemanth HM</span></div>
+      <div class="abstract">面向浏览器/移动端侧部署的开源 24 kHz TTS 系统，覆盖英语、古典梵语与十种印度语言（sa/en/hi/kn/mr/bn/ta/te/ml/gu/pa/or），共 48 个 checkpoint 组成「能力路由」机群：24 个 HiFi-GAN v1 录音室级专家（W8A32+FP16 ONNX，仅 27.9 MB）+ 24 个蒸馏版 c8c8_384 iSTFTNet 专家。关键工程点是「子句切分图流式」——打破标准 ONNX 导出必须整句一次前向的限制，把每句拆成子句依赖图逐段合成，把首音延迟（TTFA）从数秒降到亚秒级、同时削掉激活内存尖峰；另外针对 138.8 MB float32 权重撑爆浏览器缓存、移动 WebGPU 编译卷积 shader 停摆 6-14 秒且实测仅 1.44× RTF、WASM pthread 在大 LITTLE 架构上卡栅栏、iOS WKWebView 与 AudioWorklet 抢锁导致丢帧静音等四类端侧瓶颈逐项给出方案。（v2 更新，今日重新公告）</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Streaming</span><span class="tag">On-Device</span><span class="tag">Multilingual</span><span class="tag">VITS</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.10035" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.10035" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2605.28063" target="_blank">Unified Synthesis of Compositional Speech and Sound from Free-Form Text Prompts</a></h4>
+      <div class="meta"><span>📅 2026-11-11</span><span>👥 Yuyue Wang, Xihua Wang, Xin Cheng, Yijing Chen, Ruihua Song</span></div>
+      <div class="abstract">PlanAudio：让一个模型直接吃「自由格式文本」，生成语音与音效在时间与语义上互相咬合的统一音频。例如「一段急促的鼓点以镲片收尾，随后一个男人喊道：冲！」，理想输出是一条连贯录音而非互不相干的独立音轨。现有两条路线都有硬伤：流水线式把 TTS 与 text-to-sound 两个模型串起来，统一式模型又要求结构化多字段提示，二者都得先做上游提示分解/改写，牺牲自由表达并放大级联错误。PlanAudio 端到端跳过中间提示预处理，在模型内部完成事件规划与音频合成。（v2 更新，今日重新公告）</div>
+      <div class="tags"><span class="tag">Audio Generation</span><span class="tag">Speech+Sound</span><span class="tag">Unified Model</span><span class="tag">Text-to-Audio</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2605.28063" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2605.28063" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2606.18738" target="_blank">GRIDEX: Region-Grounded Forensic Explanations for Vocoder-Based Synthetic Speech</a></h4>
+      <div class="meta"><span>📅 2026-11-11</span><span>👥 Thi Ngan Ha Do, Tingmin Wu, Alsharif Abuadbba, Kristen Moore</span></div>
+      <div class="abstract">现有深度伪造检测器准确率虽高，但只给一个分数，不告诉取证人员伪造线索落在频谱图的哪个位置、声学上意味着什么，法庭与调查场景可用性差。GRIDEX 在检测器报警后接两步：先在频谱图中挑出 top-K 异常区域，再为每个异常生成结构化解释（时间、频谱、音素等分类声学字段 + 解释文本），使证据从「整张图人工排查」收敛到「少数诊断性区域」。相较以往可解释性方法，它把上下文属性与局部证据明确挂接，便于人工复核与举证。（v2 更新，今日重新公告）</div>
+      <div class="tags"><span class="tag">Audio Deepfake</span><span class="tag">Forensics</span><span class="tag">Explainability</span><span class="tag">Vocoder</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2606.18738" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2606.18738" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.13503" target="_blank">FaiSonic MMD: A popular music dataset with temporally aligned multidimensional annotations for multitask music analysis</a></h4>
+      <div class="meta"><span>📅 2026-11-11</span><span>👥 Tieyao Zhang, Yuke Liu, Jiaxing Yu, Xinda Wu, Genfang Chen</span></div>
+      <div class="abstract">面向流行音乐多任务分析的多维标注数据集：500 首歌、约 32.86 小时，中英文各 250 首。由职业音乐人标注乐句、段落、和弦与节奏，并做独立复核。各维度的事件与区间共享同一「以录音为基准」的时间轴，同时保留各自的音乐粒度与边界，因此可以直接对同一首歌的不同音乐描述做交叉对照——弥补了现有资源在联合覆盖度与专家校验上的不一致，支撑联合监督与维度间关系研究。</div>
+      <div class="tags"><span class="tag">Music Dataset</span><span class="tag">MIR</span><span class="tag">Multi-Task</span><span class="tag">Annotation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.13503" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.13503" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.14415" target="_blank">Exploring Post-Hoc Disentanglement of Audio Foundation Models for Music Similarity</a></h4>
+      <div class="meta"><span>📅 2026-11-11</span><span>👥 Lucas de Souza Brandão, Gabriel da Costa Merlin, Diego Furtado Silva</span></div>
+      <div class="abstract">CLAP、MuQ、MERT 这类音频基础模型在通用音乐相似度上很强，但潜在空间纠缠，难以解释、也难以按属性精细控制。条件相似度网络（CSN）本可用学习到的掩码把嵌入空间切成属性子空间，但此前都要从零训练骨干。本文系统研究「后置解耦」：冻结预训练嵌入，只在其上加极少量可训练参数做门控，在两种数据集、多种掩码与池化组合下评估。结论很实用——最小适配容量就足以让后置门控同时提升属性级解耦度与整体检索性能，池化、掩码方式与深度带来的额外收益有限。</div>
+      <div class="tags"><span class="tag">Audio Foundation Model</span><span class="tag">Music Similarity</span><span class="tag">Disentanglement</span><span class="tag">Retrieval</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.14415" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.14415" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.14003" target="_blank">Spatio-Temporal Calibration of a Vehicle-Mounted Microphone Array for Autonomous Driving</a></h4>
+      <div class="meta"><span>📅 2026-11-11</span><span>👥 Marvin Seegert, Richard Taupitz, Korbinian Moller, Johannes Betz</span></div>
+      <div class="abstract">麦克风能让自动驾驶车「听见」相机与激光雷达看不到的盲区，但要把声源定位并与其他传感器融合，必须先标定麦克风阵列。已有方法都假设小型、无遮挡的室内支架，而真实车身会形成声影，直线传播模型失效；据作者所知，此前没有围绕整车分布式阵列的标定工作。本文用气球爆裂作为单一跨模态靶标：激光雷达给出米制坐标、每个麦克风记录陡峭起始、相机提供时间戳，各观测按自身时间方差加权（从而「降权」而非丢弃被车身遮挡的到达）。在 4.9 m 孔径、8 麦克风的整车上，留出集距离残差 6.37 cm，已接近 6.07 cm 的硬件/标注极限。</div>
+      <div class="tags"><span class="tag">Microphone Array</span><span class="tag">Calibration</span><span class="tag">Autonomous Driving</span><span class="tag">Spatial Audio</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.14003" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.14003" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2608.20394" target="_blank">A Factorial Ablation of a Speech-to-SFT Pipeline: Differential Effects on Data Quality and Downstream Transfer</a></h4>
+      <div class="meta"><span>📅 2026-11-11</span><span>👥 Wonsup Shin, Jingu Kim</span></div>
+      <div class="abstract">工业界越来越流行「把会议录音经多级精炼转成 SFT 数据」，但各阶段的边际价值从未被公开消融。作者把转写精炼（Phase 0）与 SFT 数据质量精炼（Phase 2）做成可独立开关的 2×2 因子设计，用韩语医疗与金融会议录音生成 QA 形式 SFT 数据，微调 9 个模型（5 个 LLM 家族，2.4B-70B），评估用四家跨厂商 LLM 评委 + 六位专家盲评 + 三个下游 MCQA 基准。核心结论：在固定 SFT 配方下，QA 数据质量提升并不均匀传导为下游收益——4 评委打分的质量稳定上升，但跨模型平均 MCQA 增益并不显著，正向迁移集中在「家族-领域对齐」的组合上，六位人类评委的判断也一致。（v2 更新，今日重新公告）</div>
+      <div class="tags"><span class="tag">Speech-to-SFT</span><span class="tag">Data Quality</span><span class="tag">Ablation</span><span class="tag">Speech Data Pipeline</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2608.20394" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2608.20394" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>OpenAI 宣布 12 月 11 日停用 ChatGPT 旧版语音模式，语音全面转向 GPT-Live 全双工架构</h4>
+      <p>OpenAI 于 11 月 11 日宣布：2026 年 12 月 11 日起从「设置-语音」中移除 Advanced Voice Mode 与 Standard Voice Mode，此前选用旧模式的用户自动切到 7 月发布的 GPT-Live（全双工，可边听边说、被打断时不中断）。时间线：11 月 10 日起发停用通知，至 12 月 11 日前两种旧模式仍可用，历史语音会话保留。例外是实时视频、屏幕共享与自定义 GPT 语音对话仍走 Advanced Voice Mode。官方称 GPT-Live 上线后 ChatGPT 语音使用量接近翻倍、多数语音用户已切换；但 X/Reddit 上不少用户反对，抱怨 GPT-Live 打断用户、丢上下文、回答深度不如旧模式，部分付费用户威胁退订——与当年停用 GPT-4o 时如出一辙。 <a href="https://www.techweb.com.cn/it/2026-11-11/2980463.shtml" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>端侧方言语音识别工程实践：川渝方言老年用户场景的离线部署思路</h4>
+      <p>技术博客（非产品发布）：讨论智能音箱、陪护机器人、社区养老终端等设备在四川/重庆老年用户家里的识别困境——用户说「明朝早上八点钟喊我一哈」，通用普通话 ASR 直接失效。文章围绕方言口音适配、老年语音（语速慢、气息弱、发音含糊）鲁棒性、以及端侧离线部署的资源约束给出工程路径。这类「长尾方言 + 端侧」需求正成为 ASR 落地的新增长点，也解释了为什么近期端侧小模型（<30M、亚实时 RTF）方向的论文明显变多。 <a href="https://www.cnblogs.com/asr-expert/p/archive/2026/11/11" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-11-12') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

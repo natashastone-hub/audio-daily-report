@@ -1,0 +1,135 @@
+{
+  "windowNote": "统计窗口：2026-11-11 09:30 ~ 2026-11-12 09:34（Asia/Shanghai）。arXiv 官方 API 持续返回 429，已按预案降级：改用 rss.arxiv.org（eess.AS / cs.SD 今日公告）+ arxiv 列表页交叉核对，并与 11-11 早报/午报已收录的 53 个 arXiv ID 去重，仅保留未报道过的新公告条目（含 replace / replace-cross 版本更新）。",
+  "papers": [
+    {
+      "title": "XingChen-UniFE: A Unified Generative Speech Front-End via Complementary Acoustic-Semantic Modeling",
+      "url": "https://arxiv.org/abs/2610.29164",
+      "date": "2026-11-11",
+      "authors": "Kelan Kuang, Qihan Hu, Jian Kang, Jie Li, Yongxiang Li, Yi Liu",
+      "abstract": "把「通用语音修复（GSR）」和「目标说话人提取（TSE）」统一进一个大型音频语言模型（LALM）的生成式语音前端。核心是互补的双流编码器：自监督语音模型提供层级语义特征，可学习的声学分支从复杂频谱中捕捉细粒度结构，再用双向交叉注意力让两路表征互相交换信息；融合表征作为条件驱动 LALM 生成离散语音 token，并把任务信息与说话人信息一并注入。实验显示在 GSR 与 TSE 两项任务上同时取得强性能，且对训练中未见的降质条件（噪声、混响、失真组合）具备稳健泛化能力——即一个前端模型替代了过去「修复一套、提取一套」的重复建设。（本次为 v2 更新版本，今日重新公告）",
+      "tags": ["Speech Front-End", "Target Speaker Extraction", "Speech Restoration", "LALM"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.29164"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.29164"}
+      ]
+    },
+    {
+      "title": "Integrate the Reward, Don't Sample It: Window Likelihood for Interruptions and Backchannels in Full-Duplex Speech Models",
+      "url": "https://arxiv.org/abs/2610.35581",
+      "date": "2026-11-11",
+      "authors": "Guoqiang Hu, Lichao Zhang, Yizhou Peng, Yuhao Luo, Haifeng Hu, Zhongqian Sun, Wei Yang, Eng Siong Chng",
+      "abstract": "全双工语音模型最核心的一个决策是：用户在同说话时，该判为「打断（应停口）」还是「附和/嗯嗯（应继续说）」。作者发现用 GRPO 做后训练时，实际效果主要由「改变模型多容易停口」这一副作用主导，而非判别能力提升——没有任何配置能在多个模型上同时降低两类错误率，且两个已发布 checkpoint 的判别力并不优于其基座。根因在奖励估计方式：短窗口内停口概率本可由策略输出的少量 stop 概率解析算出，GRPO 却用采样估计——全对或全错的 rollout 组梯度为零（全错也没信号）、不确定处的推力最强（与对错无关）、整条 rollout 的信用会波及奖励根本没评判的决策。作者提出 Window Likelihood（WL）：对词采样、对停口决策解析积分，精确计算正确结果的概率，从而把信用严格限制在窗口内；在打断/附和判别上显著优于 GRPO 类方法。（v3 更新，今日重新公告）",
+      "tags": ["Full-Duplex", "Speech LLM", "Reinforcement Learning", "Turn-Taking"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2610.35581"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2610.35581"}
+      ]
+    },
+    {
+      "title": "Ninada: Sub-Clause Split-Graph VITS Streaming and Capability-Routed 24 kHz Speech Synthesis Across Twelve Scripts",
+      "url": "https://arxiv.org/abs/2611.10035",
+      "date": "2026-11-11",
+      "authors": "Hemanth HM",
+      "abstract": "面向浏览器/移动端侧部署的开源 24 kHz TTS 系统，覆盖英语、古典梵语与十种印度语言（sa/en/hi/kn/mr/bn/ta/te/ml/gu/pa/or），共 48 个 checkpoint 组成「能力路由」机群：24 个 HiFi-GAN v1 录音室级专家（W8A32+FP16 ONNX，仅 27.9 MB）+ 24 个蒸馏版 c8c8_384 iSTFTNet 专家。关键工程点是「子句切分图流式」——打破标准 ONNX 导出必须整句一次前向的限制，把每句拆成子句依赖图逐段合成，把首音延迟（TTFA）从数秒降到亚秒级、同时削掉激活内存尖峰；另外针对 138.8 MB float32 权重撑爆浏览器缓存、移动 WebGPU 编译卷积 shader 停摆 6-14 秒且实测仅 1.44× RTF、WASM pthread 在大 LITTLE 架构上卡栅栏、iOS WKWebView 与 AudioWorklet 抢锁导致丢帧静音等四类端侧瓶颈逐项给出方案。（v2 更新，今日重新公告）",
+      "tags": ["TTS", "Streaming", "On-Device", "Multilingual", "VITS"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.10035"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.10035"}
+      ]
+    },
+    {
+      "title": "Unified Synthesis of Compositional Speech and Sound from Free-Form Text Prompts",
+      "url": "https://arxiv.org/abs/2605.28063",
+      "date": "2026-11-11",
+      "authors": "Yuyue Wang, Xihua Wang, Xin Cheng, Yijing Chen, Ruihua Song",
+      "abstract": "PlanAudio：让一个模型直接吃「自由格式文本」，生成语音与音效在时间与语义上互相咬合的统一音频。例如「一段急促的鼓点以镲片收尾，随后一个男人喊道：冲！」，理想输出是一条连贯录音而非互不相干的独立音轨。现有两条路线都有硬伤：流水线式把 TTS 与 text-to-sound 两个模型串起来，统一式模型又要求结构化多字段提示，二者都得先做上游提示分解/改写，牺牲自由表达并放大级联错误。PlanAudio 端到端跳过中间提示预处理，在模型内部完成事件规划与音频合成。（v2 更新，今日重新公告）",
+      "tags": ["Audio Generation", "Speech+Sound", "Unified Model", "Text-to-Audio"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2605.28063"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2605.28063"}
+      ]
+    },
+    {
+      "title": "GRIDEX: Region-Grounded Forensic Explanations for Vocoder-Based Synthetic Speech",
+      "url": "https://arxiv.org/abs/2606.18738",
+      "date": "2026-11-11",
+      "authors": "Thi Ngan Ha Do, Tingmin Wu, Alsharif Abuadbba, Kristen Moore",
+      "abstract": "现有深度伪造检测器准确率虽高，但只给一个分数，不告诉取证人员伪造线索落在频谱图的哪个位置、声学上意味着什么，法庭与调查场景可用性差。GRIDEX 在检测器报警后接两步：先在频谱图中挑出 top-K 异常区域，再为每个异常生成结构化解释（时间、频谱、音素等分类声学字段 + 解释文本），使证据从「整张图人工排查」收敛到「少数诊断性区域」。相较以往可解释性方法，它把上下文属性与局部证据明确挂接，便于人工复核与举证。（v2 更新，今日重新公告）",
+      "tags": ["Audio Deepfake", "Forensics", "Explainability", "Vocoder"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2606.18738"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2606.18738"}
+      ]
+    },
+    {
+      "title": "FaiSonic MMD: A popular music dataset with temporally aligned multidimensional annotations for multitask music analysis",
+      "url": "https://arxiv.org/abs/2611.13503",
+      "date": "2026-11-11",
+      "authors": "Tieyao Zhang, Yuke Liu, Jiaxing Yu, Xinda Wu, Genfang Chen",
+      "abstract": "面向流行音乐多任务分析的多维标注数据集：500 首歌、约 32.86 小时，中英文各 250 首。由职业音乐人标注乐句、段落、和弦与节奏，并做独立复核。各维度的事件与区间共享同一「以录音为基准」的时间轴，同时保留各自的音乐粒度与边界，因此可以直接对同一首歌的不同音乐描述做交叉对照——弥补了现有资源在联合覆盖度与专家校验上的不一致，支撑联合监督与维度间关系研究。",
+      "tags": ["Music Dataset", "MIR", "Multi-Task", "Annotation"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.13503"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.13503"}
+      ]
+    },
+    {
+      "title": "Exploring Post-Hoc Disentanglement of Audio Foundation Models for Music Similarity",
+      "url": "https://arxiv.org/abs/2611.14415",
+      "date": "2026-11-11",
+      "authors": "Lucas de Souza Brandão, Gabriel da Costa Merlin, Diego Furtado Silva",
+      "abstract": "CLAP、MuQ、MERT 这类音频基础模型在通用音乐相似度上很强，但潜在空间纠缠，难以解释、也难以按属性精细控制。条件相似度网络（CSN）本可用学习到的掩码把嵌入空间切成属性子空间，但此前都要从零训练骨干。本文系统研究「后置解耦」：冻结预训练嵌入，只在其上加极少量可训练参数做门控，在两种数据集、多种掩码与池化组合下评估。结论很实用——最小适配容量就足以让后置门控同时提升属性级解耦度与整体检索性能，池化、掩码方式与深度带来的额外收益有限。",
+      "tags": ["Audio Foundation Model", "Music Similarity", "Disentanglement", "Retrieval"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.14415"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.14415"}
+      ]
+    },
+    {
+      "title": "Spatio-Temporal Calibration of a Vehicle-Mounted Microphone Array for Autonomous Driving",
+      "url": "https://arxiv.org/abs/2611.14003",
+      "date": "2026-11-11",
+      "authors": "Marvin Seegert, Richard Taupitz, Korbinian Moller, Johannes Betz",
+      "abstract": "麦克风能让自动驾驶车「听见」相机与激光雷达看不到的盲区，但要把声源定位并与其他传感器融合，必须先标定麦克风阵列。已有方法都假设小型、无遮挡的室内支架，而真实车身会形成声影，直线传播模型失效；据作者所知，此前没有围绕整车分布式阵列的标定工作。本文用气球爆裂作为单一跨模态靶标：激光雷达给出米制坐标、每个麦克风记录陡峭起始、相机提供时间戳，各观测按自身时间方差加权（从而「降权」而非丢弃被车身遮挡的到达）。在 4.9 m 孔径、8 麦克风的整车上，留出集距离残差 6.37 cm，已接近 6.07 cm 的硬件/标注极限。",
+      "tags": ["Microphone Array", "Calibration", "Autonomous Driving", "Spatial Audio"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.14003"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.14003"}
+      ]
+    },
+    {
+      "title": "A Factorial Ablation of a Speech-to-SFT Pipeline: Differential Effects on Data Quality and Downstream Transfer",
+      "url": "https://arxiv.org/abs/2608.20394",
+      "date": "2026-11-11",
+      "authors": "Wonsup Shin, Jingu Kim",
+      "abstract": "工业界越来越流行「把会议录音经多级精炼转成 SFT 数据」，但各阶段的边际价值从未被公开消融。作者把转写精炼（Phase 0）与 SFT 数据质量精炼（Phase 2）做成可独立开关的 2×2 因子设计，用韩语医疗与金融会议录音生成 QA 形式 SFT 数据，微调 9 个模型（5 个 LLM 家族，2.4B-70B），评估用四家跨厂商 LLM 评委 + 六位专家盲评 + 三个下游 MCQA 基准。核心结论：在固定 SFT 配方下，QA 数据质量提升并不均匀传导为下游收益——4 评委打分的质量稳定上升，但跨模型平均 MCQA 增益并不显著，正向迁移集中在「家族-领域对齐」的组合上，六位人类评委的判断也一致。（v2 更新，今日重新公告）",
+      "tags": ["Speech-to-SFT", "Data Quality", "Ablation", "Speech Data Pipeline"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2608.20394"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2608.20394"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "OpenAI 宣布 12 月 11 日停用 ChatGPT 旧版语音模式，语音全面转向 GPT-Live 全双工架构",
+      "url": "https://www.techweb.com.cn/it/2026-11-11/2980463.shtml",
+      "summary": "OpenAI 于 11 月 11 日宣布：2026 年 12 月 11 日起从「设置-语音」中移除 Advanced Voice Mode 与 Standard Voice Mode，此前选用旧模式的用户自动切到 7 月发布的 GPT-Live（全双工，可边听边说、被打断时不中断）。时间线：11 月 10 日起发停用通知，至 12 月 11 日前两种旧模式仍可用，历史语音会话保留。例外是实时视频、屏幕共享与自定义 GPT 语音对话仍走 Advanced Voice Mode。官方称 GPT-Live 上线后 ChatGPT 语音使用量接近翻倍、多数语音用户已切换；但 X/Reddit 上不少用户反对，抱怨 GPT-Live 打断用户、丢上下文、回答深度不如旧模式，部分付费用户威胁退订——与当年停用 GPT-4o 时如出一辙。"
+    },
+    {
+      "title": "端侧方言语音识别工程实践：川渝方言老年用户场景的离线部署思路",
+      "url": "https://www.cnblogs.com/asr-expert/p/archive/2026/11/11",
+      "summary": "技术博客（非产品发布）：讨论智能音箱、陪护机器人、社区养老终端等设备在四川/重庆老年用户家里的识别困境——用户说「明朝早上八点钟喊我一哈」，通用普通话 ASR 直接失效。文章围绕方言口音适配、老年语音（语速慢、气息弱、发音含糊）鲁棒性、以及端侧离线部署的资源约束给出工程路径。这类「长尾方言 + 端侧」需求正成为 ASR 落地的新增长点，也解释了为什么近期端侧小模型（<30M、亚实时 RTF）方向的论文明显变多。"
+    }
+  ],
+  "note": "今日 24 小时窗口内 arXiv 无全新提交批次（官方 API 429 且列表页最新公告组仍为 11-11 批次），因此本期以「11-11 批次中未被前日晚报收录的新公告条目」为主，含 4 篇 replace / replace-cross 版本更新（已在摘要中标注）。新闻侧仅 OpenAI 停用旧语音模式一条属重大产品动态，其余为技术观察，未用旧闻填充。"
+}
