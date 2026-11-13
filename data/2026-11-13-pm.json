@@ -1,0 +1,61 @@
+{
+  "windowNote": "统计窗口：2026-11-13 09:30 ~ 14:00（Asia/Shanghai）。已核验 arXiv 官方 API（max_results=50 完整返回 120KB XML）+ cs.SD / eess.AS 列表页 + 必搜关键词 6 条 + HuggingFace Daily Papers。结论：6 小时窗口内 arXiv 与 HuggingFace 均为零新增（最新公告批次仍是 11-12 提交组，11-13 无新批次），主流厂商亦无新语音产品发布。本期按与早报一致的「补录」规则，收录 11-12 提交批次中此前 11-12、11-13 两期均未报道的语音/音频论文 4 篇，不使用重复内容或旧闻填充。",
+  "papers": [
+    {
+      "title": "ZONOS3-Mini Technical Report",
+      "url": "https://arxiv.org/abs/2611.16525",
+      "date": "2026-11-12",
+      "authors": "Gabriel Clark, Sofian Mejjoute, George Close, Beren Millidge",
+      "abstract": "ZONOS3-Mini 是一个超紧凑、超快的零样本声音克隆 TTS 模型，可在笔记本或手机上实时运行，在同等延迟与体积下达到 SOTA 的准确度与克隆保真度。技术上做了两件事：一是 latent MoE 骨干只有 886M 参数（每 token 仅激活 100M），二是自研音频编解码器 Zyphra Audio Codec 1（ZAC-1），用 15 Hz 帧率表示 44.1 kHz 音频——相当于把码率压到极低的同时保住全带宽音质。在新提出的 ZTTS2-Eval 基准上，覆盖 55 个语言集（35 个干净场景 + 20 个野外场景），宏平均 WER 仅 6.71%，与更大更慢的 SOTA 模型相当。模型权重、推理与训练代码全部开源。",
+      "tags": ["TTS", "Zero-Shot Voice Cloning", "MoE", "Neural Audio Codec", "On-Device"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.16525"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.16525"},
+        {"label": "HuggingFace", "url": "https://huggingface.co/Zyphra/ZONOS3-Mini"},
+        {"label": "GitHub", "url": "https://github.com/Zyphra/ZONOS3-Mini"}
+      ]
+    },
+    {
+      "title": "Structured Speaker Conditioning for Diarization-Guided Target-Speaker ASR",
+      "url": "https://arxiv.org/abs/2611.16371",
+      "date": "2026-11-12",
+      "authors": "Ruoyu Wang, Shutong Niu, Jun Du, Weixin Zhu, Yannan Wang",
+      "abstract": "面向「说话人日志引导的目标说话人识别」（TS-ASR），提出结构化说话人条件化（SSC），把局部活动结构与会话级声学身份结合成身份一致的目标条件，用来控制声学编码器。三个组件：TCRE 保留每个说话人的活动历史与因式分解的二阶/三阶关系，以线性于轨数的聚合代价捕捉重叠与话轮切换；RSC 提供会话级身份来消解 TCRE 内的局部活动歧义；CLRM 把联合条件转成通道级仿射调制 + 低秩跨通道残差。在 Qwen3-ASR-0.6B 上，仅用 1.46M 条件参数就在四个会议测试集上把 cpER 平均相对降低 6.23%；配合预测日志与目标错误组序列策略优化，FireRedAudio 文本系统相对 DiCoW / MOSS-TD 分别降低 17.9% / 17.3%，并在三个未见域上同样领先。带时间戳变体可同时输出句边界与文本，宏平均 cpER 15.60%（文本）/ 15.96%（带时间戳）。",
+      "tags": ["ASR", "Target-Speaker", "Speaker Diarization", "Meeting Transcription"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.16371"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.16371"}
+      ]
+    },
+    {
+      "title": "Human-Likeness and Conversational Preference Diverge for Synthesized Agent Speech in Customer-Service Calls",
+      "url": "https://arxiv.org/abs/2611.16051",
+      "date": "2026-11-11",
+      "authors": "Jeffrey M. Girard, Antony D'Avirro, Jason Z. Zheng, Jacqueline R. Vertino, Benjamin Peloquin",
+      "abstract": "一项反直觉的评测研究：听感「像不像人」（human-likeness）和「愿不愿意跟它聊」（conversational preference）是两件事，而现有听力测试几乎只测前者。作者用 120 段客服场景即兴对话做配对比较：研究 1 对比六家商业 TTS（每家 8 个音色），研究 2 让演员真人录音与系统直接对打。结果是不同系统在这两个维度上排名互相打架；在「像人」维度上听众只有 19% 选择系统，但在「愿意聊」维度上高达 36%（最受偏好的系统达 49%），即机器在「讨喜」上反而赢了真人。同一系统内部音色差异约为系统间差异的四分之三——只测一个音色会得出错误结论。三个自动自然度分数中两个与人类「像人」判断负相关，且没有一个能预测「愿意聊」。听众偏好语速更快、分句间停顿更少、音高变化更大的合成语音。",
+      "tags": ["TTS Evaluation", "Subjective Listening Test", "Voice Agent", "Prosody"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.16051"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.16051"}
+      ]
+    },
+    {
+      "title": "The Unseen Threat: How Complementary Combinations of Acoustic Features Compromise Speech Privacy",
+      "url": "https://arxiv.org/abs/2611.16637",
+      "date": "2026-11-12",
+      "authors": "Jule Pohlhausen, Jörg Bitzer",
+      "abstract": "语音隐私评估通常逐个特征做，本文指出这种做法的系统性盲区：特征融合后的泄漏远大于单个特征的泄漏之和。作者考察时域特征（宽带 RMS 电平、基频）单独使用，以及分别与时域平滑并降采样的梅尔频谱组合。隐私侧用「知情」ASR 与说话人验证攻击量化，可用性侧用 VAD 与说话人日志评估。结果：RMS 与基频单独泄漏有限，但与 500 ms 平滑的梅尔频谱融合后，可用性提升的同时语音内容泄漏显著放大——尤其与 RMS 组合时，细粒度时间动态会把粗采样频谱特征里本已「安全」的信息重新放大出来。说话人身份保护在所有特征组合下都很有限。结论很直接：只针对单一声学特征做的隐私评估会低估真实风险。（SPSC 2026 接收）",
+      "tags": ["Speech Privacy", "Voice Anonymization", "Security", "SPSC 2026"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.16637"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.16637"}
+      ]
+    }
+  ],
+  "news": [],
+  "note": "新闻侧：逐条执行了必搜关键词（OpenAI GPT-Live full-duplex voice model / OpenAI voice model release / Google Gemini voice / full-duplex speech model / 语音模型发布 / real-time voice AI），并限定 freshness=day 复核。6 小时窗口内无任何新的语音/音频产品发布：GPT-Live 仍为 7 月发布旧闻（近期只有 12-11 停用旧版语音模式的预告，已报道过），Gemini 侧最新动态仍是语音模式接入 CarPlay / Android Auto 的渠道扩展，OpenAI Model Release Notes 无新语音条目。HuggingFace Daily Papers 今日亦无 audio 标签新收录（API 与列表页均无 11-12/11-13 新条目）。故新闻条目录为空，不以旧闻凑数。"
+}

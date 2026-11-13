@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-11-13-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-11-13-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年11月13日 (周五) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">4</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.16525" target="_blank">ZONOS3-Mini Technical Report</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-12</span><span>👥 Gabriel Clark, Sofian Mejjoute, George Close, Beren Millidge</span></div>
+      <div class="abstract">ZONOS3-Mini 是一个超紧凑、超快的零样本声音克隆 TTS 模型，可在笔记本或手机上实时运行，在同等延迟与体积下达到 SOTA 的准确度与克隆保真度。技术上做了两件事：一是 latent MoE 骨干只有 886M 参数（每 token 仅激活 100M），二是自研音频编解码器 Zyphra Audio Codec 1（ZAC-1），用 15 Hz 帧率表示 44.1 kHz 音频——相当于把码率压到极低的同时保住全带宽音质。在新提出的 ZTTS2-Eval 基准上，覆盖 55 个语言集（35 个干净场景 + 20 个野外场景），宏平均 WER 仅 6.71%，与更大更慢的 SOTA 模型相当。模型权重、推理与训练代码全部开源。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Zero-Shot Voice Cloning</span><span class="tag">MoE</span><span class="tag">Neural Audio Codec</span><span class="tag">On-Device</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.16525" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.16525" target="_blank">🔗 PDF</a> <a href="https://huggingface.co/Zyphra/ZONOS3-Mini" target="_blank">🔗 HuggingFace</a> <a href="https://github.com/Zyphra/ZONOS3-Mini" target="_blank">🔗 GitHub</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.16371" target="_blank">Structured Speaker Conditioning for Diarization-Guided Target-Speaker ASR</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-12</span><span>👥 Ruoyu Wang, Shutong Niu, Jun Du, Weixin Zhu, Yannan Wang</span></div>
+      <div class="abstract">面向「说话人日志引导的目标说话人识别」（TS-ASR），提出结构化说话人条件化（SSC），把局部活动结构与会话级声学身份结合成身份一致的目标条件，用来控制声学编码器。三个组件：TCRE 保留每个说话人的活动历史与因式分解的二阶/三阶关系，以线性于轨数的聚合代价捕捉重叠与话轮切换；RSC 提供会话级身份来消解 TCRE 内的局部活动歧义；CLRM 把联合条件转成通道级仿射调制 + 低秩跨通道残差。在 Qwen3-ASR-0.6B 上，仅用 1.46M 条件参数就在四个会议测试集上把 cpER 平均相对降低 6.23%；配合预测日志与目标错误组序列策略优化，FireRedAudio 文本系统相对 DiCoW / MOSS-TD 分别降低 17.9% / 17.3%，并在三个未见域上同样领先。带时间戳变体可同时输出句边界与文本，宏平均 cpER 15.60%（文本）/ 15.96%（带时间戳）。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Target-Speaker</span><span class="tag">Speaker Diarization</span><span class="tag">Meeting Transcription</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.16371" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.16371" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.16051" target="_blank">Human-Likeness and Conversational Preference Diverge for Synthesized Agent Speech in Customer-Service Calls</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-11</span><span>👥 Jeffrey M. Girard, Antony D'Avirro, Jason Z. Zheng, Jacqueline R. Vertino, Benjamin Peloquin</span></div>
+      <div class="abstract">一项反直觉的评测研究：听感「像不像人」（human-likeness）和「愿不愿意跟它聊」（conversational preference）是两件事，而现有听力测试几乎只测前者。作者用 120 段客服场景即兴对话做配对比较：研究 1 对比六家商业 TTS（每家 8 个音色），研究 2 让演员真人录音与系统直接对打。结果是不同系统在这两个维度上排名互相打架；在「像人」维度上听众只有 19% 选择系统，但在「愿意聊」维度上高达 36%（最受偏好的系统达 49%），即机器在「讨喜」上反而赢了真人。同一系统内部音色差异约为系统间差异的四分之三——只测一个音色会得出错误结论。三个自动自然度分数中两个与人类「像人」判断负相关，且没有一个能预测「愿意聊」。听众偏好语速更快、分句间停顿更少、音高变化更大的合成语音。</div>
+      <div class="tags"><span class="tag">TTS Evaluation</span><span class="tag">Subjective Listening Test</span><span class="tag">Voice Agent</span><span class="tag">Prosody</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.16051" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.16051" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.16637" target="_blank">The Unseen Threat: How Complementary Combinations of Acoustic Features Compromise Speech Privacy</a></h4>
+      <div class="meta"><span>📅 2026-11-12</span><span>👥 Jule Pohlhausen, Jörg Bitzer</span></div>
+      <div class="abstract">语音隐私评估通常逐个特征做，本文指出这种做法的系统性盲区：特征融合后的泄漏远大于单个特征的泄漏之和。作者考察时域特征（宽带 RMS 电平、基频）单独使用，以及分别与时域平滑并降采样的梅尔频谱组合。隐私侧用「知情」ASR 与说话人验证攻击量化，可用性侧用 VAD 与说话人日志评估。结果：RMS 与基频单独泄漏有限，但与 500 ms 平滑的梅尔频谱融合后，可用性提升的同时语音内容泄漏显著放大——尤其与 RMS 组合时，细粒度时间动态会把粗采样频谱特征里本已「安全」的信息重新放大出来。说话人身份保护在所有特征组合下都很有限。结论很直接：只针对单一声学特征做的隐私评估会低估真实风险。（SPSC 2026 接收）</div>
+      <div class="tags"><span class="tag">Speech Privacy</span><span class="tag">Voice Anonymization</span><span class="tag">Security</span><span class="tag">SPSC 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.16637" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.16637" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-11-13-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
