@@ -1,0 +1,72 @@
+{
+  "windowNote": "统计窗口：2026-11-12 09:30 ~ 2026-11-13 09:34（Asia/Shanghai）。已逐条核验 arXiv 官方 API（max_results=50，正常返回）+ eess.AS / cs.SD / cs.CL / cs.MM / eess.SP 列表页 + HuggingFace Daily Papers（2026-11-12）。结论：arXiv 今日最新公告组仍是 Wednesday, 11 November 2026（11-12、11-13 无新公告批次，属美东假期停发），因此 24 小时窗口内没有任何全新提交。本期按「补录」规则，收录上一批次中此前 11-11 / 11-12 各期均未报道的语音/音频论文 5 篇，不使用重复内容填充。",
+  "papers": [
+    {
+      "title": "Quantifying the Generation Modality Gap in Speech-Text Language Models",
+      "url": "https://arxiv.org/abs/2609.14743",
+      "date": "2026-11-11",
+      "authors": "Ju-Chieh Chou, Jiawei Zhou, Karen Livescu",
+      "abstract": "纯语音语言模型生成的文本内容连贯性长期落后于文本/语音-文本模型，但这一「模态鸿沟」一直难以量化，因为语音与文本系统通常用不同指标、在不同数据上训练。作者基于 flow matching 生成连续声学特征的语音语言模型族，构造统一的自回归生成评测套件：语音、文本、语音-文本三类模型在匹配的数据分布与匹配的生成设置下对比，从语义连贯性（转写后用参考语言模型打分）、局部音素结构（phone n-gram 分布统计）、说话人一致性与声学质量、情绪分布指标四个维度评测。结论很明确：联合语音-文本建模能显著提升语义连贯性，但收益不均——音素级指标变化很小，说话人相似度与预测质量反而下降，情绪分布指标改善；且语音-文本模型的语义连贯性已逼近更大规模纯语音模型的扩展曲线。（v3，SLT 2026 接收版，本次为新交叉公告）",
+      "tags": ["Spoken Language Model", "Speech-Text", "Modality Gap", "Evaluation"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.14743"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.14743"}
+      ]
+    },
+    {
+      "title": "DASWeave: Weaving Evidence across Speaking Conditions for Multimodal Depression, Anxiety, and Stress Screening",
+      "url": "https://arxiv.org/abs/2611.13544",
+      "date": "2026-11-11",
+      "authors": "Binyan Chen, Tong Pan, Yadong Liu, Xin Yun, Shangfei Wang",
+      "abstract": "青少年抑郁/焦虑/压力筛查依赖语言内容与非语言行为（语音韵律、表情），但现有方法大多只学单次录音或单场访谈，忽略了同一个人在「不同说话条件」下行为的变化本身也是证据。DASWeave 先把每一段回答编码，再在「参与者」层面汇聚全部回答；用监督树分别在单条回答内部、以及跨条件的变化上自动找出对筛查有判别的行为统计量，并在汇聚前后两次注入网络；同时微调大语言模型，让它用文本描述关联「说了什么」与「怎么说」，其表征在汇聚后注入；再由多模态大模型直接吃音视频特征产生额外训练目标。在 ACM Multimedia 2026 AdoDAS Grand Challenge（Track 1）官方隐藏测试集上，95 支合格队伍中排名第 2，mean F1 比官方音视频基线高 27.1%，且前五名中 mean AUROC 最高。",
+      "tags": ["Speech Paralinguistics", "Multimodal", "Mental Health", "Challenge"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.13544"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.13544"}
+      ]
+    },
+    {
+      "title": "T-SANDHI: Tone Sandhi-aware Adaptive Network with Decoupled Hybrid Injection for Low-resource Taiwanese Hokkien Speech Recognition",
+      "url": "https://arxiv.org/abs/2609.18194",
+      "date": "2026-11-11",
+      "authors": "Hung-Yang Sung, Chien-Chun Wang, Tien-Hong Lo, Yu-Sheng Tsao, Yung-Chang Hsu, Berlin Chen",
+      "abstract": "闽南语（台湾话）ASR 的既有研究普遍把「变调（tone sandhi）」当作主要难点，默认模型学不好隐式音系变化。作者实测发现：语音基础模型其实能较好处理变调，真正瓶颈是变调调值与「本调」在局部上的混淆。据此提出 T-SANDHI：在冻结的 Whisper 骨干之上显式解耦「表层声学」与「底层词汇意图」，用词典引导的多任务结构、以文本派生的伪标签驱动，通过动态门控把独立的本调流与变调流注入混合模块。在 TAT-MOE 语料与两个盲测集上，这一显式解耦有效化解了调值映射混淆，在严格参数效率约束下优于基线。（SLT 2026 接收，本次为新交叉公告）",
+      "tags": ["ASR", "Low-Resource", "Taiwanese Hokkien", "Whisper"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2609.18194"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2609.18194"}
+      ]
+    },
+    {
+      "title": "Dyship: Leveraging Acoustic Features For Speaker Relationship Classification From Dyadic Conversations",
+      "url": "https://arxiv.org/abs/2611.14241",
+      "date": "2026-11-11",
+      "authors": "Kieran Sturges, Thomas Thebaud, Yaohan Guan, Najim Dehak",
+      "abstract": "从双人对话判断「两人是否熟悉」「是否亲属」：在 Seamless Interaction 语料上系统对比五种语音表征——频谱图、MFCC、自监督 WavLM、x-vector、估计的发音器官运动轨迹。结果有点反直觉：熟悉度分类最好是传统频谱特征（87.81% 准确率），亲属关系分类最好是 WavLM（85.17%），x-vector 的 AUC 达 0.909；发音器官运动特征单独看偏弱，但在亲属关系上表现亮眼。多数分类器超过了同一数据集此前报告的人类与音频语言模型水平——说明「关系推断」这类副语言任务上，经典声学特征仍是被低估的强基线。",
+      "tags": ["Paralinguistics", "Speaker", "WavLM", "Relationship Inference"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.14241"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.14241"}
+      ]
+    },
+    {
+      "title": "Listen to the Features: Voice Anonymization Driven by Content Embedding Matching over Signal Reconstruction",
+      "url": "https://arxiv.org/abs/2607.09767",
+      "date": "2026-11-11",
+      "authors": "Adrien Schneider, Kacper Zabkowski, Anderson Augusma, Frédérique Letué, Maria Camila Pinzon, Dominique Vaufreydaz",
+      "abstract": "换一个思路做声音匿名化：目标不是「重建得像真人说话」，而是「保住内容」。方法用冻结的 wav2vec2 提取内容嵌入，经向量量化 + HiFi-GAN 声码器解码成匿名语音，全程不做波形重建损失、也不做说话人嵌入映射；训练目标只要求匿名后信号的内容嵌入与原信号一致，同时用一个带梯度反转层的辅助说话人分类分支主动丢弃说话人信息。在 LibriTTS 上训练的结果：WER 仅 2.53，匿名化 EER 13.39（VPC 第一档），情绪还能部分保留（UAR 43.91）——这是在没有额外情绪监督目标的情况下自然涌现的。适合语音数据共享、临床语音脱敏这类「内容可用、身份不可用」的场景。（本次为新交叉公告至 eess.SP）",
+      "tags": ["Voice Anonymization", "Privacy", "wav2vec2", "Vocoder"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2607.09767"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2607.09767"}
+      ]
+    }
+  ],
+  "news": [],
+  "note": "新闻侧：按要求逐条执行了必搜关键词（OpenAI GPT-Live full-duplex voice model / OpenAI voice model release / Google Gemini voice / full-duplex speech model / 语音模型发布 / real-time voice AI），并额外用 freshness=day 做了一轮通用搜索。24 小时内无新的语音/音频产品发布或企业重大动态：GPT-Live 相关报道仍停留在 11-10 的旧版语音模式停用公告（已于 11-12 收录），Qwen-Audio-3.1 系列实为 9 月发布、近期文章只是复盘，Google/Gemini 语音模型亦无 24 小时内新消息。HuggingFace 侧 11-12 新增的 text-to-speech / ASR 仓库均为个人微调与小规模上传（下载量 0），不构成产品级发布，故今日新闻条目录为空，不用旧闻凑数。"
+}
