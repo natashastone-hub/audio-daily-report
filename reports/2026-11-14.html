@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-11-14</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-11-14</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年11月14日 (周六) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">9</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.16525" target="_blank">ZONOS3-Mini Technical Report</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-12</span><span>👥 Gabriel Clark, Sofian Mejjoute, George Close, Beren Millidge</span></div>
+      <div class="abstract">ZONOS3-Mini 是一个超紧凑、超快的零样本声音克隆 TTS 模型，可在笔记本或手机上实时运行。核心是仅 886M 参数的 latent MoE 主干（每 token 只激活 100M）搭配新音频编解码器 Zyphra Audio Codec 1（ZAC-1），把 44.1 kHz 音频压到 15 Hz 帧率。在新提出的 ZTTS2-Eval 基准（55 个语种组，35 个干净场景 + 20 个 in-the-wild）上达到 6.71% 宏平均 WER，与更大更慢的 SOTA 模型相当。模型权重、推理与训练代码全部开源。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Zero-Shot Voice Cloning</span><span class="tag">MoE</span><span class="tag">Audio Codec</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.16525" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.16525" target="_blank">🔗 PDF</a> <a href="https://huggingface.co/Zyphra/ZONOS3-Mini" target="_blank">🔗 Weights (HF)</a> <a href="https://github.com/Zyphra/ZONOS3-Mini" target="_blank">🔗 Code</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.16933" target="_blank">Kezek: Splitting Mono Two-Person Conversations into Per-Speaker Tracks for Full-Duplex Dialogue Data</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-12</span><span>👥 Bagzhan Karl, Alizhan Karl</span></div>
+      <div class="abstract">全双工语音对话模型需要「每人一路」的对话数据来学习抢话、重叠与应答反馈，但现成对话音频多是单声道混音。Kezek 把恰好两人的单声道录音拆成两条与原始等长、时间对齐的音轨，重叠片段和「嗯」「对」这类短应答保留在说话人自己的轨道上。两阶段设计：先用相位无关的说话人指纹引导双声活动模型，一次性决定「谁在何时说、谁是谁」；再由条件时域分离器执行该决策，输出恒等于输入。除标准分离指标外，另提出短应答保留率、串音、声道互换、覆盖率等贴合对话数据需求的指标。对比 pyannote → DialogueSidon 开源流水线：短应答保留 0.83 vs 0.69（Open Yap），未见电话语音 0.80 vs 0.71，串音更少、换道更少、快 4-5 倍（约 230 小时音频/GPU 小时）。代码与权重均以宽松许可开源。</div>
+      <div class="tags"><span class="tag">Speech Separation</span><span class="tag">Full-Duplex Dialogue</span><span class="tag">Data Pipeline</span><span class="tag">Open Source</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.16933" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.16933" target="_blank">🔗 PDF</a> <a href="https://github.com/Manifestro/kezek" target="_blank">🔗 Code</a> <a href="https://huggingface.co/manifestro/kezek-v1" target="_blank">🔗 Weights (HF)</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.16919" target="_blank">Beyond Word Error Rate: A Failure Taxonomy of Streaming Dictation ASR</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-12</span><span>👥 Harras Mansoor, Muhammad Wisal, Hassan Bhatti, Masood Shakir</span></div>
+      <div class="abstract">流式听写 ASR 的评测长期被「去标点、去大小写后的 WER」主导，但用户真正要修的是那些错误。作者用 106 条英文听写（安静房间/开风扇/耳语三种条件）+ 11 个语言与方言集各 20 条 + 400 条双语言拼接录音，流式喂给 11 个 ASR 系统，并按固定规则把每个错误分成四层：识别、输出格式、语言处理、以及自托管模型在进入模型前就丢掉的音频。关键发现：WER 相近的系统失败方式完全不同——Zoom Scribe 与 OpenAI GPT-Live-Transcribe 在安静英文上 WER 几乎相同（7.4% vs 7.3%），耳语英文却是 34.7% vs 8.8%；Zoom 与两款 AssemblyAI 模型漏掉 26-28% 的耳语词，关掉端点检测后仍有 21-26%，另有 7 个系统漏字不超过 3%；只选英文时 Gemini、Deepgram 与自托管 Whisper 在 86-99% 的双语录音里丢失非英文部分，GPT-Live-Transcribe、OpenAI 实时 Whisper 与 Meta 最多丢 20%；给 Whisper 前置一个会把「判为静音」音频丢掉的 Silero VAD，耳语 WER 从 10.1% 暴涨到 51.4%。代码、录音、参考文本与全部转写已公开。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Streaming</span><span class="tag">Evaluation</span><span class="tag">Benchmark</span><span class="tag">Failure Analysis</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.16919" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.16919" target="_blank">🔗 PDF</a> <a href="https://github.com/heylemon-ai/streaming-dictation-asr" target="_blank">🔗 Code</a> <a href="https://huggingface.co/datasets/hey-lemon/streaming-dictation-asr" target="_blank">🔗 Data (HF)</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.16787" target="_blank">MESH: Multi-receiver Evaluation of Spatial Hearing across Egocentric and Allocentric Views</a></h4>
+      <div class="meta"><span>📅 2026-11-12</span><span>👥 Wen Wen, Bohan Li, KwanHo Tam, Yu Xi, Jing Peng, Shuai Wang, Kai Yu</span></div>
+      <div class="abstract">多接收器场景下的空间听觉要回答「谁在说、在哪、怎么移动」。现有基准分别评测空间预测、转写、跟踪与分布式语音处理，却很少检验语音信号在跨接收器、跨运动时是否仍绑定到同一个物理声源。MESH 用自我中心（本地录音 + 同伴元数据）与异我中心（多接收器同步录音统一到共享 3D 世界坐标）两种视角来评测这种绑定关系，含 13 类静态/动态定位与空间转写任务、近 4 万个问题。评测 11 种音频模型配置与一个带专用工具的语言模型 Agent：最好的静态距离估计与动态方向跟踪准确率仅 21.90% 与 41.54%，四个转写任务的最低 WER 在 59.15%-73.10% 区间；消融显示现有模型无法有效利用同伴信息，多说话人与动态场景尤为吃力。数据集与评测代码已开源。</div>
+      <div class="tags"><span class="tag">Spatial Audio</span><span class="tag">Benchmark</span><span class="tag">Multi-Channel</span><span class="tag">Speech Understanding</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.16787" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.16787" target="_blank">🔗 PDF</a> <a href="https://github.com/Wenanzhi/MESH-Benchmark" target="_blank">🔗 Code</a> <a href="https://huggingface.co/datasets/Heiheihaha17/MESH-Benchmark" target="_blank">🔗 Data (HF)</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.16371" target="_blank">Structured Speaker Conditioning for Diarization-Guided Target-Speaker ASR</a></h4>
+      <div class="meta"><span>📅 2026-11-12</span><span>👥 Ruoyu Wang, Shutong Niu, Jun Du, Weixin Zhu, Yannan Wang</span></div>
+      <div class="abstract">面向「说话人日志引导的目标说话人识别」，提出结构化说话人条件（SSC）：把局部活动结构与整段会话的声学身份结合，构造身份一致的目标条件去控制声学编码器。其中 TCRE 保留每个说话人的活动历史并分解二、三阶关系，以对轨道数线性的聚合代价刻画重叠与换人；RSC 提供会话级身份以消除局部活动模式的歧义；CLRM 把联合条件转为通道级仿射调制与带条件相关核的低秩跨通道残差。在 Qwen3-ASR-0.6B + oracle diarization 上，仅用 1.46M 条件参数即在四个会议测试集上取得 6.23% 的 cpER 平均相对下降，且可跨音频基础模型迁移；配合预测日志与目标错误组序列策略优化，FireRedAudio 文本系统相对 DiCoW 与 MOSS-TD 平均相对降错 17.9% / 17.3%，并在三个未见域上同样领先；带时间戳变体还能同时输出句界与文本（四集宏平均 cpER 15.60%/15.96%）。</div>
+      <div class="tags"><span class="tag">Target-Speaker ASR</span><span class="tag">Diarization</span><span class="tag">Speaker Conditioning</span><span class="tag">Meetings</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.16371" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.16371" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.17181" target="_blank">Convolutional VocalTrax: Replacing Backpropagation Through Time with Convolution in Differentiable Articulatory Synthesis</a></h4>
+      <div class="meta"><span>📅 2026-11-12</span><span>👥 Yongyi Zang, Debasish Ray Mohapatra, Randal Leistikow, Perry R. Cook</span></div>
+      <div class="abstract">VocalTrax 通过对可微分 Pink Trombone 合成器做梯度下降，从录音中反推出可解释的发音器官控制参数；但其声道是每个采样点更新两次的 Kelly-Lochbaum 波导，每次梯度都要穿过长递归，GPU 上很慢。Convolutional VocalTrax 直接计算同一波导的精确频率响应，并以因果卷积施加，前提假设是声道在 5.8 ms 块内平稳、有损冲激响应在 93 ms 后可截断——于是梯度走 FFT 与沿声道的短递归，而不是穿越时间。在 600 条 AudioMNIST 录音上，A100 上前向+反向快 47-63 倍；只用真实语音训练的分类器对本方法重建结果的识别率高于 VocalTrax（14.5% vs 10.0%，用原版渲染参数时 13.8%），尽管 log-mel 距离高 11%。</div>
+      <div class="tags"><span class="tag">Articulatory Synthesis</span><span class="tag">Differentiable DSP</span><span class="tag">Speech Production</span><span class="tag">Efficiency</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.17181" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.17181" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.16718" target="_blank">MusicRWKV: A Multimodal RWKV Framework for Music Representation Learning</a></h4>
+      <div class="meta"><span>📅 2026-11-12</span><span>👥 Terry Tan</span></div>
+      <div class="abstract">音乐基础模型多依赖 Transformer，二次注意力复杂度在长时音乐上开销巨大。MusicRWKV 基于 RWKV 架构做多模态音乐表征学习，在同一自监督框架内联合建模波形、频谱图与元数据；为长序列引入可逆压缩模块在保留重建能力的前提下缩短序列，并用 FiLM 条件化实现模态感知表征而无需昂贵的跨注意力；此外探索把 Soft ROSA 作为神经-符号交互的可微检索机制。在多个 MIR 基准上验证 RWKV 主干可适配异构音乐理解任务；受控预训练消融显示 Soft ROSA 提升验证性能，逐层遥测分析则揭示从浅层分布式检索到深层选择性检索的渐进转变。</div>
+      <div class="tags"><span class="tag">Music Representation</span><span class="tag">RWKV</span><span class="tag">Self-Supervised</span><span class="tag">MIR</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.16718" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.16718" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.17070" target="_blank">Evaluation of Music Version Retrieval Methods for Setlist Identification in Live Concerts</a></h4>
+      <div class="meta"><span>📅 2026-11-12</span><span>👥 Andres Ferraro, Albin Correya</span></div>
+      <div class="abstract">现场演出「歌单识别」要把噪声大、音质多变的现场录音与参考曲库匹配，比常规音乐版本识别更难：编曲差异大、背景噪声重，还要能大规模高效处理连续录音。作者在 ASID 基准上对比 Re-MOVE 与 CLEWS、以及内部神经音频版本嵌入模型 NAVE。结果显示 NAVE 与 CLEWS 明显优于 Re-MOVE；值得注意的是 NAVE 只用 256 维嵌入（CLEWS 为 1024 维），存储降低四倍而检索更好。进一步评测音乐/非音乐门控，检测与时序覆盖有适度提升，定性分析显示这类预处理能改善识别边界（超出标准 ASID 指标的刻画能力）。结论：片段级音频嵌入是可扩展歌单识别的强基础，紧凑表征即可在真实现场条件下以更低存储与serving 成本获得高准确率。</div>
+      <div class="tags"><span class="tag">Music Retrieval</span><span class="tag">Audio Embedding</span><span class="tag">Live Concert</span><span class="tag">Industry</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.17070" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.17070" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.16637" target="_blank">The Unseen Threat: How Complementary Combinations of Acoustic Features Compromise Speech Privacy</a></h4>
+      <div class="meta"><span>📅 2026-11-12</span><span>👥 Jule Pohlhausen, Jörg Bitzer</span></div>
+      <div class="abstract">声学特征之间的交互如何泄露隐私仍缺乏研究。本文聚焦时域特征（宽带 RMS 电平与基频），单独使用以及与时域平滑、降采样的 Mel 频谱组合。隐私用「知情 ASR」与说话人验证攻击评估，对话分析效用用 VAD 与说话人日志评估。结果显示：RMS 电平与基频单独泄露有限，但与 500 ms 平滑 Mel 频谱融合后，效用提升的同时语音内容泄露显著增加；尤其与 RMS 电平的组合说明细粒度时域动态会放大粗采样频谱特征的泄露。所有测试特征对说话人身份的防护都很有限。结论是：只在单一特征上做隐私评估会低估特征融合后的泄露风险（SPSC 2026 接收）。</div>
+      <div class="tags"><span class="tag">Speech Privacy</span><span class="tag">Anonymization</span><span class="tag">Security</span><span class="tag">Paralinguistics</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.16637" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.16637" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>腾讯混元发布实时语音模型 HyRealtime：新增 Agentic 工具调用与唱歌能力</h4>
+      <p>11 月 13 日腾讯混元正式发布全新实时语音模型 HyRealtime，在语音理解、指令遵循、拟人化表达上较上一代提升，并首次补齐 Agentic 工具调用与唱歌两项能力。模型可结合上下文还原口齿含糊、话说半截、中途改口等不完整输入的意图，多轮上下文管理更强；能自主判断是否联网搜索并统一完成「决策-调用-生成」。表达侧音质、发音、韵律、情感全面升级，并与 TME 灵音 AI 团队 Co-Design 实现自然语言点歌与演唱。目前已在元宝语音通话、腾讯客服等产品上线，近期将上腾讯云提供 API；官方称下一步重点做双工交互、长期个性化记忆与前后台 Agent 交互。 <a href="https://m.ithome.com/html/1026825.htm" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Salesforce 开源语音转文本模型 SOV-Transcribe-1：Artificial Analysis 实测 2.3% 居开放权重第一</h4>
+      <p>Salesforce Sovereign AI 团队（Tanay Dixit）宣布首个语音转文本模型 SOV-Transcribe-1 上线 Hugging Face，权重以 Apache 2.0 开放下载。据 Artificial Analysis 实测其 WER 为 2.3%，在开放权重语音识别模型中排名第一。这是补录条目：原始发布为 11-12（UTC），落在上一期统计窗口末尾但未被昨日早报收录，故本期补上。 <a href="https://hub.baai.ac.cn/view/59606" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-11-14') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
