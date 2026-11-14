@@ -1,0 +1,29 @@
+{
+  "windowNote": "统计窗口：2026-11-14 09:30 ~ 14:00（Asia/Shanghai，对应 UTC 06:00）。arXiv 侧：官方 API（eess.AS + cs.SD，max_results=50）返回的最新投稿时间为 2026-11-12T17:49Z（= 11-13 01:49 CST），即本窗口内 0 条新投稿——11-13（周五）提交的论文按 arXiv 周末规则要到下周一（11-16）才公告，本窗口不存在新公告批次。HuggingFace Daily Papers 最新批次仍为 2026-11-13（34 篇），其中 audio 相关仅 Duo v1 一篇且从未被前几期收录，故本期以「补录」形式收录这 1 篇，并明确标注其原始投稿时间。新闻侧：6 个必搜关键词逐条执行，窗口内无新命中。",
+  "papers": [
+    {
+      "title": "Duo: A Reciprocal World Model for Full-Duplex Interaction",
+      "url": "https://arxiv.org/abs/2611.15131",
+      "date": "2026-11-11",
+      "authors": "Hengyuan Cao, Biao Gong, Guoshan Lu, Qiyuan Zhang, Lin Liu, Yiding Tian, Yilei Jiang, Yuxin Ma, Chengzhang Wu, Kun Chen, Yiqian Xie, Ting Liu, Xin Zheng, Xijun Gu, Tianren Ma, Jiancheng Pan, Chi Zhang, Xuzhe Zheng, Siyi Li, Zhenzhong Lan",
+      "abstract": "补录条目（原始投稿 2026-11-11 07:17 UTC，11-13 批次公告，本期首次收录）。作者提出 Reciprocal World Model（RWM）并给出 Duo v1：一个持续感知视听输入、同时实时回应用户的全双工世界模型。RWM 把「智能」与「物理现实」视为构成世界的两个同等基础能力——Intent（交互背后的认知与决策）与 Realization（生成连贯的音视频行为），而现有世界模型大多只模拟后者、把推理当成外部控制。三项关键设计：(1) 用自回归建模承担持续交互推理与「是否发言/介入」的决策，而不是像扩散模型那样只用于指令理解；(2) 构造分块（chunk）专属条件，并在统一时间轴上同步 Intent 与 Realization 的 token，配合模块专属注意力掩码在块内与块间强制因果依赖，杜绝访问未来输入；(3) 用 dual rollout distillation 在自回归生成的 Intent token 与 Realization 合成的视听历史上训练，缓解两个模块的分布漂移。两个模块持续感知实时音频、视频与文本，实现可自然插话、可被打断的全双工交互；除对话外，用户还能分享真实物体、重塑虚拟场景、指挥助手，或在不用鼠标键盘的情况下玩视听游戏。项目主页已公开，官方称下一版即将发布。",
+      "tags": ["Full-Duplex", "World Model", "Audiovisual", "Real-Time Interaction", "cs.SD Cross-list"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.15131"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.15131"},
+        {"label": "HTML", "url": "https://arxiv.org/html/2611.15131v1"},
+        {"label": "Project Page", "url": "https://duo-v1.github.io/"}
+      ]
+    }
+  ],
+  "news": [],
+  "sections": {
+    "TTS / 语音合成": "下午时段暂无新内容",
+    "ASR / 语音识别": "下午时段暂无新内容",
+    "语音翻译 / 同声传译": "下午时段暂无新内容",
+    "音频生成 / 音乐": "下午时段暂无新内容",
+    "全双工 / 实时语音交互": "补录 Duo v1（Reciprocal World Model，全双工视听世界模型）；本窗口内无新增"
+  },
+  "note": "必搜关键词已逐条执行（OpenAI GPT-Live full-duplex voice model / OpenAI voice model release / Google Gemini voice / full-duplex speech model / 语音模型发布 / real-time voice AI），另加一轮 freshness=day 的通用 audio 与中文语音新闻搜索。命中结果全部在窗口外：GPT-Live 首发 2026-07-08（API 于 09-11 上线），OpenAI 旧语音模式停用公告为 11-10；Google 侧 Gemini 3.8 Live、Gemini 语音接入 CarPlay、Gemini 3.5 Transcribe 均为数日至数月前消息；full-duplex 关键词命中的均为 OpenReview/arXiv 存量论文与 Dessa（10-25 发布）。故本期新闻 0 条，不做旧闻重发。论文侧交叉核对：export.arxiv.org 官方 API 返回 50 条，最新 <published> 为 2026-11-12T17:49:07Z，其后无任何条目，确认 09:30–14:00 窗口内 arXiv 无新公告（周六不公告，11-13 投稿批次顺延至 11-16）；HuggingFace Daily Papers 最新批次 2026-11-13 共 34 篇，按 audio/speech/voice/tts/asr/music 关键词过滤仅命中 Duo v1（2611.15131），该文此前几期均未收录，故以补录形式收录，避免与早间版 9 篇重复。"
+}
