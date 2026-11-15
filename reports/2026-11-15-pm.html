@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-11-15-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-11-15-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年11月15日 (周日) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">10</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.13689" target="_blank">Walrus Technical Report</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-10</span><span>👥 Alkis Koudounas, Osamu Take, Hayato Futami, Quentin Jodelet, Emiru Tsunoo 等</span></div>
+      <div class="abstract">补录（11-13 公告批次，此前各期遗漏）。Walrus 是一个统一的 8B 语音-音频基础模型，同时覆盖语音识别（含语码转换与多人混说）、语音转文本与语音转语音翻译、语音合成（TTS）、情感识别、音频描述与通用音频理解。核心贡献不是新架构，而是一套「以数据为中心」的训练配方：主干直接初始化自 Gemma 4 解码器，使性能提升可归因于数据本身。语音生成侧预测低比特率离散语音 token，再由轻量 token-to-waveform 解码器还原高保真波形。配方为三阶段数据课程：从广泛多语数据逐步收敛到多人、语码转换与领域专用数据；每阶段用任务感知与数据集感知的加权，平衡 token 预算差异极大的各任务并防止核心能力遗忘。训练超过 6 亿样本、20+ 任务、100+ 语言，在多语 / 多人 / 语码转换 ASR、语音翻译与音频理解基准上多数领先，超过同规模开源语音语言模型与专用任务模型，多数基准上甚至追平或超过 4 倍大的 Qwen3-Omni。结论：数据工程是多任务语音音频建模质量的主要驱动力。</div>
+      <div class="tags"><span class="tag">Speech Foundation Model</span><span class="tag">TTS</span><span class="tag">S2ST</span><span class="tag">Multilingual</span><span class="tag">Data-Centric</span><span class="tag">Technical Report</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.13689" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.13689" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.14421" target="_blank">Earlybird: Predictive Streaming Speech Recognition in 29M Parameters</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-10</span><span>👥 Sahil Mahendrakar</span></div>
+      <div class="abstract">补录（11-13 公告批次，此前各期遗漏）。流式识别器通常在说话人把一个词说完之后 90–400 ms 才输出它，而语音 agent 每毫秒都算数：越早出词，越早能开始检索或规划回复。Earlybird 是一个 29M 参数的流式识别器（4bit 量化后仅 16.8 MB），训练时把音频在随机位置截断（包括截在一个词中间），要求模型把「此刻应已出现的词」完整预测出来，并额外猜接下来两个词；其原始 token 概率直接给出每个词的置信度，包括正在说的那个词。在干净有声书语音（LibriSpeech test-clean）上，中位词比说话人说完提前 90 ms 就被正确预测，而已发布的流式模型是说完之后 90–400 ms；在计时覆盖的六个测试集（有声书、TED 演讲、公开演讲、财报电话、合成语音）上 Earlybird 均为最早。同样有声书上 69% 的词在说完前被正确预测（其他模型 3–25%）。对仍在说的词，置信度已校准（ECE 3.7–5.5）。在 Open ASR Leaderboard 八个英文集上全面优于 Moonshine Tiny，与同规模 Whistle 大致持平。模型权重已发布。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Streaming</span><span class="tag">Low-Latency</span><span class="tag">Tiny Model</span><span class="tag">Confidence Calibration</span><span class="tag">Code Released</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.14421" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.14421" target="_blank">🔗 PDF</a> <a href="https://huggingface.co/sahilmahendrakar/Earlybird-29M" target="_blank">🔗 HF Model</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.13614" target="_blank">Emilia2: A Large-Scale Dataset for Controllable Long-Form Speech Generation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-10</span><span>👥 Qinke Ni, Dekun Chen, Junwen Qiu, Huan Liao, Xu Li, Xingwen Han 等 17 位</span></div>
+      <div class="abstract">补录（11-13 公告批次，此前各期遗漏）。长时语音生成要求模型在时间尺度上保持内容、说话人身份、话轮与表现力风格的一致性，但现有开源训练语料大多只有几十秒，开源长时基准最多两人对谈。Emilia2 是 229K 小时的多语可控长时语音生成数据集：从 in-the-wild 数据构造短句、单说话人长语音与多人对话，完整保留转写、说话人身份、停顿与声学过渡；五分钟以上的样本占单说话人长语音时长的 50.0%、对话时长的 66.8%。为支持表现力控制，提供 477 万条自然语言指令与 93.3 万条非言语发声（笑、叹气等）标注。另发布 Emilia2-testset：23 小时双语录、单条最长 30 分钟、最多 4 说话人，每人配参考音频。作者在其上训练自回归（AR）与非自回归（NAR）模型：0.6B 主干的 NAR 在 TTSD-Eval 上取得最低中文 CER（5.27%）与英文 WER（9.93%），AR 模型在 InstructTTSEval 上与 Qwen3-TTS-12Hz-VD 基本持平（中/英 76.2/78.3 对 77.1/77.9）。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Dataset</span><span class="tag">Long-Form</span><span class="tag">Expressive</span><span class="tag">Multi-Speaker</span><span class="tag">Demo</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.13614" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.13614" target="_blank">🔗 PDF</a> <a href="https://charlesnii.github.io/Emilia2-demo/" target="_blank">🔗 Demo</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.14043" target="_blank">ESDCodec: Ultra-Low Bitrate Speech Codec with Enhanced Semantic Disentanglement and Subband Decoding</a></h4>
+      <div class="meta"><span>📅 2026-11-10</span><span>👥 Nan Xu, Kecan Mao, Xin Gu, Yi Zhao, Zhi Gong</span></div>
+      <div class="abstract">补录（11-13 公告批次，此前各期遗漏）。神经语音编解码器在低码率下做高保真重建仍然困难。ESDCodec 提出两点：一是用随机初始化并冻结的码本加一个轻量投影器，把语义细节完全在线性空间中编码，同时提升码本利用率（增强语义解耦）；二是设计条件网络，将子带先验知识显式注入上采样解码器——以反量化特征为输入预测各子带信号，为波形重建提供细粒度引导。实验显示 ESDCodec 在 0.85 kbps 超低码率下取得更优重建质量；在基于 LLM 的语音生成任务中亦持续优于现有编解码模型。</div>
+      <div class="tags"><span class="tag">Codec</span><span class="tag">Ultra-Low Bitrate</span><span class="tag">Semantic Disentanglement</span><span class="tag">Subband</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.14043" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.14043" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.13875" target="_blank">DialInstruct-TTS: Interactive Expressive Speech Generation via Multi-Turn Dialogue with Fine-Grained Temporal Control</a></h4>
+      <div class="meta"><span>📅 2026-11-10</span><span>👥 Wangzixi Zhou, Bagus Tris Atmaja, Sakriani Sakti</span></div>
+      <div class="abstract">补录（11-13 公告批次，此前各期遗漏）。现有的指令式 TTS 基本是「一次性、整句级」控制：一条指令决定整句的风格，哪怕只想微调一点，也要重写指令并重新生成整句，细粒度交互无从谈起。DialInstruct-TTS 是交互式多轮表现力 TTS 框架：用户用自然语言对话逐轮修正，直到得到想要的风格。每轮由一个基于 Qwen 的 planner 融合对话历史与最新指令，产出完整的 TemporalPlan；时序声学控制模块对情感、语速、音量与发声方式（phonation）做细粒度控制。Reference-latent revision 机制在轮间保留非目标区域，使用户只改指定属性或时间跨度，而保留此前满意的语音部分。主观评测显示全局指令遵循、局部风格实现与非目标区域保持均有提升，交互便利性与舒适度显著优于「每次复述完整指令并整句重生成」的传统一次性方案。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Interactive</span><span class="tag">Multi-Turn</span><span class="tag">Expressive</span><span class="tag">Temporal Control</span><span class="tag">Audio Samples</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.13875" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.13875" target="_blank">🔗 PDF</a> <a href="https://anonymous.4open.science/w/eacl-demo-17C5/" target="_blank">🔗 Audio</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.13687" target="_blank">AURA: Auditory Spatial Intelligence via a Unified Representation from a General-Audio Encoder through Complete Alignment</a></h4>
+      <div class="meta"><span>📅 2026-11-10</span><span>👥 Boyan Han, Xiaoyan Wang, Zhe Sun, Ziqi Wang, Yujun Cai, Hongli Cao 等 9 位</span></div>
+      <div class="abstract">补录（11-13 公告批次，此前各期遗漏）。回答多源场景的空间问题，既要辨认每个声音，又要定位它。现有空间音频语言模型靠专用编码器取空间信息，把空间与语义处理割裂到两个特征空间。本文研究：一个完全没有空间监督训练出来的通用音频 codec 能否同时承担这两件事。逐层受控分析显示冻结 codec 确实保留了空间信息（侧向线索体现在左右声道之差），但不易取用：双源场景下用这些特征训练的模型预测左右只能到随机水平，且其余轴上把检测到的方向随机分配给「被问的源」和「没被问的源」。作者将其归因于音频-文本信息不对称：音频同时含两个源，而答案只描述被问的那一个。受控 2×2 实验表明，补齐整个场景描述或显式给出声道差都能把左右准确率拉过随机线，但要把方向绑定到被问的源则需要两者同时具备。据此提出 AURA：codec 与语言模型全程冻结，在 SpatialSoundQA 上双源方向准确率比最强的专用系统高 10.31 个点，可训练参数仅约其 40%。</div>
+      <div class="tags"><span class="tag">Spatial Audio</span><span class="tag">Audio Understanding</span><span class="tag">LALM</span><span class="tag">Frozen Codec</span><span class="tag">Efficient</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.13687" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.13687" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.13957" target="_blank">AVCC: Audio-Visual Conversation Corpus for Turn-Taking Prediction with a Human Benchmark</a></h4>
+      <div class="meta"><span>📅 2026-11-10</span><span>👥 Haotian Qi, Gabriel Skantze</span></div>
+      <div class="abstract">补录（11-13 公告批次，此前各期遗漏）。预测「下一个说的会是谁、何时开始」是不靠等静音就能接话的对话 agent 与社交机器人的前提。多人下一说话人预测（NSP）此前只在每说话人各配传感器的语料上研究过，事件定义各异；尚无公开基准覆盖机器人实际拥有的「单摄像头 + 单麦克风」条件，也没有任何模型与人类在同一批事件上对比过。本文把 31 小时、2–3 人线上对话的音视频语料 AVCC 转为公开 NSP 基准：新增说话人不相交的 7 段视频测试集（在互相静默间隙上共 865 个 hold 与 865 个 shift 事件）、全语料词级强制对齐转写，以及在同一批事件上采集的人类参照基准；并给出仅音频的 Role-Relative VAP 模型（RoleVAP）与多模态 MuVAP 的评分。标注、转写、每条回复的人类数据与复现所有数字的脚本全部开放。</div>
+      <div class="tags"><span class="tag">Turn-Taking</span><span class="tag">Full-Duplex</span><span class="tag">Benchmark</span><span class="tag">Audio-Visual</span><span class="tag">Human Baseline</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.13957" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.13957" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.15691" target="_blank">Dynamic Block-Online Streaming ASR for Low-Resource Agglutinative Code-Switching Speech with Morphology-Aware Evaluation</a></h4>
+      <div class="meta"><span>📅 2026-11-11</span><span>👥 Kazi Rafat, Afifa Imran, Md. Ismail Hossain, Md. Romzan Ali, Fuad Rahman, Sifat Momen 等 8 位</span></div>
+      <div class="abstract">补录（11-13 公告批次，此前各期遗漏，Interspeech 2026 口头报告）。低资源黏着语的流式 ASR 难点在于：字形顺序变化、后缀跨语码转换边界、语码转换数据不均衡时，固定前瞻窗口全部失效。本文是首个面向句内孟加拉语-英语语码转换的流式 ASR 系统研究，指出严格因果流式与长程形态学依赖之间存在失配；提出 Dynamic Block-Online 框架配合 VAD 对齐推理，在语义、延迟与上下文之间取得平衡，使全局双向注意力能够保住形态完整性。为缓解数据稀缺，提出 Script-Anchored Loanword Injection：向训练文本注入英语借词以建模音位配列过渡。另提出 CS-WER，分别诊断转换点、词根与后缀错误。结果显示灵活延迟预算能提升黏着语与混合语言识别，并可成功迁移到经期医疗垂直领域。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Streaming</span><span class="tag">Code-Switching</span><span class="tag">Low-Resource</span><span class="tag">Interspeech 2026</span><span class="tag">Code Released</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.15691" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.15691" target="_blank">🔗 PDF</a> <a href="https://github.com/King-Rafat/Dynamic_Streaming_ASR" target="_blank">🔗 GitHub</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.15288" target="_blank">FineSpeaker: Reliable Speaker Representation Learning at Fine Temporal Resolution</a></h4>
+      <div class="meta"><span>📅 2026-11-11</span><span>👥 Yongkang Yin, Wenhao Yang, Lichun Fan, Jian Luan, Hang Su, Yuexian Zou</span></div>
+      <div class="abstract">补录（11-13 公告批次，此前各期遗漏）。长上下文说话人编码器能给出稳定有判别力的嵌入，但短时长验证与说话人日志需要更细粒度的时间表示；短时上下文样本证据少，说话人身份又容易与音素、声学变化纠缠，形成「时间分辨率—表示可靠性」的权衡。FineSpeaker 先用可调 n 帧窗口的均值池化构造分辨率可控的帧级说话人表示，再引入带局部时序建模的说话人编码器，用短程说话人上下文提升短时与帧级表示的稳定性与判别力；最后提出生成式解耦策略——结合 VAE 概率建模与 flow matching 刻画说话人相关变化、抑制非说话人干扰。实验显示整句性能有竞争力，在 VoxCeleb 与 CN-Celeb 上细粒度说话人验证提升，零样本说话人日志表现强，说明平衡时间分辨率与表示可靠性确有收益。</div>
+      <div class="tags"><span class="tag">Speaker Representation</span><span class="tag">Diarization</span><span class="tag">Verification</span><span class="tag">Flow Matching</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.15288" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.15288" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.15439" target="_blank">DeALR: Decoupled Audio-Latent Optimization with Acoustic Backtracking for Test-Time Reasoning</a></h4>
+      <div class="meta"><span>📅 2026-11-11</span><span>👥 Haoyu He, Yan Rong, Li Liu</span></div>
+      <div class="abstract">补录（11-13 公告批次，此前各期遗漏）。大音频语言模型（LALM）通常只编码一次音频，随后在语言主导的空间里做多步推理，对细粒度声学证据的访问被削弱；冻结的 LALM 能否在测试时于潜空间中主动「回看」关键声学证据，此前未被充分探索。受人类在复杂听觉任务中回溯特定声学线索的认知过程启发，DeALR 让可学习的 thought token 与声学片段建立动态交互：Span-Level Acoustic Backtracking 从初始注意力分布出发，动态切出连续的、关键声学片段；Decoupled Audio-Latent Optimization（DALO）则是一种测试时强化学习算法，用置信度引导的策略梯度联合优化 thought 向量与声学 patch，并在文本合成前恢复未被破坏的高保真音频嵌入，从而显式把「轨迹搜索」从「回答生成」中解耦，彻底消除优化引入的分布漂移。多项基准上一致优于此前的测试时优化方法，置信度校准与推理准确率均有明显提升。</div>
+      <div class="tags"><span class="tag">Audio-Language Model</span><span class="tag">Test-Time Reasoning</span><span class="tag">Latent Reasoning</span><span class="tag">RL</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.15439" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.15439" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-11-15-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

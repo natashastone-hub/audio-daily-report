@@ -1,0 +1,141 @@
+{
+  "windowNote": "统计窗口：2026-11-15 09:34 ~ 14:01（Asia/Shanghai）。经 arXiv 官方 API（第一级 max_results=50 正常返回，eess.AS + cs.SD 双分类）核对：截至本窗口，最新公告批次仍是「11-12 提交 / 11-13 公告」那一批（最新条目时间戳 2026-11-12T17:49Z），窗口内 arXiv 零新公告——11-13（周五）之后提交的论文按 arXiv 周末规则要到 11-16（周一）才公告；HuggingFace Daily Papers 最新批次同样停在 11-12，且 60 条里无 audio 相关新上榜。故本期无「窗口内新论文」。为不浪费时段，本期对 11-13 公告批次中此前 11-13 ~ 11-15 各期日报均未收录的 10 篇语音/音频论文做补录（已逐篇核对确认无重复），补录条目在摘要开头标注「补录」。",
+  "note": "必搜关键词已逐条独立执行（OpenAI GPT-Live full-duplex voice model / OpenAI voice model release / Google Gemini voice / full-duplex speech model / 语音模型发布 / real-time voice AI），另加 2 轮 freshness=day 通用搜索与 1 轮 freshness=week 兜底。结果：6 小时窗口内无任何语音/音频产品发布或重大新闻，命中全部为旧消息（GPT-Live 发布 2026-07-09、其 SynthID 水印更新 07-31、Gemini 3.8 Flash-Lite TTS 为 09-23、NVIDIA VoiceChat 为 08-10、小米 MiMo-V2.5 为 04-24、Salesforce SOV-Transcribe-1 为 11-12 已由 11-14 期收录、腾讯 HyRealtime 已由 11-14 期收录）。因此本期「前沿新闻」为空，不做凑数。",
+  "papers": [
+    {
+      "title": "Walrus Technical Report",
+      "url": "https://arxiv.org/abs/2611.13689",
+      "date": "2026-11-10",
+      "authors": "Alkis Koudounas, Osamu Take, Hayato Futami, Quentin Jodelet, Emiru Tsunoo 等",
+      "abstract": "补录（11-13 公告批次，此前各期遗漏）。Walrus 是一个统一的 8B 语音-音频基础模型，同时覆盖语音识别（含语码转换与多人混说）、语音转文本与语音转语音翻译、语音合成（TTS）、情感识别、音频描述与通用音频理解。核心贡献不是新架构，而是一套「以数据为中心」的训练配方：主干直接初始化自 Gemma 4 解码器，使性能提升可归因于数据本身。语音生成侧预测低比特率离散语音 token，再由轻量 token-to-waveform 解码器还原高保真波形。配方为三阶段数据课程：从广泛多语数据逐步收敛到多人、语码转换与领域专用数据；每阶段用任务感知与数据集感知的加权，平衡 token 预算差异极大的各任务并防止核心能力遗忘。训练超过 6 亿样本、20+ 任务、100+ 语言，在多语 / 多人 / 语码转换 ASR、语音翻译与音频理解基准上多数领先，超过同规模开源语音语言模型与专用任务模型，多数基准上甚至追平或超过 4 倍大的 Qwen3-Omni。结论：数据工程是多任务语音音频建模质量的主要驱动力。",
+      "tags": ["Speech Foundation Model", "TTS", "S2ST", "Multilingual", "Data-Centric", "Technical Report"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.13689"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.13689"}
+      ]
+    },
+    {
+      "title": "Earlybird: Predictive Streaming Speech Recognition in 29M Parameters",
+      "url": "https://arxiv.org/abs/2611.14421",
+      "date": "2026-11-10",
+      "authors": "Sahil Mahendrakar",
+      "abstract": "补录（11-13 公告批次，此前各期遗漏）。流式识别器通常在说话人把一个词说完之后 90–400 ms 才输出它，而语音 agent 每毫秒都算数：越早出词，越早能开始检索或规划回复。Earlybird 是一个 29M 参数的流式识别器（4bit 量化后仅 16.8 MB），训练时把音频在随机位置截断（包括截在一个词中间），要求模型把「此刻应已出现的词」完整预测出来，并额外猜接下来两个词；其原始 token 概率直接给出每个词的置信度，包括正在说的那个词。在干净有声书语音（LibriSpeech test-clean）上，中位词比说话人说完提前 90 ms 就被正确预测，而已发布的流式模型是说完之后 90–400 ms；在计时覆盖的六个测试集（有声书、TED 演讲、公开演讲、财报电话、合成语音）上 Earlybird 均为最早。同样有声书上 69% 的词在说完前被正确预测（其他模型 3–25%）。对仍在说的词，置信度已校准（ECE 3.7–5.5）。在 Open ASR Leaderboard 八个英文集上全面优于 Moonshine Tiny，与同规模 Whistle 大致持平。模型权重已发布。",
+      "tags": ["ASR", "Streaming", "Low-Latency", "Tiny Model", "Confidence Calibration", "Code Released"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.14421"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.14421"},
+        {"label": "HF Model", "url": "https://huggingface.co/sahilmahendrakar/Earlybird-29M"}
+      ]
+    },
+    {
+      "title": "Emilia2: A Large-Scale Dataset for Controllable Long-Form Speech Generation",
+      "url": "https://arxiv.org/abs/2611.13614",
+      "date": "2026-11-10",
+      "authors": "Qinke Ni, Dekun Chen, Junwen Qiu, Huan Liao, Xu Li, Xingwen Han 等 17 位",
+      "abstract": "补录（11-13 公告批次，此前各期遗漏）。长时语音生成要求模型在时间尺度上保持内容、说话人身份、话轮与表现力风格的一致性，但现有开源训练语料大多只有几十秒，开源长时基准最多两人对谈。Emilia2 是 229K 小时的多语可控长时语音生成数据集：从 in-the-wild 数据构造短句、单说话人长语音与多人对话，完整保留转写、说话人身份、停顿与声学过渡；五分钟以上的样本占单说话人长语音时长的 50.0%、对话时长的 66.8%。为支持表现力控制，提供 477 万条自然语言指令与 93.3 万条非言语发声（笑、叹气等）标注。另发布 Emilia2-testset：23 小时双语录、单条最长 30 分钟、最多 4 说话人，每人配参考音频。作者在其上训练自回归（AR）与非自回归（NAR）模型：0.6B 主干的 NAR 在 TTSD-Eval 上取得最低中文 CER（5.27%）与英文 WER（9.93%），AR 模型在 InstructTTSEval 上与 Qwen3-TTS-12Hz-VD 基本持平（中/英 76.2/78.3 对 77.1/77.9）。",
+      "tags": ["TTS", "Dataset", "Long-Form", "Expressive", "Multi-Speaker", "Demo"],
+      "highlight": true,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.13614"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.13614"},
+        {"label": "Demo", "url": "https://charlesnii.github.io/Emilia2-demo/"}
+      ]
+    },
+    {
+      "title": "ESDCodec: Ultra-Low Bitrate Speech Codec with Enhanced Semantic Disentanglement and Subband Decoding",
+      "url": "https://arxiv.org/abs/2611.14043",
+      "date": "2026-11-10",
+      "authors": "Nan Xu, Kecan Mao, Xin Gu, Yi Zhao, Zhi Gong",
+      "abstract": "补录（11-13 公告批次，此前各期遗漏）。神经语音编解码器在低码率下做高保真重建仍然困难。ESDCodec 提出两点：一是用随机初始化并冻结的码本加一个轻量投影器，把语义细节完全在线性空间中编码，同时提升码本利用率（增强语义解耦）；二是设计条件网络，将子带先验知识显式注入上采样解码器——以反量化特征为输入预测各子带信号，为波形重建提供细粒度引导。实验显示 ESDCodec 在 0.85 kbps 超低码率下取得更优重建质量；在基于 LLM 的语音生成任务中亦持续优于现有编解码模型。",
+      "tags": ["Codec", "Ultra-Low Bitrate", "Semantic Disentanglement", "Subband"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.14043"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.14043"}
+      ]
+    },
+    {
+      "title": "DialInstruct-TTS: Interactive Expressive Speech Generation via Multi-Turn Dialogue with Fine-Grained Temporal Control",
+      "url": "https://arxiv.org/abs/2611.13875",
+      "date": "2026-11-10",
+      "authors": "Wangzixi Zhou, Bagus Tris Atmaja, Sakriani Sakti",
+      "abstract": "补录（11-13 公告批次，此前各期遗漏）。现有的指令式 TTS 基本是「一次性、整句级」控制：一条指令决定整句的风格，哪怕只想微调一点，也要重写指令并重新生成整句，细粒度交互无从谈起。DialInstruct-TTS 是交互式多轮表现力 TTS 框架：用户用自然语言对话逐轮修正，直到得到想要的风格。每轮由一个基于 Qwen 的 planner 融合对话历史与最新指令，产出完整的 TemporalPlan；时序声学控制模块对情感、语速、音量与发声方式（phonation）做细粒度控制。Reference-latent revision 机制在轮间保留非目标区域，使用户只改指定属性或时间跨度，而保留此前满意的语音部分。主观评测显示全局指令遵循、局部风格实现与非目标区域保持均有提升，交互便利性与舒适度显著优于「每次复述完整指令并整句重生成」的传统一次性方案。",
+      "tags": ["TTS", "Interactive", "Multi-Turn", "Expressive", "Temporal Control", "Audio Samples"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.13875"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.13875"},
+        {"label": "Audio", "url": "https://anonymous.4open.science/w/eacl-demo-17C5/"}
+      ]
+    },
+    {
+      "title": "AURA: Auditory Spatial Intelligence via a Unified Representation from a General-Audio Encoder through Complete Alignment",
+      "url": "https://arxiv.org/abs/2611.13687",
+      "date": "2026-11-10",
+      "authors": "Boyan Han, Xiaoyan Wang, Zhe Sun, Ziqi Wang, Yujun Cai, Hongli Cao 等 9 位",
+      "abstract": "补录（11-13 公告批次，此前各期遗漏）。回答多源场景的空间问题，既要辨认每个声音，又要定位它。现有空间音频语言模型靠专用编码器取空间信息，把空间与语义处理割裂到两个特征空间。本文研究：一个完全没有空间监督训练出来的通用音频 codec 能否同时承担这两件事。逐层受控分析显示冻结 codec 确实保留了空间信息（侧向线索体现在左右声道之差），但不易取用：双源场景下用这些特征训练的模型预测左右只能到随机水平，且其余轴上把检测到的方向随机分配给「被问的源」和「没被问的源」。作者将其归因于音频-文本信息不对称：音频同时含两个源，而答案只描述被问的那一个。受控 2×2 实验表明，补齐整个场景描述或显式给出声道差都能把左右准确率拉过随机线，但要把方向绑定到被问的源则需要两者同时具备。据此提出 AURA：codec 与语言模型全程冻结，在 SpatialSoundQA 上双源方向准确率比最强的专用系统高 10.31 个点，可训练参数仅约其 40%。",
+      "tags": ["Spatial Audio", "Audio Understanding", "LALM", "Frozen Codec", "Efficient"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.13687"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.13687"}
+      ]
+    },
+    {
+      "title": "AVCC: Audio-Visual Conversation Corpus for Turn-Taking Prediction with a Human Benchmark",
+      "url": "https://arxiv.org/abs/2611.13957",
+      "date": "2026-11-10",
+      "authors": "Haotian Qi, Gabriel Skantze",
+      "abstract": "补录（11-13 公告批次，此前各期遗漏）。预测「下一个说的会是谁、何时开始」是不靠等静音就能接话的对话 agent 与社交机器人的前提。多人下一说话人预测（NSP）此前只在每说话人各配传感器的语料上研究过，事件定义各异；尚无公开基准覆盖机器人实际拥有的「单摄像头 + 单麦克风」条件，也没有任何模型与人类在同一批事件上对比过。本文把 31 小时、2–3 人线上对话的音视频语料 AVCC 转为公开 NSP 基准：新增说话人不相交的 7 段视频测试集（在互相静默间隙上共 865 个 hold 与 865 个 shift 事件）、全语料词级强制对齐转写，以及在同一批事件上采集的人类参照基准；并给出仅音频的 Role-Relative VAP 模型（RoleVAP）与多模态 MuVAP 的评分。标注、转写、每条回复的人类数据与复现所有数字的脚本全部开放。",
+      "tags": ["Turn-Taking", "Full-Duplex", "Benchmark", "Audio-Visual", "Human Baseline"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.13957"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.13957"}
+      ]
+    },
+    {
+      "title": "Dynamic Block-Online Streaming ASR for Low-Resource Agglutinative Code-Switching Speech with Morphology-Aware Evaluation",
+      "url": "https://arxiv.org/abs/2611.15691",
+      "date": "2026-11-11",
+      "authors": "Kazi Rafat, Afifa Imran, Md. Ismail Hossain, Md. Romzan Ali, Fuad Rahman, Sifat Momen 等 8 位",
+      "abstract": "补录（11-13 公告批次，此前各期遗漏，Interspeech 2026 口头报告）。低资源黏着语的流式 ASR 难点在于：字形顺序变化、后缀跨语码转换边界、语码转换数据不均衡时，固定前瞻窗口全部失效。本文是首个面向句内孟加拉语-英语语码转换的流式 ASR 系统研究，指出严格因果流式与长程形态学依赖之间存在失配；提出 Dynamic Block-Online 框架配合 VAD 对齐推理，在语义、延迟与上下文之间取得平衡，使全局双向注意力能够保住形态完整性。为缓解数据稀缺，提出 Script-Anchored Loanword Injection：向训练文本注入英语借词以建模音位配列过渡。另提出 CS-WER，分别诊断转换点、词根与后缀错误。结果显示灵活延迟预算能提升黏着语与混合语言识别，并可成功迁移到经期医疗垂直领域。",
+      "tags": ["ASR", "Streaming", "Code-Switching", "Low-Resource", "Interspeech 2026", "Code Released"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.15691"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.15691"},
+        {"label": "GitHub", "url": "https://github.com/King-Rafat/Dynamic_Streaming_ASR"}
+      ]
+    },
+    {
+      "title": "FineSpeaker: Reliable Speaker Representation Learning at Fine Temporal Resolution",
+      "url": "https://arxiv.org/abs/2611.15288",
+      "date": "2026-11-11",
+      "authors": "Yongkang Yin, Wenhao Yang, Lichun Fan, Jian Luan, Hang Su, Yuexian Zou",
+      "abstract": "补录（11-13 公告批次，此前各期遗漏）。长上下文说话人编码器能给出稳定有判别力的嵌入，但短时长验证与说话人日志需要更细粒度的时间表示；短时上下文样本证据少，说话人身份又容易与音素、声学变化纠缠，形成「时间分辨率—表示可靠性」的权衡。FineSpeaker 先用可调 n 帧窗口的均值池化构造分辨率可控的帧级说话人表示，再引入带局部时序建模的说话人编码器，用短程说话人上下文提升短时与帧级表示的稳定性与判别力；最后提出生成式解耦策略——结合 VAE 概率建模与 flow matching 刻画说话人相关变化、抑制非说话人干扰。实验显示整句性能有竞争力，在 VoxCeleb 与 CN-Celeb 上细粒度说话人验证提升，零样本说话人日志表现强，说明平衡时间分辨率与表示可靠性确有收益。",
+      "tags": ["Speaker Representation", "Diarization", "Verification", "Flow Matching"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.15288"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.15288"}
+      ]
+    },
+    {
+      "title": "DeALR: Decoupled Audio-Latent Optimization with Acoustic Backtracking for Test-Time Reasoning",
+      "url": "https://arxiv.org/abs/2611.15439",
+      "date": "2026-11-11",
+      "authors": "Haoyu He, Yan Rong, Li Liu",
+      "abstract": "补录（11-13 公告批次，此前各期遗漏）。大音频语言模型（LALM）通常只编码一次音频，随后在语言主导的空间里做多步推理，对细粒度声学证据的访问被削弱；冻结的 LALM 能否在测试时于潜空间中主动「回看」关键声学证据，此前未被充分探索。受人类在复杂听觉任务中回溯特定声学线索的认知过程启发，DeALR 让可学习的 thought token 与声学片段建立动态交互：Span-Level Acoustic Backtracking 从初始注意力分布出发，动态切出连续的、关键声学片段；Decoupled Audio-Latent Optimization（DALO）则是一种测试时强化学习算法，用置信度引导的策略梯度联合优化 thought 向量与声学 patch，并在文本合成前恢复未被破坏的高保真音频嵌入，从而显式把「轨迹搜索」从「回答生成」中解耦，彻底消除优化引入的分布漂移。多项基准上一致优于此前的测试时优化方法，置信度校准与推理准确率均有明显提升。",
+      "tags": ["Audio-Language Model", "Test-Time Reasoning", "Latent Reasoning", "RL"],
+      "highlight": false,
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.15439"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.15439"}
+      ]
+    }
+  ],
+  "news": []
+}
