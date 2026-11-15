@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-11-15</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-11-15</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年11月15日 (周日) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">9</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.14908" target="_blank">Hy ASR 3.0 Technical Report</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-11</span><span>👥 Aoxiong Yin, Auden Li, Chao Huang 等（60 位作者）</span></div>
+      <div class="abstract">补录（11-13 公告批次遗漏）。Hy ASR 3.0 是基于大语言模型的语音识别系统，主打识别精度、灵活上下文条件与跨场景鲁棒性。支持普通话、英语与 13 个中文方言组（含粤语），在公开的普通话、英语、粤语基准上均取得最低聚合错误率，对应内部测试集同样最低，方言识别亦属第一梯队。除纯音频转写外，模型支持多种外部上下文形式：热词表、问答对话与摘要，可在识别时注入任务相关信息；同时利用语句内上下文消解同音/近音关键词歧义，无需额外上下文输入。评测覆盖长语音、儿童与老人语音、低音量语音与噪声环境，验证了上下文识别与鲁棒性。技术报告给出模型架构、训练方法与多维度评测。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">LLM-based ASR</span><span class="tag">Contextual Biasing</span><span class="tag">Dialect</span><span class="tag">Technical Report</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.14908" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.14908" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.14774" target="_blank">An LLM Is All You Need: Data-Efficient Adaptation to Full-Duplex, Word-Level Spoken Dialogue</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-10</span><span>👥 Tairan Chen, Richard Yucheng He, Yihang Liu, Baodong Cao, Chen Xu</span></div>
+      <div class="abstract">补录（11-13 公告批次遗漏）。全双工语音对话（边说边听、可反馈、可让出话轮、可被打断）通常需要数十万至数百万小时语音训练，成本高、会重写承载知识的语言模型，且话轮控制往往仍是粗粒度或隐式的。本文证明：一个冻结的通用多模态 LLM 即可以极少数据改造成词级全双工系统。系统是 80ms 帧时钟上的 thinker–talker 级联：thinker 冻结 LLM，只训练轻量适配器与少量新 token 嵌入（97M 参数），每帧输出一个 agent 文本 token，将停顿、让出、抢话表示为同一词表中的 token 并由有限状态机保证合法；四阶段课程每阶段以模型在上一种格式下的自身行为为锚，约 30 GPU 小时完成转换。talker 只读 thinker 的离散 token，两半可独立训练。在 Full-Duplex-Bench 与 InteractionBench 上，与大规模语音训练得到的开源全双工系统相比具备竞争力：用户仅停顿时最不倾向于抢话、反馈频率最高，并在口语任务准确率、事实落地性与长对话连贯性上领先。</div>
+      <div class="tags"><span class="tag">Full-Duplex</span><span class="tag">Spoken Dialogue</span><span class="tag">Data-Efficient</span><span class="tag">Thinker-Talker</span><span class="tag">LLM</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.14774" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.14774" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.14929" target="_blank">Speech Tokenizers are Vulnerable: Transferable Semantic Attack and Robust Tokenizer</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-11</span><span>👥 Zhisheng Zhang, Yifan Mi, Yixuan Zhou, Haiyun Li, Shengbo Cai, Dongfu Song, Ziang Xu, Jie Hao, Zhiyong Wu</span></div>
+      <div class="abstract">补录（11-13 公告批次遗漏，NeurIPS 2026 接收）。语音分词器作为语音前端，将输入编码为下游 ASR 与大音频语言模型（LALM）的表示。本文发现语音分词器在语义层面极其脆弱：微小扰动即可破坏其语义编码，导致下游 ASR 与 LALM 性能严重退化。为此提出 T-SemAttack——基于语义编码器集成（ensemble）的可迁移语义攻击：联合漂移多个语义编码器的表示空间，在保持听感质量的同时破坏语义内容，从而诱导错误特征。作者进一步分析逐层表示漂移与跨模型梯度对齐，发现扰动可引起深层语义表示的大幅偏移，且不同代理编码器的输入梯度存在方向一致性，提示输入空间中共享的对抗敏感方向是跨模型可迁移性的关键因素。基于此提出 ROSETok——结合噪声训练与鲁棒语义蒸馏的鲁棒分词器，在高保真重建与下游 SpeechLLM 鲁棒性上均有提升。在多个数据集、9 个开源与黑盒 ASR 系统、4 个 LALM 上的实验验证了攻击的强迁移性与防御有效性，代码与 demo 已公开。</div>
+      <div class="tags"><span class="tag">Speech Tokenizer</span><span class="tag">Adversarial Attack</span><span class="tag">Robustness</span><span class="tag">NeurIPS 2026</span><span class="tag">Code Released</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.14929" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.14929" target="_blank">🔗 PDF</a> <a href="https://wxzyd123.github.io/t-semattack" target="_blank">🔗 Project</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.15464" target="_blank">RSE-TTS: Compact Text-to-Speech through Shared Text-Aware Reference Encoding and Generation</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-11</span><span>👥 Ming Ma, Mingjie Chen, Yuanzhong Zheng, Hengyao Bao, Hailin Yu, Shijing Yu, Hao Qiu, Gongfan Cao, Xiao Li, Xuemin Zhao, Youhai Jiang</span></div>
+      <div class="abstract">补录（11-13 公告批次遗漏）。核心问题是：语音生成器能否同时充当有效的音色编码器？作者证明，预训练的自回归 TTS 主干可复用为参考语音压缩器，从而提升后续合成的说话人相似度；将参考语音与其转写文本联合编码可进一步增强该能力，并通过受控消融与激活干预，追踪文本信息经由中间声学表示进入条件生成所用压缩向量的路径。据此提出 RSE-TTS：其重建式说话人编码器（RSE）与生成主干共享参数，将成对的参考文本与语音压缩为 8 个连续向量；共享使编码器+生成器参数相对独立预训练编码方案减少 48%。大规模英语训练得到 118M 参数生成器，在三个英语基准上同时改善词错率与说话人相似度，优于 MOSS-TTS-Nano 官方克隆模式；结合声学续写后，说话人相似度接近体量大得多的系统，同时 WER 低于所评测的 CosyVoice 3 与 MOSS-TTS-Local。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Voice Cloning</span><span class="tag">Zero-shot</span><span class="tag">Compact Model</span><span class="tag">Audio Samples</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.15464" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.15464" target="_blank">🔗 PDF</a> <a href="https://voxnexusai.github.io/RSE-TTS/" target="_blank">🔗 Audio</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.15362" target="_blank">JEV-VAD: Efficient Semantic Endpointing via Task-First Conditioning and Decoder-Prefix Pruning</a></h4>
+      <div class="meta"><span>📅 2026-11-11</span><span>👥 Jintao Liang, Nan Li, Longbiao Wang, Tubin Huang, Min Xu</span></div>
+      <div class="abstract">补录（11-13 公告批次遗漏）。语义端点检测需要区分「说完了」与「只是临时停顿」，但其输出只是二值判定，不必走完整的音频语言模型生成通路。本文提出 JEV-VAD：一个免 ASR 框架，组合任务前置条件化（task-first conditioning）、标量端点读出与解码器前缀剪枝。具体做法是把问题与完成判据放在音频 token 之前，使因果解码器注意力能在端点目标条件下构建音频状态；专用标量头直接把 assistant 前缀状态映射为停止概率，从而去掉转写生成、答案解码与词表级输出投影。为降低表示开销，解码器前缀剪枝仅物理保留前若干个解码器层，再通过匹配式头重拟合在统一适配预算下确定哪些深度提供有效端点信息。框架基于 Qwen3-ASR-0.6B，经监督微调后用强化学习校准决策。EOT-bench 上验证了从英语端点监督到其他语言的跨语言迁移，以及浅层前缀中的有效判别力，提供可选的「质量—资源」折中。</div>
+      <div class="tags"><span class="tag">VAD</span><span class="tag">Semantic Endpointing</span><span class="tag">Full-Duplex</span><span class="tag">Efficiency</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.15362" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.15362" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.15087" target="_blank">Scaffolding Self-Transduction with Alignment Attention Mask for Aligner-Encoder ASR</a></h4>
+      <div class="meta"><span>📅 2026-11-11</span><span>👥 Jaeyoung Lee, Masato Mimura</span></div>
+      <div class="abstract">补录（11-13 公告批次遗漏，IEEE SLT 2026 接收）。端到端 ASR 需从序列级监督中同时解决语音—文本对齐与 token 预测。本文研究 Aligner-Encoder ASR——对齐在编码器自注意力内部完成，因而可用注意力掩码直接介入。作者用强制对齐构造注意力掩码，将选定的编码器自注意力头限制在对齐路径附近的窄窗口内，并在训练中逐步淡出该掩码，最终得到推理架构未修改的可部署模型；另一种做法是训练与推理都保留掩码，作为「对齐已被外部解决」时的 oracle，用于衡量识别性能上限。在 LibriSpeech 上，淡出式对齐掩码把 Aligner 基线的 test-clean/test-other WER 从 3.9/6.4 降到 3.5/5.9；oracle 掩码效果远更强，达到 1.2/2.9，可视为 100M 级 Conformer 在外置语言模型条件下的精度上界。这说明对齐推断是 Aligner-Encoder ASR 的主要瓶颈，改进对齐机制有望带来显著精度收益。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">Alignment</span><span class="tag">Attention Mask</span><span class="tag">SLT 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.15087" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.15087" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.14801" target="_blank">Distributionally Robust BEST-RQ For Speech Representation Learning</a></h4>
+      <div class="meta"><span>📅 2026-11-10</span><span>👥 Muhammad Khan, Xiaodong Cui, Brian Kingsbury, George Saon</span></div>
+      <div class="abstract">补录（11-13 公告批次遗漏，IBM 团队）。BEST-RQ 基于随机投影与量化，是高性价比的自监督语音表示学习方法，但其随机量化得到的表示对量化目标的选择较为敏感。本文提出 BEST-RQ 的分布鲁棒扩展，追求在多种量化配置下都稳健的表示：具体按码本分组，把训练建模为组分布鲁棒优化（Group DRO）问题，不再只优化组间平均损失，而是自适应地给表现差的组更高权重；同时用 KL 散度正则约束 DRO，避免分布过度偏移。在多语言 LibriSpeech（Multilingual LibriSpeech）上验证，分布鲁棒 BEST-RQ 在多码本设定下优于常规均匀平均。</div>
+      <div class="tags"><span class="tag">Self-Supervised Learning</span><span class="tag">Speech Representation</span><span class="tag">BEST-RQ</span><span class="tag">DRO</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.14801" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.14801" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.15919" target="_blank">qVocalTract: Efficient encoding framework of vocal-tract spectra on a quantum computer</a></h4>
+      <div class="meta"><span>📅 2026-11-11</span><span>👥 Sheng Li, Jiyi Li</span></div>
+      <div class="abstract">补录（11-13 公告批次遗漏）。声道传递函数连接物理发音模型与语音信号，而在量子计算机上编码声道传递函数，需要能在硬件噪声下仍保持声学结构的量子线路。本文提出 qVocalTract 框架，采用优化的无辅助量子比特（ancilla-free）阶梯层（staircase layers）完成频谱加载；在仿真与超导处理器上，将该方法与顺序矩阵乘积态（MPS）制备在声道数据上对比。结果显示阶梯式制备降低了频谱误差、改善了共振峰恢复，模态探针实验验证了相干处理能力；同时也揭示出近似精度与累积线路噪声之间的权衡。结论为后续结合物理声道模型的量子声学处理提供实践指引。</div>
+      <div class="tags"><span class="tag">Quantum Computing</span><span class="tag">Vocal Tract</span><span class="tag">Speech Production</span><span class="tag">Spectral Encoding</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.15919" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.15919" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.14016" target="_blank">Passive ladder-network representation of the radiation impedance of a spherical cap on a rigid sphere</a></h4>
+      <div class="meta"><span>📅 2026-11-10</span><span>👥 Ronald M. Aarts</span></div>
+      <div class="abstract">补录（11-13 公告批次遗漏，JASA Express Letters 投稿）。把闭箱扬声器建模为带轴向运动球冠的刚性球体：对轴对称锥盆速度剖面，其辐射阻抗可写成网络形式——每个球谐模态对应一个关于频率有理的阻抗，可精确实现为以电阻终结的有限无源梯形网络（质量与柔顺元件）；由 Legendre 系数设定的理想变压器耦合各梯形网络，截断的高阶模态退化为残余质量。尽管几何不同，该阻抗形态与无限障板活塞相似，但在相同体积速度下，低频辐射阻为其一半、辐射质量约为其四分之三。</div>
+      <div class="tags"><span class="tag">Acoustics</span><span class="tag">Loudspeaker Modeling</span><span class="tag">Radiation Impedance</span><span class="tag">Physical Modeling</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.14016" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.14016" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>OpenAI 宣布 12 月 11 日停用 Advanced Voice / Standard Voice，ChatGPT 语音全面转向 GPT-Live（11-10 公告，超 24h 窗口，本周内动态）</h4>
+      <p>OpenAI 于 11-10 宣布：2026 年 12 月 11 日起在 ChatGPT 中停止提供 Advanced Voice 与 Standard Voice 两种旧语音模式，统一迁到基于 GPT-Live 的 Live Voice。官方称自今年 7 月 GPT-Live 上线以来，ChatGPT 语音使用量接近翻倍，几乎所有语音用户已迁移到新模型。这意味着全双工（full-duplex）实时语音架构正式成为 ChatGPT 唯一语音入口，旧式「ASR→LLM→TTS」级联与早期原生语音模式同步退场。说明：本条为窗口外（11-10）但本周内的真实动态，因 24 小时内无新发布而保留在此，供追踪语音入口迁移进度。 <a href="https://article.juejin.cn/post/7707510918536822825" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>腾讯 IEGG 开源司内首个多语言端到端语音同传大模型 iegg-streaming-si-0.6B：首播延迟 1.28 秒（本周内 KM 技术文章）</h4>
+      <p>IEGG 开源多语言端到端语音同传（Speech-to-Speech Translation / Simultaneous Interpretation）大模型 iegg-streaming-si-0.6B，为司内首个开源同传大模型。文章指出传统级联方案（ASR→MT→TTS）存在延迟累积、错误传递、声音特征缺失与译音积压等问题，难以满足多人在线游戏与多语言会议的长时实时互动需求；该模型采用端到端流式架构，首播延迟低至 1.28 秒，翻译质量接近闭源系统（TEKO 项目页 teko.woa.com/project/39822 提供试听与推理指南）。说明：原文为 KM 内部技术文章，具体发布日期以原文为准；本条为补录性质的本周动态，24 小时窗口内无新发布。 <a href="https://km.woa.com/articles/show/670419" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-11-15') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
