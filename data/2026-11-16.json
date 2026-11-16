@@ -1,0 +1,214 @@
+{
+  "windowNote": "统计窗口 2026-11-15 09:30 → 2026-11-16 09:34（北京时间）。arXiv 周末不发布公告（最近一次公告为 11-13 周五，下一次为 11-17 北京时间早上），HuggingFace Daily Papers 最新条目也停在 11-11，因此窗口内没有新的 arXiv 列表更新。本期按周一惯例，补录 11-13 公告中此前早报/午报未覆盖的音频方向论文 8 篇，并收录窗口内可核实的产业与研究动态。",
+  "note": "诚实标注：① 24 小时内 arXiv / HF 均无新论文（周末静默），8 篇论文均为 11-13 公告的补录，非当日新提交；② 必搜重磅词（OpenAI GPT-Live / OpenAI voice model release / Google Gemini voice / full-duplex speech model / 语音模型发布 / real-time voice AI）在 24 小时内均无新发布，Gemini 相关只有 CarPlay/车机与智能眼镜等应用侧消息；③ 窗口边缘（略超 24h，供追踪）：OpenMOSS 11-14 开源实时全双工语音模型 MOSS-Live，Pandaily 评测称其在六项全双工指标领先但多轮对话仍落后 GPT-Live-1；Zyphra 11-14 开源 ZONOS3-Mini 语音与声音克隆模型（对应 2611.16525 技术报告，已在 11-13 期收录）；DeepSeek 11-14 把 App 内搜索/文件/OCR/语音能力开放为 API。",
+  "papers": [
+    {
+      "title": "Harmony: Bridging Audio Understanding and Editing through Agentic Collaboration",
+      "url": "https://arxiv.org/abs/2611.14724",
+      "date": "2026-11-13",
+      "authors": "Zhongyi Tong, Yapeng Tian",
+      "abstract": "自然语言音频编辑的难点在于把用户意图准确落到具体声源与时间区间，同时保持周边内容不变：一次编辑可能只针对其中一次出现、依赖前后时间关系，或需要修改与其它声音重叠的源。Harmony 是一个 Agent 框架，让 LLM 规划器、音频语言模型与外部工具协同工作，包含两个机制——编辑驱动的协同规划（用针对性提问与工具测量确定目标、时间位置与操作参数）与证据引导的执行（用首次分离/生成音频的观测触发有界修正，再做最终混音），从而把语义决策一路连接到波形操作。支持添加、删除、替换与音量调整。在覆盖这些操作的 420 个 MMAE 样例上精确匹配率 22.62%（最强基线 13.57%），指令跟随与上下文保持指标同步提升。",
+      "tags": [
+        "Audio Editing",
+        "Agent",
+        "Audio-Language Model",
+        "Natural Language Interface"
+      ],
+      "highlight": true,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2611.14724"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2611.14724"
+        }
+      ]
+    },
+    {
+      "title": "Right Answers, Inconsistent Evidence: Source-Level Counterfactual Auditing of Large Audio-Language Models",
+      "url": "https://arxiv.org/abs/2611.15463",
+      "date": "2026-11-13",
+      "authors": "Yi Zhang, Yi Li, Hongwei Du",
+      "abstract": "大音频语言模型（LALM）能就一段混合音频正确回答「里面有没有猫？」，删除猫之后置信度也可能下降——但这并不能证明它真的能把「有声」和「无声」区分开。作者提出 TRACE：依次删除被查询声源与每一个干扰声源，检验「凡是仍包含该声音的视图，是否都高于删除它的视图」。在 8 个 LALM、3456 个受控混合样本上，6.3% 的正确答案不满足这一排序（目标缺失视图得分不低于甚至高于某个目标存在视图），且不存在能修复该矛盾的统一阈值；只检查「仅含目标」的得分会漏掉其中 42.5%。当目标 SNR 从 +5dB 降到 -5dB，该比例从 4.9% 升至 8.4%，即使对各个音量档都答对的样本依然存在，且通过响度与重配对控制检验。结论很直接：准确率只能证明「答对了」，TRACE 才能审计「它是否把存在性排在缺失性之上」。代码与数据已开源。",
+      "tags": [
+        "LALM",
+        "Evaluation",
+        "Counterfactual",
+        "Robustness",
+        "ICASSP 2027"
+      ],
+      "highlight": true,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2611.15463"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2611.15463"
+        }
+      ]
+    },
+    {
+      "title": "S3-S2ST: Semantically Supervised Streaming Speech-to-Speech Translation",
+      "url": "https://arxiv.org/abs/2610.36777",
+      "date": "2026-11-13",
+      "authors": "Yuxiang Zhao, Zhiyun Fan, Yu Pu, Yanjie An, Yushen Chen, Wenrui Liang, Baiji Liu, Yunchong Xiao, Zhaoci Liu, Keqi Deng, Kai Yu, Zhifu Gao, Xiangang Li, Xie Chen",
+      "abstract": "流式语音到语音翻译的核心是判断「部分输入何时已经够用」。S3-S2ST 把句级语音对转换成增量训练样本，用语义对齐的流式监督直接学习「何时提交翻译」的策略，并在固定 640ms 的输入网格上用可调阈值控制质量-延迟权衡。在 FLEURS 英中翻译上具备竞争力，在内部 9 语对测试集上翻译质量领先已评估的流式系统；在 RealSI 上把阈值自适应到带缓冲的语音后，质量相对低阈值固定策略进一步提升而首包音频延迟几乎不变。训练与推理代码、4B 模型权重均已开源。",
+      "tags": [
+        "S2ST",
+        "Streaming",
+        "Speech Translation",
+        "Open Source"
+      ],
+      "highlight": true,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2610.36777"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2610.36777"
+        }
+      ]
+    },
+    {
+      "title": "Can Music Generation Models Tap Along? Evaluating Generative Approaches to Beat Tracking",
+      "url": "https://arxiv.org/abs/2611.14971",
+      "date": "2026-11-13",
+      "authors": "Kun Fang, Ziyu Wang, Ichiro Fujinaga",
+      "abstract": "已有研究表明音乐生成模型能生成与输入歌曲同步的轨道。作者顺着这个思路把「生成」用到节拍跟踪上：给预训练 MusicGen 加一个音频条件适配器，让它生成与输入音乐同步的打击乐轨，再从生成的打击乐中提取节拍位置，并按不同节奏复杂度分别训练多个目标模型。在 GTZAN 上性能接近 SOTA 节拍跟踪器；鲁棒性更强——推理时移除输入中的鼓声后 F 值下降最小；在金属、迪斯科等流派也更不容易被强起音误导或漏掉弱起音。这说明「打击乐生成」可以成为节拍跟踪的一条可行路线，而且它的输出不只是一串节拍位置，而是一条可听的打击乐音轨。",
+      "tags": [
+        "Music Generation",
+        "Beat Tracking",
+        "MusicGen",
+        "MIR"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2611.14971"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2611.14971"
+        }
+      ]
+    },
+    {
+      "title": "CFGComposer: Compositional Audio-Text-to-Motion Generation via Copula Score Correction",
+      "url": "https://arxiv.org/abs/2611.15101",
+      "date": "2026-11-13",
+      "authors": "Pengyang Shi, Jinlu Zhang, Chunze Lin, Yizhou Wang, Li Yi",
+      "abstract": "生成既与语音节奏同步、又与文本语义对齐的全身手势（Audio-Text-to-Motion, AT2M）是具身智能与社交机器人的基础难题。作者在推理时组合两个独立训练的扩散模型，并用 copula 分数 s_I 修正联合推断的偏差：理论分析表明朴素的 ε 混合等价于忽略 copula 分数的 Product-of-Experts，而被忽略的恰恰是两个边缘模型都无法刻画的音-文跨模态交互。CFGComposer 通过 CFG 类比估计 s_I 并以 ε 空间校正的形式注入。在 BEAT 上取得最佳语义保真（SRGR 0.9916、FID 27.18）与 GT 级节拍对齐（BA 0.1826 vs GT 0.1743），盲测成对人类评估对既有方法胜率 76%–83%，并在 Unitree G1 人形机器人上完成 sim-to-real 部署。",
+      "tags": [
+        "Audio-Text-to-Motion",
+        "Diffusion",
+        "Copula",
+        "Embodied AI"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2611.15101"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2611.15101"
+        }
+      ]
+    },
+    {
+      "title": "Evaluating AI Musical Creativity: Towards a Quantitative Multi-Dimensional Framework Based on Value, Novelty, and Surprise",
+      "url": "https://arxiv.org/abs/2611.14634",
+      "date": "2026-11-13",
+      "authors": "Hindy Rossignol, Giorgio Franceschelli, Mirco Musolesi",
+      "abstract": "生成式 AI 越来越成熟，但「AI 生成音乐的创造性」如何评估仍研究不足。本文基于 Margaret Boden 的创造性理论（价值、新颖性、惊喜三个维度），把这三维度在音乐域上操作化，提出一套领域特定的量化指标体系。作者不强求把音乐创造性压缩成单一总分，而是给出互补的指标集合，以尊重音乐作品的多目标复杂性与定义「有意义的作曲标准」的难度。该框架有两层意义：为研究者与开发者提供有原则的方法论与量化工具，让模型迭代更有依据、减少无效算力消耗；也为后续生成模型直接把「创造性」当作学习目标铺路。",
+      "tags": [
+        "Music Generation",
+        "Evaluation",
+        "Creativity"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2611.14634"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2611.14634"
+        }
+      ]
+    },
+    {
+      "title": "Computational Raga Recognition: A Theory-Driven Approach",
+      "url": "https://arxiv.org/abs/2611.15242",
+      "date": "2026-11-13",
+      "authors": "Janay Sukheja, Shailaja D. Sharma",
+      "abstract": "印度斯坦古典音乐的拉格（Raga）识别困难，因为拉格并不只由所用音高决定，还取决于音的强调方式、音与音之间的运动以及特征乐句。本文直接从录音中提取音高，用基于 22 shruti 体系的 44 位置音名框架表示，再据此构造符合印度音乐学理论的拉格特征，与拉格的参考表示比对，并融合多路得分得到整体相似度。方法先在 Raga Yaman 上研究，再推广到其他拉格的录音测试，并与 Yaman 的理论描述对照，明确指出哪些特征被较好捕捉、哪些方面仍有局限。",
+      "tags": [
+        "Music Information Retrieval",
+        "Raga",
+        "Pitch Analysis"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2611.15242"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2611.15242"
+        }
+      ]
+    },
+    {
+      "title": "On-Edge Acoustic Continual Anomaly Detection: A Cross-Platform Comparative Study",
+      "url": "https://arxiv.org/abs/2611.15465",
+      "date": "2026-11-13",
+      "authors": "Rami Zewail, Yehia Ehab, Karim Ali, Ahmed Mahrous, Mohamed Awad, Bassem Mokhtar",
+      "abstract": "声学异常检测（AAD）是设备状态的非接触监测手段，但现有研究多在离线环境评估，很少考虑嵌入式硬件约束与麦克风差异带来的漂移。本文在 ESP32-S3（外接 I2S 数字麦克风）与 Arduino Nicla Vision（板载 PDM 麦克风）两个平台上，用同一检测模型做端侧持续学习 AAD 的跨平台对比：轻量 ShallowNet 编码器 + 对比原型学习把频谱图映射到 32 维嵌入空间，两块板运行相同的 TFLite Micro 编码器，并通过指数滑动平均在设备上更新原型；云端用 Firebase + MQTT 编排远程采集与重训。基于 DCASE Challenge Task 2 机器声的受控回放协议，ESP32-S3 在五类机器上达到 82.35%–95.00% 准确率，Nicla Vision 为 79.41%–95.00%，说明轻量原型架构可以跨不同硬件与传感器层级可靠迁移。",
+      "tags": [
+        "Acoustic Anomaly Detection",
+        "Edge AI",
+        "Continual Learning",
+        "DCASE"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2611.15465"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2611.15465"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "Bland 发布全双工语音到语音模型 Tofu-1：边听边说、边想边说，开放企业研究预览",
+      "url": "https://www.bland.ai/speech-to-speech",
+      "summary": "旧金山语音 AI 公司 Bland 于 11-13 在 X 公布 Tofu-1，11-15 经 MarkTechPost 等媒体扩散报道。官方把它定位为面向「高风险通话」（医疗、保险、金融、政务）的全双工 speech-to-speech 模型：说话的同时持续聆听，用户可在句中打断或纠正；能区分说话人与噪声，电视音量盖过人声仍能听清；并在对话进行中并行推理——任务没真正完成前不会宣称完成，完成后主动回报结果。目前以 research preview 形式开放企业申请，与自研 TTS「Bland Speech v3」（10 秒音频即时克隆音色）一起，强调「通话全链路跑在自有模型与自有基础设施上、可私有化部署」，并把 99.999% 可用性写进合同。"
+    },
+    {
+      "title": "KAIST 用扩散语言模型改造唇语识别：静音语音词错误率降至 19.4%，获 EMNLP 2026 杰出论文",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE8yUHlPM2J4YW9IOEJIM0tjVnV4dXBfdlA5ZG1oX2lMZjBhYTc5akV5NzF0ZnQ3UnlROVNNR1E2UWlab0ZvdjdoNG00OVUydWgxLVNrQzhnazRfT2dzYk9NOGxhX1Vab3g3eUJfRkdB0gFyQVVfeXFMTnZMYVY2a0tBcDZ6TGZRRDlZS2o0MW84elJ3ZWF0NnJ6blNMTzZhLVM3S19xZEFrbkdVU0FQNjA1OF9MMEtVWGhUWU5xZk5RSDU3VDhyam16Q2dTWTBMWHhCcEVsMG5CSEpGcVdvWnhUWnJB?oc=5",
+      "summary": "韩国多家媒体 11-15 集中报道 KAIST 团队的静音语音识别（唇语）进展：用扩散语言模型先锁定清晰唇形、再迭代补全语音，在无声/强噪声环境下把词错误率压到 19.4%，为听障辅助与嘈杂场景下的无声交互提供新路径。该工作获 EMNLP 2026 杰出论文奖（Outstanding Paper）。与主流 ASR「先对齐音素再解码」不同，扩散式「先易后难」的生成式解码思路，暗示唇语/静音语音这条 modality 正在从实验室演示走向可用精度。"
+    },
+    {
+      "title": "Google AI Edge Gallery 加入端侧语音：手机本地跑 ASR + TTS，不上云（11-10 官方博客，11-15 被广泛二次报道）",
+      "url": "https://developers.googleblog.com/en/on-device-speech-recognition-and-text-to-speech-in-google-ai-edge-gallery/",
+      "summary": "Google for Developers 博客介绍 AI Edge Gallery 新增端侧语音能力：在手机上本地完成语音识别与语音合成，音频不出设备，也不依赖订阅或网络。对端侧语音产品而言，这是「离线、隐私、零单次成本」路线的又一次官方背书；11-15 前后被多家媒体以「Google AI Edge Gallery adds offline speech」为题二次报道，成为本周末端侧语音方向的主要讨论点。"
+    }
+  ]
+}
