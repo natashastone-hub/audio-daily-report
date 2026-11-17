@@ -1,0 +1,236 @@
+{
+  "windowNote": "统计窗口 2026-11-16 09:34 → 2026-11-17 09:34（北京时间）。截至抓取时（11-17 09:35），arXiv 的 new/recent 列表仍停留在「Mon, 16 Nov 2026」批次（eess.AS 9 条、cs.SD 9 条），今日（周二）公告尚未发布；窗口内确实没有新的 arXiv 公告。昨日 11-16 早报把最近一次公告误判为 11-13 周五，漏掉了周一 11-16 批次，因此本期按补录规则完整收录该批次中音频方向的 8 篇论文（eess.AS 正刊 3 篇 + 交叉 3 篇 + cs.SD 正刊 3 篇，去重后取 8 篇）。",
+  "note": "诚实标注：① 24 小时内 arXiv 无新公告、HuggingFace Daily Papers 的 audio 标签页面无窗口内新条目，本期论文全部为 11-16 周一公告批次的补录（提交时间 11-13 UTC，公告 11-16），不是当日新提交；② 必搜重磅词（OpenAI GPT-Live full-duplex voice model / OpenAI voice model release / Google Gemini voice / full-duplex speech model / 语音模型发布 / real-time voice AI）逐条执行后，24 小时内均无新发布——GPT-Live 仍是 2026-07 的发布、Gemini 3.8 Live/TTS 是 9 月产品、Bland Tofu-1 已在 11-16 期收录；③ 窗口外追踪（不收录）：Google Gemini 4 Hydrogen（11-12）、Gemini 4 Carbon（11-10）为当前最新音频能力模型；Zyphra ZONOS3-Mini（11-12 开源，Apache 2.0，100M 激活参数）与 OpenMOSS MOSS-Live（11-14 开源实时全双工）均落在窗口外。",
+  "papers": [
+    {
+      "title": "eDIAR: Training-Free Open-Speaker Streaming Diarization for Long Meetings and Large Archives via e-means",
+      "url": "https://arxiv.org/abs/2611.18529",
+      "date": "2026-11-16",
+      "authors": "Kyudan Jung, Jihwan Kim, Minwoo Lee, Eunji Shin, Jaegul Choo",
+      "abstract": "会议动辄一小时，而且事先没人知道会有几个人说话。Streaming Sortformer、Nemotron-3 这类固定输出槽位的神经说话人日志模型准确且能在线跑，但槽位用完就无法再命名新的说话人。eDIAR 在不重训的前提下拆掉这个上限：槽位头继续负责「谁在说、何时重叠」，只有在所有槽位都被占满之后，才用官方 e-means 算法在单个槽位内部对说话人嵌入做聚类；流式场景下重聚类被限制在有界窗口内，标签只回溯修正几秒，身份锚定在槽位头上。系统对说话人数不设上限，在说话人数超过槽位数（固定槽位模型会崩掉）时依然准确；在长达一小时的会议里明显优于会累积误差的 Streaming Sortformer，且每次更新的开销不随会议时长增长。同一套配方能把四槽位的 Streaming Sortformer 直接改造成开放说话人系统。在大规模档案上，e-means 让「逐帧串联整库说话人」这件事变得可负担——这是构建对话语料时的常见需求——聚类质量达到 Lloyd k-means 的水平而速度快数倍，默认配方即可从几百个跑到上百万个嵌入。",
+      "tags": [
+        "Speaker Diarization",
+        "Streaming",
+        "Open-Speaker",
+        "e-means",
+        "Training-Free"
+      ],
+      "highlight": true,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2611.18529"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2611.18529"
+        },
+        {
+          "label": "Project Page",
+          "url": "https://kyudan1.github.io/eDIAR/"
+        }
+      ]
+    },
+    {
+      "title": "Marimba: A System One Model for Speech",
+      "url": "https://arxiv.org/abs/2611.18330",
+      "date": "2026-11-16",
+      "authors": "Solano Amadori",
+      "abstract": "语音应用真正要做的判断往往不是「说了什么」，而是「某个词出现了没有、这句话说完了没有、说的是哪种语言」。Marimba 在冻结的 Qwen3-ASR 0.6B 特征之上搭了一个类型化语音决策接口：词汇类问题用 ASR 转写做零样本打分，非词汇类问题用一个以问题为条件的头，另外单拉一层 layer-18 读出做话轮结束判断，语种识别直接复用 ASR 模型自带的语言分数。私有对话测试集上解码器 AUROC 0.80–0.92，公开朗读语音上 0.92–0.97；Speech Commands 四分类准确率 0.93，二分类词汇 ECE 不超过 0.08。个人信息检测（把贪心转写送进私有 PII 流水线）在合成巴西葡萄牙语语音上 item 级 F1 0.904（参考转写上 1.000）。layer-12 说话人读出在 AMI 与 VoxConverse 上检测说话人切换 AUROC 0.966–0.980，超过 ECAPA 基线，说话人数（0/1/2/3+）估计比 pyannote 3.1 更准。话轮结束读出在 Smart Turn 自家测试集上 AUROC 0.930，对比 Smart Turn v3.2 的 0.982；在 ICSI 会议按「下一个说话人」标注的子集上 0.716 对 0.712，配对置信区间跨零。代码与权重均已开源。",
+      "tags": [
+        "Speech Understanding",
+        "Qwen3-ASR",
+        "Turn-Taking",
+        "Speaker Change",
+        "Open Source"
+      ],
+      "highlight": true,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2611.18330"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2611.18330"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/Charcot-AI/marimba-api"
+        },
+        {
+          "label": "Weights",
+          "url": "https://huggingface.co/charcot-ai/marimba"
+        }
+      ]
+    },
+    {
+      "title": "Any Channel Count, One Token Stream: Incorporating Spatial Audio Understanding and Reasoning into Large Audio-Language Models",
+      "url": "https://arxiv.org/abs/2611.18112",
+      "date": "2026-11-16",
+      "authors": "Yuhuan You, Wenxiang Guo, Zhifang Guo, Yuxuan Wang, Jin Xu",
+      "abstract": "音频的相位关系里编码着声源方位，但现有大音频语言模型（LALM）为了稳定通用音频理解，普遍把音频降成单声道，于是「方向、距离、声源关系」这类空间信息被整块浪费。SpheraAudio 接受任意通道数的录音——单声道、立体声、一阶 Ambisonics（FOA）乃至更高阶——并统一映射成单一 token 流：空间编码器把复数多通道频谱转成空间 token，与音频 token 按同一时间位置交错排列；Spatial Multimodal RoPE（SMRoPE）把每个 token 的模态身份与时间槽暴露给旋转注意力，同时不改动语言模型原有 RoPE。训练分三段——空间编码器预训练、投影对齐、监督与强化联合训练——从几何监督逐步过渡到基于语言的空间决策，答案被训练成显式的空间思维链（对听到的场景做逐步几何推理）。现有基准把问题绑死在固定通道格式上，且只判答案对错、不看推理证据；作者因此提出 SpheraQA，覆盖单声道/立体声/FOA，问题按「单属性感知 → 跨声源关系 → 多步推理」分层，用仿真场景几何与真实录音标注做程序化评分并提供逐步解法参考。在 SpheraQA 与公开空间音频基准上，SpheraAudio 刷新了空间音频理解的表现上限，能对静态与移动声源做高精度定位、跟踪与推理，同时保住通用音频能力。",
+      "tags": [
+        "Spatial Audio",
+        "LALM",
+        "Spatial Reasoning",
+        "Benchmark",
+        "Chain-of-Thought"
+      ],
+      "highlight": true,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2611.18112"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2611.18112"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/Konoyo-014/SpheraQA"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://modelscope.cn/datasets/Konoyo/SpheraQA"
+        }
+      ]
+    },
+    {
+      "title": "FEND: Far-End Detection in Outbound Voice AI Calls",
+      "url": "https://arxiv.org/abs/2611.18050",
+      "date": "2026-11-16",
+      "authors": "Abhishek Kumar, Suraj Agrawal, Aashraya Sachdeva",
+      "abstract": "语音 AI 外呼时，对面可能是真人、语音信箱、IVR，以及越来越多地由「另一个 AI」代接。传统应答机检测（AMD）只回答「人还是机器」，这个二值标签对人呼中心够用，对 AI 智能体却完全无法指导动作——留言、走 IVR 按键、还是和同行 AI 做一轮短交互，是三件完全不同的事。作者从自家外呼业务随机抽取 1000 通电话统计：真人接听 48.1%、语音信箱 44.6%、AI 代接 6.9%、IVR 0.4%。FEND 同时读取对端音频与流式转写，为每一类自动应答（语音信箱、IVR、AI 代接）各跑一个检测器，全不触发则默认为真人，20 秒内给出单一标签。公开基准上语音信箱分支准确率 100% 且从未把真人误判为机器，而 Asterisk 的 AMD 会误判 30%–66% 的真人。对「AI 代接」，声学特征跨录音条件不迁移，但语音时序可以：合成语音词间停顿明显更短，据此区分 AI 与真人达到 0.952 ROC-AUC。生产流量上「真人 vs 任意自动应答」F1 0.979，只有 2.9% 的真人被误标为自动——这正是智能体据此行动时最要命的错误类型。",
+      "tags": [
+        "Voice AI Agent",
+        "Outbound Calls",
+        "Answering Machine Detection",
+        "AI Callee",
+        "EACL 2027"
+      ],
+      "highlight": true,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2611.18050"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2611.18050"
+        }
+      ]
+    },
+    {
+      "title": "CoTTAGE: An Explainable Judge for Text-to-Audio Generation",
+      "url": "https://arxiv.org/abs/2611.17644",
+      "date": "2026-11-16",
+      "authors": "Yu-Xiang Lin, Yun-Man Hsu, Bo-Ru Lu, Kuan-Po Huang, Wenze Ren, Ming-To Chuang, Chun-Yi Kuan, Jiawei Du, Byeonggeun Kim, Qingming Tang, Chieh-Chi Kao, Ankur Gandhe, Chao Wang, Hung-yi Lee",
+      "abstract": "文生音频（TTA）进展很快，但「可靠的自动评测」跟不上：现有指标要么与人类判断相关性不足，要么给不出有意义的、真正落在音频上的解释，结果模型迭代只能靠昂贵的人工评测做瓶颈。CoTTAGE 是一个面向文本相关性（REL）与音频质量（OVL）的推理式评测器，走「先解释再打分」范式：先产出一段基于音频的理由来诊断错误，再预测分数。作者新采了超过 1 万条人工 OVL 标注，先做监督微调，再用基于 Thurstone 模型的偏好目标做强化学习——把采样得到的分数分布转成成对偏好概率，奖励与人类判断导出的排序一致。在覆盖 REL 与 OVL 的六个基准上，CoTTAGE 与人类判断的相关性达到 SOTA，同时给出的解释也被人更偏好，能实际加速 TTA 的研发迭代。",
+      "tags": [
+        "Text-to-Audio",
+        "Evaluation",
+        "Reward Model",
+        "Reinforcement Learning",
+        "Explainability"
+      ],
+      "highlight": true,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2611.17644"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2611.17644"
+        }
+      ]
+    },
+    {
+      "title": "Cross-Linguistic Acoustic Biomarkers of Cognitive Impairment Across Interactive and Single-Speaker Speech Tasks",
+      "url": "https://arxiv.org/abs/2611.17710",
+      "date": "2026-11-16",
+      "authors": "Kenyu Ikeuchi, Tomoaki Ohtsuki, Michelle Cohn, Alyssa Weakley, Yui Ishihara, Joseph Hoang, Taishiro Kishimoto, Sarah Tomaszewski Farias, Jet M. J. Vonk, Chen-Nee Chuah",
+      "abstract": "多语言痴呆筛查要可扩展、可公平，自动化语音分析是现实路径。但既有研究大多只用单一任务（如看图说话）、且用黑箱模型，忽略了「任务类型」和「语言」本身的作用。本文把对话数据集与结构化语音任务结合起来，跨四种语言（西班牙语、普通话、英语、日语）做跨语言、跨任务的声学分析，并用统计、语言学/临床专家引导、以及基于机器学习模型的特征选择三种方式，在保持分类性能的前提下抽出紧凑的声学特征集，从而系统比较不同数据集与任务间与认知障碍相关的特征。结论相当直白：声学特征并不在任务与语言间均匀泛化。时间类特征最稳，在所有数据集上都捕捉到「时间组织被打断」这一现象，与语言和任务无关；语速则强依赖任务——只有在内容与节奏被外部锚定的单人任务里才有信息量，内容高度个性化时就不可靠。音高类特征还呈现语言特异性：声调语言（如普通话）偏好 chroma 类特征，非声调语言偏好 F0 类特征。作者据此提醒：不要把异构语音数据不加区分地混在一起训练，多语言痴呆检测需要用可解释、context-aware 的做法。",
+      "tags": [
+        "Dementia Detection",
+        "Acoustic Biomarkers",
+        "Cross-Lingual",
+        "Clinical Speech",
+        "EMBC 2026"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2611.17710"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2611.17710"
+        }
+      ]
+    },
+    {
+      "title": "Reproduction of Simulated Acoustics Scenes Using Acoustics Room Transformer for speech intelligibility tests in Clinics",
+      "url": "https://arxiv.org/abs/2611.18103",
+      "date": "2026-11-16",
+      "authors": "Ali Fallah, Kirsten C Wagener, Pascal Pflueger, Steven van de Par",
+      "abstract": "临床听力测试的房间往往没做声学处理、扬声器数量也有限，导致不同医院测出来的言语识别结果不可比。作者提出 Acoustic Room Transformation（ART）：用六只扬声器在混响房间里渲染仿真声学环境，把「回放房间的混响」变成可控量，让言语识别测试能在真实且经过感知补偿的条件下进行。方法聚焦两种最常见的 SRT 配置（S0N0 与 S0N90）：一只前置加一只侧置扬声器还原直达声，其余四只（前二后二）生成混响声场；直达声按能量优化，混响声场同时按能量与双耳相干性调整，并额外加一路直达声增益，把回放信号的清晰度指数 C50 对齐到参考目标。言语识别实验显示，经 ART 处理后，复现场景在 S0N0 与 S0N90 下的 SRT 都逼近参考信号，因此测试结果不再依赖具体测试房间的声学条件。",
+      "tags": [
+        "Room Acoustics",
+        "Speech Intelligibility",
+        "Binaural",
+        "Clinical Audiology"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2611.18103"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2611.18103"
+        }
+      ]
+    },
+    {
+      "title": "Anomalous Sound Detection Using Separation Features and Paired-Mixture Representation Learning",
+      "url": "https://arxiv.org/abs/2611.17895",
+      "date": "2026-11-16",
+      "authors": "Seunghyeon Shin, Seokjin Lee",
+      "abstract": "声学状态监测通常只有正常录音，且工况标注很少。本文提出一套不依赖外部预训练的异常声音检测系统，并用机器类型信息来组织训练与正常参考。先用分离器从「目标正常录音 + 非目标录音」的混合中学习目标成分估计；冻结分离器后，在共享同一目标的成对混合上训练区域注意力与多阶段融合，目标函数包含对比损失与目标-参考一致性。成对混合的嵌入差异进一步给出协方差统计，用于配合正常参考中心化做校正，最后用余弦最近邻打分。在 DCASE 2022 Task 2 开发测试集上，两段式 64 通道系统三次独立训练与评测的平均调和均值 64.56%（样本标准差 0.33 个百分点），比直接成对混合学习高 2.23 个百分点，比使用外部预训练教师模型的蒸馏系统低 0.31 个百分点。对学到的嵌入，余弦最近邻优于基于全局正态统计的 Mahalanobis 打分器。结论是：分离式表示学习 + 干扰校正 + 局部正常参考打分，在缺少详细工况元数据时依然有效。",
+      "tags": [
+        "Anomalous Sound Detection",
+        "DCASE",
+        "Representation Learning",
+        "Machine Condition Monitoring"
+      ],
+      "highlight": false,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2611.17895"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2611.17895"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "本期说明：24 小时窗口内无新论文公告、无重大音频产品发布，论文为 11-16 周一公告批次补录",
+      "url": "",
+      "summary": "统计窗口 2026-11-16 09:34 → 2026-11-17 09:34。抓取时（11-17 09:35）arXiv 的 eess.AS / cs.SD new 页面仍停在「Mon, 16 Nov 2026」批次，周二公告尚未发布，因此窗口内确实没有新的 arXiv 条目，HuggingFace Daily Papers 的 audio 标签也没有窗口内新收录。昨日 11-16 早报把最近一次公告误判为 11-13 周五，漏掉周一批次，本期按补录规则完整收录该批次音频方向的 8 篇（去重后）。必搜重磅词（OpenAI GPT-Live / OpenAI voice model release / Google Gemini voice / full-duplex speech model / 语音模型发布 / real-time voice AI）逐条检索，24 小时内均无新发布：GPT-Live 仍是 7 月产品，Gemini 3.8 Live 与 Gemini 3.8 Flash-Lite TTS 分别为 9 月 16 日与 9 月 23 日发布，Bland Tofu-1 已在昨日报告收录。窗口外追踪（不收录）：Google Gemini 4 Hydrogen（11-12）、Gemini 4 Carbon（11-10）、Zyphra ZONOS3-Mini（11-12 开源）、OpenMOSS MOSS-Live（11-14 开源）。"
+    },
+    {
+      "title": "IEGG 开源多语言端到端语音同传大模型 iegg-streaming-si-0.6B：首播延迟低至 1.28 秒，翻译质量接近闭源系统",
+      "url": "https://km.woa.com/articles/show/670419",
+      "summary": "多人在线游戏与多语言会议对跨语言实时语音翻译要求极高：不只要准、要快，还要维持自然交流节奏。传统 ASR→MT→TTS 级联方案虽能实现基本语音翻译，但延迟累积、错误逐级传递、说话人音色丢失、译音积压，难以支撑长时间实时互动。iegg-streaming-si-0.6B 作为司内首个开源多语言端到端语音同传大模型，采用「边听、边译、边说」的流式 S2ST 架构，首播延迟低至 1.28 秒，翻译质量接近闭源系统。该工作与本期 arXiv 收录的 S3-S2ST（语义监督流式 S2ST，640ms 输入网格、开源 4B 权重）方向一致，说明「流式同传」正在成为 2026 年语音翻译的主战场。注：本条为本周内检索命中的司内动态，发布日期未在页面中精确核实，故不做时效性断言，仅作为方向追踪。"
+    }
+  ]
+}
