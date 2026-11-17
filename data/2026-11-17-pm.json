@@ -1,0 +1,6 @@
+{
+  "windowNote": "本期为 2026-11-17 午间版，时间窗口 09:30–14:00（CST，对应 UTC 01:30–06:00）。核查结论：窗口内 arXiv 无新公告、无新提交入库，HuggingFace Daily Papers 的 audio 标签页无窗口内新条目，6 个必搜重磅关键词逐条执行后也无 6 小时内发布的语音产品新闻。本期 0 篇论文 + 0 条新闻，如实标注空窗。",
+  "papers": [],
+  "news": [],
+  "note": "2026-11-17 午间版（窗口 09:30–14:00 CST）无新增内容。\n\n论文侧：① 第一级 export.arxiv.org API（max_results=50）返回 HTTP 429 限流，换 https、降级 max_results=25 仍 429；② 改以 arXiv 官方 list 页交叉核验：eess.AS/new 与 cs.SD/new 均显示「Showing new listings for Monday, 16 November 2026」，即当前可见批次仍是今早 09:30 早间版已收录的 11-16 周一公告批次（提交时间 11-13 UTC），今日（周二）公告要到 11-18 09:00 CST 才放出；③ eess.AS/recent 亦无更新条目。因此 6 小时窗口内新增 0 篇。\n\n新闻侧：6 个必搜关键词（OpenAI GPT-Live full-duplex voice model、OpenAI voice model release、Google Gemini voice、full-duplex speech model、语音模型发布、real-time voice AI）全部逐条执行，命中最新内容仍为窗口外旧闻——GPT-Live 首发 2026-07-08、GPT-Live-1 API 2026-09-11、OpenAI 宣布 12-11 停用 Advanced/Standard Voice（11-10 宣布，11-11 前后报道）、Bland Tofu-1（11-13 发布）、Soul App 全双工（2025-07）、StepAudio 3 系列（2026-09-15）、Qwen-Audio-3.0-TTS（2026-07-20），均超 6 小时窗口，故新闻 0 条。\n\n补充：今日早间版已收录 11-16 批次音频方向 8 篇论文，详见早间版 2026-11-17.html。下一批次预期 11-18 09:00 CST 放出。"
+}
