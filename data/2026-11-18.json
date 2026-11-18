@@ -1,0 +1,748 @@
+{
+ "date": "2026-11-18",
+ "papers": [
+  {
+   "title": "Towards Microphone-Invariant Speech Representations for Transformer-Based Voice Disorder Detection",
+   "url": "https://arxiv.org/abs/2611.21140",
+   "date": "2026-11-16",
+   "authors": "Iva Ewert, Felix Putze, Marvin Borsdorf, Tanja Schultz",
+   "abstract": "针对消费级设备麦克风差异导致的语音病理检测性能下降问题，作者首次系统研究了 20 款手机麦克风下的失配影响：多数条件下性能仅温和下降，但最差条件下非加权平均召回率（UAR）下降达 12.53 个百分点。为此提出受 Barlow Twins 启发的模块学习麦克风不变表征，将匹配与失配条件之间的性能差距最多缩小 62%，同时保持匹配条件下的性能。",
+   "tags": [
+    "Voice Disorder Detection",
+    "Microphone Robustness",
+    "Self-Supervised Learning"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.21140"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.21140"
+    }
+   ]
+  },
+  {
+   "title": "AudioTrace: File-Level Membership Detection for Audio Large Language Models",
+   "url": "https://arxiv.org/abs/2611.21088",
+   "date": "2026-11-16",
+   "authors": "Guangzhi Sun, Xiao Zhan, Shuai Wang, Jose Such, Phil Woodland",
+   "abstract": "现有成员推断攻击通常假设已知完整训练样本及其文本监督，但实际音频常配有私有的转写、描述或问答标注。本文提出音频文件级成员推断（audio-file-level MIA），即在不掌握训练任务与标注的情况下判断某段录音是否被用于训练，并构建 AudioTraceBench（1285 条带明确微调成员标签的受控基准），首次系统研究了这一隐私审计问题。",
+   "tags": [
+    "Membership Inference",
+    "Audio LLM",
+    "Privacy Audit"
+   ],
+   "highlight": true,
+   "highlight_note": "首个音频文件级成员推断基准，为音频大模型训练数据审计提供可操作工具",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.21088"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.21088"
+    }
+   ]
+  },
+  {
+   "title": "Think2Listen: Evidence-Centric Learning For Agentic Audio Understanding With LALMS",
+   "url": "https://arxiv.org/abs/2611.21083",
+   "date": "2026-11-16",
+   "authors": "Jin Wang, Liang Lin, Kaiwen Luo, Weiliu Wang, Yuxuan Li, Zengxin Han, Gan Zhang, Jingtong Wu, Yufei Guo, Kun Wang",
+   "abstract": "大型音频语言模型（LALM）能\"听到\"声音，却未必能把声学线索当作推理证据。作者提出 Think2Listen 证据中心学习框架，将迭代推理与有针对性的 LALM 工具交互耦合：模型主动寻求能区分竞争假设的声学线索，并依据观测结果修正判断，从而学会\"问什么、怎么用证据、何时停止\"。",
+   "tags": [
+    "Agentic Audio Understanding",
+    "LALM",
+    "Evidence-Centric Reasoning"
+   ],
+   "highlight": true,
+   "highlight_note": "把\"听见\"升级为\"取证\"，让音频 Agent 学会主动取证与停止",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.21083"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.21083"
+    }
+   ]
+  },
+  {
+   "title": "Layer-wise Linear Probing of an Encoder-free Audio-capable Language Model",
+   "url": "https://arxiv.org/abs/2611.20954",
+   "date": "2026-11-16",
+   "authors": "Laishram Rahul, Shruthi B. S., Parismita Gogoi, Sishir Kalita, Deepak KT, S R Mahadeva Prasanna",
+   "abstract": "以无编码器的音频多模态模型 Gemma-4-12B 为对象，作者提取冻结模型的全部 49 层表征（嵌入层 + 48 个解码层），在 TIMIT 上训练线性探针预测 log-F0、能量、清浊音、音素身份、词起始结构、说话人身份、性别与方言区域。结果显示声学属性最早线性可分，音素与说话人信息在更深层才逐步显现，刻画了语音信息在解码器深度上的演化路径。",
+   "tags": [
+    "Representation Analysis",
+    "Encoder-free",
+    "Linear Probing"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.20954"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.20954"
+    }
+   ]
+  },
+  {
+   "title": "No-Shot Text-to-Speech: Limitations of Zero-Shot TTS and its Evaluation Methods in Representing Queer and Transgender Voices",
+   "url": "https://arxiv.org/abs/2611.20822",
+   "date": "2026-11-16",
+   "authors": "Juliana Francis, Robin Netzorg, Joakim Gustafson, Éva Székely",
+   "abstract": "性别多元（gender expansive）声音在语音数据集中长期欠缺，可能导致零样本 TTS 泛化不足。作者用两个数据集（非性别多元 N-GE 与自我认同的性别多元 GE）评测 6 个零样本 TTS 模型：人工评分显示 2 个模型对 GE 声音的相似度更差、3 个反而更好；而自动评测（说话人相似度、MOS 预测器）与人工判断相互矛盾，暴露出评测流程的系统性盲区。",
+   "tags": [
+    "Zero-Shot TTS",
+    "Fairness",
+    "TTS Evaluation"
+   ],
+   "highlight": true,
+   "highlight_note": "指出零样本 TTS 评测对性别多元声音的系统性盲区",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.20822"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.20822"
+    }
+   ]
+  },
+  {
+   "title": "Surprise-Gated Memory for Live Speaker Diarization",
+   "url": "https://arxiv.org/abs/2611.20819",
+   "date": "2026-11-16",
+   "authors": "Louis Mouchon, Alexis Lainault",
+   "abstract": "把\"惊奇门控记忆\"（冻结编码器 + 校准新颖度信号门控的一次性情景存储，配合周期回放巩固）从持续视觉学习迁移到在线说话人日志。在冻结微调的 DiariZen 骨干上构建 SGM-Diar：AMI-SDM 上弥补了在线基线到离线 oracle 之间 9.2 个 DER 点中的 4.8 个，VoxConverse 上弥补 2.3 点中的 1.9 点，且校准在开发集冻结后跨域直接迁移无需调整。",
+   "tags": [
+    "Speaker Diarization",
+    "Streaming",
+    "Continual Learning"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.20819"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.20819"
+    }
+   ]
+  },
+  {
+   "title": "Post-fusion Event-aware Time-Frequency Refinement for Audio Moment Retrieval",
+   "url": "https://arxiv.org/abs/2611.20725",
+   "date": "2026-11-16",
+   "authors": "Feiyang Xiao, Li'ang Luo, Kejia Zhang, Qiaoxi Zhu, Guangjun He, Pengming Feng, Jian Guan",
+   "abstract": "音频片段检索（AMR）需要在长音频中定位与自然语言查询语义对应的片段，而目标事件往往稀疏且被背景声、相似事件掩盖。作者提出 ETR-AMR，在音文融合之后引入事件感知的时频精化策略，先强化查询相关信息再对音频表征做时频域净化，从而在时间定位前更好地区分目标事件与干扰。",
+   "tags": [
+    "Audio Moment Retrieval",
+    "Audio-Text Retrieval",
+    "Time-Frequency Refinement"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.20725"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.20725"
+    }
+   ]
+  },
+  {
+   "title": "Progressive Layer-wise Supervision: Deep-to-Shallow Supervision Annealing for Efficient and Robust Speech Deepfake Detection",
+   "url": "https://arxiv.org/abs/2611.20630",
+   "date": "2026-11-16",
+   "authors": "Hoan My Tran, Xin Wang, Xuechen Liu",
+   "abstract": "作者发现语音深伪检测在标准微调后只用到 Transformer 最深几层——XLS-R-128 的逐层探针显示上部三分之二几乎不贡献反欺骗性能，称之为\"浅层休眠\"，根源是预训练层间表征高度冗余、无中间监督的微调反而强化冗余。据此提出渐进式逐层监督（PLS）：为每层挂接共享线性分类器并由深到浅退火监督，在提升效率的同时增强鲁棒性。",
+   "tags": [
+    "Speech Deepfake Detection",
+    "Layer-wise Supervision",
+    "Self-Supervised Model"
+   ],
+   "highlight": true,
+   "highlight_note": "揭示\"浅层休眠\"现象并提出逐层监督退火方案",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.20630"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.20630"
+    }
+   ]
+  },
+  {
+   "title": "Learning from Distribution: Rethinking One-Hot Supervision for ASR and QA in Speech Language Models",
+   "url": "https://arxiv.org/abs/2611.20436",
+   "date": "2026-11-16",
+   "authors": "Yujie Guo, Hongjie Chen, Jiaming Zhou, Jian Kang, Jie Li, Yongxiang Li, Yong Qin",
+   "abstract": "语音语言模型（SLM）在 ASR 与语音问答上存在任务冲突：仅做 ASR 训练会严重削弱 QA 能力，而仅做 QA 训练仍能保留合理的 ASR 水平。作者将其归因于 ASR 映射的相对确定性与单参考监督导致模型偏向转写行为，提出 Learning from Distribution（LFD），让语音条件预测对齐条件输出分布而非单一 one-hot 标签，在保持识别精度的同时拓宽学习目标。",
+   "tags": [
+    "Speech Language Model",
+    "ASR",
+    "One-Hot Supervision"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.20436"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.20436"
+    }
+   ]
+  },
+  {
+   "title": "Validating Acoustic-to-Articulatory Inversion with Real-Time MRI: From Vocal-Tract Fidelity to Phonetic Consequences",
+   "url": "https://arxiv.org/abs/2611.20432",
+   "date": "2026-11-16",
+   "authors": "Tharinda Piyadasa, Michael Proctor, Amelia Gully, Tuende Szalay, Emily Kiff, Kirrie Ballard, Craig Jin",
+   "abstract": "声学到发音器官反演能从语音直接估计声道行为，但推断出的发音变量必须与独立物理测量对照才可信。作者用配对实时 MRI（rtMRI）与语音训练基于 WavLM 的反演模型预测 8 个声道变量，留出说话人上平均相关 0.643；收缩程度预测显著优于收缩位置，且推断轨迹系统性低估真实动态范围，并用发音→声学合成作为误差的功能探针加以验证。",
+   "tags": [
+    "Acoustic-to-Articulatory Inversion",
+    "rtMRI",
+    "Speech Production"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.20432"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.20432"
+    }
+   ]
+  },
+  {
+   "title": "VoxMel TTS Technical Report",
+   "url": "https://arxiv.org/abs/2611.20254",
+   "date": "2026-11-15",
+   "authors": "Wenhao Guan, Jiaxin Ye, Haitao Li, Yifan Duan, Junxi Liu, Wangjin Zhou, Lin Li, Qingyang Hong, Xie Chen",
+   "abstract": "连续自回归 TTS 依赖一个既能稳定做下一潜变量预测、又能保留细粒度声学细节的声学目标。VoxMel 提出免分词器（tokenizer-free）框架：用固定、可精确逆变换的两轴 Haar 变换分解 mel 谱——先沿频率拆成局部均值与频率残差，再沿时间把均值分量拆成 Coarse-Mel 与时间残差，从而在无需神经编码器的前提下让稳定 mel 建模变得可行并保持高保真生成。",
+   "tags": [
+    "TTS",
+    "Autoregressive",
+    "Mel Spectrogram",
+    "Tokenizer-free"
+   ],
+   "highlight": true,
+   "highlight_note": "免分词器自回归 TTS：用可逆 Haar 变换直接对 mel 谱建模，绕开神经编码器瓶颈（HF 日榜 22 赞）",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.20254"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.20254"
+    }
+   ]
+  },
+  {
+   "title": "High-Throughput Serving of Nemotron 3.5 Transcribe with Regime-Aware Megakernels and Kernel Fusion",
+   "url": "https://arxiv.org/abs/2611.20095",
+   "date": "2026-11-15",
+   "authors": "Aditya Chatterjee, Sanjay Singh Chauhan, Mayank Jain, Arushi Dhingra, Sahin Chowdhury, Rahul Mittal",
+   "abstract": "Nemotron 3.5 Transcribe 在 Hugging Face Open ASR 榜上位列开放权重模型第一，而高效服务它不只是算子快的问题：连续批处理每轮改变工作量与混合比例，最优融合粒度也随之变化。作者实现按 pass 在持久化 megakernel 与融合算子链之间按离线测得的交叉点切换的服务引擎，H100 上峰值 4345 倍实时（vLLM 调优峰值的 1.39 倍），B200 上 6367 倍；WER 1.91–1.93%（vLLM 1.88–1.93%），在 400ms p95 预算内可承载 8 倍并发。",
+   "tags": [
+    "ASR Serving",
+    "Kernel Fusion",
+    "Inference Optimization"
+   ],
+   "highlight": true,
+   "highlight_note": "把开源 ASR SOTA 服务吞吐做到 4345× 实时，超越调优 vLLM 39%",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.20095"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.20095"
+    }
+   ]
+  },
+  {
+   "title": "Clinician Assessment of Laryngeal Disease with Auditory AI before Laryngoscopy: A Paired Reader Study",
+   "url": "https://arxiv.org/abs/2611.20050",
+   "date": "2026-11-15",
+   "authors": "Siyuan Hou, Shuting Yang, Zengrui Jin, Liyu Cheng, Siyin Wang, Yunhan Shi, Xueyan Li, Rong Hu, Yuhong Lin, Qiyu Chen, Yanru Li, Ji Wu, Bowen Zhou, Mangsuo Zhao, Wen Xu, Chao Zhang",
+   "abstract": "临床医生在喉镜检查前需判断声音嘶哑的可能病因及是否怀疑癌前/恶性病变。作者开发听觉大模型，从语音录音、患者信息与声学指标生成患者级评估卡（暂定类别、音质评分、理由）与预设恶性警示。在 32 名耳鼻喉科医生参与的序贯阅读者研究中，800 次配对评估的准确率由无 AI 时的 49.8% 提升到参考评估卡后的 56.8%。",
+   "tags": [
+    "Medical Audio AI",
+    "Auditory LLM",
+    "Clinical Study"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.20050"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.20050"
+    }
+   ]
+  },
+  {
+   "title": "A Speech-LLM Framework for Enrollment-Free Wake-Word-Guided Target-Speaker Recognition in Complex Noisy Scenarios for Seamless Human-Machine Interaction",
+   "url": "https://arxiv.org/abs/2611.19844",
+   "date": "2026-11-15",
+   "authors": "Yuxiang Mei, Dongxing Xu, Yanhua Long",
+   "abstract": "目标说话人 ASR（TS-ASR）在重叠语音与噪声场景下至关重要，但现有方法依赖说话人注册或级联流水线。作者提出免注册的 Speech-LLM 框架，用唤醒词文本作为词汇线索：文本线索编码器提取唤醒词的词汇表征，通过交叉注意力注入预训练语音编码器，建立\"唤醒词出现\"与\"目标说话人\"的隐式关联，从而选择性识别该说话人随后的指令。",
+   "tags": [
+    "Target-Speaker ASR",
+    "Speech LLM",
+    "Wake Word"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.19844"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.19844"
+    }
+   ]
+  },
+  {
+   "title": "ProTTS: End-to-End Prominence-aware Natural and Controllable Text-to-Speech via Automatic Word Stress Discovery",
+   "url": "https://arxiv.org/abs/2611.19832",
+   "date": "2026-11-15",
+   "authors": "Sai Harshitha Aluru, Chiranjeevi Yarra",
+   "abstract": "自然语音的意义不只靠词，也靠少数词上的突显（prominence），但多数 TTS 对突显无感知，现有突显感知 TTS 需要外部重音标注，无监督重音检测器又与合成脱节。ProTTS 提出统一框架：在 FastSpeech2 的方差适配器中加入聚类头，从聚合韵律特征中直接发现词级重音，让重音检测从 TTS 模型中涌现并反过来指导合成，同时支持用户控制强调位置。",
+   "tags": [
+    "TTS",
+    "Prosody",
+    "Prominence",
+    "Controllable TTS"
+   ],
+   "highlight": true,
+   "highlight_note": "重音检测与合成合为一体，无需外部重音标注即可控制强调位置",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.19832"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.19832"
+    }
+   ]
+  },
+  {
+   "title": "Rethinking Post-Training for Expressive Zero-Shot Text-to-Speech",
+   "url": "https://arxiv.org/abs/2611.19787",
+   "date": "2026-11-15",
+   "authors": "Jingbin Hu, Xinfa Zhu, Hao Wang, Wenjie Tian, Kangxiang Xia, Hangrui Hu, Kexin Huang, Jin Xu, Liumeng Xue, Lei Xie",
+   "abstract": "零样本声音克隆通常强调保留参考说话人的音色与韵律，但真实使用中语音应随文本调整表达方式。作者将其形式化为\"文本自适应韵律合成\"，并提出三阶段后训练框架：先用 DPO 冷启动对齐文本适配的表达性语音，再用 GSPO 联合优化韵律表现力、声学质量、可懂度与说话人相似度，最后用上下文条件的在线自蒸馏（OPSD）把强参考的表达行为迁移给弱分支实现自我提升。",
+   "tags": [
+    "Zero-Shot TTS",
+    "Post-Training",
+    "DPO",
+    "Expressive Speech"
+   ],
+   "highlight": true,
+   "highlight_note": "DPO→GSPO→在线自蒸馏三段式后训练，让克隆语音随文本改变表达",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.19787"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.19787"
+    }
+   ]
+  },
+  {
+   "title": "An Interpretable Acoustic Coordinate System for Japanese Consonant Morae in Dysarthric Speech",
+   "url": "https://arxiv.org/abs/2611.19714",
+   "date": "2026-11-15",
+   "authors": "Yuma Enomoto, Misa Yamaguchi, Hiroki Nishikawa, Ittetsu Taniguchi, Kazuhide Matsunaga, Narikazu Uzawa, Takao Onoye",
+   "abstract": "构音障碍会降低语音可懂度，需要细粒度反馈支撑自主康复；日语以 mora 为单位提供反馈最自然，但现有可视化多限于元音，辅音因瞬态频谱被生成式嵌入平滑而难以刻画。作者提出日语辅音 mora 可视化系统，以相对健康参考语音的时间距离与频谱距离构建二维坐标，辅音类别几何分离一致（轮廓系数 >0.5，基于原点的 ROC-AUC >0.86）。",
+   "tags": [
+    "Dysarthric Speech",
+    "Speech Visualization",
+    "Japanese"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.19714"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.19714"
+    }
+   ]
+  },
+  {
+   "title": "MOUSSE: Multilingual Overlapped Speech Separation with Predictive Uncertainty Estimation",
+   "url": "https://arxiv.org/abs/2611.19706",
+   "date": "2026-11-15",
+   "authors": "Su Yeon Shim, Yejin Jeon, David Ifeoluwa Adelani, Young-Joo Suh",
+   "abstract": "跨语言重叠语音分离长期缺乏研究。作者首先构建 MuSSeD——英韩双语、2 至 4 说话人、不同重叠比例的多语混合基准；进而提出 MOUSSE 流匹配框架，引入边界感知训练与基于排列不变高斯负对数似然的逐帧预测不确定性，并用预测尺度在采样时自适应调整无分类器引导强度。取得 13.18 dB SI-SDRi 与 0.175 ESTOIi，比最强基线高 1.58 dB。",
+   "tags": [
+    "Speech Separation",
+    "Flow Matching",
+    "Multilingual",
+    "Uncertainty Estimation"
+   ],
+   "highlight": true,
+   "highlight_note": "首个英韩多语重叠语音基准 MuSSeD + 带不确定性估计的流匹配分离框架",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.19706"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.19706"
+    }
+   ]
+  },
+  {
+   "title": "Sada-ASR: A Production Multidialectal Arabic Speech Recognition System",
+   "url": "https://arxiv.org/abs/2611.19512",
+   "date": "2026-11-14",
+   "authors": "Mahmoud Khaled, Mohammed Abd-Elnaser, Mahmoud Mohsen, Hazem Ahmed, Abdelrahman Hafez",
+   "abstract": "阿拉伯语客服来电者各说自己的方言，而识别系统多在标准语（MSA）上训练评测。Sada-ASR 是 EchoNova 生产级阿拉伯语语音 Agent 的识别器，在覆盖 MSA 与 8 种方言的 120 小时测试集上，于 12 个系统（含微软、ElevenLabs、Google、OpenAI、Speechmatics、NVIDIA 等 11 家）中词错率与字错率最低：11.69% vs 最强的微软 MAI-Transcribe-2 的 13.51%，在阿曼（+4.30）、埃及（+3.78）、沙特（+2.19）方言上优势最大。",
+   "tags": [
+    "ASR",
+    "Arabic Dialects",
+    "Production System"
+   ],
+   "highlight": true,
+   "highlight_note": "生产级多方言阿拉伯语 ASR，12 系统横评中击败微软/ElevenLabs/Google/OpenAI",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.19512"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.19512"
+    }
+   ]
+  },
+  {
+   "title": "Leveraging Dual-Process Theory for Multimodal Multiparty Turn-Taking Prediction",
+   "url": "https://arxiv.org/abs/2611.19484",
+   "date": "2026-11-14",
+   "authors": "Rutherford A. Patamia, Ming Liu, Wei Luo, Favour Ekong, Rehan Mohammed, Gang Liu, Akan Cosgun",
+   "abstract": "多方对话中，停顿不代表说完，另一个声音也不一定意味着话轮转移。作者提出受双过程理论启发的框架，把\"连续候选发现\"与\"选择性验证\"分离：快速高召回阶段找出可能的转移点，审慎阶段融合声学、语言、说话人相关证据与预测的未来活动（以及可用的多模态线索）来拒绝误报并精修转移时机，在 SHIFT/HOLD 分类、自动生成点验证等三项任务上评估。",
+   "tags": [
+    "Turn-Taking",
+    "Multiparty Conversation",
+    "Multimodal"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.19484"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.19484"
+    }
+   ]
+  },
+  {
+   "title": "Pixel-KWS: Rendered-Glyph Representations for Orthographically Robust Open-Vocabulary Keyword Spotting",
+   "url": "https://arxiv.org/abs/2611.19389",
+   "date": "2026-11-14",
+   "authors": "Adarsh Arigala, Ramesh Gundluru, Srinivasan Umesh, Ludovick Lepauloux, Hakim Hacid",
+   "abstract": "开放词表关键词检出（KWS）允许推理时注册任意关键词，但基于字符/音素的文本编码器依赖训练期固定符号表，难以处理未见或形近符号（同形字、l33t 替换、带重音字符）。Pixel-KWS 用渲染字形替代嵌入查表：把每个字符渲染为灰度图并用轻量 CNN 编码，使文本编码器从视觉形态泛化。LibriPhrase-hard 上 EER 9.57%，easy 上 0.43%，无需预训练或合成数据即超越已发表基线。",
+   "tags": [
+    "Keyword Spotting",
+    "Open-Vocabulary",
+    "Glyph Representation"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.19389"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.19389"
+    }
+   ]
+  },
+  {
+   "title": "CausalGloss: Multi-Evidence Action Control for a Simultaneous Mandarin Speech-to-ASL Gloss Cascade",
+   "url": "https://arxiv.org/abs/2611.19375",
+   "date": "2026-11-14",
+   "authors": "Mingze Li, Satoshi Nakamura",
+   "abstract": "普通话语音到美国手语（ASL）gloss 的同步翻译需要判断\"话语演化到什么程度才足以提交某个 gloss\"。固定 Wait-k 无法适应源-目标重排，仅用参考历史训练又带来曝光偏差。CausalGloss 提出面向英语前缀到 ASL gloss 的动作策略，融合词汇与语义证据、有界延迟、否定约束、突发写入动作与不完整历史恢复，在 How2Sign 派生基准上 Token F1 0.7047，LAAL 降低 54.4%。",
+   "tags": [
+    "Speech-to-Sign",
+    "Simultaneous Translation",
+    "Sign Language"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.19375"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.19375"
+    }
+   ]
+  },
+  {
+   "title": "Hardware-Friendly Plug-and-Play MVDR Beamforming for Microphone Arrays: Algorithm, Prototype, and System-Level Feasibility",
+   "url": "https://arxiv.org/abs/2611.19280",
+   "date": "2026-11-14",
+   "authors": "Chengbo Chang, Ziye Yang, Jie Chen",
+   "abstract": "自适应波束形成（如传统 MVDR）在复杂动态声学环境中性能显著退化，部分原因是忽略了语音自身的固有特性。作者提出即插即用 MVDR（PnP-MVDR），把数据驱动的语音先验嵌入 MVDR 框架，在保持可解释性的同时增强对非平稳噪声的鲁棒性，并给出面向麦克风阵列的原型实现与系统级可行性验证。",
+   "tags": [
+    "Beamforming",
+    "Microphone Array",
+    "Speech Enhancement"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.19280"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.19280"
+    }
+   ]
+  },
+  {
+   "title": "Auditory-Feedback-Conditioned Flow TTS for Implicit Lombard Adaptation",
+   "url": "https://arxiv.org/abs/2611.19260",
+   "date": "2026-11-14",
+   "authors": "Yunya Wang, Satoshi Nakamura",
+   "abstract": "传统 TTS 在噪声环境中会损失可懂度，而人类会通过提高发声努力（Lombard 效应）适应噪声。作者在听觉反馈式 Lombard TTS 基础上，研究预训练流匹配 TTS 能否直接从听觉反馈中学到声学适应：从被噪声污染的波形中提取信噪比反馈与 ASR 反馈，注入流匹配条件做语句精修与因果块级更新，并在普通/Lombard 提示、提示切换控制与配对微调等设置下评估反馈收益。",
+   "tags": [
+    "TTS",
+    "Lombard Effect",
+    "Flow Matching",
+    "Noise Robustness"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.19260"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.19260"
+    }
+   ]
+  },
+  {
+   "title": "Attribution-Guided Shared-Private Decoupling for Noise-Reduced Audio-Visual Representation Learning",
+   "url": "https://arxiv.org/abs/2611.19236",
+   "date": "2026-11-14",
+   "authors": "Linge Wang, Yingying Chen, Bingke Zhu, Lu Zhou, Haixin Wang, Zhipiao Liu, Jinqiao Wang",
+   "abstract": "音视频表征学习常用样本级对比目标对齐成对信号，但真实音视频对中包含大量异质 patch token：只有一部分携带可靠的跨模态共享语义，其余多为模态私有残差，聚合为单一全局表征会引入语义噪声。作者基于最小充分性原则提出归因引导的共享-私有解耦框架，识别既保留主要跨模态信息又抑制私有残差的\"共享覆盖子视图\"，用以监督解耦后的共享与私有表征。",
+   "tags": [
+    "Audio-Visual Learning",
+    "Representation Disentanglement",
+    "Multimodal"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.19236"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.19236"
+    }
+   ]
+  },
+  {
+   "title": "ProSing: Zero-Shot Fine-Grained Singing Technique Conversion",
+   "url": "https://arxiv.org/abs/2611.19223",
+   "date": "2026-11-14",
+   "authors": "Xinhao Guan, Jingyue Huang, Kangrui Chen, Julian McAuley, Zhong-Qiu Wang",
+   "abstract": "零样本细粒度唱法转换（STC）要求在保留歌词、旋律、节奏与歌手身份的前提下，对演唱录音的指定片段施加指定技巧。作者提出 ProSing：以帧级技巧条件适配预训练流匹配声学模型，并用配对训练策略学习可泛化的技巧表征以缓解条件捷径，同时引入连续音高轨迹实现对音高类技巧的显式表达控制，主观评测验证了效果。",
+   "tags": [
+    "Singing Voice Conversion",
+    "Zero-Shot",
+    "Flow Matching"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.19223"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.19223"
+    }
+   ]
+  },
+  {
+   "title": "Why Do Low-Activity Speakers Disappear in Speaker Diarization? Decomposing Lost Speakers and What Training-Free Fixes Can Recover",
+   "url": "https://arxiv.org/abs/2611.19160",
+   "date": "2026-11-14",
+   "authors": "Fumiaki Yamaguchi",
+   "abstract": "说话人日志会整体丢掉说话很少的人，而这种丢失几乎不影响以错误时长占比衡量的 DER。作者在 4 个语料 990 段录音上考察 8 输出槽的端到端模型 Nemotron-3，发现九成丢失者是总语音不足 10 秒的低活跃说话人，成因随录音说话人数分化：9 人以上录音以槽位不足导致的合并/漏检为主，对填满 8 槽的录音仅在短窗上重跑即可把此类丢失从 228 人降至 101 人（无需训练）。",
+   "tags": [
+    "Speaker Diarization",
+    "Low-Activity Speakers",
+    "Error Analysis"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.19160"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.19160"
+    }
+   ]
+  },
+  {
+   "title": "Low-Latency LLM-Based Streaming Multi-Talker ASR with Verifiable Rewards",
+   "url": "https://arxiv.org/abs/2611.19136",
+   "date": "2026-11-14",
+   "authors": "Jing Pan, Ruizhi Li, Ju Lin, Jing Zheng, Florian Metze",
+   "abstract": "可穿戴场景需实时转写近场佩戴者与远场对话者之间的多说话人对话，对话 UI 的角色位置固定、说话人标签必须前置，而这些稀疏标签在 SFT 下优化不足，且先输出标签会推迟后续文本。作者用可验证奖励强化学习（RLVR）后训练流式 LLM ASR，结合固定角色的说话人归属 WER 评分器与话轮级起始延迟奖励，在八方向麦克风阵列数据上兼顾低延迟与归属正确性。",
+   "tags": [
+    "Streaming ASR",
+    "Multi-Talker",
+    "RLVR",
+    "Low Latency"
+   ],
+   "highlight": true,
+   "highlight_note": "用可验证奖励强化学习同时优化多说话人归属正确性与首字延迟",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.19136"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.19136"
+    }
+   ]
+  },
+  {
+   "title": "Latency, Speech Recognition and Turn-Taking in Voice Agents for Spanish Phone Negotiation: An Externally Measured Comparison of Pipecat, LiveKit and GPT-Live",
+   "url": "https://arxiv.org/abs/2611.19118",
+   "date": "2026-11-14",
+   "authors": "Jovan Popoca Moran, Eduardo de Avila-Armenta, Raúl Alejandro Aquino-Ibarra, Jorge Octavio Nicolás-Díaz, Umberto Leon-Dominguez",
+   "abstract": "电话议价语音 Agent 必须快速应答、听懂口述金额并应对抢话。作者用同一说话人的 47 段录音、5 个议价场景、每种架构 77 通电话，在无电话网络条件下对比两种级联架构（Pipecat、LiveKit Agents）与端到端 GPT-Live 的西班牙语表现：内容响应中位延迟分别为 2616.0 ms、3090.0 ms 与 2444.8 ms，GPT-Live 相对 Pipecat 的 171.2 ms 优势其置信区间包含 0。",
+   "tags": [
+    "Voice Agent",
+    "Latency Benchmark",
+    "Turn-Taking"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.19118"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.19118"
+    }
+   ]
+  },
+  {
+   "title": "Beyond Controllability: Speaker Diversity in Instruction-Guided Text-to-Speech",
+   "url": "https://arxiv.org/abs/2611.19030",
+   "date": "2026-11-14",
+   "authors": "Yi-Cheng Lin, Jia-Kai Dong, Kuan-Yu Chen, Szu-Chi Chen, Jian-Jiun Ding, Sung-Feng Huang, Yusuke Hirota, Hung-yi Lee",
+   "abstract": "指令引导 TTS（ITTS）允许用自然语言指定音色属性，但同属一大类提示反复请求时能否产出足够多样的声音此前无人审计。作者用经独立验证表征能力的说话人嵌入评测 7 个开源 ITTS 系统：所有系统的说话人分布都明显窄于真实语音，多数系统中女性提示产出的音色池比男性提示更单一，而口音与情感提示几乎不改变多样性，却暴露了对北美英语的强可控性偏置。",
+   "tags": [
+    "Instruction-Guided TTS",
+    "Speaker Diversity",
+    "Evaluation"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.19030"
+    },
+    {
+     "label": "PDF",
+     "url": "https://arxiv.org/pdf/2611.19030"
+    }
+   ]
+  }
+ ],
+ "news": [
+  {
+   "title": "微软发布首款语音对语音模型 MAI Realtime 1：每分钟 0.01 美元，Big Bench Audio 98.9%",
+   "url": "https://microsoft.ai/news/introducing-mai-realtime-1",
+   "summary": "在 11 月 17 日 Ignite 2026 大会上，微软 AI 发布其首个端到端语音对语音（speech-to-speech）模型 MAI Realtime 1，定位于企业级实时语音 Agent。模型可处理打断、快速应答确认、等待对方说完等自然对话细节，并能在嘈杂环境或多人同时说话时理解请求；低延迟系统维持对话流畅，遇到需要深度思考的回合再调用更强的推理引擎，并可连接企业系统与工具完成预订、客服等任务。定价为每音频分钟 0.01 美元起，推理另按每百万输入 token 1 美元、输出 5 美元计费。官方称其在质量、速度与价格上均优于 GPT Realtime 2.1，在 Big Bench Audio 得 98.9%（对比 GPT-Realtime-2 High 96.6%、Grok Voice 2.0 97.2%），每小时输入音频成本约 1.35 美元，并兼容 OpenAI Realtime API。目前通过 MAI Labs 与 Microsoft Foundry 限量预览开放，Agoda、Reservations.ai 已开始试用，后续将落地 Dynamics 365 Contact Center 与 Dragon Copilot。"
+  },
+  {
+   "title": "微软同场发布 MAI Transcribe 2 与 Dragon Copilot Transcribe：多语言转写错误率减半",
+   "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_4466afce3b090052",
+   "summary": "Ignite 2026 上微软一次发布七款自研模型，除语音对语音的 MAI Realtime 1 外，医疗方向的 Dragon Copilot Transcribe 基于 MAI Transcribe 2 打造，官方称其为\"世界最快最准的多语言转写模型\"，目前每月处理约 1000 万次医患对话，多语言错误率减半，已被约三分之一的美国医生使用。同期发布的还有编程模型 MAI Code 2/Flash、安全模型 MAI Cyber 2 Flash、图像模型 MAI Image 2.7，以及转正的决策模型 Microsoft-Decision-1.1。"
+  },
+  {
+   "title": "Liquid AI 发布全模态决策模型 d1.2 与 d1.2-ultra，支持音频输入并计划开放权重",
+   "url": "https://finance.sina.cn/2026-11-17/detail-inizacmz7533446.d.html",
+   "summary": "MIT 孵化的 Liquid AI 发布全模态决策模型 d1.2 与 d1.2-ultra，两款模型均可直接处理文本、图像与音频输入并输出结构化决策结果，省去云端多级调用。d1.2-ultra 在 Artificial Analysis 决策指数 v2.1 上以 75 分排名第一（d1.2 得 69 分，Jev 66 分），仅按输入计费，每百万 token 分别为 0.02 与 0.042 美元；内部测试校准误差为 0.8 与 1.2。公司同时透露未来计划对两款模型开放权重，此前其已发布面向音频的高保真分词器 LiquidCodec。"
+  }
+ ]
+}
