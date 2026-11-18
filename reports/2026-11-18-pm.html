@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-11-18-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-11-18-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年11月18日 (周三) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">6</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.22593" target="_blank">High-Fidelity Binarized Neural Vocoder</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-17</span><span>👥 Andong Li, Tong Lei, Xiaodong Li, Chengshi Zheng</span></div>
+      <div class="abstract">神经声码器已能高保真重建波形，但几乎全部依赖全精度算子，推理时的存储与算力开销不可忽视。作者提出 BiVoC——首个面向二值神经网络（BNN）的时频域神经声码器：在自研全精度 RNDVoC 框架基础上，把逆问题建模、值域-零空间分解（range-null decomposition）与由细到粗的非均匀子带建模整体迁移到 1-bit 设定，并设计简洁的二值卷积单元保证二值表征下的时频特征建模稳定性。论文进一步分析各模块对质量/复杂度的敏感度，采用混合精度设计——把质量敏感模块保留全精度、把计算主导部分二值化。在 LibriTTS 与多个分布外基准上，客观与主观结果均显著优于「直接二值化现有声码器」的 BNN 变体，并在理论算力大幅降低的前提下逼近主流全精度基线。代码与权重已开源。</div>
+      <div class="tags"><span class="tag">Neural Vocoder</span><span class="tag">Binarization</span><span class="tag">BNN</span><span class="tag">Efficient Inference</span><span class="tag">Audio Generation</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.22593" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.22593" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.22627" target="_blank">Beyond Mimicry: Constrained Exploration with GRPO for Joint Multi-Talker ASR and Diarization under Unknown Speaker Counts</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-17</span><span>👥 Yunrui Cai, Dingdong Wang, Lingwei Meng, Xixin Wu, Zhiyong Wu, Helen Meng</span></div>
+      <div class="abstract">在说话人数未知、输出必须严格遵循结构化格式时，带说话人归属与时间戳的多人联合 ASR 极具挑战。作者观察到：仅用 SFT 对齐的 SpeechLLM 在密集重叠语音下非常脆弱，容易出现突发幻觉与畸形说话人/时间戳标签。为此提出统一的两阶段生成框架：(1) CoT 增强的 SFT，在转写前先推断全局说话人数；(2) 基于 GRPO 的约束探索，由多维约束感知奖励（MCAR）引导，直接优化置换不变准确率，同时强制满足计数、时间与结构约束。在 Libri3Mix 与测试时说话人数未知的 Dynamic-Mix(2+3) 集合上，分别取得 14.52%/9.24% 的 cpWER 与 1.95%/1.12% 的 WDER；相比 SFT+CoT，GRPO 带来 35%/54% 的相对 cpWER 下降。</div>
+      <div class="tags"><span class="tag">Multi-Talker ASR</span><span class="tag">Diarization</span><span class="tag">GRPO</span><span class="tag">Reinforcement Learning</span><span class="tag">SpeechLLM</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.22627" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.22627" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.22628" target="_blank">Back to Mel: Learning to Bridge Fidelity and Perception in Generative Speech Enhancement</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-17</span><span>👥 Andong Li, Kun Zhou, Xiaodong Li, Chengshi Zheng</span></div>
+      <div class="abstract">生成式语音增强普遍建立在可学习紧致隐表征与大型生成主干之上，但声学保真度、感知质量与处理效率三者难以兼顾。作者重新审视 Mel 频谱这一结构化声学表征，提出基于 flow matching 的 BAME 框架：(1) 利用 Mel 频谱显式的分层频带分布，设计子带感知 Transformer（SaT），仅用 331M DiT 主干 2.9% 的参数量就取得更优增强效果；(2) 受 Mel 滤波在幅度谱域的值域-零空间分解理论启发，引入带退化相位先验的相位感知神经声码器，并配合质量引导的双阶段策略自适应削弱不可靠相位的影响；(3) 提出一步式保真度-感知对齐策略，用两个领域的互补约束微调 flow 模型。在 DNS-Challenge、EARS、GSR、URGENT 四个基准上，客观与主观指标（含侵入式与非侵入式）均表现优异，音频样例与代码已公开。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Flow Matching</span><span class="tag">Mel Spectrum</span><span class="tag">Neural Vocoder</span><span class="tag">Efficiency</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.22628" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.22628" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.22620" target="_blank">Personalized Causal Low-Bitrate Coded Speech Restoration with Speaker Embeddings</a></h4>
+      <div class="meta"><span>📅 2026-11-17</span><span>👥 Eray Özgünay, Christian Rollwage, Kishan Gupta, Andreas Brendel, Xavier Domont, Mattes Ohlenbusch, Jan Rennies, Simon Doclo</span></div>
+      <div class="abstract">AMR-NB 等传统低码率语音编解码器在电话网络中仍被广泛使用，但其带宽受限、听感劣化明显。编码语音修复（CSR）旨在恢复带宽并提升整体质量，但通常不针对不同说话人做适配。本文以因果、低复杂度的通用带宽扩展 GAN（UBGAN）为基础，系统研究低码率编码语音修复的个性化：(i) 用说话人嵌入对单一 CSR 模型做条件化；(ii) 基于聚类的模型选择，即在声学相似说话人簇上分别训练多个个性化模型。实验在 4.75 kbps AMR-NB 编码语音上进行，区分 seen/unseen 说话人测试集，结果显示：聚类模型选择并不能稳定超越非个性化 UBGAN 基线，而说话人嵌入条件化在 seen 与 unseen 说话人上都能显著提升 ViSQOL 与 WB-PESQ。</div>
+      <div class="tags"><span class="tag">Coded Speech Restoration</span><span class="tag">Bandwidth Extension</span><span class="tag">Speaker Embedding</span><span class="tag">Personalization</span><span class="tag">Low Bitrate</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.22620" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.22620" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.21809" target="_blank">Evaluating the Evaluation of Music Generation Models with Generative Psychometrics</a></h4>
+      <div class="meta"><span>📅 2026-11-16</span><span>👥 João Carlos Santana Silveira, Caio Von Rondow Morais, Frederico Pedrosa, Lucas N. Ferreira</span></div>
+      <div class="abstract">主观用户研究是评测音乐生成模型的主要手段，但评测协议差异极大、细节披露不足，导致跨研究难以比较。本文梳理 2020–2025 年 ISMIR 音乐生成论文中的主观评测方法，并用生成式心理测量学（generative psychometrics）检验其题项稳定性：先用 LLM 加人工校验从论文方法描述中抽取并标准化 284 个题项，再表示为上下文嵌入，通过 Unique Variable Analysis 剔除冗余与局部依赖题项，并用 Bootstrap 探索性图分析估计潜在维度。结果显示题项网络收敛到六个稳定的质量维度分类法：节奏、旋律、音频、作曲、结构、歌词，为音乐生成模型的用户研究提供了统一方法论。</div>
+      <div class="tags"><span class="tag">Music Generation</span><span class="tag">Evaluation</span><span class="tag">Psychometrics</span><span class="tag">Subjective Testing</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.21809" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.21809" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.23089" target="_blank">Insight into Parametric First-Order Ambisonics Upscaling in Time and Frequency Domains</a></h4>
+      <div class="meta"><span>📅 2026-11-17</span><span>👥 Oded Levi, Boaz Rafaely</span></div>
+      <div class="abstract">一阶 Ambisonics（FOA）是空间音频的实用表示，但低阶重建在双耳渲染时存在明显感知局限；近年方法通过由 FOA 合成高阶 Ambisonics（HOA）来缓解，然而早期反射在上采样中的作用与潜力尚未被系统探索。本文构建实验框架，对早期反射做选择性上采样：基于能量准则识别最强的早期反射并以高阶分辨率单独渲染。该选择机制在三个域（长时、短时、以及时频联合域）上评估，用 SI-SDR、清晰度指数 C50、双耳互相干性 IACC 等客观指标加主观听测验证，结果表明时频域表现最优；利用语音稀疏性，时频方案在复杂多人场景下仍保持稳健。结论为未来参数化与数据驱动的 FOA 上采样设计提供了关于早期反射价值的洞见。</div>
+      <div class="tags"><span class="tag">Spatial Audio</span><span class="tag">Ambisonics</span><span class="tag">Upscaling</span><span class="tag">Binaural Rendering</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.23089" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.23089" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-11-18-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>

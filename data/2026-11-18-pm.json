@@ -1,0 +1,91 @@
+{
+  "windowNote": "本期为 2026-11-18 午间版，时间窗口 09:30–14:00（CST，对应 UTC 01:30–06:00）。本期 arXiv 放出 11-17 提交批次（北京时间今早 09:00 公告），早间版尚未覆盖，故新增 6 篇音频方向论文；HuggingFace Daily Papers 与 6 个必搜重磅关键词均无 6 小时内新增，新闻 0 条。",
+  "papers": [
+    {
+      "title": "High-Fidelity Binarized Neural Vocoder",
+      "url": "https://arxiv.org/abs/2611.22593",
+      "date": "2026-11-17",
+      "authors": "Andong Li, Tong Lei, Xiaodong Li, Chengshi Zheng",
+      "abstract": "神经声码器已能高保真重建波形，但几乎全部依赖全精度算子，推理时的存储与算力开销不可忽视。作者提出 BiVoC——首个面向二值神经网络（BNN）的时频域神经声码器：在自研全精度 RNDVoC 框架基础上，把逆问题建模、值域-零空间分解（range-null decomposition）与由细到粗的非均匀子带建模整体迁移到 1-bit 设定，并设计简洁的二值卷积单元保证二值表征下的时频特征建模稳定性。论文进一步分析各模块对质量/复杂度的敏感度，采用混合精度设计——把质量敏感模块保留全精度、把计算主导部分二值化。在 LibriTTS 与多个分布外基准上，客观与主观结果均显著优于「直接二值化现有声码器」的 BNN 变体，并在理论算力大幅降低的前提下逼近主流全精度基线。代码与权重已开源。",
+      "tags": ["Neural Vocoder", "Binarization", "BNN", "Efficient Inference", "Audio Generation"],
+      "highlight": true,
+      "highlight_note": "1-bit 量化声码器，TASLP 2026 录用，音频生成领域的极致压缩路线",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.22593"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.22593"}
+      ]
+    },
+    {
+      "title": "Beyond Mimicry: Constrained Exploration with GRPO for Joint Multi-Talker ASR and Diarization under Unknown Speaker Counts",
+      "url": "https://arxiv.org/abs/2611.22627",
+      "date": "2026-11-17",
+      "authors": "Yunrui Cai, Dingdong Wang, Lingwei Meng, Xixin Wu, Zhiyong Wu, Helen Meng",
+      "abstract": "在说话人数未知、输出必须严格遵循结构化格式时，带说话人归属与时间戳的多人联合 ASR 极具挑战。作者观察到：仅用 SFT 对齐的 SpeechLLM 在密集重叠语音下非常脆弱，容易出现突发幻觉与畸形说话人/时间戳标签。为此提出统一的两阶段生成框架：(1) CoT 增强的 SFT，在转写前先推断全局说话人数；(2) 基于 GRPO 的约束探索，由多维约束感知奖励（MCAR）引导，直接优化置换不变准确率，同时强制满足计数、时间与结构约束。在 Libri3Mix 与测试时说话人数未知的 Dynamic-Mix(2+3) 集合上，分别取得 14.52%/9.24% 的 cpWER 与 1.95%/1.12% 的 WDER；相比 SFT+CoT，GRPO 带来 35%/54% 的相对 cpWER 下降。",
+      "tags": ["Multi-Talker ASR", "Diarization", "GRPO", "Reinforcement Learning", "SpeechLLM"],
+      "highlight": true,
+      "highlight_note": "用 RL 约束解决多人 ASR 幻觉与格式崩坏，Interspeech 2026",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.22627"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.22627"}
+      ]
+    },
+    {
+      "title": "Back to Mel: Learning to Bridge Fidelity and Perception in Generative Speech Enhancement",
+      "url": "https://arxiv.org/abs/2611.22628",
+      "date": "2026-11-17",
+      "authors": "Andong Li, Kun Zhou, Xiaodong Li, Chengshi Zheng",
+      "abstract": "生成式语音增强普遍建立在可学习紧致隐表征与大型生成主干之上，但声学保真度、感知质量与处理效率三者难以兼顾。作者重新审视 Mel 频谱这一结构化声学表征，提出基于 flow matching 的 BAME 框架：(1) 利用 Mel 频谱显式的分层频带分布，设计子带感知 Transformer（SaT），仅用 331M DiT 主干 2.9% 的参数量就取得更优增强效果；(2) 受 Mel 滤波在幅度谱域的值域-零空间分解理论启发，引入带退化相位先验的相位感知神经声码器，并配合质量引导的双阶段策略自适应削弱不可靠相位的影响；(3) 提出一步式保真度-感知对齐策略，用两个领域的互补约束微调 flow 模型。在 DNS-Challenge、EARS、GSR、URGENT 四个基准上，客观与主观指标（含侵入式与非侵入式）均表现优异，音频样例与代码已公开。",
+      "tags": ["Speech Enhancement", "Flow Matching", "Mel Spectrum", "Neural Vocoder", "Efficiency"],
+      "highlight": true,
+      "highlight_note": "回到 Mel 谱做生成式增强，2.9% 参数超越 331M DiT，投 TPAMI",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.22628"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.22628"}
+      ]
+    },
+    {
+      "title": "Personalized Causal Low-Bitrate Coded Speech Restoration with Speaker Embeddings",
+      "url": "https://arxiv.org/abs/2611.22620",
+      "date": "2026-11-17",
+      "authors": "Eray Özgünay, Christian Rollwage, Kishan Gupta, Andreas Brendel, Xavier Domont, Mattes Ohlenbusch, Jan Rennies, Simon Doclo",
+      "abstract": "AMR-NB 等传统低码率语音编解码器在电话网络中仍被广泛使用，但其带宽受限、听感劣化明显。编码语音修复（CSR）旨在恢复带宽并提升整体质量，但通常不针对不同说话人做适配。本文以因果、低复杂度的通用带宽扩展 GAN（UBGAN）为基础，系统研究低码率编码语音修复的个性化：(i) 用说话人嵌入对单一 CSR 模型做条件化；(ii) 基于聚类的模型选择，即在声学相似说话人簇上分别训练多个个性化模型。实验在 4.75 kbps AMR-NB 编码语音上进行，区分 seen/unseen 说话人测试集，结果显示：聚类模型选择并不能稳定超越非个性化 UBGAN 基线，而说话人嵌入条件化在 seen 与 unseen 说话人上都能显著提升 ViSQOL 与 WB-PESQ。",
+      "tags": ["Coded Speech Restoration", "Bandwidth Extension", "Speaker Embedding", "Personalization", "Low Bitrate"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.22620"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.22620"}
+      ]
+    },
+    {
+      "title": "Evaluating the Evaluation of Music Generation Models with Generative Psychometrics",
+      "url": "https://arxiv.org/abs/2611.21809",
+      "date": "2026-11-16",
+      "authors": "João Carlos Santana Silveira, Caio Von Rondow Morais, Frederico Pedrosa, Lucas N. Ferreira",
+      "abstract": "主观用户研究是评测音乐生成模型的主要手段，但评测协议差异极大、细节披露不足，导致跨研究难以比较。本文梳理 2020–2025 年 ISMIR 音乐生成论文中的主观评测方法，并用生成式心理测量学（generative psychometrics）检验其题项稳定性：先用 LLM 加人工校验从论文方法描述中抽取并标准化 284 个题项，再表示为上下文嵌入，通过 Unique Variable Analysis 剔除冗余与局部依赖题项，并用 Bootstrap 探索性图分析估计潜在维度。结果显示题项网络收敛到六个稳定的质量维度分类法：节奏、旋律、音频、作曲、结构、歌词，为音乐生成模型的用户研究提供了统一方法论。",
+      "tags": ["Music Generation", "Evaluation", "Psychometrics", "Subjective Testing"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.21809"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.21809"}
+      ]
+    },
+    {
+      "title": "Insight into Parametric First-Order Ambisonics Upscaling in Time and Frequency Domains",
+      "url": "https://arxiv.org/abs/2611.23089",
+      "date": "2026-11-17",
+      "authors": "Oded Levi, Boaz Rafaely",
+      "abstract": "一阶 Ambisonics（FOA）是空间音频的实用表示，但低阶重建在双耳渲染时存在明显感知局限；近年方法通过由 FOA 合成高阶 Ambisonics（HOA）来缓解，然而早期反射在上采样中的作用与潜力尚未被系统探索。本文构建实验框架，对早期反射做选择性上采样：基于能量准则识别最强的早期反射并以高阶分辨率单独渲染。该选择机制在三个域（长时、短时、以及时频联合域）上评估，用 SI-SDR、清晰度指数 C50、双耳互相干性 IACC 等客观指标加主观听测验证，结果表明时频域表现最优；利用语音稀疏性，时频方案在复杂多人场景下仍保持稳健。结论为未来参数化与数据驱动的 FOA 上采样设计提供了关于早期反射价值的洞见。",
+      "tags": ["Spatial Audio", "Ambisonics", "Upscaling", "Binaural Rendering"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.23089"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.23089"}
+      ]
+    }
+  ],
+  "news": [],
+  "note": "2026-11-18 午间版（窗口 09:30–14:00 CST）：新增 6 篇论文 + 0 条新闻。\n\n论文侧：① 第一级 export.arxiv.org API（max_results=50）连续返回「Rate exceeded」限流，降级 max_results=25 仍失败（curl 与 web_fetch 双通道均复现）；② 于是按第三级兜底改走 arXiv 官方 list 页交叉核验：eess.AS/new 显示「Showing new listings for Wednesday, 18 November 2026」，新投稿 2 条 + 交叉投稿 3 条 + 替换 5 条；cs.SD/new 新投稿 4 条 + 交叉 2 条 + 替换 8 条。两页去重后，与音频/语音强相关的新稿共 6 篇，均为 11-16/11-17 提交、今早 09:00 CST 公告，早间版 09:41 生成时尚未入库（早间版 API 返回的最新条目仅到 2611.21140 / 11-16T14:14Z），故计入本午间版的新增量。\n③ 替换批次（2608.25846、2512.12196、2606.01264、2609.31193、2508.07757、2609.16612、2610.33974、2610.34156 等）属旧论文修订，首发日期远早于窗口，按规则不计入；2611.21643（Sleep2Word，脑电到文本）、2611.22812（IoT RF 指纹）、2611.22857（音视频联合生成）方向偏离语音主线，未收录。\n④ 标题完整性：全部 6 篇均单独访问 arxiv.org/abs 页面核对，标题与摘要取自 abs 页正文，非 API 截断版本。\n\n新闻侧：6 个必搜关键词（OpenAI GPT-Live full-duplex voice model、OpenAI voice model release、Google Gemini voice、full-duplex speech model、语音模型发布、real-time voice AI）逐条独立执行，另加一条通用搜索。命中最新内容均为窗口外旧闻——GPT-Live 首发 2026-07-08、GPT-Live-1 API 2026-09-11、OpenAI 宣布 12-11 停用 Advanced Voice（约 11-10 前后）、Bland Tofu-1 全双工模型（11-13）、Gemini 3.5/Omni（更早）、微软 MAI Realtime 1（11-17，已由早间版收录），均超 6 小时窗口，故新闻 0 条，不重复早间内容。\n\nHuggingFace Daily Papers：调 /api/daily_papers?limit=100 拉取 100 条，最新条目 publishedAt 为 2026-11-16T19:00Z，audio 相关条目最新为 VoxMel TTS（11-14）、eDIAR（11-12）、Marimba（11-12），窗口内 0 条。\n\n其他：内部检索命中一条「IEGG 开源多语言端到端语音同传大模型 iegg-streaming-si-0.6B，首播延迟 1.28 秒」（km.woa.com/articles/show/670419），但页面需登录、无法核验发布时间，故未收录，待人工确认。"
+}
