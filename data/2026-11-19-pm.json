@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-19-pm",
+  "papers": [],
+  "news": [
+    {
+      "title": "Perplexity 把「语音控制」的 AI 队友搬上手机：Teammates 与 Multiagent 登陆 iOS / Android",
+      "url": "https://www.unite.ai/perplexity-brings-voice-controlled-ai-teammates-to-mobile/",
+      "summary": "11 月 19 日早间，Perplexity 宣布 Teammates 与 Multiagent 正式进入 iOS 与 Android 应用，其中 Teammates 支持纯语音操作——用户可以直接用说话的方式给常驻型 Agent 下达任务、追问进度，而不必逐条打字。该能力目前仅对 Max 订阅（200 美元/月）开放。Perplexity 同时披露，其最繁重的 Computer 任务中约三分之一已经在 iPhone 上发起，说明语音 + 移动端正在成为 Agent 的主入口之一。对语音方向的启示是：语音不再只是「对话界面」，而正在变成 Agent 的任务编排层，实时打断、多轮澄清与工具调用的协同要求会进一步提高。"
+    },
+    {
+      "title": "Linux 本地语音输入实测：用开源模型 + 本地推理替代云端听写",
+      "url": "https://itsfoss.com/voice-typing-tools-linux/",
+      "summary": "It's FOSS 今日发布一篇实操向评测，盘点在 Linux 桌面用纯开源、纯本地方案实现「按键说话 → 文本上屏」的语音输入（听写）路线，覆盖模型选择、热键绑定、与桌面环境的集成以及离线可用性。文章的立场很明确：日常听写这种高频、低风险场景，本地小模型 + 开源客户端的组合在延迟和隐私上已经能替代云端 ASR 服务。这类「本地 ASR 客户端化」的讨论近几周持续升温，与 Reson8 Rumble-2-Flash、tiny-voca 等极小体积开源模型的密集释出相互呼应。"
+    },
+    {
+      "title": "Callie Care 访谈：把语音 AI 做成老年人居家养老的第一入口",
+      "url": "https://pulse2.com/callie-care-profile-yury-palevich-interview/",
+      "summary": "Pulse 2.0 今日刊出对 Callie Care 联合创始人兼 CEO Yury Palevich 的访谈，主题是把语音 AI 用于老年人陪护与「居家养老（aging in place）」。核心论点是：对不习惯触屏与 App 的老年用户，语音是唯一低门槛入口，因此产品必须做到长时对话稳定、方言/口音鲁棒、以及可打断的自然轮次控制；同时需要在健康提醒、家属联动等场景里把「听懂」转化为可执行动作。这类垂直场景正在成为语音 Agent 商业化最实的落点之一——相比通用语音助手，它对延迟、打断和长期记忆的要求更高，但对多语种覆盖面要求更低。"
+    }
+  ]
+}
