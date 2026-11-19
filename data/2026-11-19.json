@@ -1,0 +1,119 @@
+{
+  "date": "2026-11-19",
+  "papers": [
+    {
+      "title": "High-Fidelity Binarized Neural Vocoder",
+      "url": "https://arxiv.org/abs/2611.22593",
+      "date": "2026-11-17",
+      "authors": "Andong Li, Tong Lei, Xiaodong Li, Chengshi Zheng",
+      "abstract": "神经声码器在高保真波形生成上已相当成熟，但几乎全部依赖全精度算子，推理时的存储与算力开销难以忽略。本文提出 BiVoC——首个面向二值神经网络（BNN）的时频神经声码器：在自研 RNDVoC 框架基础上，把逆问题建模、range-null 分解与由细到粗的非均匀子带建模迁移到 1-bit 设定，并设计简单的二值卷积单元以在二值表示下保持稳定的时频特征建模；同时通过质量-复杂度敏感度分析提出混合精度设计，把质量敏感模块保留在全精度、把计算主导部分二值化。在 LibriTTS 及多个分布外基准上，BiVoC 显著优于直接二值化现有声码器得到的 BNN 变体，并在理论算力大幅降低的前提下与多个主流全精度声码器持平。代码与预训练权重已开源。",
+      "tags": ["Neural Vocoder", "Binarization", "Efficient Inference", "Speech Synthesis"],
+      "highlight": true,
+      "highlight_note": "1-bit 权重的神经声码器首次做到接近全精度音质，TASLP 2026 录用并开源代码与权重",
+      "links": [
+        { "label": "arXiv", "url": "https://arxiv.org/abs/2611.22593" },
+        { "label": "PDF", "url": "https://arxiv.org/pdf/2611.22593" },
+        { "label": "Code", "url": "https://github.com/Andong-Li-speech/BiVoC" }
+      ]
+    },
+    {
+      "title": "Back to Mel: Learning to Bridge Fidelity and Perception in Generative Speech Enhancement",
+      "url": "https://arxiv.org/abs/2611.22628",
+      "date": "2026-11-17",
+      "authors": "Andong Li, Kun Zhou, Xiaodong Li, Chengshi Zheng",
+      "abstract": "生成式语音增强近年普遍转向可学习紧致隐表示 + 大生成骨干，但声学保真度、感知质量与处理效率三者仍难兼顾。作者重新审视 Mel 频谱这一结构化声学表示，提出基于 flow matching 的 BAME 框架：其一，利用 Mel 频谱的显式层级频带分布设计子带感知 Transformer（SaT），仅用 331M DiT 骨干 2.9% 的参数量即取得更好的增强效果；其二，受 Mel 滤波在幅度谱域的 range-null 分解理论启发，引入带退化相位先验的相位感知神经声码器与质量引导的双相位策略，自适应抑制不可靠相位的影响；其三，提出一步式保真度-感知对齐策略，用两个域的互补约束微调 flow 模型。在 DNS-Challenge、EARS、GSR、URGENT 四个基准上，主客观指标均表现优异。样例与代码已开源。",
+      "tags": ["Speech Enhancement", "Flow Matching", "Mel Spectrum", "Neural Vocoder"],
+      "highlight": true,
+      "highlight_note": "用 2.9% 参数量超过 331M DiT 骨干，把「回到 Mel」做成高效生成式增强新范式",
+      "links": [
+        { "label": "arXiv", "url": "https://arxiv.org/abs/2611.22628" },
+        { "label": "PDF", "url": "https://arxiv.org/pdf/2611.22628" },
+        { "label": "Code", "url": "https://github.com/AndongLi-speech/BAME" }
+      ]
+    },
+    {
+      "title": "Beyond Mimicry: Constrained Exploration with GRPO for Joint Multi-Talker ASR and Diarization under Unknown Speaker Counts",
+      "url": "https://arxiv.org/abs/2611.22627",
+      "date": "2026-11-17",
+      "authors": "Yunrui Cai, Dingdong Wang, Lingwei Meng, Xixin Wu, Zhiyong Wu, Helen Meng",
+      "abstract": "在说话人数未知、且输出必须严格遵循结构的多说话人联合识别（带说话人归属与时间戳）任务中，仅用监督微调（SFT）对齐的 SpeechLLM 在密集重叠语音下非常脆弱，常出现突发性幻觉和说话人/时间戳标签错乱。作者提出两阶段统一生成框架：先用 CoT 增强的 SFT 在做转写前推断全局说话人数；再用 GRPO 做受约束的探索，以多维约束感知奖励（MCAR）直接优化置换不变准确率，并同时约束计数、时间与结构。在 Libri3Mix 与测试时说话人数未知的 Dynamic-Mix (2+3) 集合上，cpWER 分别为 14.52%/9.24%、WDER 为 1.95%/1.12%，GRPO 相对 SFT+CoT 带来 35%/54% 的 cpWER 相对下降。",
+      "tags": ["Multi-Talker ASR", "Speaker Diarization", "GRPO", "SpeechLLM"],
+      "highlight": true,
+      "highlight_note": "用 RL 约束探索解决 SpeechLLM 重叠语音幻觉，未知说话人数场景 cpWER 相对降 35%-54%",
+      "links": [
+        { "label": "arXiv", "url": "https://arxiv.org/abs/2611.22627" },
+        { "label": "PDF", "url": "https://arxiv.org/pdf/2611.22627" },
+        { "label": "DOI", "url": "https://doi.org/10.21437/Interspeech.2026-2297" }
+      ]
+    },
+    {
+      "title": "Beyond Co-Generation: Rethinking Jointness in Joint Audio-Video Generation",
+      "url": "https://arxiv.org/abs/2611.22857",
+      "date": "2026-11-17",
+      "authors": "Jihoo Jung, Ji-Hoon Kim, Suyeon Lee, Gia Thinh Pham, Joon Son Chung",
+      "abstract": "现有文本到音视频（T2AV）联合生成的一致性评测难以区分「真正的跨模态协同」与「各自独立遵循文本提示」。作者提出内在联合性（intrinsic jointness）概念：当提示语义欠定时，音频与视频能否给出同一个具体实现。用语义欠定的提示（如「乐器演奏」而非「电吉他演奏」）测试四个近期模型，发现其内在联合性普遍有限。为此提出 JointREPA——一种基于表征对齐的简单后训练方法以促进跨模态协同，并构建 UNSAIDBench 专门评测语义欠定下的内在联合性。在两个模型、三个基准（含 UNSAIDBench）上，JointREPA 稳定提升语义一致性。",
+      "tags": ["Audio-Video Generation", "Multimodal", "Benchmark", "Post-Training"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        { "label": "arXiv", "url": "https://arxiv.org/abs/2611.22857" },
+        { "label": "PDF", "url": "https://arxiv.org/pdf/2611.22857" }
+      ]
+    },
+    {
+      "title": "Personalized Causal Low-Bitrate Coded Speech Restoration with Speaker Embeddings",
+      "url": "https://arxiv.org/abs/2611.22620",
+      "date": "2026-11-17",
+      "authors": "Eray Özgünay, Christian Rollwage, Kishan Gupta, Andreas Brendel, Xavier Domont, Mattes Ohlenbusch, Jan Rennies, Simon Doclo",
+      "abstract": "AMR-NB 等传统低码率编解码器在电话网络中仍广泛使用，但会限制语音带宽并恶化听感。编码语音修复（CSR）旨在恢复带宽与整体质量，但通常不区分说话人。本文以因果、低复杂度的通用带宽扩展 GAN（UBGAN）为基础，系统研究低码率编码语音的个性化修复：一是用说话人嵌入对单一 CSR 模型做条件化；二是基于声学相似说话人聚类的模型选择。实验在 4.75 kbps AMR-NB 编码语音上进行，使用互不重叠的已见/未见说话人测试集。结果显示聚类式模型选择并未稳定优于非个性化基线，而说话人嵌入条件化对已见与未见说话人都显著提升 ViSQOL 与 WB-PESQ。",
+      "tags": ["Coded Speech Restoration", "Bandwidth Extension", "Speaker Embedding", "Telephony"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        { "label": "arXiv", "url": "https://arxiv.org/abs/2611.22620" },
+        { "label": "PDF", "url": "https://arxiv.org/pdf/2611.22620" }
+      ]
+    },
+    {
+      "title": "Insight into Parametric First-Order Ambisonics Upscaling in Time and Frequency Domains",
+      "url": "https://arxiv.org/abs/2611.23089",
+      "date": "2026-11-17",
+      "authors": "Oded Levi, Boaz Rafaely",
+      "abstract": "一阶 Ambisonics（FOA）是空间音频的实用表示，但低阶重放在双耳渲染时存在明显感知缺陷，近年多通过由 FOA 合成高阶 Ambisonics（HOA）来弥补。然而早期反射在升阶过程中的作用尚未被系统研究。本文构建实验框架，基于能量准则挑选最强的早期反射并以高阶分辨率选择性渲染，在长时域、短时域与联合时频（TF）域三种选择机制下对比。以 SI-SDR、清晰度指数 C50、双耳互相关 IACC 等客观指标结合听音测试验证，TF 域表现最优；借助语音稀疏性，TF 方法在多说话人复杂场景下仍保持稳健，为未来参数化与数据驱动的 FOA 升阶方法提供了设计依据。",
+      "tags": ["Spatial Audio", "Ambisonics", "Binaural Rendering"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        { "label": "arXiv", "url": "https://arxiv.org/abs/2611.23089" },
+        { "label": "PDF", "url": "https://arxiv.org/pdf/2611.23089" },
+        { "label": "Listening Test Data", "url": "https://doi.org/10.5281/zenodo.24257365" }
+      ]
+    },
+    {
+      "title": "Evaluating the Evaluation of Music Generation Models with Generative Psychometrics",
+      "url": "https://arxiv.org/abs/2611.21809",
+      "date": "2026-11-16",
+      "authors": "João Carlos Santana Silveira, Caio Von Rondow Morais, Frederico Pedrosa, Lucas N. Ferreira",
+      "abstract": "主观听音实验是评测音乐生成模型的主要手段，但评测协议差异极大且很少写清到可复现的程度，导致跨研究难以比较。本文梳理 2020-2025 年 ISMIR 音乐生成论文中的主观评测方法，并用「生成式心理测量学」评估其题项稳定性：借助 LLM 加人工校验，从论文方法描述中抽取并标准化 284 个题项，表示为上下文嵌入后用 Unique Variable Analysis 去除冗余/局部依赖题项，再用 Bootstrap 探索性图分析估计潜在维度。结果显示题项网络收敛到六个稳定的质量维度：节奏、旋律、音频、作曲、结构与歌词，为音乐生成模型的用户研究提供了统一方法学。",
+      "tags": ["Music Generation", "Evaluation", "Psychometrics", "Benchmark"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        { "label": "arXiv", "url": "https://arxiv.org/abs/2611.21809" },
+        { "label": "PDF", "url": "https://arxiv.org/pdf/2611.21809" }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "Reson8 开源 0.5B 语音识别模型 Rumble-2-Flash：Apache 2.0，一小时录音一秒内转完",
+      "url": "https://huggingface.co/Reson8/Rumble-2-Flash",
+      "summary": "11 月 18 日，Reson8 团队在 Hugging Face 开源语音识别模型 Rumble-2-Flash，采用 Apache 2.0 许可，可商用、修改与再分发。模型为 0.5B 稠密结构：18 层音频编码器（隐层 896、128 路梅尔输入）+ 14 层文本解码器（隐层 1024、词表 99630、GQA 16Q/8KV、最大位置 65536），嵌入与输出层权重共享省下约 1 亿参数，支持 30 种语言（含普通话、粤语、英语、日韩、印地等）。官方称可与体积 3-60 倍的模型竞争：单张 H200 + vLLM 下英文榜平均 WER 6.60%，实时倍率 6338（一小时录音不到一秒处理完），细分 SPGISpeech 3.08%、VoxPopuli 2.43%、GigaSpeech 7.56%、AMI 9.24%；中文 CER 6.56%（FLEURS 5.82%、AISHELL-1 7.31%）；AppTek 302 小时英文呼叫中心测试集 WER 7.86%，与 NVIDIA Nemotron 3.5 Transcribe（7.78%）、Qwen3-ASR 1.7B（7.4%）同一量级。支持 vLLM（OpenAI 兼容接口）与 transformers 两种部署路径，附带 language/digits/filler/verbatim 四个转写开关。"
+    },
+    {
+      "title": "ElevenLabs 收购日本语音 AI 实验室 Kotoba，补齐日语 TTS/ASR/同传能力",
+      "url": "https://elevenlabs.io/blog",
+      "summary": "11 月 18 日消息，ElevenLabs 宣布收购日本头部语音 AI 实验室 Kotoba Technologies，交易预计 2026 年 Q4 晚些时候完成，尚待监管审批，金额未披露。Kotoba 成立于 2023 年，由康奈尔博士、前 Hugging Face 研究员小岛德之（CEO）与华盛顿大学博士、前 TTIC 助理教授葛西顺吾（CTO）联合创立，自研语音模型 Koto 覆盖日语语音合成、语音识别与语音到语音同传，已服务 Salesforce 等企业，支撑 Agentforce Voice 的日语对话。收购后 Kotoba 团队与技术将并入 ElevenLabs 技术栈，双方将推进面向日本与东亚市场的语音 AI Agent、实时同声翻译产品，ElevenLabs 亦计划在日本搭建本土销售团队并加大基础设施投入。"
+    }
+  ]
+}

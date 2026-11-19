@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-11-19</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-11-19</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年11月19日 (周四) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">7</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.22593" target="_blank">High-Fidelity Binarized Neural Vocoder</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-17</span><span>👥 Andong Li, Tong Lei, Xiaodong Li, Chengshi Zheng</span></div>
+      <div class="abstract">神经声码器在高保真波形生成上已相当成熟，但几乎全部依赖全精度算子，推理时的存储与算力开销难以忽略。本文提出 BiVoC——首个面向二值神经网络（BNN）的时频神经声码器：在自研 RNDVoC 框架基础上，把逆问题建模、range-null 分解与由细到粗的非均匀子带建模迁移到 1-bit 设定，并设计简单的二值卷积单元以在二值表示下保持稳定的时频特征建模；同时通过质量-复杂度敏感度分析提出混合精度设计，把质量敏感模块保留在全精度、把计算主导部分二值化。在 LibriTTS 及多个分布外基准上，BiVoC 显著优于直接二值化现有声码器得到的 BNN 变体，并在理论算力大幅降低的前提下与多个主流全精度声码器持平。代码与预训练权重已开源。</div>
+      <div class="tags"><span class="tag">Neural Vocoder</span><span class="tag">Binarization</span><span class="tag">Efficient Inference</span><span class="tag">Speech Synthesis</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.22593" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.22593" target="_blank">🔗 PDF</a> <a href="https://github.com/Andong-Li-speech/BiVoC" target="_blank">🔗 Code</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.22628" target="_blank">Back to Mel: Learning to Bridge Fidelity and Perception in Generative Speech Enhancement</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-17</span><span>👥 Andong Li, Kun Zhou, Xiaodong Li, Chengshi Zheng</span></div>
+      <div class="abstract">生成式语音增强近年普遍转向可学习紧致隐表示 + 大生成骨干，但声学保真度、感知质量与处理效率三者仍难兼顾。作者重新审视 Mel 频谱这一结构化声学表示，提出基于 flow matching 的 BAME 框架：其一，利用 Mel 频谱的显式层级频带分布设计子带感知 Transformer（SaT），仅用 331M DiT 骨干 2.9% 的参数量即取得更好的增强效果；其二，受 Mel 滤波在幅度谱域的 range-null 分解理论启发，引入带退化相位先验的相位感知神经声码器与质量引导的双相位策略，自适应抑制不可靠相位的影响；其三，提出一步式保真度-感知对齐策略，用两个域的互补约束微调 flow 模型。在 DNS-Challenge、EARS、GSR、URGENT 四个基准上，主客观指标均表现优异。样例与代码已开源。</div>
+      <div class="tags"><span class="tag">Speech Enhancement</span><span class="tag">Flow Matching</span><span class="tag">Mel Spectrum</span><span class="tag">Neural Vocoder</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.22628" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.22628" target="_blank">🔗 PDF</a> <a href="https://github.com/AndongLi-speech/BAME" target="_blank">🔗 Code</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.22627" target="_blank">Beyond Mimicry: Constrained Exploration with GRPO for Joint Multi-Talker ASR and Diarization under Unknown Speaker Counts</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-17</span><span>👥 Yunrui Cai, Dingdong Wang, Lingwei Meng, Xixin Wu, Zhiyong Wu, Helen Meng</span></div>
+      <div class="abstract">在说话人数未知、且输出必须严格遵循结构的多说话人联合识别（带说话人归属与时间戳）任务中，仅用监督微调（SFT）对齐的 SpeechLLM 在密集重叠语音下非常脆弱，常出现突发性幻觉和说话人/时间戳标签错乱。作者提出两阶段统一生成框架：先用 CoT 增强的 SFT 在做转写前推断全局说话人数；再用 GRPO 做受约束的探索，以多维约束感知奖励（MCAR）直接优化置换不变准确率，并同时约束计数、时间与结构。在 Libri3Mix 与测试时说话人数未知的 Dynamic-Mix (2+3) 集合上，cpWER 分别为 14.52%/9.24%、WDER 为 1.95%/1.12%，GRPO 相对 SFT+CoT 带来 35%/54% 的 cpWER 相对下降。</div>
+      <div class="tags"><span class="tag">Multi-Talker ASR</span><span class="tag">Speaker Diarization</span><span class="tag">GRPO</span><span class="tag">SpeechLLM</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.22627" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.22627" target="_blank">🔗 PDF</a> <a href="https://doi.org/10.21437/Interspeech.2026-2297" target="_blank">🔗 DOI</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.22857" target="_blank">Beyond Co-Generation: Rethinking Jointness in Joint Audio-Video Generation</a></h4>
+      <div class="meta"><span>📅 2026-11-17</span><span>👥 Jihoo Jung, Ji-Hoon Kim, Suyeon Lee, Gia Thinh Pham, Joon Son Chung</span></div>
+      <div class="abstract">现有文本到音视频（T2AV）联合生成的一致性评测难以区分「真正的跨模态协同」与「各自独立遵循文本提示」。作者提出内在联合性（intrinsic jointness）概念：当提示语义欠定时，音频与视频能否给出同一个具体实现。用语义欠定的提示（如「乐器演奏」而非「电吉他演奏」）测试四个近期模型，发现其内在联合性普遍有限。为此提出 JointREPA——一种基于表征对齐的简单后训练方法以促进跨模态协同，并构建 UNSAIDBench 专门评测语义欠定下的内在联合性。在两个模型、三个基准（含 UNSAIDBench）上，JointREPA 稳定提升语义一致性。</div>
+      <div class="tags"><span class="tag">Audio-Video Generation</span><span class="tag">Multimodal</span><span class="tag">Benchmark</span><span class="tag">Post-Training</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.22857" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.22857" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.22620" target="_blank">Personalized Causal Low-Bitrate Coded Speech Restoration with Speaker Embeddings</a></h4>
+      <div class="meta"><span>📅 2026-11-17</span><span>👥 Eray Özgünay, Christian Rollwage, Kishan Gupta, Andreas Brendel, Xavier Domont, Mattes Ohlenbusch, Jan Rennies, Simon Doclo</span></div>
+      <div class="abstract">AMR-NB 等传统低码率编解码器在电话网络中仍广泛使用，但会限制语音带宽并恶化听感。编码语音修复（CSR）旨在恢复带宽与整体质量，但通常不区分说话人。本文以因果、低复杂度的通用带宽扩展 GAN（UBGAN）为基础，系统研究低码率编码语音的个性化修复：一是用说话人嵌入对单一 CSR 模型做条件化；二是基于声学相似说话人聚类的模型选择。实验在 4.75 kbps AMR-NB 编码语音上进行，使用互不重叠的已见/未见说话人测试集。结果显示聚类式模型选择并未稳定优于非个性化基线，而说话人嵌入条件化对已见与未见说话人都显著提升 ViSQOL 与 WB-PESQ。</div>
+      <div class="tags"><span class="tag">Coded Speech Restoration</span><span class="tag">Bandwidth Extension</span><span class="tag">Speaker Embedding</span><span class="tag">Telephony</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.22620" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.22620" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.23089" target="_blank">Insight into Parametric First-Order Ambisonics Upscaling in Time and Frequency Domains</a></h4>
+      <div class="meta"><span>📅 2026-11-17</span><span>👥 Oded Levi, Boaz Rafaely</span></div>
+      <div class="abstract">一阶 Ambisonics（FOA）是空间音频的实用表示，但低阶重放在双耳渲染时存在明显感知缺陷，近年多通过由 FOA 合成高阶 Ambisonics（HOA）来弥补。然而早期反射在升阶过程中的作用尚未被系统研究。本文构建实验框架，基于能量准则挑选最强的早期反射并以高阶分辨率选择性渲染，在长时域、短时域与联合时频（TF）域三种选择机制下对比。以 SI-SDR、清晰度指数 C50、双耳互相关 IACC 等客观指标结合听音测试验证，TF 域表现最优；借助语音稀疏性，TF 方法在多说话人复杂场景下仍保持稳健，为未来参数化与数据驱动的 FOA 升阶方法提供了设计依据。</div>
+      <div class="tags"><span class="tag">Spatial Audio</span><span class="tag">Ambisonics</span><span class="tag">Binaural Rendering</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.23089" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.23089" target="_blank">🔗 PDF</a> <a href="https://doi.org/10.5281/zenodo.24257365" target="_blank">🔗 Listening Test Data</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.21809" target="_blank">Evaluating the Evaluation of Music Generation Models with Generative Psychometrics</a></h4>
+      <div class="meta"><span>📅 2026-11-16</span><span>👥 João Carlos Santana Silveira, Caio Von Rondow Morais, Frederico Pedrosa, Lucas N. Ferreira</span></div>
+      <div class="abstract">主观听音实验是评测音乐生成模型的主要手段，但评测协议差异极大且很少写清到可复现的程度，导致跨研究难以比较。本文梳理 2020-2025 年 ISMIR 音乐生成论文中的主观评测方法，并用「生成式心理测量学」评估其题项稳定性：借助 LLM 加人工校验，从论文方法描述中抽取并标准化 284 个题项，表示为上下文嵌入后用 Unique Variable Analysis 去除冗余/局部依赖题项，再用 Bootstrap 探索性图分析估计潜在维度。结果显示题项网络收敛到六个稳定的质量维度：节奏、旋律、音频、作曲、结构与歌词，为音乐生成模型的用户研究提供了统一方法学。</div>
+      <div class="tags"><span class="tag">Music Generation</span><span class="tag">Evaluation</span><span class="tag">Psychometrics</span><span class="tag">Benchmark</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.21809" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.21809" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>Reson8 开源 0.5B 语音识别模型 Rumble-2-Flash：Apache 2.0，一小时录音一秒内转完</h4>
+      <p>11 月 18 日，Reson8 团队在 Hugging Face 开源语音识别模型 Rumble-2-Flash，采用 Apache 2.0 许可，可商用、修改与再分发。模型为 0.5B 稠密结构：18 层音频编码器（隐层 896、128 路梅尔输入）+ 14 层文本解码器（隐层 1024、词表 99630、GQA 16Q/8KV、最大位置 65536），嵌入与输出层权重共享省下约 1 亿参数，支持 30 种语言（含普通话、粤语、英语、日韩、印地等）。官方称可与体积 3-60 倍的模型竞争：单张 H200 + vLLM 下英文榜平均 WER 6.60%，实时倍率 6338（一小时录音不到一秒处理完），细分 SPGISpeech 3.08%、VoxPopuli 2.43%、GigaSpeech 7.56%、AMI 9.24%；中文 CER 6.56%（FLEURS 5.82%、AISHELL-1 7.31%）；AppTek 302 小时英文呼叫中心测试集 WER 7.86%，与 NVIDIA Nemotron 3.5 Transcribe（7.78%）、Qwen3-ASR 1.7B（7.4%）同一量级。支持 vLLM（OpenAI 兼容接口）与 transformers 两种部署路径，附带 language/digits/filler/verbatim 四个转写开关。 <a href="https://huggingface.co/Reson8/Rumble-2-Flash" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>ElevenLabs 收购日本语音 AI 实验室 Kotoba，补齐日语 TTS/ASR/同传能力</h4>
+      <p>11 月 18 日消息，ElevenLabs 宣布收购日本头部语音 AI 实验室 Kotoba Technologies，交易预计 2026 年 Q4 晚些时候完成，尚待监管审批，金额未披露。Kotoba 成立于 2023 年，由康奈尔博士、前 Hugging Face 研究员小岛德之（CEO）与华盛顿大学博士、前 TTIC 助理教授葛西顺吾（CTO）联合创立，自研语音模型 Koto 覆盖日语语音合成、语音识别与语音到语音同传，已服务 Salesforce 等企业，支撑 Agentforce Voice 的日语对话。收购后 Kotoba 团队与技术将并入 ElevenLabs 技术栈，双方将推进面向日本与东亚市场的语音 AI Agent、实时同声翻译产品，ElevenLabs 亦计划在日本搭建本土销售团队并加大基础设施投入。 <a href="https://elevenlabs.io/blog" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-11-19') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
