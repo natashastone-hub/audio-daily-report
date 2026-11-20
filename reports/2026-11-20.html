@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-11-20</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-11-20</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年11月20日 (周五) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">12</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">5</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">5</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.24094" target="_blank">21Codec: Decoder-side Speaker Control for Text-to-Speech</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-18</span><span>👥 David Lindevelt, Suzan Verberne, Joost Broekens</span></div>
+      <div class="abstract">现有语音编解码模型把说话人身份编码进 token 流，一旦改成分块流式生成就非常不稳：每个 chunk 只能靠局部上下文重新推断音色，容易发生说话人漂移。作者提出 21Codec——一个把「可恢复的说话人信息」从 token 流里挤出去、把音色控制挪到解码器的流式 codec。做法是引入对抗式说话人分类器，配合 NANSY 风格的共振峰移位数据增广，逼模型依赖外部给定的 speaker embedding 而不是从 token 里「偷」身份；同时保证流式过程中跨 chunk 的音色一致，且支持中途换音色。对需要长时流式 TTS、又要求音色可控可信的场景（客服、有声书、游戏配音）是直接可用的组件。投稿 ICASSP 2027。</div>
+      <div class="tags"><span class="tag">Codec</span><span class="tag">TTS</span><span class="tag">Streaming</span><span class="tag">Speaker Control</span><span class="tag">Voice Cloning</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.24094" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.24094" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.23847" target="_blank">Great Listeners, Poor Decision-Makers: Rethinking Agentic Audio AI</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-18</span><span>👥 Siddique Latif, Moid Sandu, Farrukh Pervez, Raja Jurdak</span></div>
+      <div class="abstract">语音 AI 已经能很好地识别语音、声音与音乐，但语音智能体仍在「不该动的时候乱动」：执行说给别人听的指令、听错就动手、用户话没说完就抢答。这篇 position paper 主张 agentic audio AI 的瓶颈已从「识别」转移到「决策」，并提出在感知与推理之外单独设一个显式决策层，依据「是否在对我说（addressedness）、说话人身份、内容置信度、工具可靠性、话语完整性、动作风险」六类证据决定：执行 / 等待 / 追问 / 保持沉默。作者用模糊推理 + 进化优化 + 序贯决策实现该层，仿真与真实录音（含第一视角录音）实验显示：addressedness 与说话人证据最关键，风险感知门控能显著压掉高代价误动作；真实录音上把「旁聊被误执行」从 41% 降到 7–10%，同时在成功澄清的前提下仍服务了 83–85% 的有效请求，优于基于 prompt 的基线。结论是：显式动作门控应作为可靠语音智能体的架构级要求。</div>
+      <div class="tags"><span class="tag">Voice Agent</span><span class="tag">Audio LLM</span><span class="tag">Action Gating</span><span class="tag">Full-duplex</span><span class="tag">Safety</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.23847" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.23847" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.23768" target="_blank">Beyond Intelligibility: Fine-Grained Perceptual Assessment of Dysarthric Speech with Auditory Large Language Models</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-18</span><span>👥 Haotian Wei, Can Long, Wen Xian Jim, Guangzhi Sun 等</span></div>
+      <div class="abstract">构音障碍（dysarthria）评估对临床诊断与康复至关重要，但现有自动化方法要么依赖单任务小模型，要么用通用语音质量指标，无法拆解异质的神经运动缺陷。本文首次系统研究把听觉大语言模型（ALLM）用于多维度构音障碍评估：在统一的 prompt 条件化框架下，评测 4 个代表性 ALLM 在 Speech Accessibility Project（SAP）五个临床感知维度上的表现——自然度、单音调（monopitch）、可懂度、辅音不清、不当停顿。为弥合「通用感知质量」与「临床评估」之间的鸿沟，作者探索两阶段训练：先域外预训练、再域内临床适配。结果显示领先 ALLM 能稳定捕捉细粒度病理变化，且在韵律类与构音类属性上呈现互补优势，为临床语音评估提供了可扩展的新基座，并给出模型选型与多任务迁移的实用结论。</div>
+      <div class="tags"><span class="tag">Audio LLM</span><span class="tag">Dysarthric Speech</span><span class="tag">Clinical Assessment</span><span class="tag">Speech Accessibility</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.23768" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.23768" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.23348" target="_blank">SIGMA: speaker-isolated, symptom-structured multimodal estimation of depression severity from clinical interviews</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-17</span><span>👥 Zhuoyuan Tang, Tao Wang, Kai Yang, Li Yuan 等</span></div>
+      <div class="abstract">临床访谈是抑郁评估的核心，但耗时且依赖评分者。现有自动评估方法有三个通病：保留了访谈者语音（混淆被试线索）、多模态晚融合（丢失细粒度跨模态动态）、逐症状独立打分（忽略症状间相关）。SIGMA 三点对应解决：用说话人分离（diarization）把输入限制在被试语音；用 cross-attention 让文本、音频、视频在编码阶段互相条件化；用 graded-response head 通过共享的潜在严重度特质 + 各条目有序阈值，联合预测 8 个问卷条目。在 Extended DAIC 语料上取得 SOTA（5 个随机种子平均 CCC 0.762、RMSE 4.13、MAE 3.30）。消融显示「隔离被试语音」与「结构化联合预测」各自都显著提升一致性。</div>
+      <div class="tags"><span class="tag">Depression Estimation</span><span class="tag">Speaker Diarization</span><span class="tag">Multimodal</span><span class="tag">Clinical Speech</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.23348" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.23348" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.23609" target="_blank">Label-Free Role-Aware Segmentation of Classroom Recordings: Recovering the Teacher from Transferable Structure</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-17</span><span>👥 Nitin Jain, Tim Fütterer, Babette Bühler, Çağatay Yıldız</span></div>
+      <div class="abstract">「老师说了多少、什么时候说」是教学研究里最有信息量也最昂贵的信号，但课堂录音含未成年人、受 GDPR 约束，原始音频不能离开录制设备。本文给出一条正好卡住这个约束的教师/学生分离流水线：推理阶段无标签、可跑在录制设备上、无需逐节课校准。链路是轻量 VAD → 小型预训练说话人 embedding → 凝聚聚类 → 一个小逻辑回归，用「会话内相对结构」而不是声纹身份来判定谁是老师，因此该结构线索可跨教室、跨语言、跨声学条件迁移。在 63 位教师 292 段录音（英/德双语料）的 leave-one-teacher-out 交叉验证中，教师 F1 分别达 0.81 / 0.87，优于基于注册（enrollment）的基线，甚至超过 30 秒有监督注册的上限；在普通手机上性能与 pyannote 持平，速度快 4.8 倍（实时率约 0.18）。失效集中在师生声音不可分的片段，作者给出无标签自动标记方案以便转人工复核。AAAI IAAI 录用。</div>
+      <div class="tags"><span class="tag">Speaker Diarization</span><span class="tag">Privacy-Preserving</span><span class="tag">On-Device</span><span class="tag">Classroom Audio</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.23609" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.23609" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.24125" target="_blank">Location Matters: Layer-wise Prompt Conditioning for Voice--Style Disentanglement in Text-to-Speech</a></h4>
+      <div class="meta"><span>📅 2026-11-18</span><span>👥 David Lindevelt, Suzan Verberne, Joost Broekens</span></div>
+      <div class="abstract">TTS 系统里「音色」与「情感风格」的独立控制长期是难题。本文不换模型结构，而是研究一个被忽视的变量：音色 prompt 与风格 prompt 注入到解码器哪一层，如何影响「音色保真 vs 表现力」的取舍。作者提出层级可门控融合（layer-dependent gated fusion）机制，系统扫描不同 prompt 类型应作用于哪些层。结论是一个非对称关系：音色更受益于「早注入」以保持身份一致性，风格同样受益于早注入以获得表现力，但两者的最优位置并不相同。给出的是可落地的架构设计指南——按业务优先级（是保真优先还是表现力优先）选择注入层级。投稿 ICASSP 2027。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">Voice Style Disentanglement</span><span class="tag">Prompt Conditioning</span><span class="tag">Controllable Speech</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.24125" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.24125" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.24410" target="_blank">Why Multi-Source Audio Fails to Compose: A Geometric Diagnosis and Its Remedy</a></h4>
+      <div class="meta"><span>📅 2026-11-18</span><span>👥 Anurag Singh, Prajwal Singh, Shanmuganathan Raman</span></div>
+      <div class="abstract">多声源音频生图（audio-to-image）在组合性上系统性失败：音频 token 被投影到 CLIP 文本 token 空间中「几何上偏移、语义上无锚点」的位置，扩散 U-Net 既不会可靠地 attend 到它们，也无法把它们落地到不同空间区域。作者把这一现象形式化为 geometric displacement，并用两级聚类分析在原始编码器与投影后的 CLIP token 层面比较 BEATs 与 CLAP，提炼出三个关键几何性质：类内紧致度、与 CLIP 文本流形的角度对齐、token 间空间分离度。结论是 CLAP 三项全面优于 BEATs（silhouette 提升 3 倍以上），AIC 指标也随之提升。据此提出无需重训扩散骨干的多 token 扩展：为每个声源在 CLIP tokenizer 里分配独立占位 token，并在推理期用 Attend-and-Excite 叠加 A* 空间分离损失消除残余串扰。作者基于 VGGSound 构建 VGG2/VGG3/VGGN 多声源组合基准，并把 6 个 audio-image 指标扩展到多源设定；5 个基准、4 个强基线上，组合保真相关指标显著领先，AIC 最高提升 2.25 倍，双声源 FID 降低近一半。BMVC 2026 录用。</div>
+      <div class="tags"><span class="tag">Audio-to-Image</span><span class="tag">CLAP</span><span class="tag">Cross-Modal Generation</span><span class="tag">Compositionality</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.24410" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.24410" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.24323" target="_blank">RespCCT and FreqCCT: Compact, Explainable and Cost-Aware Convolutional Transformers for Multi-Class Respiratory Disease Classification</a></h4>
+      <div class="meta"><span>📅 2026-11-18</span><span>👥 Auntor Chakma, Mst. Farhana Akter, Abu Henaf Rashid Ahmad Mufti, Asmana Yasmin</span></div>
+      <div class="abstract">听诊依赖医生经验，能自动分类肺音的软件可在缺乏训练有素听诊者的地方提供「第二读片」。但当前最准的分类器都是微调大型预训练网络，且很少同时报告运行成本与配对统计。本文三项贡献：(1) 提出 RespCCT（173,187 参数）与 FreqCCT（124,999 参数）两个紧凑卷积 Transformer，从随机初始化开始，在 ICBHI/KAUH/RD@TR 三个公开库共 1,665 个音频、7 类的 5 秒帧上训练，输入用 mel、常数 Q、倒谱三种图像；(2) 在同一个测试集上，用配对 bootstrap 区间与 5 个 ImageNet 预训练网络及更大的蒸馏变体比较；(3) 在单 CPU 线程上测每个流水线阶段的成本，检验归因图是否依赖训练权重，并探测学到的特征是否泄露录制来源。测试折上 RespCCT 准确率 98.13%、宏 F1 0.970，FreqCCT 97.58%、0.951；五折下分别为 97.65%/0.959 与 96.95%/0.941。两个最强预训练网络宏 F1 达 0.984，但 RespCCT 只需其 1/2.0 到 1/64.6 的权重存储。值得注意的是：算三张输入图比跑模型本身更耗时，且线性探针以 0.958 准确率就能识别数据来源库——提示该领域存在明显的数据源偏置。</div>
+      <div class="tags"><span class="tag">Respiratory Sound</span><span class="tag">Lung Auscultation</span><span class="tag">Compact Model</span><span class="tag">Explainability</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.24323" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.24323" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.24086" target="_blank">Constructing Dynamic Conversations with Neural Back-channel Generation and Voice-line Scheduling</a></h4>
+      <div class="meta"><span>📅 2026-11-18</span><span>👥 Yifang Pan, Chris Landreth, Karan Singh</span></div>
+      <div class="abstract">游戏配音里，双人对话的两条 voice-line 通常是各自独立录制或合成的，拼起来生硬。本文提出把两轨不同步音频合成一段「有可控附和与轮次动态」的自然对话：用神经调度器（neural scheduler）通过插/删停顿、按需引入语音重叠来重排两轨；并额外提出一个 back-channel 预测器，根据某一轮对话的音频与内容预测「此处可以附和」的机会点，交由调度器使用。作者分别与联合评估了调度器与预测器：多项量化对比、与现有方法和朴素基线的感知听测，以及一组展示动画师如何控制附和多样性、时长与轮次动态的结果。项目页与 Demo 已公开。</div>
+      <div class="tags"><span class="tag">Conversational Speech</span><span class="tag">Back-channel</span><span class="tag">Turn-taking</span><span class="tag">Game Voice</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.24086" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.24086" target="_blank">🔗 PDF</a> <a href="https://evansamaa.github.io/NeuralSchedularRelease_page/" target="_blank">🔗 Project</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.24794" target="_blank">Exploring Speaker-Aware Engagement Modeling for Children with Autism Spectrum Disorder</a></h4>
+      <div class="meta"><span>📅 2026-11-18</span><span>👥 Kaleen Shrestha, Austin Joel Dympep, Young Suh Hong, Maja Matarić</span></div>
+      <div class="abstract">自闭症谱系（ASD）儿童参与度建模的已有工作多集中在视觉模态，且个体差异极大。本文把研究扩展到自然交互中的声学特征——此时多人说话与非典型交互模式让说话人相关分析变得困难。作者研究「说话人分离是否能提升声学参与度建模」，数据来自 7 名 ASD 儿童、历时数月的居家社交辅助机器人（SAR）干预。用分离后的儿童与家长/照护者音频提取声学特征训练传统机器学习模型，并与未分离音频训练的模型对比：分离版本 AUROC 一致更高（但差异未达统计显著）。更关键的发现是：儿童与照护者声学特征的相对贡献因人而异，说明与「参与度」相关的声学信息在儿童之间并不一致。这为 ASD 参与度建模的个体差异提供了声学侧证据，也证明在复杂自然交互中隔离说话人语音是可行的。</div>
+      <div class="tags"><span class="tag">Engagement Modeling</span><span class="tag">Speaker Diarization</span><span class="tag">ASD</span><span class="tag">Social Robotics</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.24794" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.24794" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.24741" target="_blank">Sex Differences in the Detection of Parkinson's Disease from Speech</a></h4>
+      <div class="meta"><span>📅 2026-11-18</span><span>👥 Hiba Akhaddar, Peter Plantinga, Mirco Ravanelli, Tristan Glatard</span></div>
+      <div class="abstract">帕金森病（PD）是全球第二大神经退行性疾病，70%–75% 的患者在某个阶段出现言语障碍；由于男性发病率更高，已有研究普遍使用性别不均衡数据，可能把性别偏置带进模型。本文系统考察语音 PD 检测中的性别差异：用 3 个预训练语音模型的 embedding、手工声学特征与多种分类器组合，在四个持续元音（sustained phonation）数据集上构造按性别、患病状态（并尽量按年龄）平衡的子集做分性别实验。结果显示：在较大数据集上女性分类准确率高于男性；而分性别训练得到的模型无法泛化到另一性别。作者据此强调：PD 语音检测系统的开发必须把性别作为一个显式变量。</div>
+      <div class="tags"><span class="tag">Parkinson's Disease</span><span class="tag">Speech Biomarker</span><span class="tag">Fairness</span><span class="tag">Health AI</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.24741" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.24741" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.24453" target="_blank">Harmonic Circuit: Chord Progression Lies in a Sparse Principal Information Flow in Symbolic Music Models</a></h4>
+      <div class="meta"><span>📅 2026-11-18</span><span>👥 Ruiji Yu, Gus Xia</span></div>
+      <div class="abstract">机制可解释性（MI）在 NLP 已相当成熟，但音乐模型里的可解释回路几乎无人探索。本文在两个符号音乐生成模型 ChatMusician 与 MuPT 中定位了一个「音乐功能回路」：目标是经典和声进行 I…V→I 中终止主和弦根音的预测。作者用 Auto-Emergence 算法提取主稀疏子网络作为该回路，并通过因果干预验证它确实是和声进行行为的主要驱动。据作者所知，这是音乐领域首个系统性的 circuit discovery 研究。Demo 页已公开。NeurIPS 2026 Interpretability for Discovery Workshop 录用。</div>
+      <div class="tags"><span class="tag">Mechanistic Interpretability</span><span class="tag">Symbolic Music</span><span class="tag">Circuit Discovery</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.24453" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.24453" target="_blank">🔗 PDF</a> <a href="https://ukiyo23rui.github.io/auto-emergence-demo/" target="_blank">🔗 Demo</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>微软 Ignite 2026 发布首款语音对语音模型 MAI Realtime 1：$0.01/音频分钟，兼容 OpenAI Realtime API</h4>
+      <p>微软在 11 月 17 日 Ignite 2026 大会上推出自研首个企业级语音对语音（speech-to-speech）模型 MAI Realtime 1，与编程模型 MAI Code 2、安全模型 MAI Cyber 2 Flash、图像模型 MAI Image 2.7、转写模型 MAI Transcribe 2 等一同发布。MAI Realtime 1 专为真实业务场景设计：能处理打断、快速确认意图、耐心等对方说完，在背景嘈杂或多人同时说话时仍能听懂请求；需要深度思考时可调用更强的推理引擎，并可连接企业系统与工具完成预订、客服等操作。官方称其在语音理解与任务执行测试中超过 GPT-Realtime 2.1，接口已兼容 OpenAI Realtime API，起价每音频分钟 0.01 美元（约为对手三分之一）。配套的 MAI Transcribe 2 已支撑 Dragon Copilot Transcribe 每月处理约 1000 万次医患对话。这意味着企业级实时语音赛道正式进入「微软-OpenAI-Google」三方对撞阶段。 <a href="https://www.smarthey.com/detail/383072302419.html" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>AssemblyAI 发布 STT-3.7 三款转写模型与首个 TTS：语音智能体专用、86ms 出终稿</h4>
+      <p>11 月 18 日 AssemblyAI 重写推理引擎后发布新一代转写模型 STT-3.7，一次给三个变体：STT-3.7-Realtime（会议/通话/字幕，$0.30/小时，轮次结束即固定说话人标签、无 revision pass）、STT-3.7-Realtime-Agent（语音智能体专用，$0.45/小时，说话结束后 86ms 出最终转写，partial→final 改字率从 3.2% 降到 1.0%）、STT-3.7（录音转写，$0.21/小时，新 diarization 模型）。三者在单流内支持 32 种语言并自动检测/切换，新增韩语、俄语、乌尔都语、粤语等 14 种。相比 Universal-3.6 Pro Realtime，在其 12,460 通语音智能体通话测试集上：数字错误降 80%（11.28%→2.27%）、实体漏检降 53%、背景语音误拾降 47%、过短回答被丢弃降 38%，WER 5.19%→4.46%。同期发布首个 TTS 模型 AssemblyAI-TTS-1，与 STT、LLM Gateway 共用一把 key，直指 ElevenLabs 的 Scribe v3 / Live 组合。 <a href="https://www.assemblyai.com/blog/introducing-assemblyai-stt-3-7" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Inworld 实时 TTS 打出 50ms 首包、500+ 语言、价格 1/16：Hacker News 11 月 19 日热议</h4>
+      <p>Inworld 的实时 TTS 模型 11 月 19 日在 Hacker News 引发讨论（「Inworld TTS looks not bad at all」）。官方页面标称 Realtime TTS-2 Flash 首包音频延迟可低至 50ms，官方对比口径为比 ElevenLabs 快约 3 倍、价格约为其 1/16；支持 500+ 语言与方言，可用自然语言指令实时控制情感与语调，并能从约 3 秒音频克隆音色、或直接用文字描述定制声音。同期 Inworld 还在 Apache-2.0 下开源了一个 48kHz 语音分离模型（58M / 64M 两个尺寸，64M 版离线按 8 秒分块处理），把「实时合成 + 音源分离」两条能力同时压到低成本区间。对做实时语音助手、配音、游戏 NPC 的团队，这是当前性价比最激进的选项之一。 <a href="https://www.inworld.ai/" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>tiny-voca：4.5M 参数、9MB 的开源 TTS，单 CPU 70 倍实时，训练成本约 10 美元</h4>
+      <p>开发者 Muhammed Nazeem（n4ze3m）开源的 tiny-voca 在 11 月 18 日前后迅速走热：Apache-2.0 许可，仅 4.5M 参数、模型文件约 9MB，不需要 GPU，在单 CPU 上约 70 倍实时运行，训练成本仅约 10 美元，内置两个英文音色。模型已提供 ONNX / GGUF 量化版本（ggml-org/tiny-voca-GGUF 于 11 月 18 日上线），HF 上点赞已超 330、下载数千次，社区还在做日语等衍生微调。它延续了 Kyutai Pocket TTS 打开的「极小 TTS」路线：语音合成正在变成可以塞进端侧 App、甚至浏览器里的基础能力，代价是最小尺寸在可懂度与自然度上仍要让步。 <a href="https://huggingface.co/n4ze3m/tiny-voca" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Kyutai 1.9M 参数 Pocket TTS 被跑进 iPhone 神经引擎：20 分钟文章 20 秒内念完</h4>
+      <p>Kyutai 于 10 月 20 日发布的 Pocket TTS Small 系列（18.2M / 6.9M / 1.9M 三个英文音色克隆模型）在 11 月 19 日出现关键落地进展：一位 App 开发者在 Hacker News 报告已把 PocketTTS 的音色克隆跑在 iPhone 神经引擎上，声称 20 分钟的文章可在 20 秒内朗读完成（属个人实测，非官方基准）。官方第一方数据为：单线程 CPU 上分别 9.9× / 12.6× / 25× 实时；LibriSpeech test-clean 上 1.9M 版 WER 1.72%、UTMOS 3.906，18.2M 旗舰版 0.85% / 4.339，1.9M 版加 reward 微调后改善到 1.27% / 4.012。社区同时反馈存在粗口审查行为、以及小模型在多语言发音上的问题。这条线值得盯的是「模型瘦身配方能否迁移到别的 TTS 架构」。 <a href="https://ainews.leverageai.com.au/case/kyutai-pocket-tts-1-9m-voice-cloning" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-11-20') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
