@@ -1,0 +1,110 @@
+{
+  "date": "2026-11-20-pm",
+  "papers": [
+    {
+      "title": "UMelCodec: An Ultra-Low-Bitrate and Lightweight Mel-Domain Neural Speech Codec",
+      "url": "https://arxiv.org/abs/2611.25569",
+      "date": "2026-11-19",
+      "authors": "Hui-Peng Du, Yang Ai, Zhen-Hua Ling",
+      "abstract": "超低码率语音编码在带宽受限通信与紧凑存储里是刚需，但要在几百 bps 量级同时守住可懂度、自然度和细粒度声学细节非常难：纯声学 codec 一般跑在较高码率，引入语义表征虽然能压码率，代价是复杂度上升。本文提出 UMelCodec——一个纯声学、在 mel 域工作的极低码率神经语音编解码器，码率仅 325 bps，架构轻量。两阶段设计：第一阶段 mel 域编码，用 alias-free Snake-ConvNeXt（AF-SC）编解码骨干建模时序与谐波结构，用因子化单码本 VQ 实现超低码率量化，再用多尺度 mel 谱判别器（MSMD）提升 mel 重建质量；第二阶段波形合成，用一个轻量 MDCT 神经声码器从重建的 mel 谱预测 MDCT 频谱、经逆 MDCT 还原波形。LibriTTS 上大多数客观重建指标优于强基线，主观自然度保持竞争力。复杂度上仅 19.67M 参数、1.93G MACs，GPU 与 CPU 都能实时推理。",
+      "tags": ["Codec", "Ultra-Low-Bitrate", "Mel-Domain", "Neural Vocoder", "Lightweight"],
+      "highlight": true,
+      "highlight_note": "325 bps 纯声学路线做到 19.67M 参数实时推理，给「不走语义 token」的超低码率方案一个强基线",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.25569"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.25569"}
+      ]
+    },
+    {
+      "title": "Joint Language Modeling for In-the-Wild Speech-Scene Generation with Distinct Token Representations",
+      "url": "https://arxiv.org/abs/2611.25503",
+      "date": "2026-11-19",
+      "authors": "Semin Kim, Ju Yeon Kang, Sunghwan Ahn, Seonuk Kim, Nam Soo Kim",
+      "abstract": "语音场景生成（speech-scene generation）要合成「可懂的目标语音 + 多样环境声」组成的连贯声学场景，难点有两处：语音与环境声在语义和声学特性上差异极大，而现有方法通常用单一混合声学表征建模整个场景；同时两者在真实场景中高度相关，但传统做法多依赖独立录制再混音的仿真数据。本文提出基于 LLM 的框架，对「语音 token 流」和「环境声 token 流」做判别式联合建模：用 source-aware 神经音频 codec 从混合音频中抽出时间对齐的语音 token 与环境 token，再用预训练 LLM 在自然语言场景描述 + 语音内容的条件下，以交错（interleaved）方式同时生成两条流。这样既保留来源各自的表征，又在共享生成上下文里建模两者关系；由于两条流都直接从混合录音里抽取，模型可以直接适配没有分离源的 in-the-wild 语音场景。实验显示语音可懂度、场景相关性与音频质量均优于现有方法，真实数据适配后收益稳定；作者还分析了语音激活期间环境声是否保持稳定、以及两流如何相互作用。",
+      "tags": ["Speech-Scene Generation", "Audio LLM", "Neural Codec", "Interleaved Generation", "In-the-Wild"],
+      "highlight": true,
+      "highlight_note": "把语音和环境声拆成两条 token 流交给 LLM 交错生成，且能直接用未分离的真实混合录音训练",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.25503"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.25503"}
+      ]
+    },
+    {
+      "title": "When Sounds Turn Heads: Recovering Event Timing That Audio LLMs Fail to Say",
+      "url": "https://arxiv.org/abs/2611.25960",
+      "date": "2026-11-19",
+      "authors": "Jongbhin Woo, Jaewook Jeong, Joon Son Chung",
+      "abstract": "音频 LLM 常常「知道」被查询的声音在什么时候出现，却说不出来。作者定位到少数几个专门跟踪被查询声音的注意力头：查询换了它们跟着偏移，声音移动它们跟着移动，移除或屏蔽这些头往往会让模型的时间戳变差——但模型的答案并不表达它们跟踪到的东西。直接从这些头读出的区间，反而优于模型原本给出的答案，还能捞回模型时间戳完全漏掉的事件。为把这份时序信息带进答案，作者提出免训练的 head-guided decoding：保留模型对「声音是否存在」的判断，只用这些头提供的先验对候选时间戳重新打分。在开发集上选出的头可以原封不动迁移到新录音与自由文本查询；在三个音频 LLM 上 head-guided decoding 均改善时间戳，每个基准上都高于直接读头的方案，多数设置下也优于随机头引导。在模型训练之后才发布的录音上，mIoU 从 0.07–0.36 提升到 0.48–0.56。结论是：音频 LLM 的时间定位差，部分原因是「说不出」而不是「听不到」，而模型自身的注意力就能补上一部分差距。",
+      "tags": ["Audio LLM", "Temporal Grounding", "Attention Probing", "Training-Free", "Interpretability"],
+      "highlight": true,
+      "highlight_note": "免训练的头引导解码把 mIoU 从 0.07–0.36 拉到 0.48–0.56，证明音频 LLM 是「说不出」而非「听不到」",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.25960"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.25960"}
+      ]
+    },
+    {
+      "title": "From Attention to Semantics: Detecting and Mitigating Sound Event Hallucinations in Large Audio-Language Models",
+      "url": "https://arxiv.org/abs/2611.25789",
+      "date": "2026-11-19",
+      "authors": "Tianyi Sun, Minghao Lv, Chunyang Yu, Shenyue Wang, Mengyue Wu",
+      "abstract": "大型音频语言模型（LALM）在多类音频任务上很强，但仍会幻觉出输入里并不存在的声音事件。已有工作把幻觉归因于「音频注意力不足」，但本文发现：真实事件与幻觉事件可以分到相当的注意力总量，只是它们关注的是音频中的不同位置。为判断被关注到的表征是否真的支持生成的事件，作者改造 LatentLens 去检索邻近的上下文化文本表征：真实事件能检索到语义上支持它的上下文，幻觉事件则与其被关注的音频表征之间存在语义错配。直接屏蔽对应音频区域能压制幻觉，但会牺牲真实内容。基于这些发现，作者提出一个可解释、免训练的「先检测再缓解」框架：聚合语义支持度作为检测信号，并对判定为受支持的音频区域做差异化保护性屏蔽，从而在压制幻觉的同时保留真实事件。在 3 个 LALM、2 个数据集上，幻觉检测与缓解指标均显著提升。",
+      "tags": ["Audio LLM", "Hallucination", "Explainability", "Training-Free", "Sound Events"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.25789"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.25789"}
+      ]
+    },
+    {
+      "title": "Language-Oriented Semantic Modeling for Target Language Extraction",
+      "url": "https://arxiv.org/abs/2611.26317",
+      "date": "2026-11-19",
+      "authors": "Mehmet Sinan Yıldırım, Ke Zhang, Shuai Wang, Haizhou Li",
+      "abstract": "目标语言抽取（TLE）要从多语言混合语音里分离出指定语言的语音。现有方法主要靠声学建模 + 语言身份标签，而标签只提供粗粒度的类别引导。本文提出面向语言的语义建模框架，用语言特定的语义表征来增强声学抽取：通过语言感知的 prompt 条件化与参数高效微调，把预训练语音语义模型适配成「从混合语音中产出聚焦目标语言的语义表征」，这些表征刻画了声学的高层语义结构，并与抽取模型融合，从而提供超出语言身份标签的结构化语义引导。在 CommonVoiceMix 数据集上，引入语义表征相比纯声学基线一致提升，SI-SDR 最高提升 1.16 dB。",
+      "tags": ["Target Language Extraction", "Speech Separation", "Semantic Representation", "PEFT"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.26317"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.26317"}
+      ]
+    },
+    {
+      "title": "The landscape of AI speech generation and deepfake detection",
+      "url": "https://arxiv.org/abs/2611.24993",
+      "date": "2026-11-18",
+      "authors": "Simon King",
+      "abstract": "合成语音的自然度已经到了能骗过听众、让人以为是真人的程度，这带来用合成语音 deepfake 去误导人类与自动系统的风险，对应的应对手段之一是自动检测。这是一份自包含的综述报告，系统梳理「合成语音生成」与「语音 deepfake 检测」两个领域的地形：给出两个领域的简要发展史、所有缩写的定义、术语表，以及一份体量可观的参考文献，明确面向非专业读者。对需要快速建立全景认知（尤其要向业务方解释风险与检测边界）的团队，是省时间的一手材料。",
+      "tags": ["Speech Synthesis", "Deepfake Detection", "Survey", "Speech Security"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.24993"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.24993"}
+      ]
+    },
+    {
+      "title": "Language models represent more about emphasis than they can tell you",
+      "url": "https://arxiv.org/abs/2611.25808",
+      "date": "2026-11-19",
+      "authors": "Aarne Talman, Stergios Chatzikyriakidis",
+      "abstract": "韵律突显（prosodic prominence）很大程度可以从句子用词预测出来，但有一部分取决于说话人怎么读。本文研究语言模型能从文本中恢复多少突显信息、被问到时能否报告出来、以及语音信号额外带来什么。在带词级突显标注的英文朗读语音上，对同一批词比较冻结与微调的文本模型、prompt 化的大模型以及语音模型：所有文本模型彼此相差约 1 个点以内，三分类任务最好 68.8%，且错误高度重叠；在作者测试的 prompt 下，LLM 甚至不如「词多数类」基线，给 500 个示例也不行；线性探针则能从其表征中读出更多信息；语音模型达到 84.7%。作者据此主张：文本只决定突显的一部分，其余必须靠「听」；LLM 编码了文本决定的那部分，但 prompting 无法把它调出来——它们对重音落在哪里「知道得比说出来的多」。",
+      "tags": ["Prosody", "Prominence", "Speech-LLM", "Probing"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.25808"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.25808"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "火山引擎上线豆包实时音视频通话模型 SeedRealtime 1.0 API：把声音、画面、时序、表达装进一个端到端模型",
+      "url": "https://tech.hexun.com/2026-11-19/225298638.html",
+      "summary": "11 月 19 日，火山引擎正式上线豆包实时音视频通话模型（SeedRealtime 1.0）的 API 服务。核心卖点是把声音、画面、时序与表达统一到同一个端到端模型中，直接在连续多模态信息流上做实时交互，实现「边看、边听、边说」，从而绕开传统 ASR → VLM → TTS 级联链路带来的延迟累积与信息损耗。官方演示覆盖多人聚餐时区分不同人物、按场景定制旅行方案、川菜馆菜单的实时翻译讲解等 6 个案例，并强调模型能持续理解场景、主动开口而不是被动等指令。这是继微软 MAI Realtime 1、AssemblyAI STT-3.7 / TTS-1 之后，本周第三家把「实时全模态语音交互」做成可调用 API 的大厂，意味着国内端到端实时语音的 API 竞争正式开打（本条为 11 月 19 日发布，早间版未覆盖，此处补漏）。"
+    }
+  ]
+}
