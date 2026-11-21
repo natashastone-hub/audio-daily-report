@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-21",
+  "papers": [
+    {
+      "title": "AURA: AUdio-dRiven streaming Avatar",
+      "url": "https://arxiv.org/abs/2611.26540",
+      "date": "2026-11-19",
+      "authors": "Nathaniel Cohen, Nicolas Dufour, Amélie Royer, Alasdair Newson, Patrick Pérez",
+      "abstract": "现有音频驱动数字人（talking-head）扩散模型质量不错，但要对着几秒长的视频块跑几十步去噪，天生不适合语音助手、虚拟形象这类要求低延迟 + 在线因果生成的流式场景。AURA 改成按 chunk 逐块生成，靠 rolling KV cache 只依赖当前这一小段音频就能开跑，不像双向模型那样需要先「听」几秒未来音频。两个规格：AURA 1.3B 在单张 GPU 上实时出 576p（16 Hz 播放率下 20.7 fps），适合交互式数字人；AURA 5B 以 9.7 fps 出 720p。核心是两阶段蒸馏：先让因果学生模型用更少去噪步数 + chunk 级滑动窗口因果注意力对齐教师轨迹，再用 DMD（Distribution Matching Distillation）配合 backward simulation 把剩余质量差距收掉。talking-head 基准上，AURA 1.3B 比自己的双向教师快 23 倍，低分辨率下质量与 TalkVerse 相当；AURA 5B 在 720p 追平 TalkVerse 教师且快 17 倍。作者开源了两个模型权重、3 万条合成视频数据集及预计算的教师轨迹（BMVC 2026）。",
+      "tags": ["数字人", "Audio-Driven Avatar", "Streaming", "Distillation", "低延迟"],
+      "highlight": true,
+      "highlight_note": "纯因果 + 蒸馏把音频驱动数字人做成真实时：1.3B 单卡 576p 实时，比双向教师快 23 倍，并开源权重与 3 万条数据",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.26540"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.26540"},
+        {"label": "Project", "url": "https://kyutai.org/aura"}
+      ]
+    },
+    {
+      "title": "WeMM-Video: Pushing the Frontiers of Open-Source Omni-Modal Video Understanding",
+      "url": "https://arxiv.org/abs/2611.26409",
+      "date": "2026-11-19",
+      "authors": "Changli Tang, Jie Yang, Tianyi Wang, Lei Li, Daoze Zhang, Zijie Xin, Zhan Liu, Li Li, Jinchang Xu, Fengyun Rao, Chao Zhang, Jing Lyu",
+      "abstract": "带声音的视频理解仍是多模态智能的核心难点，这篇是开源全模态（视觉+音频+文本）基座模型家族的技术报告：WeMM-Video 覆盖 2B / 4B / 9B / 35B-A3B 四档，以联合音视频感知与推理为中心，统一文本、图像、音频、视频处理，采用「混合思考」范式——既有非思考的 instruct 模式快速直答，也有显式逐步推理的 thinking 模式。训练数据约 1.2 万亿 token，走渐进式预训练 + 多阶段后训练，含多教师 OPD、抗重复的 MrDPO 以及专家 RL。在 120+ 个评测上，旗舰 35B-A3B 在「全模态视频理解」上刷新开源 SOTA，同时在纯音频、无声视频、图像、文本任务上保持有竞争力。对做音频理解 / 音视频联合推理的团队，是目前少数同时给出音频能力与开源权重的 30B 级选择。",
+      "tags": ["Audio-Visual", "Omni-Modal", "Video Understanding", "LALM", "开源模型"],
+      "highlight": true,
+      "highlight_note": "2B–35B 开源全模态家族，1.2T token 训练，音视频联合理解刷新开源 SOTA",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.26409"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.26409"}
+      ]
+    },
+    {
+      "title": "Sonic Palette: Predicting Dynamic Color Themes from Music",
+      "url": "https://arxiv.org/abs/2611.25781",
+      "date": "2026-11-19",
+      "authors": "Wen-Li Wei, Kenneth Yang, Jen-Chun Lin",
+      "abstract": "音乐到配色大多被当成静态映射问题，这篇把它重新表述为跨模态序列预测：不只预测一组颜色，而是建模「调色板级视觉属性」随音乐时间轴如何演化。方法是用音乐条件自回归 Transformer，从音频特征逐帧预测由 5 个主色构成的 color theme；同时自建了配对数据集——从 265 支全长官方 MV 中提取音-色序列。生成结果通过 palette-guided recoloring 落到画面上，保留图像结构的同时呈现随时间变化的色调氛围。定量上预测色板更贴近真值，主观评测显示色彩过渡更自然、音乐-色彩氛围一致性更强。可用于音乐驱动的视觉设计、计算艺术与创意视频，也给「音频理解不止语义标签」提供了一个有趣的任务范式。",
+      "tags": ["Music", "Cross-Modal", "Audio Understanding", "生成", "Creative AI"],
+      "highlight": false,
+      "highlight_note": "把音乐→配色从静态映射升级为逐帧序列预测，自建 265 支 MV 的音-色配对数据集",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.25781"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.25781"}
+      ]
+    },
+    {
+      "title": "ZoionNET: Low-Power Animal Intrusion Detection Using an Acoustic Deep-Learning Classifier for a Cellular Remote-Sensing System",
+      "url": "https://arxiv.org/abs/2611.26112",
+      "date": "2026-11-19",
+      "authors": "Prasanna Vijay, Adarsh Gupta, Vansh Panwar, Vatsalya Singh, Shubham Singhal, Anubhav Saha, Teena Sharma",
+      "abstract": "边缘端声学 AI 的落地案例：印度南部林区大象与大型猫科动物入侵农田/村庄，摄像头方案在电池供电条件下难以长期维持，于是做了一个纯声学检测节点——板载 PDM 麦克风 8 kHz 采样，设备端转 mel 谱，在 Arm Ethos-U55 microNPU 上跑两个 int8 量化的 YOLOv8，组成两态状态机：常开的轻量模型做门控，用 EMA 阈值触发四分类物种模型，重模型只在可能真有入侵时才跑；另配数字振动传感器做地震波补充通道。推理结果以 JSON 经蜂窝 Notecard 上云，无需本地网关，直接推看板并对护林员发短信告警。两个模型在留出集上报 0.974 / 0.946 准确率，整节点物料成本 133.57 美元。对「极低功耗 + 声学事件检测」的端侧部署很有参考价值。",
+      "tags": ["边缘计算", "声学事件检测", "NPU", "低功耗", "TinyML"],
+      "highlight": false,
+      "highlight_note": "microNPU 上双模型门控的声学入侵检测节点，成本 134 美元、纯电池长期野外部署",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.26112"},
+        {"label": "PDF", "url": "https://arxiv.org/pdf/2611.26112"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "Amazon Polly 上线门控声音克隆：为品牌定制专属音色（昨日早报遗漏，补录）",
+      "url": "https://www.unite.ai/amazon-polly-adds-gated-voice-cloning-for-custom-brand-voices/",
+      "summary": "AWS 为 Amazon Polly 增加 voice cloning 能力，企业可以在合规门控（gated）机制下用少量自有录音克隆出品牌专属音色，而非只用预置的几十种声音。这补齐了云厂商 TTS 相对 ElevenLabs / Cartesia 等专业语音公司最明显的短板，也意味着「品牌音色资产」正式成为云 TTS 的标准能力项。对做多语言播报、客服 IVR、有声内容的团队来说，迁移成本和供应商锁定风险需要重新评估。"
+    },
+    {
+      "title": "Google 开放 Genie4 世界模型 API：支持实时交互与原生音频生成",
+      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1uQnVYLVVVemN5bUYtcWhfNm05aXFxNFdyWDhNdDB6bDNKVTd0ZW5kajFZSVNmblZuQjNEcUlWS3ZCVWtxLXVmRWJB?oc=5",
+      "summary": "Google 把 10 月 27 日以研究预览形式发布的 Genie 4 世界模型开放成 API，支持实时交互与原生音频生成。Genie 4 的关键点是音视频同步生成——画面、音乐、环境声和交互式对话在同一个生成过程里产出，而不是画面生成完再后期配音，最长可模拟约两分钟；采用 Hybrid World Models 分工：Gemini 负责逻辑推理与事件组织，Genie 负责视觉/声音/动态反馈，输出带 SynthID 水印。对音频侧的意义在于「原生音效 + 环境声 + 对话」的联合建模正从研究走向可调用的基础设施。"
+    },
+    {
+      "title": "IISc 与 BHASHINI 发布 Sourashtra 语 TTS 模型与语音语料库",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOY3l4bWZ3QWNPU0duVGx6eDBlVFM1bUsybTBvN0huajc4UmV4VDBDd3RZcEgzLXYxenNrekxXWmZIWk5qclFNbHJoRWZubU1nVk82R3BQUkNUN19uWmQyOFlKTE8wQlcwc0VUTmtzajBkSlM2cmRFWmlJNmNGYVVzZHRURUZXRE9uVUNEd0dud2xiNzRpZ1hxWUx1NURDYnpQU0Y2V0tickpFRXg1VWhlam43SWFrSWl4Q1ZHX3V1ektnZG1ZSm1US01Hd1pmWWxqWkhfVjRzcmlJcy1GS0cxY2lwUkk?oc=5",
+      "summary": "印度科学理工学院（IISc）与国家语音 AI 平台 BHASHINI 联合发布 Sourashtra 语（一种使用人数较少的印度语言）的 TTS 模型与语音语料库，属于低资源语言的「数据 + 模型」配套交付，而不是只放一个 demo。同期 BHASHINI 在 Bengaluru Tech Summit 2026 上主推印度多语言 AI 能力。低资源 TTS 的瓶颈长期在语料，这类官方语料库的开放对后续 ASR/TTS/翻译联动价值大于单个模型指标。"
+    },
+    {
+      "title": "HUMAIN 推出 Arabic-first 语音平台 HUMAIN Voice：主打多方言真实口语识别",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNVVU2cm1jTXlXeEVia054WUZaRHVQelNzLXpJQkRBLWlzMEE0TjBnTmc3QU5uQXc4QUU5cnBZQWxMZGd3OWdFZExWZWR2eGdMVHV6OUZzdzByZGFMaDdZWWpqeV9nUi04RHN2LXNmNVhRUkhWMml4SktCR0V5RlU5WGRUb3g3eUppSmplbU9mRVFrdw?oc=5",
+      "summary": "沙特 AI 公司 HUMAIN 发布 HUMAIN Voice，定位「Arabic-first」语音 AI 平台，强调按人们真实的说话方式建模、覆盖多种阿拉伯语方言与自然语音识别，而非把阿拉伯语当成英/中模型的附加语言。这是主权 AI 在语音赛道的典型动作：本地语料 + 本地口音 + 本地合规。对中文/多方言语音团队也是一个参照——方言 ASR 的商业窗口正在被区域玩家占位。"
+    },
+    {
+      "title": "SpeakON 发布 Voice-First AI Agent：把「说出口的意图」直接变成动作",
+      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNTWpwYW5lUGNvdmpqYlVycVJ6QXl2WUdmaFkzUTYzMDdkTUZ6cHBQVHRiVVhFV0F1bkpKS0FlbnFfeTYyaXYtSFVxU3EyZ292czJ1ZFVOU1FDcnhicmFIS21CRzNrdlctWUhuNFp1SGtXY1dtWG1nVDc0OHNkR3A4MHp1QzdIeWh3RzFueGxneUZ5SjRhaVpxdWQ1bVJXbF9hZkQ4ZVQxUm9sS2NiNUhLQS1QelR4TWd2bUNIRUM3YVdabTEtU0RYb1Y4ZDV5TnVEdnczc3RDUmtjaGM5WTlYSTRJS0MzUHdBTmJyOHYzWWpoZDQ?oc=5",
+      "summary": "SpeakON 推出一款 voice-first 的 AI Agent，主打把用户的口语意图直接转成可执行动作（而不是先转文字再走一遍 chat 流程），属于「语音即交互层」的产品化尝试。这类产品真正拼的是端到端延迟、打断处理和工具调用可靠性，而不是音色好不好听——也印证了本期 AURA / WeMM-Video 这类实时与全模态研究为什么重要。"
+    }
+  ]
+}
