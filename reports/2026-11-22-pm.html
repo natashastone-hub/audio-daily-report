@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-11-22-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-11-22-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年11月22日 (周日) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">4</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">1</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>📌 本期说明</h3><div class="news-item"><p>本期严格只收 2026-11-22 09:30–14:00（CST）窗口内的新增内容。核验结果：① arXiv eess.AS / cs.SD 最新提交仍为 2026-11-19T16:58Z（周末不公告，54 小时内零新增，已用 max_results=50 全量拉取 + web_search 交叉检索双重确认）；② HuggingFace Daily Papers 2026-11-22 返回空列表；③ 主流媒体在窗口内无语音/音频相关新报道（Google News 最近一条语音类报道停在 11-21 20:31Z，早报已覆盖）。窗口内唯一有实质新增的是 HuggingFace 上今天凌晨发布的 4 个开源音频模型构件，因此本期以「开源发布」为主，不含 arXiv 新论文。</p></div></div>
+<div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://huggingface.co/moonbox-dev/Qwen3-TTS-12Hz-1.7B-Base-GGUF" target="_blank">Qwen3-TTS 1.7B GGUF：官方权重转 llama.cpp，Q4_K_M 仅 1.04GB 且 WER/CER 仍为 0</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-22</span><span>👥 Moonbox (moonbox-dev)，基于 Qwen/Qwen3-TTS-12Hz-1.7B-Base</span></div>
+      <div class="abstract">Moonbox 把 Qwen3-TTS 1.7B 转成了 llama.cpp 可用的 GGUF，覆盖 Metal / CUDA / Vulkan / CPU 四种后端。工程上值得看的是拆分方式：主模型文件只装 talker 主干，mmproj 文件统一装其余全部部件——说话人编码器、code predictor（1–15 号码本）、语音 tokenizer 的编码器（带转写做音色克隆时用）与解码器（码本还原成 24kHz 音频），所有精度共用同一份 mmproj 的 F16。量化损失给得很实在：Q4_K_M 1.04GB，WER/CER 双 0.0%，相似度 0.959/0.957，DNSMOS 3.18/3.01，RTF 0.35；Q8_0 1.85GB，RTF 0.37；F16 3.47GB，RTF 0.40。也就是说 4-bit 量化在音色相似度上几乎没掉（甚至略高于 BF16 的 0.954/0.960），DNSMOS 掉约 0.02。用法：llama.cpp b12621 以上的 llama-tts CLI（-m 主文件 + -mm mmproj，--tts-speaker-file 给参考音色、--tts-speaker-text 给参考转写），或 llama-server 的 /tts 与 /v1/audio/speech 接口（input、lang、speaker_ref_b64、speaker_ref_text、seed）。对想在本地或端侧跑带克隆的多语种 TTS 的团队，这是目前最省事的一条路：一个 1GB 文件 + 一个 840MB 编码器，不再依赖 PyTorch 栈。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">GGUF</span><span class="tag">llama.cpp</span><span class="tag">声音克隆</span><span class="tag">端侧部署</span></div>
+      <div class="links"><a href="https://huggingface.co/moonbox-dev/Qwen3-TTS-12Hz-1.7B-Base-GGUF" target="_blank">🔗 HuggingFace</a> <a href="https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-Base" target="_blank">🔗 基座模型</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://huggingface.co/moonbox-dev/Qwen3-ASR-1.7B-GGUF" target="_blank">Qwen3-ASR 1.7B GGUF：Q4_K_M 1.28GB，WER 1.55%，并逐条报告与 BF16 输出一致的样本数</a></h4>
+      <div class="meta"><span>📅 2026-11-22</span><span>👥 Moonbox (moonbox-dev)，基于 Qwen/Qwen3-ASR-1.7B</span></div>
+      <div class="abstract">同一批发布的 ASR 侧 GGUF，同样走 llama.cpp（Metal / CUDA / Vulkan / CPU），主模型文件装 Qwen3 文本解码器，mmproj 固定 F16 装音频编码器与 projector（llama.cpp 的 qwen3a 类型），两者缺一不可。各精度成绩：BF16 WER 1.45% / CER 1.42%（原始权重报 1.45 / 1.52），CUDA RTF 0.043；F16 与 BF16 基本同分、RTF 0.044；Q8_0 2.17GB，WER 1.49% / CER 1.45%，RTF 0.033；Q6_K 1.67GB，1.52% / 1.49%；Q5_K_M 1.47GB，1.47% / 1.52%；Q4_K_M 1.28GB，1.55% / 1.62%，RTF 0.045——四个量化档的 WER 波动只有 0.1 个百分点量级，实际选型可直接按内存挑。比平均值更有信息量的是它额外给了「与 BF16 转写逐字相同」的条数：Q8_0 为 375/400 与 197/200，Q6_K 362/400，Q5_K_M 341/400，Q4_K_M 316/400。这种分布口径能看出量化误差是集中在少数难句上、还是均匀劣化，比只看平均 WER 更适合判断线上风险。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">GGUF</span><span class="tag">量化</span><span class="tag">端侧部署</span><span class="tag">评测口径</span></div>
+      <div class="links"><a href="https://huggingface.co/moonbox-dev/Qwen3-ASR-1.7B-GGUF" target="_blank">🔗 HuggingFace</a> <a href="https://huggingface.co/Qwen/Qwen3-ASR-1.7B" target="_blank">🔗 基座模型</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://huggingface.co/tablinum/CueBall-Voice" target="_blank">CueBall Voice v0.3：把连续语音合成塞进初代 Intel 神经计算棒（Myriad-2），并公开没达标的指标</a></h4>
+      <div class="meta"><span>📅 2026-11-22</span><span>👥 tablinum / Rack Lab</span></div>
+      <div class="abstract">一个逆向工程趣味很强的发布：在初代 Intel Neural Compute Stick（Myriad-2，USB 03E7:2150）上跑连续语音合成，encoder、mel decoder 和完整 HiFi-GAN V1 声码器拆成三个 FP16 IR 图交给计算棒，主机侧只负责音素化（eSpeak NG）、时长展开和 WAV 落盘。约束很硬：单次最多 128 个音素 token、最多预测 512 帧 log-mel，输出 22.05kHz 单声道。四组同题对比（十个英文 prompt，Whisper Tiny 打分）：Full 版 37.9MB / 驻留合成中位数 10.5s / WER 28.6%；Student 版 17.1MB / 3.34s / 29.9%，吞吐是 Full 的 3.15 倍、NCS1 上 RTF 1.23；同模型 CPU ONNX 版 2.89s / 22.1%，Student CPU 版 0.79s / 26.0%。作者自己写明：两条硬件路径都没达到「WER < 14.8% + 300ms 预热延迟」的实验目标，且只测了可懂度、没测自然度与多说话人。MIT 许可。价值不在音质，而在于给出了一套「把 TTS 全链路拆成可上 NPU 的图」的完整工程记录与可复现测量数据。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">端侧</span><span class="tag">Intel NCS1</span><span class="tag">OpenVINO</span><span class="tag">HiFi-GAN</span></div>
+      <div class="links"><a href="https://huggingface.co/tablinum/CueBall-Voice" target="_blank">🔗 HuggingFace</a> <a href="https://huggingface.co/tablinum/CueBall-Voice-ONNX" target="_blank">🔗 ONNX 版</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://huggingface.co/MUC-HeTong/HeTong-Omni-ASR-300M" target="_blank">HeTong-Omni-ASR-300M：Wav2Vec2 编码器 + Llama 解码器的研究权重，先放 checkpoint 后补推理代码</a></h4>
+      <div class="meta"><span>📅 2026-11-22</span><span>👥 MUC-HeTong</span></div>
+      <div class="abstract">HeTong 项目放出的研究用 ASR 模型：Wav2Vec2 语音编码器 + Llama 式解码器（配置里的模型类型写作 wav2vec2_llama / LLM_ASR_LID），16kHz 输入，训练到 step 33000 的合并 checkpoint，训练集标识为 tri_bo_tts50b，tokenizer 直接沿用 facebook/omniASR-LLM-300M 的 omniASR_tokenizer.model。作者在 README 里做了三处诚实声明：300M 只是训练配置里的命名、不是完整编码器+解码器的真实参数量；config.yaml 里 machine-specific 的数据集路径已替换成占位符，因此「不是可直接复现的训练配置」；本次只发权重与配置，训练/推理代码与用例「将在后续更新中补充」，且尚未验证与 transformers 的 AutoModel 或 HF Inference Providers 兼容。换句话说现在还不能开箱跑，属于提前公开权重。对关注「小参数 omni ASR + 合成数据训练」路线的团队值得先收藏观察后续代码放出。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">多语种</span><span class="tag">Wav2Vec2</span><span class="tag">研究发布</span></div>
+      <div class="links"><a href="https://huggingface.co/MUC-HeTong/HeTong-Omni-ASR-300M" target="_blank">🔗 HuggingFace</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-11-22-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
