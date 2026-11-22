@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-11-22</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-11-22</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年11月22日 (周日) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">4</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">4</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.26000" target="_blank">Xing-Audio-NVVASR: Scaling and Refining Supervision for Joint Recognition of Speech and Non-Verbal Vocalizations</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-19</span><span>👥 Pengyu Xu, Gang Liu, Genliang Zhao, Hongjie Chen, Jian Kang, Jie Lian, Jie Li, Yongxiang Li</span></div>
+      <div class="abstract">联合识别「说的话」和「非语言发声」（NVV：呼吸、笑、叹气、咳嗽等）的瓶颈不在模型结构，而在数据：带事件标注的语料稀缺，现有标签还不准。这篇走的是数据工程路线——一个 1.7B 端到端模型，配五轮渐进式挖掘 + 迭代监督修正：先用统一声学准则让两个异构模型交叉审标，分歧样本交教师模型重标；再用独立的呼吸检测器扫全库，专门捞「两个模型都漏」的共同遗漏项送人工确认；人工确认过的标签在后续轮次里保留并累积。五轮下来精修了 17 万条公开语料标注，另挖来 63 万条，合成约 80 万条训练集。结果：在四个自建人工标注 benchmark 上，综合分与六类 Macro-F1 在 9 个对比模型中均第一，平均综合分 64.46，比最强对比模型 StepAudio 3 Chat Preview 高 6.03 分，呼吸 F1 比标注教师高 14.4–31.6 个百分点。作者计划开源模型权重、推理代码、四个评测集与标注规范——这套「交叉审标 + 遗漏筛查」的标注流水线本身可能比模型更值得抄。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">非语言发声</span><span class="tag">数据标注</span><span class="tag">端到端</span><span class="tag">开源计划</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.26000" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.26000" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.25773" target="_blank">Duopra: From Full-Duplex Conversation to Full-Duplex Agency</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-19</span><span>👥 Chiyu Chen, Pengzhou Cheng, Yuezhao Ma, Xiaocheng Li, Can Liu, Haonan Hu, Yao Yao, Yifei Yang, Yijie Lu, Taolei Wang, Yansi Li, Muhuan Wu, Chenglu Sun, Gongshen Liu, Zhuosheng Zhang</span></div>
+      <div class="abstract">全双工语音模型在「对话主动性」上已经不错——抢话、插话、给「嗯」都能做；但「办事主动性」是另一回事：用户中途纠正后要能立刻改参数、该调工具时及时调。现有前端-后端 agent 把「要不要调、要调什么」和「怎么调」拆开，漏发的请求根本不会被后端执行，残缺的请求还会把后端带偏。作者在 Full-Duplex-Bench v3 上发现，Realtime-Venus-Audio + Harness 的多数失败发生在工具真正执行之前，于是提出 Duopra：把后端当成一个工具，只接受自包含的自然语言请求，直接调用与后端委派共用同一套动作接口，并分别约束「忠实发起」与「正确执行」。三段式训练：协议 SFT → 全双工 RL（奖励及时且完整的执行）→ thinker 更新后仅修 projector 的 talker 条件修复。同一后端下 Pass@1 从 4.7% 涨到 44.7%；直接调工具 47.7%（SFT 后为 26.0%），接 DeepSeek 后端 49.3%，同时在 FDB v1.0 的三项接管率上优于基座。对做实时语音 agent 的团队，这篇的价值在于指出「失败点在执行之前」这一诊断口径。</div>
+      <div class="tags"><span class="tag">全双工</span><span class="tag">Voice Agent</span><span class="tag">工具调用</span><span class="tag">RL</span><span class="tag">基准评测</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.25773" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.25773" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.25489" target="_blank">When Should a Voice Agent Speak? End-of-Turn Detection in Turkish</a></h4>
+      <div class="meta"><span>📅 2026-11-19</span><span>👥 Ahmet Tuğrul Bayrak, Fatma Nur Korkmaz, Mustafa Sertaç Türkel, Nur Yağmur Tuncer</span></div>
+      <div class="abstract">固定静音阈值的语音助手有两个必然后果：用户句中停顿就被抢话，或者用户真说完了还在傻等。这篇把决策点明确放在「静音刚开始的那一刻」，用土耳其语双人视频通话语料 Real-TurnTurk 中的「真轮次结束」与「轮次内部停顿」做二分类对比，横向比了三个方案：微调土耳其语 TurnGPT、零样本土耳其语语言模型、以及一个已部署的多语种端点检测器，并额外引入当前说话人的 VAD 时序特征与人脸特征，在「录音不重叠」和「说话人不重叠」两种划分下做配对 cluster bootstrap 检验。结论：微调模型在区分「真说完 vs 句中停顿」上最好，且三者中校准最优；说话人的时序特征同样有信息量，与微调文本分数用 logistic 回归结合效果最佳；延迟模拟里，在静音超时之外叠加文本分数，可以在相同打断率下缩短平均响应延迟；换成 Whisper 自动转写后，微调模型相对零样本模型仍保持优势。少见的非英语端点检测系统性研究，方法论可直接迁移到中文方言场景。</div>
+      <div class="tags"><span class="tag">端点检测</span><span class="tag">Voice Agent</span><span class="tag">轮次转换</span><span class="tag">土耳其语</span><span class="tag">低资源语言</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.25489" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.25489" target="_blank">🔗 PDF</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.25521" target="_blank">DRVEXO-4B-Unified: Design and Evaluation of a Modular Speech-Vision System</a></h4>
+      <div class="meta"><span>📅 2026-11-19</span><span>👥 Zeyuan Li</span></div>
+      <div class="abstract">一个 4B 语言主干撑起来的模块化多模态助手，单个 checkpoint 同时接收文本、图像、语音，输出「参照条件语音」（reference-conditioned speech）+ 结构化交互。三个接口设计值得看：temporal residual connector 把声学序列适配到语言接口；显式文本边界用来支持增量式语音合成（边生成边出声）；三个任务条件打分头在生成式工具调用之外对候选动作排序，把对话接到应用预先定义的选择上，而动作授权仍留给应用自己。评测：MMMU 验证集 900 题全量 74.22%，高于 Gemma 3 4B IT 与 InternVL3.5-4B 的公开成绩且未用 test-time scaling；IFEval strict 82.26%、MATH-500 89.40%，均高于原 Qwen3-4B 非思考模式报告值。部署侧在 NVIDIA GB10 上语音合成首包延迟 390ms；并发文本生成用 growth-aware admission 策略，128 条答案的批次吞吐 594.41 tok/s 且无抢占。作者计划以 Apache 2.0 开源权重与代码。</div>
+      <div class="tags"><span class="tag">语音-视觉</span><span class="tag">端侧部署</span><span class="tag">增量式 TTS</span><span class="tag">首包延迟</span><span class="tag">多模态</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.25521" target="_blank">🔗 arXiv</a> <a href="https://arxiv.org/pdf/2611.25521" target="_blank">🔗 PDF</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>OpenAI 正式开放 GPT-Live-1.1 语音 API，并新增 WebRTC Standby 待机计费：空闲时从 $0.05 降到 $0.02/分钟</h4>
+      <p>OpenAI 把 ChatGPT 语音背后的 GPT-Live-1.1 开放给开发者，第三方可以构建能实时聆听、边说话边执行任务的语音 agent。相较 GPT-Live-1 的实质更新：多语言对话的发音表现、口音一致性、语音转写准确率改善；WebRTC 会话新增 Standby 待机机制——空闲 5–60 秒后推理可暂停，计价从每分钟 5 美分降到 2 美分（用户仍在说话或仅静音麦克风时按原价）。全双工 + 后端委派是卖点：复杂推理与工具调用走异步路径，对话不中断。对做语音客服、外呼、语音助手的团队，这是本周最值得算一笔成本账的发布（MarkTechPost 11-21 复盘，API 更新记录 11-19，对外开放 11-20）。 <a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxPZl9NVnpyaGtfLXJXQTNEZ1p2SDN1bDZMT2luSGdwbS1ITXp6ek5pUHRjUF9DeVNqR1hCSFo3QjRLRXZRWWZybG5LenJxNjdTbFpzOUtxV3VjMUlhTDBSa2IxWUM4cHB1dFJJUjRROGxkTWhieDlzRnFSNHctaU12WW5oZ9IBgwFBVV95cUxPZl9NVnpyaGtfLXJXQTNEZ1p2SDN1bDZMT2luSGdwbS1ITXp6ek5pUHRjUF9DeVNqR1hCSFo3QjRLRXZRWWZybG5LenJxNjdTbFpzOUtxV3VjMUlhTDBSa2IxWUM4cHB1dFJJUjRROGxkTWhieDlzRnFSNHctaU12WW5oZw?oc=5" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>TikTok 面向公众人物上线深度伪造检测工具，全球可用</h4>
+      <p>TikTok 推出面向公众人物（政要、艺人、创作者等）的深度伪造检测工具，帮助其识别平台上假冒本人形象的合成内容，并同步扩展到全球。对语音侧的启示在于：换脸与 AI 配音通常成套出现，平台侧的身份仿冒治理正在从「事后举报」转向「主动检测 + 快速下架」，这与 OpenAI 给 GPT-Live 输出加水印、Truecaller 给通话加 AI 标记形成同一条防线。做声音克隆与配音产品的团队，需要提前准备 provenance / 水印与授权留痕。 <a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxOcUhHdF9PNVNEc3Fsa1VzNnIzY3lKWUtINnUxXzYzMFQ2YTI4QlZ0SFRtTUJTT2pSaTg3dFlhbDRWZGJNRTgyY0VFTnE5N0hlLVRfMmNnQ2dQNEYyRHgyaE1laFpyY1RuQ1VBczhJc01TS3BocDdTRTlxT2NEV0l6TXZPVzl3OVV4ZlhyX3BCbXpsUElTcEh4SlpLVktoR19ydU9yWUlhNi04V3l0T0lNME45UQ?oc=5" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>Truecaller 与 Bolna 合作：给 AI 语音通话加来电验证与 AI 水印</h4>
+      <p>Truecaller 与语音 AI 平台 Bolna 达成合作，把来电验证（Caller Verification）、AI 内容水印与回拨选项带进 AI 语音通话链路，目标是让「机器人打来的电话」在接通前就可被识别。这是语音 agent 大规模外呼后必然出现的基础设施层：谁先解决「我怎么知道对面是 AI」，谁就拿到企业客户的合规入场券。也意味着纯 TTS + 对话编排的语音 agent 供应商，将被迫接入身份与水印层。 <a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE9Ec19CNDZ5R1FpSW5iS1JNRW5RVkxlQzM4Z2NRYVdjTHRaZzJSbFpDWk9pODNTM0NiRVMxMjI5NnZIdFpDanRkWE0zRlZOVmxzdHhoOGtfLTI0Q2FxVlhsQWc3cGpjSGpuOUhDQlg3NjFmRXNUM0FFYkt0Q2FQbEE?oc=5" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>AI 生成音乐进游戏引发反弹：《以撒的结合》更新因 GTA6 模式使用 AI 音乐被刷差评</h4>
+      <p>《以撒的结合：悔悟+》更新中加入的 GTA6 联动模式被玩家发现使用 AI 生成音乐，随即遭到差评轰炸，开发商紧急回应。同期 Eminem 出版方又向 Suno 版权诉讼补充了 108 个侵权示例。两条新闻指向同一件事：AI 音乐在商业游戏与流媒体里的「隐性使用」正在被听众和版权方双重审查，音频生成产品的合规成本（授权、标注、可追溯）会继续上升，而不是随模型质量提升而下降。 <a href="https://news.google.com/rss/articles/CBMi5gFBVV95cUxQT2d2N1d0empxa3AyelhKTjZ6SEo2bC1KWlRwMEtqXzJfa29xbG5mMzFfajl1Z0dZUFFMcXl2UURYdURsdVFjQ1RqSVBScXlYVFp1a0JQN0c3YVVOMXVqbFNCMTRrWVBVTDVEbFFRTGFzaTJBYnZKUmwwMkhPUTBjdFpBdjVUa0QtTFJoYmZyRElhekhXOTQ2Unc2MlhMU19hOFhGdEVxS1FydGFLbzdEeFhzbXNnSFVobmZhbF9HUzJoXzB3NDB0YlN1SVc0TDBOM2NubjVCalhHRTZMaHFWUVhtLW5uQQ?oc=5" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-11-22') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
