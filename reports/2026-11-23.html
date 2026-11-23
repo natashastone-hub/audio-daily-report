@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-11-23</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-11-23</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年11月23日 (周一) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">6</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>📌 本期说明</h3><div class="news-item"><p>本期严格只收 2026-11-22 09:30 – 2026-11-23 09:34（CST）窗口内的新增内容。核验结果：① arXiv API 本次成功返回 50 条（sortBy=submittedDate 倒序），最新 submittedDate 仍是 2026-11-19，eess.AS/new 与 cs.SD/new 页面均显示 “New listings for Friday, 20 November 2026”——arXiv 周末不公告，窗口内零新增；周五批次的 16 条已被 11-20 午报至 11-22 早报全部覆盖（唯一未收的 2611.25977 为水下目标强度盲测，非语音/音频方向）。② HuggingFace Daily Papers 最新条目停在 2026-11-18，11-22、11-23 无 audio 条目。③ 新闻侧：中英文多轮检索（含 full-duplex / Gemini voice / 语音模型发布 等必搜词）在 24 小时内没有命中可信的语音产品发布，可核验的最新语音类报道停在 11-21 20:31Z，早报已覆盖。窗口内唯一有实质新增的是 HuggingFace 上 11-22 白天至 11-23 凌晨发布的 6 个音频模型构件，因此本期以「开源发布 / 端侧量化生态」为主，不含 arXiv 新论文、不含新闻。</p></div></div>
+<div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://huggingface.co/moonbox-dev/YuE2-3B-GGUF" target="_blank">YuE2-3B GGUF：把「整首歌」塞进 llama.cpp，Q8_0 只要 2.31GB + 3.1GB 解码器</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-22</span><span>👥 Moonbox (moonbox-dev)，基于 m-a-p/YuE2-3B</span></div>
+      <div class="abstract">Moonbox 把 YuE2-3B 全文转成 llama.cpp 可用的 GGUF（Metal / CUDA / Vulkan / CPU），并给出了比多数量化仓库更细的对照口径。拆法很关键：主模型文件只装 Qwen3 主干，负责写出 ABC 曲谱并按每 40ms 一个语义码输出；mmproj-yue2-3b-F16.gguf（3.10GB）装另外两级——NAR flow-matching 半段与 YuE2-VAE 解码器（48kHz 立体声），所有精度共用同一份 mmproj。各档体积：BF16/F16 4.34GB、Q8_0 2.31GB、Q6_K 1.78GB、Q5_K_M 1.57GB、Q4_K_M 1.38GB（作者标注为 experimental）。评测给的是双指标：对原模型自身采样流的曲谱 KL/top-1 与音频码 KL/top-1。Q8_0 是 score KL 1.0e-4、top-1 99.8%，codes KL 8e-4、top-1 95.7%；Q5_K_M 退化到 codes KL 3.0e-3、top-1 93.3%；Q4_K_M 明显掉（codes KL 8.5e-3、top-1 88.3%），所以实际可用档位是 Q6_K 以上。用法：llama.cpp b12621+ 的 llama-tts CLI（-m 主文件 + -mm mmproj），输入按 [Tags]/[Lyrics]/[Verse] 写提示，--tts-voice full|melody|off 对应原模型的曲谱规划模式。注意权重与 VAE 均为 CC BY-NC 4.0，不可商用。同日还发布了对应的 ONNX 版本。</div>
+      <div class="tags"><span class="tag">音乐生成</span><span class="tag">GGUF</span><span class="tag">llama.cpp</span><span class="tag">端侧部署</span><span class="tag">量化</span></div>
+      <div class="links"><a href="https://huggingface.co/moonbox-dev/YuE2-3B-GGUF" target="_blank">🔗 HuggingFace</a> <a href="https://huggingface.co/moonbox-dev/YuE2-3B-ONNX" target="_blank">🔗 ONNX 版</a> <a href="https://huggingface.co/m-a-p/YuE2-3B" target="_blank">🔗 基座模型</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://huggingface.co/Shadow0482/personaplex-7b-v1-q4" target="_blank">PersonaPlex-7B-v1 int4：全双工语音对话模型从 16.74GB 压到 5.17GB</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-22</span><span>👥 Shadow0482，基于 nvidia/personaplex-7b-v1</span></div>
+      <div class="abstract">PersonaPlex 是 NVIDIA 的 Moshi 架构全双工 speech-to-speech 模型，原版权重 BF16 约 16.74GB，对单卡消费级设备偏重。这个仓库给的是纯权重量化版：348 个线性权重矩阵做 int4（group size 64、对称、无符号 nibble，两值一字节，低 nibble 为偶数列），embedding、norm、输出头与 127 个小张量保持 FP16，Q4 主权重 5.17GB，同时给了 Q8（int8、按输出行一个 scale）。量化误差报告得比较实在：量化张量的平均相对误差 1.23e-2、最大 2.06e-2、源权重 FP16 溢出张量 0 个。仓库文件是完整的（量化 LM + Mimi codec + tokenizer + voice prompts + web UI），并附 personaplex_quant.py：把 int4 反量化回 FP16 再喂 stock PersonaPlex 代码，误差不变但显存占用回到 BF16 水平；真想以 4bit 常驻显存，需要运行时把 nn.Linear 换成量化线性层。作者明确未做语音基准评测，建议先自己听样本——Q4 预期比 Q8 掉得明显。许可证沿用 NVIDIA Open Model License。</div>
+      <div class="tags"><span class="tag">全双工</span><span class="tag">S2S</span><span class="tag">量化</span><span class="tag">int4</span><span class="tag">端侧部署</span></div>
+      <div class="links"><a href="https://huggingface.co/Shadow0482/personaplex-7b-v1-q4" target="_blank">🔗 HuggingFace (Q4)</a> <a href="https://huggingface.co/Shadow0482/personaplex-7b-v1-q8" target="_blank">🔗 HuggingFace (Q8)</a> <a href="https://huggingface.co/nvidia/personaplex-7b-v1" target="_blank">🔗 基座模型</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://huggingface.co/onlyTheOnionNews/phonon-2-onnx" target="_blank">Phonon-2 ONNX：浏览器里跑 Parakeet 系 ASR，8bit 编码器 610MB 走 ORT Web/WASM</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-23</span><span>👥 onlyTheOnionNews，基于 FermionResearch/Phonon-2（源自 nvidia/parakeet-tdt-0.6b-v3）</span></div>
+      <div class="abstract">面向 onnxruntime-web（WASM）的浏览器端语音识别导出。模型本体 Phonon-2 是 Fermion Research 从 NVIDIA Parakeet TDT 0.6B v3 再训练、量化编码器线性权重得来的英文 ASR，权重 CC-BY-4.0。三张图分工：encoder.onnx 是 FastConformer 编码器加投影，权重 8bit（按通道、缩窄值域），输入 features [1,T,128] 输出 [1,T',640]，每帧 80ms，约 610MB；decoder_step.onnx 是 token embedding + 2 层 640 维 LSTM + projector（fp32，61MB），步进式吃单个 token 与 h/c；joint.onnx 是 joint 网络（fp32，26MB），输出 [1,8198]——8193 个 token 加 5 个 TDT 时长槽。前端口径完全对齐 transformers 的 ParakeetFeatureExtractor：16kHz 单声道、预加重 0.97、512 点 STFT（400 点 Hann、hop 160、居中补零）、128 个 Slaney mel、log(x+2^-24)、按有效帧做无偏归一化。解码是 batch=1 的贪心 TDT：起点 token 8192，逐帧取 token argmax 与时长 argmax，blank 前进 max(duration,1)，遇到 EOS(3) 或帧尾停。作者也直说了 8bit 编码器的代价：13 秒测试片段里最后一个词和更早一个词会错，而 2.4GB 的全精度编码器与参考完全一致——上线前务必用自己的音频验。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">ONNX</span><span class="tag">WebAssembly</span><span class="tag">端侧部署</span><span class="tag">TDT</span></div>
+      <div class="links"><a href="https://huggingface.co/onlyTheOnionNews/phonon-2-onnx" target="_blank">🔗 HuggingFace</a> <a href="https://huggingface.co/FermionResearch/Phonon-2" target="_blank">🔗 基座模型</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://huggingface.co/eigami/qwen3-tts-voicedesign-onnx" target="_blank">Qwen3-TTS 1.7B VoiceDesign 转 ONNX int4：4 张计算图，笔记本 CPU 上跑到约实时</a></h4>
+      <div class="meta"><span>📅 2026-11-22</span><span>👥 eigami（Eigami 视频编辑器的朗读音色），基于 Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign</span></div>
+      <div class="abstract">把 Qwen3-TTS 的「按文字描述造音色」版本做了 ONNX 化 + int4 量化，工程拆解得很干净：embed.onnx 把文本 token 与已有码本码映射成 talker 的输入行（文本表保持 fp16）；talker.onnx 吃「行 + 历史 KV」输出下一个首码的 logits、末层隐状态与更新后的 KV（prompt 与每步共用同一张图）；frame.onnx 把 code predictor 的 15 步展开成一张图，内置 top-k 50 采样，用 15 个均匀随机数驱动，直接吐出一帧剩余 15 个码；vocoder.onnx 即 12Hz 语音 tokenizer 的解码器，码本（1,16,frames）还原成 24kHz 音频。矩阵统一 MatMulNBits（4bit、block 32、对称），四个图连同 .onnx.data 共约 2.2GB，运行时约 3GB 内存，在较新的笔记本 CPU 上通过 ONNX Runtime 约等于实时。生成循环（prompt 布局、首码采样、重复惩罚、停止条件）按官方 qwen-tts 代码在宿主侧实现，不在图里。权重未重训，Apache-2.0 沿用原模型。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">ONNX</span><span class="tag">int4</span><span class="tag">端侧部署</span><span class="tag">声音设计</span></div>
+      <div class="links"><a href="https://huggingface.co/eigami/qwen3-tts-voicedesign-onnx" target="_blank">🔗 HuggingFace</a> <a href="https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign" target="_blank">🔗 基座模型</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://huggingface.co/groxaxo/MOSS-TTS-Local-Transformer-v1.5-EXL3-5bpw" target="_blank">MOSS-TTS Local Transformer v1.5 的 EXL3 5-bit 版：4.13B 参数压到 3.04GiB，48kHz 立体声</a></h4>
+      <div class="meta"><span>📅 2026-11-22</span><span>👥 groxaxo，基于 OpenMOSS-Team/MOSS-TTS-Local-Transformer-v1.5</span></div>
+      <div class="abstract">一份口径非常「工程审计向」的量化发布。原始唯一参数 4,129,990,144 个，其中 252 个矩阵用 EXL3 原生 K=5 trellis 打包，张量载荷 3.044GiB；作者特意区分了「有效序列化比特/参数 = 6.331」（含被保护的高精度参数与 scale/打包元数据）与「5-bit 只描述 252 个 EXL3 矩阵」，避免把 packed 存储元素数当成参数量。保留 BF16 的部分包括 tied 文本 embedding/输出头、12 组音频 embedding/head、local frame transformer 与所有 norm。量化方法：activation-calibrated LDLQ、sigma 正则 0.025、乘性缩放、按行的 2 的幂次范围保护，并用重建后的量化矩阵校验原生 packed kernel 输出。落地要求很硬：这不是 stock ExLlamaV3 因果 LM 转换，必须用仓库自带 loader（围绕 EXL3 kernel 保留原始 MOSS PyTorch 图），默认 AutoModel.from_pretrained 被主动屏蔽以防误加载；合成走 tts_pipeline.load_runtime，输出 [samples,2] × 48kHz 立体声，固定 12 个 RVQ 码本，转换与推理都在单张 RTX 3090 上完成。配套的 MOSS-Audio-Tokenizer-v2 也有同规格 EXL3 版本。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">EXL3</span><span class="tag">量化</span><span class="tag">48kHz</span><span class="tag">本地部署</span></div>
+      <div class="links"><a href="https://huggingface.co/groxaxo/MOSS-TTS-Local-Transformer-v1.5-EXL3-5bpw" target="_blank">🔗 HuggingFace</a> <a href="https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Local-Transformer-v1.5" target="_blank">🔗 基座模型</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://huggingface.co/otter-app/nemotron-3.5-asr-streaming-0.6b-gguf" target="_blank">NVIDIA 语音栈整体 GGUF 化：流式 ASR + Parakeet + 说话人日志一次打包，附 SHA-256</a></h4>
+      <div class="meta"><span>📅 2026-11-23</span><span>👥 otter-app（Otter 桌面端，github.com/victorfu/otter）</span></div>
+      <div class="abstract">凌晨 01:40 前后连发的一批 GGUF，把一个端侧语音应用的推理栈整体搬到了 ggml 上：nemotron-3.5-asr-streaming-0.6b（流式 ASR，Q4_K_M，OpenMDW-1.1）、parakeet-tdt-0.6b-v3（CC-BY-4.0，Q4_K_M）、Nemotron-3-Diarization（说话人日志，Q8_0）、以及 zipformer2-66m-streaming 的斯洛伐克语与希伯来语两个小语种流式模型。每个仓库都是 vibe-app 同名转换的未改动副本，卡片只保留必要信息——基座模型、许可证、以及对应量化文件的 SHA-256（例如 nemotron-3.5-asr Q4_K_M 为 41c99fa5…92b8fd），供应用按哈希校验下载。意义不在于模型本身新，而在于「流式识别 + 端点/时长建模 + 说话人日志」这条过去绑定 PyTorch/NIM 运行时的链路，现在可以一个有 GGUF 后端的桌面 app 全包。对做本地会议转写、离线字幕、隐私敏感场景的团队，这是可直接抄的部署清单。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">GGUF</span><span class="tag">说话人日志</span><span class="tag">流式识别</span><span class="tag">端侧部署</span></div>
+      <div class="links"><a href="https://huggingface.co/otter-app/nemotron-3.5-asr-streaming-0.6b-gguf" target="_blank">🔗 Nemotron 3.5 ASR</a> <a href="https://huggingface.co/otter-app/nemotron-3-diarization-gguf" target="_blank">🔗 说话人日志</a> <a href="https://huggingface.co/otter-app/parakeet-tdt-0.6b-v3-gguf" target="_blank">🔗 Parakeet TDT v3</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-11-23') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
