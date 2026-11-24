@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-11-24-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-11-24-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年11月24日 (周二) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">7</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>📌 本期说明</h3><div class="news-item"><p>关于本期时间窗口的说明：① arXiv 的日更公告卡住了——eess.AS/new 与 cs.SD/new 至今仍显示 “New listings for Monday, 23 November 2026”，11-24 的公告未刷新，所以 6 小时窗口（11-24 09:30–14:00 CST）内 arXiv 严格意义上新增 0 篇。② 但 API（submittedDate 倒序，max_results=50）里已能取到 v1 提交于 11-23 00:51–08:07 UTC、尚未进入任何一期日报的 7 篇论文（其中 SonicRender 等提交时间在昨日 14:00 之后，其余为该批待公告条目，此前各期均未覆盖），本期收录这 7 篇，属于「上一批公告的补完」而非新公告。③ HuggingFace Daily Papers 今日 Top25 仍以具身/视觉/Agent 为主，audio 标签无新条目。④ 新闻侧：按规程逐条执行了 GPT-Live、OpenAI voice model、Gemini voice、full-duplex speech model、语音模型发布、real-time voice AI 六组必搜词（外加一轮泛语音产品检索，freshness=day），命中的全部是 7 月 GPT-Live、6 月 Gemini 3.5 实时翻译等旧闻，窗口内可信的语音产品发布为 0 条。</p></div></div>
+<div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.30241" target="_blank">SonicRender：把「谁在什么时候发出什么声音」写进生成条件——多事件音频场景的结构化时间对齐渲染</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-23</span><span>👥 Yunrui Cai, Xu Li, Yan Rong, Dingdong Wang, Yucheng Zhou, Xixin Wu, Chen Zhang, Zhiyong Wu, Helen Meng（港中文 + 字节）</span></div>
+      <div class="abstract">统一音频生成器已经能在一个模型里同时产语音、音乐、音效，但「混得像个合理场景」只是及格线：真实需求往往还指定了有哪些事件、谁发出的、各自出现在什么时间段。SonicRender 的做法是把场景显式结构化：Temporal Audio Scene Graph（TASG）把持久的声源身份与局部的语音/音乐/环境声/音效事件绑定，事件上挂内容、声学角色、相互关系和时间戳窗口；再引入 AbsTime，给音频 latent 流喂绝对帧坐标和有效画布时长，让模型知道「第几秒该响」。生成侧用联合 text-audio attention + 条件 flow matching，一次前向就渲染出结构化的定时混音。MMAG 时间戳基准上语音/音效 F1 达 0.79/0.60，超过对比中最强公开成绩；自建 SceneMix 上全事件召回 85.4%、时间窗命中率 83.9%、说话人准确率 95.7%；主观评测在音质与场景实现度上均显著优于 5 个对比系统。作者还做了语音、通用音频、音乐、多事件负载、时间对齐五组分解实验。价值在于把「多事件 + 时间轴」变成可控生成的第一类条件，而不是靠长提示词碰运气；值得关注的是 SceneMix 是自建集，跨数据集泛化还没验。</div>
+      <div class="tags"><span class="tag">音频生成</span><span class="tag">多事件场景</span><span class="tag">时间对齐</span><span class="tag">Flow Matching</span><span class="tag">可控生成</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.30241" target="_blank">🔗 arXiv</a> <a href="https://caiyunrui.github.io/SonicRender" target="_blank">🔗 Demo</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.30106" target="_blank">Ultrasound Watermark：用手机扬声器发超声、收面部构音反射——给实时通话绑上「生理级」防伪水印</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-23</span><span>👥 Renzhi Hao, Shirui Cao, Yizhu Wen, Rishav Gupta, Dharani Nadendla, Mehran Kafai, Hanqing Guo, Dong Li（UCF 等）</span></div>
+      <div class="abstract">TTS/VC 让电话诈骗里的「熟人声音」变得可信，现有防御要么靠事后离线分析、要么在电话信道失真下崩掉、要么挡不住自适应攻击。这篇换了根锚点：不比对声音本身，而是把语音和说话人真实的构音动作绑在一起。通话中手机只用自带扬声器发超声、用麦克风收面部构音运动（嘴唇/下巴/舌）的反射，抽出运动特征与出向语音融合生成动态水印；因为超声测量与发声在物理与时间上是耦合的，没有对应的构音动作就很难伪造。配套是一套同步的生成器-检测器架构，强制跨模态「语音-运动」一致性，用于对抗重放、合成语音、以及模仿构音的攻击。延迟开销 <200 ms，无需额外硬件，已在 iOS 与 Android 上实现，用 22 名说话人、8 款手机、4 类真实环境的 2.5 小时以上同步语音-超声数据评测，对多种攻击与电话失真稳健且保持听感质量。这是把「活体检测」思路从人脸搬到构音通道；工程上要留意的边界是：超声反射对握持姿势、手机壳、嘈杂多人场景的敏感性，论文里给了环境覆盖但没给极端遮挡下的失效曲线。</div>
+      <div class="tags"><span class="tag">语音安全</span><span class="tag">防伪水印</span><span class="tag">声学感知</span><span class="tag">端侧</span><span class="tag">反诈</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.30106" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.29985" target="_blank">不解码也能打分：用冻结的 Flow-Matching TTS 做二语发音评测（反事实速度对比）</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-23</span><span>👥 Zehan Liu（单作者）</span></div>
+      <div class="abstract">Flow-matching TTS 学到的是「母语者会怎么把这段文本说出来」，但这套知识过去只用来合成。作者发现它可以反过来当打分器，而且完全不需要生成音频：对一段学习者语音，在同一份加噪输入上，分别测模型在「目标文本」和「反事实文本（删词/换词）」下的速度预测误差，两者之差就像一个「发音好坏」的生成式分数。关键发现是信号集中在很窄的高噪声时间步带内——用母语语音准则能定位这一带，再用一个闭式规则把它迁移到不同骨干上，不用逐模型调参。在说话人不相交的 speechocean762 上，4 个冻结 TTS 模型与人工分相关 r=0.58–0.63，处在零样本 ASR 与音素级基线区间内；与这些基线做无标签融合，r 从 0.698 抬到 0.757。缓存的帧级分数还能零额外 TTS 成本地标出词级错误。这条路线的好处是评测侧不用标注、不用 ASR 文本对齐；隐含代价是它本质上在问「模型觉得这段音更不像目标文本」，对非母语口音的容忍度会随 TTS 训练数据口音分布走。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">发音评测</span><span class="tag">Flow Matching</span><span class="tag">语音理解</span><span class="tag">零样本</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.29985" target="_blank">🔗 arXiv</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.29865" target="_blank">冻结编码器 + 换后端：跨域语音深伪检测里 encoder 与 backend 的相互作用（XEUS 比 XLSR-53 相对降错 58–77%）</a></h4>
+      <div class="meta"><span>📅 2026-11-23</span><span>👥 Benjamin Hurt, Oscar O'Donnell, Yefei Yang, Anjani Sethi, Priyanka Durai（IEEE ISM 2026 正会）</span></div>
+      <div class="abstract">SSL 编码器已是语音深伪检测的标配前端，主流做法是在小规模 spoofing 语料上全参微调——域内分数好看，跨域必然掉。这篇把「微调」这一环拿掉：固定一套近期提出的 SSL + constant-Q cepstral 交叉注意力融合 recipe，只问两个问题——哪个编码器、哪个后端在跨域时更稳。做的是 2×2 网格：冻结的 XEUS（大规模多语）与 Wav2Vec2 XLSR-53 两个编码器 × MHFA 池化与 AASIST 两个后端，在 ASVspoof 2019 LA、2021 LA/DF、In-the-Wild、ASVspoof 5 上统一 pipeline 跑三个种子。三个结论：一是 encoder 与 backend 强交互，MHFA 配强编码器、AASIST 更能救弱编码器；二是冻结编码器之间的差异巨大且可复现——配 MHFA 时冻结 XEUS 在 LA21/DF21/ASV5 上比冻结 XLSR-53 相对降错 58–77%，ITW 上幅度小些；三是与「全参微调 316M」的三种子基线比，冻结 XEUS 只更新不到 0.4M 参数，在 ASVspoof 5（EER 与 min-DCF）和 LA21 上更好，DF21 与 ITW 上落后，但四个域外集里有三个种子方差更低。对工程选型的直接含义：先选对编码器，比堆后端容量和微调预算更划算。</div>
+      <div class="tags"><span class="tag">语音深伪</span><span class="tag">SSL编码器</span><span class="tag">跨域泛化</span><span class="tag">AASIST</span><span class="tag">模型选型</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.29865" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.29871" target="_blank">该信哪一层？歌唱语音深伪检测中冻结编码器的层选择在信号损坏下会翻车</a></h4>
+      <div class="meta"><span>📅 2026-11-23</span><span>👥 Benjamin Hurt, Yefei Yang（ICASSP 2027 C4AI4C workshop 在投）</span></div>
+      <div class="abstract">用冻结 SSL 编码器做音频深伪检测时，「取第几层特征」通常是在开发集上拍定的，这篇专门审这个决定在歌唱语音（CtrSVDD）上到底靠不靠谱。做法很直白：在冻结的 XEUS（3–4 种子）与 XLS-R（2 种子）上，为每一层各训一个检测头，再加一个可学的层混合，测试集覆盖干净音频、加噪、混响、有损编码四种条件。发现：干净音频上两个编码器的中间层都优于最后一层，而学出来的层混合并没有打过最好的单层；在开发集上选的层，比测试集上最优层分别差 2.3（XEUS）和 4.1（XLS-R）个百分点的 EER——也就是说开发集选层这一步本身就引入可观损失。损坏条件下层的排序还会漂：噪声与编码下 XEUS 最优层仍在中间，混响下其高层追上来；XLS-R 的最优层则整体往浅走。探索性分析里，XEUS 检测某商业合成攻击时用更早的层最好，噪声下尤其明显。结论对做产品的人挺刺：层选择不能在域内开发集 + 干净音频上定，等于给「冻结编码器 + 固定取层」这种最省事的部署方案打了一个问号。</div>
+      <div class="tags"><span class="tag">语音深伪</span><span class="tag">歌唱语音</span><span class="tag">SSL</span><span class="tag">鲁棒性</span><span class="tag">特征层选择</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.29871" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.30171" target="_blank">Audio-Visual Rearrangement：听人一句话、把东西拿过来——带空间音频的具身新任务与数据集</a></h4>
+      <div class="meta"><span>📅 2026-11-23</span><span>👥 Ruohao Guo, Jiatong Ye, Chenwei Dong, Jinxing Zhou, Dantong Niu, Guangyao Li, Zhenbo Li</span></div>
+      <div class="abstract">AVR（Audio-Visual Rearrangement）提了一个新任务：机器人听到一句口头请求，去找到合适的物体，再送到请求者手上或指定的目的地。这要求两件事同时成立——听懂请求（语音理解），以及在没有视觉先验的情况下用声音定位说话人（空间听觉），而且后者要随着机器人移动持续更新。数据侧构建了覆盖三类查询（明确目标、以说话人为参照的相对空间指代、隐式意图）共八个子类型的数据集，物体选择与投递要求各不相同。方法侧把 motion-aware 空间音频模块接进 audio-visual LLM，编码请求中的空间线索并在移动中刷新，再用多任务指令微调加语音理解、空间音频感知、视觉 grounding 的辅助监督来提升动作预测。实验在已见与未见环境都给了 baseline。这是把「空间音频」真正当具身感知通道用的一篇（此前多数 audio-visual LLM 只把声音当语义标签）；局限也明显：目前只建立 baseline，真机部署、噪声与多人同时说话的混响场景都还没碰。</div>
+      <div class="tags"><span class="tag">空间音频</span><span class="tag">具身智能</span><span class="tag">语音理解</span><span class="tag">多模态</span><span class="tag">数据集</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.30171" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.30049" target="_blank">AIRPiano：在桌面上「空弹」也能出声——手势驱动的乐谱跟随，133 ms 容差内和弦对齐 74%</a></h4>
+      <div class="meta"><span>📅 2026-11-23</span><span>👥 Jinxuan Zhu, Zhiyao Duan（罗切斯特大学）</span></div>
+      <div class="abstract">很多人练琴是先在桌面上「空弹」默记的，AIRPiano 就是给这个习惯配声音：给定乐谱，用户在平面上做类似弹琴的指法动作，不必复现绝对键位——音高由乐谱供给，手部动作决定弹哪些音符、什么时候弹。技术上形式化为「桌面手部运动」与「符号化乐谱事件」的在线对齐，难点有三个：桌面动作本身歧义大、和真实弹琴动作分布不同、且缺少动作-乐谱对齐数据。作者为此设计了运动与乐谱表示、搭了数据处理 pipeline，用现有钢琴演奏录音训练带监督注意力的 Transformer（相当于把演奏录音当动作代理），再做流式推理框架，把局部对齐预测与序列跟踪结合以实现实时交互。自建 VSF-Piano 与 VSF-Tabletop 两个评测集，在后者配对子集上做一次事后全局时间校正后，133 ms 容差内平均和弦对齐率 74%（VSF-Piano 为 79%）。这是音乐交互里少见地把「输入设备」彻底去掉的一步；注意 74% 是加了事后全局校正的数字，实时无校正场景下的表现论文没单列。</div>
+      <div class="tags"><span class="tag">音乐交互</span><span class="tag">乐谱跟随</span><span class="tag">流式推理</span><span class="tag">Transformer</span><span class="tag">HCI</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.30049" target="_blank">🔗 arXiv</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-11-24-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
