@@ -1,0 +1,253 @@
+{
+  "date": "2026-11-25",
+  "note": "本期时间窗口说明：① arXiv 的「Tue, 24 Nov 2026」公告批（北京时间 11-25 09:00 前后刷新）是本窗口内唯一的新内容，这批稿件 v1 提交时间分布在 11-20 19:31 至 11-23 17:18 UTC；昨日（11-24）早报与午报已覆盖其中 SonicRender、Ultrasound Watermark、二语发音评测、冻结编码器深伪、Audio-Visual Rearrangement、AIRPiano 等 7 篇，本期补齐该批剩余 18 篇，属正常补录而非旧闻回填。② 数据源按规程执行：arxiv API（max_results=50）返回 50 条成功，但与 listing 交叉比对后发现 API 尚未含最新公告，最终以 eess.AS/cs.SD 的 recent listing（Tue 24 Nov 组：eess.AS 14 条、cs.SD 33 条）为准，并与近 10 期日报的 377 个 arXiv id 做了去重。③ 该批中的 2611.28094 / 2611.28056 / 2611.28020 / 2611.28026 四条是 9 月至 11 月初稿件的迟来 cross-list，已按「不收旧稿」原则剔除。④ HuggingFace Daily Papers 今日 Top40 仍以视觉/具身/Agent 为主，audio 方向无新增条目。⑤ 新闻侧按规程逐条执行 GPT-Live、OpenAI voice model、Gemini voice、full-duplex speech model、语音模型发布、real-time voice AI 六组必搜词（外加两轮泛语音产品检索，freshness=day/week），窗口内命中的可信发布只有 1 条（谷歌 Gemini 自定义语音的代码线索），其余均为 7 月 GPT-Live、9 月 ElevenLabs v4、11 月中 Bland Tofu-1 等旧闻，未收录。",
+  "papers": [
+    {
+      "title": "CAST：把 Whisper 拧成能上线的字幕产线——分层 VAD + 幻觉检测修复，WER 6.99%→5.36%，已进生产 STT 环节",
+      "url": "https://arxiv.org/abs/2611.31055",
+      "date": "2026-11-23",
+      "authors": "Aditya Mishra, Thanish Bolla, Bidisha Sharma, Balaji Pitchaikannu, Surbhi Sinha, Anup Kotalwar（AAAI-27 IAAI track，两位共同一作）",
+      "abstract": "长视频娱乐节目的字幕生成，难点不在声学模型：音乐、音效密集，口音多、串音多、噪声多，转写质量很大程度取决于分段和周边模块。作者指出单遍 VAD 的结构性缺陷——会漏掉微弱的低能量人声，又会把近乎静音的片段放进去，诱发自回归解码器的幻觉与重复。CAST（Captioning ASR Stack for Television）的解法是分层 VAD：对初判被拒的片段做语义与声学双重保留检查后再回收，再叠加语言识别、歌词路由、以及针对性的幻觉检测与修复，主干用冻结的 Whisper large-v3，整条流水线跑在一张 NVIDIA L4 上。在 100 条内部素材（60.46 小时）上，归一化 WER 从 6.99% 降到 5.36%，字幕人工编辑率从 254.2 降到 221.9 分钟/小时（对比 WhisperX 流水线），公开数据集上删除率改善 11%。论文还逐级报告了各模块的行为。CAST 已于 2026 年 8 月底进入其字幕流水线的生产 STT 环节。价值在于这是一份「冻结大模型 + 工程设计」的完整落地账本：告诉你不换模型也能拿到 23% 的相对 WER 改善，代价是要把 VAD、LID、歌词路由、幻觉修复都做对；局限是评估全部基于内部素材 + 单一 GPU 配置，跨语言、跨播出形态的可迁移性未验证。",
+      "tags": ["ASR", "字幕生成", "VAD", "幻觉修复", "生产部署"],
+      "highlight": true,
+      "highlight_note": "少见的「已上线」级 ASR 系统工程论文：不换模型，靠分层 VAD + 幻觉修复把 WER 降 23%，并给出各模块的独立行为分析",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.31055"}
+      ]
+    },
+    {
+      "title": "SpeechSplice：不训练、不改权重，直接替换 encoder 隐状态来「纠正发音」——母语听者 98.6–100% 判为目标读音",
+      "url": "https://arxiv.org/abs/2611.30927",
+      "date": "2026-11-23",
+      "authors": "Kiyoshi Kurihara, Jumpei Ukita, Yusuke Iwasawa, Yutaka Matsuo（EACL 2027 Findings）",
+      "abstract": "LLM-based TTS 大多没有显式的发音纠正接口，专有名词、同形异音词、数字、领域术语经常读错。权重编辑或微调能缓解，但有音质退化风险且必须离线做。SpeechSplice 提出一种免训练的 encoder 输出替换方案：把某个词的 encoder 输出隐状态，替换成它在「目标读音」下的隐状态。作者在 10 个公开 TTS 系统、17 种模型-语言组合上做了跨架构、跨语言实验，得到一个有价值的结构性结论——当生成器通过 cross-attention 读文本时（编码器-解码器分离），替换干预把读音推向目标的比例明显高于文本与语音共享同一条 self-attention 序列的架构。人工评测中，母语听者对 SpeechSplice 生成的语音判定「确实读成了目标读音」的比例达 98.6–100.0%，另一项独立研究显示自然度与未修改合成无显著差异。这篇文章的贡献不只是方法，更是给出了「什么条件下发音可控」的架构判据：想做产品级发音词典，先看你的 TTS 是不是 cross-attention 结构。",
+      "tags": ["TTS", "发音控制", "免训练干预", "可解释性", "多语言"],
+      "highlight": true,
+      "highlight_note": "免训练、零音质损失地解决 LLM-TTS 的发音错误痛点，并给出「哪种架构才吃得下这种干预」的判据",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.30927"}
+      ]
+    },
+    {
+      "title": "BiSAT：让「语义」和「声学」在两条独立分支上对齐——单码流同时保住语言内容与声学细节，训练数据更少也能打平 SOTA",
+      "url": "https://arxiv.org/abs/2611.30723",
+      "date": "2026-11-23",
+      "authors": "Y. Lu, L. Wang, S. Okada（13 页，含 Demo）",
+      "abstract": "语音语言模型把语音生成成离散 token 序列，tokenizer 必须在低码率下同时保住声学细节与语言内容。语义增强的 tokenizer 会丢声学细节，声学导向的 tokenizer 又让语言建模变难；统一 tokenizer 把两者塞进同一特征空间会产生目标间干扰，而且现有做法通常是把声学表示对齐到冻结教师给的固定语义目标。BiSAT 的做法是「分离分支 + 共享索引」：声学与语义各走一条连续表示分支，由一个 shared-index 机制对齐，最终只输出一条离散码流；两条分支的编码器联合优化，不依赖固定的语义教师目标。在 BiSAT 之上，作者搭了 BiSAT-TTS（自回归文本-语音 LM + 条件 flow-matching 声学解码器）做零样本 TTS。重建、下游理解与诊断分析显示码流里语义与声学信息都被保住，在 in-the-wild 与域外语音上表现稳定，且学到了互补的码本表示；冻结码的下游理解结果还支持把它当作 RL 后训练中基于 code 的奖励建模基础。BiSAT-TTS 用更少训练数据达到与 SOTA speech-LM TTS 基线相当的水平。Demo: https://seekmind-lab.github.io/bisat-demo 。值得关注的是「双分支单码流」这个设计对下游（理解 + 生成 + RL）复用的友好度。",
+      "tags": ["语音Tokenization", "TTS", "零样本", "语音语言模型", "Flow Matching"],
+      "highlight": true,
+      "highlight_note": "把语义/声学的「目标干扰」用双分支 + 共享索引拆开，只出一条码流——tokenizer 设计上少见的干净解法",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.30723"},
+        {"label": "Demo", "url": "https://seekmind-lab.github.io/bisat-demo"}
+      ]
+    },
+    {
+      "title": "LiveAudio：把双向视频转音频模型「改成」流式——边播边出声，A100 单卡 RTF 0.79、首帧 143 ms",
+      "url": "https://arxiv.org/abs/2611.30714",
+      "date": "2026-11-23",
+      "authors": "Yuxuan Jiang, Zehua Chen, Yusheng Dai, Andong Wang, Weibei Dou, Jun Zhu（清华等，23 页）",
+      "abstract": "视频转音频（V2A）要生成与画面在内容和时间上都对得上的声音，影视后期、直播、游戏、交互式世界模型都要用。但交互式应用是持续收到视频流的，声音必须实时跟上，而现有 V2A 模型大多是双向的，必须看完整段才能出声。LiveAudio 走的是「改造」而不是「从头训」的路线：从一个双向模型出发，通过渐进式因果微调 + 蒸馏，把它转成逐块生成（block-by-block）的流式生成器，每块只依赖已经播放过的视频，且只需少量采样步数。在 VGGSound 上，LiveAudio 的音质与同步性都优于现有流式模型，同步性甚至超过它出发的那个双向模型；单张 A100 上实时因子 0.79、首帧延迟 143 ms。Audio samples: https://streamaudio.github.io 。这条路线对工业界的直接意义是：不必放弃已有高质量双向模型的权重，因果化 + 蒸馏就能换来实时性——但代价是画质/时长分布外的长视频稳定性仍需观察。",
+      "tags": ["视频转音频", "流式生成", "扩散模型", "实时", "因果微调"],
+      "highlight": true,
+      "highlight_note": "双向→因果的渐进改造 + 蒸馏，让 V2A 首次做到单卡实时（RTF 0.79），同步性反超原双向模型",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.30714"},
+        {"label": "Audio Samples", "url": "https://streamaudio.github.io"}
+      ]
+    },
+    {
+      "title": "S²SCORE：不用文本的语音翻译统一评测——一个模型同时管语义充分性、说话人相似度、声学自然度",
+      "url": "https://arxiv.org/abs/2611.29557",
+      "date": "2026-11-22",
+      "authors": "Lalaram Arya, Mrinmoy Bhattacharjee, S. R. Mahadeva Prasanna",
+      "abstract": "评测语音到语音翻译（S²ST）要同时看语义充分性、说话人相似度、声学自然度三个维度。现有做法主要是文本中心的：依赖 ASR 转写，且基本只评语义充分性，其他维度得另找指标。S²SCORE 提出统一的 text-free 评测框架，用多任务架构联合建模这三个维度，输出一个经人类校准的总体质量分。训练监督来自已有评测模型而不是直接人工标注，因此可规模化。在五个语言对上，S²SCORE 与人工判断、独立参考指标、以及训练监督指标都高度一致，说明泛化稳健；无参考变体 S²SCORE-QE 稳定优于 S²SCORE-REF，语义充分性预测也强于 BLASER 2.0。对做同传/语音翻译的人来说，这是把「一堆割裂指标」收敛成一个可用分数的尝试；隐含风险是监督来自既有评测模型，等于继承了它们的偏好与偏置，多语种低资源语言的校准仍是开放问题。",
+      "tags": ["S2ST", "评测指标", "多任务学习", "无参考评测", "语音翻译"],
+      "highlight": true,
+      "highlight_note": "S²ST 长期缺一个好用的统一指标：这里给出 text-free、三维修度联合、且无参考版本更强的方案",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.29557"}
+      ]
+    },
+    {
+      "title": "Synthetic Twins：合成测试集到底值多少条真人录音？——加上「说话人克隆」这一步，等价性从 9 条抬到 70–122 条",
+      "url": "https://arxiv.org/abs/2611.30694",
+      "date": "2026-11-23",
+      "authors": "Nur Yağmur Tuncer, Mustafa Sertaç Türkel, Fatma Nur Korkmaz, Ahmet Tuğrul Bayrak",
+      "abstract": "用 TTS 合成语音替代真人录音做 ASR 测试集很省钱，但作者指出一个残酷事实：一个现成的合成测试集，在估计识别器真实错误率这件事上，价值只相当于几十条真人录音。研究问的是「真人录音里哪些属性是合成语音缺的，能补回多少」。做法是给 507 条土耳其语 Common Voice 录音造「合成双胞胎」：一级一级往上加因子——说话人的音高、同一说话人的克隆、真实录音信道、语速。每加一步就测「在副本上的 ASR 行为」与「在真人录音上的 ASR 行为」的一致度。跨三个零样本克隆引擎、6 人与 19 人两组识别器：说话人克隆是提升「哪些句子难」一致性的关键一步，Chatterbox 上 Spearman 相关从 0.41 抬到 0.55；匹配信道或加通用噪声则主要修正「合成语音比真人更容易」导致的错误水位偏差。价值最高的那份双胞胎等价于 70 到 122 条真人录音（随识别器面板变化），而现成音色只有约 9 条。在 VoxForge（说话人身份已知而非推断）上复现：克隆把句子一致性从 0.31 抬到 0.50，等价录音数从 8 抬到约 50。作者最后给了实用配方和一份合成 ASR 测试集的报告检查清单。",
+      "tags": ["ASR评测", "TTS", "声音克隆", "测试集构建", "方法论"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.30694"}
+      ]
+    },
+    {
+      "title": "Voice Agents：从「听觉智能」到「听觉能动性」——把「说了话之后系统真的做了什么」变成可追责的设计问题",
+      "url": "https://arxiv.org/abs/2611.29465",
+      "date": "2026-11-22",
+      "authors": "Kele Xu, Qisheng Xu, Xinwang Liu, Huaimin Wang",
+      "abstract": "语音系统正在把流式语音、持久状态、推理、工具调用、具身控制合到同一个 runtime 里；一旦共享运行时，语音输入就能改变数字或物理状态，「识别准不准、回话自然不自然」已经不足以刻画系统。这篇立场/综述文章提出一组概念：auditory intelligence（感知、理解、协调、生成语音交互所需的能力）与 auditory agency（从交互到有状态决策与可观察后果的因果路径）；commitment boundary 指可修改的听觉证据变成持久状态、计划或可执行请求的那条界线；agency closure 则是把一个已授权动作一路跟到观察、验证、恢复/补偿与结果沟通。作者汇总全双工交互、推理、记忆、工具、具身、人类控制几方面的证据，指出了一个系统性错配：集成的推进速度快于对「集成后的系统到底做了什么」的端到端观察。结论是设计目标应当是保住从语音证据到后果的完整 trace，并让承诺、执行、验证三者都可归因。对做语音 Agent 的团队，这是一份很好用的「事故复盘该看哪些环节」的框架。",
+      "tags": ["语音Agent", "全双工", "系统设计", "可观测性", "综述"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.29465"}
+      ]
+    },
+    {
+      "title": "Tenlai-TTS 2.0：连续表示 LLM-TTS 的端到端训练——高斯瓶颈 + AR-DiT 头 + 可微重建/识别反馈，CER 0.82%→ 更低",
+      "url": "https://arxiv.org/abs/2611.29226",
+      "date": "2026-11-22",
+      "authors": "Changfeng Gao, Yong Ren, Jun Yuan, Zhengkun Tian, Ye Bai, Zhao You, Shidong Shang",
+      "abstract": "用连续语音 latent 做自回归 TTS 能避免量化带来的信息损失，但通常要先单独学一个 latent 空间、冻住、再训语言模型；这个空间得同时满足两个互相拉扯的要求——既保留足够声学细节以高保真重建，又要足够结构化和正则化以支持自回归预测。Tenlai-TTS 2.0 用端到端训练来平衡这两者：模型由带容量控制高斯瓶颈的语音编码器、带 AR-DiT（自回归扩散 Transformer）头的大语言模型、flow-matching mel 解码器、以及多任务识别模型（RM）组成；在能量归一化与固定方差高斯噪声下，瓶颈的信息率有闭式上界。通过重建、识别、next-patch 预测三个目标的联合优化，学到同时适配三者的连续表示，再训 LLM 与 AR-DiT；并且用可微的重建与识别反馈（经 FM 解码器与 RM）去优化模型自己预测出的 latent。在 Seed-TTS-eval 上，这套基于反馈的优化把字符错误率从 0.82% 继续往下压（论文给出完整对比）。这条线的意义是把「latent 空间设计」从超参选择变成可优化的目标函数的一部分。",
+      "tags": ["TTS", "连续表示", "端到端训练", "扩散Transformer", "Flow Matching"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.29226"}
+      ]
+    },
+    {
+      "title": "PAWP-TTS：150 万参数、5.98 MB 的双语（英-尼泊尔）TTS——推理时不带语言模型，前端规则化把发音知识搬出网络",
+      "url": "https://arxiv.org/abs/2611.29455",
+      "date": "2026-11-22",
+      "authors": "Firoj Paudel（单作者，代码/模型/ Demo 全开源）",
+      "abstract": "PAWP-TTS 是一个紧凑的非自回归 TTS 系统，覆盖英语、尼泊尔语和英尼语码混语音，24 kHz，推理时不含任何语言模型。它的设计哲学是「把确定性知识放进前端」：规则 + 词典的双语前端保留尼泊尔语原生对立、避开印地语音系，网络只负责声学建模。把所有可学习推理张量（含波形解码器）都算进来，PAWP-1.5M（1,490,390 参数、5.98 MB）在单一 ASR 识别器下达到英语 1.50%、尼泊尔语 1.75% 的字符错误率，在 600 条未参与训练的测试句上是尼泊尔语 5.04% / 英语 4.02% 的音素错误率（PER）。以解码器为中心的 281K 参数模型（1.1 MB）在三个独立随机种子上仍保持可懂；同预算的稠密模型（5.53±0.08% 尼语、5.34±0.28% 英 PER）优于 K=2 跨层共享基模型（6.35±0.11% / 6.57±0.47%）。一个很实在的发现：修正一处前端/标注版本不匹配，让尼泊尔语 PER 几乎减半——效果超过任何架构或权重层面的改动。后半部分研究「权重空间编程」（零训练权重编辑）：在严格对照下（仅验证集选点、一次性测试、配对 bootstrap、匹配随机与同参数梯度基线）显示出真实选择性（词边界停顿 27:1，仅用 96 个权重；语言门控残差内零跨语连带损伤）但没有超出对照的精度收益。",
+      "tags": ["TTS", "小模型", "多语言", "端侧部署", "权重编辑"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.29455"},
+        {"label": "GitHub", "url": "https://github.com/Firojpaudel/PAWP_TTS"},
+        {"label": "Demo", "url": "https://huggingface.co/spaces/Firoj112/pawp-tts-demo"}
+      ]
+    },
+    {
+      "title": "Granary-v2：84 万小时多语语音数据 + 可复用策展系统，48 种语言、同一录音对齐多种输出形态",
+      "url": "https://arxiv.org/abs/2611.28248",
+      "date": "2026-11-20",
+      "authors": "Nithin Rao Koluguri, Meline Mkrtchyan, Nune Tadevosyan 等 20 人（NVIDIA）",
+      "abstract": "指令跟随的语音-语言模型需要这样的训练数据：同一条录音能对应到不同的输出形态和任务。Granary-v2 就是这套数据基础与可复用策展系统：在 v1 之上扩展了对齐的转写变体与指令-目标对，语言覆盖从 25 种增到 48 种。系统用 NeMo Curator 搭，组合了语言相关的 ASR 标注、转写改进、文本标签生成，产出多套对齐目标——忠实转写、去掉/保留口语不流畅的书面形式、码混转写；额外还有转写派生的描述（caption）与问答对，部分记录带上下文与翻译。全量处理后约 843,600 小时唯一音频，其中约 142,800 小时的英译覆盖、约 5.5 万小时英语音频译到 31 种目标语言。作者用两个英文 Transformer-TDT 模型在相同训练步预算下验证标签质量过滤：九项基准的未加权平均 WER 从 4.91% 降到 4.67%，六项基准改善；同时报告了策展吞吐，以及 Nemotron-3.5-Transcribe（把 Granary-v2 作为训练数据之一）的 ASR 与语音翻译结果。数据集已开源在 HuggingFace（nvidia/Granary-v2）。",
+      "tags": ["语音数据集", "多语言", "数据策展", "ASR", "语音翻译"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.28248"},
+        {"label": "Dataset", "url": "https://huggingface.co/datasets/nvidia/Granary-v2"}
+      ]
+    },
+    {
+      "title": "CANDOR：17 种语言、61 个语料的构音障碍语音合集——把「数据从哪来、能不能用」写成可审计文档",
+      "url": "https://arxiv.org/abs/2611.28930",
+      "date": "2026-11-21",
+      "authors": "Bernard Muller, LaVonne Roberts, Leo Kaiya, Antonio Ortiz Barrañón",
+      "abstract": "CANDOR 汇总了 61 个语料、17 种语言、五类病因加一个混合/其他组：2,057 名构音障碍说话人、19,538 名健康对照，共 4,469.7 小时音频，其中构音障碍子集 1,178.8 小时。统计口径在有语音障碍标签时用它、否则用诊断标签。合集包含 14 种非英语语言的 732 名构音障碍说话人；其中 194 名说话人使用六种其非英语基线模型（Qwen3-ASR）不支持的语言。论文详细记录了构成、保管链、许可证与转让条款，并明确区分「语料级来源」与「受试者级同意记录」——后者只有少数成员机构持有。31 个含构音障碍的语料中，开放许可只覆盖 29.0% 的语料、10.5% 的说话人、8.2% 的小时数；剔除英文 Speech Accessibility Project 后开放小时占比升到 31.2%，说明其对这一合集构成的依赖。CANDOR 不能作为单一音频资源再分发，作者划出了公开 / 受限 / 有条件三类产物。15 个语料带严重度标签，但没有经验证的跨语料映射。非英语 ASR 基线里只有中文给出了满足评测标准的真实语音估计。对做无障碍语音与病理语音的团队，这是一份罕见的「合规可用性」说明书。",
+      "tags": ["构音障碍语音", "数据集", "数据治理", "多语言", "ASR"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.28930"}
+      ]
+    },
+    {
+      "title": "BiSA：语义编码器其实「只听一只耳朵」——跨耳差分交互让双人重叠语音的联合转写成功率从 0% 升到 57.81%",
+      "url": "https://arxiv.org/abs/2611.29012",
+      "date": "2026-11-21",
+      "authors": "Wenxuan He, Shan Liang（15 页）",
+      "abstract": "空间音频大模型正把通用音频理解与空间感知结合起来，但重叠对话要求的不只是「定位谁在说」，还要「各自说了什么，并把词对上位置」。作者在 MiDashengLM-Spatial 这个双耳模型上研究该问题，并引入 BiCP-Bench：重叠双说话人双耳录音的基准，对比候选式识别、位置引导转写、以及带空间归属的联合转写三种设定。诊断发现了两个反直觉现象：模型能在候选中指出目标语句，但离开候选就转写不出来；更关键的是，它的语义编码器只用了一只耳朵——改变「用哪只耳」，恢复得更准的那一侧就变了，而空间分支收到的双耳输入并没变。据此作者提出 Binaural Semantic Adaptation（BiSA）：把双耳共享编码与跨耳差分交互结合。在主干冻结、仅 0.027% 参数可训练的情况下，同时起始的双人语音「正确归属的联合转写」成功率从 0% 提到 57.81%；错开起始时，后说话人的 WER 从 109.47% 降到 29.58%；全长 Clarity CEC1 混合语音 WER 从 59.33% 降到 39.60%；MMAU-Pro 的空间推理在不更新空间编码器的前提下提升 9.54 个百分点。对多说话人会议/车载场景，这条「修语义分支而不是修空间分支」的路径成本极低，值得直接复用。",
+      "tags": ["多说话人ASR", "空间音频", "双耳", "参数高效", "语音理解"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.29012"}
+      ]
+    },
+    {
+      "title": "音频嵌入会漏说话人身份：CLAP 漏得最多、YAMNet 最少——把「隐私泄漏」变成表示选型的显式指标",
+      "url": "https://arxiv.org/abs/2611.31043",
+      "date": "2026-11-23",
+      "authors": "Bhawana Chhaglani",
+      "abstract": "预训练音频嵌入越来越常被当作声音事件检测（SED）等「常开式」声学感知任务的中间表示。这些表示是按下游可用性挑的，但可能保留了与用途无关的敏感信息——即使原始音频不外泄也有隐私风险。本文给出一套实证审计框架，两条互补路径：一是表示层泄漏，测音频嵌入与「专门编码敏感信息的表示」之间的统计依赖；二是攻击层泄漏，训轻量对抗探针直接从嵌入里恢复敏感属性。作者把框架用在四种常用音频表示上（CLAP、PANNs、AST、YAMNet），评估说话人身份与性别的泄漏：说话人识别的平衡准确率落在 0.43–0.72 之间，性别信息同样高度可恢复；两类测量趋势一致，CLAP 泄漏最多、YAMNet 泄漏说话人身份最少。结论很直接：中间音频表示并不是天然隐私安全的接口，选表示时应当把「隐私泄漏」和「下游效用」并列成显式准则。对做 always-on 声学传感（家庭、车载、可穿戴）的产品，这是一份该纳入选型清单的对照表。",
+      "tags": ["音频表示", "隐私", "声学感知", "CLAP", "模型选型"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.31043"}
+      ]
+    },
+    {
+      "title": "可还原的多语种声音匿名化：把 192 维说话人嵌入符号量化成二值身份载荷，水印埋进去，干净条件下 99% 精确恢复、归属 EER 0.96%",
+      "url": "https://arxiv.org/abs/2611.28863",
+      "date": "2026-11-21",
+      "authors": "Haoyuan Zheng, Guang Hua, Xiaoxiao Miao",
+      "abstract": "声音匿名化要隐藏说话人身份、同时保留语言与副语言信息，但有些场景还需要事后把匿名录音归回到原始说话人。现有可恢复方案多依赖专门设计的可逆匿名系统，因此绑死在某一种架构上。这篇提出一个 post-hoc 框架：把 192 维说话人嵌入经符号量化转成二值身份载荷，用分段音频水印策略嵌入匿名声学信号；恢复出的载荷再与注册说话人模板比对完成归属。整个过程不重建原始波形、也不修改底层匿名系统。作者在四种语言、两个匿名骨干（BM1 与 T24）上评测：干净条件下载荷精确恢复率约 99%，归属 EER 0.96%，同时基本保持原有的隐私-效用水平；多种音频失真下归属仍可靠（尽管载荷恢复不完美），但时间缩放会严重破坏恢复。额外分析显示，水印鲁棒性随语言与载体时长变化。这条「不改匿名器、只加水印」的工程路线可直接套在现网匿名化流水线上，代价是对时间尺度变换（变速/变调类处理）脆弱。",
+      "tags": ["声音匿名化", "音频水印", "说话人归属", "多语言", "隐私"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.28863"}
+      ]
+    },
+    {
+      "title": "SWIFT：不用神经网络、纯定点整数的手工深伪检测器，跑在 FPGA 上——单帧 7.85 µs、1.734 W，EER 低至 0.03%",
+      "url": "https://arxiv.org/abs/2611.29315",
+      "date": "2026-11-22",
+      "authors": "Chirantan Banerjee, Soumita Chatterjee, Bhargab B. Bhattacharya, Hafizur Rahaman（ICISS 2026，共同一作）",
+      "abstract": "生成式声音克隆威胁声纹认证，而现有深伪检测器依赖高功耗、高精度模型，不适合边缘硬件。SWIFT（Streaming Whiten-Integer Forensic Trust-Engine）反过来做手工特征：在合成痕迹集中的高频噪声域工作，一阶整数高通残差驱动九族定点描述子——包括整数提升小波倒谱分位数、马氏异常距离、Poincaré 相空间几何、相位抖动——再由校准过的梯度提升树与稀疏 L1 正则元学习器融合。在防泄漏的嵌套交叉验证下、真假音频共用一条预处理链，参考模型在八个基准上最高达 99.86% 准确率、EER 最低 0.03%。它的整数前端与定点线性分类器可跑在 PYNQ-Z2（Zynq-7020）的可编程逻辑上：单帧数据通路延迟 7.85 微秒（127.4k 帧/秒），功耗 1.734 W，LUT 占用 11.2%。结论是：不依赖预训练神经模型、不需要浮点单元，纯整数音频深伪特征提取在边缘是可行的。工程上要留意的边界是这类手工特征对未见合成器族与新编码链的迁移能力，论文给的八基准仍以公开集为主。",
+      "tags": ["语音深伪", "FPGA", "边缘计算", "定点量化", "轻量化"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.29315"}
+      ]
+    },
+    {
+      "title": "把「部分伪造定位」当回归做：单阶段边界回归器直接输出 (起始, 结束, 分数)，摆脱帧分辨率绑定",
+      "url": "https://arxiv.org/abs/2611.29085",
+      "date": "2026-11-21",
+      "authors": "Yixuan Xiao, Xin Wang, Yassine El Kheir, Feidi Kallel, Arnab Das, Tim Polzehl, Sebastian Möller, Ngoc Thang Vu（ICASSP 2027 在投）",
+      "abstract": "部分伪造音频是在一段真实语音里嵌入伪造片段，spoof localization 就是把这些片段找出来。多数 countermeasure 工作在帧级：前端把音频表示成帧，后端逐帧判真伪。这种帧级检测把参考、预测与评估全都绑在一个预定义时间分辨率上——含过渡的帧只能有一个标签、边界不能落在帧内、评估结果也随分辨率变。作者直接把定位当回归：提出单阶段边界回归器，输出 (起始时间, 结束时间, 分数) 三元组，时间戳是连续值，训练监督用精确的参考区间。结果显示该方法优于以往的帧级方法与边界类方法，泛化也更好。对做取证与内容审核的人来说，这是把一个「被分辨率偷偷决定上限」的问题重新定义得相当干净的做法；实际部署时仍需关注长音频下的召回与阈值标定。",
+      "tags": ["语音深伪", "伪造定位", "边界回归", "音频取证", "反欺骗"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.29085"}
+      ]
+    },
+    {
+      "title": "MusicListenBench：音频 LLM 真能听出「旋律/和声/音色/速度」的差别吗？——8 个开源模型有 7 个贴着随机线，GRPO 后训练能拉到接近人类",
+      "url": "https://arxiv.org/abs/2611.29375",
+      "date": "2026-11-22",
+      "authors": "Abhinaba Roy, Ambuj Mehrish, Dorien Herremans",
+      "abstract": "音频 LLM 常被按歌曲流派、情绪、配器来评，但更基础的能力是：两段短音频是不是同一段旋律、同一个和弦、同一种乐器。MusicListenBench 就是这套配对听辨测试，覆盖旋律、和声、音色、速度。每题两个变体：FLIP 变体改变音乐本身，答案必须变；STAY 变体只改声音（房间混响、嘶声），答案必须不变——两个变体答案相反，所以忽略音频的模型无论偏好哪个字母都只能得 50%。基准含训练集与两个测试集：一个由符号音乐渲染、标签精确，一个来自真实录音。在渲染测试集上，八个开源音频 LLM 里有七个距离这条随机地板不超过 4 个点；四个商用模型中两个 GPT-Audio 系都在随机水平，最好的 Gemini 2.5 Pro 达 74.2%，仍比人类听者（87.0%）低 12.8 点。用 GRPO 在 1 万条渲染干净对上做后训练，Qwen2.5-Omni 从 61.2% 提到 99.0%，且增益能迁移到未参与训练的任务；但在 FLIP/STAY 形式上只追平听者（86.0%）：它几乎不漏检变化（1.9%，Gemini 2.5 Pro 是 24.7%），可当只有「声音」变化时，它会把正确答案改错 25.7% 的情况——其中一半以上来自安静背景嘶声。结论是：模型学到的更多是「有差异」而不是「差异在哪一层」。",
+      "tags": ["音乐理解", "音频LLM", "基准测试", "GRPO", "评测"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.29375"}
+      ]
+    },
+    {
+      "title": "Music Circuit：在大音乐生成模型里找到「风格电路」——不写风格提示词，直接操纵稀疏子网就能把曲子转成目标风格",
+      "url": "https://arxiv.org/abs/2611.29475",
+      "date": "2026-11-22",
+      "authors": "Ruiji Yu, Wenye Ma, Gus Xia（28 页，含音频与乐谱示例）",
+      "abstract": "音乐风格是贯穿全曲的全局属性，也是用户在大音乐生成模型里最常用的杠杆，但风格在模型内部怎么表示、由哪些部件驱动，基本没人拆开看过。在语言模型里，circuit analysis 能追踪到由少数 attention head 与 MLP 神经元构成的稀疏子网，已被用来解释与控制情绪这类全局属性。这篇把电路分析搬到音乐风格上：以 YuE2 为基座，构造「同一段歌词 × 五种风格」的配对数据集，分三步走——先在阶段上定位，发现风格主要在乐谱规划（score-planning）阶段成形；再在该阶段逐位置静态观察，发现风格不是一个固定向量，而是跨 token 的动态表示；于是把一个风格在各位置上的激活差合并成一条方向，并把这个方向背后的神经元与 attention head 追成稀疏电路。完全不写风格文本，只操纵这条电路，就能把一首曲子转成目标风格，效果追平甚至超过风格提示词。Audio/score: https://aristo233.github.io/Music_Circuit/ 。这是首个在大音乐生成模型上做电路级风格分析与控制的工作，对「可控音乐生成」提供了一个不靠 prompt 工程的新旋钮。",
+      "tags": ["音乐生成", "可解释性", "风格控制", "电路分析", "可控生成"],
+      "highlight": false,
+      "highlight_note": "",
+      "links": [
+        {"label": "arXiv", "url": "https://arxiv.org/abs/2611.29475"},
+        {"label": "Demo", "url": "https://aristo233.github.io/Music_Circuit/"}
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "谷歌或在 Gemini 里开放「自定义语音」：App 代码出现「创建语音」入口",
+      "url": "https://stock.10jqka.com.cn/20261124/c682150025.shtml",
+      "summary": "外媒 Android Authority 于 11 月 24 日从 Gemini App 代码中挖到新的字符串：语音选择菜单可能新增「创建语音（Create a voice）」选项，用户不再只能从谷歌预设音色里挑，而是自己设计 Gemini 的声音。技术底座大概率是今年 9 月发布的 Gemini 3.8 Flash TTS（用文字描述即可为 100 多种语言与方言生成全新音色），以及配套的 Voice Remixing（用提示词修改已有音色的音高、口音、语速）。目前仅为代码线索，官方未宣布，上线时间未定——但方向很明确：语音正在从「选一个预设」变成「自己造一个」。"
+    }
+  ]
+}
