@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-11-26</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-11-26</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年11月26日 (周四) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">5</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>📌 本期说明</h3><div class="news-item"><p>本期说明：① arxiv 一级搜索（cat:eess.AS OR cat:cs.SD，max_results=50，按提交时间倒序）成功返回完整 50 条，最新一条提交时间为 11-24 18:59 UTC；三级交叉核验（arxiv /list 页面 + rss.arxiv.org/rss/eess.AS + /list/eess.AS/new 与 /list/cs.SD/new 逐条比对）确认：截至本期运行时，arxiv 端最新公告批仍为「Wednesday, 25 November 2026」（eess.AS 11 条 / cs.SD 17 条），11-26 的新公告批尚未发布（arxiv 每日 00:00 UTC 后入库，本期 01:34 UTC 运行时仍未刷出）。因此不存在「24 小时内新提交并被遗漏」的论文，本期改为对 25 日公告批做全量查漏。② 去重方式：把近 9 期日报（11-21 至 11-25 午报）的论文 id 全量抽出去重集合（58 个 id），与 25 日公告批的全部 22 条 id 逐一比对，命中 3 条未收录项（2611.31267 / 2611.31276 / 2611.31301，均为 cs.CL / cs.AI 交叉列表，早报与午报因主类目过滤而漏收），另补入 2 条本期有实质性版本更新的论文（2610.36777v3 放出代码与 4B 权重、2611.13243v4 开源 SDK）。③ HuggingFace Daily Papers Top60 今日仍以视觉 / Agent / 推理为主，audio 方向仅 2 条命中且均为非语音内容，audio 侧零新增。④ 新闻侧按规程逐条执行 6 组必搜关键词（GPT-Live、OpenAI voice model、Gemini voice、full-duplex speech model、语音模型发布、real-time voice AI）外加 3 轮补充检索（freshness=week / day），命中项均为旧闻（GPT-Live 7 月、GPT-Realtime-2 5 月、Gemini 3.5 Transcribe 8 月、Qwen-Audio 3.1 9 月），已全部剔除；24 小时窗口内仅得 2 条真实新增（Chariot-1 主权语音基座发布、IBM Research 印地语语音 Agent 参考实现），如实收录，不用旧闻凑数。</p></div></div>
+<div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2610.36777" target="_blank">S³-S2ST：让流式同传自己学「什么时候可以下笔」——用语义对齐的增量监督，阈值一调就换质量/延迟曲线，代码与 4B 权重已开源</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-25</span><span>👥 Yuxiang Zhao、Zhiyun Fan、Yu Pu、Yanjie An、Yushen Chen、Wenrui Liang、Baiji Liu、Yunchong Xiao、Zhaoci Liu、Keqi Deng、Kai Yu、Zhifu Gao、Xiangang Li、Xie Chen</span></div>
+      <div class="abstract">流式语音到语音翻译（S2ST）最难的不是「翻得准」，而是「什么时候翻」——输入还在一句句往里流，模型必须自己判断当前这段部分输入是否已经足以稳定产出译文并把语音说出来，判断早了译文要返工，判断晚了延迟崩掉。这篇（v3 版本，本期更新并放出代码与 4B 权重）的做法是把「提交时机」也变成可学习对象：将语句级语音对转换成增量训练样本，从语义对齐的角度监督「此刻是否已经产生一个完整的、值得提交的语义单元」，训练出一个提交策略（policy），而策略的输出阈值在推理时可调，从而在固定的 640 ms 输入网格上直接控制质量—延迟的权衡曲线。结果上：英中方向在 FLEURS 上有竞争力，在自建的 9 语对测试集上翻译质量领先所对比的流式系统；在 RealSI 上，把阈值与已缓冲语音长度联动（缓冲多了就放宽阈值）可以进一步提质量，而首次出声延迟（first-audio latency）几乎不变。对做同传产品的团队，这篇最实用的是它把「延迟」从一个工程旋钮变成了模型内生的决策变量，且训练/推理代码与权重已开源于 github.com/QwenAudio/S3-S2ST。原始 v1 提交于 10-27，本期为 v3。</div>
+      <div class="tags"><span class="tag">S2ST</span><span class="tag">同声传译</span><span class="tag">流式</span><span class="tag">语义对齐</span><span class="tag">开源</span><span class="tag">延迟控制</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.36777" target="_blank">🔗 arXiv</a> <a href="https://github.com/QwenAudio/S3-S2ST" target="_blank">🔗 代码与权重</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.31301" target="_blank">MOZAIC：不只问「这段是真是假」，而是四选一告诉你伪在画面还是伪在声音——13.7 万条配对样本，12 个音视频 MLLM 最高只有 35.6%</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-25</span><span>👥 Shaina Raza、Mohamed Hafez、Ahmed Y. Radwan、Khalid Elgazzar、Kathryn Hume</span></div>
+      <div class="abstract">音视频深伪可以伪造人脸、伪造声音，或者两者都伪造。现有基准大多只问「真还是假」，于是无法回答一个对检测与取证都更关键的问题：这个检测器到底在看画面、在听声音，还是在看编码痕迹？MOZAIC 的构造思路很直接也很费力——每一段源视频都同时放出四种组合（真画面+真声音 / 真画面+假声音 / 假画面+真声音 / 假画面+假声音），共 137,745 条片段、15,014 组源配对，伪造类型覆盖内脸替换、整帧视频扩散生成与声音转换（voice conversion）。任务分四个：T1 音视频真实性四分类、T2 篡改类型、T3 身份核验、T4 解释。评测结果显示出一个很扎眼的偏差：最好的音视频 MLLM 在四分类 T1 上只有 35.6%，且对「只伪造画面」的识别率（43.6%）远高于「只伪造声音」（7.5%）——换句话说，当前多模态大模型严重依赖视觉通道，几乎是「听觉盲」。专门训练的检测器 T1 能到 98.4%，但把换脸生成器留出训练集后掉到 78.3%，泛化仍是开放问题；LoRA 微调能明显提升解释质量（OmniVinci 4.17→7.40，Qwen2.5-Omni 4.42→6.98）。数据集、MOZAIC-SMALL 精简版、代码与提示词已全部放出。</div>
+      <div class="tags"><span class="tag">深伪检测</span><span class="tag">音视频</span><span class="tag">基准</span><span class="tag">多模态大模型</span><span class="tag">可解释性</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.31301" target="_blank">🔗 arXiv</a> <a href="https://vectorinstitute.github.io/mozaic/" target="_blank">🔗 项目页</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.31267" target="_blank">ToneMamba：用「边界重置」的状态空间模型抓中文声调——在音节/词/韵律短语三级重置双向扫描，口语对话集上比 ToneNet 高 15.9 个点</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-25</span><span>👥 Po-Yu Chiu、Yi-Fen Liu</span></div>
+      <div class="abstract">连续语流中的中文声调识别之所以难，是因为上下文与时长变化会重塑 F0 曲线：同一个三声在词边界和韵律短语边界上的表现可以完全不同，而静态的边界嵌入（boundary embedding）只是把边界位置当作一个附加向量喂进去，并没有真的让模型「在这里断开重算」。ToneMamba 的做法是把边界做成状态空间模型里的重置信号——在音节、词、韵律短语（IPU）三个层级上做双向状态重置，让 SSM 的隐状态在边界处归零重来，从而天然获得层级化的上下文；再用固定权重融合多级表示，并用共享权重的双向扫描 + 通道向方向融合来压缩参数量。声调轮廓本身通过动态音节池化生成，时长信息则通过韵律条件门控（rhythm-conditioned gating）注入。数据上：FCU-VOICE-360 朗读语料 97.9%，MCDC-8 对话语料 74.8%，相对基线 ToneNet 分别提升 0.9 与 15.9 个百分点——差值的悬殊恰好说明了问题所在：朗读语料上静态边界嵌入已经够用，一到自发口语，时长变化成为主导因素，边界重置 + 节奏门控才真正起效。消融显示词级重置最有效，而节奏条件在对话语音上收益最大。（标题原文拼写为 ToneMamaba，正文模型名为 ToneMamba。）</div>
+      <div class="tags"><span class="tag">中文声调</span><span class="tag">状态空间模型</span><span class="tag">Mamba</span><span class="tag">韵律</span><span class="tag">F0</span><span class="tag">口语识别</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.31267" target="_blank">🔗 arXiv</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.31276" target="_blank">翻译过去的话，韵律还剩下多少？首个词级实证：英-中/泰/越的对应度低于欧洲语对，语序重排越多、局部对应越弱</a></h4>
+      <div class="meta"><span>📅 2026-11-25</span><span>👥 Haopeng Xie、Ismail Rasim Ulgen、Shengying Zhao、Berrak Sisman、Philipp Koehn</span></div>
+      <div class="abstract">韵律承载强调、情绪与意图，但「同一句话翻译成另一种语言后，重音还落在同一个词上吗」这个问题此前只在欧洲语对上被系统研究过。这篇补上了亚洲语对：以词级为单位，系统分析英语与五种语言（有声调的中文普通话、泰语、越南语，以及作为对照的日语、韩语）之间的音高与能量对应关系。几条结论对做语音翻译、配音与韵律建模的人都很实用：第一，整体对应度显著低于此前报告的欧洲语对估计值；第二，把声调因素做校正后，英-中、英-泰、英-越的音高对应度确实上升——说明词汇声调约束会「占用」一部分音高自由度，压缩了跨语言韵律映射的空间；第三，英-日、英-韩同样低于欧洲语对，可见「有没有声调」并不足以解释全部差异，语系与韵律组织方式本身也在起作用；第四，词序重排的程度与局部对应强度负相关，即使在语义对齐之后依然如此，意味着单纯的语义对齐无法解释跨语言韵律组织的差异。作者据此主张：韵律建模必须显式考虑词汇音高约束与译文的结构上下文，而不能假设「语义对齐了，韵律自然就对齐」。</div>
+      <div class="tags"><span class="tag">韵律</span><span class="tag">语音翻译</span><span class="tag">跨语言</span><span class="tag">声调</span><span class="tag">语序</span><span class="tag">语料分析</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.31276" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.13243" target="_blank">GigaEdge Enhance：把流式语音降噪做成能真的装进 App 的开源 SDK——8 kHz INT8 小模型 + 48 kHz FP32 双档，C++ 内核一套代码跑 ONNX Runtime / TFLite / Android / iOS / WebAssembly</a></h4>
+      <div class="meta"><span>📅 2026-11-25</span><span>👥 Artem Sokolov、Artem Khaidarov、Yana Lysova、Alexander Gladkikh、Vitaliy Yulis</span></div>
+      <div class="abstract">语音增强的论文很多，但「能落地」的很少，因为真实产品要的不是一个模型，而是一条可配置的处理链加上跨端一致的运行时。GigaEdge Enhance（本期 v4，开源 SDK）正是从这个角度写的：应用可以自行组合神经降噪、响度归一化、动态处理、采样率转换，以及在支持时启用的回声消除；归一化还可以不带神经模型单独运行。发布内容包含一个 8 kHz 的 INT8 降噪模型，以及 48 kHz 的 FP32 判别式与混合式模型；一套共享 C++ 内核通过原生接口支持 ONNX Runtime 与 TensorFlow Lite，并提供 Android、iOS SDK 与 WebAssembly 集成。工程细节上有两点值得抄：一是多个流的上下文可以共享同一份模型资源（独立 stream context 共用权重，避免每路流复制一份）；二是同一条流的连续多帧可以合成一次推理调用（temporal frame grouping），降低调度开销。评测在 EARS-WHAM v2 上进行，与 RNNoise、DPDFNet2 对比质量与处理开销，所有原生与 Web 配置都能快于实时处理，代价是分块（chunk）越大、收集输入所需的时间越长——这正是流式部署里延迟与算力的经典取舍。作者最终交付的是一个可配置的部署系统，以及一份「模型选择 / 分块大小 / 执行环境如何影响可用性」的实验研究。</div>
+      <div class="tags"><span class="tag">语音增强</span><span class="tag">流式</span><span class="tag">开源SDK</span><span class="tag">端侧部署</span><span class="tag">WebAssembly</span><span class="tag">降噪</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.13243" target="_blank">🔗 arXiv</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>印度 Chariot-1 主权语音基座发布：英语 + 10 种印度语言，实时 ASR 十语平均错误率比 Gemini 3.5 Transcribe 批式 API 低 26%</h4>
+      <p>11 月 25 日，印度电子与信息技术部（MeitY）秘书 S. Krishnan 在新德里为 Chariot-1 基座模型揭幕，这是 IndiaAI Mission 首批选中的四支「主权基座模型」团队之一（Chariot Artificial Intelligence，创始人 Parth Sarthi 与 Suvrat Bhooshan，分别出身 Google DeepMind 与 Meta FAIR）。Chariot 把自己定位为「前沿语音 AI 实验室」，做的不是 ASR→LLM→TTS 的拼接流水线，而是音频原生（audio-native）的「直接听、直接推理、直接说」模型，Chariot-1 是这条路线共享的底座，此前的 Chariot-1-ASR Realtime（10 种印度语言 + 印度英语，流式）与 Chariot-1-TTS-Multilingual（11 种印度语言 + 英语，50+ 音色，支持句内混语与几秒参考音频的声音克隆）都是从它继续训练而来。三个效率设计值得关注：IndicShift 用一套印度文字共享字母表，把印度语言文本的 token 数降到 2.5 分之一；Nested Training 用一次训练同时产出三个尺寸，训练提速最高 62%；Mixture of Vocabularies 再贡献约 38% 训练提速。语音侧宣称在 Async TTS Pronunciation Benchmark 上口头化准确率超过 97%（能正确读出货币、日期、缩写与符号，而不是逐词硬念）。ASR 侧的对比数字更硬：十语平均比 Google Gemini 3.5 Transcribe 的批式 API 错误率低 26%（公司自评，未经第三方复核）。对银行、保险、电信、呼叫中心与公共热线这类场景，「一套模型覆盖多种印度语言 + 更低的 token 成本」直接对应语音 Agent 与呼叫分析的账单。 <a href="https://cio.eletsonline.com/artificial-intelligence/chariot-1-foundation-model/77143" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>IBM Research 公开印地语语音 Agent 参考实现：语音只做「进出口」，真正的坑在跨语言向量检索——默认英文嵌入模型会静默返回五段无关段落</h4>
+      <p>11 月 25 日，IBM Research 公开了一个基于开源 Agent 框架 CUGA（Apache-2.0，ConfigUrable Generalist Agent）的多语言语音 Agent 参考设计：用户用印地语、泰米尔语、泰卢固语、古吉拉特语、马拉地语等口语提问，系统从一本 154 页的英文农业手册里检索并语音作答，可在 Hugging Face Spaces 的 CUGA Apps 中试用。流水线五段：音频 → 语音识别 → knowledge.search → CUGA（纯文本进、纯文本出）→ 语音合成 → 音频。语音侧可插拔：既支持 Sarvam AI 云端语音 API（从浏览器直连，应用服务器不接触 API Key），也支持自托管开源模型 SraVaani（STT）与 Svara（TTS）。最有价值的是它把真正的失败模式讲清楚了——接语音识别和合成很顺，崩的是向量检索：CUGA 默认嵌入模型只懂英文，印地语/泰米尔语查询生成的向量与英文手册语义几乎不对齐，而流程不会报错也不会告警，照样返回五段段落，只是全都无关，于是被要求「严格依据检索上下文」回答的模型只能礼貌地说「手册没讲这个」。换成 intfloat/multilingual-e5-large 后，等价语义被映射到同一向量空间，一本英文 PDF 就能服务多种语言，无需维护多语言译本。另一个细节是「写给耳朵听」：Markdown、项目符号、行内引用标记、以及「millet（बाजरा）」这种括注，TTS 念出来都很别扭，团队改为要求模型用 2–4 句口语作答，并用轻量格式化器剥掉标记、把页码改为视觉展示。为了不给第二个 LLM 护栏调用增加延迟，改用轻量输入过滤 + 行内 OFF_TOPIC token 前缀，命中就播预置的引导语。报告未披露端到端音频延迟、噪声方言下的识别错误率，以及云端与自托管语音栈的准确率对比——这几项是评估落地前必须先测的。 <a href="https://ainewstodays.com/ibm-research-cuga-indic-voice-agent-explainer" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-11-26') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
