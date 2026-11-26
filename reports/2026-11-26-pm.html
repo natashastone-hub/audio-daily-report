@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-11-26-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-11-26-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年11月26日 (周四) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">10</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>📌 本期说明</h3><div class="news-item"><p>本期说明：① 时间窗口与现实批次的对应关系——arxiv 每日 00:00 UTC 后入库、约 01:00 UTC 发布公告批。本期 06:0x UTC 运行时，arxiv 已刷出「Thursday, 26 November 2026」新公告批，而当日早报（01:34 UTC 运行）明确记录该批尚未发布、只覆盖了 25 日批。因此本期不是「6 小时内零新增」，而是首次完整覆盖 26 日这一批：eess.AS 新提交 1 条 + 交叉提交 6 条 + 替换 4 条，cs.SD 新提交 8 条 + 交叉提交 4 条 + 替换 5 条，合计去重后 14 条新条目（与早报 9 期已收录 id 比对，无重复）。② 筛掉 4 条：2611.33176（10-21 旧稿，今日才交叉挂到 eess.AS/cs.SD，非新论文）、2611.33786（MRI→语音，医学影像向）、2611.34346（Jukebox 嵌入做音乐相似度）、2611.33628（多域音频推荐，推荐系统向）。收录 10 条，覆盖 TTS（TigerTTS / InstructTTS-OPD）、ASR（UMAI）、语音深伪（头级解剖）、音视频时序理解（MSCD）、回声消除与双讲（TDE）、音频生成评测（TTA 对齐打分泛化）、歌声/音乐（逐句歌手分离、在线节拍跟踪）、语音情感（卡尔曼修正）。替换版本另扫了一遍，唯一值得注意的是 Emilia2（2611.13614，229K 小时长语音数据集），但它在 11-11 早报已详述，不重复。③ HuggingFace Daily Papers 今日 24 条（音频标签命中 0 条，仍以医疗多模态、具身、视频生成为主），audio 侧零新增；另扫了 HF 今日新建的 text-to-speech / automatic-speech-recognition 仓库，均为个人微调小模型（最热为 Drama-3-Japanese 的 GGUF 量化转储），无厂商级发布。④ 新闻侧按规程逐条执行 6 组必搜关键词（GPT-Live、OpenAI voice model、Gemini voice、full-duplex speech model、语音模型发布、real-time voice AI）外加 3 轮补充检索（含 freshness=day），命中项全部为旧闻：GPT-Live 发布于 7 月 8-9 日、腾讯混元 Hy Realtime 为 11 月 13 日、Qwen-Audio-3.0-TTS 为 7 月 20 日、Gemini Live 侧只有文档更新。6 小时窗口内新闻零新增，如实告知，不用旧闻凑数。</p></div></div>
+<div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.34241" target="_blank">TigerTTS：NAR 先整句打草稿、LLM 再逐帧改稿——0.15B 主干单卡跑到 RTF 0.05（约 20 倍实时），SEED 上 CER 1.09 / WER 1.67 全场最低</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-26</span><span>👥 Dewei Kong</span></div>
+      <div class="abstract">自回归语音 token 语言模型能做出高质量 TTS，但有三个结构性毛病：延迟随序列长度线性增长；没有显式对齐时容易漏词或复读；离散码本本身限制了保真度上限。TigerTTS 的思路是把「谁负责对齐、谁负责精修」拆开：先用一个带显式对齐的轻量非自回归（NAR）模型为整句出草稿，再由紧凑的自回归 LLM 逐帧精修。草稿与 LLM 目标逐帧对齐、从输入端注入，保证训练与推理一致——这一条是整套设计能成立的前提。因为草稿已经够准，LLM 每步并行预测 3 帧 × 4 组 = 12 个 token，并用 conditional total correlation 上界约束并行预测的独立性假设，使并行几乎无损。tokenizer 走无码本的 FSQ，四组并行约 1800 bps，绕开码本坍缩。主干只在输入嵌入里保留位置信息，于是可以做精确的 MLA 权重吸收、KV cache 降为四分之一；解码用 CUDA Graph 加 graph-safe 多项式采样。Fast 模式让 NAR 充当 prefix 合成器（RTF 0.03），先把前 500 ms 吐出来再交给 LLM 续。实测单卡 RTF 0.05（约 20 倍实时），0.15B 主干比 VoxCPM2 2B 的 PyTorch 标准推理快 5 倍、比 CosyVoice 2 快 16 倍；SEED 上 CER 1.09、WER 1.67 为最低，LibriSpeech test-clean 上 WER 2.22、NMOS 4.36、说话人相似度 0.820。附带一个反直觉结论：Fast 模式引入的良好对齐语义 token 先验，本身就压住了漏词、循环和跑飞，等于免费拿到稳定性。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">非自回归</span><span class="tag">并行解码</span><span class="tag">FSQ</span><span class="tag">低延迟</span><span class="tag">生产级</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.34241" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.34256" target="_blank">UMAI：不动一个词，只从冻结 ASR 的一次贪心解码里「捞」出 uh/um——AMI 填充词 F1 从 12.2 拉到 82.6，耗时只多 14%</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-26</span><span>👥 Gyeongmin Kim</span></div>
+      <div class="abstract">语音识别器习惯性地把 uh、um 这类填充停顿从转写里抹掉。用逐字稿（verbatim）微调能把它们找回来，但代价是把其余输出也一起改坏——这对会议转写、口语评测、临床语言分析这些「一个字都不能动」的场景是致命的。UMAI 走的是相反方向：一个参数都不改。它利用冻结的 Qwen3-ASR-1.7B 在单次贪心解码过程中已经记录下来的数值，对每一处输出词之间的空隙，用解码器 attention 定位对应的音频窗口，在该窗口上池化帧级类别后验，再把这些后验与解码器状态经两级线性判别分析（LDA）融合，最后用等渗回归（isotonic regression）校准成一个可判定的分数。整个流程没有梯度下降、没有训练集，只有若干闭式统计量。命中阈值就插入 [uh]/[um] 标签，已识别出的词一个都不动。结果：AMI 留出评测集上填充词 F1 从 12.2 升到 82.6；Nyra verbatim 基准（阈值在此选定）从 37.2 升到 96.5；总处理时间增加 14%。对做 verbatim ASR 的团队，这篇的价值在于把「补能力」和「不破坏」这两件事第一次拆开了——微调是改权重，它是在解码结果上做后验校正。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">verbatim</span><span class="tag">填充词</span><span class="tag">冻结模型</span><span class="tag">零训练</span><span class="tag">Qwen3-ASR</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.34256" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.33937" target="_blank">InstructTTS-OPD：把三个互相打架的目标拆成三个单目标老师——用 on-policy 蒸馏 + 冲突感知速度融合取代单标量 GRPO，指令遵循/WER/音质同时变好</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-26</span><span>👥 Haitao Li、Tian Tan、Yuguang Yang、Guanrou Yang、Wenhao Guan、Chenglin Li、Shan Yang、Xie Chen</span></div>
+      <div class="abstract">指令跟随 TTS（Instruct-TTS）要同时过三关：按自由文本指令决定「怎么说」、把稿子念对、并且听起来自然。当下主流做法是把三者塞进一个标量奖励做 GRPO 后训练，但这套训练很不稳：三个目标互相竞争，共享的更新会漂向最容易优化的那一个，于是出现「跷跷板」——音质上去了可懂度掉，指令跟住了音质掉。这篇改成 on-policy 蒸馏（OPD）：在**学生自己的 rollout** 上同时匹配多个单目标教师的速度场，而不是去拟合一个被人为加权拼起来的奖励。要让 OPD 在 TTS 上真的成立，先把每条轴的 reward 做对，这是全文最实用的部分：用一个蒸馏过的 Qwen-Omni 代理昂贵的 Gemini judge；用去方言数据计算 WER 奖励，避免方言差异污染可懂度信号；用 DNSMOS 替代存在语种偏置的 UTMOS。然后用 GRPO 训三个单目标教师，按数据域把每条 rollout 路由给「指令遵循」或「WER」教师，同时让所有 rollout 额外跟随 MOS 教师。结果是指令遵循与可懂度可以同时提升——但音质目标与指令遵循天然冲突，把它「加法式」地叠进去会把跷跷板带回来。于是作者提出 conflict-aware velocity fusion：融合前先把音质目标在「与主目标相反」的方向上投影掉，再合并速度场。最终模型在三个目标上同时超过标量奖励 GRPO。对在做 TTS 后训练的团队，这是一份「多目标不该压成一个分数」的完整工程范本。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">指令跟随</span><span class="tag">on-policy蒸馏</span><span class="tag">多目标优化</span><span class="tag">GRPO</span><span class="tag">奖励设计</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.33937" target="_blank">🔗 arXiv</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.34426" target="_blank">假音检测的「头级」解剖：一层 12 个注意力头里只有少数在判假、另一些在唱反调——把反对的头删掉、不重训，WavLM EER 相对降 13%、Wav2Vec2 降 22%</a></h4>
+      <div class="meta"><span>📅 2026-11-26</span><span>👥 Mohamed Mallat、Michele Panariello、Massimiliano Todisco、Anthony Larcher、Nicholas Evans</span></div>
+      <div class="abstract">自监督语音主干已经是合成语音检测（反欺骗）的标准前端，层级探针也早就告诉我们「哪几层信号最强」。但分析到此为止——一层内部 12 个注意力头里，究竟哪几个头在计算「真/假」这个决策，此前没人回答。这篇在 ASVspoof 5 上对两个冻结主干（WavLM-base、Wav2Vec2-base）做了首个头级研究。逐头消融显示：只有少数头真正承载决策，而另一些头在**主动反对**该决策；把这些「反对头」去掉，不重训、不改任何权重，等错误率（EER）就相对下降 13%（WavLM）和 22%（Wav2Vec2）。第二个发现是一个「免探针」的特征：伪造语音引起的注意力比真实语音更集中，仅凭这一集中度差距就能几乎达到完整表示的分辨力，并在每个主干最具判别力的层上达到峰值。第三，攻击身份（用了哪种 TTS/VC）可以从**每一个头**解出来，但各头「做的事」不同——即所谓各头在做什么上有差异、在知道什么上没差异。对做反欺骗落地的人，这篇给了一条零成本涨点路径：先做头级消融，把拖后腿的头剪掉，比继续堆数据或换主干更划算。</div>
+      <div class="tags"><span class="tag">语音深伪</span><span class="tag">反欺骗</span><span class="tag">自监督</span><span class="tag">注意力头</span><span class="tag">ASVspoof</span><span class="tag">剪枝</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.34426" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.34162" target="_blank">MSCD：把音频时间轴挪一下，AV-LLM 还是指着原来那个画面——用「对齐 vs 打乱」两次 logits 相减，免训练修好时间错位</a></h4>
+      <div class="meta"><span>📅 2026-11-26</span><span>👥 Minyeong Jeong、Yeonju Kim、Yong Man Ro</span></div>
+      <div class="abstract">音视频大模型（AV-LLM）号称表征了音视频的时间结构，但它们到底有没有用这个结构去把「声音」和「画面事件」对上，此前没有被单独审问过。这篇设计了一个很干净的探针：把音频整体平移，让被询问的声音与**另一个**视觉事件重叠。结果模型仍然偏向原本对齐的那个事件，而不是当前真正对齐的那个——说明它对音视频时间对齐的变化几乎不敏感，很可能在靠内容先验「猜」而不是真的在对时间轴。解法 MSCD（Modality-Shift Contrastive Decoding）是免训练的：对同一输入分别在与原始一致的时间对齐、以及被人为打乱（平移音频或平移视频，另一个模态固定）的对齐下各算一次 logits，然后相减/对比，让「只有在真正对齐时才成立」的预测被抬高。两个 AV-LLM、三个基准的评测显示有效，Daily-Omni 上 OmniVinci 提升 2.2 个点、video-SALMONN 2+ 提升 2.8 个点，说明显式强调时间对齐不只修好了同步任务，对更宽的音视频理解也有溢出收益。做音视频理解、视频描述、事件定位的都可直接套用这个 decoding 技巧。</div>
+      <div class="tags"><span class="tag">音视频理解</span><span class="tag">AV-LLM</span><span class="tag">时间对齐</span><span class="tag">对比解码</span><span class="tag">免训练</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.34162" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.33689" target="_blank">回声消除的时延估计不必整个重学：GCC-PHAT 留作固定骨架，只学 13.2K 参数的因果 2D CNN 稳定器——双讲场景 MAE 与粗差率降 3–5 倍</a></h4>
+      <div class="meta"><span>📅 2026-11-26</span><span>👥 Lu Ma、Yongliang Wang、Zhewen Su</span></div>
+      <div class="abstract">回声消除（AEC）依赖准确的时延估计（TDE）：只有远端参考与麦克风之间的整体时延被补偿掉，自适应抵消器才开始收敛。这篇先做了一个很硬的对照：在干扰、低信噪比、强混响、扬声器非线性、参考信号含噪这五种压力条件下，经典 GCC-PHAT 赢过或打平一个完全学习的估计器——所以作者不去重造前端，而是保留 GCC-PHAT 作为**固定、不可学习**的骨架，只在其时间-时延相关图上额外学一个 13.2K 参数的因果 2D CNN 稳定器。这个稳定器抓的是一个极简的时序区别：真实时延在相关图上形成**持续的脊**，而双讲（近端说话）造成的伪峰是**瞬态尖刺**，经典平滑与置信度门控都压不住这种瞬态。合成与真实 AEC-Challenge 回声路径上，相对调好的经典估计器与 WebRTC AEC3 匹配滤波，MAE 与粗差率降约 3–5 倍；在下游 AEC3 风格测试台上，这些时延收益转化成了更低的回声泄漏率与跳变后更快的 ERLE 恢复，大幅逼近「已知真实时延」的上限。可选的粗到细预对齐阶段把同一个残差稳定器扩展到 100–400 ms 的稳定整体时延而无需重训。对做会议终端、耳机、车载语音的人：不要在 TDE 上跟经典算法硬碰，把学习能力只花在它真正失效的那一小块。</div>
+      <div class="tags"><span class="tag">回声消除</span><span class="tag">AEC</span><span class="tag">时延估计</span><span class="tag">GCC-PHAT</span><span class="tag">双讲</span><span class="tag">端侧</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.33689" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.34626" target="_blank">TTA 语义对齐打分模型的泛化边界：换成没见过的生成模型就掉分，GRL 对抗训练也只部分管用——预训练音频编码器其实在记「哪家生成的」</a></h4>
+      <div class="meta"><span>📅 2026-11-26</span><span>👥 Yuki Okamoto、Noriyuki Tonami、Takao Kawamura、Keisuke Imoto、Ryotaro Nagase、Riki Takizawa、Minoru Kishi、Shinnosuke Takamichi</span></div>
+      <div class="abstract">文本到音频（TTA）生成需要可靠地评估「生成的音频」与「输入文本」之间的语义对齐。现有的打分预测模型有一个共同的评测漏洞：训练集和测试集用的是同一批生成模型，于是「泛化到没见过的生成模型」从未被检验。这篇把漏洞翻出来量了一遍：预训练的音频编码器会捕获**生成模型特有的痕迹**，因此在未见 TTA 模型产出的音频上，对齐打分性能明显下降。作者随后引入一个生成模型分类器 + 梯度反转层（GRL）做对抗训练，让编码器学着丢掉「这是谁生成的」这类信息。结论相当克制：在部分设置下预测性能确有提升，但 GRL 抑制生成模型特异信息的**有效性有限**——也就是说，光靠对抗抹除身份痕迹不足以让打分器真正泛化。对做音频生成评测（尤其想拿自动指标替代人工听测）的团队，这篇的实际提醒是：任何基于学习指标给出的 TTA 排名，都必须标注它是「同分布内」的结论；跨模型比较时，指标本身可能就是偏的。</div>
+      <div class="tags"><span class="tag">TTA</span><span class="tag">音频生成</span><span class="tag">评测指标</span><span class="tag">泛化</span><span class="tag">梯度反转</span><span class="tag">音频编码器</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.34626" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.33247" target="_blank">逐句歌手分离：商业 diarizer 在 4–8 人团里只找出 1–2 个「说话人」——ColorCoded-SD 基准 43 首 K-pop、1740 行歌词，附主唱分离与歌级解码</a></h4>
+      <div class="meta"><span>📅 2026-11-26</span><span>👥 Allen Ng</span></div>
+      <div class="abstract">多成员偶像团的粉丝会逐行标注「这句是谁唱的」，但把说话人分离（diarization）直接搬过来不管用：一个商业 diarizer 在 4–8 人团的歌曲里只能找出 1–2 个「说话人」——因为歌曲里同一个人会换音区、换音色、被和声包裹，而说话人分离假设的「同一人音色稳定」在唱歌时不成立。这篇把任务定义清楚：给定一首歌和它的歌词行时间戳，在**不知道团有几个人**的前提下，把行按歌手聚类。发布三个东西：ColorCoded-SD 基准（43 首 K-pop、1740 行、每首 3–8 位歌手，来自粉丝众包标注并经独立标注者复核）、配套的对齐与打分工具，以及从 IdolSongsJp 语料的逐人独唱版本反推出来的行级标签（用于在未见过的歌手上评测）。此外还给出主唱分离（lead-vocal isolation）与歌级解码（song-level decoding）两个组件来缓解「一首歌里歌手人数未知、行数又少」的聚类难题。对做音乐信息检索、翻唱识别、以及任何「短片段 + 少数样本」的说话人聚类场景，这份基准补上了一个此前没有的评测位。</div>
+      <div class="tags"><span class="tag">歌手分离</span><span class="tag">diarization</span><span class="tag">音乐</span><span class="tag">基准</span><span class="tag">聚类</span><span class="tag">K-pop</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.33247" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.34857" target="_blank">把人工复核当成观测量：用「每段偏置 + 慢漂移」的卡尔曼修正，把稀疏人工标注外推到所有未复核窗口</a></h4>
+      <div class="meta"><span>📅 2026-11-26</span><span>👥 Jie Dong、Mahdi Zareei</span></div>
+      <div class="abstract">连续维度情感识别要跟踪情绪随时间的变化，但模型输出常常偏离人类评分；而它赖以训练的时间连续标注又需要多位标注者实时打分，慢且贵。人工复核（review）本来可以同时解决这两件事，但现有两种用法都不够：拒识（rejection）只是决定哪些预测交给人看，自适应（adaptation）只是调整模型或其输出——两者都没有用复核结果去**直接修正未复核的窗口**。这篇提出一个卡尔曼滤波修正：把预测器的误差建模为「每个片段的固定偏置 + 缓慢漂移」，用已复核窗口估计这两个量，然后在线修正每一个未复核窗口，预测器本身完全不动。在 MSP-Conversation 上，它在全部 48 组配对比较中赢过四种更简单的修正方案；复核停止后仍能继续修正各片段；对未被修正的预测，它还能告诉人「哪些窗口值得接手」。同一套修正也能用于标注本身：只复核 20% 的窗口，补全后的轨迹就更贴近真实评分者。对做情感计算、以及任何「少量人工标注 + 大量自动输出」的流水线，这套「把人工反馈当观测、把模型当先验」的写法比 RLHF 式微调便宜得多。</div>
+      <div class="tags"><span class="tag">语音情感</span><span class="tag">连续标注</span><span class="tag">卡尔曼滤波</span><span class="tag">人机协同</span><span class="tag">标注效率</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.34857" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.34277" target="_blank">Beat This! Live：给离线节拍模型补上因果性，再用「略微预测未来」的标签训练——GTZAN 上 beat F1 80.6→86.7、downbeat 56.5→74.1</a></h4>
+      <div class="meta"><span>📅 2026-11-26</span><span>👥 Bánk Juhász、Gerhard Widmer、Jan Schlüter</span></div>
+      <div class="abstract">节拍与小节（downbeat）跟踪在深度学习推动下进步很快，但绝大多数模型面向离线场景，实时用不了。这篇把近期的离线模型 Beat This 改造成因果版本 Beat This! Live：逐项给出为得到「可流式推理」所必须的架构修改，并量化每一步对精度的影响——哪些改动几乎免费、哪些是真正的代价，这份账本身就有价值。第二个技巧更巧：用**时间平移过的标签**训练，让模型输出略微领先于当前帧的预测。这不只是降延迟，它直接让峰值拾取（peak-picking）变得容易得多——因为模型不再需要在「刚过去的帧」里找峰，而是在稍微未来的位置给出已经成形的峰。GTZAN 上相对当前在线跟踪 SOTA（BeatNet+），beat 的 F1 从 80.6 提升到 86.7，downbeat 从 56.5 提升到 74.1，downbeat 这项接近 18 个点的提升说明「因果化 + 未来标签」的组合对更依赖长程结构的小节跟踪收益更大。对做实时伴奏、灯光/演出同步、以及任何流式节拍对齐的产品都可直接借鉴「用未来标签换更好峰值」这一招。</div>
+      <div class="tags"><span class="tag">节拍跟踪</span><span class="tag">downbeat</span><span class="tag">流式</span><span class="tag">因果模型</span><span class="tag">音乐</span><span class="tag">低延迟</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.34277" target="_blank">🔗 arXiv</a> </div>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-11-26-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
