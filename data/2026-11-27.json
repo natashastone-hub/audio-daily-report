@@ -1,0 +1,166 @@
+{
+ "date": "2026-11-27",
+ "note": "本期说明：① 时间窗口——本期 01:34 UTC 运行，与 11-26 早报同一时点，arxiv 每日 00:00 UTC 后入库、约 05:00 UTC 才发布当日公告批，因此截至运行时 arxiv 最新公告批仍是「Thursday, 26 November 2026」，11-27 公告批尚未刷出。已用三条独立路径交叉确认：rss.arxiv.org/rss/eess.AS（11 条）与 /rss/cs.SD（17 条）去重后 22 条，以及 /list/eess.AS/new 与 /list/cs.SD/new 页面（eess.AS 新提交 1 + 交叉 6 + 替换 4；cs.SD 新提交 8 + 交叉 4 + 替换 5），三处 id 完全一致，无隐藏条目。② 因此本期不存在「24 小时内新提交并被遗漏」的论文，改做前一批全量查漏：与 11-26 早报、11-26 午报已收录的 15 个 id 逐一比对，本期补录 6 条此前未覆盖的音频向条目——Emilia2（229K 小时长语音数据集 v2）、FSC-Net（语音带宽扩展 v2）、MAAS（fMRI 直条件化音频扩散，NeurIPS 2026）、AVENUE（音视频编辑基准，NeurIPS 2026 D&B）、SynAVID（双耳音频沉浸数据集 v2）、时长感知心理物理学（MLLM 音频时间感知交叉稿）。③ 刻意不补录的 4 条与 11-26 午报的判断保持一致：2611.33786（动态 MRI→语音，医学影像向）、2611.34346（Jukebox 嵌入做音乐相似度）、2611.33628（多域音频推荐，推荐系统向）、2607.02904 / 2607.02920（语音抑郁检测，7 月旧稿的 v2 替换版）。方向不符或非新增，不用来凑数。④ arXiv API（export.arxiv.org/api）本轮全程返回 429 限流，已按分级兜底策略切换到 rss.arxiv.org + /list 页面双通道取数，覆盖面等价且更细（含 new / cross / replace 分类），不影响完整性。⑤ HuggingFace Daily Papers 本期取 Top60，音频标签命中仅 1 条（2611.33307 多语言决策模型校准，非语音内容），audio 侧零新增；HF /papers?q=audio 列表按热度排序而非时间，无 24 小时内新条目。⑥ 新闻侧按规程逐条执行 6 组必搜关键词（GPT-Live、OpenAI voice model、Gemini voice、full-duplex speech model、语音模型发布、real-time voice AI）外加 5 轮补充检索（含 freshness=day），命中项全部为旧闻并已剔除：GPT-Live 为 7 月 8-9 日发布（API 9 月 11 日上线）、Gemini 自定义音色为 11 月 24 日、VoxCPM2 为 4 月、Qwen-Audio-3.1 为 9 月 23 日、阶跃 StepAudio 3 为 9 月 15 日、NVIDIA Nemotron VoiceChat 为 3 月。24 小时窗口内实际新增 3 条：Sage-Interaction 开源（11-25 开源、今日报道，11-26 两期均未收录，故本期补录）、Qwen Go 免费代打电话全量开放、声网×乐鑫 ESP32 集成（11-26 11:35）。如实收录，不用旧闻凑数。",
+ "papers": [
+  {
+   "title": "Emilia2：229K 小时多语长语音数据集——单说话人长语音里 50% 超过 5 分钟，把「分钟级可控生成」变成可训练的问题",
+   "url": "https://arxiv.org/abs/2611.13614",
+   "date": "2026-11-26",
+   "authors": "Qinke Ni, Dekun Chen, Junwen Qiu, Huan Liao, Xu Li, Xingwen Han, Wan Lin, Kunyu Feng, Yuxiang Wang, Yusheng Mu, Chaoren Wang, Yingda Shen, Mingjie Chen, Haolong Zheng, Xulin Fan, Mark A. Hasegawa-Johnson, Zhizheng Wu",
+   "abstract": "长语音生成要求模型在长时间尺度上同时守住内容、说话人身份、轮次转换和表达风格，但公开训练语料大多只有几十秒，公开长语音基准最多两人对话。Emilia2 从 in-the-wild 数据构造出短句、单说话人长语音、多说话人对话三类子集，229K 小时多语，保留转写、说话人身份、停顿与声学过渡；单说话人长语音中超过 5 分钟的样本占小时数的 50.0%，对话子集占 66.8%。为了做表达控制，给 4.77M 条样本配了自然语言指令、给 933K 条标了非语言发声（笑声、叹气等）标签。另发布 Emilia2-testset：23 小时双语录音，单条最长 30 分钟、最多四人，每个说话人配参考音频。作者在 Emilia2 上分别训了自回归（AR）与非自回归（NAR）模型：0.6B 主干的 NAR 在 TTSD-Eval 上拿到最低中文 CER 5.27% / 英文 WER 9.93%；AR 模型在 InstructTTSEval 上与 Qwen3-TTS-12Hz-VD 基本打平（zh/en 76.2/78.3 对 77.1/77.9）。结论是数据侧的天花板——长语音与分钟级表达控制的主要瓶颈在语料而不只在模型。",
+   "tags": [
+    "TTS",
+    "数据集",
+    "长语音生成",
+    "多说话人对话",
+    "表达控制",
+    "NAR/AR 对比"
+   ],
+   "highlight": true,
+   "highlight_note": "229K 小时、单条最长 30 分钟、4.77M 条自然语言指令，是长语音生成第一个真正够用的公开数据底座；0.6B NAR 反超更大模型拿 CER/WER 双低",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.13614"
+    },
+    {
+     "label": "Demo",
+     "url": "https://arxiv.org/abs/2611.13614"
+    }
+   ]
+  },
+  {
+   "title": "FSC-Net：把 FFC 塞进复数谱映射，1.54M 参数在 VCTK 4kHz→48kHz 上拿下 LSD/PESQ 领先——语音带宽扩展的「小而准」路线",
+   "url": "https://arxiv.org/abs/2606.06962",
+   "date": "2026-11-26",
+   "authors": "Xinan Chen, Xiaobin Rong, Qinwen Hu, Kai Chen, Jing Lu",
+   "abstract": "语音带宽扩展（BWE）要从窄带信号重建高保真宽带音频，现有方法的通病是高频相位与谐波结构重建不真实，听感上有明显伪影。FSC-Net（Full-Spectrum Context Network）的思路是显式建模跨频带谐波依赖：把快速傅里叶卷积（FFC）嵌入复数谱映射框架，使感受野一次性覆盖整个频谱，从而捕获长程频率交互；针对高频生成本身病态的问题，再用「频率渐进学习」课程从粗到细恢复谱细节。在 VCTK 与未见过的 EARS 数据集上，模型给出稳定且可泛化的重建质量，在最难的 VCTK 4 kHz→48 kHz 任务上，以 1.54M 的极小参数量取得领先的 LSD 与 PESQ。对端侧/实时语音链路（通话上行窄带、老录音修复、低码率会议）来说，这个参数量级意味着可以真的挂在编码器前后而不增加可感知延迟。",
+   "tags": [
+    "语音带宽扩展",
+    "BWE",
+    "FFC",
+    "复数谱映射",
+    "课程学习",
+    "轻量化"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2606.06962"
+    }
+   ]
+  },
+  {
+   "title": "MAAS：跳过「先预测中间表征」这一步，用 ROI 级 fMRI 直接条件化 Stable Audio——顺带量化各听觉皮层区对重建音频的贡献",
+   "url": "https://arxiv.org/abs/2611.12603",
+   "date": "2026-11-26",
+   "authors": "Matteo Ciferri, Tonio Weidler, Matteo Ferrante, Nicola Toschi, Elia Formisano",
+   "abstract": "从脑活动重建音频一直很难。现有 brain-to-audio 流程通常先把神经响应映射到某种预设的刺激表征（如 log-mel），再交给声码器合成；视觉领域已经试过直接对脑活动做条件化，但音频扩散模型上还没人做成。MAAS（Multi-Area Auditory Synthesis）是端到端框架：把预训练音频扩散 Transformer（Stable Audio）直接用 ROI 级 fMRI 响应条件化，不需要先监督一个解码器去预测外部刺激表征。做法是区域专属投影 + 可学习 brain token，通过一条专门的 cross-attention 通路注入 Stable Audio。在 7T fMRI 数据集上，相比包括「两阶段 fMRI→latent 条件化」在内的基线，在声学与语义两类指标上均一致提升。论文还提出一个基于听觉神经处理计算模型的保真度指标，用来量化单个听觉皮层区域对重建音频表征的贡献——这把「重建得像不像」变成了「哪块皮层在负责什么」的可测问题。NeurIPS 2026 主会 poster。",
+   "tags": [
+    "音频生成",
+    "扩散模型",
+    "fMRI",
+    "脑机接口",
+    "可解释性",
+    "NeurIPS 2026"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.12603"
+    }
+   ]
+  },
+  {
+   "title": "AVENUE：音视频编辑该问「该改哪个模态、又该保住哪个模态」——1291 条素材 / 7957 条指令，测出所有范式都会误伤另一模态",
+   "url": "https://arxiv.org/abs/2609.04253",
+   "date": "2026-11-26",
+   "authors": "Hayeon Kim, Yoojin Jang, Jaejun Yoo",
+   "abstract": "音视频（AV）编辑要按 prompt 修改音频与视频内容，比单模态编辑多一层要求：模型得仅凭 prompt 推断「模态选择性编辑范围」——不只是改什么，还要定住哪个模态不许动。因此评测必须既有覆盖多编辑类型/多模态组合的基准，又要是模态感知、样本相关的。现有 AV 编辑基准覆盖不足，评测系统往往「模态盲 + 样本无关」，根本判不出模型是否真的保住了不该动的那个模态。AVENUE 补两块：(1) 从 VGGSound 人工筛选校验的基准，1291 条源片段、7957 条编辑指令，覆盖音频目标、视频目标、音视频耦合三类编辑；(2) 样本级、模态感知的评测框架，为每个样本同时标注「应发生的变化」和「必须保持不变的内容」。作者横评 joint / sequential / separate 三种编辑范式的代表模型，给出首个跨范式的模态选择性系统分析，结论是一个尚未解决的根本问题：无论哪种范式，改一个模态时现有模型都会频繁引起另一个模态的非预期变化。数据集已在 Hugging Face 公开。NeurIPS 2026 Evaluations & Datasets Track。",
+   "tags": [
+    "音视频编辑",
+    "基准测试",
+    "模态选择性",
+    "评测框架",
+    "NeurIPS 2026"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2609.04253"
+    }
+   ]
+  },
+  {
+   "title": "多模态大模型听得出「多慢才算听不懂」吗？21 个模型里多数离了标注示例就认不出旋律，识别窗口是 prompt 的性质而非感知者的性质",
+   "url": "https://arxiv.org/abs/2611.33176",
+   "date": "2026-11-26",
+   "authors": "Auss Abbood, Zihao Fu, Nigel Collier",
+   "abstract": "关于语言模型时间感知的研究基本集中在文本，但多模态模型越来越多被用于需要感知时间流逝的任务。本文用心理物理学方法测「从音频感知时长」的极限，并与人类基线对比：把时长感知操作化为旋律识别任务——把一首知名旋律放慢，测它在哪个速度上变得无法辨认。21 个被测模型中，多数在没有带标签 in-context 示例时认不出知名旋律；给了示例后，7 个能稳定识别，且识别峰值大多落在人类识别中位带内。但泛化很有限：(i) 识别峰值会随 in-context 示例的速度漂移；(ii) 给出旋律标题会引入预测偏置；(iii) 即便用科学音高记号给示例，多数模型在长音符时值下准确率仍下降。作者的判断很锋利：在人类身上，识别窗口是感知者的属性；在当前模型身上，它主要是 prompt 的属性。对做长音频理解、音乐/语音节奏建模的人，这是一份直接的「别把 in-context 表现当成能力」的证据。",
+   "tags": [
+    "音频理解",
+    "多模态大模型",
+    "心理物理学",
+    "时长感知",
+    "评测"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.33176"
+    }
+   ]
+  },
+  {
+   "title": "SynAVID：八个场景、分钟级、视角相关的双耳音频——把「几何变化如何改变听感」做成可控变量",
+   "url": "https://arxiv.org/abs/2611.32311",
+   "date": "2026-11-26",
+   "authors": "Jun Xu, Sujing Li, Chunhao Bi, Zhengxue Cheng, Ronghua Wu, Qunshan Gu, Li Song",
+   "abstract": "沉浸式场景建模需要在变化的视角与场景条件下同时拿到同步的视觉与听觉观测，而受控变化下的参考数据一直很难获得。SynAVID 是合成音视频沉浸数据集，含 8 个室内外场景，每条分钟级 episode 把固定相机阵列与移动轨迹结合，配同步、视角相关的双耳音频。视觉渲染与几何感知的声学合成由共享的场景动态、声源事件与观察者位姿共同驱动，因此「换视角→听到什么变化」是可控的，而不是靠真实采集碰运气。作者评测了现有视觉重建、双耳音频重建与音视频编辑方法：混合观测配置通常在固定与移动测试视角上改善视觉重建，而瞬时被占据、稀疏观测区域仍然困难；不同方法在频谱、双耳间（interaural）与感知指标上的排名并不一致——这本身说明单靠一个指标会误判音频质量。几何与实例标注还能暴露观测支持不均与局部高斯表示的局限。项目页已公开。",
+   "tags": [
+    "数据集",
+    "双耳音频",
+    "空间音频",
+    "音视频",
+    "3D 重建",
+    "评测"
+   ],
+   "highlight": false,
+   "highlight_note": "",
+   "links": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.32311"
+    }
+   ]
+  }
+ ],
+ "news": [
+  {
+   "title": "上海 AI Lab / InternLM 开源 Sage-Interaction：9B 全双工全模态交互模型，FD-Bench v1.5 拿 80.73 分、轮次切换延迟 1.29 秒，权重与代码全开放",
+   "url": "https://ai.hfbcw.cn/index.php/2026/11/27/shanghai-ai-lab-sage-interaction/",
+   "summary": "上海人工智能实验室支持的 InternLM 团队 11 月 25 日开源 Sage-Interaction，基于 MiniCPM-o 4.5 构建的 9B 参数全双工全模态交互模型：实时接收流式音频与视频、生成语音，用户打断、短暂应答（「嗯」「对」）或背景噪声出现时仍维持连续对话。两个数字值得记：FD-Bench v1.5 得分 80.73，FD-Bench v1 上轮次切换延迟 1.29 秒——后者衡量「用户说完到模型开口」的间隔，已接近真人反应速度，这也是全双工相对传统「听完再答」的核心体验差。架构上它把实时对话前端与后台智能体结合：前台继续语音交流，复杂推理、工具调用或长耗时任务委派给后台，结果回来再自然并入对话——直接对上语音助手「对话不能停、但复杂任务需要时间」的老矛盾。9B 的体量意味着算力门槛不高，开发者不必备机房即可跑；权重在 Hugging Face、代码在 GitHub 均已开放。放在行业里看，字节小豆、阿里 Qwen Go 在把语音推向真实通话场景，而 Sage-Interaction 是把全双工对话能力交给社区。需要保留一句：80.73 分是项目方自评，尚待独立复现；真实考验在嘈杂街道、断续网络、含糊口音这些评测集覆盖不到的地方。",
+   "date": "2026-11-27"
+  },
+  {
+   "title": "阿里 Qwen Go 向全体用户免费开放「AI 代打电话」：可预约时间与话题、通话中主动披露 AI 身份、设外呼风控，无需邀请码",
+   "url": "https://ai.hfbcw.cn/index.php/2026/11/27/alibaba-qwen-go-free-calling/",
+   "summary": "阿里 Qwen Go 已向全体用户免费开放代打电话服务，不收费、不要邀请码——这一步的信号意义比功能本身大：AI 电话服务此前多是小范围测试，全量开放意味着这套「ASR + 对话模型 + TTS」的实时链路已经走到可以大规模交付的阶段。执行方式是预约制：用户先定好「什么时候打、打过去说什么」，AI 再按剧本拨打并完成沟通，支持代订包间、查快递、找失物、定时来电；通话中会主动披露 AI 身份，并设有外呼风控，代打范围收在生活服务类事务。预约制不只是功能设计，也是边界设计——对方接电话时已有预期，把一次陌生来电变成有约在先的沟通，同时把不确定性先收窄一圈。成本账也值得看：AI 打一通电话要同时调用语音合成、语音识别与对话模型三套能力，成本远高于文字问答，免费等于用算力补贴冷启动，能持续多久要看使用量上来后成本能否摊薄。与字节小豆的差别在于产品路线：小豆把打电话作为个人助理众多能力之一，Qwen Go 把代打电话单独拎成独立服务。真实能不能铺开，取决于三点——电话那头听不听得出来是 AI、对方愿不愿意跟 AI 对话、通话失败时有没有兜底。",
+   "date": "2026-11-27"
+  },
+  {
+   "title": "声网 SD-RTN 接入乐鑫 ESP32：ESP WebRTC 方案打通端侧采集-全球传输-对话式 AI，开源 agora_demo 已上乐鑫 GitHub，全球音频延迟中位数 <76ms",
+   "url": "http://finance.sina.com.cn/tech/roll/2026-11-26/doc-inizzsif8990257.shtml",
+   "summary": "声网 SD-RTN 全球实时网络已支持基于乐鑫 ESP32 芯片的设备接入，ESP WebRTC 方案与声网实时互动能力完成技术集成，开发者可在 ESP32 设备上做低延迟语音通信并进一步构建实时对话式 AI 应用。集成覆盖设备端音频采集与处理、WebRTC 连接、以及全球实时音频传输；SD-RTN 已覆盖 200 多个国家和地区，全球延迟中位数低于 76ms，靠智能路由与弱网对抗在 Wi-Fi 波动、丢包场景下保稳定。在实时连接之上可接声网 Agent Studio，灵活挂 ASR / LLM / TTS，实现智能对话、语音互译与 MCP 工具调用——这条链路的关键意义是把「对话式 AI」从手机/PC 拉到成本极低的 MCU 上，智能家居、AI 陪伴、教育硬件的 BOM 门槛明显下降。三个具体玩法已给出：Speak to Build（说一句「做个会议开始时亮起来的桌面计时器」，语音智能体把指令传给 ESP-Claw 完成开发部署）、Pocket Interpreter（实时互译 + 屏幕字幕的随身翻译终端）、Voice Home Hub（结合 Matter、MCP 与声纹识别，按家庭成员身份与权限执行家居控制）。开源集成代码已在乐鑫 GitHub 仓库 esp-webrtc-solution 上线，看 agora_demo 示例即可接入。",
+   "date": "2026-11-26"
+  }
+ ]
+}
