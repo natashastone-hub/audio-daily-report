@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-27",
+  "note": "本期说明：① 时间窗口 = 今日 09:30–14:00 CST（01:30–06:00 UTC），本时段 arxiv 音频向论文零新增，三条独立路径交叉确认：一是 export.arxiv.org API 一级搜索（cat:eess.AS OR cat:cs.SD，max_results=50）成功返回完整 50 条，最新一条提交时间为 2026-11-25T18:27:22Z（2611.34857，情感识别卡尔曼修正），此后无任何新提交；二是 rss.arxiv.org/rss/eess.AS 与 /rss/cs.SD 的 pubDate 已刷到 Fri, 27 Nov 2026（lastBuildDate 05:00 UTC，即北京时间 13:00，正好落在本时段内），但 item 数均为 0；三是 arxiv.org/list/eess.AS/new 页面仍显示「Showing new listings for Thursday, 26 November 2026」（11 条：新提交 1 + 交叉 6 + 替换 4），11-27 这一批的 new 列表尚未出现。三者一致指向同一结论：今日公告批尚未发布（11-26 为美国感恩节，arXiv 公告节奏受影响），本时段确实没有可收录的新论文，而不是抓取被截断。② 没有拿 11-25/11-26 批次的旧论文来凑数——那 14 条已在 11-26 午报完整覆盖，早报亦做过 11-26 批全量查漏。③ HuggingFace Daily Papers 取 Top60，音频标签命中 0 条（榜单仍被 agent / 视频生成 / 具身机器人占据）；另按 createdAt 倒序扫了 HF 今日新建的 text-to-speech、automatic-speech-recognition、audio-text-to-text、voice-activity-detection 四类仓库，窗口内新增的 10 余个仓库全部是个人小模型或量化转储（likes 与 downloads 均为 0，如 M5-TTS-Lite.AXERA、KuroVoice-PTBR、LingASR、sherpa-onnx-nemo-haas-ja），无厂商级发布，不入报。④ 新闻侧按规程逐条执行 6 组必搜关键词（GPT-Live、OpenAI voice model release、Gemini voice、full-duplex speech model、语音模型发布、real-time voice AI）外加 4 轮补充检索与 Google News RSS（when:1d）时间戳过滤。窗口内（01:30–06:00 UTC）命中的全部是消费类/车载营销稿：蔚来 NOMI 语音助手（05:46 UTC）、奇瑞 QQ3 车外语音交互（04:17 UTC）、多篇「老人机/千元机语音助手怎么选」横评、iZotope Nectar 5 人声效果器插件（03:49 UTC），无一构成前沿动态，故不入正文。同时排除了 3 条被搜索引擎反复顶到前排的旧闻：GPT-Live（7 月 8-9 日发布，API 9 月 11 日上线）、GPT-Realtime-2（5 月 7 日）、腾讯混元 Hy Realtime（11 月 13 日）。⑤ 补录 2 条真实发布，均落在 24 小时窗口内、但早报与昨日午报都漏收，明确标注为「补录」而非本时段新增：Wispr Flow Canto-2（官方 11-24 上线，26 日中文媒体才铺开）与 DeepL Aure v2（端到端语音翻译，26 日见报）。",
+  "papers": [],
+  "news": [
+    {
+      "title": "【补录】Wispr Flow 上线自研听写模型 Canto-2：14 语言平均错误率 9.9%→6.3%（相对降 36%），难词识别 41%→69%，且不增加误插入",
+      "url": "https://wisprflow.ai/post/introducing-canto-2",
+      "summary": "这是近来少见的、把「个性化词库」和「不给模型放权」这对矛盾正面处理掉的 ASR 工作。问题设定很具体：给听写模型灌入用户自己的人名与术语，它就会到处「听见」这些词，把没说过的话也写进去。Canto-2 的说法是只在这些词真被说出时才启用——官方内部基准里，最难的人名/术语识别率从 Canto-1 的 41% 提到 69%，同时误插入频率没有上升；自定义词典堆到 1000 条时，较易术语仍能命中 92%。整体指标：14 种语言平均错误率 9.9%→6.3%（相对降 36%，含普通话、西语、法语、印地语），英语 3.2%→2.7%（相对降逾 15%）；模型规模是 Canto-1 的 10 倍；训练数据刻意覆盖真实听写条件（背景噪音、笔电与手机麦、说到一半重新组织句子），而非录音棚朗读。需要打折看的地方：所有数字均出自 Wispr 自测评测，官方称按 11 月 9 日数据 Canto-2 在 Hugging Face 公开多语言榜可排第三，但截至 11 月 25 日该模型尚未被官方榜收录。可用性上先覆盖美洲的 Mac / Windows / iOS / Android，其他地区逐步放开。对做端侧听写与输入法的团队，这篇的参考价值不在 WER 本身，而在「词典偏置如何不反噬召回」这一工程取舍。"
+    },
+    {
+      "title": "【补录】DeepL 上线 Aure v2 语音翻译模型：端到端 speech-to-speech 取代「转写→翻译→合成」三段式，用强化学习决定「听到多少上下文就开口」",
+      "url": "https://www.deepl.com/en",
+      "summary": "DeepL 在 11 月 11 日推出首版 Aure（首批 8 语种、不含中文、以「动态适配说话人语气情绪」为卖点）之后，两周内迭代到 v2，官方口径是「迄今最快的实时语音翻译模型」，已向 DeepL Voice 客户开放，覆盖在线会议、面对面交谈与 DeepL Voice API 三个入口。架构上的关键变化是把级联方案（ASR→MT→TTS）换成端到端语音到语音：不再是先转写再翻译再合成，而是直接出目标语言语音，级联带来的延迟累积与错误传递因此被一并去掉；同时用强化学习训练输出时机——模型自行判断「听到的上下文是否已经足够」，够就开始译，以此在延迟与译文完整性之间做动态权衡。这条路线与 OpenAI 的 GPT-Realtime-Translate（70+ 输入语种→13 输出语种）、meta 系同传模型是同一条技术赛道，区别在于 DeepL 把它直接压到商用 Voice 产品线上。作为「端到端同传正在从论文走向产品」的又一个信号，值得记录；语种覆盖与中文支持情况官方尚未完整披露。"
+    }
+  ]
+}
