@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-11-28</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-11-28</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年11月28日 (周六) · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">7</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">3</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>📌 本期说明</h3><div class="news-item"><p>时间窗口 2026-11-27 09:30 ~ 2026-11-28 09:34（CST）。arXiv 两次 RSS 核验（eess.AS / cs.SD）显示 lastBuildDate 为 2026-11-27 05:00 UTC 且条目数为 0——感恩节假期叠加周六不公告，24 小时内 arXiv 无新提交。因此本期不编造新论文，改为把 11-26 公告批次（11-25 提交）里 11-26 / 11-27 两期漏掉的 6 篇 + 1 篇 HF Daily 入选论文补录完整。新闻侧同样没有 24 小时内的新产品发布，收录的 3 条均为 11-24~11-26 被前两期遗漏的重要动态，已逐条标注真实日期。</p></div></div>
+<div class="section"><h3>⭐ 重点推荐</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.34241" target="_blank">TigerTTS：NAR 打草稿 + AR 逐帧精修的 0.15B 生产级 TTS，单卡 RTF 0.05（约 20 倍实时），SEED 上 CER 1.09 / WER 1.67 双榜最低</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-25</span><span>👥 Dewei Kong</span></div>
+      <div class="abstract">自回归语音 token 语言模型能做出高质量 TTS，但三个老问题一直在：延迟随序列长度线性增长、没有显式对齐时容易漏词或复读、离散码本限制音质上限。TigerTTS 换了个分工方式：用一个轻量非自回归（NAR）模型在显式对齐下先把整句话的 token 全「打草稿」，再由一个紧凑的自回归 LLM 逐帧精修。关键是草稿与 LLM 目标帧帧对齐、并从输入端注入，训练和推理保持一致。因为草稿够准，LLM 一步可以跨 3 帧 4 组一次预测 12 个 token，并用条件总相关上界把并行预测的损失压到接近无损。tokenizer 不用码本，走 FSQ、四组并行、约 1800 bps，规避码本坍缩。骨干只在输入 embedding 保留位置信息，从而可做精确 MLA 权重吸收、KV cache 减少 4 倍；解码用 CUDA Graphs + 图安全的多项分布采样器。Fast 模式让 NAR 生成器充当前缀合成器（RTF 0.03）先吐出前 500 ms，进一步压低首包延迟。最终单卡 RTF 0.05、约 20 倍实时：0.15B 骨干比 VoxCPM2 2B 的标准 PyTorch 推理快 5 倍、比 CosyVoice 2 快 16 倍，同时在 SEED 上拿到最低 CER 1.09 / WER 1.67，LibriSpeech test-clean 上 WER 2.22、NMOS 4.36、说话人相似度 0.820。Fast 模式产生的语义 token 还兼作强内容先验，明显减少掉词、循环和失控生成。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">LLM-TTS</span><span class="tag">非自回归草稿</span><span class="tag">并行解码</span><span class="tag">FSQ</span><span class="tag">低延迟</span><span class="tag">生产落地</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.34241" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.33937" target="_blank">InstructTTS-OPD：用 on-policy 蒸馏拆开「指令遵循 / 发音正确 / 自然度」三个互相拉扯的目标，再用冲突感知速度融合消除跷跷板</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-25</span><span>👥 Haitao Li, Tian Tan, Yuguang Yang, Guanrou Yang, Wenhao Guan, Chenglin Li, Shan Yang, Xie Chen</span></div>
+      <div class="abstract">指令遵循 TTS（Instruct-TTS）要一句话同时满足三件事：照指令的「方式」说、把字念对、听起来自然。现在主流做法是 RL 后训练，但三个目标塞进一个标量奖励、用 GRPO 一起优化时训练很不稳：目标之间互相竞争，共享的更新会漂向最好提升的那一个，典型表现就是此消彼长的跷跷板。作者改用 on-policy 蒸馏（OPD）：让学生在自己的 rollout 上同时去匹配多个单目标教师的速度场。落地前提是每个轴都得有靠谱奖励，这点论文做得很细——用蒸馏过的 Qwen-Omni 代理昂贵的 Gemini 评判器、用无方言数据算 WER 奖励、用 DNSMOS 替代带语言偏置的 UTMOS。然后分别用 GRPO 训三个单目标教师（指令遵循、WER、MOS），再 OPD 融合：每个 rollout 按数据域路由到指令或 WER 教师，同时都跟随 MOS 教师保质量。结果是「指令遵循 + 可懂度」可以同涨而不冲突，但质量目标和指令遵循仍正面打架，简单相加会把跷跷板带回来。为此提出冲突感知速度融合（conflict-aware velocity fusion）：融合前先把质量目标在与主目标相反的方向上做投影剔除。最终模型在三个目标上同时超过标量奖励 GRPO。</div>
+      <div class="tags"><span class="tag">TTS</span><span class="tag">指令遵循</span><span class="tag">强化学习</span><span class="tag">On-Policy 蒸馏</span><span class="tag">多目标优化</span><span class="tag">GRPO</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.33937" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.34256" target="_blank">UMAI：冻住 Qwen3-ASR，靠一次贪心解码的中间值把「呃/嗯」找回来——AMI 上填充词 F1 从 12.2 提到 82.6，且不改动任何识别词</a> ⭐</h4>
+      <div class="meta"><span>📅 2026-11-25</span><span>👥 Gyeongmin Kim</span></div>
+      <div class="abstract">ASR 通常会把「呃」「嗯」这类填充停顿从转写里抹掉。用逐字转写数据微调能把它们找回来，但会把其余输出也带偏。这篇论文的观察很省事：大部分漏掉的填充词，其实已经藏在冻结的 Qwen3-ASR-1.7B 一次贪心解码过程记录下的数值里。UMAI（UM Aware Inference）对输出词之间的每个空隙，从解码器注意力定位到的音频窗口上池化帧级类别后验，再通过两级线性判别分析与解码器状态结合，最后用保序回归（isotonic regression）校准分数。全程没有参数用梯度下降训练过。输出上只插入 [uh] / [um] 标签，已识别的词一个都不改。留出的 AMI 评测集上填充词 F1 从 12.2 升到 82.6，Nyra 逐字基准（也是阈值选定集）上从 37.2 升到 96.5，总处理时间只多 14%。</div>
+      <div class="tags"><span class="tag">ASR</span><span class="tag">填充词恢复</span><span class="tag">逐字转写</span><span class="tag">免梯度训练</span><span class="tag">Qwen3-ASR</span><span class="tag">轻量后处理</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.34256" target="_blank">🔗 arXiv</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📄 最新论文</h3>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.30723" target="_blank">BiSAT：语义与声学双分支共享索引的语音 tokenizer，配出零样本 TTS 系统 BiSAT-TTS——HF Daily Papers 入选</a></h4>
+      <div class="meta"><span>📅 2026-11-23</span><span>👥 Y. Lu, L. Wang, S. Okada</span></div>
+      <div class="abstract">语音语言模型把语音生成为离散 token 序列，tokenizer 就得在低码率下同时保住声学细节和语言内容。语义增强型 tokenizer 容易丢声学细节，声学导向的又保留太多变化让语言建模变难，统一型把两者塞进同一特征空间又会互相干扰，而且现有做法通常把声学表示对齐到冻结语义教师的固定目标上。BiSAT 用「共享索引」机制把两条分支耦起来：训练时声学分支和语义分支各有自己的编码器、码本和解码器，但每一帧用同一个共享索引，使两支的量化误差之和最小，最终只输出一条离散码序列，两个编码器联合优化、不依赖固定语义教师目标。基于 BiSAT 又做了 BiSAT-TTS：自回归文本-语音 LM + 条件流匹配声学解码器的零样本 TTS。重建、下游理解与诊断分析表明码流里语义和声学信息都保住了，在 in-the-wild 与域外语音上表现稳健，学到的码本表示互补；冻结码做理解的结果也支撑它作为 RL 后训练中 code-based reward model 的潜力。BiSAT-TTS 用更少训练数据就达到与 SOTA 语音 LM TTS 基线相当的水平。</div>
+      <div class="tags"><span class="tag">语音 tokenizer</span><span class="tag">语音语言模型</span><span class="tag">TTS</span><span class="tag">零样本</span><span class="tag">共享索引量化</span><span class="tag">码本设计</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.30723" target="_blank">🔗 arXiv</a> <a href="https://seekmind-lab.github.io/bisat-demo/" target="_blank">🔗 Demo</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.34277" target="_blank">Beat This! Live：把离线节拍跟踪改成因果流式版，训练时用「时间前移标签」预判未来——GTZAN 上 beat F1 86.7 / downbeat 74.1 反超 BeatNet+</a></h4>
+      <div class="meta"><span>📅 2026-11-25</span><span>👥 Bánk Juhász, Gerhard Widmer, Jan Schlüter</span></div>
+      <div class="abstract">深度学习让节拍与重拍跟踪进步很大，但绝大多数工作都做离线设置，实时场景用不了。作者把近期的离线模型 Beat This 改造成因果、低延迟的流式版本 Beat This! Live，并逐项测量架构改动对精度的影响。最巧的一招是训练时用时间上平移过的标签，让模型输出略微领先当前帧——这不仅降低延迟，还让峰值拾取（peak-picking）有效得多。GTZAN 上相比当前在线节拍跟踪 SOTA 的 BeatNet+：beat F1 从 80.6 提到 86.7，downbeat F1 从 56.5 提到 74.1。论文被 ISMIR 2026 接收。</div>
+      <div class="tags"><span class="tag">音乐信息检索</span><span class="tag">节拍跟踪</span><span class="tag">流式推理</span><span class="tag">低延迟</span><span class="tag">ISMIR 2026</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.34277" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.34426" target="_blank">首个「注意力头级」合成语音检测研究：删掉几个「反向头」无需重训，WavLM EER 相对降 13%、Wav2Vec2 降 22%</a></h4>
+      <div class="meta"><span>📅 2026-11-25</span><span>👥 Mohamed Mallat, Michele Panariello, Massimiliano Todisco, Anthony Larcher, Nicholas Evans</span></div>
+      <div class="abstract">自监督语音骨干已是合成语音检测的标准前端，逐层探针也已经弄清哪几层信号最强，但分析止步于此：一层里 12 个注意力头中到底是哪几个在做真伪判决，此前没人知道。本文首次在 ASVspoof 5 上对两个冻结骨干（WavLM-base、Wav2Vec2-base）做头级研究。逐头消融显示，只有少数几个头承载判决，另有一些头在主动反对判决；把这些反向头去掉，不重训就能降低等错误率：WavLM 相对降 13%，Wav2Vec2 相对降 22%。论文还给出一个免探针特征：伪造语音的注意力比真实语音更集中，这个差距本身就能把两者几乎区分到与完整表示相近的程度，并在每个骨干最具判别力的层上达到峰值。最后，攻击类型身份可以在每一个头上解码出来——说明这些头「做的事」不同，但「知道的东西」相同。</div>
+      <div class="tags"><span class="tag">反欺骗</span><span class="tag">合成语音检测</span><span class="tag">自监督主干</span><span class="tag">ASVspoof 5</span><span class="tag">可解释性</span><span class="tag">注意力头消融</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.34426" target="_blank">🔗 arXiv</a> </div>
+    </div>
+
+    <div class="paper">
+      <h4><a href="https://arxiv.org/abs/2611.34162" target="_blank">MSCD：免训练对比解码让音视频大模型真正「对上时间」，Daily-Omni 上分别 +2.2 / +2.8 个点</a></h4>
+      <div class="meta"><span>📅 2026-11-25</span><span>👥 Minyeong Jeong, Yeonju Kim, Yong Man Ro</span></div>
+      <div class="abstract">音视频大模型（AV-LLM）号称能表示音视频的时序结构，但它们是否真的用这套时序信息去关联「声音-视觉事件」，其实没人验证。作者设计了一个音视频同步探针：把音频整体平移，让被问到的声音与另一个视觉事件重叠。结果模型依然偏向原本对齐的那个事件，说明它对音视频时序对齐的变化很不敏感。为此提出 MSCD（Modality-Shift Contrastive Decoding）：一种免训练的解码方法，通过对比「保持对齐」与「破坏对齐」两种条件下的 logits，放大有对齐音视频支撑的预测；破坏方式是在固定另一模态的前提下，把音频或视频在时间上平移。两个 AV-LLM、三个基准上的实验证明 MSCD 有效，在 Daily-Omni 上让 OmniVinci 与 video-SALMONN 2+ 的准确率分别提升 2.2 与 2.8 个百分点，说明强调时序对齐也能惠及更宽的音视频理解任务。</div>
+      <div class="tags"><span class="tag">音视频理解</span><span class="tag">对比解码</span><span class="tag">时序对齐</span><span class="tag">AV-LLM</span><span class="tag">免训练</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2611.34162" target="_blank">🔗 arXiv</a> </div>
+    </div>
+</div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>阿里千问 Qwen-Audio-3.1 系列补上多语言与中文方言能力：ASR 支持 59 种语言 / 8 类方言，TTS 65 种语言 / 6 类方言，Realtime 53 种语言 / 6 类方言</h4>
+      <p>11 月 26 日 11:48，千问官方账号宣布对已发布的 Qwen-Audio-3.1 系列做能力更新，重点补中文方言：语音识别（ASR）支持 59 种语言、8 类中文方言；语音合成（TTS）65 种语言、6 类方言；实时交互（Realtime）53 种语言、6 类方言。百炼文档里的方言音色包括上海话、广东话、东北话、重庆话等。需要提醒两点：一是这是面向开发者的云端接口更新（ASR-Flash / TTS-Flash / Realtime-Flash 三个 Flash 版本可调），不等于千问 App 立刻支持方言聊天；二是官方只给了覆盖范围，没给各方言识别准确率与对上一版的对比数据，实际效果仍需自测。对做客服、适老化、地方内容分发的团队，这是把「老人说方言」这一长期盲区正式补上的信号，但验收必须以自己业务域的方言测试集为准。本条为 11-26 发布、前两期日报遗漏，本期补录。 <a href="https://www.newskj.org/yw/205790.html" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>ElevenLabs 就新一轮融资展开初步洽谈，目标估值 330 亿美元——语音赛道估值再抬一个量级</h4>
+      <p>彭博社 11 月 26 日披露，AI 语音公司 ElevenLabs 已就新一轮融资展开初步洽谈，目标估值 330 亿美元。这个数字值得单独记一笔：语音合成/克隆在 2023-2024 年还常被看作「单点工具」，如今已被资本按「AI 语音通信入口」定价。对做语音产品的团队，意味着两件事——一是 TTS 的差异化窗口在收窄，纯音质比拼很难守住溢价，能力要往 agent、实时交互、企业工作流里扎；二是开源侧（Qwen3-TTS、BiSAT 这类）与企业侧的价差还会继续拉大，选型时要按「可替代性」而不是「榜单分数」评估。本条为 11-26 消息，前两期日报遗漏，本期补录。 <a href="https://weibo.com/ttarticle/p/show?id=2309405369427087720586" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>阿里云百炼上线 Qwen-Audio-Live：「前台语音模型 + 后台任务委派」两级架构，文档示例直接给出 qwen-audio-4.0-realtime-preview 与 duplex 全双工模式</h4>
+      <p>阿里云百炼的 Qwen-Audio-Live 服务把语音助手拆成两级：前台模型负责听、追问、用语音回答；一旦请求需要业务 API 或更重的推理，就把任务委派给后台并继续和用户说话。两种委派模式——Client 模式下你的应用执行任务并回传结果，Responses 模式下由百炼调用配置好的后端模型。接入支持 WebSocket、WebRTC、AOQ 三种通道，会话里可配 instructions、voice（默认 yunshu，另有 qingyou 等）、以及 delegation。值得注意的是官方文档的 quickstart 里，session.model 用的是 qwen-audio-4.0-realtime-preview，并把 turn_detection.type 设为 duplex 开全双工——这是 Qwen-Audio 4.0 realtime 预览版第一次出现在公开文档里，配合「前台持续对话、后台跑长任务」的职责划分，和 GPT-Live、Sage-Interaction、Hy Realtime 走的是同一条架构路线。本条为 11-24 前后上线的文档能力，此前日报未收录，本期补录（未见到单独的产品发布稿，模型版本可用性与计费请以百炼控制台为准）。 <a href="https://help.aliyun.com/zh/model-studio/qwen-audio-live" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-11-28') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
