@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Daily Report - 2026-11-28-pm</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --tag-bg: #1f2937;
+      --tag-text: #58a6ff;
+      --highlight: #f0883e;
+      --green: #3fb950;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    header { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 24px 0; margin-bottom: 32px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.5rem; color: var(--accent); }
+    header h1 span { color: var(--text); font-weight: 400; }
+    .date-selector { position: relative; }
+    .date-selector select { background: var(--bg); color: var(--text); border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; font-size: 0.875rem; cursor: pointer; }
+    .day-meta { margin-bottom: 24px; }
+    .day-meta h2 { font-size: 1.25rem; margin-bottom: 4px; }
+    .day-meta p { color: var(--text-secondary); font-size: 0.875rem; }
+    .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+    .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; text-align: center; min-width: 80px; flex: 1; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.75rem; color: var(--text-secondary); }
+    .section { margin-bottom: 32px; }
+    .section h3 { font-size: 1.1rem; color: var(--highlight); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    .paper { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .paper:hover { border-color: var(--accent); }
+    .paper h4 { font-size: 1.05rem; color: var(--accent); margin-bottom: 6px; }
+    .paper h4 a { color: inherit; text-decoration: none; }
+    .paper h4 a:hover { text-decoration: underline; }
+    .paper .meta { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 8px; }
+    .paper .meta span { margin-right: 12px; }
+    .paper .abstract { font-size: 0.9rem; margin-bottom: 10px; line-height: 1.65; }
+    .paper .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .paper .tags .tag { background: var(--tag-bg); color: var(--tag-text); font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border); }
+    .paper .links { display: flex; gap: 10px; font-size: 0.8rem; }
+    .paper .links a { color: var(--green); text-decoration: none; }
+    .paper .links a:hover { text-decoration: underline; }
+    .news-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+    .news-item h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 4px; }
+    .news-item p { font-size: 0.85rem; color: var(--text-secondary); }
+    .news-item a { color: var(--green); font-size: 0.8rem; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 32px 0; color: var(--text-secondary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    .no-data { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .no-data .icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      header .container { flex-direction: column; align-items: flex-start; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎙️ Audio Daily Report <span>/ 2026-11-28-pm</span></h1>
+      <div class="date-selector">
+        <select id="dateSelect" onchange="jumpToDate(this.value)">
+          <option value="">📅 选择日期...</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="day-meta">
+      <h2>📊 今日速览</h2>
+      <p>2026年11月28日 (周六) 午间版 · 自动抓取自 arXiv / HuggingFace / Papers With Code 等</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">0</span><span class="label">📄 论文</span></div>
+      <div class="stat"><span class="num">2</span><span class="label">📰 前沿新闻</span></div>
+      <div class="stat"><span class="num">0</span><span class="label">⭐ 重点推荐</span></div>
+    </div>
+    <div class="section"><h3>📌 本期说明</h3><div class="news-item"><p>本期说明：① 时间窗口 = 今日 09:30–14:00 CST（01:30–06:00 UTC）。本时段 arXiv 音频向论文零新增，三条独立路径交叉验证：一是 export.arxiv.org API 一级搜索（cat:eess.AS OR cat:cs.SD，max_results=50）完整返回，最新一条仍是 2026-11-25T18:27:22Z 的 2611.34857（情感识别卡尔曼修正），此后无任何新提交；二是 rss.arxiv.org/rss/eess.AS 的 lastBuildDate 已刷到 Sat, 28 Nov 2026 05:00 UTC（北京时间 13:00，正落在本时段内），但 item 数为 0，且 feed 的 skipDays 明确含 Saturday / Sunday；三是 arxiv.org/list/eess.AS/new 页面仍显示「Showing new listings for Thursday, 26 November 2026」（共 11 条：新提交 1 + 交叉 6 + 替换 4），11-27、11-28 两批 new 列表均未出现。结论：不是抓取被截断，而是感恩节叠加周末 arXiv 不公告——下一批新增预计在下周一（11/30）凌晨。② 因此本期不重复早报已覆盖的 11-26 公告批次（TigerTTS / InstructTTS-OPD / UMAI / Beat This! Live / 合成语音检测头级分析 / MSCD / BiSAT 共 7 篇）。③ HuggingFace Daily Papers 取 Top60，最新条目仍停在 2026-11-25，音频命中仅 BiSAT（早报已收），无新增。④ 新闻侧按规程逐条执行 6 组必搜关键词（GPT-Live、OpenAI voice model release、Gemini voice、full-duplex speech model、语音模型发布、real-time voice AI），外加 4 轮补充检索与 Google News RSS（when:1d，英文 100 条 + 语音垂类 25 条）时间戳过滤。窗口内（01:30–06:00 UTC）命中的全部是旧闻重发或消费级营销稿：ElevenLabs 收购日本 Kotoba（实际公告为 11-18）被 Outsource Accelerator 于 01:00 UTC 重发、ElevenLabs 330 亿估值（11-26）、Gemini Live 语音转语音架构上 Google Home 音箱（11-26）、各类「最佳 TTS 工具」榜单稿，无一构成窗口内新发布，故不入正文。另排除被搜索引擎反复顶到前排的旧闻：GPT-Live（7 月 8–9 日）、GPT-Live-1.1（10 月 15 日）、MAI Realtime 1（11 月 17 日）、DeepL Aure v2（11 月 26 日，昨日午报已补录）。⑤ 补录 2 条：均在 11-25~11-27 之间真实发生、但早报与昨日午报都漏收，涉及「国家级语音基座」与「无声语音接口」两个方向，已明确标注为补录而非本时段新增。</p></div></div>
+<div class="section"><h3>📰 前沿新闻</h3>
+
+    <div class="news-item">
+      <h4>【补录】印度 IndiaAI Mission 首个本土基础模型套件 Chariot-1：三档 LLM + 覆盖英语与 10 种印度语言的 TTS，全部在印度从零预训练</h4>
+      <p>由 MeitY（印度电子和信息技术部）旗下 IndiaAI Mission 扶持的本土团队 Chariot AI Pvt. Ltd. 发布，11 月 25 日在新德里由部秘书 S. Krishnan 启动。语言模型给三档：10.7B 的 MoE（每 token 只激活约 4B）、1.7B、745M；配套的语音侧是一个 TTS 模型，覆盖英语加 10 种印度语言，官方口径是与 LLM 一并「在印度从零预训练」并首次公开发布。为什么值得记：印度语种 TTS 长期是开源生态的洼地——文字系统多、标注语料少、发音词典缺，主流开源 TTS 的 Indic 支持往往是「能读但不像人」。把语音作为国家级基础模型套件的一等公民（而不是 LLM 的附属 demo），意味着 Indic 语种的语料、评测与参考实现可能被系统性补齐，这是继 AI4Bharat、Sarvam 之后印度语音栈的又一次国家级投入；对做出海多语种 TTS 或印度市场语音交互的团队，后续要盯的是它是否开放权重与评测集。需要打折看的地方：目前只有发布口径，没有 TTS 的客观指标（MOS / WER / 说话人相似度），也没有权重、许可证与 API 细节，真实水平待验证。 <a href="https://zhuanlan.zhihu.com/p/2109373168561435836" target="_blank">阅读原文 →</a></p>
+    </div>
+
+    <div class="news-item">
+      <h4>【补录】ETH Zurich「InvisiSpeech」：贴在牙齿上的微型口内传感器，直接读出默念的无声语音（UIST 2026）</h4>
+      <p>论文题为 InvisiSpeech: Making Silent Speech Invisible through a Miniature Intraoral Sensor，来自 ETH Zurich 的 Sensing, Interaction & Perception Lab（Christian Holz 组）与丹麦 Aarhus 大学 Interactive Matter Lab 的合作，发表在 UIST 2026（11 月）。核心思路是把传感器藏进嘴里：装置固定在牙齿上，捕捉用户「自然默念」时的口内信号来识别所说的词，既不需要张嘴出声，也不需要在嘴角、下巴或喉部贴电极、装摄像头——后者正是过去无声语音接口最难落地的地方（设备太显眼、信号被面部动作污染）。这条路线对两类场景意义最大：一是公共场合的「静默输入」（不想出声但要用语音模型的能力），二是无障碍与噪声极端环境下的语音交互。需要说明：目前公开材料以项目页与媒体报道为主，完整词表规模、识别准确率、功耗与佩戴舒适度数据尚未在公开摘要中给出，本条只记录事件与技术路线，不做性能结论。 <a href="http://www.siplab.org/" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+  </main>
+  <footer>
+    <p>🤖 由 AI 自动生成 · <a href="https://github.com/natashastone-hub/audio-daily-report" target="_blank">GitHub</a> · 每日推送</p>
+  </footer>
+  <script>
+    // Load available dates list
+    fetch('/audio-daily-report/dates.json')
+      .then(r => r.json())
+      .then(dates => {
+        const sel = document.getElementById('dateSelect');
+        dates.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d;
+          opt.textContent = d;
+          if (d === '2026-11-28-pm') opt.selected = true;
+          sel.appendChild(opt);
+        });
+      })
+      .catch(() => {});
+    function jumpToDate(date) {
+      if (date) window.location.href = date + '.html';
+    }
+  </script>
+</body>
+</html>
